@@ -1,33 +1,12 @@
 {
   "date": "2026-09-05",
-  "generatedAt": "2026-09-05T22:49:22.214Z",
-  "runId": "RUN-2026-09-05-0607",
+  "generatedAt": "2026-09-05T22:51:20.757Z",
+  "runId": "RUN-2026-09-05-8520",
   "summary": {
-    "itemsDiscovered": 43,
+    "itemsDiscovered": 40,
     "dataQualityScore": 100
   },
   "topItems": [
-    {
-      "type": "AI_TOOL",
-      "title": "Claude 3.7 Sonnet Hybrid Reasoning",
-      "category": "AI & Machine Learning",
-      "canonicalUrl": "https://anthropic.com/news/claude-3-7-sonnet",
-      "score": 85
-    },
-    {
-      "type": "REPOSITORY",
-      "title": "anthropics/anthropic-sdk-typescript",
-      "category": "AI & Machine Learning",
-      "canonicalUrl": "https://github.com/anthropics/anthropic-sdk-typescript",
-      "score": 92
-    },
-    {
-      "type": "JOB",
-      "title": "Senior AI Systems Engineer",
-      "category": "AI & Machine Learning",
-      "canonicalUrl": "https://careers.anthropic.com/jobs/ai-systems-engineer",
-      "score": 86
-    },
     {
       "type": "REPOSITORY",
       "title": "sindresorhus/awesome",
@@ -76,6 +55,27 @@
       "category": "Open Source Software",
       "canonicalUrl": "https://github.com/vinta/awesome-python",
       "score": 92
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "awesome-selfhosted/awesome-selfhosted",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/awesome-selfhosted/awesome-selfhosted",
+      "score": 88
+    },
+    {
+      "type": "NEWS",
+      "title": "Private German rocket makes history, reaches orbit from European soil",
+      "category": "Tech News & Ecosystem",
+      "canonicalUrl": "https://www.space.com/space-exploration/launches-spacecraft/isar-aerospace-second-launch-norway-andoya-spaceport-spectrum-rocket",
+      "score": 81
+    },
+    {
+      "type": "NEWS",
+      "title": "Finite time blowup for an averaged three-dimensional Navier-Stokes equation (2014)",
+      "category": "Tech News & Ecosystem",
+      "canonicalUrl": "https://terrytao.wordpress.com/2014/02/04/finite-time-blowup-for-an-averaged-three-dimensional-navier-stokes-equation",
+      "score": 81
     }
   ]
 }

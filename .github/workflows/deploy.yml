@@ -80,7 +80,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy frontend/out --project-name=devatlas
+          command: pages deploy frontend/out --project-name=${{ secrets.CLOUDFLARE_PAGES_PROJECT || 'devatlas-web' }}
 
       - name: Notify Skip if Secret Not Configured
         if: env.CLOUDFLARE_API_TOKEN == ''

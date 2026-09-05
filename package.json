@@ -16,6 +16,7 @@
     "typecheck": "npm run typecheck --workspaces --if-present",
     "clean": "npm run clean --workspaces --if-present",
     "db:seed": "tsx scripts/seed-dev-data.ts",
+    "db:clean": "node --import=tsx scripts/clean-database.ts",
     "db:indexes": "tsx scripts/setup-db-indexes.ts",
     "smoke-test": "tsx scripts/smoke-test.ts"
   },

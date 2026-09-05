@@ -1,4 +1,3 @@
-import { MockDiscoverySource } from './discovery/mockSource';
 import { GitHubDiscoverySource } from './discovery/githubSource';
 import { HackerNewsDiscoverySource } from './discovery/hackerNewsSource';
 import { JobDiscoverySource } from './discovery/jobSource';
@@ -20,9 +19,8 @@ export async function runPipeline(): Promise<PipelineRunResult> {
   console.log(`[DevAtlas Pipeline] Launching execution: ${runId}`);
   console.log(`======================================================\n`);
 
-  // 1. Source Discovery with Error Isolation
+  // 1. Source Discovery with Error Isolation (100% Real Live Sources Only)
   const sources: DiscoverySource[] = [
-    new MockDiscoverySource(),
     new GitHubDiscoverySource(),
     new HackerNewsDiscoverySource(),
     new JobDiscoverySource(),
