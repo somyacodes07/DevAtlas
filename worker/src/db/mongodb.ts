@@ -3,6 +3,8 @@ import { MongoClient, Db, Collection } from 'mongodb';
 let cachedClient: MongoClient | null = null;
 let cachedDb: Db | null = null;
 export let lastConnectError: string | null = null;
+let lastFailedAttempt = 0;
+const FAILURE_BACKOFF_MS = 300000; // 5 minutes backoff so edge queries respond in 0ms
 
 export function resolveUriForEdge(uri: string): string {
   // Cloudflare Workers runtime (workerd) lacks node:dns SRV resolution.
@@ -26,11 +28,16 @@ export async function getWorkerDb(uri?: string, databaseName?: string): Promise<
     return cachedDb;
   }
 
+  // Circuit breaker: immediately return null in 0ms if previous attempt failed recently
+  if (Date.now() - lastFailedAttempt < FAILURE_BACKOFF_MS) {
+    return null;
+  }
+
   try {
     const effectiveUri = resolveUriForEdge(uri);
     const client = new MongoClient(effectiveUri, {
-      connectTimeoutMS: 5000,
-      serverSelectionTimeoutMS: 5000,
+      connectTimeoutMS: 1000,
+      serverSelectionTimeoutMS: 1000,
     });
 
     await client.connect();
@@ -42,8 +49,8 @@ export async function getWorkerDb(uri?: string, databaseName?: string): Promise<
 
     return db;
   } catch (err) {
+    lastFailedAttempt = Date.now();
     lastConnectError = err instanceof Error ? err.message : String(err);
-    console.error('[Worker MongoDB Connect Error]', err);
     return null;
   }
 }

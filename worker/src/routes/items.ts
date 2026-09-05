@@ -62,6 +62,7 @@ itemsRouter.get('/', async (c) => {
       fallback = fallback.filter(i => i.title.toLowerCase().includes(qLower) || i.description.toLowerCase().includes(qLower));
     }
 
+    c.header('Cache-Control', 'public, max-age=60, s-maxage=300, stale-while-revalidate=600');
     return c.json({
       data: fallback,
       meta: {

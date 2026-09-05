@@ -1,9 +1,12 @@
 'use client';
 
-import { Suspense, useEffect, useState } from 'react';
+import { Suspense, useEffect, useState, useMemo } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { fetchItems, ContentItem } from '@/lib/api';
+
+// Shared client-side in-memory cache for instant 0ms responses
+let masterItemsCache: ContentItem[] | null = null;
 
 function ExploreFeed() {
   const searchParams = useSearchParams();
@@ -11,25 +14,49 @@ function ExploreFeed() {
   const type = searchParams.get('type') || 'ALL';
   const minScore = searchParams.get('minScore') || '';
 
-  const [items, setItems] = useState<ContentItem[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [rawItems, setRawItems] = useState<ContentItem[]>(masterItemsCache || []);
+  const [loading, setLoading] = useState(!masterItemsCache);
 
   useEffect(() => {
-    setLoading(true);
-    const queryParams: Record<string, string> = { limit: '30' };
-    if (q) queryParams.q = q;
-    if (type && type !== 'ALL') queryParams.type = type;
-    if (minScore) queryParams.minScore = minScore;
+    if (!masterItemsCache) {
+      setLoading(true);
+      fetchItems({ limit: '100' })
+        .then((res) => {
+          if (res.data && res.data.length > 0) {
+            masterItemsCache = res.data;
+            setRawItems(res.data);
+          }
+        })
+        .catch(() => {})
+        .finally(() => setLoading(false));
+    }
+  }, []);
 
-    fetchItems(queryParams)
-      .then((res) => {
-        setItems(res.data || []);
-      })
-      .catch(() => {
-        setItems([]);
-      })
-      .finally(() => setLoading(false));
-  }, [q, type, minScore]);
+  // Instant 0ms synchronous client-side filtering
+  const items = useMemo(() => {
+    return rawItems.filter((item) => {
+      if (type !== 'ALL' && item.type !== type) {
+        return false;
+      }
+      if (minScore) {
+        const scoreVal = parseInt(minScore, 10);
+        if (!isNaN(scoreVal) && (item.score?.total || 0) < scoreVal) {
+          return false;
+        }
+      }
+      if (q) {
+        const qLower = q.toLowerCase();
+        const matchTitle = item.title.toLowerCase().includes(qLower);
+        const matchDesc = (item.description || '').toLowerCase().includes(qLower);
+        const matchCategory = (item.category || '').toLowerCase().includes(qLower);
+        const matchTags = (item.tags || []).some((t) => t.toLowerCase().includes(qLower));
+        if (!matchTitle && !matchDesc && !matchCategory && !matchTags) {
+          return false;
+        }
+      }
+      return true;
+    });
+  }, [rawItems, type, minScore, q]);
 
   const categories = [
     { label: 'All Items', value: 'ALL' },
@@ -51,7 +78,7 @@ function ExploreFeed() {
             </p>
           </div>
           <div className="font-mono text-xs text-zinc-400">
-            {loading ? 'Searching...' : `${items.length} Discoveries Displayed`}
+            {loading ? 'Connecting...' : `${items.length} Discoveries Displayed`}
           </div>
         </div>
       </div>
@@ -64,10 +91,10 @@ function ExploreFeed() {
             <Link
               key={c.value}
               href={`/explore?type=${c.value}${q ? `&q=${encodeURIComponent(q)}` : ''}`}
-              className={`rounded px-3 py-1 transition-colors ${
+              className={`rounded px-3 py-1 transition-all duration-150 ${
                 isActive
-                  ? 'bg-white font-semibold text-black'
-                  : 'border border-border bg-card text-zinc-400 hover:text-white'
+                  ? 'bg-white font-semibold text-black shadow-sm'
+                  : 'border border-border bg-card text-zinc-400 hover:text-white hover:border-zinc-500'
               }`}
             >
               {c.label}
@@ -119,7 +146,7 @@ function ExploreFeed() {
 
       {!loading && items.length === 0 && (
         <div className="mt-12 py-16 text-center text-xs font-mono text-zinc-500 border border-dashed border-border rounded">
-          No items found matching the current filter. Seed data with `make seed` or run discovery.
+          No items found matching the current filter.
         </div>
       )}
     </div>
