@@ -1,93 +1,229 @@
 import { MockDiscoverySource } from './discovery/mockSource';
+import { GitHubDiscoverySource } from './discovery/githubSource';
+import { HackerNewsDiscoverySource } from './discovery/hackerNewsSource';
+import { JobDiscoverySource } from './discovery/jobSource';
 import { canonicalizeUrl, computeContentHash, computeUrlHash } from './deduplication/hasher';
-import { ContentItem, PipelineRunResult } from './types';
+import { normalizeTitle, normalizeTimestamp } from './normalization/normalizer';
+import { evaluateDataQuality } from './validation/qualityValidator';
+import { calculateRelevanceScore } from './scoring/relevanceScorer';
+import { getAIProvider } from './ai/providerFactory';
+import { generateDailyReport } from './reporting/reportGenerator';
+import { getMongoClient, getItemsCollection, getRunsCollection, getReportsCollection } from './database/mongodb';
+import { ContentItem, DiscoveredItem, DiscoverySource, PipelineRunResult } from './types';
 
 export async function runPipeline(): Promise<PipelineRunResult> {
   const startTime = Date.now();
-  const runId = `RUN-${new Date().toISOString().replace(/[:.]/g, '-')}`;
-  console.log(`[DevAtlas Pipeline] Starting execution: ${runId}`);
+  const today = new Date().toISOString().split('T')[0];
+  const runId = `RUN-${today}-${String(Date.now()).slice(-4)}`;
+  console.log(`\n======================================================`);
+  console.log(`[DevAtlas Pipeline] Launching execution: ${runId}`);
+  console.log(`======================================================\n`);
 
-  const source = new MockDiscoverySource();
-  const rawItems = await source.discover();
-  console.log(`[Discovery] Source "${source.name}" yielded ${rawItems.length} items.`);
+  // 1. Source Discovery with Error Isolation
+  const sources: DiscoverySource[] = [
+    new MockDiscoverySource(),
+    new GitHubDiscoverySource(),
+    new HackerNewsDiscoverySource(),
+    new JobDiscoverySource(),
+  ];
+
+  const rawDiscovered: DiscoveredItem[] = [];
+  const sourceErrors: Array<{ source: string; message: string }> = [];
+  let successfulSources = 0;
+
+  for (const src of sources) {
+    try {
+      console.log(`[Discovery] Querying: ${src.name}...`);
+      const items = await src.discover();
+      console.log(`  ✓ Yielded ${items.length} items`);
+      rawDiscovered.push(...items);
+      successfulSources++;
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : String(err);
+      console.error(`  ✗ Source "${src.name}" failed: ${msg}`);
+      sourceErrors.push({ source: src.name, message: msg });
+    }
+  }
+
+  console.log(`\n[Discovery Complete] ${successfulSources}/${sources.length} sources operational. Raw items: ${rawDiscovered.length}`);
+
+  // 2. Data Quality & Schema Validation
+  const qualityReport = evaluateDataQuality(rawDiscovered);
+  console.log(`[Data Quality] Score: ${qualityReport.qualityScore}% (Valid: ${qualityReport.validItems}, Invalid: ${qualityReport.invalidItems})`);
+
+  // 3. Normalization, Deduplication, AI Enrichment & Relevance Scoring
+  const aiProvider = getAIProvider();
+  console.log(`[AI Engine] Active provider: ${aiProvider.name}`);
 
   const processedItems: ContentItem[] = [];
   let duplicatesCount = 0;
-  const seenHashes = new Set<string>();
+  let rejectedCount = 0;
+  const seenUrlHashes = new Set<string>();
 
-  for (const raw of rawItems) {
+  for (const raw of rawDiscovered) {
+    if (!raw.title || !raw.url) {
+      rejectedCount++;
+      continue;
+    }
+
     const canonicalUrl = canonicalizeUrl(raw.url);
     const urlHash = computeUrlHash(canonicalUrl);
-    const contentHash = computeContentHash(raw.title, raw.description);
+    const title = normalizeTitle(raw.title);
+    const description = raw.description || '';
+    const contentHash = computeContentHash(title, description);
 
-    if (seenHashes.has(urlHash)) {
+    if (seenUrlHashes.has(urlHash)) {
       duplicatesCount++;
       continue;
     }
-    seenHashes.add(urlHash);
+    seenUrlHashes.add(urlHash);
+
+    // AI Enrichment (Classifier & Summarizer)
+    const aiResult = await aiProvider.classifyAndSummarize(raw);
+
+    // Scoring
+    const score = calculateRelevanceScore(raw);
 
     const item: ContentItem = {
       type: raw.type,
-      title: raw.title,
-      description: raw.description,
-      summary: raw.description,
+      title,
+      description,
+      summary: aiResult.summary,
       canonicalUrl,
       urlHash,
       contentHash,
-      category: raw.type === 'AI_TOOL' ? 'AI' : raw.type === 'JOB' ? 'Careers' : 'Open Source',
-      tags: ['developer-tools', 'automation'],
+      category: aiResult.category,
+      tags: aiResult.tags,
       source: {
         name: raw.sourceName,
         type: raw.sourceType,
         url: canonicalUrl,
       },
-      score: {
-        total: 88,
-        freshness: 22,
-        popularity: 20,
-        developerValue: 24,
-        technologyImpact: 22,
-        reasons: ['Verified source', 'High developer ecosystem relevance'],
-      },
+      score,
       status: 'PROCESSED',
-      publishedAt: raw.publishedAt,
+      publishedAt: normalizeTimestamp(raw.publishedAt),
       discoveredAt: new Date().toISOString(),
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
+      job: raw.type === 'JOB' ? (raw.metadata as any) : undefined,
+      tool: raw.type === 'AI_TOOL' ? (raw.metadata as any) : undefined,
+      repository: raw.type === 'REPOSITORY' ? (raw.metadata as any) : undefined,
     };
 
     processedItems.push(item);
   }
 
-  const durationSeconds = Math.round((Date.now() - startTime) / 1000);
+  // 4. Persistence to MongoDB (if accessible)
+  let mongoConnected = false;
+  try {
+    const { db } = await getMongoClient();
+    const itemsCollection = getItemsCollection(db);
+
+    console.log(`[Persistence] Upserting ${processedItems.length} items to MongoDB...`);
+    for (const item of processedItems) {
+      await itemsCollection.updateOne(
+        { urlHash: item.urlHash },
+        { $set: item },
+        { upsert: true }
+      );
+    }
+    mongoConnected = true;
+    console.log('✓ MongoDB items successfully synchronized');
+  } catch (err: unknown) {
+    console.warn(`[Persistence Warning] MongoDB not reachable, skipping live DB write: ${err instanceof Error ? err.message : String(err)}`);
+  }
+
+  // 5. Daily Report & JSON Snapshot Generation
+  console.log(`[Reporting] Generating daily report for ${today}...`);
+  const report = await generateDailyReport(
+    processedItems,
+    today,
+    qualityReport.qualityScore,
+    runId
+  );
+  console.log(`✓ Daily report written to ${report.markdownFilePath}`);
+  console.log(`✓ Daily snapshot written to ${report.jsonFilePath}`);
+
+  if (mongoConnected) {
+    try {
+      const { db } = await getMongoClient();
+      const reportsCollection = getReportsCollection(db);
+      await reportsCollection.updateOne(
+        { reportDate: today },
+        {
+          $set: {
+            reportDate: today,
+            title: `DevAtlas Daily Intelligence Report — ${today}`,
+            markdownContent: report.markdownContent,
+            structuredSummary: {
+              itemsDiscovered: processedItems.length,
+              itemsNew: processedItems.length,
+              itemsDuplicates: duplicatesCount,
+              dataQualityScore: qualityReport.qualityScore,
+            },
+            topItems: processedItems.slice(0, 5).map((i) => ({
+              type: i.type,
+              title: i.title,
+              category: i.category,
+              canonicalUrl: i.canonicalUrl,
+              score: i.score.total,
+            })),
+            generatedAt: new Date().toISOString(),
+          },
+        },
+        { upsert: true }
+      );
+      console.log('✓ Daily report synchronized to MongoDB');
+    } catch (err: unknown) {
+      console.warn('[Reporting Warning] Failed to write report to MongoDB:', err);
+    }
+  }
+
+  const durationSeconds = Math.max(1, Math.round((Date.now() - startTime) / 1000));
+  const overallStatus = sourceErrors.length === 0 ? 'SUCCESS' : sourceErrors.length < sources.length ? 'PARTIAL_SUCCESS' : 'FAILED';
 
   const result: PipelineRunResult = {
     runId,
-    trigger: 'CI',
-    status: 'SUCCESS',
+    trigger: 'SCHEDULED',
+    status: overallStatus,
     startedAt: new Date(startTime).toISOString(),
     completedAt: new Date().toISOString(),
     durationSeconds,
     sources: {
-      successful: 1,
-      failed: 0,
+      successful: successfulSources,
+      failed: sourceErrors.length,
+      errors: sourceErrors,
     },
     items: {
-      discovered: rawItems.length,
+      discovered: rawDiscovered.length,
       new: processedItems.length,
       duplicates: duplicatesCount,
-      rejected: 0,
+      rejected: rejectedCount,
     },
     ai: {
       processed: processedItems.length,
       failed: 0,
     },
-    dataQualityScore: 100,
+    dataQualityScore: qualityReport.qualityScore,
     reportGenerated: true,
     gitCommitCreated: false,
   };
 
-  console.log(`[DevAtlas Pipeline] Completed in ${durationSeconds}s. New: ${result.items.new}, Duplicates: ${result.items.duplicates}`);
+  if (mongoConnected) {
+    try {
+      const { db } = await getMongoClient();
+      const runsCollection = getRunsCollection(db);
+      await runsCollection.insertOne(result);
+    } catch {
+      // Ignore run record failure
+    }
+  }
+
+  console.log(`\n======================================================`);
+  console.log(`[DevAtlas Pipeline] Completed. Status: ${result.status} (${durationSeconds}s)`);
+  console.log(`Discovered: ${result.items.discovered} | New: ${result.items.new} | Quality: ${result.dataQualityScore}%`);
+  console.log(`======================================================\n`);
+
   return result;
 }
 
