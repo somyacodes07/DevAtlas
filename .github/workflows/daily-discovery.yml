@@ -1,0 +1,43 @@
+name: Daily Discovery & Intelligence
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  discover:
+    name: Run Ingestion Engine & Publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Execute Discovery & Normalization Pipeline
+        run: npm run dev --workspace=@devatlas/pipeline
+        env:
+          NODE_ENV: production
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          MONGODB_DATABASE: devatlas
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AI_PROVIDER: ${{ secrets.AI_PROVIDER || 'deterministic' }}
+          AI_API_KEY: ${{ secrets.AI_API_KEY }}
+
+      - name: Detect Meaningful Changes & Publish
+        run: ./scripts/detect-meaningful-changes.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
