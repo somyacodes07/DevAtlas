@@ -1,7 +1,7 @@
 {
   "date": "2026-09-05",
-  "generatedAt": "2026-09-05T23:23:36.047Z",
-  "runId": "RUN-2026-09-05-3892",
+  "generatedAt": "2026-09-05T23:34:55.587Z",
+  "runId": "RUN-2026-09-05-3474",
   "summary": {
     "itemsDiscovered": 40,
     "dataQualityScore": 100
@@ -65,16 +65,16 @@
     },
     {
       "type": "NEWS",
-      "title": "Private German rocket makes history, reaches orbit from European soil",
+      "title": "Learn Programming with OCaml",
       "category": "Tech News & Ecosystem",
-      "canonicalUrl": "https://www.space.com/space-exploration/launches-spacecraft/isar-aerospace-second-launch-norway-andoya-spaceport-spectrum-rocket",
+      "canonicalUrl": "https://usr.lmf.cnrs.fr/lpo",
       "score": 81
     },
     {
       "type": "NEWS",
-      "title": "Falsehoods Programmers Believe About LANs",
+      "title": "Private German rocket makes history, reaches orbit from European soil",
       "category": "Tech News & Ecosystem",
-      "canonicalUrl": "https://dreamstation.systems/personal/lanfalsehoods.html",
+      "canonicalUrl": "https://www.space.com/space-exploration/launches-spacecraft/isar-aerospace-second-launch-norway-andoya-spaceport-spectrum-rocket",
       "score": 81
     }
   ]

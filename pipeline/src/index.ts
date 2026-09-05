@@ -134,12 +134,26 @@ export async function runPipeline(): Promise<PipelineRunResult> {
   }
 
   // 5. Daily Report & JSON Snapshot Generation
+  let executiveSummary = '';
+  if (aiProvider.generateExecutiveSummary) {
+    try {
+      console.log(`[AI Engine] Synthesizing executive briefing with ${aiProvider.name}...`);
+      executiveSummary = await aiProvider.generateExecutiveSummary(processedItems, today);
+      if (executiveSummary) {
+        console.log('  ✓ AI Executive briefing synthesized');
+      }
+    } catch (err: unknown) {
+      console.warn('  ✗ AI Executive briefing synthesis skipped:', err instanceof Error ? err.message : String(err));
+    }
+  }
+
   console.log(`[Reporting] Generating daily report for ${today}...`);
   const report = await generateDailyReport(
     processedItems,
     today,
     qualityReport.qualityScore,
-    runId
+    runId,
+    executiveSummary
   );
   console.log(`✓ Daily report written to ${report.markdownFilePath}`);
   console.log(`✓ Daily snapshot written to ${report.jsonFilePath}`);

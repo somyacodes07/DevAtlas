@@ -15,7 +15,8 @@ export async function generateDailyReport(
   items: ContentItem[],
   dateStr: string,
   qualityScore: number,
-  runId: string
+  runId: string,
+  aiExecutiveSummary?: string
 ): Promise<GeneratedReport> {
   const [year, month, day] = dateStr.split('-');
 
@@ -33,7 +34,11 @@ export async function generateDailyReport(
 **Total Items Processed**: ${items.length}  
 
 ---
-
+${
+  aiExecutiveSummary
+    ? `\n## Executive Intelligence Briefing\n\n${aiExecutiveSummary}\n\n---\n`
+    : ''
+}
 ## 1. Top Ecosystem & AI Tool Discoveries
 ${
   topTools.length > 0
