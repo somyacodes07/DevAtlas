@@ -1,6 +1,7 @@
 import { Hono } from 'hono';
 import { Env, Variables } from '../types';
 import { getItemsCollection, getWorkerDb } from '../db/mongodb';
+import { FALLBACK_ITEMS } from '../db/fallbackData';
 
 export const toolsRouter = new Hono<{ Bindings: Env; Variables: Variables }>();
 
@@ -30,9 +31,10 @@ toolsRouter.get('/', async (c) => {
 
   const db = await getWorkerDb(c.env?.MONGODB_URI, c.env?.MONGODB_DATABASE);
   if (!db) {
+    const fallback = FALLBACK_ITEMS.filter(i => i.type === 'AI_TOOL');
     return c.json({
-      data: [],
-      meta: { page, limit, total: 0, hasNextPage: false, requestId },
+      data: fallback,
+      meta: { page, limit, total: fallback.length, hasNextPage: false, requestId, source: 'EDGE_CATALOG_ACTIVE' },
     });
   }
 

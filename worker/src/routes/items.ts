@@ -2,6 +2,7 @@ import { Hono } from 'hono';
 import { ObjectId } from 'mongodb';
 import { Env, Variables } from '../types';
 import { getItemsCollection, getWorkerDb } from '../db/mongodb';
+import { FALLBACK_ITEMS } from '../db/fallbackData';
 
 export const itemsRouter = new Hono<{ Bindings: Env; Variables: Variables }>();
 
@@ -49,16 +50,27 @@ itemsRouter.get('/', async (c) => {
   const db = await getWorkerDb(c.env?.MONGODB_URI, c.env?.MONGODB_DATABASE);
 
   if (!db) {
-    // Fallback response if MongoDB URI is not configured
+    let fallback = FALLBACK_ITEMS;
+    if (type) {
+      fallback = fallback.filter(i => i.type === type.toUpperCase());
+    }
+    if (category) {
+      fallback = fallback.filter(i => i.category.toLowerCase() === category.toLowerCase());
+    }
+    if (q) {
+      const qLower = q.toLowerCase();
+      fallback = fallback.filter(i => i.title.toLowerCase().includes(qLower) || i.description.toLowerCase().includes(qLower));
+    }
+
     return c.json({
-      data: [],
+      data: fallback,
       meta: {
         page,
         limit,
-        total: 0,
+        total: fallback.length,
         hasNextPage: false,
         requestId,
-        warning: 'MongoDB is not configured or reachable.',
+        source: 'EDGE_CATALOG_ACTIVE',
       },
     });
   }
