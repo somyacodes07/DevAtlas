@@ -22,7 +22,7 @@ export interface FallbackItem {
     workMode: 'REMOTE' | 'HYBRID' | 'ON_SITE';
     region: 'INDIA' | 'GLOBAL_REMOTE' | 'NORTH_AMERICA' | 'EUROPE';
     experienceLevel: 'INTERNSHIP' | 'ENTRY' | 'MID' | 'SENIOR' | 'STAFF_PRINCIPAL';
-    sourcePlatform: 'LinkedIn' | 'Company Careers' | 'Greenhouse' | 'Lever';
+    sourcePlatform: 'LinkedIn' | 'Company Careers' | 'Greenhouse' | 'Lever' | 'Y Combinator' | 'Instahyre' | 'Wellfound' | 'Arbeitnow' | 'HackerNews';
     employmentType: string;
     salary: string;
     skills: string[];

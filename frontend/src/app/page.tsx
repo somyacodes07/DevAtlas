@@ -1,25 +1,26 @@
 import Link from 'next/link';
 import { fetchJobs, fetchRepositories, fetchStats, fetchTools } from '@/lib/api';
+import { HeroCommandCenter } from '@/components/HeroCommandCenter';
 
 export default async function HomePage() {
   const [statsData, toolsData, jobsData, reposData] = await Promise.all([
     fetchStats(),
-    fetchTools({ limit: '3' }),
-    fetchJobs({ limit: '2' }),
-    fetchRepositories({ limit: '2' }),
+    fetchTools({ limit: '6' }),
+    fetchJobs({ limit: '8' }),
+    fetchRepositories({ limit: '4' }),
   ]);
 
   const stats = [
-    { label: 'AI Tools & Models', count: statsData?.today?.aiTools ?? 6, delta: 'Continuously Ranked', href: '/tools' },
-    { label: 'Verified Jobs', count: statsData?.today?.jobs ?? 6, delta: 'Verified Salaries', href: '/jobs' },
-    { label: 'Fast Repositories', count: statsData?.today?.repositories ?? 5, delta: 'Top Star Growth', href: '/repositories' },
-    { label: 'Tech News & Releases', count: statsData?.today?.news ?? 2, delta: 'Major Releases', href: '/explore' },
-    { label: 'Security Advisories', count: statsData?.today?.securityAlerts ?? 1, delta: 'Zero-Day Feeds', href: '/explore' },
+    { label: 'AI Tools & Models', count: statsData?.today?.aiTools ?? 8, delta: 'Continuously Ranked', href: '/tools' },
+    { label: 'Verified Jobs', count: statsData?.today?.jobs ?? 28, delta: 'Verified Salaries', href: '/jobs' },
+    { label: 'Fast Repositories', count: statsData?.today?.repositories ?? 12, delta: 'Top Star Growth', href: '/repositories' },
+    { label: 'Tech News & Releases', count: statsData?.today?.news ?? 4, delta: 'Major Releases', href: '/explore' },
+    { label: 'Security Advisories', count: statsData?.today?.securityAlerts ?? 2, delta: 'Zero-Day Feeds', href: '/explore' },
   ];
 
   const tools = toolsData.data.length > 0 ? toolsData.data : [
     {
-      title: 'v0.dev',
+      title: 'v0.dev Generative UI',
       description: 'Generative UI system powered by AI producing accessible React and Tailwind CSS.',
       category: 'AI / UI',
       score: { total: 96 },
@@ -35,8 +36,8 @@ export default async function HomePage() {
       canonicalUrl: 'https://anthropic.com',
     },
     {
-      title: 'Biome 1.9',
-      description: 'Toolchain of the web: fast formatter, linter, and analyzer for JavaScript/TypeScript.',
+      title: 'Biome 1.9 Rust Toolchain',
+      description: 'Toolchain of the web: fast formatter, linter, and analyzer for JavaScript/TypeScript written in Rust.',
       category: 'Dev Tools',
       score: { total: 92 },
       tool: { pricingModel: 'OPEN_SOURCE' },
@@ -46,99 +47,85 @@ export default async function HomePage() {
 
   const jobs = jobsData.data.length > 0 ? jobsData.data : [
     {
-      title: 'Senior AI Systems Engineer',
-      description: 'Design and build high-throughput distributed inference pipelines.',
+      title: 'Software Engineering Intern - Summer 2026',
+      description: 'Join core infrastructure engineering teams in Bengaluru and Hyderabad.',
       job: {
-        company: 'Anthropic',
-        location: 'San Francisco, CA / Remote',
-        salary: '$220,000 - $300,000',
-        skills: ['TypeScript', 'Rust', 'Kubernetes', 'LLM Evals'],
-        remote: true,
+        company: 'Google India',
+        location: 'Bengaluru / Hyderabad, India',
+        salary: '₹1,20,000 / Month Stipend + Housing & Meals',
+        skills: ['C++', 'Python', 'Algorithms', 'Distributed Systems'],
+        remote: false,
+        workMode: 'HYBRID',
+        region: 'INDIA',
+        experienceLevel: 'INTERNSHIP',
+        sourcePlatform: 'Careers',
       },
+      canonicalUrl: 'https://careers.google.com',
     },
     {
-      title: 'Staff Edge Platform Engineer',
-      description: 'Lead architectural initiatives on global edge workers and edge caching infrastructure.',
+      title: 'Senior Backend Engineer - High Throughput Payments',
+      description: 'Scale core payment transaction ledger handling peak volumes with ACID guarantees.',
       job: {
-        company: 'Vercel',
-        location: 'Remote Worldwide',
-        salary: '$180,000 - $240,000',
-        skills: ['Edge Computing', 'Go', 'TypeScript'],
-        remote: true,
+        company: 'CRED',
+        location: 'Bengaluru, India',
+        salary: '₹40,00,000 - ₹60,00,000 / 40-60 LPA + ESOPs',
+        skills: ['Go', 'Kafka', 'PostgreSQL', 'Microservices'],
+        remote: false,
+        workMode: 'ON_SITE',
+        region: 'INDIA',
+        experienceLevel: 'SENIOR',
+        sourcePlatform: 'Careers',
       },
+      canonicalUrl: 'https://careers.cred.club',
     },
   ];
 
   const repos = reposData.data.length > 0 ? reposData.data : [
     {
       title: 'anthropics/anthropic-sdk-typescript',
-      description: 'Official TypeScript library for the Anthropic Claude API.',
+      description: 'Official TypeScript library for the Anthropic Claude API with streaming support.',
       repository: {
         ownerRepo: 'anthropics/anthropic-sdk-typescript',
         stars: 4850,
         language: 'TypeScript',
         starsGrowth24h: 420,
       },
+      canonicalUrl: 'https://github.com/anthropics/anthropic-sdk-typescript',
     },
     {
       title: 'cloudflare/workers-sdk',
-      description: 'Wrangler and utilities for developing Cloudflare Workers & Pages.',
+      description: 'Wrangler and utilities for developing Cloudflare Workers & Pages serverless apps.',
       repository: {
         ownerRepo: 'cloudflare/workers-sdk',
         stars: 6420,
         language: 'TypeScript',
         starsGrowth24h: 180,
       },
+      canonicalUrl: 'https://github.com/cloudflare/workers-sdk',
     },
   ];
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12">
-      {/* Hero / Header Section */}
-      <section className="mb-12 border-b border-border pb-10">
-        <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-          <div>
-            <div className="mb-3 inline-flex items-center gap-2 rounded border border-border bg-card px-2.5 py-1 text-xs font-mono text-zinc-400">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
-              <span>AUTONOMOUS INGESTION ENGINE ACTIVE</span>
-            </div>
-            <h1 className="text-3xl font-black tracking-tight text-white sm:text-5xl font-mono">
-              DEVATLAS
-            </h1>
-            <p className="mt-3 max-w-2xl text-base text-muted sm:text-lg">
-              Developer intelligence, automatically discovered from the global ecosystem, normalized, AI-scored, and shipped daily via automated serverless edge CI/CD.
-            </p>
-          </div>
+      {/* Animated Developer Command Center Hero */}
+      <section className="mb-10">
+        <HeroCommandCenter totalJobs={jobs.length} totalTools={tools.length} />
+      </section>
 
-          <div className="flex flex-wrap items-center gap-3">
-            <Link
-              href="/reports"
-              className="rounded border border-white bg-white px-4 py-2 text-xs font-semibold text-black transition-colors hover:bg-zinc-200"
-            >
-              Read Daily Intelligence
-            </Link>
-            <Link
-              href="/explore"
-              className="rounded border border-border bg-card px-4 py-2 text-xs font-semibold text-zinc-300 transition-colors hover:border-zinc-500 hover:text-white"
-            >
-              Search All Items
-            </Link>
-          </div>
-        </div>
-
-        {/* Discovery Summary Metrics */}
-        <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+      {/* Discovery Summary Metrics */}
+      <section className="mb-12">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
           {stats.map((s) => (
             <Link
               key={s.label}
               href={s.href}
-              className="group rounded border border-border bg-card p-4 transition-all hover:border-zinc-500 hover:bg-card-hover"
+              className="group rounded-xl border border-zinc-800 bg-zinc-950/60 p-4 transition-all hover:border-zinc-500 hover:bg-zinc-900/60 shadow-sm"
             >
-              <div className="flex items-center justify-between text-xs font-medium text-muted">
+              <div className="flex items-center justify-between text-xs font-medium text-zinc-400">
                 <span>{s.label}</span>
-                <span className="font-mono text-[11px] text-emerald-400">{s.delta}</span>
+                <span className="font-mono text-[10px] font-bold text-emerald-400">{s.delta}</span>
               </div>
-              <div className="mt-2 font-mono text-2xl font-bold text-white group-hover:text-zinc-100">
+              <div className="mt-2 font-mono text-2xl font-bold text-white group-hover:text-emerald-300 transition-colors">
                 {s.count}
               </div>
             </Link>
@@ -146,17 +133,20 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Main Grid: AI Tools & Dev Jobs */}
-      <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
+      {/* Main Content Grid */}
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
         {/* Left Column: AI Tools & Repositories (7 cols) */}
-        <div className="space-y-12 lg:col-span-7">
+        <div className="space-y-10 lg:col-span-7">
           {/* AI Tools Section */}
           <section>
-            <div className="mb-4 flex items-center justify-between">
-              <h2 className="font-mono text-sm font-bold uppercase tracking-wider text-zinc-300">
-                Trending AI Tools
-              </h2>
-              <Link href="/tools" className="text-xs text-muted hover:text-white">
+            <div className="mb-4 flex items-center justify-between border-b border-zinc-800 pb-2.5">
+              <div className="flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-emerald-400" />
+                <h2 className="font-mono text-xs font-bold uppercase tracking-wider text-zinc-200">
+                  Trending AI Models &amp; Developer Tools
+                </h2>
+              </div>
+              <Link href="/tools" className="font-mono text-xs text-zinc-400 hover:text-white transition-colors">
                 View all &rarr;
               </Link>
             </div>
@@ -168,30 +158,35 @@ export default async function HomePage() {
                   href={item.canonicalUrl || '#'}
                   target="_blank"
                   rel="noreferrer"
-                  className="block rounded border border-border bg-card p-4 transition-colors hover:border-zinc-500"
+                  className="block rounded-xl border border-zinc-800 bg-zinc-950/70 p-4 transition-all hover:border-zinc-500 hover:bg-zinc-900/80 group shadow-sm"
                 >
                   <div className="flex items-start justify-between gap-4">
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <h3 className="font-mono text-sm font-semibold text-white">
+                    <div className="flex-1">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <h3 className="font-mono text-sm font-semibold text-white group-hover:text-emerald-400 transition-colors">
                           {item.title}
                         </h3>
                         {item.tool?.pricingModel && (
-                          <span className="rounded bg-zinc-800 px-1.5 py-0.5 text-[10px] font-mono text-zinc-400">
+                          <span className="rounded bg-zinc-900 border border-zinc-800 px-2 py-0.5 text-[10px] font-mono text-zinc-400">
                             {item.tool.pricingModel}
                           </span>
                         )}
+                        {item.category && (
+                          <span className="text-[10px] font-mono text-zinc-500">
+                            {item.category}
+                          </span>
+                        )}
                       </div>
-                      <p className="mt-1 text-xs text-zinc-400">
+                      <p className="mt-1.5 text-xs text-zinc-400 leading-relaxed">
                         {item.description}
                       </p>
                     </div>
 
-                    <div className="flex flex-col items-end">
-                      <span className="font-mono text-xs font-bold text-white">
-                        {item.score?.total || 90}
+                    <div className="flex flex-col items-end shrink-0">
+                      <span className="font-mono text-xs font-bold text-white bg-zinc-900 border border-zinc-800 px-2 py-1 rounded">
+                        {item.score?.total || 95}
                       </span>
-                      <span className="text-[10px] uppercase text-muted">Score</span>
+                      <span className="text-[9px] uppercase font-mono text-zinc-500 mt-1">Quality</span>
                     </div>
                   </div>
                 </a>
@@ -201,24 +196,30 @@ export default async function HomePage() {
 
           {/* Open Source Repositories */}
           <section>
-            <div className="mb-4 flex items-center justify-between">
-              <h2 className="font-mono text-sm font-bold uppercase tracking-wider text-zinc-300">
-                Fast-Growing Repositories
-              </h2>
-              <Link href="/repositories" className="text-xs text-muted hover:text-white">
+            <div className="mb-4 flex items-center justify-between border-b border-zinc-800 pb-2.5">
+              <div className="flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-blue-400" />
+                <h2 className="font-mono text-xs font-bold uppercase tracking-wider text-zinc-200">
+                  Fast-Growing Open Source Repositories
+                </h2>
+              </div>
+              <Link href="/repositories" className="font-mono text-xs text-zinc-400 hover:text-white transition-colors">
                 View all &rarr;
               </Link>
             </div>
 
             <div className="space-y-3">
               {repos.map((item: any) => (
-                <div
+                <a
                   key={item.title}
-                  className="rounded border border-border bg-card p-4 transition-colors hover:border-zinc-600"
+                  href={item.canonicalUrl || '#'}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block rounded-xl border border-zinc-800 bg-zinc-950/70 p-4 transition-all hover:border-zinc-500 hover:bg-zinc-900/80 group shadow-sm"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <h3 className="font-mono text-sm font-semibold text-white">
+                      <h3 className="font-mono text-sm font-semibold text-white group-hover:text-emerald-400 transition-colors">
                         {item.repository?.ownerRepo || item.title}
                       </h3>
                       <p className="mt-1 text-xs text-zinc-400">
@@ -226,89 +227,134 @@ export default async function HomePage() {
                       </p>
                     </div>
                     {item.repository?.starsGrowth24h ? (
-                      <span className="font-mono text-xs text-emerald-400">
+                      <span className="font-mono text-xs font-bold text-emerald-400 bg-emerald-950/50 border border-emerald-900 px-2 py-0.5 rounded shrink-0">
                         +{item.repository.starsGrowth24h} stars
                       </span>
                     ) : null}
                   </div>
-                  <div className="mt-3 flex items-center gap-3 text-[11px] font-mono text-muted">
-                    <span>{item.repository?.language || 'TypeScript'}</span>
+                  <div className="mt-3 flex items-center gap-3 text-[11px] font-mono text-zinc-400">
+                    <span className="text-white font-medium">{item.repository?.language || 'TypeScript'}</span>
                     <span>•</span>
                     <span>{item.repository?.stars ? item.repository.stars.toLocaleString() : '1,000+'} stars</span>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </section>
         </div>
 
-        {/* Right Column: Jobs & Intelligence Brief (5 cols) */}
-        <div className="space-y-12 lg:col-span-5">
+        {/* Right Column: Dev Jobs & Internships Radar (5 cols) */}
+        <div className="space-y-10 lg:col-span-5">
           {/* Dev Jobs Radar */}
           <section>
-            <div className="mb-4 flex items-center justify-between">
-              <h2 className="font-mono text-sm font-bold uppercase tracking-wider text-zinc-300">
-                Verified Developer Roles
-              </h2>
-              <Link href="/jobs" className="text-xs text-muted hover:text-white">
-                All jobs &rarr;
+            <div className="mb-4 flex items-center justify-between border-b border-zinc-800 pb-2.5">
+              <div className="flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-amber-400" />
+                <h2 className="font-mono text-xs font-bold uppercase tracking-wider text-zinc-200">
+                  Verified Developer Roles &amp; Internships
+                </h2>
+              </div>
+              <Link href="/jobs" className="font-mono text-xs text-zinc-400 hover:text-white transition-colors">
+                All roles &rarr;
               </Link>
             </div>
 
             <div className="space-y-3">
-              {jobs.map((item: any) => (
-                <div
-                  key={item.title}
-                  className="rounded border border-border bg-card p-4 transition-colors hover:border-zinc-600"
-                >
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <h3 className="text-sm font-semibold text-white">{item.title}</h3>
-                      <p className="text-xs text-zinc-400">{item.job?.company || 'Verified Company'} • {item.job?.location || 'Remote'}</p>
-                    </div>
-                    {item.job?.remote && (
-                      <span className="rounded border border-zinc-700 bg-zinc-800/80 px-1.5 py-0.5 text-[10px] font-mono text-zinc-300">
-                        REMOTE
+              {jobs.map((item: any) => {
+                const j = item.job || {};
+                const isIntern = j.experienceLevel === 'INTERNSHIP' || item.title.toLowerCase().includes('intern');
+
+                return (
+                  <div
+                    key={item.title}
+                    className="rounded-xl border border-zinc-800 bg-zinc-950/70 p-4 transition-all hover:border-zinc-500 hover:bg-zinc-900/80 shadow-sm"
+                  >
+                    <div className="flex flex-wrap items-center gap-2 mb-1.5">
+                      <span className="font-mono text-xs font-bold text-white bg-zinc-900 border border-zinc-700/80 px-2 py-0.5 rounded">
+                        {j.company || 'Verified Company'}
                       </span>
-                    )}
-                  </div>
 
-                  {item.job?.salary && (
-                    <div className="mt-2 text-xs font-mono text-zinc-300">
-                      {item.job.salary}
-                    </div>
-                  )}
-
-                  {item.job?.skills && item.job.skills.length > 0 && (
-                    <div className="mt-3 flex flex-wrap gap-1.5">
-                      {item.job.skills.map((skill: string) => (
-                        <span
-                          key={skill}
-                          className="rounded bg-zinc-900 px-2 py-0.5 text-[10px] font-mono text-zinc-400"
-                        >
-                          {skill}
+                      {isIntern && (
+                        <span className="rounded px-2 py-0.5 text-[10px] font-mono font-bold bg-amber-950/80 text-amber-300 border border-amber-800">
+                          INTERNSHIP
                         </span>
-                      ))}
+                      )}
+
+                      {j.workMode && (
+                        <span className="rounded bg-zinc-900 border border-zinc-800 px-1.5 py-0.5 text-[10px] font-mono text-zinc-300">
+                          {j.workMode.replace('_', ' ')}
+                        </span>
+                      )}
+
+                      {j.sourcePlatform && (
+                        <span className="text-[10px] font-mono text-zinc-500">
+                          via {j.sourcePlatform}
+                        </span>
+                      )}
                     </div>
-                  )}
-                </div>
-              ))}
+
+                    <h3 className="text-sm font-semibold font-mono text-white mt-1">
+                      {item.title}
+                    </h3>
+                    <p className="text-[11px] font-mono text-zinc-400 mt-0.5">
+                      {j.location || 'Remote'}
+                    </p>
+
+                    {j.salary && (
+                      <div className="mt-2.5 font-mono text-xs font-bold text-emerald-400 bg-emerald-950/40 border border-emerald-900/60 px-2.5 py-1 rounded inline-block">
+                        <span className="text-[10px] text-zinc-500 font-normal mr-1 uppercase">
+                          {isIntern ? 'Stipend:' : 'Comp:'}
+                        </span>
+                        {j.salary}
+                      </div>
+                    )}
+
+                    {j.skills && j.skills.length > 0 && (
+                      <div className="mt-3 flex flex-wrap gap-1.5">
+                        {j.skills.slice(0, 4).map((skill: string) => (
+                          <span
+                            key={skill}
+                            className="rounded bg-zinc-900/90 border border-zinc-800 px-2 py-0.5 text-[10px] font-mono text-zinc-400"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+
+                    <div className="mt-3.5 pt-2.5 border-t border-zinc-800/80 flex items-center justify-between">
+                      <span className="text-[10px] font-mono text-zinc-500">Verified Listing</span>
+                      <a
+                        href={item.canonicalUrl || '#'}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="font-mono text-xs text-white hover:text-emerald-400 transition-colors inline-flex items-center gap-1"
+                      >
+                        <span>Apply</span>
+                        <span>&rarr;</span>
+                      </a>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </section>
 
           {/* Today's Intelligence Briefing Card */}
-          <section className="rounded border border-border bg-zinc-950 p-5">
-            <div className="flex items-center justify-between border-b border-border pb-3">
-              <span className="font-mono text-xs font-bold text-white uppercase">Daily Briefing</span>
-              <span className="font-mono text-[11px] text-muted">2026-09-06</span>
+          <section className="rounded-xl border border-zinc-800 bg-zinc-950/90 p-5 shadow-sm">
+            <div className="flex items-center justify-between border-b border-zinc-800 pb-3">
+              <span className="font-mono text-xs font-bold text-white uppercase">Daily Intelligence Briefing</span>
+              <span className="font-mono text-[10px] text-emerald-400 bg-emerald-950/60 border border-emerald-800 px-2 py-0.5 rounded">
+                2026-09-06
+              </span>
             </div>
-            <p className="mt-3 text-xs leading-relaxed text-zinc-300">
-              Anthropic unveiled hybrid reasoning capabilities; Cloudflare released improved Workers AI streaming; new high-signal AI engineering roles opened across remote and Bengaluru hubs.
+            <p className="mt-3 text-xs leading-relaxed text-zinc-300 font-sans">
+              Summer 2026 engineering internships opened across Google India, Microsoft India, and CRED; Y Combinator tech startups increased remote hiring; Biome 1.9 shipped with enhanced AST linter.
             </p>
-            <div className="mt-4">
+            <div className="mt-4 pt-3 border-t border-zinc-900 flex items-center justify-between">
               <Link
-                href="/reports/2026-09-06"
-                className="inline-flex items-center gap-1 font-mono text-xs text-white hover:underline"
+                href="/reports"
+                className="inline-flex items-center gap-1.5 font-mono text-xs text-white hover:text-emerald-400 transition-colors"
               >
                 <span>Read complete intelligence briefing</span>
                 <span>&rarr;</span>
