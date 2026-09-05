@@ -51,7 +51,7 @@ jobs:
           AI_PROVIDER: ${{ github.event.inputs.ai_provider || secrets.AI_PROVIDER || 'groq' }}
           AI_API_KEY: ${{ secrets.AI_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-          GROQ_MODEL: ${{ secrets.GROQ_MODEL || 'llama-3.3-70b-versatile' }}
+          GROQ_MODEL: ${{ secrets.GROQ_MODEL || 'groq/compound-mini' }}
 
       - name: Detect Meaningful Changes & Publish
         run: ./scripts/detect-meaningful-changes.sh

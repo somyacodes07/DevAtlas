@@ -55,6 +55,12 @@ export class GroqAIProvider implements AIProvider {
         signal: controller.signal,
       });
 
+      if (response.status === 404 && this.model !== 'groq/compound-mini') {
+        console.warn(`[Groq Warning] Model "${this.model}" not available on this tier. Auto-switching to "groq/compound-mini"...`);
+        this.model = 'groq/compound-mini';
+        return this.callGroq(messages, jsonMode, maxTokens, canRetry);
+      }
+
       if (response.status === 429 && canRetry) {
         // Wait 3 seconds and retry once
         await new Promise((resolve) => setTimeout(resolve, 3000));
