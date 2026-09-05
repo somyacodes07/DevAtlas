@@ -11,21 +11,32 @@ export class GroqAIProvider implements AIProvider {
 
   constructor(apiKey?: string, model?: string) {
     this.apiKey = apiKey || process.env.GROQ_API_KEY || process.env.AI_API_KEY || '';
-    this.model = model || process.env.GROQ_MODEL || 'llama-3.3-70b-versatile';
+    this.model = model || process.env.GROQ_MODEL || 'groq/compound-mini';
     this.fallbackProvider = new DeterministicRuleProvider();
   }
+
+  private lastCallTime = 0;
 
   private async callGroq(
     messages: Array<{ role: 'system' | 'user' | 'assistant'; content: string }>,
     jsonMode = true,
-    maxTokens = 600
+    maxTokens = 600,
+    canRetry = true
   ): Promise<string> {
     if (!this.apiKey) {
       throw new Error('GROQ_API_KEY is not configured');
     }
 
+    // Pace requests to stay within Groq free-tier 30 RPM limit (2s interval)
+    const now = Date.now();
+    const elapsed = now - this.lastCallTime;
+    if (elapsed < 2050) {
+      await new Promise((resolve) => setTimeout(resolve, 2050 - elapsed));
+    }
+    this.lastCallTime = Date.now();
+
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 10000);
+    const timeoutId = setTimeout(() => controller.abort(), 12000);
 
     try {
       const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
@@ -43,6 +54,12 @@ export class GroqAIProvider implements AIProvider {
         }),
         signal: controller.signal,
       });
+
+      if (response.status === 429 && canRetry) {
+        // Wait 3 seconds and retry once
+        await new Promise((resolve) => setTimeout(resolve, 3000));
+        return this.callGroq(messages, jsonMode, maxTokens, false);
+      }
 
       if (!response.ok) {
         const errorText = await response.text();

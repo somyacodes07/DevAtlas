@@ -22,14 +22,17 @@ describe('Groq AI Provider & Factory', () => {
     expect(result.summary).toBeTruthy();
   });
 
-  it('instantiates GroqAIProvider when AI_PROVIDER is set to groq', () => {
-    const prevEnv = process.env.AI_PROVIDER;
+  it('instantiates GroqAIProvider when AI_PROVIDER is set to groq and key is provided', () => {
+    const prevProvider = process.env.AI_PROVIDER;
+    const prevKey = process.env.GROQ_API_KEY;
     process.env.AI_PROVIDER = 'groq';
+    process.env.GROQ_API_KEY = 'gsk_test_mock_key';
 
     const provider = getAIProvider();
     expect(provider.name).toContain('Groq');
 
-    process.env.AI_PROVIDER = prevEnv;
+    process.env.AI_PROVIDER = prevProvider;
+    process.env.GROQ_API_KEY = prevKey;
   });
 
   it('generates empty executive briefing gracefully when no key is configured', async () => {

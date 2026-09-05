@@ -1,7 +1,7 @@
 {
   "date": "2026-09-05",
-  "generatedAt": "2026-09-05T23:34:55.587Z",
-  "runId": "RUN-2026-09-05-3474",
+  "generatedAt": "2026-09-05T23:38:11.390Z",
+  "runId": "RUN-2026-09-05-6105",
   "summary": {
     "itemsDiscovered": 40,
     "dataQualityScore": 100
@@ -31,7 +31,7 @@
     {
       "type": "REPOSITORY",
       "title": "EbookFoundation/free-programming-books",
-      "category": "AI & Machine Learning",
+      "category": "Open Source Software",
       "canonicalUrl": "https://github.com/EbookFoundation/free-programming-books",
       "score": 88
     },
@@ -65,16 +65,16 @@
     },
     {
       "type": "NEWS",
-      "title": "Learn Programming with OCaml",
-      "category": "Tech News & Ecosystem",
-      "canonicalUrl": "https://usr.lmf.cnrs.fr/lpo",
+      "title": "Private German rocket makes history, reaches orbit from European soil",
+      "category": "Careers & Engineering Roles",
+      "canonicalUrl": "https://www.space.com/space-exploration/launches-spacecraft/isar-aerospace-second-launch-norway-andoya-spaceport-spectrum-rocket",
       "score": 81
     },
     {
       "type": "NEWS",
-      "title": "Private German rocket makes history, reaches orbit from European soil",
-      "category": "Tech News & Ecosystem",
-      "canonicalUrl": "https://www.space.com/space-exploration/launches-spacecraft/isar-aerospace-second-launch-norway-andoya-spaceport-spectrum-rocket",
+      "title": "Falsehoods Programmers Believe About LANs",
+      "category": "Developer Tools",
+      "canonicalUrl": "https://dreamstation.systems/personal/lanfalsehoods.html",
       "score": 81
     }
   ]

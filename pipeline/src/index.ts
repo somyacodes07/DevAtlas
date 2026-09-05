@@ -1,3 +1,17 @@
+import fs from 'node:fs';
+import path from 'node:path';
+
+// Automatically load root or local .env file in Node.js
+if (typeof process.loadEnvFile === 'function') {
+  const rootEnv = path.resolve(process.cwd(), '.env');
+  const parentEnv = path.resolve(process.cwd(), '..', '.env');
+  if (fs.existsSync(rootEnv)) {
+    process.loadEnvFile(rootEnv);
+  } else if (fs.existsSync(parentEnv)) {
+    process.loadEnvFile(parentEnv);
+  }
+}
+
 import { GitHubDiscoverySource } from './discovery/githubSource';
 import { HackerNewsDiscoverySource } from './discovery/hackerNewsSource';
 import { JobDiscoverySource } from './discovery/jobSource';
