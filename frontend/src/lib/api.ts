@@ -26,6 +26,10 @@ export interface ContentItem {
     company: string;
     location: string;
     remote: boolean;
+    workMode?: 'REMOTE' | 'HYBRID' | 'ON_SITE';
+    region?: 'INDIA' | 'GLOBAL_REMOTE' | 'NORTH_AMERICA' | 'EUROPE';
+    experienceLevel?: string;
+    sourcePlatform?: string;
     employmentType: string;
     salary?: string;
     skills: string[];
