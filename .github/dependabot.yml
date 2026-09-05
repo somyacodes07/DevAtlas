@@ -6,7 +6,7 @@ updates:
       interval: "weekly"
     open-pull-requests-limit: 10
     reviewers:
-      - "somyajeet"
+      - "somyacodes07"
     labels:
       - "dependencies"
       - "security"

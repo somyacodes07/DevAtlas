@@ -6,9 +6,9 @@ Discover. Understand. Stay ahead.
 
 DevAtlas is a production-grade, portfolio-defining autonomous developer intelligence platform that continuously discovers useful developer ecosystem information, normalizes and deduplicates it, validates schemas and data quality, enriches it with AI scoring and taxonomies, stores it in MongoDB Atlas, synthesizes daily reports, and publishes results automatically via a modern serverless edge CI/CD pipeline.
 
-[![CI](https://github.com/somyajeet/DevAtlas/actions/workflows/ci.yml/badge.svg)](https://github.com/somyajeet/DevAtlas/actions/workflows/ci.yml)
-[![Daily Discovery](https://github.com/somyajeet/DevAtlas/actions/workflows/daily-discovery.yml/badge.svg)](https://github.com/somyajeet/DevAtlas/actions/workflows/daily-discovery.yml)
-[![Security & Compliance](https://github.com/somyajeet/DevAtlas/actions/workflows/security.yml/badge.svg)](https://github.com/somyajeet/DevAtlas/actions/workflows/security.yml)
+[![CI](https://github.com/somyacodes07/DevAtlas/actions/workflows/ci.yml/badge.svg)](https://github.com/somyacodes07/DevAtlas/actions/workflows/ci.yml)
+[![Daily Discovery](https://github.com/somyacodes07/DevAtlas/actions/workflows/daily-discovery.yml/badge.svg)](https://github.com/somyacodes07/DevAtlas/actions/workflows/daily-discovery.yml)
+[![Security & Compliance](https://github.com/somyacodes07/DevAtlas/actions/workflows/security.yml/badge.svg)](https://github.com/somyacodes07/DevAtlas/actions/workflows/security.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](LICENSE)
 [![Architecture: Serverless Edge](https://img.shields.io/badge/Architecture-Serverless%20Edge-black.svg)](docs/architecture.md)
 
@@ -177,7 +177,7 @@ DevAtlas/
 
 ### 1. Clone and Install
 ```bash
-git clone https://github.com/somyajeet/DevAtlas.git
+git clone https://github.com/somyacodes07/DevAtlas.git
 cd DevAtlas
 cp .env.example .env
 npm install
