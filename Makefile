@@ -9,6 +9,8 @@ help:
 	@echo "  make test         Run tests across all workspaces"
 	@echo "  make lint         Lint codebase across all workspaces"
 	@echo "  make typecheck    Run TypeScript compiler check on all workspaces"
+	@echo "  make seed         Seed local development data"
+	@echo "  make indexes      Configure MongoDB indexes"
 	@echo "  make mongo-up     Start local MongoDB container via Docker"
 	@echo "  make mongo-down   Stop local MongoDB container"
 	@echo "  make clean        Remove build artifacts and node_modules"
@@ -31,6 +33,12 @@ lint:
 
 typecheck:
 	npm run typecheck
+
+seed:
+	npm run db:seed
+
+indexes:
+	npm run db:indexes
 
 mongo-up:
 	docker run -d --name devatlas-mongo -p 27017:27017 -v devatlas_data:/data/db mongo:7.0 || docker start devatlas-mongo
