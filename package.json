@@ -1,0 +1,29 @@
+{
+  "name": "devatlas-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DevAtlas - Autonomous Developer Intelligence & CI/CD Platform",
+  "workspaces": [
+    "worker",
+    "pipeline",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "clean": "npm run clean --workspaces --if-present"
+  },
+  "keywords": [
+    "developer-intelligence",
+    "ci-cd",
+    "cloudflare-workers",
+    "nextjs",
+    "mongodb",
+    "ai"
+  ],
+  "author": "DevAtlas Team",
+  "license": "MIT"
+}

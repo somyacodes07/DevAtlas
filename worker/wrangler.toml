@@ -1,0 +1,13 @@
+name = "devatlas-api"
+main = "src/index.ts"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+WORKER_ENV = "development"
+MONGODB_DATABASE = "devatlas"
+
+# Cloudflare KV binding for response caching (Optional in local dev)
+# [[kv_namespaces]]
+# binding = "DEVATLAS_KV"
+# id = "placeholder_kv_id"

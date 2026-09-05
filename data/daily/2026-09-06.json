@@ -1,0 +1,33 @@
+{
+  "date": "2026-09-06",
+  "generatedAt": "2026-09-06T00:15:22.000Z",
+  "summary": {
+    "itemsDiscovered": 482,
+    "itemsNew": 173,
+    "itemsDuplicates": 201,
+    "dataQualityScore": 98.4
+  },
+  "topItems": [
+    {
+      "type": "AI_TOOL",
+      "title": "Claude 3.7 Sonnet Hybrid Reasoning",
+      "category": "AI Models",
+      "canonicalUrl": "https://anthropic.com/news/claude-3-7-sonnet",
+      "score": 98
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "anthropics/anthropic-sdk-typescript",
+      "category": "Open Source",
+      "canonicalUrl": "https://github.com/anthropics/anthropic-sdk-typescript",
+      "score": 92
+    },
+    {
+      "type": "JOB",
+      "title": "Senior AI Systems Engineer",
+      "category": "Careers",
+      "canonicalUrl": "https://careers.anthropic.com/jobs/ai-systems-engineer",
+      "score": 94
+    }
+  ]
+}

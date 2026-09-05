@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing & Coverage
+coverage/
+.nyc_output/
+
+# Next.js
+frontend/.next/
+frontend/out/
+
+# Cloudflare Wrangler
+worker/.wrangler/
+.wrangler/
+
+# Production / Build outputs
+dist/
+build/
+*.tsbuildinfo
+
+# Environment & Secrets (NEVER COMMIT SECRETS)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+!.env.example
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS & Editor
+.DS_Store
+*.pem
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Temporary files
+tmp/
+temp/
