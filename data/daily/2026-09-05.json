@@ -1,7 +1,7 @@
 {
   "date": "2026-09-05",
-  "generatedAt": "2026-09-05T23:38:11.390Z",
-  "runId": "RUN-2026-09-05-6105",
+  "generatedAt": "2026-09-05T23:48:15.792Z",
+  "runId": "RUN-2026-09-05-6868",
   "summary": {
     "itemsDiscovered": 40,
     "dataQualityScore": 100
@@ -65,16 +65,16 @@
     },
     {
       "type": "NEWS",
-      "title": "Private German rocket makes history, reaches orbit from European soil",
-      "category": "Careers & Engineering Roles",
-      "canonicalUrl": "https://www.space.com/space-exploration/launches-spacecraft/isar-aerospace-second-launch-norway-andoya-spaceport-spectrum-rocket",
+      "title": "The \"$60 Gaming PC\" – AMD BC-250 (2025)",
+      "category": "Hardware & Gaming",
+      "canonicalUrl": "https://devquasar.com/hardware/the-60-gaming-pc-amd-bc-250",
       "score": 81
     },
     {
       "type": "NEWS",
-      "title": "Falsehoods Programmers Believe About LANs",
-      "category": "Developer Tools",
-      "canonicalUrl": "https://dreamstation.systems/personal/lanfalsehoods.html",
+      "title": "Private German rocket makes history, reaches orbit from European soil",
+      "category": "space & aerospace",
+      "canonicalUrl": "https://www.space.com/space-exploration/launches-spacecraft/isar-aerospace-second-launch-norway-andoya-spaceport-spectrum-rocket",
       "score": 81
     }
   ]
