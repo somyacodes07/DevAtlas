@@ -1,20 +1,35 @@
+'use client';
+
+import { Suspense, useEffect, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
-import { fetchItems } from '@/lib/api';
+import { fetchItems, ContentItem } from '@/lib/api';
 
-interface ExplorePageProps {
-  searchParams: Promise<{ q?: string; type?: string; minScore?: string }>;
-}
+function ExploreFeed() {
+  const searchParams = useSearchParams();
+  const q = searchParams.get('q') || '';
+  const type = searchParams.get('type') || 'ALL';
+  const minScore = searchParams.get('minScore') || '';
 
-export default async function ExplorePage({ searchParams }: ExplorePageProps) {
-  const { q, type, minScore } = await searchParams;
+  const [items, setItems] = useState<ContentItem[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const queryParams: Record<string, string> = { limit: '30' };
-  if (q) queryParams.q = q;
-  if (type && type !== 'ALL') queryParams.type = type;
-  if (minScore) queryParams.minScore = minScore;
+  useEffect(() => {
+    setLoading(true);
+    const queryParams: Record<string, string> = { limit: '30' };
+    if (q) queryParams.q = q;
+    if (type && type !== 'ALL') queryParams.type = type;
+    if (minScore) queryParams.minScore = minScore;
 
-  const res = await fetchItems(queryParams);
-  const items = res.data;
+    fetchItems(queryParams)
+      .then((res) => {
+        setItems(res.data || []);
+      })
+      .catch(() => {
+        setItems([]);
+      })
+      .finally(() => setLoading(false));
+  }, [q, type, minScore]);
 
   const categories = [
     { label: 'All Items', value: 'ALL' },
@@ -36,7 +51,7 @@ export default async function ExplorePage({ searchParams }: ExplorePageProps) {
             </p>
           </div>
           <div className="font-mono text-xs text-zinc-400">
-            {items.length} Discoveries Displayed
+            {loading ? 'Searching...' : `${items.length} Discoveries Displayed`}
           </div>
         </div>
       </div>
@@ -102,11 +117,19 @@ export default async function ExplorePage({ searchParams }: ExplorePageProps) {
         ))}
       </div>
 
-      {items.length === 0 && (
+      {!loading && items.length === 0 && (
         <div className="mt-12 py-16 text-center text-xs font-mono text-zinc-500 border border-dashed border-border rounded">
           No items found matching the current filter. Seed data with `make seed` or run discovery.
         </div>
       )}
     </div>
+  );
+}
+
+export default function ExplorePage() {
+  return (
+    <Suspense fallback={<div className="p-12 text-center text-xs font-mono text-zinc-500">Loading intelligence feed...</div>}>
+      <ExploreFeed />
+    </Suspense>
   );
 }

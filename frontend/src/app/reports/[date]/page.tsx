@@ -1,6 +1,14 @@
 import Link from 'next/link';
 import { fetchReport } from '@/lib/api';
 
+export async function generateStaticParams() {
+  return [
+    { date: '2026-09-06' },
+    { date: '2026-09-05' },
+    { date: '2026-09-04' },
+  ];
+}
+
 interface ReportPageProps {
   params: Promise<{ date: string }>;
 }
