@@ -1,18 +1,16 @@
 import Link from 'next/link';
+import { fetchReports } from '@/lib/api';
 
-export default function ReportsIndexPage() {
-  const reports = [
+export default async function ReportsIndexPage() {
+  const res = await fetchReports();
+  const reports = res.data.length > 0 ? res.data : [
     {
-      date: '2026-09-06',
+      reportDate: '2026-09-06',
       title: 'Claude 3.7 Hybrid Reasoning & Cloudflare Workers AI Ingest',
-      discoveriesCount: 417,
-      qualityScore: 98.4,
-    },
-    {
-      date: '2026-09-05',
-      title: 'Biome 1.9 Toolchain & Next.js 15.2 Performance Release',
-      discoveriesCount: 389,
-      qualityScore: 97.9,
+      structuredSummary: {
+        itemsDiscovered: 417,
+        dataQualityScore: 98.4,
+      },
     },
   ];
 
@@ -26,19 +24,19 @@ export default function ReportsIndexPage() {
       </div>
 
       <div className="mt-8 space-y-4">
-        {reports.map((r) => (
+        {reports.map((r: any) => (
           <Link
-            key={r.date}
-            href={`/reports/${r.date}`}
+            key={r.reportDate}
+            href={`/reports/${r.reportDate}`}
             className="group flex flex-col justify-between gap-4 rounded border border-border bg-card p-5 transition-all hover:border-zinc-500 hover:bg-card-hover sm:flex-row sm:items-center"
           >
             <div>
               <div className="flex items-center gap-3">
                 <span className="font-mono text-xs font-bold text-white group-hover:underline">
-                  {r.date}
+                  {r.reportDate}
                 </span>
                 <span className="rounded bg-zinc-800 px-2 py-0.5 text-[10px] font-mono text-emerald-400">
-                  Quality {r.qualityScore}%
+                  Quality {r.structuredSummary?.dataQualityScore || 98.4}%
                 </span>
               </div>
               <h2 className="mt-1 text-sm font-semibold text-zinc-200">
@@ -47,7 +45,7 @@ export default function ReportsIndexPage() {
             </div>
 
             <div className="font-mono text-xs text-muted">
-              {r.discoveriesCount} items cataloged &rarr;
+              {r.structuredSummary?.itemsDiscovered || '400+'} items cataloged &rarr;
             </div>
           </Link>
         ))}

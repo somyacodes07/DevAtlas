@@ -1,74 +1,94 @@
 import Link from 'next/link';
+import { fetchJobs, fetchRepositories, fetchStats, fetchTools } from '@/lib/api';
 
-export default function HomePage() {
+export default async function HomePage() {
+  const [statsData, toolsData, jobsData, reposData] = await Promise.all([
+    fetchStats(),
+    fetchTools({ limit: '3' }),
+    fetchJobs({ limit: '2' }),
+    fetchRepositories({ limit: '2' }),
+  ]);
+
   const stats = [
-    { label: 'AI Tools', count: 47, delta: '+8 today', href: '/tools' },
-    { label: 'Developer Jobs', count: 182, delta: '+34 today', href: '/jobs' },
-    { label: 'Repositories', count: 63, delta: '+12 today', href: '/repositories' },
-    { label: 'Tech News', count: 91, delta: '+19 today', href: '/explore' },
-    { label: 'Security CVEs', count: 12, delta: '+2 today', href: '/explore' },
+    { label: 'AI Tools', count: statsData?.today?.aiTools ?? 47, delta: '+8 today', href: '/tools' },
+    { label: 'Developer Jobs', count: statsData?.today?.jobs ?? 182, delta: '+34 today', href: '/jobs' },
+    { label: 'Repositories', count: statsData?.today?.repositories ?? 63, delta: '+12 today', href: '/repositories' },
+    { label: 'Tech News', count: statsData?.today?.news ?? 91, delta: '+19 today', href: '/explore' },
+    { label: 'Security CVEs', count: statsData?.today?.securityAlerts ?? 12, delta: '+2 today', href: '/explore' },
   ];
 
-  const trendingTools = [
+  const tools = toolsData.data.length > 0 ? toolsData.data : [
     {
-      name: 'v0.dev',
+      title: 'v0.dev',
       description: 'Generative UI system powered by AI producing accessible React and Tailwind CSS.',
       category: 'AI / UI',
-      score: 96,
-      pricing: 'FREEMIUM',
-      url: 'https://v0.dev',
+      score: { total: 96 },
+      tool: { pricingModel: 'FREEMIUM' },
+      canonicalUrl: 'https://v0.dev',
     },
     {
-      name: 'Claude 3.7 Sonnet',
+      title: 'Claude 3.7 Sonnet',
       description: 'Hybrid reasoning model with granular control over instant vs extended thinking.',
       category: 'AI Models',
-      score: 98,
-      pricing: 'PAID',
-      url: 'https://anthropic.com',
+      score: { total: 98 },
+      tool: { pricingModel: 'PAID' },
+      canonicalUrl: 'https://anthropic.com',
     },
     {
-      name: 'Biome 1.9',
+      title: 'Biome 1.9',
       description: 'Toolchain of the web: fast formatter, linter, and analyzer for JavaScript/TypeScript.',
       category: 'Dev Tools',
-      score: 92,
-      pricing: 'OPEN_SOURCE',
-      url: 'https://biomejs.dev',
+      score: { total: 92 },
+      tool: { pricingModel: 'OPEN_SOURCE' },
+      canonicalUrl: 'https://biomejs.dev',
     },
   ];
 
-  const trendingJobs = [
+  const jobs = jobsData.data.length > 0 ? jobsData.data : [
     {
       title: 'Senior AI Systems Engineer',
-      company: 'Anthropic',
-      location: 'San Francisco, CA / Remote',
-      salary: '$220,000 - $300,000',
-      skills: ['TypeScript', 'Rust', 'Kubernetes', 'LLM Evals'],
-      remote: true,
+      description: 'Design and build high-throughput distributed inference pipelines.',
+      job: {
+        company: 'Anthropic',
+        location: 'San Francisco, CA / Remote',
+        salary: '$220,000 - $300,000',
+        skills: ['TypeScript', 'Rust', 'Kubernetes', 'LLM Evals'],
+        remote: true,
+      },
     },
     {
-      title: 'Platform / Cloudflare Engineer',
-      company: 'Vercel',
-      location: 'Remote',
-      salary: '$180,000 - $240,000',
-      skills: ['Edge Runtime', 'Go', 'Distributed Systems'],
-      remote: true,
+      title: 'Staff Edge Platform Engineer',
+      description: 'Lead architectural initiatives on global edge workers and edge caching infrastructure.',
+      job: {
+        company: 'Vercel',
+        location: 'Remote Worldwide',
+        salary: '$180,000 - $240,000',
+        skills: ['Edge Computing', 'Go', 'TypeScript'],
+        remote: true,
+      },
     },
   ];
 
-  const trendingRepos = [
+  const repos = reposData.data.length > 0 ? reposData.data : [
     {
-      ownerRepo: 'anthropics/anthropic-sdk-typescript',
-      stars: 4850,
-      language: 'TypeScript',
-      growth: '+420 stars',
+      title: 'anthropics/anthropic-sdk-typescript',
       description: 'Official TypeScript library for the Anthropic Claude API.',
+      repository: {
+        ownerRepo: 'anthropics/anthropic-sdk-typescript',
+        stars: 4850,
+        language: 'TypeScript',
+        starsGrowth24h: 420,
+      },
     },
     {
-      ownerRepo: 'cloudflare/workers-sdk',
-      stars: 6420,
-      language: 'TypeScript',
-      growth: '+180 stars',
+      title: 'cloudflare/workers-sdk',
       description: 'Wrangler and utilities for developing Cloudflare Workers & Pages.',
+      repository: {
+        ownerRepo: 'cloudflare/workers-sdk',
+        stars: 6420,
+        language: 'TypeScript',
+        starsGrowth24h: 180,
+      },
     },
   ];
 
@@ -101,7 +121,7 @@ export default function HomePage() {
               href="/explore"
               className="rounded border border-border bg-card px-4 py-2 text-xs font-semibold text-zinc-300 transition-colors hover:border-zinc-500 hover:text-white"
             >
-              Search All (417)
+              Search All Items
             </Link>
           </div>
         </div>
@@ -142,34 +162,39 @@ export default function HomePage() {
             </div>
 
             <div className="space-y-3">
-              {trendingTools.map((tool) => (
-                <div
-                  key={tool.name}
-                  className="rounded border border-border bg-card p-4 transition-colors hover:border-zinc-600"
+              {tools.map((item: any) => (
+                <a
+                  key={item.title}
+                  href={item.canonicalUrl || '#'}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block rounded border border-border bg-card p-4 transition-colors hover:border-zinc-500"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <div className="flex items-center gap-2">
                         <h3 className="font-mono text-sm font-semibold text-white">
-                          {tool.name}
+                          {item.title}
                         </h3>
-                        <span className="rounded bg-zinc-800 px-1.5 py-0.5 text-[10px] font-mono text-zinc-400">
-                          {tool.pricing}
-                        </span>
+                        {item.tool?.pricingModel && (
+                          <span className="rounded bg-zinc-800 px-1.5 py-0.5 text-[10px] font-mono text-zinc-400">
+                            {item.tool.pricingModel}
+                          </span>
+                        )}
                       </div>
                       <p className="mt-1 text-xs text-zinc-400">
-                        {tool.description}
+                        {item.description}
                       </p>
                     </div>
 
                     <div className="flex flex-col items-end">
                       <span className="font-mono text-xs font-bold text-white">
-                        {tool.score}
+                        {item.score?.total || 90}
                       </span>
-                      <span className="text-[10px] uppercase text-muted">Relevance</span>
+                      <span className="text-[10px] uppercase text-muted">Score</span>
                     </div>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </section>
@@ -186,28 +211,30 @@ export default function HomePage() {
             </div>
 
             <div className="space-y-3">
-              {trendingRepos.map((repo) => (
+              {repos.map((item: any) => (
                 <div
-                  key={repo.ownerRepo}
+                  key={item.title}
                   className="rounded border border-border bg-card p-4 transition-colors hover:border-zinc-600"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <h3 className="font-mono text-sm font-semibold text-white">
-                        {repo.ownerRepo}
+                        {item.repository?.ownerRepo || item.title}
                       </h3>
                       <p className="mt-1 text-xs text-zinc-400">
-                        {repo.description}
+                        {item.description}
                       </p>
                     </div>
-                    <span className="font-mono text-xs text-emerald-400">
-                      {repo.growth}
-                    </span>
+                    {item.repository?.starsGrowth24h ? (
+                      <span className="font-mono text-xs text-emerald-400">
+                        +{item.repository.starsGrowth24h} stars
+                      </span>
+                    ) : null}
                   </div>
                   <div className="mt-3 flex items-center gap-3 text-[11px] font-mono text-muted">
-                    <span>{repo.language}</span>
+                    <span>{item.repository?.language || 'TypeScript'}</span>
                     <span>•</span>
-                    <span>{repo.stars.toLocaleString()} stars</span>
+                    <span>{item.repository?.stars ? item.repository.stars.toLocaleString() : '1,000+'} stars</span>
                   </div>
                 </div>
               ))}
@@ -229,37 +256,41 @@ export default function HomePage() {
             </div>
 
             <div className="space-y-3">
-              {trendingJobs.map((job) => (
+              {jobs.map((item: any) => (
                 <div
-                  key={job.title}
+                  key={item.title}
                   className="rounded border border-border bg-card p-4 transition-colors hover:border-zinc-600"
                 >
                   <div className="flex items-start justify-between">
                     <div>
-                      <h3 className="text-sm font-semibold text-white">{job.title}</h3>
-                      <p className="text-xs text-zinc-400">{job.company} • {job.location}</p>
+                      <h3 className="text-sm font-semibold text-white">{item.title}</h3>
+                      <p className="text-xs text-zinc-400">{item.job?.company || 'Verified Company'} • {item.job?.location || 'Remote'}</p>
                     </div>
-                    {job.remote && (
+                    {item.job?.remote && (
                       <span className="rounded border border-zinc-700 bg-zinc-800/80 px-1.5 py-0.5 text-[10px] font-mono text-zinc-300">
                         REMOTE
                       </span>
                     )}
                   </div>
 
-                  <div className="mt-2 text-xs font-mono text-zinc-300">
-                    {job.salary}
-                  </div>
+                  {item.job?.salary && (
+                    <div className="mt-2 text-xs font-mono text-zinc-300">
+                      {item.job.salary}
+                    </div>
+                  )}
 
-                  <div className="mt-3 flex flex-wrap gap-1.5">
-                    {job.skills.map((skill) => (
-                      <span
-                        key={skill}
-                        className="rounded bg-zinc-900 px-2 py-0.5 text-[10px] font-mono text-zinc-400"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
+                  {item.job?.skills && item.job.skills.length > 0 && (
+                    <div className="mt-3 flex flex-wrap gap-1.5">
+                      {item.job.skills.map((skill: string) => (
+                        <span
+                          key={skill}
+                          className="rounded bg-zinc-900 px-2 py-0.5 text-[10px] font-mono text-zinc-400"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
@@ -272,7 +303,7 @@ export default function HomePage() {
               <span className="font-mono text-[11px] text-muted">2026-09-06</span>
             </div>
             <p className="mt-3 text-xs leading-relaxed text-zinc-300">
-              Anthropic unveiled hybrid reasoning capabilities; Cloudflare released improved Workers AI streaming; 34 new high-signal AI engineering roles opened across remote and Bengaluru hubs.
+              Anthropic unveiled hybrid reasoning capabilities; Cloudflare released improved Workers AI streaming; new high-signal AI engineering roles opened across remote and Bengaluru hubs.
             </p>
             <div className="mt-4">
               <Link
