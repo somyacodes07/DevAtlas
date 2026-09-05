@@ -3,10 +3,16 @@ import { cors } from 'hono/cors';
 import { Env, Variables } from './types';
 import { healthRouter } from './routes/health';
 import { statsRouter } from './routes/stats';
+import { itemsRouter } from './routes/items';
+import { jobsRouter } from './routes/jobs';
+import { toolsRouter } from './routes/tools';
+import { repositoriesRouter } from './routes/repositories';
+import { reportsRouter } from './routes/reports';
+import { adminRouter } from './routes/admin';
 
 const app = new Hono<{ Bindings: Env; Variables: Variables }>();
 
-// Enable CORS for frontend communication
+// Enable CORS for frontend and API consumers
 app.use('*', cors({
   origin: '*',
   allowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
@@ -27,12 +33,12 @@ app.use('*', async (c, next) => {
 // Standardized error handling
 app.onError((err, c) => {
   const requestId = c.get('requestId') || 'unknown';
-  console.error(`[Error] requestId=${requestId}`, err);
+  console.error(`[API Error] requestId=${requestId}`, err);
 
   return c.json({
     error: {
       code: 'INTERNAL_SERVER_ERROR',
-      message: err.message || 'An unexpected error occurred.',
+      message: err.message || 'An unexpected server error occurred.',
       requestId,
       timestamp: new Date().toISOString(),
     },
@@ -52,18 +58,34 @@ app.notFound((c) => {
   }, 404);
 });
 
-// Root info
+// Root Info
 app.get('/', (c) => {
   return c.json({
     name: 'DevAtlas API',
     description: 'Autonomous Developer Intelligence Platform API',
     version: '1.0.0',
     documentation: '/api/v1/health',
+    endpoints: {
+      health: '/api/v1/health',
+      stats: '/api/v1/stats',
+      items: '/api/v1/items',
+      jobs: '/api/v1/jobs',
+      tools: '/api/v1/tools',
+      repositories: '/api/v1/repositories',
+      reports: '/api/v1/reports',
+      admin: '/api/v1/admin/pipeline/trigger',
+    },
   });
 });
 
 // Mount Routes
 app.route('/api/v1/health', healthRouter);
 app.route('/api/v1/stats', statsRouter);
+app.route('/api/v1/items', itemsRouter);
+app.route('/api/v1/jobs', jobsRouter);
+app.route('/api/v1/tools', toolsRouter);
+app.route('/api/v1/repositories', repositoriesRouter);
+app.route('/api/v1/reports', reportsRouter);
+app.route('/api/v1/admin', adminRouter);
 
 export default app;
