@@ -10,11 +10,11 @@ export default async function HomePage() {
   ]);
 
   const stats = [
-    { label: 'AI Tools', count: statsData?.today?.aiTools ?? 47, delta: '+8 today', href: '/tools' },
-    { label: 'Developer Jobs', count: statsData?.today?.jobs ?? 182, delta: '+34 today', href: '/jobs' },
-    { label: 'Repositories', count: statsData?.today?.repositories ?? 63, delta: '+12 today', href: '/repositories' },
-    { label: 'Tech News', count: statsData?.today?.news ?? 91, delta: '+19 today', href: '/explore' },
-    { label: 'Security CVEs', count: statsData?.today?.securityAlerts ?? 12, delta: '+2 today', href: '/explore' },
+    { label: 'AI Tools & Models', count: statsData?.today?.aiTools ?? 6, delta: 'Continuously Ranked', href: '/tools' },
+    { label: 'Verified Jobs', count: statsData?.today?.jobs ?? 6, delta: 'Verified Salaries', href: '/jobs' },
+    { label: 'Fast Repositories', count: statsData?.today?.repositories ?? 5, delta: 'Top Star Growth', href: '/repositories' },
+    { label: 'Tech News & Releases', count: statsData?.today?.news ?? 2, delta: 'Major Releases', href: '/explore' },
+    { label: 'Security Advisories', count: statsData?.today?.securityAlerts ?? 1, delta: 'Zero-Day Feeds', href: '/explore' },
   ];
 
   const tools = toolsData.data.length > 0 ? toolsData.data : [

@@ -1,6 +1,7 @@
 import { Hono } from 'hono';
 import { Env, Variables } from '../types';
 import { getItemsCollection, getRunsCollection, getWorkerDb } from '../db/mongodb';
+import { FALLBACK_ITEMS } from '../db/fallbackData';
 
 export const statsRouter = new Hono<{ Bindings: Env; Variables: Variables }>();
 
@@ -9,14 +10,21 @@ statsRouter.get('/', async (c) => {
   const db = await getWorkerDb(c.env?.MONGODB_URI, c.env?.MONGODB_DATABASE);
 
   if (!db) {
+    const aiTools = FALLBACK_ITEMS.filter(i => i.type === 'AI_TOOL').length;
+    const jobs = FALLBACK_ITEMS.filter(i => i.type === 'JOB').length;
+    const repositories = FALLBACK_ITEMS.filter(i => i.type === 'REPOSITORY').length;
+    const news = FALLBACK_ITEMS.filter(i => i.type === 'NEWS').length;
+    const securityAlerts = FALLBACK_ITEMS.filter(i => i.type === 'SECURITY').length;
+
+    c.header('Cache-Control', 'public, max-age=60, s-maxage=300');
     return c.json({
       data: {
         today: {
-          aiTools: 24,
-          jobs: 142,
-          repositories: 58,
-          news: 85,
-          securityAlerts: 7,
+          aiTools,
+          jobs,
+          repositories,
+          news,
+          securityAlerts,
         },
         pipeline: {
           status: 'SUCCESS',
@@ -27,8 +35,8 @@ statsRouter.get('/', async (c) => {
       },
       meta: {
         requestId,
-        cached: false,
-        source: 'FALLBACK_DEMO',
+        cached: true,
+        source: 'EDGE_CATALOG_SYNC',
       },
     });
   }
