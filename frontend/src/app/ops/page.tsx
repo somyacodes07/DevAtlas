@@ -34,7 +34,7 @@ export default async function OpsPage() {
               DevOps & Operations Dashboard
             </h1>
             <p className="mt-1 text-xs text-muted">
-              Live observability, pipeline health, data quality metrics, and $0 serverless architecture status.
+              Live observability, pipeline telemetry, data quality metrics, and serverless edge architecture status.
             </p>
           </div>
 
@@ -123,10 +123,10 @@ export default async function OpsPage() {
       {/* Architecture Rationale Callout */}
       <section className="rounded border border-border bg-zinc-950 p-6">
         <h3 className="font-mono text-sm font-bold text-white">
-          $0 Serverless Edge Architecture
+          Serverless Edge & Distributed Intelligence Architecture
         </h3>
         <p className="mt-2 text-xs leading-relaxed text-zinc-400">
-          DevAtlas decouples ingestion from query serving: all collection, scraping, AI processing, deduplication, and markdown synthesis run on-demand inside free GitHub Actions minutes. The public API runs globally on Cloudflare Workers edge runtime with MongoDB Atlas Free (M0 cluster) storage.
+          DevAtlas decouples ingestion from query serving: all collection, scraping, AI processing, deduplication, and markdown synthesis run on-demand inside isolated GitHub Actions runners. The public API runs globally on Cloudflare Workers edge runtime with MongoDB Atlas replica set cluster storage.
         </p>
       </section>
     </div>

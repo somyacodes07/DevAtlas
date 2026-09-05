@@ -7,7 +7,7 @@ export function Footer() {
         <div className="flex flex-col gap-1">
           <div className="flex items-center gap-2 font-mono font-semibold text-zinc-300">
             <span>DEVATLAS</span>
-            <span className="rounded bg-zinc-800 px-1.5 py-0.5 text-[10px] text-zinc-400">$0 ARCHITECTURE</span>
+            <span className="rounded bg-zinc-800 px-1.5 py-0.5 text-[10px] text-zinc-400">SERVERLESS EDGE</span>
           </div>
           <p className="text-zinc-500">
             Autonomous Developer Intelligence Platform. Deployed on Cloudflare Pages, Cloudflare Workers & MongoDB Atlas.

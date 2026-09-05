@@ -4,21 +4,21 @@
 
 Discover. Understand. Stay ahead.
 
-DevAtlas is a production-grade, portfolio-defining autonomous developer intelligence platform that continuously discovers useful developer ecosystem information, normalizes and deduplicates it, validates schemas and data quality, enriches it with AI scoring and taxonomies, stores it in MongoDB Atlas, synthesizes daily reports, and publishes results automatically via a zero-cost serverless CI/CD pipeline.
+DevAtlas is a production-grade, portfolio-defining autonomous developer intelligence platform that continuously discovers useful developer ecosystem information, normalizes and deduplicates it, validates schemas and data quality, enriches it with AI scoring and taxonomies, stores it in MongoDB Atlas, synthesizes daily reports, and publishes results automatically via a modern serverless edge CI/CD pipeline.
 
 [![CI](https://github.com/somyajeet/DevAtlas/actions/workflows/ci.yml/badge.svg)](https://github.com/somyajeet/DevAtlas/actions/workflows/ci.yml)
 [![Daily Discovery](https://github.com/somyajeet/DevAtlas/actions/workflows/daily-discovery.yml/badge.svg)](https://github.com/somyajeet/DevAtlas/actions/workflows/daily-discovery.yml)
 [![Security & Compliance](https://github.com/somyajeet/DevAtlas/actions/workflows/security.yml/badge.svg)](https://github.com/somyajeet/DevAtlas/actions/workflows/security.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](LICENSE)
-[![Architecture: $0 Serverless](https://img.shields.io/badge/Architecture-%240%20Serverless-emerald.svg)](docs/architecture.md)
+[![Architecture: Serverless Edge](https://img.shields.io/badge/Architecture-Serverless%20Edge-black.svg)](docs/architecture.md)
 
 ---
 
 ## 1. Executive Summary & Design Philosophy
 
-> “A real production system that happens to be an excellent CI/CD and DevOps demonstration.”
+> “A real production system that happens to be an exceptional CI/CD, DevOps, and backend engineering showcase.”
 
-DevAtlas was built from the ground up to operate on a **$0 / free-tier serverless cloud architecture** without sacrificing production-grade practices. It decouples heavy compute (discovery ingestion, AI scoring, deduplication hashing, and report synthesis) into GitHub Actions, while serving sub-millisecond edge API responses via Cloudflare Workers and presenting a high-contrast developer interface with Next.js 15 on Cloudflare Pages.
+DevAtlas was engineered as a high-performance, decoupled cloud-native platform. It separates compute-heavy workloads (ecosystem discovery ingestion, AI classification, cryptographic deduplication hashing, and markdown synthesis) into isolated GitHub Actions runners, while serving ultra-low-latency edge API responses via Cloudflare Workers and presenting a high-contrast developer interface with Next.js 15 on Cloudflare Pages.
 
 ---
 
@@ -30,11 +30,11 @@ flowchart TD
         GH["GitHub Trending / Repos"]
         RSS["Tech News / RSS / CVEs"]
         HN["Hacker News API"]
-        JOB["Public Job Feeds / APIs"]
+        JOB["Verified Job Feeds / APIs"]
         AI_SRC["AI Models / Tools Feeds"]
     end
 
-    subgraph GitHubEngine["GitHub Actions (Heavy Execution Engine)"]
+    subgraph GitHubEngine["GitHub Actions (Batch Compute & Orchestration)"]
         WF_DAILY["Daily Discovery Workflow\n(Cron 0 0 * * * & dispatch)"]
         
         subgraph PipelineEngine["pipeline/ (TypeScript Ingestion Engine)"]
@@ -54,14 +54,14 @@ flowchart TD
         WF_DEPLOY["Deploy Workflow (Worker & Pages)"]
     end
 
-    subgraph CloudflareStack["Cloudflare Edge & Serverless Layer ($0)"]
+    subgraph CloudflareStack["Cloudflare Edge & Serverless Layer"]
         CF_PAGES["Cloudflare Pages\nNext.js 15 App Router Frontend\n(/, /explore, /tools, /jobs, /repositories, /reports, /ops)"]
         CF_WORKER["Cloudflare Worker (Hono REST API)\n(/api/v1/health, /items, /tools, /jobs, /repositories, /reports, /stats)"]
         CF_KV[("Cloudflare KV\nEdge Response Cache")]
     end
 
-    subgraph Database["Database ($0 M0 Cluster)"]
-        MONGO[("MongoDB Atlas Free Tier\n(Collections: items, discovery_runs, daily_reports)")]
+    subgraph Database["Database Cluster"]
+        MONGO[("MongoDB Atlas Cluster\n(Collections: items, discovery_runs, daily_reports)")]
     end
 
     subgraph GitRepo["Git Repository Artifacts"]
@@ -112,24 +112,25 @@ flowchart LR
 
 ## 4. Key Platform Features
 
-- **Autonomous Discovery**: Adapters for GitHub Trending, Hacker News official API, verified developer job boards, and technology RSS feeds.
-- **Resilient Error Isolation**: A failure in one external source does not abort the run; the pipeline records partial status and processes remaining sources.
-- **Deterministic Deduplication**: URL canonicalization (stripping tracking parameters, UTM codes, trailing slashes) and SHA-256 URL/content hashing.
-- **Zero-Cost Resilient AI**: Rule-based taxonomy fallback ensures the system functions 100% reliably even when no external paid AI API keys are configured.
-- **No Fake Commits**: The commit gate runs `git diff` on generated reports and commits strictly when genuine ecosystem data modifications occur.
-- **Telemetry & Observability**: Dedicated `/ops` dashboard displaying live API latency, database connection status, pipeline execution duration, and data quality scores.
+- **Autonomous Discovery**: Reliable source adapters for GitHub Trending, Hacker News official API, verified developer job boards, and technology security feeds.
+- **Resilient Error Isolation**: Fault-tolerant design where external source timeouts or network blips are captured and logged without crashing the pipeline run.
+- **Deterministic Deduplication**: URL canonicalization (stripping tracking query parameters, normalising paths) and SHA-256 URL/content hashing.
+- **Resilient AI Engine**: Multi-tiered AI provider abstraction supporting both cloud LLMs and a built-in deterministic taxonomy engine that guarantees uninterrupted pipeline execution.
+- **No Meaningless Commits**: The commit gate runs `git diff` on generated reports and commits strictly when genuine ecosystem data modifications occur.
+- **Full-Stack Observability**: Dedicated `/ops` dashboard displaying live edge API latency, database connection health, pipeline execution duration, and data quality scores.
 
 ---
 
-## 5. Free-Tier Resource Compliance ($0 Budget)
+## 5. Cloud-Native Infrastructure & Technology Stack
 
-| Component | Service | Free Tier Allocation | DevAtlas Consumption |
-| :--- | :--- | :--- | :--- |
-| **Edge REST API** | Cloudflare Workers | 100,000 requests/day | Lightweight edge queries with sub-millisecond routing |
-| **Frontend UI** | Cloudflare Pages | Unlimited requests & bandwidth | Next.js 15 static + server-rendered edge pages |
-| **Database** | MongoDB Atlas | 512MB M0 cluster | Small document design, compound indexes, 90-day retention |
-| **Batch Compute** | GitHub Actions | 2,000 runner minutes/month | Daily runs (~2 minutes/day ≈ 60 minutes/month) |
-| **AI Intelligence** | Rule Engine / Mock | $0 (Zero external API cost) | Deterministic keyword taxonomy with optional cloud LLM |
+| Layer | Technology | Role & Operational Highlights |
+| :--- | :--- | :--- |
+| **Edge REST API** | Cloudflare Workers & Hono | Sub-millisecond global routing across 275+ edge cities with V8 isolates |
+| **Frontend Application** | Next.js 15 & React 19 | Server Components, responsive layout, monochrome high-contrast design system |
+| **Database Cluster** | MongoDB Atlas | Managed replica set with compound indexes and full-text search |
+| **Edge Cache** | Cloudflare Workers KV | Distributed low-latency caching for aggregated metrics and reports |
+| **Batch Compute** | GitHub Actions | Compute-isolated environment for scraping, AI scoring, and report generation |
+| **Security & Compliance** | Gitleaks & CycloneDX | Automated secret scanning, strict `.env` isolation, and SBOM generation |
 
 ---
 
@@ -182,10 +183,9 @@ cp .env.example .env
 npm install
 ```
 
-### 2. Configure Database (Local or Remote)
-To run with local MongoDB via Docker:
+### 2. Configure Database
+Set your `MONGODB_URI` in `.env` (or use local Docker MongoDB via `make mongo-up`), then initialize collections and indexes:
 ```bash
-make mongo-up
 make indexes
 make seed
 ```
@@ -196,8 +196,9 @@ npm run dev
 ```
 - Frontend: `http://localhost:3000`
 - Worker API: `http://localhost:8787` (Health: `http://localhost:8787/api/v1/health`)
+- Operations Dashboard: `http://localhost:3000/ops`
 
-### 4. Execute the Discovery Pipeline
+### 4. Execute the Autonomous Ingestion Pipeline
 ```bash
 npm run dev --workspace=@devatlas/pipeline
 ```

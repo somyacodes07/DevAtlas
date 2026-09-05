@@ -1,18 +1,18 @@
-# DevAtlas $0 Cloudflare & MongoDB Deployment Guide
+# DevAtlas Cloudflare & MongoDB Atlas Deployment Guide
 
-This guide details the step-by-step procedure to deploy DevAtlas to free-tier cloud infrastructure with zero operational costs.
+This guide details the step-by-step procedure to deploy DevAtlas to Cloudflare Workers, Cloudflare Pages, and MongoDB Atlas.
 
 ---
 
-## 1. Prerequisites (All $0 Free Tier)
+## 1. Prerequisites & Cloud Infrastructure
 
-1. **GitHub Account**: Free repository hosting, GitHub Actions (2,000 free runner minutes/month).
+1. **GitHub Account**: Repository hosting, GitHub Actions CI/CD workflows.
 2. **Cloudflare Account**:
-   - Cloudflare Workers: Free tier includes 100,000 requests/day, 10ms CPU time/req.
-   - Cloudflare Pages: Free tier includes unlimited bandwidth and requests.
-   - Cloudflare KV: Free tier includes 100,000 read ops/day, 1,000 write ops/day.
+   - Cloudflare Workers: High-throughput edge serverless runtime.
+   - Cloudflare Pages: Fast static and edge dynamic hosting for Next.js 15.
+   - Cloudflare KV: Edge distributed key-value caching.
 3. **MongoDB Atlas Account**:
-   - M0 Free Cluster: 512MB storage, shared RAM, replica set.
+   - Managed distributed replica set cluster.
 
 ---
 

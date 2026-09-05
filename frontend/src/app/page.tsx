@@ -106,7 +106,7 @@ export default async function HomePage() {
               DEVATLAS
             </h1>
             <p className="mt-3 max-w-2xl text-base text-muted sm:text-lg">
-              Developer intelligence, automatically discovered from the internet, normalized, AI-scored, and shipped daily via zero-cost serverless CI/CD.
+              Developer intelligence, automatically discovered from the global ecosystem, normalized, AI-scored, and shipped daily via automated serverless edge CI/CD.
             </p>
           </div>
 

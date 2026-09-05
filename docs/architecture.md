@@ -2,13 +2,13 @@
 
 ## 1. Executive Summary
 
-DevAtlas is an autonomous developer intelligence and CI/CD showcase platform designed to run completely on **$0 free-tier cloud infrastructure**. It aggregates, normalizes, validates, deduplicates, AI-scores, and publishes software ecosystem intelligence daily.
+DevAtlas is an autonomous developer intelligence and CI/CD platform engineered on a modern **Serverless Edge and Distributed Ingestion Architecture**. It aggregates, normalizes, validates, deduplicates, AI-scores, and publishes software ecosystem intelligence daily.
 
 ## 2. Core Architectural Separation
 
 ```mermaid
 flowchart LR
-    subgraph HeavyDuty["Heavy Duty (On-Demand)"]
+    subgraph HeavyDuty["Heavy Duty (Batch Compute)"]
         GH_ACTIONS["GitHub Actions Runner"]
         GH_ACTIONS --> SOURCES["External Sources"]
         GH_ACTIONS --> DEDUP["Deduplication & Validation"]
@@ -16,7 +16,7 @@ flowchart LR
         GH_ACTIONS --> MONGODB_WRITE["MongoDB Atlas Sync"]
     end
 
-    subgraph EdgeDelivery["Edge Delivery (Continuous)"]
+    subgraph EdgeDelivery["Edge Delivery (Global Network)"]
         CF_WORKER["Cloudflare Worker (Hono REST API)"]
         CF_WORKER --> CF_KV["Cloudflare KV (Cache)"]
         CF_WORKER --> MONGODB_READ["MongoDB Atlas Read"]
@@ -26,8 +26,8 @@ flowchart LR
 ```
 
 ### Why this division of labor?
-- **Cloudflare Workers** have execution limits (10ms CPU time on free tier) and are optimized for sub-millisecond edge API responses.
-- **GitHub Actions** provides 2,000 free minutes per month of full compute, where HTTP fetching, heavy text normalization, deduplication hashes, and report generation can execute without timeout constraints.
+- **Cloudflare Workers** operate across 275+ global edge locations with sub-millisecond execution, optimized for high-concurrency REST query serving and edge caching.
+- **GitHub Actions** provides isolated on-demand Linux compute environments where HTTP fetching, multi-source crawling, text normalization, deduplication hashing, and report synthesis execute without edge timeout constraints.
 
 ## 3. Data Flow & Normalization Pipeline
 
