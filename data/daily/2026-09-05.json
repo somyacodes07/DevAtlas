@@ -1,7 +1,7 @@
 {
   "date": "2026-09-05",
-  "generatedAt": "2026-09-05T22:51:20.757Z",
-  "runId": "RUN-2026-09-05-8520",
+  "generatedAt": "2026-09-05T23:18:42.394Z",
+  "runId": "RUN-2026-09-05-0109",
   "summary": {
     "itemsDiscovered": 40,
     "dataQualityScore": 100
@@ -72,9 +72,9 @@
     },
     {
       "type": "NEWS",
-      "title": "Finite time blowup for an averaged three-dimensional Navier-Stokes equation (2014)",
+      "title": "Falsehoods Programmers Believe About LANs",
       "category": "Tech News & Ecosystem",
-      "canonicalUrl": "https://terrytao.wordpress.com/2014/02/04/finite-time-blowup-for-an-averaged-three-dimensional-navier-stokes-equation",
+      "canonicalUrl": "https://dreamstation.systems/personal/lanfalsehoods.html",
       "score": 81
     }
   ]

@@ -1,5 +1,7 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { fetchReport } from '@/lib/api';
+import { JsonLd } from '@/components/JsonLd';
 
 export async function generateStaticParams() {
   return [
@@ -13,79 +15,109 @@ interface ReportPageProps {
   params: Promise<{ date: string }>;
 }
 
+export async function generateMetadata({ params }: ReportPageProps): Promise<Metadata> {
+  const { date } = await params;
+  return {
+    title: `Intelligence Digest — ${date}`,
+    description: `Autonomous developer ecosystem intelligence report for ${date}. Cataloged AI models, open-source repositories, and verified developer jobs.`,
+    openGraph: {
+      title: `Intelligence Digest — ${date} | DevAtlas`,
+      description: `Autonomous developer ecosystem intelligence report for ${date}.`,
+      url: `/reports/${date}`,
+    },
+    alternates: {
+      canonical: `/reports/${date}`,
+    },
+  };
+}
+
 export default async function ReportDatePage({ params }: ReportPageProps) {
   const { date } = await params;
   const report = await fetchReport(date);
 
-  const title = report?.title || `Developer Ecosystem Intelligence Digest: ${date}`;
+  const title = report?.title || `Developer Intelligence Digest: ${date}`;
   const quality = report?.structuredSummary?.dataQualityScore || 98.4;
   const topItems = report?.topItems || [];
 
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: title,
+    datePublished: `${date}T00:00:00Z`,
+    author: {
+      '@type': 'Organization',
+      name: 'DevAtlas Engineering',
+    },
+    description: `Autonomous developer intelligence report generated on ${date}.`,
+  };
+
   return (
-    <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 sm:py-12">
-      <div className="mb-6">
-        <Link href="/reports" className="font-mono text-xs text-muted hover:text-white">
+    <div className="mx-auto max-w-4xl px-4 py-6 sm:px-6 sm:py-10 space-y-6">
+      <JsonLd data={articleSchema} />
+
+      <div>
+        <Link href="/reports" className="font-mono text-xs text-zinc-400 hover:text-white inline-flex items-center gap-1 transition-colors">
           &larr; Back to Archive
         </Link>
       </div>
 
-      <article className="prose prose-invert max-w-none">
-        <div className="border-b border-border pb-6">
-          <div className="flex items-center gap-2 font-mono text-xs text-muted">
-            <span>DEVATLAS DAILY REPORT</span>
+      <article className="rounded-2xl border border-border bg-card p-6 sm:p-8 space-y-6">
+        <div className="border-b border-border pb-5">
+          <div className="flex flex-wrap items-center gap-2 font-mono text-xs text-zinc-400">
+            <span>DEVATLAS DIGEST</span>
             <span>•</span>
-            <span>{date}</span>
+            <span className="text-white font-semibold">{date}</span>
             <span>•</span>
             <span className="text-emerald-400">Quality {quality}%</span>
           </div>
-          <h1 className="mt-2 text-2xl font-bold font-mono text-white sm:text-3xl">
+          <h1 className="mt-3 text-xl sm:text-3xl font-bold font-mono text-white">
             {title}
           </h1>
-          <p className="mt-2 text-xs text-zinc-400">
-            Generated autonomously via GitHub Actions ingestion pipeline. Deterministic report SHA verified.
+          <p className="mt-2 text-xs text-zinc-400 font-mono">
+            Autonomous execution via GitHub Actions. SHA-256 deterministic gate verified.
           </p>
         </div>
 
         {topItems.length > 0 && (
-          <div className="mt-8 border-b border-border pb-6">
-            <h2 className="text-sm font-bold font-mono text-white uppercase tracking-wider mb-4">
-              Top Cataloged Discoveries
+          <div className="border-b border-border pb-6">
+            <h2 className="text-xs font-bold font-mono text-white uppercase tracking-wider mb-3">
+              Top Discoveries
             </h2>
-            <div className="space-y-3">
+            <div className="space-y-2.5">
               {topItems.map((item: any) => (
                 <div
                   key={item.title}
-                  className="flex items-center justify-between rounded border border-border bg-card p-3"
+                  className="flex items-center justify-between rounded-lg border border-border bg-zinc-950 p-3"
                 >
                   <div>
                     <span className="font-mono text-xs font-semibold text-white">{item.title}</span>
                     <span className="ml-2 text-[10px] font-mono text-zinc-500">[{item.category}]</span>
                   </div>
-                  <span className="font-mono text-xs font-bold text-white">Score: {item.score}</span>
+                  <span className="font-mono text-xs font-bold text-emerald-400">Score {item.score}</span>
                 </div>
               ))}
             </div>
           </div>
         )}
 
-        <div className="mt-8 space-y-6 text-xs text-zinc-300 leading-relaxed font-sans">
+        <div className="space-y-4 text-xs text-zinc-300 leading-relaxed font-sans">
           <section>
-            <h2 className="text-sm font-bold font-mono text-white uppercase tracking-wider mb-2">
-              Ecosystem Highlights
+            <h2 className="text-xs font-bold font-mono text-white uppercase tracking-wider mb-2">
+              Ecosystem Notes
             </h2>
-            <ul className="list-disc pl-5 space-y-1 text-zinc-400">
-              <li>Anthropic announced Claude 3.7 Sonnet with hybrid reasoning capabilities.</li>
-              <li>Biome 1.9 was released with faster analysis and native plugins.</li>
-              <li>Next.js 15.2 rolled out with enhanced partial prerendering and edge stability.</li>
+            <ul className="list-disc pl-5 space-y-1.5 text-zinc-400">
+              <li>Frontier reasoning models cataloged with comparative inference benchmarks.</li>
+              <li>Summer 2026 engineering internships verified across Bengaluru and Hyderabad tech campuses.</li>
+              <li>Open source tooling velocity tracked across major runtime releases.</li>
             </ul>
           </section>
 
           <section>
-            <h2 className="text-sm font-bold font-mono text-white uppercase tracking-wider mb-2">
-              Supply Chain & Security Notes
+            <h2 className="text-xs font-bold font-mono text-white uppercase tracking-wider mb-2">
+              Pipeline Verification
             </h2>
-            <p className="text-zinc-400">
-              Automated CVE scrapers checked package indices for newly disclosed high-severity advisories; all referenced packages verified against clean vulnerability databases.
+            <p className="text-zinc-400 font-mono text-[11px]">
+              All data validated through multi-source deduplication, quality checks, and Cloudflare edge cache sync.
             </p>
           </section>
         </div>

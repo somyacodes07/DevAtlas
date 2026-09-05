@@ -1,12 +1,88 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
+import { Inter, JetBrains_Mono } from 'next/font/google';
 import '../styles/globals.css';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { JsonLd } from '@/components/JsonLd';
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-sans',
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-mono',
+});
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://devatlas.pages.dev';
+
+export const viewport: Viewport = {
+  themeColor: '#09090b',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 export const metadata: Metadata = {
-  title: 'DevAtlas — Autonomous Developer Intelligence & CI/CD Platform',
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: 'DevAtlas — Autonomous Developer Intelligence & Engineering Radar',
+    template: '%s | DevAtlas',
+  },
   description:
-    'Continuously discovered, AI-classified, and validated developer tools, open-source repositories, developer jobs, and tech ecosystem changes.',
+    'Real-time developer intelligence platform. Curated software engineering roles, high-stipend internships, frontier AI tools, and fast-growing open source repositories.',
+  keywords: [
+    'developer jobs',
+    'software engineering internships 2026',
+    'bengaluru tech jobs',
+    'remote developer jobs',
+    'ai tools',
+    'frontier ai models',
+    'open source repositories',
+    'developer intelligence',
+    'tech news',
+    'cve advisories',
+  ],
+  authors: [{ name: 'DevAtlas Team', url: siteUrl }],
+  creator: 'DevAtlas Engineering',
+  publisher: 'DevAtlas',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: siteUrl,
+    siteName: 'DevAtlas',
+    title: 'DevAtlas — Autonomous Developer Intelligence & Engineering Radar',
+    description:
+      'Continuous real-time radar for verified software engineering roles, internships, AI tools, and fast-growing repositories.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'DevAtlas — Developer Intelligence & Engineering Radar',
+    description:
+      'Continuous real-time radar for verified software engineering roles, internships, AI tools, and open source momentum.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -15,11 +91,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className="min-h-screen bg-background font-sans text-foreground antialiased selection:bg-zinc-800 selection:text-white">
+    <html lang="en" className={`dark ${inter.variable} ${jetbrainsMono.variable}`}>
+      <head>
+        <JsonLd />
+      </head>
+      <body className="min-h-screen bg-background font-sans text-foreground antialiased selection:bg-emerald-950 selection:text-emerald-300">
+        {/* Accessible Skip Link */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-emerald-500 focus:px-4 focus:py-2 focus:font-mono focus:text-xs focus:font-bold focus:text-black focus:shadow-lg"
+        >
+          Skip to main content
+        </a>
+
         <div className="flex min-h-screen flex-col">
           <Header />
-          <main className="flex-1">{children}</main>
+          <main id="main-content" className="flex-1">
+            {children}
+          </main>
           <Footer />
         </div>
       </body>

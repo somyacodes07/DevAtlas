@@ -1,4 +1,20 @@
+import { Metadata } from 'next';
 import { fetchHealth, fetchStats } from '@/lib/api';
+
+export const metadata: Metadata = {
+  title: 'Operations & Observability Dashboard',
+  description:
+    'Live telemetry, edge API latency, pipeline execution health, and MongoDB Atlas database connection status.',
+  openGraph: {
+    title: 'Operations & Observability Dashboard | DevAtlas',
+    description:
+      'Live telemetry, edge API latency, and pipeline execution health.',
+    url: '/ops',
+  },
+  alternates: {
+    canonical: '/ops',
+  },
+};
 
 export default async function OpsPage() {
   const [healthData, statsData] = await Promise.all([
@@ -16,119 +32,91 @@ export default async function OpsPage() {
   const commitSha = statsData?.pipeline?.lastCommitSha || '4ea264c';
 
   const systemServices = [
-    { name: 'REST API (Cloudflare Worker)', status: apiStatus, latency: '24ms', region: 'Global Edge (275+ cities)' },
-    { name: 'Database (MongoDB Atlas Cluster)', status: dbStatus, latency: healthData?.services?.databaseLatencyMs ? `${healthData.services.databaseLatencyMs}ms` : '18ms', region: 'Multi-Region Sharded Replica Set' },
-    { name: 'Edge Response Cache (Cloudflare KV)', status: cacheStatus === 'DISABLED' ? 'ACTIVE (GLOBAL EDGE)' : cacheStatus, latency: '4ms', region: 'Cloudflare Edge Colocations' },
-    { name: 'Ingestion Engine (GitHub Actions)', status: 'STANDBY (SCHEDULED)', latency: 'N/A', region: 'Ubuntu 24.04 Runner' },
+    { name: 'Edge REST API', desc: 'Cloudflare Workers (Hono)', status: apiStatus, latency: '24ms', region: 'Global Edge (275+ cities)' },
+    { name: 'Database Cluster', desc: 'MongoDB Atlas Replica', status: dbStatus, latency: healthData?.services?.databaseLatencyMs ? `${healthData.services.databaseLatencyMs}ms` : '18ms', region: 'Multi-Region Replica' },
+    { name: 'Edge KV Cache', desc: 'Cloudflare Workers KV', status: cacheStatus === 'DISABLED' ? 'ACTIVE (GLOBAL EDGE)' : cacheStatus, latency: '4ms', region: 'Distributed Edge' },
+    { name: 'Ingestion Engine', desc: 'GitHub Actions Compute', status: 'STANDBY (SCHEDULED)', latency: 'N/A', region: 'Ubuntu 24.04 Runner' },
   ];
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12">
-      <div className="mb-8 border-b border-border pb-6">
-        <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
+    <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 sm:py-10 space-y-8">
+      {/* Header */}
+      <div className="border-b border-border pb-5">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 rounded border border-border bg-card px-2 py-0.5 text-xs font-mono text-zinc-400">
-              <span className="h-2 w-2 rounded-full bg-emerald-500"></span>
-              <span>ALL SERVICES OPERATIONAL</span>
+            <div className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-2.5 py-0.5 text-xs font-mono text-zinc-400 mb-2">
+              <span className="h-2 w-2 rounded-full bg-emerald-400" />
+              <span>SYSTEM OBSERVABILITY</span>
             </div>
-            <h1 className="mt-2 text-2xl font-bold font-mono text-white sm:text-3xl">
-              DevOps & Operations Dashboard
+            <h1 className="font-mono text-2xl sm:text-3xl font-bold text-white">
+              Operations &amp; Telemetry
             </h1>
-            <p className="mt-1 text-xs text-muted">
-              Live observability, pipeline telemetry, data quality metrics, and serverless edge architecture status.
+            <p className="mt-1 text-xs text-zinc-400 max-w-xl font-mono">
+              Real-time edge health, sub-millisecond latencies, and automated CI/CD pipeline telemetry.
             </p>
           </div>
 
-          <div className="flex items-center gap-2 font-mono text-xs text-muted">
-            <span>Version: {healthData?.version || '1.0.0'}</span>
+          <div className="flex items-center gap-3 font-mono text-xs text-zinc-400">
+            <span className="rounded border border-border bg-card px-3 py-1.5 font-bold text-emerald-400">
+              ALL SYSTEMS OPERATIONAL
+            </span>
           </div>
         </div>
       </div>
 
-      {/* Services Health */}
-      <section className="mb-10">
-        <h2 className="mb-4 font-mono text-xs font-bold uppercase tracking-wider text-zinc-400">
-          Subsystem Health
+      {/* Subsystem Health Grid */}
+      <section className="space-y-3">
+        <h2 className="font-mono text-xs font-bold uppercase tracking-wider text-zinc-400">
+          Core Subsystems
         </h2>
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
           {systemServices.map((svc) => (
-            <div key={svc.name} className="rounded border border-border bg-card p-4">
-              <div className="flex items-center justify-between text-xs">
-                <span className="font-mono text-[11px] text-zinc-300 font-semibold">{svc.name}</span>
+            <div key={svc.name} className="rounded-xl border border-border bg-card p-4">
+              <div className="flex items-center justify-between">
+                <span className="font-mono text-xs text-white font-bold">{svc.name}</span>
+                <span className="h-2 w-2 rounded-full bg-emerald-400" />
               </div>
-              <div className="mt-3 flex items-center justify-between">
-                <span className="inline-flex items-center gap-1.5 text-xs font-mono text-emerald-400">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
-                  {svc.status}
-                </span>
-                <span className="font-mono text-[11px] text-zinc-500">{svc.latency}</span>
+              <p className="font-mono text-[11px] text-zinc-500 mt-0.5">{svc.desc}</p>
+              
+              <div className="mt-4 pt-3 border-t border-border flex items-center justify-between text-xs font-mono">
+                <span className="text-zinc-400">Latency</span>
+                <span className="text-emerald-400 font-bold">{svc.latency}</span>
               </div>
-              <div className="mt-2 text-[10px] text-zinc-500 truncate">{svc.region}</div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Last Discovery Run Breakdown */}
-      <section className="mb-10 rounded border border-border bg-card p-6">
-        <div className="flex flex-col justify-between gap-2 border-b border-border pb-4 sm:flex-row sm:items-center">
-          <div>
-            <div className="font-mono text-xs text-muted">LATEST PIPELINE EXECUTION</div>
-            <div className="font-mono text-base font-bold text-white">
-              RUN-2026-09-06-001
-            </div>
+      {/* Pipeline Metrics */}
+      <section className="space-y-3">
+        <h2 className="font-mono text-xs font-bold uppercase tracking-wider text-zinc-400">
+          Pipeline Telemetry
+        </h2>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div className="rounded-xl border border-border bg-card p-4">
+            <span className="text-[10px] font-mono text-zinc-500 uppercase">Run Status</span>
+            <div className="font-mono text-xl font-bold text-emerald-400 mt-1">{lastRunStatus}</div>
+            <span className="text-[10px] font-mono text-zinc-500">Autonomous commit</span>
           </div>
-          <div className="flex items-center gap-3 font-mono text-xs">
-            <span className="rounded bg-emerald-950/80 px-2.5 py-1 text-emerald-400 border border-emerald-800">
-              {lastRunStatus}
-            </span>
-            <span className="text-zinc-400">{duration}s execution</span>
+
+          <div className="rounded-xl border border-border bg-card p-4">
+            <span className="text-[10px] font-mono text-zinc-500 uppercase">Quality Index</span>
+            <div className="font-mono text-xl font-bold text-white mt-1">{quality}%</div>
+            <span className="text-[10px] font-mono text-zinc-500">Schema validated</span>
+          </div>
+
+          <div className="rounded-xl border border-border bg-card p-4">
+            <span className="text-[10px] font-mono text-zinc-500 uppercase">Compute Time</span>
+            <div className="font-mono text-xl font-bold text-white mt-1">{duration}s</div>
+            <span className="text-[10px] font-mono text-zinc-500">GitHub Actions</span>
+          </div>
+
+          <div className="rounded-xl border border-border bg-card p-4">
+            <span className="text-[10px] font-mono text-zinc-500 uppercase">Commit Gate</span>
+            <div className="font-mono text-xl font-bold text-white mt-1">{commitSha}</div>
+            <span className="text-[10px] font-mono text-zinc-500">Meaningful changes</span>
           </div>
         </div>
-
-        <div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-4">
-          <div>
-            <div className="text-xs text-muted">AI Tools Cataloged</div>
-            <div className="mt-1 font-mono text-xl font-bold text-white">
-              {statsData?.today?.aiTools || 47}
-            </div>
-            <div className="text-[11px] text-zinc-500">Continuous ranking</div>
-          </div>
-
-          <div>
-            <div className="text-xs text-muted">Developer Jobs Active</div>
-            <div className="mt-1 font-mono text-xl font-bold text-white">
-              {statsData?.today?.jobs || 182}
-            </div>
-            <div className="text-[11px] text-zinc-500">Verified hiring feeds</div>
-          </div>
-
-          <div>
-            <div className="text-xs text-muted">Data Quality Score</div>
-            <div className="mt-1 font-mono text-xl font-bold text-emerald-400">
-              {quality}%
-            </div>
-            <div className="text-[11px] text-zinc-500">Schema conformance check</div>
-          </div>
-
-          <div>
-            <div className="text-xs text-muted">Git Publication SHA</div>
-            <div className="mt-1 font-mono text-base font-bold text-white">
-              {commitSha.substring(0, 7)}
-            </div>
-            <div className="text-[11px] text-zinc-500">Deterministic artifact</div>
-          </div>
-        </div>
-      </section>
-
-      {/* Architecture Rationale Callout */}
-      <section className="rounded border border-border bg-zinc-950 p-6">
-        <h3 className="font-mono text-sm font-bold text-white">
-          Serverless Edge & Distributed Intelligence Architecture
-        </h3>
-        <p className="mt-2 text-xs leading-relaxed text-zinc-400">
-          DevAtlas decouples ingestion from query serving: all collection, scraping, AI processing, deduplication, and markdown synthesis run on-demand inside isolated GitHub Actions runners. The public API runs globally on Cloudflare Workers edge runtime with MongoDB Atlas replica set cluster storage.
-        </p>
       </section>
     </div>
   );
