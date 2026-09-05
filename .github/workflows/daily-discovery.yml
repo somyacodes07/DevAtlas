@@ -1,16 +1,27 @@
-name: Daily Discovery & Intelligence
+name: Developer Intelligence & Discovery Pipeline
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    # Run twice daily at 00:00 and 12:00 UTC to keep tech jobs, internships, and repos fresh
+    - cron: '0 0,12 * * *'
   workflow_dispatch:
+    inputs:
+      ai_provider:
+        description: 'AI Enrichment Provider (deterministic, gemini, groq, openai)'
+        required: false
+        default: 'deterministic'
+      force_publish:
+        description: 'Force publish markdown reports and daily snapshots'
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
 
 jobs:
   discover:
-    name: Run Ingestion Engine & Publish
+    name: Ingestion, Scoring & Intelligence Report
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -27,6 +38,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Validate Pipeline Types
+        run: npm run typecheck --workspace=@devatlas/pipeline
+
       - name: Execute Discovery & Normalization Pipeline
         run: npm run dev --workspace=@devatlas/pipeline
         env:
@@ -34,10 +48,11 @@ jobs:
           MONGODB_URI: ${{ secrets.MONGODB_URI }}
           MONGODB_DATABASE: devatlas
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          AI_PROVIDER: ${{ secrets.AI_PROVIDER || 'deterministic' }}
+          AI_PROVIDER: ${{ github.event.inputs.ai_provider || secrets.AI_PROVIDER || 'deterministic' }}
           AI_API_KEY: ${{ secrets.AI_API_KEY }}
 
       - name: Detect Meaningful Changes & Publish
         run: ./scripts/detect-meaningful-changes.sh
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FORCE_PUBLISH: ${{ github.event.inputs.force_publish || 'false' }}

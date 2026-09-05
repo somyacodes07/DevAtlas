@@ -37,6 +37,10 @@ export const JobMetadataSchema = z.object({
   employmentType: z.string().default('FULL_TIME'),
   salary: z.string().optional().default('Salary not disclosed'),
   skills: z.array(z.string()).default([]),
+  workMode: z.enum(['REMOTE', 'HYBRID', 'ON_SITE']).optional().default('REMOTE'),
+  region: z.enum(['INDIA', 'GLOBAL_REMOTE', 'NORTH_AMERICA', 'EUROPE']).optional().default('GLOBAL_REMOTE'),
+  experienceLevel: z.enum(['INTERNSHIP', 'ENTRY', 'MID', 'SENIOR', 'STAFF_PRINCIPAL']).optional().default('MID'),
+  sourcePlatform: z.string().optional().default('Careers'),
 });
 
 export const ToolMetadataSchema = z.object({
