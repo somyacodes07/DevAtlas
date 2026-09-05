@@ -35,8 +35,7 @@ function JobsFeed() {
   const stats = useMemo(() => {
     let indiaCount = 0;
     let remoteCount = 0;
-    let hybridCount = 0;
-    let onsiteCount = 0;
+    let internshipCount = 0;
 
     rawJobs.forEach((job) => {
       if (job.job?.region === 'INDIA' || (job.job?.location && job.job.location.includes('India'))) {
@@ -45,15 +44,12 @@ function JobsFeed() {
       if (job.job?.remote || job.job?.workMode === 'REMOTE') {
         remoteCount++;
       }
-      if (job.job?.workMode === 'HYBRID') {
-        hybridCount++;
-      }
-      if (job.job?.workMode === 'ON_SITE') {
-        onsiteCount++;
+      if (job.job?.experienceLevel === 'INTERNSHIP' || job.title.toLowerCase().includes('intern')) {
+        internshipCount++;
       }
     });
 
-    return { total: rawJobs.length, indiaCount, remoteCount, hybridCount, onsiteCount };
+    return { total: rawJobs.length, indiaCount, remoteCount, internshipCount };
   }, [rawJobs]);
 
   // Synchronous 0ms in-memory filtering
@@ -80,8 +76,13 @@ function JobsFeed() {
       }
 
       // Experience Level Filter
-      if (selectedExp !== 'ALL' && j.experienceLevel && j.experienceLevel !== selectedExp) {
-        return false;
+      if (selectedExp !== 'ALL') {
+        if (selectedExp === 'INTERNSHIP') {
+          const isIntern = j.experienceLevel === 'INTERNSHIP' || item.title.toLowerCase().includes('intern');
+          if (!isIntern) return false;
+        } else if (j.experienceLevel && j.experienceLevel !== selectedExp) {
+          return false;
+        }
       }
 
       // Search Query
@@ -110,22 +111,26 @@ function JobsFeed() {
           <div>
             <div className="inline-flex items-center gap-2 rounded border border-border bg-card px-2.5 py-0.5 text-xs font-mono text-zinc-400 mb-2">
               <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span>LIVE TECH JOBS RADAR • INDIA & WORLDWIDE</span>
+              <span>VERIFIED DEVELOPER JOBS & INTERNSHIPS</span>
             </div>
             <h1 className="text-2xl font-bold font-mono text-white sm:text-3xl">Developer Jobs & Hiring Radar</h1>
             <p className="mt-1 text-xs text-muted max-w-2xl">
-              Curated, verified engineering openings at tier-1 tech companies and high-growth startups in India (Bengaluru, Hyderabad, Pune, Gurugram) and Remote Worldwide.
+              Curated software engineering roles, high-stipend internships, and staff positions across India tech hubs (Bengaluru, Hyderabad, Pune, Gurugram) and Remote Worldwide.
             </p>
           </div>
 
           {/* Quick Stat Badges */}
           <div className="flex flex-wrap gap-2 text-xs font-mono">
             <div className="rounded border border-border bg-card px-3 py-2">
-              <div className="text-[10px] text-zinc-500">INDIA TECH ROLES</div>
+              <div className="text-[10px] text-zinc-500 font-semibold">INTERNSHIPS</div>
+              <div className="text-sm font-bold text-amber-400">{stats.internshipCount} Active Roles</div>
+            </div>
+            <div className="rounded border border-border bg-card px-3 py-2">
+              <div className="text-[10px] text-zinc-500 font-semibold">INDIA TECH ROLES</div>
               <div className="text-sm font-bold text-white">{stats.indiaCount} Verified Openings</div>
             </div>
             <div className="rounded border border-border bg-card px-3 py-2">
-              <div className="text-[10px] text-zinc-500">GLOBAL REMOTE</div>
+              <div className="text-[10px] text-zinc-500 font-semibold">GLOBAL REMOTE</div>
               <div className="text-sm font-bold text-emerald-400">{stats.remoteCount} Remote Roles</div>
             </div>
           </div>
@@ -145,15 +150,15 @@ function JobsFeed() {
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search by role, company (e.g. CRED, Razorpay, Anthropic), location (e.g. Bengaluru), or skills (e.g. Go, Java, Rust, React)..."
-            className="w-full rounded border border-border bg-card py-3 pl-10 pr-12 text-xs font-mono text-white placeholder-zinc-500 focus:border-white focus:outline-none focus:ring-1 focus:ring-white transition-all shadow-sm"
+            placeholder="Search by role (e.g. Intern, SDE-2), company (e.g. Google, CRED, Razorpay), city, or skills (e.g. Go, Java, Rust, React)..."
+            className="w-full rounded border border-border bg-card py-3 pl-10 pr-16 text-xs font-mono text-white placeholder-zinc-500 focus:border-white focus:outline-none focus:ring-1 focus:ring-white transition-all shadow-sm"
           />
           {searchQuery && (
             <button
               onClick={() => setSearchQuery('')}
-              className="absolute inset-y-0 right-0 flex items-center pr-3 text-zinc-500 hover:text-white text-xs font-mono"
+              className="absolute inset-y-0 right-0 flex items-center pr-3.5 text-zinc-500 hover:text-white text-xs font-mono font-semibold"
             >
-              ✕ Clear
+              Clear
             </button>
           )}
         </div>
@@ -163,13 +168,13 @@ function JobsFeed() {
       <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-3 rounded border border-border bg-card p-4 text-xs font-mono">
         {/* Work Mode Filter */}
         <div>
-          <label className="block text-[11px] text-zinc-400 mb-1.5 font-semibold">WORK MODE PREFERENCE</label>
+          <label className="block text-[11px] text-zinc-400 mb-1.5 font-semibold">WORK MODE</label>
           <div className="flex flex-wrap gap-1.5">
             {[
               { label: 'All Modes', val: 'ALL' },
-              { label: '🌐 Remote', val: 'REMOTE' },
-              { label: '🏢 Hybrid', val: 'HYBRID' },
-              { label: '📍 In-Office', val: 'ON_SITE' },
+              { label: 'Remote', val: 'REMOTE' },
+              { label: 'Hybrid', val: 'HYBRID' },
+              { label: 'In-Office', val: 'ON_SITE' },
             ].map((m) => (
               <button
                 key={m.val}
@@ -188,29 +193,30 @@ function JobsFeed() {
 
         {/* Region Filter */}
         <div>
-          <label className="block text-[11px] text-zinc-400 mb-1.5 font-semibold">LOCATION / REGION</label>
+          <label className="block text-[11px] text-zinc-400 mb-1.5 font-semibold">LOCATION</label>
           <select
             value={selectedRegion}
             onChange={(e) => setSelectedRegion(e.target.value as any)}
             className="w-full rounded border border-border bg-zinc-900 py-1.5 px-2.5 text-xs font-mono text-white focus:border-white focus:outline-none"
           >
             <option value="ALL">All Locations (Global & India)</option>
-            <option value="INDIA">🇮🇳 India (Bengaluru, Hyderabad, Gurugram...)</option>
-            <option value="GLOBAL_REMOTE">🌍 Remote Worldwide</option>
-            <option value="NORTH_AMERICA">🇺🇸 North America (San Francisco / NY / US Remote)</option>
-            <option value="EUROPE">🇪🇺 Europe (London, Paris, Amsterdam, EU Remote)</option>
+            <option value="INDIA">India (Bengaluru, Hyderabad, Pune, Gurugram)</option>
+            <option value="GLOBAL_REMOTE">Remote Worldwide</option>
+            <option value="NORTH_AMERICA">North America (San Francisco, NY, US Remote)</option>
+            <option value="EUROPE">Europe (London, Paris, Amsterdam, EU Remote)</option>
           </select>
         </div>
 
-        {/* Experience Level Filter */}
+        {/* Seniority / Type Filter */}
         <div>
-          <label className="block text-[11px] text-zinc-400 mb-1.5 font-semibold">EXPERIENCE LEVEL</label>
+          <label className="block text-[11px] text-zinc-400 mb-1.5 font-semibold">LEVEL & TYPE</label>
           <select
             value={selectedExp}
             onChange={(e) => setSelectedExp(e.target.value)}
             className="w-full rounded border border-border bg-zinc-900 py-1.5 px-2.5 text-xs font-mono text-white focus:border-white focus:outline-none"
           >
             <option value="ALL">All Seniority Levels</option>
+            <option value="INTERNSHIP">Internships (Summer 2026 / College Roles)</option>
             <option value="STAFF_PRINCIPAL">Staff / Principal / Tech Lead</option>
             <option value="SENIOR">Senior Engineer (SDE-3 / Senior)</option>
             <option value="MID">Mid-Level Engineer (SDE-2)</option>
@@ -234,7 +240,7 @@ function JobsFeed() {
             }}
             className="text-emerald-400 hover:underline"
           >
-            Reset All Filters ✕
+            Reset All Filters
           </button>
         )}
       </div>
@@ -243,7 +249,7 @@ function JobsFeed() {
       <div className="mt-6 space-y-4">
         {filteredJobs.map((item) => {
           const j = item.job!;
-          const isIndia = j.region === 'INDIA' || (j.location && j.location.includes('India'));
+          const isInternship = j.experienceLevel === 'INTERNSHIP' || item.title.toLowerCase().includes('intern');
 
           return (
             <div
@@ -257,6 +263,12 @@ function JobsFeed() {
                     <span className="font-mono text-xs font-bold text-white bg-zinc-900 border border-border px-2 py-0.5 rounded">
                       {j.company}
                     </span>
+
+                    {isInternship && (
+                      <span className="rounded px-2 py-0.5 text-[10px] font-mono font-bold bg-amber-950/80 text-amber-300 border border-amber-800">
+                        INTERNSHIP
+                      </span>
+                    )}
 
                     {j.workMode && (
                       <span
@@ -272,9 +284,8 @@ function JobsFeed() {
                       </span>
                     )}
 
-                    <span className="text-[11px] font-mono text-zinc-400 flex items-center gap-1">
-                      <span>📍</span>
-                      <span>{j.location}</span>
+                    <span className="text-[11px] font-mono text-zinc-400">
+                      {j.location}
                     </span>
 
                     {j.sourcePlatform && (
@@ -311,11 +322,13 @@ function JobsFeed() {
                   )}
                 </div>
 
-                {/* Right Column: Salary & Action Button */}
-                <div className="flex sm:flex-col items-end justify-between sm:justify-start gap-3 mt-3 sm:mt-0 min-w-[200px]">
+                {/* Right Column: Salary/Stipend & Action Button */}
+                <div className="flex sm:flex-col items-end justify-between sm:justify-start gap-3 mt-3 sm:mt-0 min-w-[210px]">
                   {j.salary && (
                     <div className="text-right">
-                      <div className="text-[10px] font-mono text-zinc-500">COMPENSATION</div>
+                      <div className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider font-semibold">
+                        {isInternship ? 'Stipend' : 'Compensation'}
+                      </div>
                       <div className="font-mono text-xs font-bold text-emerald-400 bg-emerald-950/40 border border-emerald-900/60 px-2 py-1 rounded">
                         {j.salary}
                       </div>
@@ -328,7 +341,7 @@ function JobsFeed() {
                     rel="noreferrer"
                     className="inline-flex items-center gap-1.5 rounded bg-white px-4 py-2 text-xs font-mono font-bold text-black hover:bg-zinc-200 transition-colors shadow-sm"
                   >
-                    <span>Apply Now</span>
+                    <span>Apply Listing</span>
                     <span>&rarr;</span>
                   </a>
                 </div>
@@ -341,7 +354,7 @@ function JobsFeed() {
       {/* Empty State */}
       {!loading && filteredJobs.length === 0 && (
         <div className="mt-12 py-16 text-center text-xs font-mono text-zinc-500 border border-dashed border-border rounded-lg bg-card/40">
-          <p className="text-sm font-semibold text-white mb-1">No jobs found matching your criteria</p>
+          <p className="text-sm font-semibold text-white mb-1">No roles match your search</p>
           <p className="text-zinc-500 mb-4">Try clearing your filters or changing location preference</p>
           <button
             onClick={() => {

@@ -10,6 +10,9 @@ jobsRouter.get('/', async (c) => {
   const remote = c.req.query('remote');
   const location = c.req.query('location');
   const skill = c.req.query('skill');
+  const experienceLevel = c.req.query('experienceLevel');
+  const workMode = c.req.query('workMode');
+  const region = c.req.query('region');
   const page = Math.max(1, parseInt(c.req.query('page') || '1', 10));
   const limit = Math.min(100, Math.max(1, parseInt(c.req.query('limit') || '20', 10)));
   const skip = (page - 1) * limit;
@@ -28,10 +31,31 @@ jobsRouter.get('/', async (c) => {
   if (skill) {
     filter['job.skills'] = new RegExp(skill, 'i');
   }
+  if (experienceLevel) {
+    filter['job.experienceLevel'] = experienceLevel.toUpperCase();
+  }
+  if (workMode) {
+    filter['job.workMode'] = workMode.toUpperCase();
+  }
+  if (region) {
+    filter['job.region'] = region.toUpperCase();
+  }
 
   const db = await getWorkerDb(c.env?.MONGODB_URI, c.env?.MONGODB_DATABASE);
   if (!db) {
-    const fallback = FALLBACK_ITEMS.filter(i => i.type === 'JOB');
+    let fallback = FALLBACK_ITEMS.filter(i => i.type === 'JOB');
+    if (remote === 'true') {
+      fallback = fallback.filter(i => i.job?.remote || i.job?.workMode === 'REMOTE');
+    }
+    if (experienceLevel) {
+      fallback = fallback.filter(i => i.job?.experienceLevel === experienceLevel.toUpperCase());
+    }
+    if (workMode) {
+      fallback = fallback.filter(i => i.job?.workMode === workMode.toUpperCase());
+    }
+    if (region) {
+      fallback = fallback.filter(i => i.job?.region === region.toUpperCase());
+    }
     return c.json({
       data: fallback,
       meta: { page, limit, total: fallback.length, hasNextPage: false, requestId, source: 'EDGE_CATALOG_ACTIVE' },

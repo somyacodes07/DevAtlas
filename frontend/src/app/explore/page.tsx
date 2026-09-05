@@ -177,7 +177,7 @@ function ExploreFeed() {
                 className="text-zinc-500 hover:text-white text-xs px-1 font-mono"
                 title="Clear search"
               >
-                ✕
+                Clear
               </button>
             )}
             <span className="hidden sm:inline-block rounded border border-border bg-zinc-900 px-1.5 py-0.5 text-[10px] font-mono text-zinc-500">
@@ -240,7 +240,7 @@ function ExploreFeed() {
               : 'border-border bg-card text-zinc-400 hover:text-white'
           }`}
         >
-          {onlyRemote ? '✓ Remote Roles' : '+ Remote Only'}
+          {onlyRemote ? '[x] Remote Roles' : '+ Remote Only'}
         </button>
 
         <button
@@ -251,7 +251,7 @@ function ExploreFeed() {
               : 'border-border bg-card text-zinc-400 hover:text-white'
           }`}
         >
-          {onlyHighImpact ? '✓ 95+ Score Only' : '+ 95+ Quality Score'}
+          {onlyHighImpact ? '[x] 95+ Score Only' : '+ 95+ Quality Score'}
         </button>
 
         {(searchQuery || activeCategory !== 'ALL' || onlyRemote || onlyHighImpact) && (
@@ -334,7 +334,8 @@ function ExploreFeed() {
                     </div>
                     {item.job.salary && (
                       <div className="font-mono text-xs font-bold text-emerald-400">
-                        💰 {item.job.salary}
+                        <span className="text-[10px] text-zinc-500 mr-1 font-normal">COMP:</span>
+                        {item.job.salary}
                       </div>
                     )}
                   </div>
@@ -344,7 +345,8 @@ function ExploreFeed() {
                 {isRepo && item.repository && (
                   <div className="mt-2 flex items-center gap-3 text-xs font-mono text-zinc-400">
                     <span className="flex items-center gap-1 text-white font-semibold">
-                      ⭐ {item.repository.stars?.toLocaleString()}
+                      <span className="text-[10px] text-zinc-500 font-normal">STARS:</span>
+                      {item.repository.stars?.toLocaleString()}
                     </span>
                     <span>{item.repository.language}</span>
                     {item.repository.starsGrowth24h && (
