@@ -1,6 +1,6 @@
 import { Hono } from 'hono';
 import { Env, Variables } from '../types';
-import { getWorkerDb } from '../db/mongodb';
+import { getWorkerDb, lastConnectError } from '../db/mongodb';
 
 export const healthRouter = new Hono<{ Bindings: Env; Variables: Variables }>();
 
@@ -19,7 +19,7 @@ healthRouter.get('/', async (c) => {
         await db.command({ ping: 1 });
         dbStatus = 'CONNECTED';
         dbLatencyMs = Date.now() - startTime;
-      } catch {
+      } catch (pingErr) {
         dbStatus = 'DEGRADED';
       }
     } else {
@@ -36,6 +36,7 @@ healthRouter.get('/', async (c) => {
     services: {
       api: 'HEALTHY',
       database: dbStatus,
+      databaseError: lastConnectError || undefined,
       databaseLatencyMs: dbLatencyMs,
       cache: c.env?.DEVATLAS_KV ? 'CONNECTED' : 'DISABLED',
     },
