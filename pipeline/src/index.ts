@@ -2,6 +2,7 @@ import { MockDiscoverySource } from './discovery/mockSource';
 import { GitHubDiscoverySource } from './discovery/githubSource';
 import { HackerNewsDiscoverySource } from './discovery/hackerNewsSource';
 import { JobDiscoverySource } from './discovery/jobSource';
+import { YCInstahyreDiscoverySource } from './discovery/ycInstahyreSource';
 import { canonicalizeUrl, computeContentHash, computeUrlHash } from './deduplication/hasher';
 import { normalizeTitle, normalizeTimestamp } from './normalization/normalizer';
 import { evaluateDataQuality } from './validation/qualityValidator';
@@ -25,6 +26,7 @@ export async function runPipeline(): Promise<PipelineRunResult> {
     new GitHubDiscoverySource(),
     new HackerNewsDiscoverySource(),
     new JobDiscoverySource(),
+    new YCInstahyreDiscoverySource(),
   ];
 
   const rawDiscovered: DiscoveredItem[] = [];

@@ -1,6 +1,7 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { ContentItem } from '../types';
+import { stripEmojis } from '../normalization/normalizer';
 
 export interface GeneratedReport {
   date: string;
@@ -24,7 +25,7 @@ export async function generateDailyReport(
   const topRepos = items.filter((i) => i.type === 'REPOSITORY').slice(0, 3);
   const securityItems = items.filter((i) => i.type === 'SECURITY').slice(0, 2);
 
-  const markdownContent = `# DevAtlas Daily Intelligence Report — ${dateStr}
+  const rawMarkdown = `# DevAtlas Daily Intelligence Report — ${dateStr}
 
 **Generated**: ${new Date().toISOString()}  
 **Quality Score**: ${qualityScore}%  
@@ -88,6 +89,8 @@ ${
 
 *DevAtlas is an autonomous developer intelligence platform running on Cloudflare Pages, Cloudflare Workers, MongoDB Atlas Free, and GitHub Actions.*
 `;
+
+  const markdownContent = stripEmojis(rawMarkdown);
 
   const jsonSnapshot = {
     date: dateStr,

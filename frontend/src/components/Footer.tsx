@@ -1,15 +1,13 @@
 import Link from 'next/link';
+import DevAtlasLogo from './DevAtlasLogo';
 
 export function Footer() {
   return (
     <footer className="mt-20 border-t border-border bg-background py-10 text-xs text-muted">
       <div className="mx-auto flex max-w-7xl flex-col justify-between gap-6 px-4 sm:flex-row sm:items-center sm:px-6">
-        <div className="flex flex-col gap-1">
-          <div className="flex items-center gap-2 font-mono font-semibold text-zinc-300">
-            <span>DEVATLAS</span>
-            <span className="rounded bg-zinc-800 px-1.5 py-0.5 text-[10px] text-zinc-400">SERVERLESS EDGE</span>
-          </div>
-          <p className="text-zinc-500">
+        <div className="flex flex-col gap-1.5">
+          <DevAtlasLogo size={22} textClassName="text-xs" />
+          <p className="text-zinc-500 max-w-md">
             Autonomous Developer Intelligence Platform. Deployed on Cloudflare Pages, Cloudflare Workers & MongoDB Atlas.
           </p>
         </div>

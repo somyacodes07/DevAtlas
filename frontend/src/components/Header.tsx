@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import DevAtlasLogo from './DevAtlasLogo';
 
 export function Header() {
   return (
@@ -6,11 +7,8 @@ export function Header() {
       <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:px-6">
         {/* Brand */}
         <div className="flex items-center gap-6">
-          <Link href="/" className="flex items-center gap-2 font-mono text-base font-bold tracking-tight text-white hover:opacity-90">
-            <span className="flex h-6 w-6 items-center justify-center rounded bg-white text-xs font-black text-black">
-              DA
-            </span>
-            <span>DEVATLAS</span>
+          <Link href="/" className="flex items-center gap-2 hover:opacity-95 transition-opacity">
+            <DevAtlasLogo size={26} />
           </Link>
 
           <nav className="hidden items-center gap-5 text-xs font-medium text-muted sm:flex">
