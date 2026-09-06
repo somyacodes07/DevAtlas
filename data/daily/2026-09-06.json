@@ -1,7 +1,7 @@
 {
   "date": "2026-09-06",
-  "generatedAt": "2026-09-06T04:02:19.685Z",
-  "runId": "RUN-2026-09-06-4382",
+  "generatedAt": "2026-09-06T15:19:09.517Z",
+  "runId": "RUN-2026-09-06-4172",
   "summary": {
     "itemsDiscovered": 40,
     "dataQualityScore": 100
@@ -65,17 +65,17 @@
     },
     {
       "type": "NEWS",
-      "title": "Learn Programming with OCaml",
-      "category": "Open Source Software",
-      "canonicalUrl": "https://usr.lmf.cnrs.fr/lpo",
+      "title": "A/I shuts down – Stay human",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://keepitfree.ai/announcements/a/i-shuts-down-stay-human",
       "score": 81
     },
     {
-      "type": "AI_TOOL",
-      "title": "GPT-6 Astra on robot arms",
-      "category": "AI & Machine Learning",
-      "canonicalUrl": "https://openai.robocurve.org/gpt-6-astra",
-      "score": 85
+      "type": "NEWS",
+      "title": "Kadō – open-source habit tracker, with non-binary habit score, for iOS",
+      "category": "Tech News & Ecosystem",
+      "canonicalUrl": "https://github.com/scastiel/kado",
+      "score": 81
     }
   ]
 }
