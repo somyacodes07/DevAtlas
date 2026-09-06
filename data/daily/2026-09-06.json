@@ -1,33 +1,81 @@
 {
   "date": "2026-09-06",
-  "generatedAt": "2026-09-06T00:15:22.000Z",
+  "generatedAt": "2026-09-06T04:02:19.685Z",
+  "runId": "RUN-2026-09-06-4382",
   "summary": {
-    "itemsDiscovered": 482,
-    "itemsNew": 173,
-    "itemsDuplicates": 201,
-    "dataQualityScore": 98.4
+    "itemsDiscovered": 40,
+    "dataQualityScore": 100
   },
   "topItems": [
     {
-      "type": "AI_TOOL",
-      "title": "Claude 3.7 Sonnet Hybrid Reasoning",
-      "category": "AI Models",
-      "canonicalUrl": "https://anthropic.com/news/claude-3-7-sonnet",
-      "score": 98
+      "type": "REPOSITORY",
+      "title": "sindresorhus/awesome",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/sindresorhus/awesome",
+      "score": 88
     },
     {
       "type": "REPOSITORY",
-      "title": "anthropics/anthropic-sdk-typescript",
-      "category": "Open Source",
-      "canonicalUrl": "https://github.com/anthropics/anthropic-sdk-typescript",
+      "title": "public-apis/public-apis",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/public-apis/public-apis",
       "score": 92
     },
     {
-      "type": "JOB",
-      "title": "Senior AI Systems Engineer",
-      "category": "Careers",
-      "canonicalUrl": "https://careers.anthropic.com/jobs/ai-systems-engineer",
-      "score": 94
+      "type": "REPOSITORY",
+      "title": "freeCodeCamp/freeCodeCamp",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/freeCodeCamp/freeCodeCamp",
+      "score": 88
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "EbookFoundation/free-programming-books",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/EbookFoundation/free-programming-books",
+      "score": 88
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "openclaw/openclaw",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/openclaw/openclaw",
+      "score": 88
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "nilbuild/developer-roadmap",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/nilbuild/developer-roadmap",
+      "score": 88
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "vinta/awesome-python",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/vinta/awesome-python",
+      "score": 92
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "awesome-selfhosted/awesome-selfhosted",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/awesome-selfhosted/awesome-selfhosted",
+      "score": 88
+    },
+    {
+      "type": "NEWS",
+      "title": "Learn Programming with OCaml",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://usr.lmf.cnrs.fr/lpo",
+      "score": 81
+    },
+    {
+      "type": "AI_TOOL",
+      "title": "GPT-6 Astra on robot arms",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://openai.robocurve.org/gpt-6-astra",
+      "score": 85
     }
   ]
 }
