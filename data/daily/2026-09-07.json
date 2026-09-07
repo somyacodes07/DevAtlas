@@ -1,7 +1,7 @@
 {
   "date": "2026-09-07",
-  "generatedAt": "2026-09-07T04:01:27.217Z",
-  "runId": "RUN-2026-09-07-4772",
+  "generatedAt": "2026-09-07T06:45:26.215Z",
+  "runId": "RUN-2026-09-07-5686",
   "summary": {
     "itemsDiscovered": 38,
     "dataQualityScore": 100
@@ -65,17 +65,17 @@
     },
     {
       "type": "AI_TOOL",
-      "title": "Your intellectual fly is open when you use an LLM to author a post (2025)",
+      "title": "I refused to train the AI that could replace me",
       "category": "AI & Machine Learning",
-      "canonicalUrl": "https://bcantrill.dtrace.org/2025/12/05/your-intellectual-fly-is-open",
-      "score": 89
+      "canonicalUrl": "https://restofworld.org/2026/ai-training-jobs-expert-replacement",
+      "score": 85
     },
     {
       "type": "NEWS",
-      "title": "Keep Our Servers Running: Your Recurring Donation Goes 3X This September",
-      "category": "Open Source Software",
-      "canonicalUrl": "https://blog.archive.org/2026/09/01/keep-our-servers-running-your-recurring-donation-goes-3x-this-september",
-      "score": 85
+      "title": "It took a year to ship WebAssembly in Anubis",
+      "category": "Tech News & Ecosystem",
+      "canonicalUrl": "https://anubis.techaro.lol/blog/2026/anubis-wasm",
+      "score": 81
     }
   ]
 }
