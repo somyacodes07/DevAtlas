@@ -16,8 +16,11 @@ if git status --porcelain reports/ data/daily/ | grep -q . || [ "$FORCE" = "true
   echo "✓ Meaningful ecosystem intelligence or report changes detected."
   
   TODAY=$(date -u +"%Y-%m-%d")
-  git config user.name "github-actions[bot]"
-  git config user.email "github-actions[bot]@users.noreply.github.com"
+  AUTHOR_NAME="${GIT_AUTHOR_NAME:-somyacodes07}"
+  AUTHOR_EMAIL="${GIT_AUTHOR_EMAIL:-ffsomyajeet@gmail.com}"
+
+  git config user.name "$AUTHOR_NAME"
+  git config user.email "$AUTHOR_EMAIL"
 
   git add reports/ data/daily/
   if git diff --staged --quiet; then

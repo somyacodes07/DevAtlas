@@ -36,8 +36,10 @@ export async function getWorkerDb(uri?: string, databaseName?: string): Promise<
   try {
     const effectiveUri = resolveUriForEdge(uri);
     const client = new MongoClient(effectiveUri, {
-      connectTimeoutMS: 1000,
-      serverSelectionTimeoutMS: 1000,
+      connectTimeoutMS: 5000,
+      serverSelectionTimeoutMS: 5000,
+      minPoolSize: 0,
+      maxPoolSize: 1,
     });
 
     await client.connect();
