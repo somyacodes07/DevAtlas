@@ -36,7 +36,7 @@ flowchart TD
 
     subgraph GitHubEngine["GitHub Actions (Batch Compute & Orchestration)"]
         WF_DAILY["Daily Discovery Workflow\n(Cron 0 0 * * * & dispatch)"]
-        
+
         subgraph PipelineEngine["pipeline/ (TypeScript Ingestion Engine)"]
             DISC["1. Source Discovery"]
             NORM["2. Normalization & Canonicalization"]
@@ -48,7 +48,7 @@ flowchart TD
             REP_GEN["8. Deterministic Markdown & JSON Report Generator"]
             DIFF["9. Change Detection Gate"]
         end
-        
+
         WF_CI["CI Workflow (Node Matrix, Typecheck, Test, Build)"]
         WF_SEC["Security Workflow (Gitleaks, Audit, SBOM)"]
         WF_DEPLOY["Deploy Workflow (Worker & Pages)"]

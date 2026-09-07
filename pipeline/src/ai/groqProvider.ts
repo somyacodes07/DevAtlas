@@ -55,9 +55,9 @@ export class GroqAIProvider implements AIProvider {
         signal: controller.signal,
       });
 
-      if (response.status === 404 && this.model !== 'groq/compound-mini') {
-        console.warn(`[Groq Warning] Model "${this.model}" not available on this tier. Auto-switching to "groq/compound-mini"...`);
-        this.model = 'groq/compound-mini';
+      if (response.status === 404 && this.model !== 'llama3-8b-8192') {
+        console.warn(`[Groq Warning] Model "${this.model}" not available on this tier. Auto-switching to "llama3-8b-8192"...`);
+        this.model = 'llama3-8b-8192';
         return this.callGroq(messages, jsonMode, maxTokens, canRetry);
       }
 
