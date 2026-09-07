@@ -4,14 +4,14 @@ import { DeterministicRuleProvider } from './deterministicRuleProvider';
 import { stripEmojis } from '../normalization/normalizer';
 
 export class GroqAIProvider implements AIProvider {
-  name = 'Groq Intelligence Engine (Mixtral 8x7b)';
+  name = 'Groq Intelligence Engine (GPT-OSS 20B)';
   private apiKey: string;
   private model: string;
   private fallbackProvider: DeterministicRuleProvider;
 
   constructor(apiKey?: string, model?: string) {
     this.apiKey = apiKey || process.env.GROQ_API_KEY || process.env.AI_API_KEY || '';
-    this.model = model || process.env.GROQ_MODEL || 'mixtral-8x7b-32768';
+    this.model = model || process.env.GROQ_MODEL || 'openai/gpt-oss-20b';
     this.fallbackProvider = new DeterministicRuleProvider();
   }
 
@@ -55,9 +55,9 @@ export class GroqAIProvider implements AIProvider {
         signal: controller.signal,
       });
 
-      if (response.status === 404 && this.model !== 'mixtral-8x7b-32768') {
-        console.warn(`[Groq Warning] Model "${this.model}" not available on this tier. Auto-switching to "mixtral-8x7b-32768"...`);
-        this.model = 'mixtral-8x7b-32768';
+      if (response.status === 404 && this.model !== 'openai/gpt-oss-20b') {
+        console.warn(`[Groq Warning] Model "${this.model}" not available on this tier. Auto-switching to "openai/gpt-oss-20b"...`);
+        this.model = 'openai/gpt-oss-20b';
         return this.callGroq(messages, jsonMode, maxTokens, canRetry);
       }
 
