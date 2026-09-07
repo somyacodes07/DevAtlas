@@ -14,9 +14,9 @@ export class GitHubDiscoverySource implements DiscoverySource {
       headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
     }
 
-    // Query repos with stars > 1000 updated recently
-    const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
-    const url = `https://api.github.com/search/repositories?q=stars:>1000+pushed:>${sevenDaysAgo}&sort=stars&order=desc&per_page=8`;
+    // Query newly created repos with high stars (trending)
+    const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
+    const url = `https://api.github.com/search/repositories?q=created:>${thirtyDaysAgo}+stars:>200+NOT+awesome+NOT+list&sort=stars&order=desc&per_page=12`;
 
     try {
       const res = await fetch(url, { headers, signal: AbortSignal.timeout(8000) });

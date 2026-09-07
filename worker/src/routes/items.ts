@@ -2,7 +2,6 @@ import { Hono } from 'hono';
 import { ObjectId } from 'mongodb';
 import { Env, Variables } from '../types';
 import { getItemsCollection, getWorkerDb } from '../db/mongodb';
-import { FALLBACK_ITEMS } from '../db/fallbackData';
 
 export const itemsRouter = new Hono<{ Bindings: Env; Variables: Variables }>();
 
@@ -50,25 +49,13 @@ itemsRouter.get('/', async (c) => {
   const db = await getWorkerDb(c.env?.MONGODB_URI, c.env?.MONGODB_DATABASE);
 
   if (!db) {
-    let fallback = FALLBACK_ITEMS;
-    if (type) {
-      fallback = fallback.filter(i => i.type === type.toUpperCase());
-    }
-    if (category) {
-      fallback = fallback.filter(i => i.category.toLowerCase() === category.toLowerCase());
-    }
-    if (q) {
-      const qLower = q.toLowerCase();
-      fallback = fallback.filter(i => i.title.toLowerCase().includes(qLower) || i.description.toLowerCase().includes(qLower));
-    }
-
     c.header('Cache-Control', 'public, max-age=60, s-maxage=300, stale-while-revalidate=600');
     return c.json({
-      data: fallback,
+      data: [],
       meta: {
         page,
         limit,
-        total: fallback.length,
+        total: 0,
         hasNextPage: false,
         requestId,
         source: 'EDGE_CATALOG_ACTIVE',

@@ -4,14 +4,14 @@ import { DeterministicRuleProvider } from './deterministicRuleProvider';
 import { stripEmojis } from '../normalization/normalizer';
 
 export class GroqAIProvider implements AIProvider {
-  name = 'Groq Intelligence Engine (Llama 3.3)';
+  name = 'Groq Intelligence Engine (Llama 3.1 8B)';
   private apiKey: string;
   private model: string;
   private fallbackProvider: DeterministicRuleProvider;
 
   constructor(apiKey?: string, model?: string) {
     this.apiKey = apiKey || process.env.GROQ_API_KEY || process.env.AI_API_KEY || '';
-    this.model = model || process.env.GROQ_MODEL || 'groq/compound-mini';
+    this.model = model || process.env.GROQ_MODEL || 'llama-3.1-8b-instant';
     this.fallbackProvider = new DeterministicRuleProvider();
   }
 

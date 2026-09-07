@@ -3,7 +3,6 @@
  * Connects frontend to the Cloudflare Worker REST API.
  */
 
-import { FALLBACK_ITEMS } from './fallbackData';
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8787/api/v1';
 
@@ -124,10 +123,10 @@ export async function fetchItems(params: Record<string, string> = {}): Promise<A
     const res = await fetch(`${API_BASE}/items?${query}`, { next: { revalidate: 30 } });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const json = await res.json();
-    if (json.data && json.data.length > 0) return json;
-    return { data: FALLBACK_ITEMS as any, meta: { total: FALLBACK_ITEMS.length, source: 'VERIFIED_CATALOG' } };
+    if (json.data) return json;
+    return { data: [], meta: { total: 0, source: 'VERIFIED_CATALOG' } };
   } catch {
-    return { data: FALLBACK_ITEMS as any, meta: { total: FALLBACK_ITEMS.length, source: 'VERIFIED_CATALOG' } };
+    return { data: [], meta: { total: 0, source: 'VERIFIED_CATALOG' } };
   }
 }
 
@@ -137,12 +136,10 @@ export async function fetchJobs(params: Record<string, string> = {}): Promise<Ap
     const res = await fetch(`${API_BASE}/jobs?${query}`, { next: { revalidate: 30 } });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const json = await res.json();
-    if (json.data && json.data.length > 0) return json;
-    const fallbackJobs = FALLBACK_ITEMS.filter((i) => i.type === 'JOB') as any;
-    return { data: fallbackJobs, meta: { total: fallbackJobs.length, source: 'VERIFIED_CATALOG' } };
+    if (json.data) return json;
+    return { data: [], meta: { total: 0, source: 'VERIFIED_CATALOG' } };
   } catch {
-    const fallbackJobs = FALLBACK_ITEMS.filter((i) => i.type === 'JOB') as any;
-    return { data: fallbackJobs, meta: { total: fallbackJobs.length, source: 'VERIFIED_CATALOG' } };
+    return { data: [], meta: { total: 0, source: 'VERIFIED_CATALOG' } };
   }
 }
 
@@ -152,12 +149,10 @@ export async function fetchTools(params: Record<string, string> = {}): Promise<A
     const res = await fetch(`${API_BASE}/tools?${query}`, { next: { revalidate: 30 } });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const json = await res.json();
-    if (json.data && json.data.length > 0) return json;
-    const fallbackTools = FALLBACK_ITEMS.filter((i) => i.type === 'AI_TOOL') as any;
-    return { data: fallbackTools, meta: { total: fallbackTools.length, source: 'VERIFIED_CATALOG' } };
+    if (json.data) return json;
+    return { data: [], meta: { total: 0, source: 'VERIFIED_CATALOG' } };
   } catch {
-    const fallbackTools = FALLBACK_ITEMS.filter((i) => i.type === 'AI_TOOL') as any;
-    return { data: fallbackTools, meta: { total: fallbackTools.length, source: 'VERIFIED_CATALOG' } };
+    return { data: [], meta: { total: 0, source: 'VERIFIED_CATALOG' } };
   }
 }
 
@@ -167,12 +162,10 @@ export async function fetchRepositories(params: Record<string, string> = {}): Pr
     const res = await fetch(`${API_BASE}/repositories?${query}`, { next: { revalidate: 30 } });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const json = await res.json();
-    if (json.data && json.data.length > 0) return json;
-    const fallbackRepos = FALLBACK_ITEMS.filter((i) => i.type === 'REPOSITORY') as any;
-    return { data: fallbackRepos, meta: { total: fallbackRepos.length, source: 'VERIFIED_CATALOG' } };
+    if (json.data) return json;
+    return { data: [], meta: { total: 0, source: 'VERIFIED_CATALOG' } };
   } catch {
-    const fallbackRepos = FALLBACK_ITEMS.filter((i) => i.type === 'REPOSITORY') as any;
-    return { data: fallbackRepos, meta: { total: fallbackRepos.length, source: 'VERIFIED_CATALOG' } };
+    return { data: [], meta: { total: 0, source: 'VERIFIED_CATALOG' } };
   }
 }
 

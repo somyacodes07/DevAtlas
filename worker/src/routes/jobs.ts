@@ -1,7 +1,6 @@
 import { Hono } from 'hono';
 import { Env, Variables } from '../types';
 import { getItemsCollection, getWorkerDb } from '../db/mongodb';
-import { FALLBACK_ITEMS } from '../db/fallbackData';
 
 export const jobsRouter = new Hono<{ Bindings: Env; Variables: Variables }>();
 
@@ -43,22 +42,9 @@ jobsRouter.get('/', async (c) => {
 
   const db = await getWorkerDb(c.env?.MONGODB_URI, c.env?.MONGODB_DATABASE);
   if (!db) {
-    let fallback = FALLBACK_ITEMS.filter(i => i.type === 'JOB');
-    if (remote === 'true') {
-      fallback = fallback.filter(i => i.job?.remote || i.job?.workMode === 'REMOTE');
-    }
-    if (experienceLevel) {
-      fallback = fallback.filter(i => i.job?.experienceLevel === experienceLevel.toUpperCase());
-    }
-    if (workMode) {
-      fallback = fallback.filter(i => i.job?.workMode === workMode.toUpperCase());
-    }
-    if (region) {
-      fallback = fallback.filter(i => i.job?.region === region.toUpperCase());
-    }
     return c.json({
-      data: fallback,
-      meta: { page, limit, total: fallback.length, hasNextPage: false, requestId, source: 'EDGE_CATALOG_ACTIVE' },
+      data: [],
+      meta: { page, limit, total: 0, hasNextPage: false, requestId, source: 'EDGE_CATALOG_ACTIVE' },
     });
   }
 

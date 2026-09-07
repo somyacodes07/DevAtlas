@@ -1,81 +1,81 @@
 {
   "date": "2026-09-07",
-  "generatedAt": "2026-09-07T04:01:27.217Z",
-  "runId": "RUN-2026-09-07-4772",
+  "generatedAt": "2026-09-07T06:43:45.757Z",
+  "runId": "RUN-2026-09-07-6106",
   "summary": {
-    "itemsDiscovered": 38,
+    "itemsDiscovered": 71,
     "dataQualityScore": 100
   },
   "topItems": [
     {
       "type": "REPOSITORY",
-      "title": "sindresorhus/awesome",
-      "category": "Open Source Software",
-      "canonicalUrl": "https://github.com/sindresorhus/awesome",
-      "score": 88
-    },
-    {
-      "type": "REPOSITORY",
-      "title": "public-apis/public-apis",
-      "category": "Open Source Software",
-      "canonicalUrl": "https://github.com/public-apis/public-apis",
-      "score": 92
-    },
-    {
-      "type": "REPOSITORY",
-      "title": "freeCodeCamp/freeCodeCamp",
-      "category": "Open Source Software",
-      "canonicalUrl": "https://github.com/freeCodeCamp/freeCodeCamp",
-      "score": 88
-    },
-    {
-      "type": "REPOSITORY",
-      "title": "EbookFoundation/free-programming-books",
-      "category": "Open Source Software",
-      "canonicalUrl": "https://github.com/EbookFoundation/free-programming-books",
-      "score": 88
-    },
-    {
-      "type": "REPOSITORY",
-      "title": "openclaw/openclaw",
+      "title": "deepseek-ai/deepseek-harness",
       "category": "AI & Machine Learning",
-      "canonicalUrl": "https://github.com/openclaw/openclaw",
+      "canonicalUrl": "https://github.com/deepseek-ai/deepseek-harness",
       "score": 88
     },
     {
       "type": "REPOSITORY",
-      "title": "nilbuild/developer-roadmap",
+      "title": "anywhere-labs/dsh-desktop",
       "category": "Open Source Software",
-      "canonicalUrl": "https://github.com/nilbuild/developer-roadmap",
+      "canonicalUrl": "https://github.com/anywhere-labs/dsh-desktop",
       "score": 88
     },
     {
       "type": "REPOSITORY",
-      "title": "vinta/awesome-python",
+      "title": "guillaumemeyer/watermarks-remover",
       "category": "Open Source Software",
-      "canonicalUrl": "https://github.com/vinta/awesome-python",
-      "score": 92
-    },
-    {
-      "type": "REPOSITORY",
-      "title": "awesome-selfhosted/awesome-selfhosted",
-      "category": "Open Source Software",
-      "canonicalUrl": "https://github.com/awesome-selfhosted/awesome-selfhosted",
+      "canonicalUrl": "https://github.com/guillaumemeyer/watermarks-remover",
       "score": 88
     },
     {
-      "type": "AI_TOOL",
-      "title": "Your intellectual fly is open when you use an LLM to author a post (2025)",
+      "type": "REPOSITORY",
+      "title": "yjh051108/dsh-routing-suite",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/yjh051108/dsh-routing-suite",
+      "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "zhu1090093659/dsh-web",
+      "category": "Developer Tools",
+      "canonicalUrl": "https://github.com/zhu1090093659/dsh-web",
+      "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "sapientinc/PRAXIST",
       "category": "AI & Machine Learning",
-      "canonicalUrl": "https://bcantrill.dtrace.org/2025/12/05/your-intellectual-fly-is-open",
+      "canonicalUrl": "https://github.com/sapientinc/PRAXIST",
       "score": 89
     },
     {
-      "type": "NEWS",
-      "title": "Keep Our Servers Running: Your Recurring Donation Goes 3X This September",
+      "type": "REPOSITORY",
+      "title": "MengTo/threeui",
       "category": "Open Source Software",
-      "canonicalUrl": "https://blog.archive.org/2026/09/01/keep-our-servers-running-your-recurring-donation-goes-3x-this-september",
+      "canonicalUrl": "https://github.com/MengTo/threeui",
       "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "s1dashu/ip-as-logo-skill",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/s1dashu/ip-as-logo-skill",
+      "score": 89
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "lnkiai/m3e-canvas",
+      "category": "Developer Tools",
+      "canonicalUrl": "https://github.com/lnkiai/m3e-canvas",
+      "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "CopilotKit/OpenBot",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/CopilotKit/OpenBot",
+      "score": 89
     }
   ]
 }
