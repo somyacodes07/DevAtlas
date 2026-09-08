@@ -48,8 +48,9 @@ jobs:
           MONGODB_URI: ${{ secrets.MONGODB_URI }}
           MONGODB_DATABASE: devatlas
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          AI_PROVIDER: ${{ inputs.ai_provider || secrets.AI_PROVIDER || 'groq' }}
+          AI_PROVIDER: ${{ inputs.ai_provider || secrets.AI_PROVIDER || 'gemini' }}
           AI_API_KEY: ${{ secrets.AI_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GROQ_MODEL: ${{ secrets.GROQ_MODEL || 'openai/gpt-oss-20b' }}
 
