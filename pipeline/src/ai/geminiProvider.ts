@@ -11,7 +11,7 @@ export class GeminiAIProvider implements AIProvider {
 
   constructor(apiKey?: string, model?: string) {
     this.apiKey = apiKey || process.env.GEMINI_API_KEY || process.env.AI_API_KEY || '';
-    this.model = model || process.env.GEMINI_MODEL || 'gemini-2.5-flash';
+    this.model = model || process.env.GEMINI_MODEL || 'gemini-3.5-flash-lite';
     this.fallbackProvider = new DeterministicRuleProvider();
   }
 
