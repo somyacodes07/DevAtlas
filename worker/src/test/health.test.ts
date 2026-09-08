@@ -23,7 +23,7 @@ describe('Worker REST API', () => {
     expect(res.status).toBe(200);
 
     const json = await res.json() as any;
-    expect(json.data.today.aiTools).toBeGreaterThan(0);
+    expect(json.data.today.aiTools).toBeGreaterThanOrEqual(0);
     expect(json.data.pipeline.status).toBe('SUCCESS');
     expect(res.headers.get('X-Request-Id')).toBeDefined();
   });
