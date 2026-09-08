@@ -4,7 +4,7 @@ import { DeterministicRuleProvider } from './deterministicRuleProvider';
 import { stripEmojis } from '../normalization/normalizer';
 
 export class GeminiAIProvider implements AIProvider {
-  name = 'Gemini Intelligence Engine (2.5 Flash)';
+  name = 'Gemini Intelligence Engine (3.5 Flash Lite)';
   private apiKey: string;
   private model: string;
   private fallbackProvider: DeterministicRuleProvider;
