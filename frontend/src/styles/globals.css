@@ -3,12 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --background: #09090b;
-  --foreground: #f4f4f5;
-  --card: #111114;
-  --border: #222226;
+  --background: #F9F9F6;
+  --foreground: #111111;
+  --card: #FFFFFF;
+  --border: #111111;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', 'SFMono-Regular', Menlo, Monaco, Consolas, monospace;
+  --font-serif: 'Playfair Display', 'Merriweather', 'Georgia', serif;
 }
 
 body {
@@ -22,40 +23,40 @@ body {
 
 /* Accessible focus ring */
 :focus-visible {
-  outline: 2px solid #10b981;
+  outline: 2px solid #D32F2F;
   outline-offset: 2px;
 }
 
 /* Custom minimal scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #09090b;
+  background: #F9F9F6;
+  border-left: 1px solid #111111;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
-  border-radius: 3px;
+  background: #111111;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
+  background: #D32F2F;
 }
 
-/* Ambient DevAtlas Grid */
+/* Editorial Grid */
 .bg-grid-pattern {
-  background-size: 32px 32px;
+  background-size: 40px 40px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(17, 17, 17, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17, 17, 17, 0.05) 1px, transparent 1px);
 }
 
 .bg-dot-pattern {
   background-size: 24px 24px;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(17, 17, 17, 0.1) 1px, transparent 1px);
 }
 
 /* Horizontal scrollbar hiding for clean mobile pill navigation */

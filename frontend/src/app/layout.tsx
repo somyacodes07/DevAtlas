@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter, JetBrains_Mono } from 'next/font/google';
+import { Inter, JetBrains_Mono, Playfair_Display } from 'next/font/google';
 import '../styles/globals.css';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -15,6 +15,12 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-mono',
+});
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-serif',
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://devatlas.pages.dev';
@@ -91,11 +97,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`dark ${inter.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} ${playfair.variable}`} suppressHydrationWarning>
       <head>
         <JsonLd />
       </head>
-      <body className="min-h-screen bg-background font-sans text-foreground antialiased selection:bg-emerald-950 selection:text-emerald-300" suppressHydrationWarning>
+      <body className="min-h-screen bg-background font-sans text-foreground antialiased selection:bg-accent selection:text-white" suppressHydrationWarning>
         {/* Accessible Skip Link */}
         <a
           href="#main-content"

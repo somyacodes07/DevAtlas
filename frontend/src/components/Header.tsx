@@ -19,35 +19,36 @@ export function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/85 backdrop-blur-md">
-      <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:px-6">
+    <header className="sticky top-0 z-50 w-full border-b-2 border-black bg-background">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
         {/* Brand */}
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-8">
           <Link
             href="/"
-            className="flex items-center gap-2 hover:opacity-90 transition-opacity"
+            className="flex items-center gap-3 hover:opacity-80 transition-opacity"
             onClick={() => setMobileMenuOpen(false)}
           >
-            <DevAtlasLogo size={24} />
+            <DevAtlasLogo size={28} />
+            <span className="font-serif text-xl font-bold tracking-tight text-black hidden sm:block">DevAtlas</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden items-center gap-1 text-xs font-medium md:flex">
+          <nav className="hidden items-center gap-2 text-xs font-sans font-bold uppercase tracking-widest md:flex">
             {NAV_ITEMS.map((item) => {
               const isActive = pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href));
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`relative px-3 py-1.5 rounded-md transition-colors ${
+                  className={`relative px-4 py-2 transition-colors ${
                     isActive
-                      ? 'text-white font-semibold bg-zinc-900/80'
-                      : 'text-zinc-400 hover:text-white hover:bg-zinc-900/40'
+                      ? 'text-white bg-black'
+                      : 'text-black hover:bg-black/10'
                   }`}
                 >
                   <span>{item.label}</span>
                   {item.badge && (
-                    <span className="ml-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 px-1.5 py-0.2 text-[9px] font-mono text-emerald-400">
+                    <span className="ml-2 bg-accent text-white px-2 py-0.5 text-[9px]">
                       {item.badge}
                     </span>
                   )}
@@ -58,14 +59,14 @@ export function Header() {
         </div>
 
         {/* Right Status / Actions */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-4">
           <Link
             href="/ops"
-            className="flex items-center gap-1.5 rounded-full border border-border bg-card px-2.5 py-1 text-[11px] font-mono text-zinc-300 hover:border-zinc-500 transition-colors"
+            className="flex items-center gap-2 border border-black bg-white px-3 py-1.5 text-[10px] font-sans font-bold uppercase tracking-widest text-black hover:bg-black hover:text-white transition-colors"
           >
             <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+              <span className="absolute inline-flex h-full w-full animate-ping bg-accent opacity-75" />
+              <span className="relative inline-flex h-2 w-2 bg-accent" />
             </span>
             <span className="hidden sm:inline">RADAR ACTIVE</span>
             <span className="sm:hidden">LIVE</span>
@@ -75,7 +76,7 @@ export function Header() {
             href="https://github.com/somyacodes07/DevAtlas"
             target="_blank"
             rel="noreferrer"
-            className="hidden sm:inline-flex rounded border border-border bg-card px-2.5 py-1 text-xs font-mono text-zinc-300 hover:text-white hover:border-zinc-500 transition-colors"
+            className="hidden sm:inline-flex border border-black bg-white px-3 py-1.5 text-[10px] font-sans font-bold uppercase tracking-widest text-black hover:bg-black hover:text-white transition-colors"
           >
             GitHub
           </a>
@@ -84,15 +85,15 @@ export function Header() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-card text-zinc-300 hover:text-white md:hidden"
+            className="flex h-10 w-10 items-center justify-center border border-black bg-white text-black hover:bg-black hover:text-white transition-colors md:hidden"
             aria-label="Toggle navigation menu"
             aria-expanded={mobileMenuOpen}
           >
-            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {mobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
               ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
               )}
             </svg>
           </button>
@@ -101,8 +102,8 @@ export function Header() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="border-b border-border bg-background/95 backdrop-blur-xl px-4 py-4 md:hidden animate-in fade-in slide-in-from-top-2 duration-200">
-          <nav className="flex flex-col space-y-1">
+        <div className="border-t border-black bg-background px-4 py-6 md:hidden">
+          <nav className="flex flex-col space-y-2">
             {NAV_ITEMS.map((item) => {
               const isActive = pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href));
               return (
@@ -110,15 +111,15 @@ export function Header() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`flex items-center justify-between rounded-lg px-3.5 py-2.5 text-sm font-mono transition-colors ${
+                  className={`flex items-center justify-between border-b border-black/20 px-4 py-3 text-sm font-sans font-bold uppercase tracking-widest transition-colors ${
                     isActive
-                      ? 'bg-zinc-900 font-semibold text-emerald-400 border border-border'
-                      : 'text-zinc-300 hover:bg-zinc-900/60 hover:text-white'
+                      ? 'bg-black text-white'
+                      : 'text-black hover:bg-black/5'
                   }`}
                 >
                   <span>{item.label}</span>
                   {item.badge && (
-                    <span className="rounded bg-emerald-950/80 border border-emerald-800 px-2 py-0.5 text-[10px] text-emerald-300">
+                    <span className="bg-accent text-white px-2 py-0.5 text-[10px]">
                       {item.badge}
                     </span>
                   )}
@@ -127,11 +128,11 @@ export function Header() {
             })}
           </nav>
 
-          <div className="mt-4 pt-3 border-t border-border flex items-center justify-between text-xs font-mono text-zinc-400">
+          <div className="mt-8 flex items-center justify-between text-xs font-sans font-bold uppercase tracking-widest text-black/70">
             <Link
               href="/explore"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-white hover:text-emerald-400"
+              className="hover:text-black transition-colors"
             >
               Search &rarr;
             </Link>
@@ -139,7 +140,7 @@ export function Header() {
               href="https://github.com/somyacodes07/DevAtlas"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-white"
+              className="hover:text-black transition-colors"
             >
               GitHub Repo
             </a>

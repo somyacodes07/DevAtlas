@@ -23,18 +23,22 @@ export async function getWorkerDb(uri?: string, databaseName?: string): Promise<
     return cachedDb;
   }
 
-  // Circuit breaker: immediately return null in 0ms if previous attempt failed recently
-  if (Date.now() - lastFailedAttempt < FAILURE_BACKOFF_MS) {
-    return null;
-  }
+  // Circuit breaker removed to force connection retries
+  // if (Date.now() - lastFailedAttempt < FAILURE_BACKOFF_MS) {
+  //   return null;
+  // }
 
   try {
     const effectiveUri = resolveUriForEdge(uri);
     const client = new MongoClient(effectiveUri, {
-      connectTimeoutMS: 30000,
-      serverSelectionTimeoutMS: 30000,
+      connectTimeoutMS: 10000,
+      serverSelectionTimeoutMS: 10000,
+      socketTimeoutMS: 10000,
       minPoolSize: 0,
       maxPoolSize: 1,
+      tls: true,
+      tlsAllowInvalidCertificates: true,
+      tlsAllowInvalidHostnames: true,
     });
 
     await client.connect();

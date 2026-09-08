@@ -17,7 +17,7 @@ import { HackerNewsDiscoverySource } from './discovery/hackerNewsSource';
 import { JobDiscoverySource } from './discovery/jobSource';
 import { YCInstahyreDiscoverySource } from './discovery/ycInstahyreSource';
 import { RemotiveJobicyDiscoverySource } from './discovery/remotiveJobicySource';
-import { ApifyJobDiscoverySource } from './discovery/apifySource';
+import { ArbeitnowDiscoverySource } from './discovery/arbeitnowSource';
 import { canonicalizeUrl, computeContentHash, computeUrlHash } from './deduplication/hasher';
 import { normalizeTitle, normalizeTimestamp } from './normalization/normalizer';
 import { evaluateDataQuality } from './validation/qualityValidator';
@@ -42,7 +42,7 @@ export async function runPipeline(): Promise<PipelineRunResult> {
     new JobDiscoverySource(),
     new YCInstahyreDiscoverySource(),
     new RemotiveJobicyDiscoverySource(),
-    new ApifyJobDiscoverySource(),
+    new ArbeitnowDiscoverySource(),
   ];
 
   const rawDiscovered: DiscoveredItem[] = [];

@@ -14,45 +14,42 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
   const [activeTab, setActiveTab] = useState<'jobs' | 'tools' | 'repos'>('jobs');
 
   return (
-    <div className="rounded-2xl border border-border bg-card/60 p-5 sm:p-7 backdrop-blur-md">
+    <div className="border-t-4 border-black pt-8 bg-background">
       {/* Header & Tabs */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-border/80 pb-5">
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 border-b border-black pb-6">
         <div>
-          <div className="flex items-center gap-2 font-mono text-xs text-zinc-400">
-            <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="font-semibold text-zinc-200">LIVE ECOSYSTEM RADAR</span>
-          </div>
-          <p className="text-xs text-zinc-500 mt-0.5">Real-time cataloged items from autonomous runs.</p>
+          <h2 className="font-serif text-3xl font-bold text-black tracking-tight">Live Radar</h2>
+          <p className="text-sm text-black/70 mt-2 font-sans max-w-md">Real-time cataloged roles, AI reasoning tools, and repositories from our autonomous engines.</p>
         </div>
 
-        {/* Tab Controls */}
-        <div className="flex items-center gap-1.5 rounded-lg border border-border bg-zinc-950/80 p-1 font-mono text-xs">
+        {/* Tab Controls - Editorial style */}
+        <div className="flex items-center border border-black p-1 font-sans text-xs font-bold uppercase tracking-wider bg-white">
           <button
             onClick={() => setActiveTab('jobs')}
-            className={`rounded-md px-3 py-1.5 transition-all ${
+            className={`px-4 py-2 transition-colors ${
               activeTab === 'jobs'
-                ? 'bg-zinc-800 text-white font-semibold shadow-sm'
-                : 'text-zinc-400 hover:text-white'
+                ? 'bg-black text-white'
+                : 'text-black hover:bg-black/10'
             }`}
           >
             Roles ({jobs.length})
           </button>
           <button
             onClick={() => setActiveTab('tools')}
-            className={`rounded-md px-3 py-1.5 transition-all ${
+            className={`px-4 py-2 transition-colors border-l border-r border-black ${
               activeTab === 'tools'
-                ? 'bg-zinc-800 text-white font-semibold shadow-sm'
-                : 'text-zinc-400 hover:text-white'
+                ? 'bg-black text-white'
+                : 'text-black hover:bg-black/10'
             }`}
           >
             AI Tools ({tools.length})
           </button>
           <button
             onClick={() => setActiveTab('repos')}
-            className={`rounded-md px-3 py-1.5 transition-all ${
+            className={`px-4 py-2 transition-colors ${
               activeTab === 'repos'
-                ? 'bg-zinc-800 text-white font-semibold shadow-sm'
-                : 'text-zinc-400 hover:text-white'
+                ? 'bg-black text-white'
+                : 'text-black hover:bg-black/10'
             }`}
           >
             Repos ({repos.length})
@@ -61,10 +58,10 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
       </div>
 
       {/* Tab Panels */}
-      <div className="mt-5">
+      <div className="mt-8">
         {activeTab === 'jobs' && (
-          <div className="space-y-3">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border-t border-l border-black">
               {jobs.slice(0, 4).map((item) => {
                 const j = item.job;
                 const isIntern = j?.experienceLevel === 'INTERNSHIP' || item.title.toLowerCase().includes('intern');
@@ -72,57 +69,57 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
                 return (
                   <div
                     key={item.title}
-                    className="flex flex-col justify-between rounded-xl border border-border bg-zinc-950/70 p-4 transition-all hover:border-zinc-500 hover:bg-zinc-900/60"
+                    className="flex flex-col justify-between border-r border-b border-black bg-white p-6 hover:bg-card-hover transition-colors group"
                   >
                     <div>
-                      <div className="flex flex-wrap items-center gap-2 mb-1.5">
-                        <span className="font-mono text-xs font-bold text-white bg-zinc-900 border border-border px-2 py-0.5 rounded">
+                      <div className="flex flex-wrap items-center gap-2 mb-4 font-sans text-[10px] font-bold uppercase tracking-widest text-black">
+                        <span className="border-b border-black pb-0.5">
                           {j?.company || 'Company'}
                         </span>
                         {isIntern && (
-                          <span className="font-mono text-[10px] font-bold text-amber-300 bg-amber-950/60 border border-amber-800 px-2 py-0.5 rounded">
+                          <span className="bg-accent text-white px-2 py-0.5">
                             INTERNSHIP
                           </span>
                         )}
                         {j?.workMode && (
-                          <span className="font-mono text-[10px] text-zinc-400 bg-zinc-900 px-2 py-0.5 rounded border border-border">
+                          <span className="border border-black px-2 py-0.5">
                             {j.workMode.replace('_', ' ')}
                           </span>
                         )}
                       </div>
 
-                      <h3 className="font-mono text-sm font-semibold text-white mt-1">
+                      <h3 className="font-serif text-2xl font-bold text-black leading-tight group-hover:text-accent transition-colors">
                         {item.title}
                       </h3>
-                      <p className="font-mono text-[11px] text-zinc-400 mt-0.5">
+                      <p className="font-sans text-xs text-black/70 mt-2 font-medium tracking-wide">
                         {j?.location || 'Remote'}
                       </p>
 
                       {j?.salary && (
-                        <div className="mt-2.5 inline-block font-mono text-xs font-bold text-emerald-400 bg-emerald-950/40 border border-emerald-900/60 px-2.5 py-0.5 rounded">
+                        <div className="mt-4 inline-block font-mono text-sm font-bold text-black border-l-2 border-accent pl-3 py-0.5">
                           {j.salary}
                         </div>
                       )}
                     </div>
 
-                    <div className="mt-4 pt-3 border-t border-border flex items-center justify-between">
-                      <div className="flex flex-wrap gap-1">
+                    <div className="mt-8 pt-4 border-t border-black/20 flex items-center justify-between">
+                      <div className="flex flex-wrap gap-2">
                         {(j?.skills || []).slice(0, 3).map((s) => (
                           <span
                             key={s}
-                            className="font-mono text-[10px] text-zinc-400 bg-zinc-900 px-1.5 py-0.5 rounded"
+                            className="font-sans text-[10px] font-bold uppercase tracking-wider text-black border border-black/30 px-2 py-1"
                           >
                             {s}
                           </span>
                         ))}
                       </div>
                       <a
-                        href={item.canonicalUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="font-mono text-xs text-white hover:text-emerald-400 inline-flex items-center gap-1 font-semibold"
+                         href={item.canonicalUrl}
+                         target="_blank"
+                         rel="noreferrer"
+                         className="font-sans text-xs text-white bg-black px-4 py-2 font-bold uppercase tracking-wider hover:bg-accent transition-colors shrink-0"
                       >
-                        Apply &rarr;
+                        Apply
                       </a>
                     </div>
                   </div>
@@ -130,12 +127,12 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
               })}
             </div>
 
-            <div className="pt-2 text-center">
+            <div className="pt-4 text-center">
               <Link
                 href="/jobs"
-                className="inline-flex items-center gap-1.5 font-mono text-xs text-zinc-400 hover:text-white transition-colors"
+                className="inline-flex items-center gap-2 font-sans text-sm font-bold uppercase tracking-widest text-black border-b border-black hover:text-accent hover:border-accent transition-colors pb-1"
               >
-                <span>View all verified developer roles and internships</span>
+                <span>View all verified roles & internships</span>
                 <span>&rarr;</span>
               </Link>
             </div>
@@ -143,38 +140,38 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
         )}
 
         {activeTab === 'tools' && (
-          <div className="space-y-3">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <div className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-l border-black">
               {tools.slice(0, 3).map((item) => (
                 <div
                   key={item.title}
-                  className="flex flex-col justify-between rounded-xl border border-border bg-zinc-950/70 p-4 transition-all hover:border-zinc-500 hover:bg-zinc-900/60"
+                  className="flex flex-col justify-between border-r border-b border-black bg-white p-6 hover:bg-card-hover transition-colors group"
                 >
                   <div>
-                    <div className="flex items-center justify-between gap-2">
-                      <span className="font-mono text-[10px] uppercase text-zinc-400 bg-zinc-900 px-2 py-0.5 rounded border border-border">
+                    <div className="flex items-center justify-between gap-2 mb-4">
+                      <span className="font-sans text-[10px] font-bold uppercase tracking-widest text-black border-b border-black pb-0.5">
                         {item.tool?.pricingModel || 'Tool'}
                       </span>
-                      <span className="font-mono text-xs font-bold text-white bg-zinc-900 border border-border px-2 py-0.5 rounded">
+                      <span className="font-mono text-xs font-bold text-white bg-black px-2 py-1">
                         {item.score?.total || 95}
                       </span>
                     </div>
 
-                    <h3 className="font-mono text-sm font-semibold text-white mt-2">
+                    <h3 className="font-serif text-xl font-bold text-black leading-tight group-hover:text-accent transition-colors">
                       {item.title}
                     </h3>
-                    <p className="text-xs text-zinc-400 mt-1 line-clamp-2">
+                    <p className="font-sans text-sm text-black/70 mt-3 leading-relaxed">
                       {item.description}
                     </p>
                   </div>
 
-                  <div className="mt-4 pt-3 border-t border-border flex items-center justify-between">
-                    <span className="font-mono text-[10px] text-zinc-500">{item.category}</span>
+                  <div className="mt-8 pt-4 border-t border-black/20 flex items-center justify-between">
+                    <span className="font-sans text-[10px] font-bold uppercase tracking-wider text-black/50">{item.category}</span>
                     <a
                       href={item.canonicalUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="font-mono text-xs text-white hover:text-emerald-400 font-semibold"
+                      className="font-sans text-xs text-black border-b border-black font-bold uppercase tracking-wider hover:text-accent hover:border-accent transition-colors"
                     >
                       Website &rarr;
                     </a>
@@ -183,12 +180,12 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
               ))}
             </div>
 
-            <div className="pt-2 text-center">
+            <div className="pt-4 text-center">
               <Link
                 href="/tools"
-                className="inline-flex items-center gap-1.5 font-mono text-xs text-zinc-400 hover:text-white transition-colors"
+                className="inline-flex items-center gap-2 font-sans text-sm font-bold uppercase tracking-widest text-black border-b border-black hover:text-accent hover:border-accent transition-colors pb-1"
               >
-                <span>View all cataloged AI tools &amp; models</span>
+                <span>View all cataloged AI tools</span>
                 <span>&rarr;</span>
               </Link>
             </div>
@@ -196,33 +193,33 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
         )}
 
         {activeTab === 'repos' && (
-          <div className="space-y-3">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border-t border-l border-black">
               {repos.slice(0, 4).map((item) => (
                 <div
                   key={item.title}
-                  className="flex flex-col justify-between rounded-xl border border-border bg-zinc-950/70 p-4 transition-all hover:border-zinc-500 hover:bg-zinc-900/60"
+                  className="flex flex-col justify-between border-r border-b border-black bg-white p-6 hover:bg-card-hover transition-colors group"
                 >
                   <div>
-                    <div className="flex items-center justify-between gap-2">
-                      <span className="font-mono text-xs font-bold text-white">
+                    <div className="flex items-center justify-between gap-2 mb-4">
+                      <span className="font-sans text-sm font-bold text-black">
                         {item.repository?.ownerRepo || item.title}
                       </span>
                       {item.repository?.starsGrowth24h ? (
-                        <span className="font-mono text-xs font-bold text-emerald-400 bg-emerald-950/50 border border-emerald-900 px-2 py-0.5 rounded">
+                        <span className="font-mono text-[10px] font-bold text-accent bg-accent/10 border border-accent px-2 py-1">
                           +{item.repository.starsGrowth24h} stars
                         </span>
                       ) : null}
                     </div>
 
-                    <p className="text-xs text-zinc-400 mt-1 line-clamp-2">
+                    <p className="font-sans text-sm text-black/70 mt-3 leading-relaxed">
                       {item.description}
                     </p>
                   </div>
 
-                  <div className="mt-4 pt-3 border-t border-border flex items-center justify-between">
-                    <div className="flex items-center gap-2 font-mono text-[11px] text-zinc-400">
-                      <span className="text-white">{item.repository?.language || 'TypeScript'}</span>
+                  <div className="mt-8 pt-4 border-t border-black/20 flex items-center justify-between">
+                    <div className="flex items-center gap-3 font-sans text-[10px] font-bold uppercase tracking-widest text-black/50">
+                      <span className="text-black">{item.repository?.language || 'TypeScript'}</span>
                       <span>•</span>
                       <span>{item.repository?.stars ? item.repository.stars.toLocaleString() : '1k+'} stars</span>
                     </div>
@@ -230,7 +227,7 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
                       href={item.canonicalUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="font-mono text-xs text-white hover:text-emerald-400 font-semibold"
+                      className="font-sans text-xs text-black border-b border-black font-bold uppercase tracking-wider hover:text-accent hover:border-accent transition-colors"
                     >
                       GitHub &rarr;
                     </a>
@@ -239,12 +236,12 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
               ))}
             </div>
 
-            <div className="pt-2 text-center">
+            <div className="pt-4 text-center">
               <Link
                 href="/repositories"
-                className="inline-flex items-center gap-1.5 font-mono text-xs text-zinc-400 hover:text-white transition-colors"
+                className="inline-flex items-center gap-2 font-sans text-sm font-bold uppercase tracking-widest text-black border-b border-black hover:text-accent hover:border-accent transition-colors pb-1"
               >
-                <span>View all trending open source repositories</span>
+                <span>View all trending repositories</span>
                 <span>&rarr;</span>
               </Link>
             </div>

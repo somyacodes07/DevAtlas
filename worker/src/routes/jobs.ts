@@ -1,6 +1,6 @@
 import { Hono } from 'hono';
 import { Env, Variables } from '../types';
-import { getItemsCollection, getWorkerDb } from '../db/mongodb';
+import { getItemsCollection, getWorkerDb, lastConnectError } from '../db/mongodb';
 
 export const jobsRouter = new Hono<{ Bindings: Env; Variables: Variables }>();
 
@@ -44,7 +44,7 @@ jobsRouter.get('/', async (c) => {
   if (!db) {
     return c.json({
       data: [],
-      meta: { page, limit, total: 0, hasNextPage: false, requestId, source: 'EDGE_CATALOG_ACTIVE' },
+      meta: { page, limit, total: 0, hasNextPage: false, requestId, source: 'EDGE_CATALOG_ACTIVE', error: lastConnectError || 'Unknown DB Error' },
     });
   }
 

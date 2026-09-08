@@ -76,7 +76,7 @@ jobs:
       - name: Build Next.js Production Bundle
         run: npm run build --workspace=@devatlas/frontend
         env:
-          NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL || 'https://devatlas-api.workers.dev/api/v1' }}
+          NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL || 'https://devatlas-api.somyacodes.workers.dev/api/v1' }}
 
       - name: Deploy to Cloudflare Pages
         if: env.CLOUDFLARE_API_TOKEN != ''
