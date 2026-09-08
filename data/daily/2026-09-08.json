@@ -1,7 +1,7 @@
 {
   "date": "2026-09-08",
-  "generatedAt": "2026-09-08T22:39:43.955Z",
-  "runId": "RUN-2026-09-08-5854",
+  "generatedAt": "2026-09-08T22:52:08.921Z",
+  "runId": "RUN-2026-09-08-4386",
   "summary": {
     "itemsDiscovered": 86,
     "dataQualityScore": 100
@@ -10,7 +10,7 @@
     {
       "type": "REPOSITORY",
       "title": "deepseek-ai/deepseek-harness",
-      "category": "AI & Machine Learning",
+      "category": "Open Source Software",
       "canonicalUrl": "https://github.com/deepseek-ai/deepseek-harness",
       "score": 88
     },
@@ -24,7 +24,7 @@
     {
       "type": "REPOSITORY",
       "title": "guillaumemeyer/watermarks-remover",
-      "category": "AI & Machine Learning",
+      "category": "Open Source Software",
       "canonicalUrl": "https://github.com/guillaumemeyer/watermarks-remover",
       "score": 88
     },
@@ -45,7 +45,7 @@
     {
       "type": "REPOSITORY",
       "title": "sapientinc/PRAXIST",
-      "category": "Open Source Software",
+      "category": "AI & Machine Learning",
       "canonicalUrl": "https://github.com/sapientinc/PRAXIST",
       "score": 89
     },
@@ -59,14 +59,14 @@
     {
       "type": "REPOSITORY",
       "title": "lnkiai/m3e-canvas",
-      "category": "AI & Machine Learning",
+      "category": "Developer Tools",
       "canonicalUrl": "https://github.com/lnkiai/m3e-canvas",
       "score": 85
     },
     {
       "type": "REPOSITORY",
       "title": "s1dashu/ip-as-logo-skill",
-      "category": "Open Source Software",
+      "category": "Developer Tools",
       "canonicalUrl": "https://github.com/s1dashu/ip-as-logo-skill",
       "score": 89
     },

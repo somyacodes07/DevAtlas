@@ -28,11 +28,11 @@ export class GeminiAIProvider implements AIProvider {
       throw new Error('GEMINI_API_KEY is not configured');
     }
 
-    // Rate limiting: 15 RPM for free tier (4s interval)
+    // Rate limiting: strictly under 15 RPM (4.5s interval to account for network jitter)
     const now = Date.now();
     const elapsed = now - this.lastCallTime;
-    if (elapsed < 4000) {
-      await new Promise((resolve) => setTimeout(resolve, 4000 - elapsed));
+    if (elapsed < 4500) {
+      await new Promise((resolve) => setTimeout(resolve, 4500 - elapsed));
     }
     this.lastCallTime = Date.now();
 
