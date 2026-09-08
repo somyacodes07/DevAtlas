@@ -27,6 +27,8 @@ if git status --porcelain reports/ data/daily/ | grep -q . || [ "$FORCE" = "true
     echo "No staged changes to commit."
   else
     git commit -m "chore(data): publish daily developer intelligence for ${TODAY} [skip ci]"
+    echo "[DevAtlas Commit Gate] Pulling remote changes to avoid conflicts..."
+    git pull --rebase origin ${GITHUB_REF_NAME:-main}
     echo "[DevAtlas Commit Gate] Pushing committed artifacts to main branch..."
     git push origin HEAD:${GITHUB_REF_NAME:-main}
     echo "✅ Successfully published daily intelligence artifacts."
