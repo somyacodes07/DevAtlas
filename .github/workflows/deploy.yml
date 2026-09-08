@@ -44,6 +44,12 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           workingDirectory: 'worker'
+          secrets: |
+            MONGODB_URI
+            MONGODB_DATABASE
+        env:
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          MONGODB_DATABASE: devatlas
 
       - name: Notify Skip if Secret Not Configured
         if: env.CLOUDFLARE_API_TOKEN == ''

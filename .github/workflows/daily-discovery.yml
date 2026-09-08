@@ -48,7 +48,7 @@ jobs:
           MONGODB_URI: ${{ secrets.MONGODB_URI }}
           MONGODB_DATABASE: devatlas
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          AI_PROVIDER: ${{ github.event.inputs.ai_provider || secrets.AI_PROVIDER || 'groq' }}
+          AI_PROVIDER: ${{ inputs.ai_provider || secrets.AI_PROVIDER || 'groq' }}
           AI_API_KEY: ${{ secrets.AI_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GROQ_MODEL: ${{ secrets.GROQ_MODEL || 'openai/gpt-oss-20b' }}
@@ -57,4 +57,4 @@ jobs:
         run: ./scripts/detect-meaningful-changes.sh
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          FORCE_PUBLISH: ${{ github.event.inputs.force_publish || 'false' }}
+          FORCE_PUBLISH: ${{ inputs.force_publish || 'false' }}

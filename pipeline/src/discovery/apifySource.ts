@@ -2,7 +2,7 @@ import { DiscoverySource, DiscoveredItem } from '../types';
 
 export class ApifyJobDiscoverySource implements DiscoverySource {
   name = 'Apify Job Dataset Engine';
-  type: 'JOB' | 'REPOSITORY' | 'AI_TOOL' = 'JOB';
+  type = 'JOB_API' as const;
 
   async discover(): Promise<DiscoveredItem[]> {
     const apiUrl = 'https://api.apify.com/v2/datasets/6lYk11DjF1UUUq1iO/items?signature=MC4xNzg5OTcyNjk5Mjk1LjFDQ3JKNG9SUmVtMnA2Nnc5a1I2Mw&format=json&clean=true';
