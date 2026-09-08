@@ -91,11 +91,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`dark ${inter.variable} ${jetbrainsMono.variable}`}>
+    <html lang="en" className={`dark ${inter.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
       <head>
         <JsonLd />
       </head>
-      <body className="min-h-screen bg-background font-sans text-foreground antialiased selection:bg-emerald-950 selection:text-emerald-300">
+      <body className="min-h-screen bg-background font-sans text-foreground antialiased selection:bg-emerald-950 selection:text-emerald-300" suppressHydrationWarning>
         {/* Accessible Skip Link */}
         <a
           href="#main-content"
