@@ -4,14 +4,14 @@ import { DeterministicRuleProvider } from './deterministicRuleProvider';
 import { stripEmojis } from '../normalization/normalizer';
 
 export class GeminiAIProvider implements AIProvider {
-  name = 'Gemini Intelligence Engine (1.5 Flash)';
+  name = 'Gemini Intelligence Engine (2.5 Flash)';
   private apiKey: string;
   private model: string;
   private fallbackProvider: DeterministicRuleProvider;
 
   constructor(apiKey?: string, model?: string) {
     this.apiKey = apiKey || process.env.GEMINI_API_KEY || process.env.AI_API_KEY || '';
-    this.model = model || process.env.GEMINI_MODEL || 'gemini-1.5-flash';
+    this.model = model || process.env.GEMINI_MODEL || 'gemini-2.5-flash';
     this.fallbackProvider = new DeterministicRuleProvider();
   }
 

@@ -1,7 +1,7 @@
 {
   "date": "2026-09-08",
-  "generatedAt": "2026-09-08T22:32:46.073Z",
-  "runId": "RUN-2026-09-08-7281",
+  "generatedAt": "2026-09-08T22:39:43.955Z",
+  "runId": "RUN-2026-09-08-5854",
   "summary": {
     "itemsDiscovered": 86,
     "dataQualityScore": 100
@@ -17,14 +17,14 @@
     {
       "type": "REPOSITORY",
       "title": "anywhere-labs/dsh-desktop",
-      "category": "open source software",
+      "category": "Open Source Software",
       "canonicalUrl": "https://github.com/anywhere-labs/dsh-desktop",
       "score": 88
     },
     {
       "type": "REPOSITORY",
       "title": "guillaumemeyer/watermarks-remover",
-      "category": "Open Source Software",
+      "category": "AI & Machine Learning",
       "canonicalUrl": "https://github.com/guillaumemeyer/watermarks-remover",
       "score": 88
     },
@@ -59,7 +59,7 @@
     {
       "type": "REPOSITORY",
       "title": "lnkiai/m3e-canvas",
-      "category": "Developer Tools",
+      "category": "AI & Machine Learning",
       "canonicalUrl": "https://github.com/lnkiai/m3e-canvas",
       "score": 85
     },
