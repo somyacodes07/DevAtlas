@@ -74,25 +74,25 @@ export default async function JobsPage() {
     <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 sm:py-10 space-y-8">
       <JsonLd data={jobSchemaList} />
 
-      {/* Header Banner - Clean, Low-Text, On Point */}
-      <div className="border-b border-border pb-5">
+      {/* Clean Header */}
+      <div className="border-b-2 border-border pb-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-2.5 py-0.5 text-xs font-mono text-zinc-400 mb-2">
-              <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+            <div className="inline-flex items-center gap-2 border border-border bg-background px-3 py-1 text-xs font-mono font-bold uppercase tracking-wider text-muted mb-3">
+              <span className="h-2 w-2 bg-accent" />
               <span>VERIFIED HIRING RADAR</span>
             </div>
-            <h1 className="font-mono text-2xl sm:text-3xl font-bold text-white">
-              Developer Jobs &amp; Internships
+            <h1 className="font-serif text-3xl sm:text-4xl font-bold text-foreground">
+              Developer Jobs & Internships
             </h1>
-            <p className="mt-1 text-xs text-zinc-400 max-w-xl font-mono">
-              Curated roles with verified stipend &amp; CTC data across Bengaluru, Hyderabad, and Remote Worldwide.
+            <p className="mt-2 text-sm text-foreground/80 max-w-xl font-sans">
+              Curated roles with verified stipend & CTC data across Bengaluru, Hyderabad, and Remote Worldwide.
             </p>
           </div>
 
-          <div className="flex items-center gap-3 font-mono text-xs text-zinc-400">
-            <span className="rounded border border-border bg-card px-3 py-1.5 font-bold text-white">
-              {jobs.length} Active Openings
+          <div className="flex items-center gap-3 font-mono text-xs text-muted">
+            <span className="border border-border bg-foreground px-4 py-2 font-bold uppercase tracking-wider text-background">
+              {jobs.length} Active Roles
             </span>
           </div>
         </div>

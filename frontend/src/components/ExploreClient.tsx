@@ -84,12 +84,12 @@ export function ExploreClient({ initialItems }: ExploreClientProps) {
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           placeholder="Search ecosystem across models, repositories, roles, or advisories (Press '/' to focus)..."
-          className="w-full rounded-lg border border-border bg-card py-3 pl-10 pr-20 text-xs font-mono text-white placeholder-zinc-500 focus:border-white focus:outline-none transition-all"
+          className="w-full rounded-none border-2 border-border bg-card py-3 pl-10 pr-20 text-xs font-mono text-foreground placeholder-muted focus:border-foreground focus:outline-none transition-all"
         />
         {searchQuery && (
           <button
             onClick={() => setSearchQuery('')}
-            className="absolute inset-y-0 right-0 flex items-center pr-3.5 text-zinc-500 hover:text-white text-xs font-mono"
+            className="absolute inset-y-0 right-0 flex items-center pr-3.5 text-muted hover:text-foreground text-xs font-mono uppercase tracking-wider font-bold"
           >
             Clear
           </button>
@@ -97,16 +97,16 @@ export function ExploreClient({ initialItems }: ExploreClientProps) {
       </div>
 
       {/* Filter Bar: Mobile Horizontally Scrollable Pills */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-xl border border-border bg-card/60 p-3 sm:p-4">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-y-2 border-border bg-card/60 p-3 sm:p-4">
         <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1 sm:pb-0">
           {categories.map((c) => (
             <button
               key={c.key}
               onClick={() => setActiveCategory(c.key)}
-              className={`rounded-md px-3 py-1.5 text-xs font-mono shrink-0 transition-colors ${
+              className={`rounded-none px-3 py-1.5 text-xs font-mono shrink-0 transition-colors uppercase tracking-wider font-bold ${
                 activeCategory === c.key
-                  ? 'bg-white font-bold text-black'
-                  : 'bg-zinc-900 border border-border text-zinc-400 hover:text-white'
+                  ? 'bg-foreground text-background'
+                  : 'bg-background border border-border text-muted hover:text-foreground hover:border-foreground'
               }`}
             >
               {c.label}
@@ -114,11 +114,11 @@ export function ExploreClient({ initialItems }: ExploreClientProps) {
           ))}
         </div>
 
-        <div className="flex items-center gap-2 self-end sm:self-auto font-mono text-xs">
-          <span className="text-zinc-500">Sort:</span>
+        <div className="flex items-center gap-2 self-end sm:self-auto font-mono text-xs uppercase tracking-wider font-bold">
+          <span className="text-muted">Sort:</span>
           <button
             onClick={() => setSortBy(sortBy === 'score' ? 'freshness' : 'score')}
-            className="rounded border border-border bg-zinc-900 px-2.5 py-1 text-zinc-300 hover:text-white"
+            className="rounded-none border border-border bg-background px-2.5 py-1 text-muted hover:text-foreground hover:border-foreground"
           >
             {sortBy === 'score' ? 'Relevance' : 'Freshness'}
           </button>
@@ -126,9 +126,9 @@ export function ExploreClient({ initialItems }: ExploreClientProps) {
       </div>
 
       {/* Results Header */}
-      <div className="flex items-center justify-between text-xs font-mono text-zinc-400">
+      <div className="flex items-center justify-between text-xs font-mono text-muted uppercase tracking-wider font-bold border-b border-border pb-2">
         <div>
-          Showing <span className="text-white font-bold">{filteredItems.length}</span> cataloged items
+          Showing <span className="text-foreground">{filteredItems.length}</span> cataloged items
         </div>
         {(searchQuery || activeCategory !== 'ALL') && (
           <button
@@ -136,7 +136,7 @@ export function ExploreClient({ initialItems }: ExploreClientProps) {
               setSearchQuery('');
               setActiveCategory('ALL');
             }}
-            className="text-emerald-400 hover:underline"
+            className="text-accent hover:underline"
           >
             Reset
           </button>
@@ -144,38 +144,38 @@ export function ExploreClient({ initialItems }: ExploreClientProps) {
       </div>
 
       {/* Items Grid */}
-      <div className="space-y-3">
+      <div className="space-y-4">
         {filteredItems.map((item) => (
           <div
             key={item.canonicalUrl || item.title}
-            className="rounded-xl border border-border bg-card p-4 sm:p-5 transition-all hover:border-zinc-500 hover:bg-card-hover"
+            className="rounded-none border-2 border-border bg-card p-4 sm:p-5 transition-all hover:bg-card-hover"
           >
             <div className="flex items-start justify-between gap-3">
               <div className="flex-1">
-                <div className="flex flex-wrap items-center gap-2 mb-1.5">
-                  <span className="font-mono text-[10px] font-bold text-zinc-300 bg-zinc-900 border border-border px-2 py-0.5 rounded">
+                <div className="flex flex-wrap items-center gap-2 mb-2 border-b border-border/20 pb-2">
+                  <span className="font-mono text-[10px] font-bold text-background bg-foreground px-2 py-0.5 uppercase tracking-wider">
                     {item.type.replace('_', ' ')}
                   </span>
                   {item.category && (
-                    <span className="font-mono text-[10px] text-zinc-500">
+                    <span className="font-mono text-[10px] uppercase tracking-wider font-bold text-muted">
                       {item.category}
                     </span>
                   )}
                 </div>
 
-                <h3 className="font-mono text-sm sm:text-base font-semibold text-white">
+                <h3 className="font-serif text-lg sm:text-xl font-bold text-foreground">
                   {item.title}
                 </h3>
-                <p className="text-xs text-zinc-400 mt-1 leading-relaxed">
+                <p className="font-sans text-sm text-foreground/80 mt-2 leading-relaxed">
                   {item.description}
                 </p>
 
                 {item.tags && item.tags.length > 0 && (
-                  <div className="mt-3 flex flex-wrap gap-1.5">
+                  <div className="mt-4 flex flex-wrap gap-2">
                     {item.tags.slice(0, 4).map((tag) => (
                       <span
                         key={tag}
-                        className="font-mono text-[10px] text-zinc-400 bg-zinc-900 border border-border px-1.5 py-0.5 rounded"
+                        className="font-mono text-[10px] uppercase tracking-wider font-bold text-foreground border border-border px-1.5 py-0.5 rounded-none bg-background"
                       >
                         {tag}
                       </span>
@@ -184,15 +184,15 @@ export function ExploreClient({ initialItems }: ExploreClientProps) {
                 )}
               </div>
 
-              <div className="flex flex-col items-end shrink-0 gap-2">
-                <span className="font-mono text-xs font-bold text-white bg-zinc-900 border border-border px-2 py-1 rounded">
+              <div className="flex flex-col items-end shrink-0 gap-3 border-l border-border/20 pl-4">
+                <span className="font-mono text-sm font-bold text-background bg-foreground px-3 py-1.5 border border-foreground">
                   {item.score?.total || 90}
                 </span>
                 <a
                   href={item.canonicalUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="font-mono text-xs text-white hover:text-emerald-400 font-semibold"
+                  className="font-mono text-xs uppercase tracking-wider font-bold text-muted hover:text-foreground"
                 >
                   Visit &rarr;
                 </a>
@@ -202,7 +202,7 @@ export function ExploreClient({ initialItems }: ExploreClientProps) {
         ))}
 
         {filteredItems.length === 0 && (
-          <div className="py-12 text-center font-mono text-xs text-zinc-500 border border-dashed border-border rounded-xl">
+          <div className="py-12 text-center font-mono text-xs uppercase tracking-wider font-bold text-muted border-2 border-dashed border-border rounded-none">
             No items match your search.
           </div>
         )}

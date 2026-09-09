@@ -56,31 +56,31 @@ export default async function ReportDatePage({ params }: ReportPageProps) {
       <JsonLd data={articleSchema} />
 
       <div>
-        <Link href="/reports" className="font-mono text-xs text-zinc-400 hover:text-white inline-flex items-center gap-1 transition-colors">
+        <Link href="/reports" className="font-mono text-xs text-muted hover:text-foreground inline-flex items-center gap-1 transition-colors">
           &larr; Back to Archive
         </Link>
       </div>
 
       <article className="rounded-2xl border border-border bg-card p-6 sm:p-8 space-y-6">
         <div className="border-b border-border pb-5">
-          <div className="flex flex-wrap items-center gap-2 font-mono text-xs text-zinc-400">
+          <div className="flex flex-wrap items-center gap-2 font-mono text-xs text-muted">
             <span>DEVATLAS DIGEST</span>
             <span>•</span>
-            <span className="text-white font-semibold">{date}</span>
+            <span className="text-foreground font-semibold">{date}</span>
             <span>•</span>
-            <span className="text-emerald-400">Quality {quality}%</span>
+            <span className="text-accent">Quality {quality}%</span>
           </div>
-          <h1 className="mt-3 text-xl sm:text-3xl font-bold font-mono text-white">
+          <h1 className="mt-3 text-xl sm:text-3xl font-bold font-mono text-foreground">
             {title}
           </h1>
-          <p className="mt-2 text-xs text-zinc-400 font-mono">
+          <p className="mt-2 text-xs text-muted font-mono">
             Autonomous execution via GitHub Actions. SHA-256 deterministic gate verified.
           </p>
         </div>
 
         {topItems.length > 0 && (
           <div className="border-b border-border pb-6">
-            <h2 className="text-xs font-bold font-mono text-white uppercase tracking-wider mb-3">
+            <h2 className="text-xs font-bold font-mono text-foreground uppercase tracking-wider mb-3">
               Top Discoveries
             </h2>
             <div className="space-y-2.5">
@@ -90,22 +90,22 @@ export default async function ReportDatePage({ params }: ReportPageProps) {
                   className="flex items-center justify-between rounded-lg border border-border bg-zinc-950 p-3"
                 >
                   <div>
-                    <span className="font-mono text-xs font-semibold text-white">{item.title}</span>
-                    <span className="ml-2 text-[10px] font-mono text-zinc-500">[{item.category}]</span>
+                    <span className="font-mono text-xs font-semibold text-foreground">{item.title}</span>
+                    <span className="ml-2 text-[10px] font-mono text-muted/60">[{item.category}]</span>
                   </div>
-                  <span className="font-mono text-xs font-bold text-emerald-400">Score {item.score}</span>
+                  <span className="font-mono text-xs font-bold text-accent">Score {item.score}</span>
                 </div>
               ))}
             </div>
           </div>
         )}
 
-        <div className="space-y-4 text-xs text-zinc-300 leading-relaxed font-sans">
+        <div className="space-y-4 text-xs text-foreground leading-relaxed font-sans">
           <section>
-            <h2 className="text-xs font-bold font-mono text-white uppercase tracking-wider mb-2">
+            <h2 className="text-xs font-bold font-mono text-foreground uppercase tracking-wider mb-2">
               Ecosystem Notes
             </h2>
-            <ul className="list-disc pl-5 space-y-1.5 text-zinc-400">
+            <ul className="list-disc pl-5 space-y-1.5 text-muted">
               <li>Frontier reasoning models cataloged with comparative inference benchmarks.</li>
               <li>Summer 2026 engineering internships verified across Bengaluru and Hyderabad tech campuses.</li>
               <li>Open source tooling velocity tracked across major runtime releases.</li>
@@ -113,10 +113,10 @@ export default async function ReportDatePage({ params }: ReportPageProps) {
           </section>
 
           <section>
-            <h2 className="text-xs font-bold font-mono text-white uppercase tracking-wider mb-2">
+            <h2 className="text-xs font-bold font-mono text-foreground uppercase tracking-wider mb-2">
               Pipeline Verification
             </h2>
-            <p className="text-zinc-400 font-mono text-[11px]">
+            <p className="text-muted font-mono text-[11px]">
               All data validated through multi-source deduplication, quality checks, and Cloudflare edge cache sync.
             </p>
           </section>

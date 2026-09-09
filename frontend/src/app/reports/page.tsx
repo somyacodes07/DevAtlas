@@ -43,20 +43,20 @@ export default async function ReportsIndexPage() {
       <div className="border-b border-border pb-5">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-2.5 py-0.5 text-xs font-mono text-zinc-400 mb-2">
-              <span className="h-2 w-2 rounded-full bg-emerald-400" />
+            <div className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-2.5 py-0.5 text-xs font-mono text-muted mb-2">
+              <span className="h-2 w-2 rounded-full bg-accent" />
               <span>DETERMINISTIC ARCHIVE</span>
             </div>
-            <h1 className="font-mono text-2xl sm:text-3xl font-bold text-white">
+            <h1 className="font-mono text-2xl sm:text-3xl font-bold text-foreground">
               Daily Intelligence Archive
             </h1>
-            <p className="mt-1 text-xs text-zinc-400 max-w-xl font-mono">
+            <p className="mt-1 text-xs text-muted max-w-xl font-mono">
               Autonomous daily digests committed directly to the repository via GitHub Actions.
             </p>
           </div>
 
-          <div className="flex items-center gap-3 font-mono text-xs text-zinc-400">
-            <span className="rounded border border-border bg-card px-3 py-1.5 font-bold text-white">
+          <div className="flex items-center gap-3 font-mono text-xs text-muted">
+            <span className="rounded border border-border bg-card px-3 py-1.5 font-bold text-foreground">
               {reports.length} Reports
             </span>
           </div>
@@ -72,10 +72,10 @@ export default async function ReportsIndexPage() {
           >
             <div>
               <div className="flex items-center gap-3">
-                <span className="font-mono text-xs font-bold text-white group-hover:text-emerald-400 transition-colors">
+                <span className="font-mono text-xs font-bold text-foreground group-hover:text-accent transition-colors">
                   {r.reportDate}
                 </span>
-                <span className="rounded bg-zinc-900 border border-border px-2 py-0.5 text-[10px] font-mono text-emerald-400">
+                <span className="rounded bg-foreground border border-border px-2 py-0.5 text-[10px] font-mono text-accent">
                   Quality {r.structuredSummary?.dataQualityScore || 98.4}%
                 </span>
               </div>
@@ -84,7 +84,7 @@ export default async function ReportsIndexPage() {
               </h2>
             </div>
 
-            <div className="font-mono text-xs text-zinc-400 group-hover:text-white transition-colors shrink-0">
+            <div className="font-mono text-xs text-muted group-hover:text-foreground transition-colors shrink-0">
               {r.structuredSummary?.itemsDiscovered || '400+'} items &rarr;
             </div>
           </Link>
