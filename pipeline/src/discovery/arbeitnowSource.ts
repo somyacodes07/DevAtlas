@@ -21,8 +21,15 @@ export class ArbeitnowDiscoverySource implements DiscoverySource {
         return [];
       }
 
-      // Limit to 30 recent jobs
-      const recentJobs = jobs.slice(0, 30);
+      // Strictly filter to ensure only software engineering / developer jobs
+      const techKeywords = ['software', 'developer', 'engineer', 'frontend', 'backend', 'fullstack', 'data', 'devops', 'machine learning', 'ai', 'ios', 'android', 'cloud'];
+      const filteredJobs = jobs.filter((j: any) => {
+        const title = (j.title || '').toLowerCase();
+        return techKeywords.some(kw => title.includes(kw));
+      });
+
+      // Limit to 30 recent valid jobs
+      const recentJobs = filteredJobs.slice(0, 30);
 
       return recentJobs.map((job: any) => ({
         type: 'JOB',
