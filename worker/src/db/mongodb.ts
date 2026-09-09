@@ -1,70 +1,117 @@
-import { MongoClient, Db, Collection } from 'mongodb';
-
-let cachedClient: MongoClient | null = null;
-let cachedDb: Db | null = null;
 export let lastConnectError: string | null = null;
-let lastFailedAttempt = 0;
-const FAILURE_BACKOFF_MS = 300000; // 5 minutes backoff so edge queries respond in 0ms
 
-export function resolveUriForEdge(uri: string): string {
-  // Recent nodejs_compat in Cloudflare Workers supports node:dns.
-  // We can use the mongodb+srv:// URI directly, avoiding TLS SNI issues with raw shards.
-  return uri;
-}
+// Memory cache for Edge isolate
+let cachedItems: any[] | null = null;
+let cachedRuns: any[] | null = null;
+let cachedReports: any[] | null = null;
+let lastFetchTime = 0;
+const CACHE_TTL = 1000 * 60 * 15; // 15 minutes cache
 
-export async function getWorkerDb(uri?: string, databaseName?: string): Promise<Db | null> {
-  if (!uri) {
-    return null;
-  }
-
-  const dbName = databaseName || 'devatlas';
-
-  if (cachedClient && cachedDb) {
-    return cachedDb;
-  }
-
-  // Circuit breaker removed to force connection retries
-  // if (Date.now() - lastFailedAttempt < FAILURE_BACKOFF_MS) {
-  //   return null;
-  // }
-
+async function fetchEdgeJson(filename: string) {
   try {
-    const effectiveUri = resolveUriForEdge(uri);
-    const client = new MongoClient(effectiveUri, {
-      connectTimeoutMS: 10000,
-      serverSelectionTimeoutMS: 10000,
-      socketTimeoutMS: 10000,
-      minPoolSize: 0,
-      maxPoolSize: 1,
-      tls: true,
-      tlsAllowInvalidCertificates: true,
-      tlsAllowInvalidHostnames: true,
-    });
-
-    await client.connect();
-    const db = client.db(dbName);
-
-    cachedClient = client;
-    cachedDb = db;
-    lastConnectError = null;
-
-    return db;
+    // We fetch directly from the public GitHub repo raw content for maximum edge scalability
+    const res = await fetch(`https://raw.githubusercontent.com/somyacodes07/DevAtlas/main/data/${filename}`);
+    if (!res.ok) return [];
+    return await res.json();
   } catch (err) {
-    lastFailedAttempt = Date.now();
-    lastConnectError = err instanceof Error ? err.message : String(err);
-    console.error(`[MongoDB] Connection error:`, lastConnectError);
-    return null;
+    console.error(`Edge CDN Fetch Error for ${filename}:`, err);
+    return [];
   }
 }
 
-export function getItemsCollection(db: Db): Collection {
-  return db.collection('items');
+async function refreshCacheIfNeeded() {
+  if (Date.now() - lastFetchTime > CACHE_TTL || !cachedItems) {
+    const [items, runs, reports] = await Promise.all([
+      fetchEdgeJson('edge_items.json'),
+      fetchEdgeJson('edge_runs.json'),
+      fetchEdgeJson('edge_reports.json'),
+    ]);
+    cachedItems = Array.isArray(items) ? items : [];
+    cachedRuns = Array.isArray(runs) ? runs : [];
+    cachedReports = Array.isArray(reports) ? reports : [];
+    lastFetchTime = Date.now();
+  }
 }
 
-export function getRunsCollection(db: Db): Collection {
-  return db.collection('discovery_runs');
+// Mock Database object so we don't break routes
+export async function getWorkerDb(uri?: string, databaseName?: string): Promise<any> {
+  await refreshCacheIfNeeded();
+  return { connected: true };
 }
 
-export function getReportsCollection(db: Db): Collection {
-  return db.collection('daily_reports');
+// Mock Collection implementation
+class MockCollection {
+  constructor(private data: any[]) {}
+
+  async countDocuments(filter: any = {}): Promise<number> {
+    return this.applyFilter(filter).length;
+  }
+
+  async findOne(filter: any = {}, options: any = {}): Promise<any | null> {
+    const results = this.applyFilter(filter);
+    if (options.sort) {
+      this.sortResults(results, options.sort);
+    }
+    return results.length > 0 ? results[0] : null;
+  }
+
+  find(filter: any = {}) {
+    let results = this.applyFilter(filter);
+    
+    return {
+      sort: (sortObj: any) => {
+        this.sortResults(results, sortObj);
+        return this;
+      },
+      skip: (s: number) => {
+        results = results.slice(s);
+        return this;
+      },
+      limit: (l: number) => {
+        results = results.slice(0, l);
+        return this;
+      },
+      toArray: async () => {
+        return results;
+      }
+    };
+  }
+
+  private applyFilter(filter: any): any[] {
+    if (!filter || Object.keys(filter).length === 0) return [...this.data];
+    return this.data.filter(item => {
+      for (const key of Object.keys(filter)) {
+        if (item[key] !== filter[key]) return false;
+      }
+      return true;
+    });
+  }
+
+  private sortResults(results: any[], sortObj: any) {
+    const key = Object.keys(sortObj)[0];
+    if (!key) return;
+    const direction = sortObj[key];
+    
+    results.sort((a, b) => {
+      // Support nested keys like 'score.total'
+      const valA = key.split('.').reduce((o, i) => o ? o[i] : undefined, a);
+      const valB = key.split('.').reduce((o, i) => o ? o[i] : undefined, b);
+      
+      if (valA < valB) return direction === 1 ? -1 : 1;
+      if (valA > valB) return direction === 1 ? 1 : -1;
+      return 0;
+    });
+  }
+}
+
+export function getItemsCollection(db: any): any {
+  return new MockCollection(cachedItems || []);
+}
+
+export function getRunsCollection(db: any): any {
+  return new MockCollection(cachedRuns || []);
+}
+
+export function getReportsCollection(db: any): any {
+  return new MockCollection(cachedReports || []);
 }

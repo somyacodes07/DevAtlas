@@ -12,7 +12,7 @@ echo "[DevAtlas Commit Gate] Checking for meaningful changes in generated artifa
 FORCE="${FORCE_PUBLISH:-false}"
 
 # Check if there are changes in reports/ or data/daily/
-if git status --porcelain reports/ data/daily/ | grep -q . || [ "$FORCE" = "true" ]; then
+if git status --porcelain reports/ data/ | grep -q . || [ "$FORCE" = "true" ]; then
   echo "✓ Meaningful ecosystem intelligence or report changes detected."
   
   TODAY=$(date -u +"%Y-%m-%d")
@@ -22,7 +22,7 @@ if git status --porcelain reports/ data/daily/ | grep -q . || [ "$FORCE" = "true
   git config user.name "$AUTHOR_NAME"
   git config user.email "$AUTHOR_EMAIL"
 
-  git add reports/ data/daily/
+  git add reports/ data/
   if git diff --staged --quiet; then
     echo "No staged changes to commit."
   else

@@ -127,9 +127,11 @@ ${
 
   const markdownFilePath = path.join(reportsDir, `${day}.md`);
   const jsonFilePath = path.join(dataDir, `${dateStr}.json`);
+  const fullCatalogPath = path.join(rootDir, 'data', 'full_catalog.json');
 
   await fs.writeFile(markdownFilePath, markdownContent, 'utf-8');
   await fs.writeFile(jsonFilePath, JSON.stringify(jsonSnapshot, null, 2), 'utf-8');
+  await fs.writeFile(fullCatalogPath, JSON.stringify(items, null, 2), 'utf-8');
 
   return {
     date: dateStr,

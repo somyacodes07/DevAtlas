@@ -254,6 +254,30 @@ export async function runPipeline(): Promise<PipelineRunResult> {
   console.log(`\n======================================================`);
   console.log(`[DevAtlas Pipeline] Completed. Status: ${result.status} (${durationSeconds}s)`);
   console.log(`Discovered: ${result.items.discovered} | New: ${result.items.new} | Quality: ${result.dataQualityScore}%`);
+  
+  if (mongoConnected) {
+    try {
+      console.log(`[Edge Export] Dumping full database to static JSON for Zero-DB Edge CDN...`);
+      const { db } = await getMongoClient();
+      const allItems = await getItemsCollection(db).find().sort({ 'score.total': -1, publishedAt: -1 }).toArray();
+      const allRuns = await getRunsCollection(db).find().sort({ completedAt: -1 }).limit(10).toArray();
+      const allReports = await getReportsCollection(db).find().sort({ reportDate: -1 }).toArray();
+      
+      let rootDir = process.cwd();
+      if (rootDir.endsWith('/pipeline') || rootDir.endsWith('\\pipeline')) {
+        rootDir = path.resolve(rootDir, '..');
+      }
+      const dataDir = path.join(rootDir, 'data');
+      
+      await fs.promises.writeFile(path.join(dataDir, 'edge_items.json'), JSON.stringify(allItems), 'utf-8');
+      await fs.promises.writeFile(path.join(dataDir, 'edge_runs.json'), JSON.stringify(allRuns), 'utf-8');
+      await fs.promises.writeFile(path.join(dataDir, 'edge_reports.json'), JSON.stringify(allReports), 'utf-8');
+      console.log(`✓ Edge JSON dumps created successfully.`);
+    } catch (exportErr) {
+      console.warn(`[Edge Export Warning] Failed to dump edge JSON:`, exportErr);
+    }
+  }
+
   console.log(`======================================================\n`);
 
   return result;
