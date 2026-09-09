@@ -91,7 +91,7 @@ export function JobsClient({ initialJobs }: JobsClientProps) {
     <div className="space-y-6">
       {/* Search Input */}
       <div className="relative">
-        <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-zinc-500">
+        <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-muted/60">
           <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
@@ -102,12 +102,12 @@ export function JobsClient({ initialJobs }: JobsClientProps) {
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           placeholder="Filter by role (e.g. Intern, SDE-2), company, or skills (e.g. Go, Python)..."
-          className="w-full rounded-lg border border-border bg-card py-3 pl-10 pr-20 text-xs font-mono text-white placeholder-zinc-500 focus:border-white focus:outline-none transition-all"
+          className="w-full rounded-none border border-foreground/20 bg-card py-3 pl-10 pr-20 text-xs font-mono text-foreground placeholder-zinc-500 focus:border-white focus:outline-none transition-all"
         />
         {searchQuery && (
           <button
             onClick={() => setSearchQuery('')}
-            className="absolute inset-y-0 right-0 flex items-center pr-3.5 text-zinc-500 hover:text-white text-xs font-mono"
+            className="absolute inset-y-0 right-0 flex items-center pr-3.5 text-muted/60 hover:text-foreground text-xs font-mono"
           >
             Clear
           </button>
@@ -115,7 +115,7 @@ export function JobsClient({ initialJobs }: JobsClientProps) {
       </div>
 
       {/* Filter Controls: Mobile-Friendly Scrollable Pills & Dropdowns */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-xl border border-border bg-card/60 p-3 sm:p-4">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-none border border-foreground/20 bg-card/60 p-3 sm:p-4">
         {/* Work Mode Scrollable Tabs */}
         <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1 sm:pb-0">
           {[
@@ -127,10 +127,10 @@ export function JobsClient({ initialJobs }: JobsClientProps) {
             <button
               key={m.val}
               onClick={() => setWorkMode(m.val as any)}
-              className={`rounded-md px-3 py-1.5 text-xs font-mono shrink-0 transition-colors ${
+              className={`rounded-none px-3 py-1.5 text-xs font-mono shrink-0 transition-colors ${
                 workMode === m.val
                   ? 'bg-white font-bold text-black'
-                  : 'bg-zinc-900 border border-border text-zinc-400 hover:text-white'
+                  : 'bg-foreground text-background'
               }`}
             >
               {m.label}
@@ -143,7 +143,7 @@ export function JobsClient({ initialJobs }: JobsClientProps) {
           <select
             value={selectedRegion}
             onChange={(e) => setSelectedRegion(e.target.value as any)}
-            className="rounded-md border border-border bg-zinc-900 py-1.5 px-2.5 text-xs font-mono text-white focus:outline-none"
+            className="rounded-none border border-foreground/20 bg-foreground text-background focus:outline-none"
           >
             <option value="ALL">All Regions</option>
             <option value="INDIA">India</option>
@@ -155,7 +155,7 @@ export function JobsClient({ initialJobs }: JobsClientProps) {
           <select
             value={selectedExp}
             onChange={(e) => setSelectedExp(e.target.value)}
-            className="rounded-md border border-border bg-zinc-900 py-1.5 px-2.5 text-xs font-mono text-white focus:outline-none"
+            className="rounded-none border border-foreground/20 bg-foreground text-background focus:outline-none"
           >
             <option value="ALL">All Levels</option>
             <option value="INTERNSHIP">Internships</option>
@@ -167,9 +167,9 @@ export function JobsClient({ initialJobs }: JobsClientProps) {
       </div>
 
       {/* Summary Bar */}
-      <div className="flex items-center justify-between text-xs font-mono text-zinc-400">
+      <div className="flex items-center justify-between text-xs font-mono text-muted">
         <div>
-          Showing <span className="text-white font-bold">{filteredJobs.length}</span> verified roles
+          Showing <span className="text-foreground font-bold">{filteredJobs.length}</span> verified roles
         </div>
         {(searchQuery || workMode !== 'ALL' || selectedRegion !== 'ALL' || selectedExp !== 'ALL') && (
           <button
@@ -179,7 +179,7 @@ export function JobsClient({ initialJobs }: JobsClientProps) {
               setSelectedRegion('ALL');
               setSelectedExp('ALL');
             }}
-            className="text-emerald-400 hover:underline"
+            className="text-accent hover:underline"
           >
             Reset Filters
           </button>
@@ -195,12 +195,12 @@ export function JobsClient({ initialJobs }: JobsClientProps) {
           return (
             <div
               key={item._id || item.canonicalUrl}
-              className="rounded-xl border border-border bg-card p-4 sm:p-5 transition-all hover:border-zinc-500 hover:bg-card-hover group"
+              className="rounded-none border border-foreground/20 bg-card p-4 sm:p-5 transition-all hover:border-zinc-500 hover:bg-card-hover group"
             >
               <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
                 <div className="flex-1">
                   <div className="flex flex-wrap items-center gap-2 mb-1.5">
-                    <span className="font-mono text-xs font-bold text-white bg-zinc-900 border border-border px-2 py-0.5 rounded">
+                    <span className="font-mono text-xs font-bold text-foreground bg-foreground text-background border border-foreground/20 px-2 py-0.5 rounded">
                       {j.company || 'Company'}
                     </span>
                     {isInternship && (
@@ -209,27 +209,27 @@ export function JobsClient({ initialJobs }: JobsClientProps) {
                       </span>
                     )}
                     {j.workMode && (
-                      <span className="font-mono text-[10px] text-zinc-400 bg-zinc-900 border border-border px-1.5 py-0.5 rounded">
+                      <span className="font-mono text-[10px] text-muted bg-foreground text-background border border-foreground/20 px-1.5 py-0.5 rounded">
                         {j.workMode.replace('_', ' ')}
                       </span>
                     )}
                     {j.sourcePlatform && (
-                      <span className="font-mono text-[10px] text-zinc-500">
+                      <span className="font-mono text-[10px] text-muted/60">
                         via {j.sourcePlatform}
                       </span>
                     )}
                   </div>
 
-                  <h3 className="font-mono text-sm sm:text-base font-semibold text-white mt-1">
+                  <h3 className="font-mono text-sm sm:text-base font-semibold text-foreground mt-1">
                     {item.title}
                   </h3>
-                  <p className="font-mono text-xs text-zinc-400 mt-0.5">
+                  <p className="font-mono text-xs text-muted mt-0.5">
                     {j.location || 'Remote'}
                   </p>
 
                   {j.salary && (
-                    <div className="mt-2.5 inline-block font-mono text-xs font-bold text-emerald-400 bg-emerald-950/40 border border-emerald-900/60 px-2.5 py-1 rounded">
-                      <span className="text-[10px] text-zinc-500 font-normal mr-1 uppercase">
+                    <div className="mt-2.5 inline-block font-mono text-xs font-bold text-accent bg-emerald-950/40 border border-emerald-900/60 px-2.5 py-1 rounded">
+                      <span className="text-[10px] text-muted/60 font-normal mr-1 uppercase">
                         {isInternship ? 'Stipend:' : 'Comp:'}
                       </span>
                       {j.salary}
@@ -241,7 +241,7 @@ export function JobsClient({ initialJobs }: JobsClientProps) {
                       {j.skills.slice(0, 5).map((skill) => (
                         <span
                           key={skill}
-                          className="font-mono text-[10px] text-zinc-400 bg-zinc-900 border border-border px-2 py-0.5 rounded"
+                          className="font-mono text-[10px] text-muted bg-foreground text-background border border-foreground/20 px-2 py-0.5 rounded"
                         >
                           {skill}
                         </span>
@@ -255,7 +255,7 @@ export function JobsClient({ initialJobs }: JobsClientProps) {
                     href={item.canonicalUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center justify-center rounded-lg bg-white px-4 py-2 text-xs font-mono font-bold text-black hover:bg-zinc-200 transition-colors w-full sm:w-auto"
+                    className="inline-flex items-center justify-center rounded-none bg-white px-4 py-2 text-xs font-mono font-bold text-black hover:bg-zinc-200 transition-colors w-full sm:w-auto"
                   >
                     Apply &rarr;
                   </a>
@@ -266,7 +266,7 @@ export function JobsClient({ initialJobs }: JobsClientProps) {
         })}
 
         {filteredJobs.length === 0 && (
-          <div className="py-12 text-center font-mono text-xs text-zinc-500 border border-dashed border-border rounded-xl">
+          <div className="py-12 text-center font-mono text-xs text-muted/60 border border-dashed border-foreground/20 rounded-none">
             No roles matched your current filters. Try resetting search parameters.
           </div>
         )}

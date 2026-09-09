@@ -85,7 +85,7 @@ export default async function RepositoriesPage() {
                   href={repo.canonicalUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-lg border border-border bg-foreground px-3 py-1.5 text-xs font-mono text-foreground hover:border-zinc-500 font-semibold transition-colors"
+                  className="rounded-none border border-border bg-foreground px-3 py-1.5 text-xs font-mono text-background hover:border-zinc-500 font-semibold transition-colors"
                 >
                   GitHub &rarr;
                 </a>

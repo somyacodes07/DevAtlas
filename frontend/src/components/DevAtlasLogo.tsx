@@ -81,7 +81,7 @@ export default function DevAtlasLogo({
     <div className={`inline-flex items-center gap-2.5 group ${className}`}>
       <div className="relative flex items-center justify-center">
         {animated && (
-          <div className="absolute inset-0 rounded-full bg-emerald-500/20 blur-sm group-hover:bg-emerald-500/35 transition-all duration-300" />
+          <div className="absolute inset-0 rounded-none bg-emerald-500/20 blur-sm group-hover:bg-emerald-500/35 transition-all duration-300" />
         )}
         <DevAtlasMark size={size} animated={animated} />
       </div>
@@ -90,15 +90,15 @@ export default function DevAtlasLogo({
         <div className="flex flex-col leading-none">
           <div className="flex items-center gap-1.5">
             <span
-              className={`font-mono text-sm font-black tracking-wider text-white group-hover:text-emerald-400 transition-colors ${textClassName}`}
+              className={`font-mono text-sm font-black tracking-wider text-foreground group-hover:text-accent transition-colors ${textClassName}`}
             >
-              DEV<span className="text-emerald-400 font-extrabold">ATLAS</span>
+              DEV<span className="text-accent font-extrabold">ATLAS</span>
             </span>
-            <span className="rounded bg-zinc-800/80 px-1 py-0.5 text-[9px] font-mono font-bold text-zinc-400 border border-zinc-700/50">
+            <span className="rounded bg-zinc-800/80 px-1 py-0.5 text-[9px] font-mono font-bold text-muted border border-zinc-700/50">
               v1.0
             </span>
           </div>
-          <span className="text-[9px] font-mono tracking-widest text-zinc-500 uppercase mt-0.5 hidden sm:block">
+          <span className="text-[9px] font-mono tracking-widest text-muted/60 uppercase mt-0.5 hidden sm:block">
             Intelligence Engine
           </span>
         </div>

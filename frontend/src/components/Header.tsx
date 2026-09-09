@@ -42,13 +42,13 @@ export function Header() {
                   href={item.href}
                   className={`relative px-4 py-2 transition-colors ${
                     isActive
-                      ? 'text-white bg-black'
+                      ? 'text-background bg-black'
                       : 'text-black hover:bg-black/10'
                   }`}
                 >
                   <span>{item.label}</span>
                   {item.badge && (
-                    <span className="ml-2 bg-accent text-white px-2 py-0.5 text-[9px]">
+                    <span className="ml-2 bg-accent text-foreground px-2 py-0.5 text-[9px]">
                       {item.badge}
                     </span>
                   )}
@@ -62,7 +62,7 @@ export function Header() {
         <div className="flex items-center gap-4">
           <Link
             href="/ops"
-            className="flex items-center gap-2 border border-black bg-white px-3 py-1.5 text-[10px] font-sans font-bold uppercase tracking-widest text-black hover:bg-black hover:text-white transition-colors"
+            className="flex items-center gap-2 border border-black bg-white px-3 py-1.5 text-[10px] font-sans font-bold uppercase tracking-widest text-black hover:bg-black hover:text-background transition-colors"
           >
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping bg-accent opacity-75" />
@@ -76,7 +76,7 @@ export function Header() {
             href="https://github.com/somyacodes07/DevAtlas"
             target="_blank"
             rel="noreferrer"
-            className="hidden sm:inline-flex border border-black bg-white px-3 py-1.5 text-[10px] font-sans font-bold uppercase tracking-widest text-black hover:bg-black hover:text-white transition-colors"
+            className="hidden sm:inline-flex border border-black bg-white px-3 py-1.5 text-[10px] font-sans font-bold uppercase tracking-widest text-black hover:bg-black hover:text-background transition-colors"
           >
             GitHub
           </a>
@@ -85,7 +85,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="flex h-10 w-10 items-center justify-center border border-black bg-white text-black hover:bg-black hover:text-white transition-colors md:hidden"
+            className="flex h-10 w-10 items-center justify-center border border-black bg-white text-black hover:bg-black hover:text-background transition-colors md:hidden"
             aria-label="Toggle navigation menu"
             aria-expanded={mobileMenuOpen}
           >
@@ -113,13 +113,13 @@ export function Header() {
                   onClick={() => setMobileMenuOpen(false)}
                   className={`flex items-center justify-between border-b border-black/20 px-4 py-3 text-sm font-sans font-bold uppercase tracking-widest transition-colors ${
                     isActive
-                      ? 'bg-black text-white'
+                      ? 'bg-foreground text-background'
                       : 'text-black hover:bg-black/5'
                   }`}
                 >
                   <span>{item.label}</span>
                   {item.badge && (
-                    <span className="bg-accent text-white px-2 py-0.5 text-[10px]">
+                    <span className="bg-accent text-foreground px-2 py-0.5 text-[10px]">
                       {item.badge}
                     </span>
                   )}

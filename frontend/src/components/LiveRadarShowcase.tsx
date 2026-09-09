@@ -28,7 +28,7 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
             onClick={() => setActiveTab('jobs')}
             className={`px-4 py-2 transition-colors ${
               activeTab === 'jobs'
-                ? 'bg-black text-white'
+                ? 'bg-foreground text-background'
                 : 'text-black hover:bg-black/10'
             }`}
           >
@@ -38,7 +38,7 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
             onClick={() => setActiveTab('tools')}
             className={`px-4 py-2 transition-colors border-l border-r border-black ${
               activeTab === 'tools'
-                ? 'bg-black text-white'
+                ? 'bg-foreground text-background'
                 : 'text-black hover:bg-black/10'
             }`}
           >
@@ -48,7 +48,7 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
             onClick={() => setActiveTab('repos')}
             className={`px-4 py-2 transition-colors ${
               activeTab === 'repos'
-                ? 'bg-black text-white'
+                ? 'bg-foreground text-background'
                 : 'text-black hover:bg-black/10'
             }`}
           >
@@ -77,7 +77,7 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
                           {j?.company || 'Company'}
                         </span>
                         {isIntern && (
-                          <span className="bg-accent text-white px-2 py-0.5">
+                          <span className="bg-accent text-foreground px-2 py-0.5">
                             INTERNSHIP
                           </span>
                         )}
@@ -117,7 +117,7 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
                          href={item.canonicalUrl}
                          target="_blank"
                          rel="noreferrer"
-                         className="font-sans text-xs text-white bg-black px-4 py-2 font-bold uppercase tracking-wider hover:bg-accent transition-colors shrink-0"
+                         className="font-sans text-xs text-background bg-black px-4 py-2 font-bold uppercase tracking-wider hover:bg-accent transition-colors shrink-0"
                       >
                         Apply
                       </a>
@@ -152,7 +152,7 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
                       <span className="font-sans text-[10px] font-bold uppercase tracking-widest text-black border-b border-black pb-0.5">
                         {item.tool?.pricingModel || 'Tool'}
                       </span>
-                      <span className="font-mono text-xs font-bold text-white bg-black px-2 py-1">
+                      <span className="font-mono text-xs font-bold text-background bg-black px-2 py-1">
                         {item.score?.total || 95}
                       </span>
                     </div>

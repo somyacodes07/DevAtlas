@@ -67,7 +67,7 @@ export default async function ToolsPage() {
             </div>
 
             <div className="mt-6 pt-4 border-t border-border flex items-center justify-between text-xs font-mono">
-              <span className="rounded bg-foreground border border-border px-2 py-0.5 text-[11px] text-foreground">
+              <span className="rounded bg-foreground border border-border px-2 py-0.5 text-[11px] text-background">
                 {tool.tool?.pricingModel || 'FREEMIUM'}
               </span>
               <a
