@@ -1,3 +1,4 @@
+// Trigger rebuild for static data sync
 import Link from 'next/link';
 import { fetchJobs, fetchRepositories, fetchStats, fetchTools, fetchReports } from '@/lib/api';
 import { HeroCommandCenter } from '@/components/HeroCommandCenter';
