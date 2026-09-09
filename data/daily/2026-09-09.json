@@ -1,0 +1,81 @@
+{
+  "date": "2026-09-09",
+  "generatedAt": "2026-09-09T04:16:22.928Z",
+  "runId": "RUN-2026-09-09-2323",
+  "summary": {
+    "itemsDiscovered": 93,
+    "dataQualityScore": 100
+  },
+  "topItems": [
+    {
+      "type": "REPOSITORY",
+      "title": "deepseek-ai/deepseek-harness",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/deepseek-ai/deepseek-harness",
+      "score": 88
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "anywhere-labs/dsh-desktop",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/anywhere-labs/dsh-desktop",
+      "score": 88
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "guillaumemeyer/watermarks-remover",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/guillaumemeyer/watermarks-remover",
+      "score": 88
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "zhu1090093659/dsh-web",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/zhu1090093659/dsh-web",
+      "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "yjh051108/dsh-routing-suite",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/yjh051108/dsh-routing-suite",
+      "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "sapientinc/PRAXIST",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/sapientinc/PRAXIST",
+      "score": 89
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "MengTo/threeui",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/MengTo/threeui",
+      "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "lnkiai/m3e-canvas",
+      "category": "Developer Tools",
+      "canonicalUrl": "https://github.com/lnkiai/m3e-canvas",
+      "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "s1dashu/ip-as-logo-skill",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/s1dashu/ip-as-logo-skill",
+      "score": 89
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "dataelement/dsh-desktop",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/dataelement/dsh-desktop",
+      "score": 85
+    }
+  ]
+}
