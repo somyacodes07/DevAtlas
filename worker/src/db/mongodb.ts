@@ -58,23 +58,24 @@ class MockCollection {
   find(filter: any = {}) {
     let results = this.applyFilter(filter);
     
-    return {
+    const cursor = {
       sort: (sortObj: any) => {
         this.sortResults(results, sortObj);
-        return this;
+        return cursor;
       },
       skip: (s: number) => {
         results = results.slice(s);
-        return this;
+        return cursor;
       },
       limit: (l: number) => {
         results = results.slice(0, l);
-        return this;
+        return cursor;
       },
       toArray: async () => {
         return results;
       }
     };
+    return cursor;
   }
 
   private applyFilter(filter: any): any[] {
