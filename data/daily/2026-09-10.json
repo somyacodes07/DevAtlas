@@ -1,7 +1,7 @@
 {
   "date": "2026-09-10",
-  "generatedAt": "2026-09-10T04:13:44.383Z",
-  "runId": "RUN-2026-09-10-9648",
+  "generatedAt": "2026-09-10T16:29:01.799Z",
+  "runId": "RUN-2026-09-10-7203",
   "summary": {
     "itemsDiscovered": 93,
     "dataQualityScore": 100
@@ -10,7 +10,7 @@
     {
       "type": "REPOSITORY",
       "title": "deepseek-ai/deepseek-harness",
-      "category": "Open Source Software",
+      "category": "AI & Machine Learning",
       "canonicalUrl": "https://github.com/deepseek-ai/deepseek-harness",
       "score": 88
     },
@@ -45,7 +45,7 @@
     {
       "type": "REPOSITORY",
       "title": "lnkiai/m3e-canvas",
-      "category": "Open Source Software",
+      "category": "AI & Machine Learning",
       "canonicalUrl": "https://github.com/lnkiai/m3e-canvas",
       "score": 85
     },
