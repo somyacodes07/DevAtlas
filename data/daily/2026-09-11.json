@@ -1,9 +1,9 @@
 {
   "date": "2026-09-11",
-  "generatedAt": "2026-09-11T04:05:00.799Z",
-  "runId": "RUN-2026-09-11-2362",
+  "generatedAt": "2026-09-11T16:15:37.280Z",
+  "runId": "RUN-2026-09-11-8171",
   "summary": {
-    "itemsDiscovered": 89,
+    "itemsDiscovered": 94,
     "dataQualityScore": 100
   },
   "topItems": [
@@ -51,17 +51,17 @@
     },
     {
       "type": "REPOSITORY",
-      "title": "s1dashu/ip-as-logo-skill",
-      "category": "Open Source Software",
-      "canonicalUrl": "https://github.com/s1dashu/ip-as-logo-skill",
-      "score": 89
-    },
-    {
-      "type": "REPOSITORY",
       "title": "dataelement/dsh-desktop",
       "category": "Open Source Software",
       "canonicalUrl": "https://github.com/dataelement/dsh-desktop",
       "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "s1dashu/ip-as-logo-skill",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/s1dashu/ip-as-logo-skill",
+      "score": 89
     },
     {
       "type": "REPOSITORY",
