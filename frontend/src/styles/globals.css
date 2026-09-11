@@ -157,7 +157,7 @@ body {
   border-color: var(--foreground);
 }
 
-/* ─── Infinite Telegraph Marquee ─── */
+/* ─── Infinite Telegraph Marquee with Fade Mask ─── */
 @keyframes marqueeScroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -166,6 +166,8 @@ body {
   display: flex;
   overflow: hidden;
   white-space: nowrap;
+  mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
 }
 .telegraph-marquee-inner {
   display: flex;
@@ -174,6 +176,78 @@ body {
 }
 .telegraph-marquee:hover .telegraph-marquee-inner {
   animation-play-state: paused;
+}
+
+/* ─── Ryoku-Style Expanding Underline Nav Link ─── */
+.ryoku-link {
+  position: relative;
+  transition: color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.ryoku-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: var(--foreground);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.ryoku-link:hover::after,
+.ryoku-link.active::after {
+  transform: scaleX(1);
+}
+
+/* ─── Tactile Print Buttons (Ryoku Inspired) ─── */
+.btn-tactile-solid {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background-color: var(--foreground);
+  color: var(--background);
+  border: 1px solid var(--foreground);
+  padding: 0.5rem 1.1rem;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.btn-tactile-solid:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+.btn-tactile-solid:active {
+  transform: translateY(0);
+}
+
+.btn-tactile-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  padding: 0.5rem 1.1rem;
+  transition: all 0.15s ease;
+}
+.btn-tactile-outline:hover {
+  border-color: var(--foreground);
+  background-color: var(--card-hover);
+  transform: translateY(-1px);
+}
+.btn-tactile-outline:active {
+  transform: translateY(0);
 }
 
 /* ─── Scroll Reveal Animation ─── */

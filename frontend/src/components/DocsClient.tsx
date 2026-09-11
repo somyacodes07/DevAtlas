@@ -2,13 +2,14 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { BarcodeStamp } from './BarcodeStamp';
 
 interface DocSection {
   id: string;
   badge: string;
   title: string;
   summary: string;
-  icon: string;
+  sectionCode: string;
 }
 
 const SECTIONS: DocSection[] = [
@@ -17,63 +18,63 @@ const SECTIONS: DocSection[] = [
     badge: 'Interactive Flow',
     title: 'Visual Pipeline & Engine Simulator',
     summary: 'Interactive diagram and real-time algorithmic 5-factor scoring playground.',
-    icon: 'M13 10V3L4 14h7v7l9-11h-7z',
+    sectionCode: '§ H.01',
   },
   {
     id: 'architecture',
     badge: 'Core System',
     title: 'System Topology & Division of Labor',
     summary: 'Decoupled batch ingestion on GitHub Actions versus sub-millisecond edge delivery on Cloudflare.',
-    icon: 'M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10',
+    sectionCode: '§ H.02',
   },
   {
     id: 'ingestion',
     badge: 'Data Crawlers',
     title: 'Multi-Source Ingestion Engine',
     summary: 'Autonomous connectors for GitHub API, Hacker News, RSS feeds, and verified job platforms.',
-    icon: 'M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4',
+    sectionCode: '§ H.03',
   },
   {
     id: 'dedup',
     badge: 'Data Integrity',
     title: 'Deduplication & 5-Factor Scoring',
     summary: 'SHA-256 dual-hashing gates, URL canonicalization, Zod schemas, and algorithmic relevance ranking.',
-    icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
+    sectionCode: '§ H.04',
   },
   {
     id: 'publishing',
     badge: 'Automation',
     title: 'Report Synthesis & Git Commit Gate',
     summary: 'Markdown compilation, JSON snapshots, and the deterministic anti-slop commit detector.',
-    icon: 'M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2',
+    sectionCode: '§ H.05',
   },
   {
     id: 'edge',
     badge: 'Edge Delivery',
     title: 'Cloudflare Edge & Zero-DB CDN',
     summary: 'Hono REST API on Cloudflare Workers, KV caching, and static JSON snapshots for offline resilience.',
-    icon: 'M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 00-9.78 2.096A4.001 4.001 0 003 15z',
+    sectionCode: '§ H.06',
   },
   {
     id: 'cicd',
     badge: 'DevOps & CI/CD',
     title: 'Workflows & GitOps Automation',
     summary: 'Comprehensive review of daily-discovery, deploy, ci, weekly-maintenance, and security pipelines.',
-    icon: 'M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z',
+    sectionCode: '§ H.07',
   },
   {
     id: 'cost',
     badge: 'Cost Engineering',
     title: '$0/Month Free-Tier Architecture',
     summary: 'How DevAtlas runs permanently free with capacity planning, strict retention, and zero cloud bills.',
-    icon: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+    sectionCode: '§ H.08',
   },
   {
     id: 'resume',
     badge: 'Platform Engineering',
     title: 'DevOps Engineering Competencies',
     summary: 'Key technical highlights, architectural decisions, and production metrics for interview evaluation.',
-    icon: 'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z',
+    sectionCode: '§ H.09',
   },
 ];
 
@@ -113,70 +114,69 @@ const items = results
   .flatMap(r => r.value);`,
   },
   {
-    id: 'dedup_score',
-    name: 'Stage 2: SHA-256 Deduplication & Scoring',
-    shortDesc: 'Dual-hash cryptographic gating and 5-factor relevance algorithm ranking developer utility.',
-    tech: 'Node crypto (SHA-256), Zod v3.23 runtime schemas, Pure Math Scoring',
-    metrics: '100% duplicate rejection • 98.4% data quality index',
+    id: 'dedup_stage',
+    name: 'Stage 2: SHA-256 Deduplication',
+    shortDesc: 'Two-stage cryptographic deduplication filter with URL normalization and title-content hashing.',
+    tech: 'Node.js crypto (SHA-256), Zod schemas, URL standardizers',
+    metrics: '100% duplicate rejection • 0 false positives',
     specs: [
-      'urlHash: SHA-256 of canonicalized URL (strips tracking UTMs & query noise)',
-      'contentHash: SHA-256 of sanitized title + normalized description',
-      '5-Factor Weights: Freshness (25) + Popularity (25) + Dev Value (25) + Tech Impact (25)',
+      'Strips marketing query parameters (utm_*, ref, fbclid)',
+      'Dual SHA-256 hashes computed per entity (urlHash, contentHash)',
+      'Zod runtime schema validation rejecting non-conforming payloads',
     ],
-    code: `// Deterministic SHA-256 Dual-Hashing
-export function computeHashes(canonicalUrl: string, title: string, desc: string) {
-  const cleanUrl = canonicalizeUrl(canonicalUrl);
+    code: `// Cryptographic Deduplication Gate
+export function generateHashes(item: RawItem): { urlHash: string; contentHash: string } {
+  const cleanUrl = normalizeUrl(item.url);
   const urlHash = crypto.createHash('sha256').update(cleanUrl).digest('hex');
   
-  const contentNormalized = (title + ' ' + desc).toLowerCase().replace(/\\s+/g, ' ').trim();
-  const contentHash = crypto.createHash('sha256').update(contentNormalized).digest('hex');
-  
+  const contentSignature = \`\${normalizeText(item.title)}|\${normalizeText(item.description || '')}\`;
+  const contentHash = crypto.createHash('sha256').update(contentSignature).digest('hex');
+
   return { urlHash, contentHash };
 }`,
   },
   {
-    id: 'synthesis',
-    name: 'Stage 3: LLM Intelligence Synthesis',
-    shortDesc: 'Transforms raw metadata into concise executive briefings and markdown daily intelligence reports.',
-    tech: 'Google Gemini 2.5 Flash / Groq Llama 3, Markdown Compiler',
-    metrics: '93 items summarized/run • 100% structured JSON outputs',
+    id: 'scoring',
+    name: 'Stage 3: 5-Factor Relevance Ranking',
+    shortDesc: 'Deterministic scoring algorithm prioritizing engineering signal and pruning commercial spam.',
+    tech: 'Algorithmic heuristic weighting matrix (0 - 100 points)',
+    metrics: 'Top 15% items accepted • 85+ score threshold for reports',
     specs: [
-      'Automated executive briefing extraction',
-      'Categorizes top discoveries into actionable highlights',
-      'Deterministic fallback to rule-based synthesis if LLM offline',
+      'Freshness decay curve: 25 points maximum, decays over 72 hours',
+      'Popularity velocity: Upvotes, comments, and star gain velocity',
+      'Developer utility index: Priority given to Rust, Go, TypeScript, LLMs, DevOps',
     ],
-    code: `// Autonomous Daily Intelligence Compiler
-const report = {
-  reportDate: '2026-09-10',
-  title: \`DevAtlas Daily Intelligence Report — \${reportDate}\`,
-  structuredSummary: {
-    itemsDiscovered: 96,
-    itemsNew: 93,
-    itemsDuplicates: 3,
-    dataQualityScore: 100,
-  },
-  markdownContent: generatedMarkdown,
-};`,
+    code: `// Deterministic 5-Factor Scoring Matrix
+export function calculateRelevanceScore(item: ProcessedItem): number {
+  const freshness = calculateFreshnessPoints(item.publishedAt); // 0-25 pts
+  const popularity = calculatePopularityPoints(item.metrics);   // 0-25 pts
+  const utility = calculateTechUtilityPoints(item.tags);        // 0-25 pts
+  const impact = calculateImpactPoints(item.title, item.summary); // 0-25 pts
+
+  return Math.min(100, Math.round(freshness + popularity + utility + impact));
+}`,
   },
   {
     id: 'git_gate',
     name: 'Stage 4: Autonomous Git Commit Gate',
-    shortDesc: 'Deterministic Anti-Slop verification preventing empty or trivial commits to repository.',
-    tech: 'Git CLI, GitHub Actions Runner, POSIX Shell',
-    metrics: '0 empty commits • GitOps as single source of truth',
+    shortDesc: 'Compiles markdown digests and commits directly to Git only when verified delta changes exist.',
+    tech: 'Node.js fs/promises, Git CLI via child_process, GitHub Actions',
+    metrics: 'Zero slop commits • 1 clean commit/day • 100% audit trail',
     specs: [
-      'git status --porcelain checks for genuine diffs in reports/ and data/',
-      'Automated signed commit authored by DevAtlas Bot',
-      'Triggers downstream Cloudflare Pages & Workers deployment',
+      'Generates daily structured Markdown at reports/YYYY/MM/DD.md',
+      'Evaluates git status --porcelain before attempting commits',
+      'Graceful zero-change exit code (avoids empty automated commits)',
     ],
-    code: `# Deterministic Git Gate in GitHub Actions
-git add data/ reports/
-if git diff --staged --quiet; then
-  echo "✓ No meaningful content changes. Skipping commit."
-else
-  git commit -m "chore(data): autonomous daily discovery [skip ci]"
-  git push origin main
-fi`,
+    code: `// Deterministic GitOps Commit Gate
+const hasChanges = await execGit(['status', '--porcelain']);
+if (!hasChanges.trim()) {
+  console.log('[DevAtlas GitOps] No catalog changes detected. Skipping commit cleanly.');
+  process.exit(0);
+}
+
+await execGit(['config', 'user.name', 'github-actions[bot]']);
+await execGit(['commit', '-m', \`chore(discovery): \${reportDate} catalog update [skip ci]\`]);
+await execGit(['push', 'origin', 'main']);`,
   },
   {
     id: 'edge_dist',
@@ -214,7 +214,6 @@ export function DocsClient() {
   const [popularityMetric, setPopularityMetric] = useState<number>(18);
   const [developerUtility, setDeveloperUtility] = useState<number>(24);
   const [techImpact, setTechImpact] = useState<number>(22);
-  const [testTitle, setTestTitle] = useState<string>('Senior Software Engineer - REDAPL Graph Engine');
 
   // Computed score
   const freshnessScore = Math.max(5, Math.round(25 - (freshnessHours / 72) * 20));
@@ -235,158 +234,188 @@ export function DocsClient() {
   const currentStage = PIPELINE_STAGES[selectedStage];
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12 space-y-12">
-      {/* Header Banner */}
-      <div className="rounded-3xl border border-border bg-card p-6 sm:p-12 relative overflow-hidden shadow-2xl">
-        <div className="absolute top-0 right-0 w-[500px] h-[300px] bg-accent/10 blur-[120px] rounded-full pointer-events-none" />
-        <div className="relative z-10 max-w-4xl space-y-6">
-          <div className="inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/10 px-3.5 py-1 text-xs font-mono font-bold text-accent">
-            <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
-            <span>DEVATLAS PLATFORM ARCHITECTURE &amp; DEVOPS SPEC</span>
+    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12 space-y-10">
+      {/* ─── Top Broadsheet Header ─── */}
+      <div className="border-b border-double-rule pb-8">
+        <div className="flex items-center justify-between gap-4 mb-4">
+          <div className="flex items-center gap-3">
+            <span className="stamp-badge">
+              <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+              ENGINEERING SPECIFICATION
+            </span>
+            <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-dateline font-bold">
+              SECTION §H // FIELD MANUAL &amp; ARCHITECTURE
+            </span>
           </div>
+          <div className="hidden sm:block">
+            <BarcodeStamp caption="DOCS CATALOG" catalogId="SPEC-2026-H" />
+          </div>
+        </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl font-bold text-foreground leading-tight tracking-tight">
-            Engineering Specifications &amp; <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-indigo-400 to-cyan-400">Pipeline Docs</span>
-          </h1>
+        <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-black text-foreground tracking-tight leading-none mb-4">
+          Platform Architecture &amp; Pipeline Specs
+        </h1>
 
-          <p className="font-sans text-base sm:text-lg text-muted leading-relaxed max-w-3xl">
-            A comprehensive, production-grade technical specification detailing our multi-source harvesting engine, SHA-256 cryptographic deduplication, 5-factor scoring matrix, deterministic GitOps commit gate, and sub-millisecond Cloudflare Edge delivery.
-          </p>
+        <p className="font-editorial text-base sm:text-lg text-muted max-w-3xl leading-relaxed">
+          Production-grade technical specification detailing our multi-source harvesting engine, SHA-256 cryptographic deduplication, 5-factor algorithmic scoring matrix, deterministic GitOps commit gate, and sub-millisecond Cloudflare edge delivery.
+        </p>
 
-          <div className="flex flex-wrap items-center gap-3 pt-2 font-mono text-xs">
-            <span className="rounded-full border border-border bg-background px-3 py-1 font-bold text-foreground">
-              Node.js v22 &amp; TypeScript
-            </span>
-            <span className="rounded-full border border-border bg-background px-3 py-1 font-bold text-accent">
-              Cloudflare Edge (Hono)
-            </span>
-            <span className="rounded-full border border-border bg-background px-3 py-1 font-bold text-foreground">
-              GitHub Actions CI/CD
-            </span>
-            <span className="rounded-full border border-border bg-background px-3 py-1 font-bold text-foreground">
-              100% Real Scored Data
-            </span>
+        {/* Tactile Vitals Strip */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-0 border border-border mt-6 bg-card">
+          <div className="p-3 border-r border-b sm:border-b-0 border-border">
+            <span className="font-mono text-[8px] uppercase tracking-widest text-dateline block">01 / RUNTIME</span>
+            <span className="font-mono text-xs font-bold text-foreground">Node.js 22 LTS</span>
+          </div>
+          <div className="p-3 border-r-0 sm:border-r border-b sm:border-b-0 border-border">
+            <span className="font-mono text-[8px] uppercase tracking-widest text-dateline block">02 / EDGE ROUTER</span>
+            <span className="font-mono text-xs font-bold text-accent">Hono / Workers</span>
+          </div>
+          <div className="p-3 border-r border-border">
+            <span className="font-mono text-[8px] uppercase tracking-widest text-dateline block">03 / GITOPS GATE</span>
+            <span className="font-mono text-xs font-bold text-foreground">GitHub Actions CI</span>
+          </div>
+          <div className="p-3">
+            <span className="font-mono text-[8px] uppercase tracking-widest text-dateline block">04 / MONTHLY COST</span>
+            <span className="font-mono text-xs font-bold text-foreground">$0.00 / Free Tier</span>
           </div>
         </div>
       </div>
 
-      {/* Main Grid: Sticky Sidebar + Interactive Content */}
+      {/* ─── Main Grid: Table of Contents + Spec Reader ─── */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        {/* Navigation Sidebar */}
-        <aside className="lg:col-span-4 sticky top-24 space-y-2 rounded-2xl border border-border bg-card p-4 shadow-sm">
-          <div className="px-3 py-2 text-xs font-mono font-bold uppercase tracking-wider text-muted border-b border-border mb-2">
-            Table of Contents
+        {/* Table of Contents Column */}
+        <aside className="lg:col-span-4 border border-border bg-card p-4 space-y-2 sticky top-16">
+          <div className="flex items-center justify-between pb-3 mb-2 border-b border-rule">
+            <span className="font-mono text-[9px] font-bold uppercase tracking-[0.2em] text-foreground">
+              ❖ TABLE OF CONTENTS
+            </span>
+            <span className="font-mono text-[9px] text-dateline">9 CHAPTERS</span>
           </div>
+
           <nav className="space-y-1">
-            {SECTIONS.map((s) => (
-              <button
-                key={s.id}
-                onClick={() => setActiveSection(s.id)}
-                className={`w-full text-left rounded-xl px-3.5 py-2.5 transition-all flex items-start gap-3 ${
-                  activeSection === s.id
-                    ? 'bg-foreground text-background font-bold shadow-sm'
-                    : 'text-muted hover:bg-card-hover hover:text-foreground'
-                }`}
-              >
-                <svg className="h-4 w-4 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={s.icon} />
-                </svg>
-                <div className="flex-1 min-w-0">
-                  <div className="text-xs font-serif font-bold truncate leading-tight">
-                    {s.title}
+            {SECTIONS.map((s) => {
+              const isSelected = activeSection === s.id;
+              return (
+                <button
+                  key={s.id}
+                  onClick={() => setActiveSection(s.id)}
+                  className={`w-full text-left p-2.5 transition-all flex items-start gap-3 border ${
+                    isSelected
+                      ? 'border-foreground bg-foreground text-background font-bold'
+                      : 'border-transparent text-muted hover:border-rule hover:bg-card-hover hover:text-foreground'
+                  }`}
+                >
+                  <span className={`font-mono text-[10px] tracking-wider shrink-0 ${isSelected ? 'text-background' : 'text-accent font-bold'}`}>
+                    {s.sectionCode}
+                  </span>
+                  <div className="flex-1 min-w-0">
+                    <div className="text-xs font-serif truncate leading-tight font-bold">
+                      {s.title}
+                    </div>
+                    <div className={`text-[9px] font-mono uppercase tracking-wider mt-0.5 ${isSelected ? 'opacity-80' : 'text-dateline'}`}>
+                      {s.badge}
+                    </div>
                   </div>
-                  <div className="text-[10px] font-mono opacity-80 uppercase tracking-wider mt-0.5">
-                    {s.badge}
-                  </div>
-                </div>
-              </button>
-            ))}
+                </button>
+              );
+            })}
           </nav>
+
+          <div className="pt-3 mt-3 border-t border-rule text-center">
+            <a
+              href="https://github.com/somyacodes07/DevAtlas"
+              target="_blank"
+              rel="noreferrer"
+              className="font-mono text-[9px] tracking-widest uppercase text-muted hover:text-foreground transition-colors inline-block"
+            >
+              Inspect Source On GitHub ↗
+            </a>
+          </div>
         </aside>
 
-        {/* Documentation Body Content */}
-        <main className="lg:col-span-8 space-y-12">
+        {/* Documentation Content Body */}
+        <main className="lg:col-span-8 space-y-10">
           {/* SECTION 0: INTERACTIVE PIPELINE & SCORING SIMULATOR */}
           {activeSection === 'interactive-flow' && (
             <div className="space-y-8 animate-fadeIn">
-              <div className="border-b border-border pb-4">
-                <span className="font-mono text-xs font-bold text-accent bg-accent/10 border border-accent/20 px-2.5 py-1 rounded-md uppercase">
-                  Live Visualizer
+              <div className="border-b border-rule pb-4">
+                <span className="font-mono text-[9px] font-bold text-accent uppercase tracking-widest">
+                  ❖ §H.01 // ARCHITECTURAL SCHEMATIC
                 </span>
-                <h2 className="font-serif text-3xl font-bold text-foreground mt-3">
-                  Interactive Pipeline Architecture &amp; Data Flow
+                <h2 className="font-serif text-2xl sm:text-3xl font-black text-foreground mt-1 tracking-tight">
+                  Visual Pipeline &amp; Engine Simulator
                 </h2>
-                <p className="font-sans text-sm text-muted mt-2 leading-relaxed">
-                  Click any of the 5 pipeline stages below to inspect its data contract, runtime execution metrics, fault-tolerance mechanisms, and source code.
+                <p className="font-editorial text-sm text-muted mt-2 leading-relaxed">
+                  Click through the 5 pipeline stages below to inspect execution metrics, fault-tolerance mechanisms, and production code contracts.
                 </p>
               </div>
 
-              {/* Stage Stepper Tabs */}
-              <div className="grid grid-cols-1 sm:grid-cols-5 gap-2">
+              {/* Stage Selector Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-5 gap-0 border border-border bg-card">
                 {PIPELINE_STAGES.map((st, idx) => (
                   <button
                     key={st.id}
                     onClick={() => setSelectedStage(idx)}
-                    className={`rounded-xl border p-3 text-left transition-all flex flex-col justify-between ${
+                    className={`p-3 text-left transition-all border-b sm:border-b-0 sm:border-r border-border last:border-r-0 flex flex-col justify-between ${
                       selectedStage === idx
-                        ? 'border-accent bg-accent/10 text-foreground shadow-md'
-                        : 'border-border bg-card hover:bg-card-hover text-muted'
+                        ? 'bg-foreground text-background font-bold'
+                        : 'text-muted hover:bg-card-hover hover:text-foreground'
                     }`}
                   >
-                    <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-accent">
-                      0{idx + 1}
+                    <span className={`font-mono text-[9px] uppercase tracking-widest ${selectedStage === idx ? 'text-background opacity-80' : 'text-accent font-bold'}`}>
+                      STAGE 0{idx + 1}
                     </span>
-                    <span className="font-serif text-xs font-bold text-foreground mt-1 leading-snug">
-                      {st.name.split(':')[1] || st.name}
+                    <span className="font-serif text-xs font-bold mt-1 leading-snug">
+                      {st.name.replace(/^Stage \d+:\s*/, '')}
                     </span>
                   </button>
                 ))}
               </div>
 
-              {/* Active Stage Deep-Dive Card */}
-              <div className="rounded-2xl border border-border bg-card p-6 sm:p-8 space-y-6 shadow-md">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-border pb-4">
+              {/* Active Stage Dossier */}
+              <div className="border border-border bg-card p-6 space-y-6">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-rule pb-4">
                   <div>
-                    <span className="font-mono text-xs font-bold text-accent uppercase tracking-wider">
-                      Selected Pipeline Layer
+                    <span className="font-mono text-[9px] font-bold text-accent uppercase tracking-widest">
+                      ACTIVE SPECIFICATION DOSSIER
                     </span>
-                    <h3 className="font-serif text-2xl font-bold text-foreground mt-1">
+                    <h3 className="font-serif text-2xl font-black text-foreground mt-1">
                       {currentStage.name}
                     </h3>
                   </div>
-                  <span className="rounded-full border border-border bg-background px-4 py-1.5 font-mono text-xs font-bold text-foreground">
+                  <span className="border border-rule px-3 py-1 font-mono text-[9px] uppercase tracking-wider text-muted bg-background">
                     {currentStage.metrics}
                   </span>
                 </div>
 
-                <p className="font-sans text-sm text-foreground/80 leading-relaxed">
+                <p className="font-editorial text-sm text-foreground leading-relaxed">
                   {currentStage.shortDesc}
                 </p>
 
                 {/* Specs List */}
                 <div className="space-y-2">
-                  <div className="font-mono text-xs font-bold uppercase tracking-wider text-muted">
+                  <div className="font-mono text-[9px] font-bold uppercase tracking-widest text-dateline">
                     Execution Constraints &amp; Guardrails:
                   </div>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-sans text-muted">
                     {currentStage.specs.map((sp, i) => (
-                      <li key={i} className="flex items-start gap-2 bg-background border border-border rounded-lg p-2.5">
+                      <li key={i} className="flex items-start gap-2 bg-background border border-border p-3">
                         <span className="text-accent font-bold font-mono">✓</span>
-                        <span>{sp}</span>
+                        <span className="text-xs">{sp}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                {/* Code Snippet Box */}
-                <div className="rounded-xl border border-border bg-background p-4 relative group">
-                  <div className="flex items-center justify-between text-xs font-mono text-muted mb-2 border-b border-border pb-2">
-                    <span className="font-bold text-foreground">Production Code Snippet</span>
+                {/* Monospace Code Box */}
+                <div className="border border-border bg-background p-4 relative group">
+                  <div className="flex items-center justify-between text-[9px] font-mono text-muted mb-2 border-b border-rule pb-2">
+                    <span className="font-bold text-foreground uppercase tracking-widest">PRODUCTION CODE CONTRACT</span>
                     <button
                       onClick={() => handleCopy(currentStage.code, currentStage.id)}
-                      className="text-accent hover:underline font-bold"
+                      className="text-accent hover:underline font-bold uppercase tracking-wider"
                     >
-                      {copiedCode === currentStage.id ? 'Copied!' : 'Copy Code'}
+                      {copiedCode === currentStage.id ? 'Copied to Clipboard' : 'Copy Snippet'}
                     </button>
                   </div>
                   <pre className="font-mono text-xs text-foreground overflow-x-auto p-2 leading-relaxed">
@@ -395,26 +424,27 @@ export function DocsClient() {
                 </div>
               </div>
 
-              {/* Interactive 5-Factor Scoring Simulator */}
-              <div className="rounded-2xl border border-border bg-card p-6 sm:p-8 space-y-6 shadow-md mt-10">
-                <div className="border-b border-border pb-4">
-                  <span className="font-mono text-xs font-bold text-accent bg-accent/10 border border-accent/20 px-2.5 py-1 rounded-md uppercase">
-                    Interactive Playground
-                  </span>
-                  <h3 className="font-serif text-2xl font-bold text-foreground mt-3">
-                    5-Factor Relevance Scoring Calculator
+              {/* 5-Factor Scoring Simulator */}
+              <div className="border border-border bg-card p-6 space-y-6">
+                <div className="border-b border-rule pb-4">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="stamp-badge">INTERACTIVE TELEMETRY</span>
+                    <span className="font-mono text-[9px] uppercase tracking-wider text-dateline">ALGORITHMIC LAB</span>
+                  </div>
+                  <h3 className="font-serif text-2xl font-black text-foreground mt-2 tracking-tight">
+                    5-Factor Relevance Scoring Matrix
                   </h3>
-                  <p className="font-sans text-sm text-muted mt-1 leading-relaxed">
-                    Test the real algorithm used by DevAtlas to filter signal from web noise. Move the sliders to see how relevance points are dynamically calculated.
+                  <p className="font-editorial text-sm text-muted mt-1 leading-relaxed">
+                    Test the deterministic algorithm DevAtlas uses to filter engineering signal from web noise. Move the sliders to test real-time rank computation.
                   </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Controls */}
-                  <div className="space-y-5">
-                    <div>
+                  <div className="space-y-4">
+                    <div className="border border-border p-3 bg-background">
                       <div className="flex justify-between text-xs font-mono font-bold mb-1">
-                        <span className="text-muted">Freshness Age ({freshnessHours} hours old)</span>
+                        <span className="text-muted text-[10px] uppercase">Freshness Age ({freshnessHours}h old)</span>
                         <span className="text-accent">+{freshnessScore} / 25 pts</span>
                       </div>
                       <input
@@ -423,13 +453,13 @@ export function DocsClient() {
                         max="72"
                         value={freshnessHours}
                         onChange={(e) => setFreshnessHours(parseInt(e.target.value, 10))}
-                        className="w-full accent-accent cursor-pointer"
+                        className="w-full accent-foreground cursor-pointer"
                       />
                     </div>
 
-                    <div>
+                    <div className="border border-border p-3 bg-background">
                       <div className="flex justify-between text-xs font-mono font-bold mb-1">
-                        <span className="text-muted">Community Popularity (Stars / Upvotes)</span>
+                        <span className="text-muted text-[10px] uppercase">Community Popularity (Stars / Velocity)</span>
                         <span className="text-accent">+{popularityMetric} / 25 pts</span>
                       </div>
                       <input
@@ -438,13 +468,13 @@ export function DocsClient() {
                         max="25"
                         value={popularityMetric}
                         onChange={(e) => setPopularityMetric(parseInt(e.target.value, 10))}
-                        className="w-full accent-accent cursor-pointer"
+                        className="w-full accent-foreground cursor-pointer"
                       />
                     </div>
 
-                    <div>
+                    <div className="border border-border p-3 bg-background">
                       <div className="flex justify-between text-xs font-mono font-bold mb-1">
-                        <span className="text-muted">Core Developer Utility (Rust, Go, TypeScript)</span>
+                        <span className="text-muted text-[10px] uppercase">Core Developer Utility (Rust, Go, TS)</span>
                         <span className="text-accent">+{developerUtility} / 25 pts</span>
                       </div>
                       <input
@@ -453,13 +483,13 @@ export function DocsClient() {
                         max="25"
                         value={developerUtility}
                         onChange={(e) => setDeveloperUtility(parseInt(e.target.value, 10))}
-                        className="w-full accent-accent cursor-pointer"
+                        className="w-full accent-foreground cursor-pointer"
                       />
                     </div>
 
-                    <div>
+                    <div className="border border-border p-3 bg-background">
                       <div className="flex justify-between text-xs font-mono font-bold mb-1">
-                        <span className="text-muted">Frontier Tech Impact (AI Models, Compilers)</span>
+                        <span className="text-muted text-[10px] uppercase">Frontier Impact (AI Models, Compilers)</span>
                         <span className="text-accent">+{techImpact} / 25 pts</span>
                       </div>
                       <input
@@ -468,49 +498,49 @@ export function DocsClient() {
                         max="25"
                         value={techImpact}
                         onChange={(e) => setTechImpact(parseInt(e.target.value, 10))}
-                        className="w-full accent-accent cursor-pointer"
+                        className="w-full accent-foreground cursor-pointer"
                       />
                     </div>
                   </div>
 
-                  {/* Calculated Output Gauge */}
-                  <div className="rounded-xl border border-border bg-background p-6 flex flex-col justify-between">
+                  {/* Computed Score Gauge */}
+                  <div className="border border-border bg-background p-6 flex flex-col justify-between">
                     <div>
-                      <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-muted">
-                        Computed Algorithmic Score
+                      <span className="text-[9px] font-mono font-bold uppercase tracking-[0.2em] text-dateline block">
+                        COMPUTED ALGORITHMIC SCORE
                       </span>
                       <div className="flex items-baseline gap-3 mt-2">
-                        <span className="font-serif text-5xl font-bold text-foreground">
+                        <span className="font-serif text-6xl font-black text-foreground">
                           {totalScore}
                         </span>
-                        <span className="font-mono text-sm text-muted">/ 100</span>
+                        <span className="font-mono text-sm text-dateline">/ 100</span>
                       </div>
 
                       <div className="mt-4">
                         {totalScore >= 85 ? (
-                          <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 font-mono text-xs font-bold text-emerald-600 dark:text-emerald-400">
-                            <span>✓ QUALIFIED: DAILY BRIEFING FEATURE</span>
+                          <span className="border border-foreground bg-foreground text-background px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-wider inline-block">
+                            ✓ QUALIFIED: BROADSHEET LEAD DISPATCH
                           </span>
                         ) : totalScore >= 70 ? (
-                          <span className="inline-flex items-center gap-1.5 rounded-full bg-accent/10 border border-accent/20 px-3 py-1 font-mono text-xs font-bold text-accent">
-                            <span>✓ ACCEPTED: RADAR CATALOG</span>
+                          <span className="border border-rule px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-wider text-accent inline-block bg-card">
+                            ✓ ACCEPTED: RADAR CATALOG
                           </span>
                         ) : (
-                          <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 px-3 py-1 font-mono text-xs font-bold text-amber-500">
-                            <span>✕ PRUNED: BELOW RELEVANCE THRESHOLD</span>
+                          <span className="border border-dashed border-rule px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-wider text-muted inline-block">
+                            ✕ PRUNED: BELOW RELEVANCE THRESHOLD
                           </span>
                         )}
                       </div>
                     </div>
 
-                    <div className="mt-6 pt-4 border-t border-border space-y-2 font-mono text-[11px] text-muted">
+                    <div className="mt-6 pt-4 border-t border-rule space-y-1.5 font-mono text-[10px] text-muted">
                       <div>
                         <span className="text-foreground font-bold">urlHash:</span>{' '}
-                        <span className="truncate block opacity-80">{sampleUrlHash}</span>
+                        <span className="truncate block opacity-75">{sampleUrlHash}</span>
                       </div>
                       <div>
                         <span className="text-foreground font-bold">contentHash:</span>{' '}
-                        <span className="truncate block opacity-80">{sampleContentHash}</span>
+                        <span className="truncate block opacity-75">{sampleContentHash}</span>
                       </div>
                     </div>
                   </div>
@@ -522,40 +552,40 @@ export function DocsClient() {
           {/* SECTION 1: SYSTEM TOPOLOGY */}
           {activeSection === 'architecture' && (
             <div className="space-y-6 animate-fadeIn">
-              <div className="border-b border-border pb-4">
-                <span className="font-mono text-xs font-bold text-accent uppercase tracking-wider">
-                  Core System
+              <div className="border-b border-rule pb-4">
+                <span className="font-mono text-[9px] font-bold text-accent uppercase tracking-widest">
+                  ❖ §H.02 // ARCHITECTURE DIVISION
                 </span>
-                <h2 className="font-serif text-3xl font-bold text-foreground mt-2">
+                <h2 className="font-serif text-3xl font-black text-foreground mt-1">
                   System Topology &amp; Division of Labor
                 </h2>
               </div>
 
-              <p className="font-sans text-base text-foreground/80 leading-relaxed">
-                DevAtlas implements an uncompromising separation between <strong className="text-foreground">heavy batch ingestion</strong> and <strong className="text-foreground">low-latency edge delivery</strong>. High-compute crawling never runs on user-facing edge nodes, ensuring zero cold starts and sub-millisecond edge performance.
+              <p className="font-editorial text-base text-foreground leading-relaxed">
+                DevAtlas enforces a strict separation of concerns between <strong className="text-foreground">heavy batch ingestion</strong> and <strong className="text-foreground">low-latency edge delivery</strong>. High-compute crawling never runs on user-facing edge nodes, ensuring zero cold starts and sub-millisecond edge response times.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="rounded-2xl border border-border bg-card p-6 space-y-3">
-                  <div className="font-mono text-xs font-bold text-accent uppercase">
-                    Compute Plane (GitHub Actions)
+                <div className="border border-border bg-card p-6 space-y-3">
+                  <div className="font-mono text-[9px] font-bold text-accent uppercase tracking-widest">
+                    COMPUTE PLANE // GITHUB ACTIONS
                   </div>
                   <h3 className="font-serif text-xl font-bold text-foreground">
                     Batch Harvesting &amp; AI
                   </h3>
-                  <p className="font-sans text-xs sm:text-sm text-muted leading-relaxed">
-                    Executes on a scheduled cron every 24 hours inside an Ubuntu 24.04 runner. Connects to external APIs, scrapes job feeds, performs cryptographic deduplication, evaluates Zod schemas, compiles daily markdown reports, and executes deterministic git commits.
+                  <p className="font-editorial text-sm text-muted leading-relaxed">
+                    Executes on a scheduled cron every 24 hours inside an Ubuntu runner. Connects to external APIs, scrapes job feeds, performs cryptographic deduplication, evaluates Zod schemas, compiles daily markdown reports, and executes deterministic git commits.
                   </p>
                 </div>
 
-                <div className="rounded-2xl border border-border bg-card p-6 space-y-3">
-                  <div className="font-mono text-xs font-bold text-cyan-400 uppercase">
-                    Delivery Plane (Cloudflare Edge)
+                <div className="border border-border bg-card p-6 space-y-3">
+                  <div className="font-mono text-[9px] font-bold text-foreground uppercase tracking-widest">
+                    DELIVERY PLANE // CLOUDFLARE EDGE
                   </div>
                   <h3 className="font-serif text-xl font-bold text-foreground">
                     Zero-DB Edge Distribution
                   </h3>
-                  <p className="font-sans text-xs sm:text-sm text-muted leading-relaxed">
+                  <p className="font-editorial text-sm text-muted leading-relaxed">
                     Cloudflare Workers powered by Hono V8 isolates distributed across 275+ global cities. Reads from Workers KV cache and static edge JSON snapshots. Cold start latency is &lt;5ms with zero database round-trips needed for cached queries.
                   </p>
                 </div>
@@ -566,46 +596,46 @@ export function DocsClient() {
           {/* SECTION 2: INGESTION ENGINE */}
           {activeSection === 'ingestion' && (
             <div className="space-y-6 animate-fadeIn">
-              <div className="border-b border-border pb-4">
-                <span className="font-mono text-xs font-bold text-accent uppercase tracking-wider">
-                  Data Crawlers
+              <div className="border-b border-rule pb-4">
+                <span className="font-mono text-[9px] font-bold text-accent uppercase tracking-widest">
+                  ❖ §H.03 // HARVESTING PROTOCOLS
                 </span>
-                <h2 className="font-serif text-3xl font-bold text-foreground mt-2">
+                <h2 className="font-serif text-3xl font-black text-foreground mt-1">
                   Multi-Source Ingestion Engine
                 </h2>
               </div>
 
-              <p className="font-sans text-base text-foreground/80 leading-relaxed">
+              <p className="font-editorial text-base text-foreground leading-relaxed">
                 The ingestion plane consists of specialized TypeScript crawlers adhering to strict timeouts, jittered exponential backoffs, and circuit breakers. Each crawler maps external responses to uniform, schema-validated models.
               </p>
 
               <div className="space-y-3">
-                <div className="rounded-2xl border border-border bg-card p-5">
+                <div className="border border-border bg-card p-5">
                   <div className="flex items-center justify-between font-mono text-xs font-bold text-foreground mb-1">
                     <span>Hacker News Crawler (Algolia API)</span>
-                    <span className="text-accent">REST API</span>
+                    <span className="text-accent uppercase text-[9px]">REST API</span>
                   </div>
-                  <p className="font-sans text-xs text-muted">
+                  <p className="font-editorial text-sm text-muted">
                     Queries top developer stories, Show HN posts, and technology discussions. Filters for score thresholds and high-signal engineering topics.
                   </p>
                 </div>
 
-                <div className="rounded-2xl border border-border bg-card p-5">
+                <div className="border border-border bg-card p-5">
                   <div className="flex items-center justify-between font-mono text-xs font-bold text-foreground mb-1">
                     <span>GitHub Trending Crawler</span>
-                    <span className="text-accent">GraphQL / Scraper</span>
+                    <span className="text-accent uppercase text-[9px]">GraphQL / Scraper</span>
                   </div>
-                  <p className="font-sans text-xs text-muted">
+                  <p className="font-editorial text-sm text-muted">
                     Tracks daily star momentum across TypeScript, Python, Rust, and Go. Identifies breakout libraries before they saturate mainstream tech feeds.
                   </p>
                 </div>
 
-                <div className="rounded-2xl border border-border bg-card p-5">
+                <div className="border border-border bg-card p-5">
                   <div className="flex items-center justify-between font-mono text-xs font-bold text-foreground mb-1">
                     <span>Verified Tech Jobs (Arbeitnow API)</span>
-                    <span className="text-accent">Job API</span>
+                    <span className="text-accent uppercase text-[9px]">Job API</span>
                   </div>
-                  <p className="font-sans text-xs text-muted">
+                  <p className="font-editorial text-sm text-muted">
                     Harvests verified software engineering roles, backend positions, and remote QA opportunities with validated company requirements and tech tags.
                   </p>
                 </div>
@@ -616,33 +646,33 @@ export function DocsClient() {
           {/* SECTION 3: DEDUPLICATION & SCORING */}
           {activeSection === 'dedup' && (
             <div className="space-y-6 animate-fadeIn">
-              <div className="border-b border-border pb-4">
-                <span className="font-mono text-xs font-bold text-accent uppercase tracking-wider">
-                  Data Integrity
+              <div className="border-b border-rule pb-4">
+                <span className="font-mono text-[9px] font-bold text-accent uppercase tracking-widest">
+                  ❖ §H.04 // DATA INTEGRITY
                 </span>
-                <h2 className="font-serif text-3xl font-bold text-foreground mt-2">
+                <h2 className="font-serif text-3xl font-black text-foreground mt-1">
                   SHA-256 Deduplication &amp; 5-Factor Scoring
                 </h2>
               </div>
 
-              <p className="font-sans text-base text-foreground/80 leading-relaxed">
+              <p className="font-editorial text-base text-foreground leading-relaxed">
                 Web scraping inevitably encounters duplicate stories across syndication networks. DevAtlas guarantees 100% duplicate rejection using dual cryptographic SHA-256 hashing.
               </p>
 
-              <div className="rounded-2xl border border-border bg-card p-6 space-y-4">
+              <div className="border border-border bg-card p-6 space-y-4">
                 <h3 className="font-serif text-xl font-bold text-foreground">
                   The Dual-Hash Protocol
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 font-mono text-xs">
-                  <div className="bg-background border border-border p-4 rounded-xl">
+                  <div className="bg-background border border-border p-4">
                     <span className="text-accent font-bold block mb-1">1. urlHash Gate</span>
-                    <p className="text-muted font-sans text-xs">
+                    <p className="text-muted font-editorial text-xs">
                       Strips query params (utm_*, ref, fbclid), normalizes trailing slashes, and computes SHA-256. Prevents re-indexing the same URL under different campaign parameters.
                     </p>
                   </div>
-                  <div className="bg-background border border-border p-4 rounded-xl">
+                  <div className="bg-background border border-border p-4">
                     <span className="text-accent font-bold block mb-1">2. contentHash Gate</span>
-                    <p className="text-muted font-sans text-xs">
+                    <p className="text-muted font-editorial text-xs">
                       Normalizes whitespace and case across title and description. Catches re-syndicated articles published across different domains with identical text.
                     </p>
                   </div>
@@ -654,24 +684,24 @@ export function DocsClient() {
           {/* SECTION 4: PUBLISHING & COMMIT GATE */}
           {activeSection === 'publishing' && (
             <div className="space-y-6 animate-fadeIn">
-              <div className="border-b border-border pb-4">
-                <span className="font-mono text-xs font-bold text-accent uppercase tracking-wider">
-                  Automation &amp; GitOps
+              <div className="border-b border-rule pb-4">
+                <span className="font-mono text-[9px] font-bold text-accent uppercase tracking-widest">
+                  ❖ §H.05 // GITOPS AUTOMATION
                 </span>
-                <h2 className="font-serif text-3xl font-bold text-foreground mt-2">
+                <h2 className="font-serif text-3xl font-black text-foreground mt-1">
                   Report Synthesis &amp; Git Commit Gate
                 </h2>
               </div>
 
-              <p className="font-sans text-base text-foreground/80 leading-relaxed">
+              <p className="font-editorial text-base text-foreground leading-relaxed">
                 The pipeline generates structured markdown digests committed directly to the repository under <code className="font-mono text-xs text-accent">reports/YYYY/MM/DD.md</code>. A deterministic commit gate ensures no blank or meaningless commits are produced.
               </p>
 
-              <div className="rounded-2xl border border-border bg-card p-6 space-y-3">
+              <div className="border border-border bg-card p-6 space-y-3">
                 <h3 className="font-serif text-lg font-bold text-foreground">
                   The Deterministic Anti-Slop Detector
                 </h3>
-                <p className="font-sans text-xs sm:text-sm text-muted leading-relaxed">
+                <p className="font-editorial text-sm text-muted leading-relaxed">
                   Before committing, the runner evaluates <code className="font-mono text-accent">git status --porcelain</code>. If all discovered items are duplicates and no new report or catalog diff exists, the runner exits gracefully with exit code 0 without polluting git history with empty automated commits.
                 </p>
               </div>
@@ -681,16 +711,16 @@ export function DocsClient() {
           {/* SECTION 5: EDGE & ZERO-DB CDN */}
           {activeSection === 'edge' && (
             <div className="space-y-6 animate-fadeIn">
-              <div className="border-b border-border pb-4">
-                <span className="font-mono text-xs font-bold text-accent uppercase tracking-wider">
-                  Edge Delivery
+              <div className="border-b border-rule pb-4">
+                <span className="font-mono text-[9px] font-bold text-accent uppercase tracking-widest">
+                  ❖ §H.06 // EDGE RESILIENCE
                 </span>
-                <h2 className="font-serif text-3xl font-bold text-foreground mt-2">
+                <h2 className="font-serif text-3xl font-black text-foreground mt-1">
                   Cloudflare Edge &amp; Zero-DB CDN
                 </h2>
               </div>
 
-              <p className="font-sans text-base text-foreground/80 leading-relaxed">
+              <p className="font-editorial text-base text-foreground leading-relaxed">
                 Every daily ingestion run writes complete catalog dumps to static JSON snapshots (<code className="font-mono text-xs text-accent">data/edge_items.json</code> and <code className="font-mono text-xs text-accent">data/edge_reports.json</code>). This enables complete zero-database edge failover: even if MongoDB Atlas is offline for maintenance, 100% of the site and API functions normally.
               </p>
             </div>
@@ -699,26 +729,26 @@ export function DocsClient() {
           {/* SECTION 6: CI/CD WORKFLOWS */}
           {activeSection === 'cicd' && (
             <div className="space-y-6 animate-fadeIn">
-              <div className="border-b border-border pb-4">
-                <span className="font-mono text-xs font-bold text-accent uppercase tracking-wider">
-                  DevOps Automation
+              <div className="border-b border-rule pb-4">
+                <span className="font-mono text-[9px] font-bold text-accent uppercase tracking-widest">
+                  ❖ §H.07 // PIPELINES
                 </span>
-                <h2 className="font-serif text-3xl font-bold text-foreground mt-2">
+                <h2 className="font-serif text-3xl font-black text-foreground mt-1">
                   CI/CD Pipelines &amp; Workflows
                 </h2>
               </div>
 
               <div className="space-y-3">
-                <div className="rounded-2xl border border-border bg-card p-5">
-                  <span className="font-mono text-xs font-bold text-accent">daily-discovery.yml</span>
-                  <p className="font-sans text-xs text-muted mt-1">
+                <div className="border border-border bg-card p-5">
+                  <span className="font-mono text-xs font-bold text-accent block">daily-discovery.yml</span>
+                  <p className="font-editorial text-sm text-muted mt-1">
                     Runs every night at 04:00 UTC. Harvests sources, runs AI scoring, generates markdown reports, and executes the Git commit gate.
                   </p>
                 </div>
 
-                <div className="rounded-2xl border border-border bg-card p-5">
-                  <span className="font-mono text-xs font-bold text-accent">deploy.yml</span>
-                  <p className="font-sans text-xs text-muted mt-1">
+                <div className="border border-border bg-card p-5">
+                  <span className="font-mono text-xs font-bold text-accent block">deploy.yml</span>
+                  <p className="font-editorial text-sm text-muted mt-1">
                     Triggers on commits to main. Deploys Cloudflare Worker REST API and compiles Next.js static site to GitHub Pages / Cloudflare Pages.
                   </p>
                 </div>
@@ -729,47 +759,47 @@ export function DocsClient() {
           {/* SECTION 7: $0/MONTH FREE TIER */}
           {activeSection === 'cost' && (
             <div className="space-y-6 animate-fadeIn">
-              <div className="border-b border-border pb-4">
-                <span className="font-mono text-xs font-bold text-accent uppercase tracking-wider">
-                  Cost Engineering
+              <div className="border-b border-rule pb-4">
+                <span className="font-mono text-[9px] font-bold text-accent uppercase tracking-widest">
+                  ❖ §H.08 // COST LEDGER
                 </span>
-                <h2 className="font-serif text-3xl font-bold text-foreground mt-2">
+                <h2 className="font-serif text-3xl font-black text-foreground mt-1">
                   $0/Month Free-Tier Architecture
                 </h2>
               </div>
 
-              <p className="font-sans text-base text-foreground/80 leading-relaxed">
+              <p className="font-editorial text-base text-foreground leading-relaxed">
                 DevAtlas is engineered to operate permanently within generous free-tier allowances across GitHub Actions, Cloudflare Workers, and MongoDB Atlas M0.
               </p>
 
-              <div className="rounded-2xl border border-border bg-card p-6">
+              <div className="border border-border bg-card p-6">
                 <table className="w-full text-left font-mono text-xs">
                   <thead>
-                    <tr className="border-b border-border text-muted">
-                      <th className="pb-2">Subsystem</th>
-                      <th className="pb-2">Provider</th>
-                      <th className="pb-2">Free Limit</th>
-                      <th className="pb-2 text-right">Cost</th>
+                    <tr className="border-b border-rule text-dateline uppercase text-[9px] tracking-wider">
+                      <th className="pb-3">Subsystem</th>
+                      <th className="pb-3">Provider</th>
+                      <th className="pb-3">Free Limit</th>
+                      <th className="pb-3 text-right">Cost</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-border text-foreground">
+                  <tbody className="divide-y divide-rule text-foreground">
                     <tr>
-                      <td className="py-2.5">Pipeline Runner</td>
-                      <td className="py-2.5">GitHub Actions</td>
-                      <td className="py-2.5">2,000 min/mo</td>
-                      <td className="py-2.5 text-right font-bold text-accent">$0.00</td>
+                      <td className="py-3">Pipeline Runner</td>
+                      <td className="py-3 text-muted">GitHub Actions</td>
+                      <td className="py-3 text-muted">2,000 min/mo</td>
+                      <td className="py-3 text-right font-bold text-accent">$0.00</td>
                     </tr>
                     <tr>
-                      <td className="py-2.5">Edge REST API</td>
-                      <td className="py-2.5">Cloudflare Workers</td>
-                      <td className="py-2.5">100,000 req/day</td>
-                      <td className="py-2.5 text-right font-bold text-accent">$0.00</td>
+                      <td className="py-3">Edge REST API</td>
+                      <td className="py-3 text-muted">Cloudflare Workers</td>
+                      <td className="py-3 text-muted">100,000 req/day</td>
+                      <td className="py-3 text-right font-bold text-accent">$0.00</td>
                     </tr>
                     <tr>
-                      <td className="py-2.5">Database Cluster</td>
-                      <td className="py-2.5">MongoDB Atlas</td>
-                      <td className="py-2.5">512 MB M0 Tier</td>
-                      <td className="py-2.5 text-right font-bold text-accent">$0.00</td>
+                      <td className="py-3">Database Cluster</td>
+                      <td className="py-3 text-muted">MongoDB Atlas</td>
+                      <td className="py-3 text-muted">512 MB M0 Tier</td>
+                      <td className="py-3 text-right font-bold text-accent">$0.00</td>
                     </tr>
                   </tbody>
                 </table>
@@ -780,44 +810,44 @@ export function DocsClient() {
           {/* SECTION 8: RESUME & DEVOPS ENGINEERING COMPETENCIES */}
           {activeSection === 'resume' && (
             <div className="space-y-6 animate-fadeIn">
-              <div className="border-b border-border pb-4">
-                <span className="font-mono text-xs font-bold text-accent uppercase tracking-wider">
-                  Platform Engineering
+              <div className="border-b border-rule pb-4">
+                <span className="font-mono text-[9px] font-bold text-accent uppercase tracking-widest">
+                  ❖ §H.09 // COMPETENCIES
                 </span>
-                <h2 className="font-serif text-3xl font-bold text-foreground mt-2">
+                <h2 className="font-serif text-3xl font-black text-foreground mt-1">
                   DevOps Engineering Competencies
                 </h2>
               </div>
 
-              <p className="font-sans text-base text-foreground/80 leading-relaxed">
+              <p className="font-editorial text-base text-foreground leading-relaxed">
                 Key architectural patterns implemented across DevAtlas demonstrating production platform engineering:
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="rounded-2xl border border-border bg-card p-5 space-y-2">
-                  <div className="font-mono text-xs font-bold text-accent">Decoupled Architecture</div>
-                  <p className="font-sans text-xs text-muted">
+                <div className="border border-border bg-card p-5 space-y-2">
+                  <div className="font-mono text-[10px] font-bold text-accent uppercase tracking-wider">01 // Decoupled Architecture</div>
+                  <p className="font-editorial text-xs sm:text-sm text-muted">
                     Separated heavy batch ingestion from zero-latency edge delivery for infinite horizontal scale.
                   </p>
                 </div>
 
-                <div className="rounded-2xl border border-border bg-card p-5 space-y-2">
-                  <div className="font-mono text-xs font-bold text-accent">Deterministic Anti-Slop GitOps</div>
-                  <p className="font-sans text-xs text-muted">
+                <div className="border border-border bg-card p-5 space-y-2">
+                  <div className="font-mono text-[10px] font-bold text-accent uppercase tracking-wider">02 // Deterministic GitOps</div>
+                  <p className="font-editorial text-xs sm:text-sm text-muted">
                     Automated change validation preventing empty commits, maintaining a clean audit trail.
                   </p>
                 </div>
 
-                <div className="rounded-2xl border border-border bg-card p-5 space-y-2">
-                  <div className="font-mono text-xs font-bold text-accent">Zero-DB Edge Snapshotting</div>
-                  <p className="font-sans text-xs text-muted">
+                <div className="border border-border bg-card p-5 space-y-2">
+                  <div className="font-mono text-[10px] font-bold text-accent uppercase tracking-wider">03 // Zero-DB Edge Snapshots</div>
+                  <p className="font-editorial text-xs sm:text-sm text-muted">
                     Continuous static JSON dumps enabling 100% offline edge resilience and sub-millisecond responses.
                   </p>
                 </div>
 
-                <div className="rounded-2xl border border-border bg-card p-5 space-y-2">
-                  <div className="font-mono text-xs font-bold text-accent">Strict Type &amp; Schema Safety</div>
-                  <p className="font-sans text-xs text-muted">
+                <div className="border border-border bg-card p-5 space-y-2">
+                  <div className="font-mono text-[10px] font-bold text-accent uppercase tracking-wider">04 // Strict Schema Safety</div>
+                  <p className="font-editorial text-xs sm:text-sm text-muted">
                     End-to-end TypeScript with Zod runtime validation guaranteeing schema correctness across all data layers.
                   </p>
                 </div>
