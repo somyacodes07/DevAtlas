@@ -7,7 +7,7 @@
   --background: #f8fafc;
   --foreground: #0f172a;
   --card: #ffffff;
-  --card-hover: #f1f5f9;
+  --card-hover: #f8fafc;
   --border: #e2e8f0;
   --border-hover: #cbd5e1;
   --muted: #64748b;
@@ -20,15 +20,15 @@
 
 /* Dark Theme */
 .dark {
-  --background: #09090b;
-  --foreground: #fafafa;
-  --card: rgba(255, 255, 255, 0.03);
-  --card-hover: rgba(255, 255, 255, 0.06);
-  --border: rgba(255, 255, 255, 0.1);
-  --border-hover: rgba(255, 255, 255, 0.2);
+  --background: #0a0a0d;
+  --foreground: #f4f4f5;
+  --card: #131318;
+  --card-hover: #191920;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.18);
   --muted: #a1a1aa;
   --accent: #8b5cf6;
-  --accent-subtle: rgba(139, 92, 246, 0.12);
+  --accent-subtle: rgba(139, 92, 246, 0.15);
 }
 
 body {

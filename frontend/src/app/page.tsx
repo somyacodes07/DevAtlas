@@ -57,16 +57,18 @@ export default async function HomePage() {
 
       {/* 2. Telemetry Metrics Strip */}
       <section className="pb-12">
-        <h2 className="font-serif text-2xl font-bold text-foreground mb-6 uppercase tracking-widest border-b border-border pb-2 inline-block">The Index</h2>
+        <h2 className="font-sans text-xl font-extrabold text-foreground mb-6 uppercase tracking-wider border-b border-border pb-2 inline-block">
+          The Index
+        </h2>
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
           {stats.map((s) => (
             <div
               key={s.label}
-              className="rounded-2xl border border-border bg-card p-6 hover:bg-card-hover transition-all flex flex-col hover:-translate-y-1 shadow-lg"
+              className="rounded-2xl border border-border bg-card p-6 hover:bg-card-hover transition-all flex flex-col hover:-translate-y-0.5 shadow-sm"
             >
               <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-muted mb-2">{s.label}</span>
-              <span className="font-serif text-4xl text-foreground">{s.count}</span>
-              <span className="mt-2 text-[10px] font-sans font-medium uppercase text-accent">{s.meta}</span>
+              <span className="font-sans text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight">{s.count}</span>
+              <span className="mt-2 text-[10px] font-mono font-semibold uppercase text-accent">{s.meta}</span>
             </div>
           ))}
         </div>
