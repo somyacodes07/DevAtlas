@@ -44,7 +44,7 @@ export default async function HomePage() {
   const reportSummary = getReportSummarySnippet(latestReport);
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12">
+    <div className="w-full px-4 md:px-8 xl:px-12 py-8 sm:py-12">
       {/* 1. Hero — Front Page Lead */}
       <section className="pb-12">
         <HeroCommandCenter />

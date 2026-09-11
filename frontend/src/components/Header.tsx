@@ -72,7 +72,7 @@ export function Header() {
 
         {/* Newspaper Dateline Bar */}
         <div className="border-b border-rule bg-background">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 py-1.5 flex items-center justify-between">
+          <div className="w-full px-4 md:px-8 xl:px-12 py-1.5 flex items-center justify-between">
             <div className="flex items-center gap-4 font-mono text-[9px] tracking-[0.2em] uppercase text-dateline">
               <span>{currentDate || 'DISPATCH EDITION'}</span>
               <span className="hidden sm:inline text-rule">|</span>
@@ -89,7 +89,7 @@ export function Header() {
         </div>
 
         {/* Grand Broadsheet Masthead */}
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-5 sm:py-7 flex items-center justify-between">
+        <div className="w-full px-4 md:px-8 xl:px-12 py-5 sm:py-7 flex items-center justify-between">
           {/* Logo / Masthead Title */}
           <Link
             href="/"
@@ -137,7 +137,7 @@ export function Header() {
         className="sticky top-0 z-50 w-full bg-background border-b border-rule shadow-xs transition-all duration-200"
         aria-label="Main Navigation"
       >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 flex items-center justify-between h-11 sm:h-12">
+        <div className="w-full px-4 md:px-8 xl:px-12 flex items-center justify-between h-11 sm:h-12">
           {/* Scrolled Press Mark & Identity (Only visible or prominent) */}
           <div className="flex items-center gap-3">
             <Link

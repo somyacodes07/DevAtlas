@@ -61,7 +61,7 @@ export default async function JobsPage() {
   };
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 sm:py-10 space-y-8">
+    <div className="w-full px-4 md:px-8 xl:px-12 py-6 sm:py-10 space-y-8">
       <JsonLd data={jobSchemaList} />
 
       {/* Newspaper Section Header */}

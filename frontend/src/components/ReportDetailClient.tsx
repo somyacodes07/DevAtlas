@@ -64,7 +64,7 @@ export function ReportDetailClient({ initialReport, date }: ReportDetailClientPr
 
   if (loading) {
     return (
-      <div className="mx-auto max-w-4xl px-4 py-12 text-center">
+      <div className="w-full px-4 md:px-8 xl:px-12 py-12 text-center">
         <div className="inline-flex items-center gap-3 border border-border px-5 py-3 font-mono text-[10px] tracking-wider uppercase text-muted animate-pulse">
           <span className="h-2 w-2 rounded-full bg-accent animate-ping" />
           <span>Syncing intelligence digest for {date}...</span>
@@ -75,7 +75,7 @@ export function ReportDetailClient({ initialReport, date }: ReportDetailClientPr
 
   if (!report) {
     return (
-      <div className="mx-auto max-w-4xl px-4 py-12 space-y-6">
+      <div className="w-full px-4 md:px-8 xl:px-12 py-12 space-y-6">
         <div>
           <Link
             href="/reports"
@@ -85,7 +85,7 @@ export function ReportDetailClient({ initialReport, date }: ReportDetailClientPr
           </Link>
         </div>
 
-        <div className="border border-border bg-card p-8 sm:p-12 text-center space-y-6">
+        <div className="border border-border bg-card p-8 sm:p-12 text-center space-y-6 max-w-4xl mx-auto">
           <div className="inline-flex h-16 w-16 items-center justify-center border border-border text-accent">
             <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -115,14 +115,17 @@ export function ReportDetailClient({ initialReport, date }: ReportDetailClientPr
     );
   }
 
-  const title = report.title || `DevAtlas Daily Intelligence Report — ${date}`;
+  const rawTitle = report.title || `DevAtlas Daily Intelligence Report — ${date}`;
+  // Strip "DevAtlas Daily Intelligence Report —" prefix if it exists to make a punchier newspaper headline
+  const headline = rawTitle.replace(/^DevAtlas Daily Intelligence Report —\s*/i, '');
+  
   const quality = report.structuredSummary?.dataQualityScore ?? 100;
   const itemsCount = report.structuredSummary?.itemsDiscovered ?? 80;
 
   return (
-    <div className="mx-auto max-w-4xl px-4 py-6 sm:px-6 sm:py-10 space-y-8">
+    <div className="w-full px-4 md:px-8 xl:px-12 py-6 sm:py-10 space-y-8">
       {/* Breadcrumb & Actions */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-rule pb-4">
         <Link
           href="/reports"
           className="font-mono text-[10px] tracking-wider uppercase text-muted hover:text-foreground inline-flex items-center gap-1 transition-colors"
@@ -139,7 +142,7 @@ export function ReportDetailClient({ initialReport, date }: ReportDetailClientPr
             <svg className="h-3.5 w-3.5 text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
             </svg>
-            <span>{copied ? 'Copied!' : 'Share'}</span>
+            <span>{copied ? 'Copied!' : 'Share Dispatch'}</span>
           </button>
 
           {report.markdownContent && (
@@ -158,124 +161,130 @@ export function ReportDetailClient({ initialReport, date }: ReportDetailClientPr
       </div>
 
       {/* Main Report — Editorial Article Spread */}
-      <article className="border border-border bg-card p-6 sm:p-10 space-y-8">
-        {/* Header */}
-        <div className="border-b border-double-rule-bottom pb-6 space-y-4">
-          <div className="flex flex-wrap items-center gap-2.5 font-mono text-[10px] tracking-wider">
+      <article className="border border-border bg-card">
+        {/* Massive Editorial Header */}
+        <header className="px-6 py-12 sm:px-12 sm:py-16 text-center space-y-8">
+          <div className="flex flex-wrap items-center justify-center gap-4 font-mono text-[10px] tracking-wider">
             <span className="stamp-badge">
               <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
               VERIFIED DIGEST
             </span>
             <span className="text-dateline">•</span>
             <span className="font-bold text-foreground border border-border px-2.5 py-1">
-              {date}
+              VOL. {date.replace(/-/g, '.')}
             </span>
             <span className="text-dateline">•</span>
             <span className="font-bold text-accent border border-accent/30 px-2.5 py-1">
-              Quality {quality}%
-            </span>
-            <span className="text-dateline">•</span>
-            <span className="text-dateline border border-border px-2.5 py-1">
-              {itemsCount} Discoveries
+              Q-SCORE {quality}%
             </span>
           </div>
 
-          <h1 className="font-serif text-2xl sm:text-4xl font-black text-foreground leading-tight tracking-tight">
-            {title}
-          </h1>
-
-          <p className="font-mono text-[9px] tracking-wider uppercase text-dateline leading-relaxed">
-            Autonomous execution via GitHub Actions. Canonicalized multi-source scraping, SHA-256 deduplicated, and committed directly to the DevAtlas Git repository.
-          </p>
+          <div className="py-8 border-y-[3px] border-double-rule relative">
+            <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-foreground leading-[0.85] tracking-tighter uppercase mx-auto max-w-[90%] break-words">
+              {headline}
+            </h1>
+            <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-dateline mt-8 max-w-2xl mx-auto">
+              Autonomous execution via GitHub Actions. SHA-256 deduplicated, and committed directly to the DevAtlas Git repository.
+            </p>
+          </div>
 
           {/* View Mode Switcher */}
-          <div className="flex items-center gap-0 border border-border w-fit">
-            <button
-              onClick={() => setActiveTab('briefing')}
-              className={`px-4 py-1.5 font-mono text-[10px] font-bold tracking-wider uppercase transition-colors ${
-                activeTab === 'briefing'
-                  ? 'bg-foreground text-background'
-                  : 'text-muted hover:text-foreground'
-              }`}
-            >
-              Intelligence Briefing
-            </button>
-            <button
-              onClick={() => setActiveTab('markdown')}
-              className={`px-4 py-1.5 font-mono text-[10px] font-bold tracking-wider uppercase transition-colors border-l border-border ${
-                activeTab === 'markdown'
-                  ? 'bg-foreground text-background'
-                  : 'text-muted hover:text-foreground'
-              }`}
-            >
-              Raw Markdown
-            </button>
+          <div className="flex items-center justify-center pt-2">
+            <div className="flex items-center gap-0 border border-border w-fit">
+              <button
+                onClick={() => setActiveTab('briefing')}
+                className={`px-6 py-2 font-mono text-[10px] font-bold tracking-wider uppercase transition-colors ${
+                  activeTab === 'briefing'
+                    ? 'bg-foreground text-background'
+                    : 'text-muted hover:text-foreground hover:bg-card-hover'
+                }`}
+              >
+                Intelligence Briefing
+              </button>
+              <button
+                onClick={() => setActiveTab('markdown')}
+                className={`px-6 py-2 font-mono text-[10px] font-bold tracking-wider uppercase transition-colors border-l border-border ${
+                  activeTab === 'markdown'
+                    ? 'bg-foreground text-background'
+                    : 'text-muted hover:text-foreground hover:bg-card-hover'
+                }`}
+              >
+                Raw Markdown
+              </button>
+            </div>
           </div>
-        </div>
+        </header>
 
-        {/* Briefing Tab */}
-        {activeTab === 'briefing' && (
-          <div className="space-y-8">
-            {report.markdownContent ? (
-              <ReportMarkdownRenderer content={report.markdownContent} />
-            ) : (
-              <div className="space-y-6">
-                {report.topItems && report.topItems.length > 0 && (
-                  <div className="space-y-4">
-                    <h2 className="font-mono text-[9px] font-bold tracking-[0.2em] uppercase text-dateline border-b border-rule pb-2">
-                      Top Discoveries Cataloged
-                    </h2>
-                    <div className="space-y-0 border border-border">
-                      {report.topItems.map((item, idx) => (
-                        <div
-                          key={idx}
-                          className={`flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 hover:bg-card-hover transition-colors ${
-                            idx < report.topItems!.length - 1 ? 'border-b border-border' : ''
-                          }`}
-                        >
-                          <div>
-                            <div className="font-serif font-bold text-foreground text-sm">{item.title}</div>
-                            {item.category && (
-                              <span className="font-mono text-[9px] text-dateline tracking-wider uppercase">[{item.category}]</span>
+        {/* Content Area */}
+        <div className="border-t border-border p-6 sm:p-12">
+          {/* Briefing Tab (Multi-column Broadsheet) */}
+          {activeTab === 'briefing' && (
+            <div className="max-w-screen-2xl mx-auto">
+              {report.markdownContent ? (
+                <div className="columns-1 md:columns-2 xl:columns-3 gap-8 md:gap-12">
+                  <ReportMarkdownRenderer content={report.markdownContent} />
+                </div>
+              ) : (
+                <div className="space-y-6">
+                  {report.topItems && report.topItems.length > 0 && (
+                    <div className="space-y-4">
+                      <h2 className="font-mono text-[9px] font-bold tracking-[0.2em] uppercase text-dateline border-b border-rule pb-2">
+                        Top Discoveries Cataloged
+                      </h2>
+                      <div className="space-y-0 border border-border">
+                        {report.topItems.map((item, idx) => (
+                          <div
+                            key={idx}
+                            className={`flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 hover:bg-card-hover transition-colors ${
+                              idx < report.topItems!.length - 1 ? 'border-b border-border' : ''
+                            }`}
+                          >
+                            <div>
+                              <div className="font-serif font-bold text-foreground text-sm">{item.title}</div>
+                              {item.category && (
+                                <span className="font-mono text-[9px] text-dateline tracking-wider uppercase">[{item.category}]</span>
+                              )}
+                            </div>
+                            {item.score && (
+                              <span className="font-mono text-[10px] font-bold text-accent border border-accent/30 px-2.5 py-1 shrink-0 tracking-wider">
+                                Score {item.score}/100
+                              </span>
                             )}
                           </div>
-                          {item.score && (
-                            <span className="font-mono text-[10px] font-bold text-accent border border-accent/30 px-2.5 py-1 shrink-0 tracking-wider">
-                              Score {item.score}/100
-                            </span>
-                          )}
-                        </div>
-                      ))}
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
-        )}
+                  )}
+                </div>
+              )}
+            </div>
+          )}
 
-        {/* Raw Markdown Tab */}
-        {activeTab === 'markdown' && (
-          <div className="border border-border bg-background p-4 sm:p-6 overflow-x-auto">
-            <pre className="font-mono text-xs text-foreground/90 whitespace-pre-wrap leading-relaxed">
-              {report.markdownContent || 'No raw markdown content available.'}
-            </pre>
-          </div>
-        )}
-
-        {/* Verification Footer */}
-        <div className="border-t border-double-rule pt-6 mt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 font-mono text-[9px] tracking-wider uppercase text-dateline">
-          <span>Engine: DevAtlas Ingestion Runner v1.2</span>
-          <span>Integrity Gate: SHA-256 Verified</span>
+          {/* Raw Markdown Tab */}
+          {activeTab === 'markdown' && (
+            <div className="border border-border bg-background p-6 sm:p-10 overflow-x-auto max-w-screen-xl mx-auto">
+              <pre className="font-mono text-[11px] sm:text-xs text-foreground/90 whitespace-pre-wrap leading-relaxed">
+                {report.markdownContent || 'No raw markdown content available.'}
+              </pre>
+            </div>
+          )}
         </div>
+
+        {/* Footer Imprint */}
+        <footer className="border-t border-rule p-4 sm:p-6 bg-card-hover">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 font-mono text-[9px] tracking-[0.15em] uppercase text-dateline text-center sm:text-left">
+            <span>Engine: DevAtlas Ingestion Runner v1.2</span>
+            <span>Integrity Gate: SHA-256 Verified • End of Dispatch</span>
+          </div>
+        </footer>
       </article>
     </div>
   );
 }
 
 /**
- * Lightweight, accessible, zero-dependency Markdown Renderer for DevAtlas reports.
- * Formats headings, bullet points, executive briefing callouts, bold highlights, and links beautifully.
+ * Editorial Markdown Renderer for DevAtlas reports.
+ * Employs CSS multi-column layouts, justified text, drop caps, and newspaper typography.
  */
 function ReportMarkdownRenderer({ content }: { content: string }) {
   const lines = content.split('\n');
@@ -284,11 +293,12 @@ function ReportMarkdownRenderer({ content }: { content: string }) {
   let inList = false;
   let listItems: React.ReactNode[] = [];
   let keyCounter = 0;
+  let isFirstParagraph = true;
 
   const flushList = () => {
     if (inList && listItems.length > 0) {
       renderedElements.push(
-        <ul key={`list-${keyCounter++}`} className="space-y-3 pl-2 my-4">
+        <ul key={`list-${keyCounter++}`} className="space-y-3 pl-2 my-5 break-inside-avoid">
           {listItems}
         </ul>
       );
@@ -310,7 +320,9 @@ function ReportMarkdownRenderer({ content }: { content: string }) {
     if (line === '---' || line === '***') {
       flushList();
       renderedElements.push(
-        <hr key={`hr-${keyCounter++}`} className="border-rule my-6" />
+        <div key={`hr-${keyCounter++}`} className="w-full flex justify-center my-8 break-inside-avoid">
+          <span className="font-serif text-lg tracking-[0.5em] text-rule text-center">⁂</span>
+        </div>
       );
       continue;
     }
@@ -321,10 +333,9 @@ function ReportMarkdownRenderer({ content }: { content: string }) {
       renderedElements.push(
         <h2
           key={`h2-${keyCounter++}`}
-          className="font-serif text-xl sm:text-2xl font-black text-foreground mt-8 mb-4 border-b border-double-rule-bottom pb-2 flex items-center gap-2 tracking-tight"
+          className="font-serif text-2xl sm:text-3xl font-black text-foreground mt-10 mb-4 border-b-[3px] border-double-rule-bottom pb-2 tracking-tight uppercase break-after-avoid"
         >
-          <span className="h-2 w-2 bg-accent" />
-          <span>{text}</span>
+          {text}
         </h2>
       );
       continue;
@@ -336,8 +347,9 @@ function ReportMarkdownRenderer({ content }: { content: string }) {
       renderedElements.push(
         <h3
           key={`h3-${keyCounter++}`}
-          className="font-serif text-lg font-bold text-foreground mt-6 mb-2"
+          className="font-serif text-xl font-bold text-foreground mt-8 mb-3 uppercase tracking-wide break-after-avoid flex items-center gap-2"
         >
+          <span className="h-1.5 w-1.5 bg-accent inline-block shrink-0" />
           {text}
         </h3>
       );
@@ -348,9 +360,9 @@ function ReportMarkdownRenderer({ content }: { content: string }) {
       inList = true;
       const text = line.substring(2);
       listItems.push(
-        <li key={`li-${keyCounter++}`} className="font-editorial text-sm leading-relaxed text-muted flex items-start gap-2.5">
-          <span className="mt-1.5 h-1.5 w-1.5 bg-accent shrink-0" />
-          <div>{renderFormattedText(text)}</div>
+        <li key={`li-${keyCounter++}`} className="font-editorial text-[15px] leading-[1.6] text-foreground flex items-start gap-3">
+          <span className="mt-2 h-1 w-1 bg-foreground shrink-0 rounded-full" />
+          <div className="text-justify">{renderFormattedText(text)}</div>
         </li>
       );
       continue;
@@ -360,13 +372,13 @@ function ReportMarkdownRenderer({ content }: { content: string }) {
     if (numberedMatch) {
       flushList();
       renderedElements.push(
-        <div key={`num-${keyCounter++}`} className="border border-border bg-background p-5 my-4 space-y-2 hover:bg-card-hover transition-colors">
+        <div key={`num-${keyCounter++}`} className="border border-border bg-card-hover p-5 my-5 space-y-2 hover:bg-background transition-colors break-inside-avoid">
           <div className="flex items-center gap-2 font-mono text-[10px] font-bold text-accent tracking-wider">
-            <span className="border border-accent/30 px-2 py-0.5">
-              #{String(numberedMatch[1]).padStart(2, '0')}
+            <span className="border border-accent/30 px-2 py-0.5 shadow-sm">
+              ITEM #{String(numberedMatch[1]).padStart(2, '0')}
             </span>
           </div>
-          <div className="font-editorial text-sm leading-relaxed text-foreground">
+          <div className="font-editorial text-[15px] leading-[1.6] text-foreground text-justify">
             {renderFormattedText(numberedMatch[2])}
           </div>
         </div>
@@ -376,17 +388,23 @@ function ReportMarkdownRenderer({ content }: { content: string }) {
 
     if (line.length > 0) {
       flushList();
+      
+      const dropCapClasses = isFirstParagraph 
+        ? "first-letter:float-left first-letter:text-[5.5rem] sm:first-letter:text-[6.5rem] first-letter:font-black first-letter:font-serif first-letter:pr-3 first-letter:pt-2 first-letter:leading-[0.7] first-letter:text-foreground"
+        : "";
+        
       renderedElements.push(
-        <p key={`p-${keyCounter++}`} className="font-editorial text-sm leading-relaxed text-muted my-3">
+        <p key={`p-${keyCounter++}`} className={`font-editorial text-[15px] leading-[1.6] text-foreground my-5 text-justify break-inside-avoid-page ${dropCapClasses}`}>
           {renderFormattedText(line)}
         </p>
       );
+      isFirstParagraph = false;
     }
   }
 
   flushList();
 
-  return <div className="space-y-2">{renderedElements}</div>;
+  return <>{renderedElements}</>;
 }
 
 function renderFormattedText(text: string): React.ReactNode {
@@ -404,7 +422,7 @@ function renderFormattedText(text: string): React.ReactNode {
     if (token.startsWith('**') && token.endsWith('**')) {
       const boldText = token.slice(2, -2);
       parts.push(
-        <strong key={match.index} className="font-bold text-foreground">
+        <strong key={match.index} className="font-bold text-foreground tracking-tight">
           {boldText}
         </strong>
       );
@@ -418,11 +436,11 @@ function renderFormattedText(text: string): React.ReactNode {
             href={url}
             target="_blank"
             rel="noreferrer noopener"
-            className="text-accent underline underline-offset-2 hover:opacity-80 font-bold inline-flex items-center gap-0.5 transition-opacity"
+            className="font-bold text-foreground border-b-2 border-accent/40 hover:border-accent hover:text-accent transition-colors inline-flex items-center gap-0.5"
           >
-            <span>{label}</span>
-            <svg className="h-3 w-3 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            {label}
+            <svg className="h-[0.75em] w-[0.75em] inline opacity-70 ml-0.5 -mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
           </a>
         );
@@ -430,7 +448,7 @@ function renderFormattedText(text: string): React.ReactNode {
     } else if (token.startsWith('`') && token.endsWith('`')) {
       const codeText = token.slice(1, -1);
       parts.push(
-        <code key={match.index} className="border border-border px-1.5 py-0.5 font-mono text-xs text-accent bg-background">
+        <code key={match.index} className="border border-border/60 px-1 py-0.5 font-mono text-[0.85em] font-bold text-accent bg-card-hover rounded-sm">
           {codeText}
         </code>
       );

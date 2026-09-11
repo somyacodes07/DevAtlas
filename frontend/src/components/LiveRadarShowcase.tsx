@@ -34,7 +34,7 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
         </div>
 
         {/* Tab Controls — Newspaper section tabs */}
-        <div className="flex items-center gap-0 border border-border">
+        <div className="flex items-center gap-0 border border-border overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {tabs.map((tab) => (
             <button
               key={tab.key}

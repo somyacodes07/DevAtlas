@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="mt-24 border-t border-double-rule bg-background transition-colors">
       {/* Main Footer Grid */}
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 py-12">
+      <div className="w-full px-4 md:px-8 xl:px-12 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Colophon */}
           <div className="md:col-span-2">
@@ -82,7 +82,7 @@ export function Footer() {
 
       {/* Bottom Imprint Bar */}
       <div className="border-t border-rule">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="w-full px-4 md:px-8 xl:px-12 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="font-mono text-[9px] tracking-[0.15em] uppercase text-dateline">
             &copy; {new Date().getFullYear()} DevAtlas Platform Engineering. Open Source MIT License.
           </div>
