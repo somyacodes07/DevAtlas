@@ -6,6 +6,8 @@ on:
     paths:
       - 'worker/**'
       - 'frontend/**'
+      - 'reports/**'
+      - 'data/**'
       - '.github/workflows/deploy.yml'
   workflow_dispatch:
 

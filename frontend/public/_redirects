@@ -1,0 +1,3 @@
+# DevAtlas Cloudflare Pages Routing Rules
+# SPA fallback for dynamic report date routes
+/reports/:date  /reports/:date/index.html  200

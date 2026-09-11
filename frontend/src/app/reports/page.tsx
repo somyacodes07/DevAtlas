@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { fetchReports } from '@/lib/api';
+import { getAllReports } from '@/lib/reports';
 
 export const metadata: Metadata = {
   title: 'Daily Intelligence Archive',
@@ -18,25 +18,7 @@ export const metadata: Metadata = {
 };
 
 export default async function ReportsIndexPage() {
-  const res = await fetchReports();
-  const reports = res.data.length > 0 ? res.data : [
-    {
-      reportDate: '2026-09-06',
-      title: 'Claude 3.7 Hybrid Reasoning & Cloudflare Workers AI Ingest',
-      structuredSummary: {
-        itemsDiscovered: 417,
-        dataQualityScore: 98.4,
-      },
-    },
-    {
-      reportDate: '2026-09-05',
-      title: 'Summer 2026 Internship Openings Across India Tech Hubs',
-      structuredSummary: {
-        itemsDiscovered: 382,
-        dataQualityScore: 99.1,
-      },
-    },
-  ];
+  const reports = await getAllReports();
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 sm:py-10 space-y-8">
@@ -44,10 +26,10 @@ export default async function ReportsIndexPage() {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <div className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-2.5 py-0.5 text-xs font-mono text-muted mb-2">
-              <span className="h-2 w-2 rounded-full bg-accent" />
+              <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
               <span>DETERMINISTIC ARCHIVE</span>
             </div>
-            <h1 className="font-mono text-2xl sm:text-3xl font-bold text-foreground">
+            <h1 className="font-serif text-2xl sm:text-3xl font-bold text-foreground">
               Daily Intelligence Archive
             </h1>
             <p className="mt-1 text-xs text-muted max-w-xl font-mono">
@@ -56,8 +38,8 @@ export default async function ReportsIndexPage() {
           </div>
 
           <div className="flex items-center gap-3 font-mono text-xs text-muted">
-            <span className="rounded border border-border bg-card px-3 py-1.5 font-bold text-foreground">
-              {reports.length} Reports
+            <span className="rounded-full border border-border bg-card px-3.5 py-1.5 font-bold text-foreground shadow-sm">
+              {reports.length} Reports Published
             </span>
           </div>
         </div>
@@ -68,24 +50,25 @@ export default async function ReportsIndexPage() {
           <Link
             key={r.reportDate}
             href={`/reports/${r.reportDate}`}
-            className="group flex flex-col sm:flex-row sm:items-center justify-between gap-4 rounded-xl border border-border bg-card p-5 transition-all hover:border-zinc-500 hover:bg-card-hover"
+            className="group flex flex-col sm:flex-row sm:items-center justify-between gap-4 rounded-2xl border border-border bg-card p-5 transition-all hover:border-border-hover hover:bg-card-hover shadow-sm"
           >
             <div>
               <div className="flex items-center gap-3">
                 <span className="font-mono text-xs font-bold text-foreground group-hover:text-accent transition-colors">
                   {r.reportDate}
                 </span>
-                <span className="rounded bg-foreground border border-border px-2 py-0.5 text-[10px] font-mono text-accent">
-                  Quality {r.structuredSummary?.dataQualityScore || 98.4}%
+                <span className="rounded-md bg-accent/10 border border-accent/20 px-2 py-0.5 text-[10px] font-mono text-accent font-bold">
+                  Quality {r.structuredSummary?.dataQualityScore ?? 100}%
                 </span>
               </div>
-              <h2 className="mt-1.5 text-sm sm:text-base font-semibold text-zinc-200">
+              <h2 className="mt-2 text-sm sm:text-base font-serif font-bold text-foreground group-hover:text-accent transition-colors">
                 {r.title}
               </h2>
             </div>
 
-            <div className="font-mono text-xs text-muted group-hover:text-foreground transition-colors shrink-0">
-              {r.structuredSummary?.itemsDiscovered || '400+'} items &rarr;
+            <div className="font-mono text-xs text-muted group-hover:text-foreground transition-colors shrink-0 flex items-center gap-1">
+              <span>{r.structuredSummary?.itemsDiscovered || '80+'} items</span>
+              <span className="text-accent">&rarr;</span>
             </div>
           </Link>
         ))}
