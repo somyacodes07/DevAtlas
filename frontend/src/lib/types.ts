@@ -15,6 +15,11 @@ export interface ContentItem {
     technologyImpact: number;
     reasons?: string[];
   };
+  source?: {
+    name?: string;
+    type?: string;
+    url?: string;
+  };
   job?: {
     company: string;
     location: string;

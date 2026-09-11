@@ -61,8 +61,8 @@ export default async function RepositoriesPage() {
             >
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="flex items-start gap-4 flex-1">
-                  <div className="h-10 w-10 rounded-xl bg-zinc-800 text-white flex items-center justify-center font-mono font-bold text-sm shrink-0 border border-white/10 shadow-sm">
-                    ⌥
+                  <div className="h-10 w-10 rounded-lg bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center font-mono font-semibold text-xs text-zinc-700 dark:text-zinc-300 shrink-0">
+                    GH
                   </div>
 
                   <div className="flex-1 min-w-0">

@@ -1,14 +1,24 @@
 /**
- * Universal text and entity sanitizer for clean UI rendering.
- * Thoroughly removes unescaped HTML entities, HTML tags, and formatting artifacts.
+ * Universal text and entity sanitizer for clean developer UI rendering.
+ * Strictly removes all emojis, unescaped HTML entities, HTML tags, and formatting artifacts.
  */
+export function stripEmojis(str: string = ''): string {
+  if (!str) return '';
+  return str
+    .replace(
+      /[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F700}-\u{1F77F}\u{1F780}-\u{1F7FF}\u{1F800}-\u{1F8FF}\u{1F900}-\u{1F9FF}\u{1FA00}-\u{1FA6F}\u{1FA70}-\u{1FAFF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{2300}-\u{23FF}]/gu,
+      ''
+    )
+    .trim();
+}
+
 export function sanitizeText(text: string = ''): string {
   if (!text) return '';
   
   let cleaned = text;
   
   // Repeatedly decode double-escaped entities like &amp;lt; or &amp;quot;
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 4; i++) {
     cleaned = cleaned
       .replace(/&quot;/gi, '"')
       .replace(/&apos;/gi, "'")
@@ -28,49 +38,33 @@ export function sanitizeText(text: string = ''): string {
   // Clean remaining stray entity fragments or escape sequences
   cleaned = cleaned.replace(/&[a-z0-9#]+;/gi, ' ');
 
+  // Strip emojis
+  cleaned = stripEmojis(cleaned);
+
   // Normalize whitespace
   return cleaned.replace(/\s+/g, ' ').trim();
 }
 
 /**
- * Returns clean company initials for avatar badge (e.g. "Datadog" -> "DD", "Google" -> "G")
+ * Returns clean company initials for avatar badge (e.g. "Datadog" -> "DD", "Google" -> "GO")
  */
 export function getCompanyInitials(name: string = ''): string {
-  if (!name) return 'DA';
-  const words = name.trim().split(/\s+/);
+  const clean = sanitizeText(name);
+  if (!clean) return 'DA';
+  const words = clean.trim().split(/\s+/);
   if (words.length >= 2) {
     return (words[0][0] + words[1][0]).toUpperCase();
   }
-  return name.slice(0, 2).toUpperCase();
+  return clean.slice(0, 2).toUpperCase();
 }
 
 /**
- * Returns a consistent gradient accent based on string hash for avatars
- */
-export function getAvatarGradient(name: string = ''): string {
-  const gradients = [
-    'from-violet-600 to-indigo-600 text-white',
-    'from-blue-600 to-cyan-600 text-white',
-    'from-emerald-600 to-teal-600 text-white',
-    'from-amber-600 to-orange-600 text-white',
-    'from-rose-600 to-pink-600 text-white',
-    'from-purple-600 to-fuchsia-600 text-white',
-  ];
-  let hash = 0;
-  for (let i = 0; i < name.length; i++) {
-    hash = name.charCodeAt(i) + ((hash << 5) - hash);
-  }
-  const index = Math.abs(hash) % gradients.length;
-  return gradients[index];
-}
-
-/**
- * Returns language color dot hex
+ * Returns language color dot hex (standard GitHub color palette)
  */
 export function getLanguageColor(lang: string = ''): string {
   const map: Record<string, string> = {
     typescript: '#3178c6',
-    javascript: '#f7df1e',
+    javascript: '#f1e05a',
     python: '#3572A5',
     go: '#00ADD8',
     golang: '#00ADD8',
@@ -84,5 +78,5 @@ export function getLanguageColor(lang: string = ''): string {
     bash: '#89e051',
     zig: '#ec915c',
   };
-  return map[lang.toLowerCase()] || '#8b5cf6';
+  return map[lang.toLowerCase()] || '#71717a';
 }

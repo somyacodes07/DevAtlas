@@ -23,6 +23,7 @@ import { normalizeTitle, normalizeTimestamp } from './normalization/normalizer';
 import { evaluateDataQuality } from './validation/qualityValidator';
 import { calculateRelevanceScore } from './scoring/relevanceScorer';
 import { getAIProvider } from './ai/providerFactory';
+import { DeterministicRuleProvider } from './ai/deterministicRuleProvider';
 import { generateDailyReport } from './reporting/reportGenerator';
 import { getMongoClient, getItemsCollection, getRunsCollection, getReportsCollection } from './database/mongodb';
 import { ContentItem, DiscoveredItem, DiscoverySource, PipelineRunResult } from './types';
@@ -71,6 +72,8 @@ export async function runPipeline(): Promise<PipelineRunResult> {
 
   // 3. Normalization, Deduplication, AI Enrichment & Relevance Scoring
   const aiProvider = getAIProvider();
+  const fallbackProvider = new DeterministicRuleProvider();
+  let aiCallsCount = 0;
   console.log(`[AI Engine] Active provider: ${aiProvider.name}`);
 
   const processedItems: ContentItem[] = [];
@@ -96,8 +99,21 @@ export async function runPipeline(): Promise<PipelineRunResult> {
     }
     seenUrlHashes.add(urlHash);
 
-    // AI Enrichment (Classifier & Summarizer)
-    const aiResult = await aiProvider.classifyAndSummarize(raw);
+    // AI Enrichment with Quota Protection & Circuit Breaker
+    let aiResult;
+    const isNovelItem = raw.type === 'AI_TOOL' || raw.type === 'NEWS';
+    if (aiCallsCount < 8 && isNovelItem) {
+      try {
+        aiResult = await aiProvider.classifyAndSummarize(raw);
+        aiCallsCount++;
+      } catch (err: unknown) {
+        console.warn(`[AI Circuit Breaker] Falling back to deterministic rules: ${err instanceof Error ? err.message : String(err)}`);
+        aiCallsCount = 999; // Trip circuit breaker to protect quota
+        aiResult = await fallbackProvider.classifyAndSummarize(raw);
+      }
+    } else {
+      aiResult = await fallbackProvider.classifyAndSummarize(raw);
+    }
 
     // Scoring
     const score = calculateRelevanceScore(raw);

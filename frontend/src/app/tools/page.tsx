@@ -60,8 +60,8 @@ export default async function ToolsPage() {
               <div>
                 <div className="flex items-start justify-between gap-2 mb-3">
                   <div className="flex items-center gap-2">
-                    <div className="h-8 w-8 rounded-lg bg-violet-600/10 text-violet-500 border border-violet-500/20 flex items-center justify-center font-bold text-xs shrink-0">
-                      ⚡
+                    <div className="h-8 w-8 rounded-lg bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center font-mono font-semibold text-xs text-zinc-700 dark:text-zinc-300 shrink-0">
+                      AI
                     </div>
                     <span className="font-mono text-[10px] uppercase font-bold text-muted border border-border px-2 py-0.5 rounded-md bg-background">
                       {tool.tool?.pricingModel || tool.category || 'AI Tool'}
