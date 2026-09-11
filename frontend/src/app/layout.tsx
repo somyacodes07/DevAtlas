@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter, JetBrains_Mono, Playfair_Display } from 'next/font/google';
+import { Inter, JetBrains_Mono, Playfair_Display, Newsreader } from 'next/font/google';
 import '../styles/globals.css';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -23,10 +23,16 @@ const playfair = Playfair_Display({
   variable: '--font-serif',
 });
 
+const newsreader = Newsreader({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-editorial',
+});
+
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://devatlas.pages.dev';
 
 export const viewport: Viewport = {
-  themeColor: '#09090b',
+  themeColor: '#0e0e10',
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
@@ -97,7 +103,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} ${playfair.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} ${playfair.variable} ${newsreader.variable}`} suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -118,7 +124,7 @@ export default function RootLayout({
         />
         <JsonLd />
       </head>
-      <body className="min-h-screen bg-background font-sans text-foreground antialiased selection:bg-accent/30 selection:text-white" suppressHydrationWarning>
+      <body className="min-h-screen bg-background bg-newsprint font-sans text-foreground antialiased selection:bg-accent/20 selection:text-foreground" suppressHydrationWarning>
         {/* Accessible Skip Link */}
         <a
           href="#main-content"

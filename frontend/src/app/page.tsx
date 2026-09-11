@@ -24,15 +24,10 @@ export default async function HomePage() {
     getAllReports(),
   ]);
 
-  const totalCataloged = (statsData?.today?.jobs ?? 0) + 
-    (statsData?.today?.aiTools ?? 0) + 
-    (statsData?.today?.repositories ?? 0) + 
-    (statsData?.today?.news ?? 0);
-
   const stats = [
-    { label: 'Cataloged Items', count: '469+', meta: 'Daily discovery' },
+    { label: 'Cataloged Signals', count: '469+', meta: 'Daily discovery' },
     { label: 'Verified Roles', count: '339', meta: 'Remote & Global' },
-    { label: 'Security Advisories', count: '20', meta: 'CVE & Supply Chain' },
+    { label: 'Security Wire', count: '20', meta: 'CVE & Supply Chain' },
     { label: 'Tech News & RSS', count: '76', meta: 'Dev.to & HN' },
     { label: 'Data Quality', count: `${statsData?.pipeline?.dataQualityScore ?? 98.4}%`, meta: 'Schema validated' },
   ];
@@ -49,106 +44,138 @@ export default async function HomePage() {
   const reportSummary = getReportSummarySnippet(latestReport);
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12 space-y-16">
-      {/* 1. Hero Command Center */}
-      <section className="pb-16 relative">
+    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12">
+      {/* 1. Hero — Front Page Lead */}
+      <section className="pb-12">
         <HeroCommandCenter />
       </section>
 
-      {/* 2. Telemetry Metrics Strip */}
-      <section className="pb-12">
-        <h2 className="font-sans text-xl font-bold text-foreground mb-6 uppercase tracking-wider border-b border-border pb-2 inline-block">
-          The Index
-        </h2>
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
-          {stats.map((s) => (
+      {/* 2. The Market Ledger — Nous Research-inspired numbered grid */}
+      <section className="border-t border-double-rule pt-8 pb-12">
+        <div className="flex items-center gap-3 mb-6">
+          <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-dateline font-bold">
+            ❖ THE INDEX — MARKET & TELEMETRY LEDGER
+          </span>
+        </div>
+        <div className="grid grid-cols-2 gap-0 sm:grid-cols-3 lg:grid-cols-5 border border-border">
+          {stats.map((s, i) => (
             <div
               key={s.label}
-              className="rounded-xl border border-border bg-card p-5 hover:bg-card-hover transition-colors flex flex-col"
+              className={`p-5 flex flex-col border-r border-b border-border last:border-r-0 hover:bg-card-hover transition-colors ${
+                i >= 3 ? 'hidden sm:flex' : ''
+              } ${i >= 4 ? 'hidden lg:flex' : ''}`}
             >
-              <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-muted mb-1.5">{s.label}</span>
-              <span className="font-sans text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight">{s.count}</span>
-              <span className="mt-2 text-[10px] font-mono font-semibold uppercase text-accent">{s.meta}</span>
+              <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-dateline font-bold mb-2">
+                #{String(i + 1).padStart(2, '0')} {s.label}
+              </span>
+              <span className="font-serif text-3xl sm:text-4xl font-black text-foreground tracking-tight leading-none">
+                {s.count}
+              </span>
+              <span className="mt-2 font-mono text-[9px] tracking-wider uppercase text-accent font-bold">
+                {s.meta}
+              </span>
             </div>
           ))}
         </div>
       </section>
 
-      {/* 3. Interactive Live Radar Showcase (100% Real Scored Data) */}
-      <section>
+      {/* 3. Live Radar Showcase — Newspaper column layout */}
+      <section className="pb-12">
         <LiveRadarShowcase jobs={jobs} tools={tools} repos={repos} />
       </section>
 
-      {/* 4. Platform Architecture Pillars */}
-      <section className="border-t border-border pt-16">
+      {/* 4. Engine Architecture — Nous Research-inspired numbered feature grid */}
+      <section className="border-t border-double-rule pt-8 pb-12">
         <div className="flex items-center justify-between mb-8">
-          <h2 className="font-sans text-2xl sm:text-3xl font-bold text-foreground">Engine Architecture</h2>
-          <Link href="/ops" className="font-mono text-xs text-muted hover:text-foreground transition-colors">
-            System Ops &rarr;
+          <div>
+            <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-dateline font-bold block mb-2">
+              ❖ HOW THE ENGINE WORKS
+            </span>
+            <h2 className="font-serif text-2xl sm:text-3xl font-black text-foreground tracking-tight">
+              Engine Architecture
+            </h2>
+          </div>
+          <Link href="/ops" className="font-mono text-[10px] tracking-wider uppercase text-muted hover:text-foreground transition-colors">
+            System Ops →
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          <div className="rounded-xl border border-border bg-card p-6 hover:bg-card-hover transition-colors">
-            <span className="font-mono text-[10px] font-semibold text-accent bg-accent/10 border border-accent/20 px-2 py-0.5 rounded mb-3 inline-block">
-              STAGE 01
-            </span>
-            <h3 className="font-sans text-lg font-semibold text-foreground mb-2">Multi-Source Ingestion</h3>
-            <p className="font-sans text-xs text-muted leading-relaxed">
-              Automated connectors for GitHub trending, Hacker News, Remotive, Jobicy, Dev.to, and GitHub Security Advisories.
-            </p>
-          </div>
-
-          <div className="rounded-xl border border-border bg-card p-6 hover:bg-card-hover transition-colors">
-            <span className="font-mono text-[10px] font-semibold text-accent bg-accent/10 border border-accent/20 px-2 py-0.5 rounded mb-3 inline-block">
-              STAGE 02
-            </span>
-            <h3 className="font-sans text-lg font-semibold text-foreground mb-3">SHA-256 Deduplication</h3>
-            <p className="font-sans text-xs text-muted leading-relaxed">
-              Dual-hash cryptographic gating and 5-factor scoring engine filtering genuine signal from web noise.
-            </p>
-          </div>
-
-          <div className="rounded-xl border border-border bg-card p-6 hover:bg-card-hover transition-colors">
-            <span className="font-mono text-[10px] font-semibold text-accent bg-accent/10 border border-accent/20 px-2 py-0.5 rounded mb-3 inline-block">
-              STAGE 03
-            </span>
-            <h3 className="font-sans text-lg font-semibold text-foreground mb-3">Cloudflare Edge Delivery</h3>
-            <p className="font-sans text-xs text-muted leading-relaxed">
-              Cloudflare Workers V8 isolates and global KV cache serving queries with sub-millisecond edge latency.
-            </p>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-border">
+          {[
+            {
+              num: '01',
+              title: 'MULTI-SOURCE\nINGESTION',
+              desc: 'Automated connectors for GitHub trending, Hacker News, Remotive, Jobicy, Dev.to, and GitHub Security Advisories.',
+            },
+            {
+              num: '02',
+              title: 'SHA-256\nDEDUPLICATION',
+              desc: 'Dual-hash cryptographic gating and 5-factor scoring engine filtering genuine signal from web noise.',
+            },
+            {
+              num: '03',
+              title: 'CLOUDFLARE\nEDGE DELIVERY',
+              desc: 'Cloudflare Workers V8 isolates and global KV cache serving queries with sub-millisecond edge latency.',
+            },
+          ].map((stage, i) => (
+            <div
+              key={stage.num}
+              className={`p-6 sm:p-8 flex flex-col justify-between hover:bg-card-hover transition-colors ${
+                i < 2 ? 'border-r border-border' : ''
+              }`}
+            >
+              <div>
+                <span className="font-mono text-[10px] tracking-[0.15em] uppercase text-accent font-bold">
+                  STAGE {stage.num}
+                </span>
+                <h3 className="font-serif text-xl sm:text-2xl font-black text-foreground mt-2 leading-tight whitespace-pre-line tracking-tight">
+                  {stage.title}
+                </h3>
+              </div>
+              <p className="font-editorial text-sm text-muted leading-relaxed mt-4">
+                {stage.desc}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* 5. Today's Briefing Spotlight */}
-      <section className="rounded-2xl border border-border bg-card mt-16 p-8 lg:p-12">
-        <div className="flex items-center justify-between border-b border-border pb-4 mb-6">
-          <span className="font-mono text-xs font-semibold uppercase tracking-wider text-muted">Latest Intelligence Briefing</span>
-          <span className="font-mono text-xs text-accent bg-accent/10 border border-accent/20 px-2.5 py-0.5 rounded">
-            {latestReport.reportDate}
-          </span>
-        </div>
-        <h3 className="font-sans text-3xl lg:text-4xl font-bold text-foreground leading-tight mb-4">
-          {latestReport.title}
-        </h3>
-        <p className="font-sans text-sm text-muted leading-relaxed max-w-3xl mb-8">
-          {reportSummary}
-        </p>
+      {/* 5. Today's Briefing Spotlight — Tablet Magazine editorial spread */}
+      <section className="border-t border-double-rule pt-8">
+        <div className="border border-border bg-card p-8 lg:p-12">
+          {/* Header Row */}
+          <div className="flex items-center justify-between border-b border-rule pb-4 mb-6">
+            <span className="stamp-badge">
+              LATEST INTELLIGENCE BRIEFING
+            </span>
+            <span className="font-mono text-[10px] tracking-wider text-dateline">
+              {latestReport.reportDate}
+            </span>
+          </div>
 
-        <div className="flex flex-wrap items-center gap-4">
-          <Link
-            href={`/reports/${latestReport.reportDate}`}
-            className="bg-foreground text-background font-sans text-xs font-semibold uppercase tracking-wider px-6 py-3 rounded-lg hover:opacity-90 transition-opacity"
-          >
-            Read Full Briefing &rarr;
-          </Link>
-          <Link
-            href="/reports"
-            className="font-mono text-xs text-muted hover:text-foreground transition-colors"
-          >
-            Archive &rarr;
-          </Link>
+          {/* Big Editorial Headline */}
+          <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-black text-foreground leading-tight mb-4 tracking-tight">
+            {latestReport.title}
+          </h3>
+
+          <p className="font-editorial text-sm text-muted leading-relaxed max-w-3xl mb-8">
+            {reportSummary}
+          </p>
+
+          <div className="flex flex-wrap items-center gap-3">
+            <Link
+              href={`/reports/${latestReport.reportDate}`}
+              className="bg-foreground text-background font-mono text-[10px] font-bold tracking-[0.15em] uppercase px-6 py-3 hover:opacity-90 transition-opacity"
+            >
+              READ FULL BRIEFING →
+            </Link>
+            <Link
+              href="/reports"
+              className="font-mono text-[10px] tracking-wider uppercase text-muted hover:text-foreground transition-colors"
+            >
+              BROWSE ARCHIVE →
+            </Link>
+          </div>
         </div>
       </section>
     </div>

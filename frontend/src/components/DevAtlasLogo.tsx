@@ -9,9 +9,9 @@ interface DevAtlasLogoProps {
 }
 
 /**
- * The Quantum Atlas Radar Mark
- * A bespoke, precision-engineered geometric SVG emblem representing
- * autonomous telemetry, global radar discovery, and developer cartography.
+ * The DevAtlas Editorial Press Mark
+ * A clean, refined geometric emblem representing
+ * autonomous telemetry and developer cartography.
  */
 export function DevAtlasMark({
   size = 32,
@@ -32,114 +32,54 @@ export function DevAtlasMark({
       className={`shrink-0 select-none ${className}`}
       aria-label="DevAtlas Logo Emblem"
     >
-      <defs>
-        {/* Violet to Indigo Gradient */}
-        <linearGradient id="da-grad-violet" x1="8" y1="8" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#A855F7" />
-          <stop offset="100%" stopColor="#6366F1" />
-        </linearGradient>
-
-        {/* Radiant Cyan Gradient */}
-        <linearGradient id="da-grad-cyan" x1="12" y1="36" x2="36" y2="12" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#06B6D4" />
-          <stop offset="100%" stopColor="#38BDF8" />
-        </linearGradient>
-
-        {/* Emerald Telemetry Gradient */}
-        <linearGradient id="da-grad-emerald" x1="24" y1="4" x2="24" y2="44" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#10B981" />
-          <stop offset="100%" stopColor="#059669" />
-        </linearGradient>
-
-        {/* Ambient Core Glow */}
-        <radialGradient id="da-core-glow" cx="24" cy="24" r="16" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#8B5CF6" stopOpacity="0.4" />
-          <stop offset="100%" stopColor="#8B5CF6" stopOpacity="0" />
-        </radialGradient>
-      </defs>
-
-      {/* Ambient Glow */}
-      <circle cx="24" cy="24" r="18" fill="url(#da-core-glow)" />
-
-      {/* Outer Telemetry Ring */}
+      {/* Outer Circle */}
       <circle
         cx="24"
         cy="24"
-        r="21"
+        r="22"
         stroke="currentColor"
-        strokeWidth="1.2"
-        strokeOpacity="0.18"
-        strokeDasharray="3 3"
+        strokeWidth="1.5"
+        strokeOpacity="0.3"
       />
 
-      {/* Inner Precision Orbital Track */}
+      {/* Inner Circle */}
       <circle
         cx="24"
         cy="24"
         r="16"
         stroke="currentColor"
-        strokeWidth="1.2"
-        strokeOpacity="0.3"
+        strokeWidth="1"
+        strokeOpacity="0.15"
       />
 
-      {/* Cardinal Telemetry Ticks */}
-      <line x1="24" y1="2" x2="24" y2="5" stroke="currentColor" strokeWidth="1.8" strokeOpacity="0.5" strokeLinecap="round" />
-      <line x1="24" y1="43" x2="24" y2="46" stroke="currentColor" strokeWidth="1.8" strokeOpacity="0.5" strokeLinecap="round" />
-      <line x1="2" y1="24" x2="5" y2="24" stroke="currentColor" strokeWidth="1.8" strokeOpacity="0.5" strokeLinecap="round" />
-      <line x1="43" y1="24" x2="46" y2="24" stroke="currentColor" strokeWidth="1.8" strokeOpacity="0.5" strokeLinecap="round" />
+      {/* Cardinal Ticks */}
+      <line x1="24" y1="2" x2="24" y2="6" stroke="currentColor" strokeWidth="1.5" strokeOpacity="0.4" strokeLinecap="round" />
+      <line x1="24" y1="42" x2="24" y2="46" stroke="currentColor" strokeWidth="1.5" strokeOpacity="0.4" strokeLinecap="round" />
+      <line x1="2" y1="24" x2="6" y2="24" stroke="currentColor" strokeWidth="1.5" strokeOpacity="0.4" strokeLinecap="round" />
+      <line x1="42" y1="24" x2="46" y2="24" stroke="currentColor" strokeWidth="1.5" strokeOpacity="0.4" strokeLinecap="round" />
 
-      {/* Rotating Radar Sweep Arc (if animated) */}
-      <g className={animated ? 'origin-center animate-radar-sweep' : ''}>
+      {/* Radar Sweep Arc */}
+      <g className={animated ? 'origin-center animate-[spin_10s_linear_infinite]' : ''}>
         <path
           d="M24 8 A 16 16 0 0 1 40 24"
-          stroke="url(#da-grad-cyan)"
-          strokeWidth="2.2"
+          stroke="currentColor"
+          strokeWidth="2"
           strokeLinecap="round"
+          strokeOpacity="0.6"
         />
       </g>
 
-      {/* Central Atlas Isometric Prism Core */}
-      {/* Top Facet */}
-      <polygon
-        points="24,13 33,18 24,23 15,18"
-        fill="url(#da-grad-violet)"
-        opacity="0.95"
-      />
+      {/* Central Isometric Prism */}
+      <polygon points="24,13 33,18 24,23 15,18" fill="currentColor" opacity="0.85" />
+      <polygon points="24,23 33,18 33,29 24,34" fill="currentColor" opacity="0.5" />
+      <polygon points="24,23 15,18 15,29 24,34" fill="currentColor" opacity="0.65" />
 
-      {/* Right Facet */}
-      <polygon
-        points="24,23 33,18 33,29 24,34"
-        fill="url(#da-grad-cyan)"
-        opacity="0.9"
-      />
+      {/* Prism Edges */}
+      <polygon points="24,13 33,18 24,23 15,18" stroke="currentColor" strokeWidth="0.5" strokeOpacity="0.3" fill="none" />
+      <polygon points="24,23 33,18 33,29 24,34" stroke="currentColor" strokeWidth="0.5" strokeOpacity="0.2" fill="none" />
 
-      {/* Left Facet */}
-      <polygon
-        points="24,23 15,18 15,29 24,34"
-        fill="url(#da-grad-violet)"
-        opacity="0.75"
-      />
-
-      {/* Isometric Facet Highlight Strokes */}
-      <polygon
-        points="24,13 33,18 24,23 15,18"
-        stroke="rgba(255, 255, 255, 0.4)"
-        strokeWidth="0.8"
-      />
-      <polygon
-        points="24,23 33,18 33,29 24,34"
-        stroke="rgba(255, 255, 255, 0.25)"
-        strokeWidth="0.8"
-      />
-      <polygon
-        points="24,23 15,18 15,29 24,34"
-        stroke="rgba(255, 255, 255, 0.25)"
-        strokeWidth="0.8"
-      />
-
-      {/* Quantum Coordinate Center Reticle */}
-      <circle cx="24" cy="23" r="2.2" fill="#FFFFFF" />
-      <circle cx="24" cy="23" r="1" fill="#06B6D4" />
+      {/* Center Dot */}
+      <circle cx="24" cy="23" r="1.5" fill="currentColor" opacity="0.9" />
     </svg>
   );
 }
@@ -159,13 +99,12 @@ export default function DevAtlasLogo({
 
       {showText && (
         <div className="flex flex-col leading-none justify-center">
-          <div className="flex items-center gap-2">
-            <span
-              className={`font-serif text-xl font-bold tracking-tight text-foreground transition-colors group-hover:text-accent ${textClassName}`}
-            >
-              DevAtlas
-            </span>
-          </div>
+          <span className="font-mono text-[7px] tracking-[0.3em] uppercase text-dateline">THE</span>
+          <span
+            className={`font-serif text-lg font-black tracking-tight text-foreground leading-none transition-colors group-hover:text-accent ${textClassName}`}
+          >
+            DEVATLAS
+          </span>
         </div>
       )}
     </div>

@@ -23,62 +23,66 @@ export default async function ToolsPage() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 sm:py-10 space-y-8">
-      {/* Unified Header */}
-      <div className="border-b border-border pb-6">
+      {/* Section Header */}
+      <div className="border-b border-double-rule-bottom pb-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 font-mono text-[11px] font-bold uppercase tracking-widest text-accent mb-2">
-              <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
-              <span>AI Frontier Radar</span>
-            </div>
-            <h1 className="font-sans text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight">
-              AI Tools &amp; Reasoning Models
+            <span className="stamp-badge mb-3 inline-flex">
+              <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+              § C. AI FRONTIER RADAR
+            </span>
+            <h1 className="font-serif text-3xl sm:text-5xl font-black text-foreground tracking-tight">
+              THE MACHINERY &<br />
+              <span className="font-editorial italic text-dateline">Artificial Reasoning Chronicle</span>
             </h1>
-            <p className="mt-1.5 text-sm text-muted max-w-xl font-sans">
+            <p className="mt-3 font-editorial text-sm text-muted max-w-xl leading-relaxed">
               Continuously discovered and evaluated developer tools, reasoning models, and AI frameworks.
             </p>
           </div>
 
-          <div className="flex items-center gap-3 font-mono text-xs">
-            <span className="rounded-full border border-border bg-card px-4 py-2 font-bold uppercase tracking-wider text-foreground shadow-sm">
+          <div className="flex items-center gap-3">
+            <span className="border border-border px-4 py-2 font-mono text-[10px] font-bold tracking-[0.15em] uppercase text-foreground">
               {tools.length} Tools Cataloged
             </span>
           </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {tools.map((tool) => {
+      {/* Tools Grid — Nous Research-inspired numbered cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border border-border">
+        {tools.map((tool, i) => {
           const cleanTitle = sanitizeText(tool.title);
           const cleanDesc = sanitizeText(tool.description || tool.summary || '');
 
           return (
             <div
               key={tool.canonicalUrl || tool.title}
-              className="flex flex-col justify-between rounded-2xl border border-border bg-card p-5 sm:p-6 transition-all duration-300 hover:border-border-hover hover:bg-card-hover hover:-translate-y-0.5 shadow-sm group"
+              className={`p-5 sm:p-6 flex flex-col justify-between hover:bg-card-hover transition-colors ${
+                (i + 1) % 3 !== 0 ? 'border-r border-border' : ''
+              } ${i < tools.length - 3 ? 'border-b border-border' : ''}`}
             >
               <div>
                 <div className="flex items-start justify-between gap-2 mb-3">
                   <div className="flex items-center gap-2">
-                    <div className="h-8 w-8 rounded-lg bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center font-mono font-semibold text-xs text-zinc-700 dark:text-zinc-300 shrink-0">
-                      AI
-                    </div>
-                    <span className="font-mono text-[10px] uppercase font-bold text-muted border border-border px-2 py-0.5 rounded-md bg-background">
+                    <span className="font-mono text-[9px] font-bold uppercase text-dateline tracking-[0.15em]">
+                      #{String(i + 1).padStart(2, '0')}
+                    </span>
+                    <span className="font-mono text-[9px] font-bold uppercase text-dateline tracking-wider border border-border px-2 py-0.5">
                       {tool.tool?.pricingModel || tool.category || 'AI Tool'}
                     </span>
                   </div>
-                  <div className="flex items-center gap-1.5 font-mono text-xs font-bold text-accent bg-accent/10 border border-accent/20 px-2 py-0.5 rounded-md shrink-0">
-                    <span>Score {tool.score?.total || 90}</span>
-                  </div>
+                  <span className="font-mono text-[10px] text-accent font-bold tracking-wider">
+                    Score {tool.score?.total || 90}
+                  </span>
                 </div>
 
-                <h2 className="font-sans text-base font-bold text-foreground group-hover:text-accent transition-colors leading-snug">
+                <h2 className="font-serif text-base font-bold text-foreground hover:text-accent transition-colors leading-snug">
                   <a href={tool.canonicalUrl} target="_blank" rel="noreferrer">
                     {cleanTitle}
                   </a>
                 </h2>
 
-                <p className="mt-2 text-xs text-muted line-clamp-3 leading-relaxed font-sans">
+                <p className="mt-2 font-editorial text-xs text-muted line-clamp-3 leading-relaxed">
                   {cleanDesc}
                 </p>
 
@@ -87,7 +91,7 @@ export default async function ToolsPage() {
                     {tool.tags.slice(0, 4).map((t) => (
                       <span
                         key={t}
-                        className="font-mono text-[10px] text-muted bg-background border border-border px-2 py-0.5 rounded-md"
+                        className="font-mono text-[9px] text-muted border border-border px-2 py-0.5 tracking-wider"
                       >
                         #{sanitizeText(t)}
                       </span>
@@ -96,18 +100,17 @@ export default async function ToolsPage() {
                 )}
               </div>
 
-              <div className="mt-6 pt-4 border-t border-border flex items-center justify-between text-xs font-sans">
-                <span className="font-mono text-[10px] font-bold text-muted uppercase">
+              <div className="mt-6 pt-4 border-t border-rule flex items-center justify-between">
+                <span className="font-mono text-[9px] font-bold text-dateline tracking-wider uppercase">
                   {tool.category}
                 </span>
                 <a
                   href={tool.canonicalUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-full bg-foreground text-background px-3.5 py-1.5 text-xs font-sans font-bold uppercase tracking-wider hover:opacity-90 transition-all shadow-sm flex items-center gap-1"
+                  className="tear-off-btn text-[9px] py-1 px-3"
                 >
-                  <span>Website</span>
-                  <span>&rarr;</span>
+                  WEBSITE →
                 </a>
               </div>
             </div>
@@ -116,7 +119,7 @@ export default async function ToolsPage() {
       </div>
 
       {tools.length === 0 && (
-        <div className="py-16 text-center font-mono text-xs text-muted border border-dashed border-border rounded-2xl">
+        <div className="py-16 text-center font-mono text-[10px] tracking-wider uppercase text-muted border border-dashed border-border">
           No AI tools currently cataloged.
         </div>
       )}

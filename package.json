@@ -30,5 +30,10 @@
     "ai"
   ],
   "author": "DevAtlas Team",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "cli": "^1.0.1",
+    "pro": "^0.3.0",
+    "ui": "^0.2.4"
+  }
 }

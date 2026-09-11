@@ -22,53 +22,58 @@ export default async function ReportsIndexPage() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 sm:py-10 space-y-8">
-      <div className="border-b border-border pb-5">
+      {/* Section Header */}
+      <div className="border-b border-double-rule-bottom pb-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-2.5 py-0.5 text-xs font-mono text-muted mb-2">
-              <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
-              <span>DETERMINISTIC ARCHIVE</span>
-            </div>
-            <h1 className="font-serif text-2xl sm:text-3xl font-bold text-foreground">
-              Daily Intelligence Archive
+            <span className="stamp-badge mb-3 inline-flex">
+              <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+              § E. DETERMINISTIC ARCHIVE
+            </span>
+            <h1 className="font-serif text-3xl sm:text-5xl font-black text-foreground tracking-tight">
+              DAILY INTELLIGENCE<br />
+              <span className="font-editorial italic text-dateline">Archive & Dispatches</span>
             </h1>
-            <p className="mt-1 text-xs text-muted max-w-xl font-mono">
+            <p className="mt-3 font-editorial text-sm text-muted max-w-xl leading-relaxed">
               Autonomous daily digests committed directly to the repository via GitHub Actions.
             </p>
           </div>
 
-          <div className="flex items-center gap-3 font-mono text-xs text-muted">
-            <span className="rounded-full border border-border bg-card px-3.5 py-1.5 font-bold text-foreground shadow-sm">
+          <div className="flex items-center gap-3">
+            <span className="border border-border px-4 py-2 font-mono text-[10px] font-bold tracking-[0.15em] uppercase text-foreground">
               {reports.length} Reports Published
             </span>
           </div>
         </div>
       </div>
 
-      <div className="space-y-3">
-        {reports.map((r) => (
+      {/* Report Listings */}
+      <div className="space-y-0 border border-border">
+        {reports.map((r, idx) => (
           <Link
             key={r.reportDate}
             href={`/reports/${r.reportDate}`}
-            className="group flex flex-col sm:flex-row sm:items-center justify-between gap-4 rounded-2xl border border-border bg-card p-5 transition-all hover:border-border-hover hover:bg-card-hover shadow-sm"
+            className={`group flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-5 transition-colors hover:bg-card-hover ${
+              idx < reports.length - 1 ? 'border-b border-border' : ''
+            }`}
           >
             <div>
               <div className="flex items-center gap-3">
-                <span className="font-mono text-xs font-bold text-foreground group-hover:text-accent transition-colors">
+                <span className="font-mono text-[10px] font-bold text-foreground tracking-wider group-hover:text-accent transition-colors">
                   {r.reportDate}
                 </span>
-                <span className="rounded-md bg-accent/10 border border-accent/20 px-2 py-0.5 text-[10px] font-mono text-accent font-bold">
+                <span className="font-mono text-[9px] font-bold text-accent border border-accent/30 px-2 py-0.5 tracking-wider">
                   Quality {r.structuredSummary?.dataQualityScore ?? 100}%
                 </span>
               </div>
-              <h2 className="mt-2 text-sm sm:text-base font-serif font-bold text-foreground group-hover:text-accent transition-colors">
+              <h2 className="mt-2 font-serif text-sm sm:text-base font-bold text-foreground group-hover:text-accent transition-colors">
                 {r.title}
               </h2>
             </div>
 
-            <div className="font-mono text-xs text-muted group-hover:text-foreground transition-colors shrink-0 flex items-center gap-1">
+            <div className="font-mono text-[10px] tracking-wider uppercase text-muted group-hover:text-foreground transition-colors shrink-0 flex items-center gap-1">
               <span>{r.structuredSummary?.itemsDiscovered || '80+'} items</span>
-              <span className="text-accent">&rarr;</span>
+              <span className="text-accent">→</span>
             </div>
           </Link>
         ))}
