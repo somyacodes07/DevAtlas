@@ -41,7 +41,7 @@ export default async function ExplorePage() {
           </div>
 
           <div className="flex items-center gap-3 font-mono text-xs text-muted">
-            <span className="border border-border bg-foreground px-4 py-2 font-bold uppercase tracking-wider text-background">
+            <span className="rounded-full border border-border bg-card px-4 py-2 font-bold uppercase tracking-wider text-foreground shadow-sm">
               {items.length} Discoveries
             </span>
           </div>

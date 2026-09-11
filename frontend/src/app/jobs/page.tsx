@@ -4,21 +4,21 @@ import { JobsClient } from '@/components/JobsClient';
 import { JsonLd } from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Verified Developer Jobs & Internships',
+  title: 'Verified Developer Jobs & Engineering Roles',
   description:
-    'Curated software engineering roles, high-stipend summer 2026 internships, and senior positions across India tech hubs and Remote Worldwide.',
+    'Curated software engineering roles, verified backend, infrastructure, and QA positions across Remote Worldwide, Europe, and Global tech hubs.',
   keywords: [
-    'software engineering internships 2026',
-    'bengaluru developer jobs',
-    'india tech salaries',
-    'remote software engineering roles',
-    'cred backend engineer',
-    'google india internship',
+    'software engineering jobs 2026',
+    'remote developer jobs',
+    'datadog engineering roles',
+    'qa automation engineer',
+    'backend software engineer',
+    'arbeitnow verified tech jobs',
   ],
   openGraph: {
-    title: 'Verified Developer Jobs & Internships | DevAtlas',
+    title: 'Verified Developer Jobs & Engineering Roles | DevAtlas',
     description:
-      'Curated software engineering roles, high-stipend summer 2026 internships, and senior positions with verified compensation.',
+      'Curated software engineering roles, infrastructure positions, and developer jobs with verified requirements.',
     url: '/jobs',
   },
   alternates: {
@@ -44,7 +44,7 @@ export default async function JobsPage() {
         datePosted: item.publishedAt || new Date().toISOString(),
         hiringOrganization: {
           '@type': 'Organization',
-          name: item.job?.company || 'Verified Company',
+          name: item.job?.company || 'Verified Tech Company',
         },
         jobLocation: {
           '@type': 'Place',
@@ -55,16 +55,6 @@ export default async function JobsPage() {
         },
         employmentType:
           item.job?.experienceLevel === 'INTERNSHIP' ? 'INTERN' : 'FULL_TIME',
-        baseSalary: item.job?.salary
-          ? {
-              '@type': 'MonetaryAmount',
-              currency: 'INR',
-              value: {
-                '@type': 'QuantitativeValue',
-                unitText: 'MONTH',
-              },
-            }
-          : undefined,
         url: item.canonicalUrl,
       },
     })),
@@ -83,15 +73,15 @@ export default async function JobsPage() {
               <span>VERIFIED HIRING RADAR</span>
             </div>
             <h1 className="font-serif text-3xl sm:text-4xl font-bold text-foreground">
-              Developer Jobs & Internships
+              Developer Jobs &amp; Engineering Roles
             </h1>
             <p className="mt-2 text-sm text-foreground/80 max-w-xl font-sans">
-              Curated roles with verified stipend & CTC data across Bengaluru, Hyderabad, and Remote Worldwide.
+              Curated roles with verified requirements across Remote Worldwide, Europe, and Global tech hubs.
             </p>
           </div>
 
           <div className="flex items-center gap-3 font-mono text-xs text-muted">
-            <span className="border border-border bg-foreground px-4 py-2 font-bold uppercase tracking-wider text-background">
+            <span className="rounded-full border border-border bg-card px-4 py-2 font-bold uppercase tracking-wider text-foreground shadow-sm">
               {jobs.length} Active Roles
             </span>
           </div>

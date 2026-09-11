@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo, useRef } from 'react';
-import { ContentItem } from '@/lib/api';
+import type { ContentItem } from '@/lib/types';
 
 interface JobsClientProps {
   initialJobs: ContentItem[];
@@ -14,27 +14,6 @@ export function JobsClient({ initialJobs }: JobsClientProps) {
   const [workMode, setWorkMode] = useState<'ALL' | 'REMOTE' | 'HYBRID' | 'ON_SITE'>('ALL');
   const [selectedRegion, setSelectedRegion] = useState<'ALL' | 'INDIA' | 'GLOBAL_REMOTE' | 'NORTH_AMERICA' | 'EUROPE'>('ALL');
   const [selectedExp, setSelectedExp] = useState<string>('ALL');
-
-  // Quick stats computed across raw jobs
-  const stats = useMemo(() => {
-    let indiaCount = 0;
-    let remoteCount = 0;
-    let internshipCount = 0;
-
-    initialJobs.forEach((job) => {
-      if (job.job?.region === 'INDIA' || (job.job?.location && job.job.location.includes('India'))) {
-        indiaCount++;
-      }
-      if (job.job?.remote || job.job?.workMode === 'REMOTE') {
-        remoteCount++;
-      }
-      if (job.job?.experienceLevel === 'INTERNSHIP' || job.title.toLowerCase().includes('intern')) {
-        internshipCount++;
-      }
-    });
-
-    return { total: initialJobs.length, indiaCount, remoteCount, internshipCount };
-  }, [initialJobs]);
 
   // Synchronous 0ms in-memory filtering
   const filteredJobs = useMemo(() => {
@@ -52,8 +31,14 @@ export function JobsClient({ initialJobs }: JobsClientProps) {
       // Region Filter
       if (selectedRegion !== 'ALL') {
         if (selectedRegion === 'INDIA') {
-          const isIndia = j.region === 'INDIA' || (j.location && j.location.includes('India'));
+          const isIndia = j.region === 'INDIA' || (j.location && j.location.toLowerCase().includes('india'));
           if (!isIndia) return false;
+        } else if (selectedRegion === 'GLOBAL_REMOTE') {
+          const isRemote = j.remote || j.workMode === 'REMOTE' || (j.location && j.location.toLowerCase().includes('remote'));
+          if (!isRemote) return false;
+        } else if (selectedRegion === 'EUROPE') {
+          const isEurope = j.region === 'EUROPE' || (j.location && (j.location.toLowerCase().includes('berlin') || j.location.toLowerCase().includes('germany') || j.location.toLowerCase().includes('kassel') || j.location.toLowerCase().includes('london') || j.location.toLowerCase().includes('europe')));
+          if (!isEurope) return false;
         } else if (j.region && j.region !== selectedRegion) {
           return false;
         }
@@ -64,6 +49,9 @@ export function JobsClient({ initialJobs }: JobsClientProps) {
         if (selectedExp === 'INTERNSHIP') {
           const isIntern = j.experienceLevel === 'INTERNSHIP' || item.title.toLowerCase().includes('intern');
           if (!isIntern) return false;
+        } else if (selectedExp === 'SENIOR') {
+          const isSenior = j.experienceLevel === 'SENIOR' || item.title.toLowerCase().includes('senior') || item.title.toLowerCase().includes('lead');
+          if (!isSenior) return false;
         } else if (j.experienceLevel && j.experienceLevel !== selectedExp) {
           return false;
         }
@@ -91,7 +79,7 @@ export function JobsClient({ initialJobs }: JobsClientProps) {
     <div className="space-y-6">
       {/* Search Input */}
       <div className="relative">
-        <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-muted/60">
+        <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4 text-muted">
           <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
@@ -101,13 +89,13 @@ export function JobsClient({ initialJobs }: JobsClientProps) {
           type="text"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder="Filter by role (e.g. Intern, SDE-2), company, or skills (e.g. Go, Python)..."
-          className="w-full rounded-none border border-foreground/20 bg-card py-3 pl-10 pr-20 text-xs font-mono text-foreground placeholder-zinc-500 focus:border-white focus:outline-none transition-all"
+          placeholder="Filter by role (e.g. Senior, Engineer, QA), company (e.g. Datadog), or skills..."
+          className="w-full rounded-full border border-border bg-card py-4 pl-12 pr-20 text-xs font-mono text-foreground placeholder-muted focus:border-accent focus:ring-1 focus:ring-accent focus:outline-none transition-all shadow-sm"
         />
         {searchQuery && (
           <button
             onClick={() => setSearchQuery('')}
-            className="absolute inset-y-0 right-0 flex items-center pr-3.5 text-muted/60 hover:text-foreground text-xs font-mono"
+            className="absolute inset-y-0 right-0 flex items-center pr-4 text-muted hover:text-foreground text-xs font-mono font-bold"
           >
             Clear
           </button>
@@ -115,9 +103,9 @@ export function JobsClient({ initialJobs }: JobsClientProps) {
       </div>
 
       {/* Filter Controls: Mobile-Friendly Scrollable Pills & Dropdowns */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-none border border-foreground/20 bg-card/60 p-3 sm:p-4">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-2xl sm:rounded-full border border-border bg-card p-2.5 sm:p-3 shadow-sm">
         {/* Work Mode Scrollable Tabs */}
-        <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1 sm:pb-0">
+        <div className="flex items-center gap-1 overflow-x-auto no-scrollbar pb-1 sm:pb-0">
           {[
             { label: 'All', val: 'ALL' },
             { label: 'Remote', val: 'REMOTE' },
@@ -127,10 +115,10 @@ export function JobsClient({ initialJobs }: JobsClientProps) {
             <button
               key={m.val}
               onClick={() => setWorkMode(m.val as any)}
-              className={`rounded-none px-3 py-1.5 text-xs font-mono shrink-0 transition-colors ${
+              className={`rounded-full px-3.5 py-1.5 text-xs font-mono font-bold shrink-0 transition-all ${
                 workMode === m.val
-                  ? 'bg-white font-bold text-black'
-                  : 'bg-foreground text-background'
+                  ? 'bg-foreground text-background shadow-sm'
+                  : 'text-muted hover:text-foreground hover:bg-card-hover'
               }`}
             >
               {m.label}
@@ -143,25 +131,23 @@ export function JobsClient({ initialJobs }: JobsClientProps) {
           <select
             value={selectedRegion}
             onChange={(e) => setSelectedRegion(e.target.value as any)}
-            className="rounded-none border border-foreground/20 bg-foreground text-background focus:outline-none"
+            className="rounded-full border border-border bg-background px-3 py-1.5 text-xs font-mono font-medium text-foreground focus:outline-none focus:border-accent"
           >
-            <option value="ALL">All Regions</option>
-            <option value="INDIA">India</option>
+            <option value="ALL">All Locations</option>
             <option value="GLOBAL_REMOTE">Remote Worldwide</option>
-            <option value="NORTH_AMERICA">North America</option>
             <option value="EUROPE">Europe</option>
+            <option value="INDIA">India</option>
+            <option value="NORTH_AMERICA">North America</option>
           </select>
 
           <select
             value={selectedExp}
             onChange={(e) => setSelectedExp(e.target.value)}
-            className="rounded-none border border-foreground/20 bg-foreground text-background focus:outline-none"
+            className="rounded-full border border-border bg-background px-3 py-1.5 text-xs font-mono font-medium text-foreground focus:outline-none focus:border-accent"
           >
             <option value="ALL">All Levels</option>
+            <option value="SENIOR">Senior Roles</option>
             <option value="INTERNSHIP">Internships</option>
-            <option value="SENIOR">Senior</option>
-            <option value="MID">Mid-Level</option>
-            <option value="ENTRY">Entry Level</option>
           </select>
         </div>
       </div>
@@ -179,7 +165,7 @@ export function JobsClient({ initialJobs }: JobsClientProps) {
               setSelectedRegion('ALL');
               setSelectedExp('ALL');
             }}
-            className="text-accent hover:underline"
+            className="text-accent hover:underline font-bold"
           >
             Reset Filters
           </button>
@@ -195,53 +181,50 @@ export function JobsClient({ initialJobs }: JobsClientProps) {
           return (
             <div
               key={item._id || item.canonicalUrl}
-              className="rounded-none border border-foreground/20 bg-card p-4 sm:p-5 transition-all hover:border-zinc-500 hover:bg-card-hover group"
+              className="rounded-2xl border border-border bg-card p-5 sm:p-6 transition-all duration-300 hover:border-border-hover hover:bg-card-hover hover:-translate-y-0.5 shadow-sm group"
             >
               <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
                 <div className="flex-1">
-                  <div className="flex flex-wrap items-center gap-2 mb-1.5">
-                    <span className="font-mono text-xs font-bold text-foreground bg-foreground text-background border border-foreground/20 px-2 py-0.5 rounded">
-                      {j.company || 'Company'}
+                  <div className="flex flex-wrap items-center gap-2 mb-2">
+                    <span className="font-mono text-xs font-bold text-accent bg-accent/10 border border-accent/20 px-2 py-0.5 rounded-md">
+                      {j.company || 'Tech Company'}
                     </span>
                     {isInternship && (
-                      <span className="font-mono text-[10px] font-bold text-amber-300 bg-amber-950/60 border border-amber-800 px-2 py-0.5 rounded">
+                      <span className="font-mono text-[10px] font-bold text-amber-600 dark:text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2 py-0.5 rounded-md">
                         INTERNSHIP
                       </span>
                     )}
                     {j.workMode && (
-                      <span className="font-mono text-[10px] text-muted bg-foreground text-background border border-foreground/20 px-1.5 py-0.5 rounded">
+                      <span className="font-mono text-[10px] text-muted bg-background border border-border px-2 py-0.5 rounded-md">
                         {j.workMode.replace('_', ' ')}
                       </span>
                     )}
                     {j.sourcePlatform && (
-                      <span className="font-mono text-[10px] text-muted/60">
+                      <span className="font-mono text-[10px] text-muted">
                         via {j.sourcePlatform}
                       </span>
                     )}
                   </div>
 
-                  <h3 className="font-mono text-sm sm:text-base font-semibold text-foreground mt-1">
+                  <h2 className="font-serif text-xl sm:text-2xl font-bold text-foreground group-hover:text-accent transition-colors leading-tight">
                     {item.title}
-                  </h3>
-                  <p className="font-mono text-xs text-muted mt-0.5">
+                  </h2>
+
+                  <p className="mt-1 font-sans text-xs text-muted font-medium">
                     {j.location || 'Remote'}
                   </p>
 
-                  {j.salary && (
-                    <div className="mt-2.5 inline-block font-mono text-xs font-bold text-accent bg-emerald-950/40 border border-emerald-900/60 px-2.5 py-1 rounded">
-                      <span className="text-[10px] text-muted/60 font-normal mr-1 uppercase">
-                        {isInternship ? 'Stipend:' : 'Comp:'}
-                      </span>
-                      {j.salary}
-                    </div>
-                  )}
+                  <p className="mt-2.5 font-sans text-xs sm:text-sm text-foreground/80 line-clamp-2 leading-relaxed max-w-3xl">
+                    {item.description || item.summary}
+                  </p>
 
-                  {j.skills && j.skills.length > 0 && (
-                    <div className="mt-3 flex flex-wrap gap-1.5">
-                      {j.skills.slice(0, 5).map((skill) => (
+                  {/* Skills / Tech Stack Tags */}
+                  {((j.skills && j.skills.length > 0) || (item.tags && item.tags.length > 0)) && (
+                    <div className="mt-3.5 flex flex-wrap gap-1.5">
+                      {(j.skills || item.tags || []).slice(0, 5).map((skill) => (
                         <span
                           key={skill}
-                          className="font-mono text-[10px] text-muted bg-foreground text-background border border-foreground/20 px-2 py-0.5 rounded"
+                          className="font-mono text-[10px] font-medium text-muted bg-background border border-border px-2 py-0.5 rounded-md"
                         >
                           {skill}
                         </span>
@@ -250,12 +233,18 @@ export function JobsClient({ initialJobs }: JobsClientProps) {
                   )}
                 </div>
 
-                <div className="pt-2 sm:pt-0 sm:self-start">
+                {/* Right Action & Scoring */}
+                <div className="flex sm:flex-col items-center sm:items-end justify-between sm:justify-start gap-3 mt-3 sm:mt-0 pt-3 sm:pt-0 border-t sm:border-t-0 border-border">
+                  {item.score?.total && (
+                    <span className="font-mono text-xs font-bold text-accent bg-accent/10 border border-accent/20 px-2.5 py-1 rounded-md">
+                      Score {item.score.total}
+                    </span>
+                  )}
                   <a
                     href={item.canonicalUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center justify-center rounded-none bg-white px-4 py-2 text-xs font-mono font-bold text-black hover:bg-zinc-200 transition-colors w-full sm:w-auto"
+                    className="rounded-full bg-foreground text-background px-5 py-2 text-xs font-sans font-bold uppercase tracking-wider hover:opacity-90 transition-all shadow-sm shrink-0"
                   >
                     Apply &rarr;
                   </a>
@@ -266,8 +255,8 @@ export function JobsClient({ initialJobs }: JobsClientProps) {
         })}
 
         {filteredJobs.length === 0 && (
-          <div className="py-12 text-center font-mono text-xs text-muted/60 border border-dashed border-foreground/20 rounded-none">
-            No roles matched your current filters. Try resetting search parameters.
+          <div className="py-16 text-center font-mono text-xs text-muted border border-dashed border-border rounded-2xl">
+            No matching roles found for current filter criteria.
           </div>
         )}
       </div>

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { ContentItem } from '@/lib/api';
+import type { ContentItem } from '@/lib/types';
 
 interface LiveRadarShowcaseProps {
   jobs: ContentItem[];
@@ -14,42 +14,42 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
   const [activeTab, setActiveTab] = useState<'jobs' | 'tools' | 'repos'>('jobs');
 
   return (
-    <div className="border-t-4 border-black pt-8 bg-background">
+    <div className="pt-8 bg-background">
       {/* Header & Tabs */}
-      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 border-b border-black pb-6">
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 border-b border-border pb-6">
         <div>
-          <h2 className="font-serif text-3xl font-bold text-black tracking-tight">Live Radar</h2>
-          <p className="text-sm text-black/70 mt-2 font-sans max-w-md">Real-time cataloged roles, AI reasoning tools, and repositories from our autonomous engines.</p>
+          <h2 className="font-serif text-3xl font-bold text-foreground tracking-tight">Live Radar</h2>
+          <p className="text-sm text-muted mt-2 font-sans max-w-md">Real-time cataloged roles, AI reasoning tools, and repositories from our autonomous engines.</p>
         </div>
 
-        {/* Tab Controls - Editorial style */}
-        <div className="flex items-center border border-black p-1 font-sans text-xs font-bold uppercase tracking-wider bg-white">
+        {/* Tab Controls - Pill style */}
+        <div className="flex items-center rounded-full border border-border p-1 font-sans text-xs font-bold uppercase tracking-wider bg-card shadow-sm">
           <button
             onClick={() => setActiveTab('jobs')}
-            className={`px-4 py-2 transition-colors ${
+            className={`px-4 py-2 transition-all rounded-full ${
               activeTab === 'jobs'
-                ? 'bg-foreground text-background'
-                : 'text-black hover:bg-black/10'
+                ? 'bg-foreground text-background shadow-sm font-bold'
+                : 'text-muted hover:bg-card-hover hover:text-foreground'
             }`}
           >
             Roles ({jobs.length})
           </button>
           <button
             onClick={() => setActiveTab('tools')}
-            className={`px-4 py-2 transition-colors border-l border-r border-black ${
+            className={`px-4 py-2 transition-all rounded-full mx-1 ${
               activeTab === 'tools'
-                ? 'bg-foreground text-background'
-                : 'text-black hover:bg-black/10'
+                ? 'bg-foreground text-background shadow-sm font-bold'
+                : 'text-muted hover:bg-card-hover hover:text-foreground'
             }`}
           >
             AI Tools ({tools.length})
           </button>
           <button
             onClick={() => setActiveTab('repos')}
-            className={`px-4 py-2 transition-colors ${
+            className={`px-4 py-2 transition-all rounded-full ${
               activeTab === 'repos'
-                ? 'bg-foreground text-background'
-                : 'text-black hover:bg-black/10'
+                ? 'bg-foreground text-background shadow-sm font-bold'
+                : 'text-muted hover:bg-card-hover hover:text-foreground'
             }`}
           >
             Repos ({repos.length})
@@ -61,7 +61,7 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
       <div className="mt-8">
         {activeTab === 'jobs' && (
           <div className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border-t border-l border-black">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {jobs.slice(0, 4).map((item) => {
                 const j = item.job;
                 const isIntern = j?.experienceLevel === 'INTERNSHIP' || item.title.toLowerCase().includes('intern');
@@ -69,45 +69,45 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
                 return (
                   <div
                     key={item.title}
-                    className="flex flex-col justify-between border-r border-b border-black bg-white p-6 hover:bg-card-hover transition-colors group"
+                    className="flex flex-col justify-between rounded-2xl border border-border bg-card p-6 hover:border-border-hover hover:bg-card-hover group hover:-translate-y-0.5 transition-all duration-300 shadow-sm"
                   >
                     <div>
-                      <div className="flex flex-wrap items-center gap-2 mb-4 font-sans text-[10px] font-bold uppercase tracking-widest text-black">
-                        <span className="border-b border-black pb-0.5">
+                      <div className="flex flex-wrap items-center gap-2 mb-4 font-sans text-[10px] font-bold uppercase tracking-widest text-muted">
+                        <span className="font-mono text-accent bg-accent/10 border border-accent/20 px-2 py-0.5 rounded-md">
                           {j?.company || 'Company'}
                         </span>
                         {isIntern && (
-                          <span className="bg-accent text-foreground px-2 py-0.5">
+                          <span className="bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20 rounded-md px-2 py-0.5">
                             INTERNSHIP
                           </span>
                         )}
                         {j?.workMode && (
-                          <span className="border border-black px-2 py-0.5">
+                          <span className="border border-border rounded-md px-2 py-0.5 bg-background">
                             {j.workMode.replace('_', ' ')}
                           </span>
                         )}
                       </div>
 
-                      <h3 className="font-serif text-2xl font-bold text-black leading-tight group-hover:text-accent transition-colors">
+                      <h3 className="font-serif text-2xl font-bold text-foreground leading-tight group-hover:text-accent transition-colors">
                         {item.title}
                       </h3>
-                      <p className="font-sans text-xs text-black/70 mt-2 font-medium tracking-wide">
+                      <p className="font-sans text-xs text-muted mt-2 font-medium tracking-wide">
                         {j?.location || 'Remote'}
                       </p>
 
                       {j?.salary && (
-                        <div className="mt-4 inline-block font-mono text-sm font-bold text-black border-l-2 border-accent pl-3 py-0.5">
+                        <div className="mt-4 inline-block font-mono text-xs font-bold text-foreground border border-border bg-background rounded-md px-3 py-1">
                           {j.salary}
                         </div>
                       )}
                     </div>
 
-                    <div className="mt-8 pt-4 border-t border-black/20 flex items-center justify-between">
-                      <div className="flex flex-wrap gap-2">
-                        {(j?.skills || []).slice(0, 3).map((s) => (
+                    <div className="mt-8 pt-4 border-t border-border flex items-center justify-between">
+                      <div className="flex flex-wrap gap-1.5">
+                        {(j?.skills || item.tags || []).slice(0, 3).map((s) => (
                           <span
                             key={s}
-                            className="font-sans text-[10px] font-bold uppercase tracking-wider text-black border border-black/30 px-2 py-1"
+                            className="font-mono text-[10px] font-medium text-muted border border-border rounded-md px-2 py-0.5 bg-background"
                           >
                             {s}
                           </span>
@@ -117,9 +117,9 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
                          href={item.canonicalUrl}
                          target="_blank"
                          rel="noreferrer"
-                         className="font-sans text-xs text-background bg-black px-4 py-2 font-bold uppercase tracking-wider hover:bg-accent transition-colors shrink-0"
+                         className="font-sans text-xs text-background bg-foreground rounded-full px-5 py-2 font-bold uppercase tracking-wider hover:opacity-90 transition-all shrink-0 shadow-sm"
                       >
-                        Apply
+                        Apply &rarr;
                       </a>
                     </div>
                   </div>
@@ -130,9 +130,9 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
             <div className="pt-4 text-center">
               <Link
                 href="/jobs"
-                className="inline-flex items-center gap-2 font-sans text-sm font-bold uppercase tracking-widest text-black border-b border-black hover:text-accent hover:border-accent transition-colors pb-1"
+                className="inline-flex items-center gap-2 font-sans text-sm font-bold uppercase tracking-widest text-muted border-b border-border hover:text-foreground hover:border-foreground transition-colors pb-1"
               >
-                <span>View all verified roles & internships</span>
+                <span>View all {jobs.length} verified roles</span>
                 <span>&rarr;</span>
               </Link>
             </div>
@@ -141,37 +141,37 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
 
         {activeTab === 'tools' && (
           <div className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-l border-black">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {tools.slice(0, 3).map((item) => (
                 <div
                   key={item.title}
-                  className="flex flex-col justify-between border-r border-b border-black bg-white p-6 hover:bg-card-hover transition-colors group"
+                  className="flex flex-col justify-between rounded-2xl border border-border bg-card p-6 hover:border-border-hover hover:bg-card-hover group hover:-translate-y-0.5 transition-all duration-300 shadow-sm"
                 >
                   <div>
                     <div className="flex items-center justify-between gap-2 mb-4">
-                      <span className="font-sans text-[10px] font-bold uppercase tracking-widest text-black border-b border-black pb-0.5">
-                        {item.tool?.pricingModel || 'Tool'}
+                      <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-foreground bg-background border border-border rounded-md px-2 py-0.5">
+                        {item.tool?.pricingModel || item.category || 'AI Model'}
                       </span>
-                      <span className="font-mono text-xs font-bold text-background bg-black px-2 py-1">
-                        {item.score?.total || 95}
+                      <span className="font-mono text-xs font-bold text-accent bg-accent/10 rounded-md border border-accent/20 px-2 py-0.5">
+                        Score {item.score?.total || 90}
                       </span>
                     </div>
 
-                    <h3 className="font-serif text-xl font-bold text-black leading-tight group-hover:text-accent transition-colors">
+                    <h3 className="font-serif text-xl font-bold text-foreground leading-tight group-hover:text-accent transition-colors">
                       {item.title}
                     </h3>
-                    <p className="font-sans text-sm text-black/70 mt-3 leading-relaxed">
-                      {item.description}
+                    <p className="font-sans text-sm text-muted mt-3 leading-relaxed line-clamp-3">
+                      {item.description || item.summary}
                     </p>
                   </div>
 
-                  <div className="mt-8 pt-4 border-t border-black/20 flex items-center justify-between">
-                    <span className="font-sans text-[10px] font-bold uppercase tracking-wider text-black/50">{item.category}</span>
+                  <div className="mt-8 pt-4 border-t border-border flex items-center justify-between">
+                    <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-muted">{item.category}</span>
                     <a
                       href={item.canonicalUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="font-sans text-xs text-black border-b border-black font-bold uppercase tracking-wider hover:text-accent hover:border-accent transition-colors"
+                      className="font-sans text-xs text-foreground hover:text-accent font-bold uppercase tracking-wider transition-colors"
                     >
                       Website &rarr;
                     </a>
@@ -183,7 +183,7 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
             <div className="pt-4 text-center">
               <Link
                 href="/tools"
-                className="inline-flex items-center gap-2 font-sans text-sm font-bold uppercase tracking-widest text-black border-b border-black hover:text-accent hover:border-accent transition-colors pb-1"
+                className="inline-flex items-center gap-2 font-sans text-sm font-bold uppercase tracking-widest text-muted border-b border-border hover:text-foreground hover:border-foreground transition-colors pb-1"
               >
                 <span>View all cataloged AI tools</span>
                 <span>&rarr;</span>
@@ -194,32 +194,32 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
 
         {activeTab === 'repos' && (
           <div className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border-t border-l border-black">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {repos.slice(0, 4).map((item) => (
                 <div
                   key={item.title}
-                  className="flex flex-col justify-between border-r border-b border-black bg-white p-6 hover:bg-card-hover transition-colors group"
+                  className="flex flex-col justify-between rounded-2xl border border-border bg-card p-6 hover:border-border-hover hover:bg-card-hover group hover:-translate-y-0.5 transition-all duration-300 shadow-sm"
                 >
                   <div>
                     <div className="flex items-center justify-between gap-2 mb-4">
-                      <span className="font-sans text-sm font-bold text-black">
+                      <span className="font-mono text-sm font-bold text-foreground">
                         {item.repository?.ownerRepo || item.title}
                       </span>
                       {item.repository?.starsGrowth24h ? (
-                        <span className="font-mono text-[10px] font-bold text-accent bg-accent/10 border border-accent px-2 py-1">
-                          +{item.repository.starsGrowth24h} stars
+                        <span className="font-mono text-[10px] font-bold text-accent bg-accent/10 rounded-md border border-accent/20 px-2 py-0.5">
+                          +{item.repository.starsGrowth24h} stars/24h
                         </span>
                       ) : null}
                     </div>
 
-                    <p className="font-sans text-sm text-black/70 mt-3 leading-relaxed">
-                      {item.description}
+                    <p className="font-sans text-sm text-muted mt-3 leading-relaxed line-clamp-2">
+                      {item.description || item.summary}
                     </p>
                   </div>
 
-                  <div className="mt-8 pt-4 border-t border-black/20 flex items-center justify-between">
-                    <div className="flex items-center gap-3 font-sans text-[10px] font-bold uppercase tracking-widest text-black/50">
-                      <span className="text-black">{item.repository?.language || 'TypeScript'}</span>
+                  <div className="mt-8 pt-4 border-t border-border flex items-center justify-between">
+                    <div className="flex items-center gap-3 font-mono text-[10px] font-bold uppercase tracking-widest text-muted">
+                      <span>{item.repository?.language || 'TypeScript'}</span>
                       <span>•</span>
                       <span>{item.repository?.stars ? item.repository.stars.toLocaleString() : '1k+'} stars</span>
                     </div>
@@ -227,7 +227,7 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
                       href={item.canonicalUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="font-sans text-xs text-black border-b border-black font-bold uppercase tracking-wider hover:text-accent hover:border-accent transition-colors"
+                      className="font-sans text-xs text-foreground hover:text-accent font-bold uppercase tracking-wider transition-colors"
                     >
                       GitHub &rarr;
                     </a>
@@ -239,7 +239,7 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
             <div className="pt-4 text-center">
               <Link
                 href="/repositories"
-                className="inline-flex items-center gap-2 font-sans text-sm font-bold uppercase tracking-widest text-black border-b border-black hover:text-accent hover:border-accent transition-colors pb-1"
+                className="inline-flex items-center gap-2 font-sans text-sm font-bold uppercase tracking-widest text-muted border-b border-border hover:text-foreground hover:border-foreground transition-colors pb-1"
               >
                 <span>View all trending repositories</span>
                 <span>&rarr;</span>

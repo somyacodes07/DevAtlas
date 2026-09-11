@@ -17,11 +17,12 @@ export const metadata: Metadata = {
 };
 
 export default async function RepositoriesPage() {
-  const res = await fetchRepositories({ limit: '30' });
+  const res = await fetchRepositories({ limit: '40' });
   const repos = res.data;
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 sm:py-10 space-y-8">
+      {/* Unified Header */}
       <div className="border-b-2 border-border pb-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
@@ -38,7 +39,7 @@ export default async function RepositoriesPage() {
           </div>
 
           <div className="flex items-center gap-3 font-mono text-xs text-muted">
-            <span className="border border-border bg-foreground px-4 py-2 font-bold uppercase tracking-wider text-background">
+            <span className="rounded-full border border-border bg-card px-4 py-2 font-bold uppercase tracking-wider text-foreground shadow-sm">
               {repos.length} Repositories
             </span>
           </div>
@@ -49,43 +50,43 @@ export default async function RepositoriesPage() {
         {repos.map((repo) => (
           <div
             key={repo.title}
-            className="rounded-xl border border-border bg-card p-4 sm:p-5 transition-all hover:border-zinc-500 hover:bg-card-hover"
+            className="rounded-2xl border border-border bg-card p-5 sm:p-6 transition-all duration-300 hover:border-border-hover hover:bg-card-hover hover:-translate-y-0.5 shadow-sm"
           >
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div className="flex-1">
-                <div className="flex items-center gap-2">
-                  <h2 className="font-mono text-sm sm:text-base font-semibold text-foreground">
+                <div className="flex items-center gap-2 mb-1">
+                  <h2 className="font-serif text-base sm:text-lg font-bold text-foreground">
                     {repo.repository?.ownerRepo || repo.title}
                   </h2>
                   {repo.repository?.trendStatus && (
-                    <span className="rounded bg-foreground border border-border px-1.5 py-0.5 text-[10px] font-mono text-accent">
+                    <span className="rounded-md bg-accent/10 border border-accent/20 px-2 py-0.5 text-[10px] font-mono text-accent font-bold">
                       {repo.repository.trendStatus}
                     </span>
                   )}
                 </div>
-                <p className="mt-1 text-xs text-muted leading-relaxed">
-                  {repo.description}
+                <p className="mt-1 text-xs sm:text-sm text-muted leading-relaxed font-sans line-clamp-2">
+                  {repo.description || repo.summary}
                 </p>
                 <div className="mt-3 flex items-center gap-3 text-xs font-mono text-muted">
-                  <span className="text-foreground font-medium">{repo.repository?.language || 'Code'}</span>
+                  <span className="text-foreground font-semibold">{repo.repository?.language || 'Code'}</span>
                   <span>•</span>
                   <span>{repo.repository?.stars ? repo.repository.stars.toLocaleString() : '0'} stars</span>
                   <span>•</span>
-                  <span>Score {repo.score.total}/100</span>
+                  <span className="text-accent font-bold">Score {repo.score?.total || 90}/100</span>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 self-end sm:self-center">
+              <div className="flex items-center gap-3 self-end sm:self-center shrink-0">
                 {repo.repository?.starsGrowth24h ? (
-                  <span className="font-mono text-xs font-bold text-accent bg-emerald-950/40 border border-emerald-900/60 px-2.5 py-1 rounded">
-                    +{repo.repository.starsGrowth24h} stars
+                  <span className="font-mono text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full">
+                    +{repo.repository.starsGrowth24h} stars/24h
                   </span>
                 ) : null}
                 <a
                   href={repo.canonicalUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-none border border-border bg-foreground px-3 py-1.5 text-xs font-mono text-background hover:border-zinc-500 font-semibold transition-colors"
+                  className="rounded-full bg-foreground text-background px-5 py-2 text-xs font-sans font-bold uppercase tracking-wider hover:opacity-90 transition-all shadow-sm"
                 >
                   GitHub &rarr;
                 </a>
@@ -96,7 +97,7 @@ export default async function RepositoriesPage() {
       </div>
 
       {repos.length === 0 && (
-        <div className="py-16 text-center font-mono text-xs text-muted/60 border border-dashed border-border rounded-xl">
+        <div className="py-16 text-center font-mono text-xs text-muted border border-dashed border-border rounded-2xl">
           No repositories discovered in the current window.
         </div>
       )}
