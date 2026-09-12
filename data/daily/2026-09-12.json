@@ -1,9 +1,9 @@
 {
   "date": "2026-09-12",
-  "generatedAt": "2026-09-12T04:06:00.164Z",
-  "runId": "RUN-2026-09-12-9519",
+  "generatedAt": "2026-09-12T15:22:33.816Z",
+  "runId": "RUN-2026-09-12-1843",
   "summary": {
-    "itemsDiscovered": 93,
+    "itemsDiscovered": 95,
     "dataQualityScore": 100
   },
   "topItems": [
@@ -51,13 +51,6 @@
     },
     {
       "type": "REPOSITORY",
-      "title": "XiaoDuoYa/codex-with-chatgpt",
-      "category": "AI & Machine Learning",
-      "canonicalUrl": "https://github.com/XiaoDuoYa/codex-with-chatgpt",
-      "score": 85
-    },
-    {
-      "type": "REPOSITORY",
       "title": "amagine-ai/Amagine3D",
       "category": "AI & Machine Learning",
       "canonicalUrl": "https://github.com/amagine-ai/Amagine3D",
@@ -65,16 +58,23 @@
     },
     {
       "type": "REPOSITORY",
-      "title": "crmne/fastpotify",
-      "category": "Open Source Software",
-      "canonicalUrl": "https://github.com/crmne/fastpotify",
+      "title": "XiaoDuoYa/codex-with-chatgpt",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/XiaoDuoYa/codex-with-chatgpt",
+      "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "EvoMap/AutoResearch",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/EvoMap/AutoResearch",
       "score": 89
     },
     {
       "type": "REPOSITORY",
-      "title": "xiaobright/dsh-anchored-standard",
+      "title": "rakanki911/DLSS5-Swapper",
       "category": "Open Source Software",
-      "canonicalUrl": "https://github.com/xiaobright/dsh-anchored-standard",
+      "canonicalUrl": "https://github.com/rakanki911/DLSS5-Swapper",
       "score": 85
     }
   ]
