@@ -1,0 +1,81 @@
+{
+  "date": "2026-09-12",
+  "generatedAt": "2026-09-12T04:06:00.164Z",
+  "runId": "RUN-2026-09-12-9519",
+  "summary": {
+    "itemsDiscovered": 93,
+    "dataQualityScore": 100
+  },
+  "topItems": [
+    {
+      "type": "REPOSITORY",
+      "title": "yjh051108/dsh-routing-suite",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/yjh051108/dsh-routing-suite",
+      "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "sapientinc/PRAXIST",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/sapientinc/PRAXIST",
+      "score": 89
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "lnkiai/m3e-canvas",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/lnkiai/m3e-canvas",
+      "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "MengTo/threeui",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/MengTo/threeui",
+      "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "s1dashu/ip-as-logo-skill",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/s1dashu/ip-as-logo-skill",
+      "score": 89
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "CopilotKit/OpenBot",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/CopilotKit/OpenBot",
+      "score": 89
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "XiaoDuoYa/codex-with-chatgpt",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/XiaoDuoYa/codex-with-chatgpt",
+      "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "amagine-ai/Amagine3D",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/amagine-ai/Amagine3D",
+      "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "crmne/fastpotify",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/crmne/fastpotify",
+      "score": 89
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "xiaobright/dsh-anchored-standard",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/xiaobright/dsh-anchored-standard",
+      "score": 85
+    }
+  ]
+}
