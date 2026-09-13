@@ -69,7 +69,7 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
               return (
                 <div
                   key={item._id || item.canonicalUrl || item.title}
-                  className={`p-5 flex flex-col justify-between hover:bg-card-hover transition-colors border-border border-b last:border-b-0 ${
+                  className={`p-6 sm:p-8 flex flex-col justify-between hover:bg-card-hover hover:-translate-y-[1px] transition-all duration-300 border-border border-b last:border-b-0 ${
                     i % 2 === 0 ? 'md:border-r' : ''
                   } ${i >= 2 ? 'md:border-b-0' : ''}`}
                 >
@@ -108,7 +108,7 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
                       </a>
                     </h3>
 
-                    <p className="font-editorial text-xs text-muted mt-2 leading-relaxed line-clamp-2">
+                    <p className="font-editorial text-sm text-muted mt-3 leading-loose line-clamp-2">
                       {cleanDesc}
                     </p>
 
@@ -160,7 +160,7 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
               return (
                 <div
                   key={item.canonicalUrl || item.title}
-                  className={`p-5 flex flex-col justify-between hover:bg-card-hover transition-colors border-border border-b last:border-b-0 md:border-b-0 ${
+                  className={`p-6 sm:p-8 flex flex-col justify-between hover:bg-card-hover hover:-translate-y-[1px] transition-all duration-300 border-border border-b last:border-b-0 md:border-b-0 ${
                     i < 2 ? 'md:border-r' : ''
                   }`}
                 >
@@ -180,7 +180,7 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
                       </a>
                     </h3>
 
-                    <p className="font-editorial text-xs text-muted mt-2 leading-relaxed line-clamp-3">
+                    <p className="font-editorial text-sm text-muted mt-3 leading-loose line-clamp-3">
                       {cleanDesc}
                     </p>
                   </div>
@@ -223,7 +223,7 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
               return (
                 <div
                   key={item.canonicalUrl || item.title}
-                  className={`p-5 flex flex-col justify-between hover:bg-card-hover transition-colors border-border border-b last:border-b-0 ${
+                  className={`p-6 sm:p-8 flex flex-col justify-between hover:bg-card-hover hover:-translate-y-[1px] transition-all duration-300 border-border border-b last:border-b-0 ${
                     i % 2 === 0 ? 'md:border-r' : ''
                   } ${i >= 2 ? 'md:border-b-0' : ''}`}
                 >
@@ -239,7 +239,7 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
                       ) : null}
                     </div>
 
-                    <p className="font-editorial text-xs text-muted mt-1 leading-relaxed line-clamp-2">
+                    <p className="font-editorial text-sm text-muted mt-2 leading-loose line-clamp-2">
                       {cleanDesc}
                     </p>
                   </div>

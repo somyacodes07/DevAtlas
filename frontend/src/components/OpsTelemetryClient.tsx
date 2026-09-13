@@ -128,7 +128,7 @@ export function OpsTelemetryClient({ initialHealth, initialStats }: OpsTelemetry
           {services.map((svc, i) => (
             <div
               key={svc.name}
-              className={`p-5 sm:p-6 flex flex-col justify-between hover:bg-card-hover transition-colors border-border border-b last:border-b-0 ${
+              className={`p-6 sm:p-8 flex flex-col justify-between hover:bg-card-hover hover:-translate-y-[1px] transition-all duration-300 border-border border-b last:border-b-0 ${
                 i >= 2 ? 'sm:border-b-0' : ''
               } lg:border-b-0 ${i % 2 === 0 ? 'sm:border-r' : ''} ${
                 i < 3 ? 'lg:border-r' : 'lg:border-r-0'
@@ -174,7 +174,7 @@ export function OpsTelemetryClient({ initialHealth, initialStats }: OpsTelemetry
             { label: 'Compute Time', value: `${stats?.pipeline?.durationSeconds ?? 1065}s`, sub: 'Actions runner duration' },
             { label: 'Commit Gate', value: stats?.pipeline?.lastCommitSha || 'e864a48', sub: 'Verified changes' },
           ].map((item, i) => (
-            <div key={item.label} className={`p-5 border-border ${
+            <div key={item.label} className={`p-6 sm:p-8 hover:bg-card-hover transition-colors duration-300 border-border ${
               i < 2 ? 'border-b sm:border-b-0' : ''
             } ${
               i % 2 === 0 ? 'border-r' : ''
@@ -185,7 +185,7 @@ export function OpsTelemetryClient({ initialHealth, initialStats }: OpsTelemetry
               <div className="font-serif text-2xl font-black text-foreground mt-2 tracking-tight">
                 {item.value}
               </div>
-              <span className="font-mono text-[9px] tracking-wider text-muted mt-1 block">{item.sub}</span>
+              <span className="font-mono text-[10px] tracking-wider text-muted mt-2 block">{item.sub}</span>
             </div>
           ))}
         </div>
@@ -209,12 +209,12 @@ export function OpsTelemetryClient({ initialHealth, initialStats }: OpsTelemetry
               desc: 'Fully indexed and synchronized to edge distribution nodes.',
             },
           ].map((item, i) => (
-            <div key={item.label} className={`p-5 border-border border-b last:border-b-0 sm:border-b-0 ${
+            <div key={item.label} className={`p-6 sm:p-8 hover:bg-card-hover transition-colors duration-300 border-border border-b last:border-b-0 sm:border-b-0 ${
               i < 2 ? 'sm:border-r' : ''
             }`}>
               <div className="font-mono text-[10px] font-bold text-foreground tracking-wider uppercase">{item.label}</div>
               <div className="mt-1 font-serif text-2xl font-black text-accent tracking-tight">{item.value}</div>
-              <p className="mt-1 font-editorial text-xs text-muted leading-relaxed">{item.desc}</p>
+              <p className="mt-2 font-editorial text-sm text-muted leading-loose">{item.desc}</p>
             </div>
           ))}
         </div>
