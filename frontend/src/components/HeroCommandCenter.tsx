@@ -31,59 +31,58 @@ export function HeroCommandCenter() {
     <div className="relative">
       {/* Lead Headline Section */}
       <div className="border-b border-double-rule-bottom pb-8 mb-8">
-        {/* Dateline */}
-        <div className="flex items-center gap-3 mb-6">
-          <span className="stamp-badge">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-            BREAKING DISPATCH
-          </span>
-          <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-dateline">
-            SAN FRANCISCO / LONDON / BENGALURU
-          </span>
+        {/* Dateline Ribbon */}
+        <div className="flex flex-wrap items-center justify-between gap-3 mb-4 border-b border-rule pb-3">
+          <div className="flex items-center gap-3">
+            <span className="stamp-badge">
+              <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+              FRONT PAGE DISPATCH
+            </span>
+            <span className="font-mono text-[9px] tracking-[0.25em] uppercase text-dateline font-semibold">
+              SAN FRANCISCO &bull; LONDON &bull; BENGALURU &bull; TOKYO
+            </span>
+          </div>
+          <div className="font-mono text-[9px] tracking-wider text-muted hidden sm:inline-block">
+            FILTERED &bull; ZERO SLOP &bull; CONTINUOUS TELEMETRY
+          </div>
         </div>
 
-        {/* Big Display Headline — Helmut Newton-inspired mixed typography */}
-        <h1 className="max-w-4xl mb-6">
-          <span className="block font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-foreground leading-[0.9] tracking-tight">
-            ALL THE
-          </span>
-          <span className="block font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-foreground leading-[0.9] tracking-tight">
-            DEVELOPER
-          </span>
-          <span className="block font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-foreground leading-[0.9] tracking-tight">
-            INTELLIGENCE
-          </span>
-          <span className="flex items-baseline gap-4 flex-wrap">
-            <span className="font-editorial text-3xl sm:text-5xl md:text-6xl lg:text-7xl italic text-dateline leading-[0.9]">
+        {/* Grand Editorial Headline */}
+        <div className="mb-6">
+          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-foreground tracking-tight leading-[0.95]">
+            ALL THE DEVELOPER INTELLIGENCE{' '}
+            <span className="font-editorial italic font-normal text-dateline">
               fit to
-            </span>
-            <span className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-foreground leading-[0.9] tracking-tight">
-              PRINT.
-            </span>
+            </span>{' '}
+            PRINT.
+          </h1>
+          <p className="font-editorial text-base sm:text-xl text-muted leading-relaxed max-w-3xl mt-4 font-normal">
+            An autonomous broadsheet recording verified software engineering roles, security CVEs, frontier AI apparatus, and breakout open source velocity &mdash; cataloged daily with zero web noise.
+          </p>
+        </div>
+
+        {/* Section Quick-Jump Ribbon */}
+        <div className="flex flex-wrap items-center gap-2 pt-2">
+          <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-dateline font-bold mr-2">
+            SECTIONS:
           </span>
-        </h1>
-
-        {/* Subhead — Editorial body text */}
-        <p className="font-editorial text-base sm:text-lg text-muted leading-relaxed max-w-2xl mb-8">
-          Autonomous ecosystem radar cataloging verified software engineering roles, security advisories, developer tools, and breakout open source repositories — delivered daily, zero noise.
-        </p>
-
-        {/* Section Jump Buttons — Tablet Magazine-inspired */}
-        <div className="flex flex-wrap items-center gap-2">
           <Link href="/jobs" className="tear-off-btn">
-            § B. Classifieds →
+            &sect; B. Classifieds &rarr;
           </Link>
           <Link href="/tools" className="tear-off-btn">
-            § C. AI Apparatus →
+            &sect; C. AI Apparatus &rarr;
           </Link>
           <Link href="/repositories" className="tear-off-btn">
-            § D. Code Registry →
+            &sect; D. Code Registry &rarr;
           </Link>
           <Link href="/reports" className="tear-off-btn">
-            § E. Daily Briefing →
+            &sect; E. Intelligence Archive &rarr;
+          </Link>
+          <Link href="/ops" className="tear-off-btn">
+            &sect; G. System Ops &rarr;
           </Link>
           <Link href="/docs" className="tear-off-btn">
-            § H. Architecture →
+            &sect; H. Architecture &rarr;
           </Link>
         </div>
       </div>

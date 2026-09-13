@@ -8,9 +8,9 @@ let cachedReports: any[] | null = null;
 
 function readJsonFile<T>(filename: string): T | null {
   const possiblePaths = [
-    path.join(process.cwd(), 'public', 'data', filename),
     path.join(process.cwd(), 'data', filename),
     path.join(process.cwd(), '..', 'data', filename),
+    path.join(process.cwd(), 'public', 'data', filename),
     path.join(process.cwd(), 'frontend', 'public', 'data', filename),
   ];
 

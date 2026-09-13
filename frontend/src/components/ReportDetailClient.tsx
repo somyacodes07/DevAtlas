@@ -28,13 +28,23 @@ export function ReportDetailClient({ initialReport, date }: ReportDetailClientPr
         .then((json) => {
           if (isMounted && json.data) {
             setReport(json.data);
+            setLoading(false);
           }
         })
         .catch(() => {
-          // Keep null if truly not found
-        })
-        .finally(() => {
-          if (isMounted) setLoading(false);
+          // Fallback to static edge_reports.json
+          fetch('/data/edge_reports.json?t=' + Date.now())
+            .then((res) => res.json())
+            .then((data) => {
+              if (isMounted && Array.isArray(data)) {
+                const match = data.find((r: any) => r.reportDate === date);
+                if (match) setReport(match);
+              }
+            })
+            .catch(() => {})
+            .finally(() => {
+              if (isMounted) setLoading(false);
+            });
         });
 
       return () => {

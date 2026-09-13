@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 import { getAllReports } from '@/lib/reports';
+import { ReportsArchiveClient } from '@/components/ReportsArchiveClient';
 
 export const metadata: Metadata = {
   title: 'Daily Intelligence Archive',
@@ -28,56 +28,27 @@ export default async function ReportsIndexPage() {
           <div>
             <span className="stamp-badge mb-3 inline-flex">
               <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-              § E. DETERMINISTIC ARCHIVE
+              &sect; E. THE DETERMINISTIC ARCHIVE
             </span>
             <h1 className="font-serif text-3xl sm:text-5xl font-black text-foreground tracking-tight">
               DAILY INTELLIGENCE<br />
-              <span className="font-editorial italic text-dateline">Archive & Dispatches</span>
+              <span className="font-editorial italic text-dateline">Archive &amp; Dispatches</span>
             </h1>
-            <p className="mt-3 font-editorial text-sm text-muted max-w-xl leading-relaxed">
-              Autonomous daily digests committed directly to the repository via GitHub Actions.
+            <p className="mt-3 font-editorial text-sm sm:text-base text-muted max-w-xl leading-relaxed">
+              Autonomous daily developer intelligence digests synthesized from verified feeds and committed directly to the repository via GitHub Actions.
             </p>
           </div>
 
           <div className="flex items-center gap-3">
-            <span className="border border-border px-4 py-2 font-mono text-[10px] font-bold tracking-[0.15em] uppercase text-foreground">
+            <span className="border border-border px-4 py-2 font-mono text-[10px] font-bold tracking-[0.15em] uppercase text-foreground bg-card">
               {reports.length} Reports Published
             </span>
           </div>
         </div>
       </div>
 
-      {/* Report Listings */}
-      <div className="space-y-0 border border-border">
-        {reports.map((r, idx) => (
-          <Link
-            key={r.reportDate}
-            href={`/reports/${r.reportDate}`}
-            className={`group flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-5 transition-colors hover:bg-card-hover ${
-              idx < reports.length - 1 ? 'border-b border-border' : ''
-            }`}
-          >
-            <div>
-              <div className="flex items-center gap-3">
-                <span className="font-mono text-[10px] font-bold text-foreground tracking-wider group-hover:text-accent transition-colors">
-                  {r.reportDate}
-                </span>
-                <span className="font-mono text-[9px] font-bold text-accent border border-accent/30 px-2 py-0.5 tracking-wider">
-                  Quality {r.structuredSummary?.dataQualityScore ?? 100}%
-                </span>
-              </div>
-              <h2 className="mt-2 font-serif text-sm sm:text-base font-bold text-foreground group-hover:text-accent transition-colors">
-                {r.title}
-              </h2>
-            </div>
-
-            <div className="font-mono text-[10px] tracking-wider uppercase text-muted group-hover:text-foreground transition-colors shrink-0 flex items-center gap-1">
-              <span>{r.structuredSummary?.itemsDiscovered || '80+'} items</span>
-              <span className="text-accent">→</span>
-            </div>
-          </Link>
-        ))}
-      </div>
+      {/* Report Listings with Live Edge Sync */}
+      <ReportsArchiveClient initialReports={reports} />
     </div>
   );
 }

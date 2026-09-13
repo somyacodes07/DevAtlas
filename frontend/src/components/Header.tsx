@@ -89,44 +89,76 @@ export function Header() {
         </div>
 
         {/* Grand Broadsheet Masthead */}
-        <div className="w-full px-4 md:px-8 xl:px-12 py-5 sm:py-7 flex items-center justify-between">
-          {/* Logo / Masthead Title */}
-          <Link
-            href="/"
-            className="group flex flex-col items-start"
-            aria-label="DevAtlas Chronicle Homepage"
-          >
-            <div className="flex items-center gap-2 mb-1">
-              <span className="font-mono text-[8px] tracking-[0.3em] uppercase text-dateline font-bold">
-                EST. 2026 // BROADSHEET GAZETTE
+        <div className="w-full px-4 md:px-8 xl:px-12 py-6 sm:py-8">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+            {/* Left Colophon */}
+            <div className="hidden lg:flex flex-col gap-1 text-left w-64 shrink-0 border-r border-rule pr-6">
+              <span className="font-mono text-[8px] tracking-[0.25em] uppercase text-dateline font-bold">
+                EDITION: CONTINUOUS WIRE
               </span>
-            </div>
-            <span className="font-serif text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-foreground leading-[0.88]">
-              DEVATLAS
-            </span>
-            <span className="font-serif text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-foreground leading-[0.88]">
-              CHRONICLE
-            </span>
-            <span className="font-editorial text-xs sm:text-sm italic text-dateline tracking-wide mt-2">
-              The Daily Broadsheet of Software Engineering, Breakout Systems &amp; Autonomous Intelligence
-            </span>
-          </Link>
-
-          {/* Right Colophon / Quick Badges */}
-          <div className="hidden lg:flex items-center gap-6">
-            <BarcodeStamp caption="DAILY GAZETTE" catalogId="VOL.IX-248" />
-
-            <div className="flex flex-col items-end gap-1.5 border-l border-rule pl-6">
-              <div className="flex items-center gap-2 font-mono text-[9px] tracking-wider uppercase text-dateline">
-                <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
+              <span className="font-serif text-xs italic text-muted">
+                &ldquo;Veritas in Ingeniaria&rdquo;
+              </span>
+              <span className="font-mono text-[8.5px] text-dateline tracking-wider uppercase mt-1">
+                Zero-Noise Developer Signals
+              </span>
+              <div className="flex items-center gap-1.5 mt-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
+                <span className="font-mono text-[8px] text-accent font-bold tracking-widest uppercase">
+                  ACTIVE INGESTION
                 </span>
-                <span className="font-bold text-foreground">RADAR LIVE</span>
               </div>
-              <span className="font-mono text-[9px] text-muted tracking-widest uppercase">
-                275+ EDGE CITIES
+            </div>
+
+            {/* Center Master Title */}
+            <Link
+              href="/"
+              className="group flex flex-col items-center text-center flex-1"
+              aria-label="DevAtlas Chronicle Homepage"
+            >
+              <div className="flex items-center justify-center gap-3 mb-2">
+                <span className="h-[1px] w-8 sm:w-16 bg-rule" />
+                <span className="font-mono text-[8px] sm:text-[9px] tracking-[0.35em] uppercase text-dateline font-bold">
+                  ESTABLISHED MMXXVI &bull; BROADSHEET GAZETTE
+                </span>
+                <span className="h-[1px] w-8 sm:w-16 bg-rule" />
+              </div>
+
+              <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-foreground leading-[0.85] transition-transform duration-300 group-hover:scale-[1.01]">
+                DEVATLAS
+              </h1>
+              <span className="font-serif text-2xl sm:text-4xl md:text-5xl font-light italic tracking-tight text-foreground leading-[0.9] mt-1">
+                CHRONICLE
               </span>
+
+              <div className="mt-3 flex items-center justify-center gap-3">
+                <span className="h-[1px] w-12 sm:w-24 bg-foreground/20" />
+                <p className="font-editorial text-xs sm:text-sm italic text-dateline tracking-wide">
+                  The Daily Broadsheet of Software Systems, AI Velocity &amp; Verified Signals
+                </p>
+                <span className="h-[1px] w-12 sm:w-24 bg-foreground/20" />
+              </div>
+            </Link>
+
+            {/* Right Colophon & Telemetry */}
+            <div className="hidden lg:flex items-center justify-end gap-6 w-64 shrink-0 border-l border-rule pl-6">
+              <BarcodeStamp caption="DAILY GAZETTE" catalogId="VOL.IX-248" />
+
+              <div className="flex flex-col items-end gap-1.5">
+                <div className="flex items-center gap-2 font-mono text-[9px] tracking-wider uppercase text-dateline">
+                  <span className="relative flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
+                  </span>
+                  <span className="font-bold text-foreground">EDGE RADAR</span>
+                </div>
+                <span className="font-mono text-[8.5px] text-muted tracking-widest uppercase">
+                  275+ CITIES &bull; &lt;1MS
+                </span>
+                <span className="stamp-badge text-[7.5px] py-0.5 px-1.5 mt-1">
+                  100% VERIFIED
+                </span>
+              </div>
             </div>
           </div>
         </div>

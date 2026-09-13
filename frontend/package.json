@@ -4,6 +4,7 @@
   "private": true,
   "description": "DevAtlas Next.js 15 Frontend Web Application",
   "scripts": {
+    "prebuild": "node ../scripts/sync-edge-data.mjs || true",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

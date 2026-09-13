@@ -22,11 +22,11 @@ if git status --porcelain reports/ data/ | grep -q . || [ "$FORCE" = "true" ]; t
   git config user.name "$AUTHOR_NAME"
   git config user.email "$AUTHOR_EMAIL"
 
-  git add reports/ data/
+  git add reports/ data/ frontend/public/data/
   if git diff --staged --quiet; then
     echo "No staged changes to commit."
   else
-    git commit -m "chore(data): publish daily developer intelligence for ${TODAY} [skip ci]"
+    git commit -m "chore(data): publish daily developer intelligence for ${TODAY}"
     echo "[DevAtlas Commit Gate] Pulling remote changes to avoid conflicts..."
     git pull --rebase origin ${GITHUB_REF_NAME:-main}
     echo "[DevAtlas Commit Gate] Pushing committed artifacts to main branch..."

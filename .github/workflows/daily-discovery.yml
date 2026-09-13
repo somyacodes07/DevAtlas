@@ -18,6 +18,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   discover:
@@ -59,3 +60,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FORCE_PUBLISH: ${{ inputs.force_publish || 'false' }}
+
+      - name: Trigger Edge Deployment
+        if: success()
+        run: |
+          echo "[Deploy Trigger] Dispatching deploy.yml workflow to publish latest intelligence..."
+          gh workflow run deploy.yml --ref "${GITHUB_REF_NAME:-main}" || echo "Workflow dispatch completed or skipped."
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

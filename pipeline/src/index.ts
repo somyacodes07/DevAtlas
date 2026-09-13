@@ -284,11 +284,23 @@ export async function runPipeline(): Promise<PipelineRunResult> {
         rootDir = path.resolve(rootDir, '..');
       }
       const dataDir = path.join(rootDir, 'data');
+      const frontendPublicDataDir = path.join(rootDir, 'frontend', 'public', 'data');
+      if (!fs.existsSync(frontendPublicDataDir)) {
+        await fs.promises.mkdir(frontendPublicDataDir, { recursive: true });
+      }
       
-      await fs.promises.writeFile(path.join(dataDir, 'edge_items.json'), JSON.stringify(allItems), 'utf-8');
-      await fs.promises.writeFile(path.join(dataDir, 'edge_runs.json'), JSON.stringify(allRuns), 'utf-8');
-      await fs.promises.writeFile(path.join(dataDir, 'edge_reports.json'), JSON.stringify(allReports), 'utf-8');
-      console.log(`✓ Edge JSON dumps created successfully.`);
+      const itemsJson = JSON.stringify(allItems);
+      const runsJson = JSON.stringify(allRuns);
+      const reportsJson = JSON.stringify(allReports);
+
+      await fs.promises.writeFile(path.join(dataDir, 'edge_items.json'), itemsJson, 'utf-8');
+      await fs.promises.writeFile(path.join(dataDir, 'edge_runs.json'), runsJson, 'utf-8');
+      await fs.promises.writeFile(path.join(dataDir, 'edge_reports.json'), reportsJson, 'utf-8');
+
+      await fs.promises.writeFile(path.join(frontendPublicDataDir, 'edge_items.json'), itemsJson, 'utf-8');
+      await fs.promises.writeFile(path.join(frontendPublicDataDir, 'edge_runs.json'), runsJson, 'utf-8');
+      await fs.promises.writeFile(path.join(frontendPublicDataDir, 'edge_reports.json'), reportsJson, 'utf-8');
+      console.log(`✓ Edge JSON dumps created in data/ and frontend/public/data/ successfully.`);
     } catch (exportErr) {
       console.warn(`[Edge Export Warning] Failed to dump edge JSON:`, exportErr);
     }

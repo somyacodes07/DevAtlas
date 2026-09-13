@@ -9,19 +9,19 @@
 
 /* ─── Morning Broadsheet (Light Mode — Default) ─── */
 :root {
-  --background: #f5f1e8;
-  --background-secondary: #ece8df;
-  --foreground: #1a1a1a;
-  --card: #faf8f3;
-  --card-hover: #f0ede4;
-  --border: #d4cfc3;
-  --border-hover: #b8b3a6;
-  --muted: #6b6560;
-  --accent: #c41d1d;
-  --accent-subtle: rgba(196, 29, 29, 0.08);
-  --stamp: #c41d1d;
-  --dateline: #8a7e6b;
-  --rule: #c5bfb1;
+  --background: #fbfbfa;
+  --background-secondary: #f4f3ed;
+  --foreground: #111215;
+  --card: #ffffff;
+  --card-hover: #f7f6f2;
+  --border: #e2ded4;
+  --border-hover: #b8b3a4;
+  --muted: #5a5d67;
+  --accent: #c42020;
+  --accent-subtle: rgba(196, 32, 32, 0.06);
+  --stamp: #c42020;
+  --dateline: #737066;
+  --rule: #dedad0;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', 'SFMono-Regular', Menlo, Monaco, Consolas, monospace;
   --font-serif: 'Playfair Display', 'Newsreader', Georgia, 'Times New Roman', serif;
@@ -30,19 +30,19 @@
 
 /* ─── Midnight Gazette (Dark Mode) ─── */
 .dark {
-  --background: #0e0e10;
-  --background-secondary: #161619;
-  --foreground: #f3f2ee;
-  --card: #18181c;
-  --card-hover: #1f1f24;
-  --border: #2a2a30;
-  --border-hover: #3a3a42;
-  --muted: #8a8890;
-  --accent: #e04838;
-  --accent-subtle: rgba(224, 72, 56, 0.12);
-  --stamp: #e04838;
-  --dateline: #9a9498;
-  --rule: #2e2e35;
+  --background: #0a0b0d;
+  --background-secondary: #121317;
+  --foreground: #f4f3ef;
+  --card: #141519;
+  --card-hover: #1c1e24;
+  --border: #23252c;
+  --border-hover: #383b48;
+  --muted: #8d909d;
+  --accent: #e64235;
+  --accent-subtle: rgba(230, 66, 53, 0.12);
+  --stamp: #e64235;
+  --dateline: #908d85;
+  --rule: #1e2026;
 }
 
 /* ─── Body ─── */
@@ -108,12 +108,12 @@ body {
 .drop-cap::first-letter {
   float: left;
   font-family: var(--font-serif);
-  font-size: 3.5em;
+  font-size: 3.6em;
   line-height: 0.8;
-  padding-right: 0.08em;
-  padding-top: 0.06em;
-  font-weight: 700;
-  color: var(--foreground);
+  padding-right: 0.12em;
+  padding-top: 0.05em;
+  font-weight: 800;
+  color: var(--accent);
 }
 
 /* ─── Stamp / Rubber Seal Badge ─── */
@@ -124,13 +124,13 @@ body {
   font-family: var(--font-mono);
   font-size: 0.625rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--stamp);
-  border: 2px solid var(--stamp);
-  padding: 0.25rem 0.625rem;
-  transform: rotate(-2deg);
-  opacity: 0.85;
+  border: 1.5px solid var(--stamp);
+  background: var(--accent-subtle);
+  padding: 0.2rem 0.55rem;
+  opacity: 0.95;
 }
 
 /* ─── Tear-Off Coupon Button ─── */

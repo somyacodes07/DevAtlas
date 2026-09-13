@@ -75,6 +75,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Sync Edge Intelligence Snapshots
+        run: node scripts/sync-edge-data.mjs
+
       - name: Build Next.js Production Bundle
         run: npm run build --workspace=@devatlas/frontend
         env:

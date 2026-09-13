@@ -38,25 +38,33 @@ function getMonorepoRoot(): string {
  */
 function getEdgeReports(): ReportItem[] {
   const possiblePaths = [
-    path.join(process.cwd(), 'public', 'data', 'edge_reports.json'),
-    path.join(process.cwd(), 'data', 'edge_reports.json'),
     path.join(getMonorepoRoot(), 'data', 'edge_reports.json'),
+    path.join(process.cwd(), 'data', 'edge_reports.json'),
+    path.join(process.cwd(), 'public', 'data', 'edge_reports.json'),
+    path.join(process.cwd(), 'frontend', 'public', 'data', 'edge_reports.json'),
   ];
+
+  const reportMap = new Map<string, ReportItem>();
 
   for (const p of possiblePaths) {
     try {
       if (fs.existsSync(p)) {
         const raw = fs.readFileSync(p, 'utf-8');
         const parsed = JSON.parse(raw);
-        if (Array.isArray(parsed) && parsed.length > 0) {
-          return parsed;
+        if (Array.isArray(parsed)) {
+          for (const item of parsed) {
+            if (item?.reportDate && !reportMap.has(item.reportDate)) {
+              reportMap.set(item.reportDate, item);
+            }
+          }
         }
       }
     } catch {
       // Continue to next path candidate
     }
   }
-  return [];
+
+  return Array.from(reportMap.values()).sort((a, b) => b.reportDate.localeCompare(a.reportDate));
 }
 
 /**
