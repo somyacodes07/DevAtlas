@@ -128,9 +128,9 @@ export function OpsTelemetryClient({ initialHealth, initialStats }: OpsTelemetry
           {services.map((svc, i) => (
             <div
               key={svc.name}
-              className={`p-5 sm:p-6 flex flex-col justify-between hover:bg-card-hover transition-colors border-border border-b last:border-b-0 sm:border-b-0 lg:border-b-0 ${
-                i < 2 ? 'sm:border-b' : ''
-              } ${i % 2 === 0 ? 'sm:border-r' : ''} ${
+              className={`p-5 sm:p-6 flex flex-col justify-between hover:bg-card-hover transition-colors border-border border-b last:border-b-0 ${
+                i >= 2 ? 'sm:border-b-0' : ''
+              } lg:border-b-0 ${i % 2 === 0 ? 'sm:border-r' : ''} ${
                 i < 3 ? 'lg:border-r' : 'lg:border-r-0'
               }`}
             >

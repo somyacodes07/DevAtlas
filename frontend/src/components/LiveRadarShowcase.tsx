@@ -69,9 +69,9 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
               return (
                 <div
                   key={item._id || item.canonicalUrl || item.title}
-                  className={`p-5 flex flex-col justify-between hover:bg-card-hover transition-colors border-border border-b last:border-b-0 md:border-b-0 ${
+                  className={`p-5 flex flex-col justify-between hover:bg-card-hover transition-colors border-border border-b last:border-b-0 ${
                     i % 2 === 0 ? 'md:border-r' : ''
-                  } ${i < 2 ? 'md:border-b' : ''}`}
+                  } ${i >= 2 ? 'md:border-b-0' : ''}`}
                 >
                   {/* Company + Badges */}
                   <div>
@@ -223,9 +223,9 @@ export function LiveRadarShowcase({ jobs, tools, repos }: LiveRadarShowcaseProps
               return (
                 <div
                   key={item.canonicalUrl || item.title}
-                  className={`p-5 flex flex-col justify-between hover:bg-card-hover transition-colors border-border border-b last:border-b-0 md:border-b-0 ${
+                  className={`p-5 flex flex-col justify-between hover:bg-card-hover transition-colors border-border border-b last:border-b-0 ${
                     i % 2 === 0 ? 'md:border-r' : ''
-                  } ${i < 2 ? 'md:border-b' : ''}`}
+                  } ${i >= 2 ? 'md:border-b-0' : ''}`}
                 >
                   <div>
                     <div className="flex items-center justify-between gap-2 mb-2">
