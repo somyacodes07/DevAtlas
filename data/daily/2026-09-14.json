@@ -1,9 +1,9 @@
 {
   "date": "2026-09-14",
-  "generatedAt": "2026-09-14T04:24:18.002Z",
-  "runId": "RUN-2026-09-14-7184",
+  "generatedAt": "2026-09-14T17:59:47.510Z",
+  "runId": "RUN-2026-09-14-5993",
   "summary": {
-    "itemsDiscovered": 91,
+    "itemsDiscovered": 96,
     "dataQualityScore": 100
   },
   "topItems": [
@@ -65,9 +65,9 @@
     },
     {
       "type": "REPOSITORY",
-      "title": "crmne/fastpotify",
+      "title": "crmne/spotifast",
       "category": "Open Source Software",
-      "canonicalUrl": "https://github.com/crmne/fastpotify",
+      "canonicalUrl": "https://github.com/crmne/spotifast",
       "score": 89
     },
     {
