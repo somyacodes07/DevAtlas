@@ -1,9 +1,9 @@
 {
   "date": "2026-09-16",
-  "generatedAt": "2026-09-16T04:20:08.155Z",
-  "runId": "RUN-2026-09-16-7913",
+  "generatedAt": "2026-09-16T16:36:02.329Z",
+  "runId": "RUN-2026-09-16-0038",
   "summary": {
-    "itemsDiscovered": 87,
+    "itemsDiscovered": 91,
     "dataQualityScore": 100
   },
   "topItems": [
@@ -16,17 +16,17 @@
     },
     {
       "type": "REPOSITORY",
-      "title": "sapientinc/PRAXIST",
-      "category": "Open Source Software",
-      "canonicalUrl": "https://github.com/sapientinc/PRAXIST",
-      "score": 89
-    },
-    {
-      "type": "REPOSITORY",
       "title": "MengTo/threeui",
       "category": "Open Source Software",
       "canonicalUrl": "https://github.com/MengTo/threeui",
       "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "sapientinc/PRAXIST",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/sapientinc/PRAXIST",
+      "score": 89
     },
     {
       "type": "REPOSITORY",
@@ -65,10 +65,10 @@
     },
     {
       "type": "REPOSITORY",
-      "title": "wang2122/sprix-sage-router",
-      "category": "AI & Machine Learning",
-      "canonicalUrl": "https://github.com/wang2122/sprix-sage-router",
-      "score": 89
+      "title": "HEJustinSun/my-girlfriend-jingtian-latex",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/HEJustinSun/my-girlfriend-jingtian-latex",
+      "score": 85
     },
     {
       "type": "REPOSITORY",
