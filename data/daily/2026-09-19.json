@@ -1,9 +1,9 @@
 {
   "date": "2026-09-19",
-  "generatedAt": "2026-09-19T04:08:52.889Z",
-  "runId": "RUN-2026-09-19-5877",
+  "generatedAt": "2026-09-19T15:43:48.331Z",
+  "runId": "RUN-2026-09-19-8871",
   "summary": {
-    "itemsDiscovered": 92,
+    "itemsDiscovered": 91,
     "dataQualityScore": 100
   },
   "topItems": [
@@ -12,6 +12,13 @@
       "title": "lnkiai/m3e-canvas",
       "category": "AI & Machine Learning",
       "canonicalUrl": "https://github.com/lnkiai/m3e-canvas",
+      "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "browser-use/jev-ultrafast",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/browser-use/jev-ultrafast",
       "score": 85
     },
     {
@@ -30,13 +37,6 @@
     },
     {
       "type": "REPOSITORY",
-      "title": "browser-use/jev-ultrafast",
-      "category": "Open Source Software",
-      "canonicalUrl": "https://github.com/browser-use/jev-ultrafast",
-      "score": 85
-    },
-    {
-      "type": "REPOSITORY",
       "title": "rakanki911/DLSS5-Swapper",
       "category": "Open Source Software",
       "canonicalUrl": "https://github.com/rakanki911/DLSS5-Swapper",
@@ -44,16 +44,16 @@
     },
     {
       "type": "REPOSITORY",
-      "title": "XiaoDuoYa/codex-with-chatgpt",
-      "category": "AI & Machine Learning",
-      "canonicalUrl": "https://github.com/XiaoDuoYa/codex-with-chatgpt",
+      "title": "eternity4719/HowToLiveBetter",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/eternity4719/HowToLiveBetter",
       "score": 85
     },
     {
       "type": "REPOSITORY",
-      "title": "eternity4719/HowToLiveBetter",
-      "category": "Open Source Software",
-      "canonicalUrl": "https://github.com/eternity4719/HowToLiveBetter",
+      "title": "XiaoDuoYa/codex-with-chatgpt",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/XiaoDuoYa/codex-with-chatgpt",
       "score": 85
     },
     {
