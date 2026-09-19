@@ -1,0 +1,81 @@
+{
+  "date": "2026-09-19",
+  "generatedAt": "2026-09-19T04:08:52.889Z",
+  "runId": "RUN-2026-09-19-5877",
+  "summary": {
+    "itemsDiscovered": 92,
+    "dataQualityScore": 100
+  },
+  "topItems": [
+    {
+      "type": "REPOSITORY",
+      "title": "lnkiai/m3e-canvas",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/lnkiai/m3e-canvas",
+      "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "sapientinc/PRAXIST",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/sapientinc/PRAXIST",
+      "score": 89
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "MengTo/threeui",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/MengTo/threeui",
+      "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "browser-use/jev-ultrafast",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/browser-use/jev-ultrafast",
+      "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "rakanki911/DLSS5-Swapper",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/rakanki911/DLSS5-Swapper",
+      "score": 89
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "XiaoDuoYa/codex-with-chatgpt",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/XiaoDuoYa/codex-with-chatgpt",
+      "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "eternity4719/HowToLiveBetter",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/eternity4719/HowToLiveBetter",
+      "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "bojieli/ai-infra-book",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/bojieli/ai-infra-book",
+      "score": 89
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "crmne/spotifast",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/crmne/spotifast",
+      "score": 89
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "HEJustinSun/my-girlfriend-jingtian-latex",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/HEJustinSun/my-girlfriend-jingtian-latex",
+      "score": 85
+    }
+  ]
+}
