@@ -1,9 +1,9 @@
 {
   "date": "2026-09-20",
-  "generatedAt": "2026-09-20T04:26:24.542Z",
-  "runId": "RUN-2026-09-20-3927",
+  "generatedAt": "2026-09-20T15:50:41.737Z",
+  "runId": "RUN-2026-09-20-5560",
   "summary": {
-    "itemsDiscovered": 89,
+    "itemsDiscovered": 66,
     "dataQualityScore": 100
   },
   "topItems": [
@@ -12,6 +12,13 @@
       "title": "browser-use/jev-ultrafast",
       "category": "Open Source Software",
       "canonicalUrl": "https://github.com/browser-use/jev-ultrafast",
+      "score": 88
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "eternity4719/HowToLiveBetter",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/eternity4719/HowToLiveBetter",
       "score": 85
     },
     {
@@ -30,13 +37,6 @@
     },
     {
       "type": "REPOSITORY",
-      "title": "eternity4719/HowToLiveBetter",
-      "category": "Open Source Software",
-      "canonicalUrl": "https://github.com/eternity4719/HowToLiveBetter",
-      "score": 85
-    },
-    {
-      "type": "REPOSITORY",
       "title": "rakanki911/DLSS5-Swapper",
       "category": "Open Source Software",
       "canonicalUrl": "https://github.com/rakanki911/DLSS5-Swapper",
@@ -47,6 +47,13 @@
       "title": "XiaoDuoYa/codex-with-chatgpt",
       "category": "AI & Machine Learning",
       "canonicalUrl": "https://github.com/XiaoDuoYa/codex-with-chatgpt",
+      "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "tamaratran/fast-jev-compaction",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/tamaratran/fast-jev-compaction",
       "score": 85
     },
     {
@@ -62,13 +69,6 @@
       "category": "Open Source Software",
       "canonicalUrl": "https://github.com/crmne/spotifast",
       "score": 89
-    },
-    {
-      "type": "REPOSITORY",
-      "title": "tamaratran/fast-jev-compaction",
-      "category": "AI & Machine Learning",
-      "canonicalUrl": "https://github.com/tamaratran/fast-jev-compaction",
-      "score": 85
     },
     {
       "type": "REPOSITORY",
