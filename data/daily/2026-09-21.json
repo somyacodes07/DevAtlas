@@ -1,9 +1,9 @@
 {
   "date": "2026-09-21",
-  "generatedAt": "2026-09-21T04:24:14.563Z",
-  "runId": "RUN-2026-09-21-1933",
+  "generatedAt": "2026-09-21T18:07:44.171Z",
+  "runId": "RUN-2026-09-21-8248",
   "summary": {
-    "itemsDiscovered": 66,
+    "itemsDiscovered": 96,
     "dataQualityScore": 100
   },
   "topItems": [
@@ -12,13 +12,20 @@
       "title": "browser-use/jev-ultrafast",
       "category": "Open Source Software",
       "canonicalUrl": "https://github.com/browser-use/jev-ultrafast",
-      "score": 88
+      "score": 92
     },
     {
       "type": "REPOSITORY",
       "title": "eternity4719/HowToLiveBetter",
       "category": "Open Source Software",
       "canonicalUrl": "https://github.com/eternity4719/HowToLiveBetter",
+      "score": 88
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "NandhaKishorM/laya",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/NandhaKishorM/laya",
       "score": 85
     },
     {
@@ -44,13 +51,6 @@
     },
     {
       "type": "REPOSITORY",
-      "title": "XiaoDuoYa/codex-with-chatgpt",
-      "category": "AI & Machine Learning",
-      "canonicalUrl": "https://github.com/XiaoDuoYa/codex-with-chatgpt",
-      "score": 85
-    },
-    {
-      "type": "REPOSITORY",
       "title": "tamaratran/fast-jev-compaction",
       "category": "AI & Machine Learning",
       "canonicalUrl": "https://github.com/tamaratran/fast-jev-compaction",
@@ -58,24 +58,24 @@
     },
     {
       "type": "REPOSITORY",
-      "title": "NandhaKishorM/laya",
-      "category": "Open Source Software",
-      "canonicalUrl": "https://github.com/NandhaKishorM/laya",
+      "title": "XiaoDuoYa/codex-with-chatgpt",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/XiaoDuoYa/codex-with-chatgpt",
       "score": 85
     },
     {
       "type": "REPOSITORY",
-      "title": "crmne/spotifast",
-      "category": "Open Source Software",
-      "canonicalUrl": "https://github.com/crmne/spotifast",
+      "title": "zai-org/ZCode",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/zai-org/ZCode",
       "score": 89
     },
     {
       "type": "REPOSITORY",
-      "title": "HEJustinSun/my-girlfriend-jingtian-latex",
-      "category": "Open Source Software",
-      "canonicalUrl": "https://github.com/HEJustinSun/my-girlfriend-jingtian-latex",
-      "score": 85
+      "title": "Albert-Weasker/niubigeo",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/Albert-Weasker/niubigeo",
+      "score": 89
     }
   ]
 }
