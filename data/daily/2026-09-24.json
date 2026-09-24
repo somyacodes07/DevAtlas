@@ -1,9 +1,9 @@
 {
   "date": "2026-09-24",
-  "generatedAt": "2026-09-24T04:13:11.253Z",
-  "runId": "RUN-2026-09-24-1954",
+  "generatedAt": "2026-09-24T16:56:44.473Z",
+  "runId": "RUN-2026-09-24-6889",
   "summary": {
-    "itemsDiscovered": 90,
+    "itemsDiscovered": 96,
     "dataQualityScore": 100
   },
   "topItems": [
@@ -58,6 +58,13 @@
     },
     {
       "type": "REPOSITORY",
+      "title": "jaredpalmer/kev",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/jaredpalmer/kev",
+      "score": 85
+    },
+    {
+      "type": "REPOSITORY",
       "title": "XiaoDuoYa/codex-with-chatgpt",
       "category": "AI & Machine Learning",
       "canonicalUrl": "https://github.com/XiaoDuoYa/codex-with-chatgpt",
@@ -69,13 +76,6 @@
       "category": "Open Source Software",
       "canonicalUrl": "https://github.com/rakanki911/DLSS5-Swapper",
       "score": 89
-    },
-    {
-      "type": "REPOSITORY",
-      "title": "jaredpalmer/kev",
-      "category": "AI & Machine Learning",
-      "canonicalUrl": "https://github.com/jaredpalmer/kev",
-      "score": 85
     }
   ]
 }
