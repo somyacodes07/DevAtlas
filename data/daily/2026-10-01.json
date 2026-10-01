@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-01",
+  "generatedAt": "2026-10-01T05:17:11.931Z",
+  "runId": "RUN-2026-10-01-3818",
+  "summary": {
+    "itemsDiscovered": 92,
+    "dataQualityScore": 100
+  },
+  "topItems": [
+    {
+      "type": "REPOSITORY",
+      "title": "eternity4719/HowToLiveBetter",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/eternity4719/HowToLiveBetter",
+      "score": 88
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "NandhaKishorM/laya",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/NandhaKishorM/laya",
+      "score": 88
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "browser-use/jev-ultrafast",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/browser-use/jev-ultrafast",
+      "score": 92
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "lnkiai/m3e-canvas",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/lnkiai/m3e-canvas",
+      "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "jaredpalmer/kev",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/jaredpalmer/kev",
+      "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "tamaratran/fast-jev-compaction",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/tamaratran/fast-jev-compaction",
+      "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "zai-org/ZCode",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/zai-org/ZCode",
+      "score": 89
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "jev-chat/jev-chat-jarvis",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/jev-chat/jev-chat-jarvis",
+      "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "robbietilton/Compositor",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/robbietilton/Compositor",
+      "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "mizorewww/laya-mlx",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/mizorewww/laya-mlx",
+      "score": 89
+    }
+  ]
+}
