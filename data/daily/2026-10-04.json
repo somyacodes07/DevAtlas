@@ -1,9 +1,9 @@
 {
   "date": "2026-10-04",
-  "generatedAt": "2026-10-04T05:21:16.190Z",
-  "runId": "RUN-2026-10-04-9343",
+  "generatedAt": "2026-10-04T16:43:28.993Z",
+  "runId": "RUN-2026-10-04-7001",
   "summary": {
-    "itemsDiscovered": 95,
+    "itemsDiscovered": 91,
     "dataQualityScore": 100
   },
   "topItems": [
@@ -33,7 +33,7 @@
       "title": "Niko1221/Strata",
       "category": "AI & Machine Learning",
       "canonicalUrl": "https://github.com/Niko1221/Strata",
-      "score": 92
+      "score": 95
     },
     {
       "type": "REPOSITORY",
@@ -44,17 +44,17 @@
     },
     {
       "type": "REPOSITORY",
-      "title": "zai-org/ZCode",
-      "category": "AI & Machine Learning",
-      "canonicalUrl": "https://github.com/zai-org/ZCode",
-      "score": 89
-    },
-    {
-      "type": "REPOSITORY",
       "title": "robbietilton/Compositor",
       "category": "Open Source Software",
       "canonicalUrl": "https://github.com/robbietilton/Compositor",
       "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "zai-org/ZCode",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/zai-org/ZCode",
+      "score": 89
     },
     {
       "type": "REPOSITORY",
