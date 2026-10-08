@@ -1,9 +1,9 @@
 {
   "date": "2026-10-08",
-  "generatedAt": "2026-10-08T05:32:46.389Z",
-  "runId": "RUN-2026-10-08-4696",
+  "generatedAt": "2026-10-08T18:44:31.918Z",
+  "runId": "RUN-2026-10-08-7611",
   "summary": {
-    "itemsDiscovered": 91,
+    "itemsDiscovered": 96,
     "dataQualityScore": 100
   },
   "topItems": [
@@ -16,16 +16,16 @@
     },
     {
       "type": "REPOSITORY",
-      "title": "browser-use/jev-ultrafast",
+      "title": "storytold/photocraft",
       "category": "Open Source Software",
-      "canonicalUrl": "https://github.com/browser-use/jev-ultrafast",
+      "canonicalUrl": "https://github.com/storytold/photocraft",
       "score": 92
     },
     {
       "type": "REPOSITORY",
-      "title": "storytold/photocraft",
+      "title": "browser-use/jev-ultrafast",
       "category": "Open Source Software",
-      "canonicalUrl": "https://github.com/storytold/photocraft",
+      "canonicalUrl": "https://github.com/browser-use/jev-ultrafast",
       "score": 92
     },
     {
@@ -54,7 +54,7 @@
       "title": "cdyforever/how-to-live-better",
       "category": "Open Source Software",
       "canonicalUrl": "https://github.com/cdyforever/how-to-live-better",
-      "score": 85
+      "score": 88
     },
     {
       "type": "REPOSITORY",
