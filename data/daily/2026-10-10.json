@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-10",
+  "generatedAt": "2026-10-10T05:20:53.594Z",
+  "runId": "RUN-2026-10-10-8327",
+  "summary": {
+    "itemsDiscovered": 91,
+    "dataQualityScore": 100
+  },
+  "topItems": [
+    {
+      "type": "REPOSITORY",
+      "title": "storytold/photocraft",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/storytold/photocraft",
+      "score": 92
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "NandhaKishorM/laya",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/NandhaKishorM/laya",
+      "score": 88
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "browser-use/jev-ultrafast",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/browser-use/jev-ultrafast",
+      "score": 92
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "Niko1221/Strata",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/Niko1221/Strata",
+      "score": 95
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "robbietilton/Compositor",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/robbietilton/Compositor",
+      "score": 88
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "openai/math",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/openai/math",
+      "score": 88
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "cdyforever/how-to-live-better",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/cdyforever/how-to-live-better",
+      "score": 88
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "jaredpalmer/kev",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/jaredpalmer/kev",
+      "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "shihabal3amri/DiPlay",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/shihabal3amri/DiPlay",
+      "score": 85
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "storytold/lightcraft",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/storytold/lightcraft",
+      "score": 89
+    }
+  ]
+}
