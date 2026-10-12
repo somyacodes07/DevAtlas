@@ -1,7 +1,7 @@
 {
   "date": "2026-10-12",
-  "generatedAt": "2026-10-12T05:25:39.766Z",
-  "runId": "RUN-2026-10-12-9924",
+  "generatedAt": "2026-10-12T21:09:43.199Z",
+  "runId": "RUN-2026-10-12-5488",
   "summary": {
     "itemsDiscovered": 92,
     "dataQualityScore": 100
@@ -51,6 +51,13 @@
     },
     {
       "type": "REPOSITORY",
+      "title": "Ebony-Vinyl/dsh-our-free-model",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/Ebony-Vinyl/dsh-our-free-model",
+      "score": 92
+    },
+    {
+      "type": "REPOSITORY",
       "title": "cdyforever/how-to-live-better",
       "category": "Open Source Software",
       "canonicalUrl": "https://github.com/cdyforever/how-to-live-better",
@@ -69,13 +76,6 @@
       "category": "Open Source Software",
       "canonicalUrl": "https://github.com/storytold/lightcraft",
       "score": 92
-    },
-    {
-      "type": "REPOSITORY",
-      "title": "storytold/pdfcraft",
-      "category": "Open Source Software",
-      "canonicalUrl": "https://github.com/storytold/pdfcraft",
-      "score": 89
     }
   ]
 }
