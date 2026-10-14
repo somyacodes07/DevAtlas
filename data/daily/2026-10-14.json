@@ -1,9 +1,9 @@
 {
   "date": "2026-10-14",
-  "generatedAt": "2026-10-14T04:25:00.948Z",
-  "runId": "RUN-2026-10-14-0030",
+  "generatedAt": "2026-10-14T16:56:57.827Z",
+  "runId": "RUN-2026-10-14-0489",
   "summary": {
-    "itemsDiscovered": 89,
+    "itemsDiscovered": 95,
     "dataQualityScore": 100
   },
   "topItems": [
@@ -44,17 +44,17 @@
     },
     {
       "type": "REPOSITORY",
-      "title": "openai/math",
-      "category": "AI & Machine Learning",
-      "canonicalUrl": "https://github.com/openai/math",
-      "score": 88
-    },
-    {
-      "type": "REPOSITORY",
       "title": "Ebony-Vinyl/dsh-our-free-model",
       "category": "Open Source Software",
       "canonicalUrl": "https://github.com/Ebony-Vinyl/dsh-our-free-model",
       "score": 92
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "openai/math",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/openai/math",
+      "score": 88
     },
     {
       "type": "REPOSITORY",
@@ -72,9 +72,9 @@
     },
     {
       "type": "REPOSITORY",
-      "title": "storytold/lightcraft",
-      "category": "Open Source Software",
-      "canonicalUrl": "https://github.com/storytold/lightcraft",
+      "title": "yetone/magpie",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/yetone/magpie",
       "score": 92
     }
   ]
