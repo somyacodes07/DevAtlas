@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-14",
+  "generatedAt": "2026-10-14T04:25:00.948Z",
+  "runId": "RUN-2026-10-14-0030",
+  "summary": {
+    "itemsDiscovered": 89,
+    "dataQualityScore": 100
+  },
+  "topItems": [
+    {
+      "type": "REPOSITORY",
+      "title": "storytold/photocraft",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/storytold/photocraft",
+      "score": 92
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "NandhaKishorM/laya",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/NandhaKishorM/laya",
+      "score": 88
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "Niko1221/Strata",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/Niko1221/Strata",
+      "score": 95
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "browser-use/jev-ultrafast",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/browser-use/jev-ultrafast",
+      "score": 92
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "robbietilton/Compositor",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/robbietilton/Compositor",
+      "score": 88
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "openai/math",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/openai/math",
+      "score": 88
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "Ebony-Vinyl/dsh-our-free-model",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/Ebony-Vinyl/dsh-our-free-model",
+      "score": 92
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "storytold/pdfcraft",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/storytold/pdfcraft",
+      "score": 92
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "storytold/filmcraft",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/storytold/filmcraft",
+      "score": 92
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "storytold/lightcraft",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/storytold/lightcraft",
+      "score": 92
+    }
+  ]
+}
