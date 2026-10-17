@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-17",
+  "generatedAt": "2026-10-17T03:54:15.167Z",
+  "runId": "RUN-2026-10-17-8433",
+  "summary": {
+    "itemsDiscovered": 92,
+    "dataQualityScore": 100
+  },
+  "topItems": [
+    {
+      "type": "REPOSITORY",
+      "title": "storytold/photocraft",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/storytold/photocraft",
+      "score": 92
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "NandhaKishorM/laya",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/NandhaKishorM/laya",
+      "score": 88
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "Niko1221/Strata",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/Niko1221/Strata",
+      "score": 95
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "Ebony-Vinyl/dsh-our-free-model",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/Ebony-Vinyl/dsh-our-free-model",
+      "score": 92
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "storytold/pdfcraft",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/storytold/pdfcraft",
+      "score": 92
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "openai/math",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/openai/math",
+      "score": 88
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "yetone/magpie",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/yetone/magpie",
+      "score": 92
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "storytold/filmcraft",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/storytold/filmcraft",
+      "score": 92
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "wheresryan22/anatomy",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/wheresryan22/anatomy",
+      "score": 92
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "storytold/wordcraft",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/storytold/wordcraft",
+      "score": 92
+    }
+  ]
+}
