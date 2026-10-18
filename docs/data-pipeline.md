@@ -5,6 +5,8 @@
 1. **Discovery**:
    Adapters implementing `DiscoverySource` query external APIs (GitHub REST API, RSS/Atom feeds, Hacker News Firebase API, public job boards).
    - Error Isolation: A failure in one source adapter does not abort the pipeline. The runner captures the error, tags the run as `PARTIAL_SUCCESS`, and proceeds with remaining sources.
+   - **India jobs and internships**: the pipeline reads published openings from employer-owned Lever and Greenhouse public boards. It keeps India-only locations, filters to engineering and technical roles, uses the employer-hosted application URL, and derives internship/work-mode/salary fields only from the ATS listing. Add or remove employer board IDs in `pipeline/src/discovery/indiaCareerBoardSource.ts`; use the official careers-board URL to verify the employer and location first.
+   - These feeds update on each scheduled pipeline run. The weekly maintenance job archives listings not seen in any discovery feed for 14 days, then archives all jobs older than 90 days. This prevents closed or removed roles from staying in the live jobs feed indefinitely.
 
 2. **Normalization & Canonicalization**:
    - Cleans HTML markup, trims whitespace, standardizes timestamps to ISO-8601 UTC.

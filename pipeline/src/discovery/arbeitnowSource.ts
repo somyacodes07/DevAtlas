@@ -41,10 +41,13 @@ export class ArbeitnowDiscoverySource implements DiscoverySource {
         publishedAt: job.created_at ? new Date(job.created_at * 1000).toISOString() : new Date().toISOString(),
         metadata: {
           company: job.company_name,
-          location: job.location || 'Remote',
+          location: job.location || 'Location not listed',
           remote: job.remote || false,
           tags: job.tags || [],
-          employmentType: 'FULL_TIME',
+          employmentType: /\b(intern|internship|co[ -]?op|apprentice)\b/i.test(job.title || '')
+            ? 'INTERNSHIP'
+            : 'UNSPECIFIED',
+          workMode: job.remote ? 'REMOTE' : 'UNSPECIFIED',
           sourcePlatform: 'Arbeitnow',
         }
       }));

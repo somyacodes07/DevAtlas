@@ -56,6 +56,15 @@ export function JobsClient({ initialJobs }: { initialJobs: ContentItem[] }) {
       {jobs.length ? <div className="story-listing">
         {jobs.map((item) => {
           const job = item.job!;
+          const workModeLabel = job.workMode === 'REMOTE'
+            ? 'Remote'
+            : job.workMode === 'HYBRID'
+              ? 'Hybrid'
+              : job.workMode === 'ON_SITE'
+                ? 'On site'
+                : job.remote
+                  ? 'Remote'
+                  : 'Work mode not listed';
           return <article className="listing-row" key={item.canonicalUrl}>
             <div>
               <span className="story-source">{sanitizeText(job.company)} · {job.sourcePlatform || item.source?.name || 'Job listing'}</span>
@@ -65,7 +74,8 @@ export function JobsClient({ initialJobs }: { initialJobs: ContentItem[] }) {
             </div>
             <div className="listing-aside">
               <div>{sanitizeText(job.location || 'Location not listed')}</div>
-              <div>{job.workMode?.replace('_', ' ') || (job.remote ? 'Remote' : 'Work mode not listed')}</div>
+              <div>{workModeLabel}</div>
+              {job.employmentType && job.employmentType !== 'UNSPECIFIED' && <div>{sanitizeText(job.employmentType.replaceAll('_', ' ').toLowerCase())}</div>}
               <div>{job.salary && !/competitive/i.test(job.salary) ? sanitizeText(job.salary) : 'Salary not listed'}</div>
               <a className="text-link" href={item.canonicalUrl} target="_blank" rel="noreferrer">View listing</a>
             </div>

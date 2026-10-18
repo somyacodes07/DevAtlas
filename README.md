@@ -112,7 +112,7 @@ flowchart LR
 
 ## 4. Key Platform Features
 
-- **Autonomous Discovery**: Reliable source adapters for GitHub Trending, Hacker News official API, verified developer job boards, and technology security feeds.
+- **Autonomous Discovery**: Reliable source adapters for GitHub Trending, Hacker News official API, employer-owned Greenhouse and Lever boards for India engineering jobs and internships, and technology security feeds.
 - **Resilient Error Isolation**: Fault-tolerant design where external source timeouts or network blips are captured and logged without crashing the pipeline run.
 - **Deterministic Deduplication**: URL canonicalization (stripping tracking query parameters, normalising paths) and SHA-256 URL/content hashing.
 - **Resilient AI Engine**: Multi-tiered AI provider abstraction supporting both cloud LLMs and a built-in deterministic taxonomy engine that guarantees uninterrupted pipeline execution.
@@ -144,7 +144,7 @@ DevAtlas/
 │   │   ├── daily-discovery.yml    # Scheduled discovery, AI scoring, report generator & commit
 │   │   ├── deploy.yml             # Cloudflare Worker & Pages deployment with smoke tests
 │   │   ├── security.yml           # Gitleaks secret scanning, npm audit, CycloneDX SBOM
-│   │   ├── weekly-maintenance.yml # Retention cleanup (>90d job purge) & index check
+│   │   ├── weekly-maintenance.yml # Stale job archival (14d unseen; 90d maximum age)
 │   │   └── release.yml            # Semantic release workflow with attached SBOM
 │   ├── dependabot.yml             # Dependency updates configuration
 │   └── pull_request_template.md   # Production PR template
@@ -158,6 +158,7 @@ DevAtlas/
 │   ├── ci-cd.md
 │   ├── data-pipeline.md
 │   ├── deployment.md
+│   ├── resume-project-summary.md
 │   ├── security.md
 │   └── troubleshooting.md
 ├── scripts/

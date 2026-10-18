@@ -14,8 +14,7 @@ if (typeof process.loadEnvFile === 'function') {
 
 import { GitHubDiscoverySource } from './discovery/githubSource';
 import { HackerNewsDiscoverySource } from './discovery/hackerNewsSource';
-import { JobDiscoverySource } from './discovery/jobSource';
-import { YCInstahyreDiscoverySource } from './discovery/ycInstahyreSource';
+import { createIndiaCareerBoardSources } from './discovery/indiaCareerBoardSource';
 import { RemotiveJobicyDiscoverySource } from './discovery/remotiveJobicySource';
 import { ArbeitnowDiscoverySource } from './discovery/arbeitnowSource';
 import { canonicalizeUrl, computeContentHash, computeUrlHash } from './deduplication/hasher';
@@ -40,8 +39,7 @@ export async function runPipeline(): Promise<PipelineRunResult> {
   const sources: DiscoverySource[] = [
     new GitHubDiscoverySource(),
     new HackerNewsDiscoverySource(),
-    new JobDiscoverySource(),
-    new YCInstahyreDiscoverySource(),
+    ...createIndiaCareerBoardSources(),
     new RemotiveJobicyDiscoverySource(),
     new ArbeitnowDiscoverySource(),
   ];
