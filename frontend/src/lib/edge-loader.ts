@@ -85,14 +85,14 @@ export function getCalculatedStats(): SystemStats {
       securityAlerts: securityCount,
     },
     pipeline: {
-      status: latestRun?.status || 'SUCCESS',
-      lastRunAt: latestRun?.completedAt || latestRun?.startedAt || '2026-09-10T16:29:02.038Z',
-      durationSeconds: latestRun?.durationSeconds || 1065,
-      dataQualityScore: latestRun?.dataQualityScore || 98.4,
-      lastCommitSha: 'e864a48',
-      itemsDiscovered: latestRun?.items?.discovered || 96,
-      itemsNew: latestRun?.items?.new || 93,
-      duplicatesPruned: latestRun?.items?.duplicates || 3,
+      status: latestRun?.status || 'SNAPSHOT ONLY',
+      lastRunAt: latestRun?.completedAt || latestRun?.startedAt || '—',
+      durationSeconds: latestRun?.durationSeconds,
+      dataQualityScore: latestRun?.dataQualityScore,
+      lastCommitSha: latestRun?.gitCommitSha,
+      itemsDiscovered: latestRun?.items?.discovered,
+      itemsNew: latestRun?.items?.new,
+      duplicatesPruned: latestRun?.items?.duplicates,
     },
   };
 }
@@ -100,15 +100,14 @@ export function getCalculatedStats(): SystemStats {
 export function getCalculatedHealth(): HealthData {
   const items = getEdgeItems();
   return {
-    status: 'HEALTHY',
+    status: 'CATALOG AVAILABLE',
     version: '1.0.0',
     timestamp: new Date().toISOString(),
     environment: 'production',
     services: {
-      api: 'OPERATIONAL (Cloudflare Edge Workers)',
-      database: `OPERATIONAL (${items.length} verified edge records)`,
-      databaseLatencyMs: 14,
-      cache: 'ACTIVE (Cloudflare Workers KV)',
+      api: 'STATIC FALLBACK',
+      database: `Not connected · ${items.length} local records available`,
+      cache: 'Local JSON snapshot',
     },
   };
 }

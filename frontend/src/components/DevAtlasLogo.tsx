@@ -8,20 +8,8 @@ interface DevAtlasLogoProps {
   animated?: boolean;
 }
 
-/**
- * The DevAtlas Editorial Press Mark
- * A clean, refined geometric emblem representing
- * autonomous telemetry and developer cartography.
- */
-export function DevAtlasMark({
-  size = 32,
-  className = '',
-  animated = false,
-}: {
-  size?: number;
-  className?: string;
-  animated?: boolean;
-}) {
+/** A compact compass-and-open-paper mark for the DevAtlas daily edition. */
+export function DevAtlasMark({ size = 40, className = '', animated = false }: { size?: number; className?: string; animated?: boolean }) {
   return (
     <svg
       width={size}
@@ -29,84 +17,24 @@ export function DevAtlasMark({
       viewBox="0 0 48 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={`shrink-0 select-none ${className}`}
-      aria-label="DevAtlas Logo Emblem"
+      className={`devatlas-mark shrink-0 ${animated ? 'devatlas-mark-animated' : ''} ${className}`}
+      role="img"
+      aria-label="DevAtlas mark"
     >
-      {/* Outer Circle */}
-      <circle
-        cx="24"
-        cy="24"
-        r="22"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeOpacity="0.3"
-      />
-
-      {/* Inner Circle */}
-      <circle
-        cx="24"
-        cy="24"
-        r="16"
-        stroke="currentColor"
-        strokeWidth="1"
-        strokeOpacity="0.15"
-      />
-
-      {/* Cardinal Ticks */}
-      <line x1="24" y1="2" x2="24" y2="6" stroke="currentColor" strokeWidth="1.5" strokeOpacity="0.4" strokeLinecap="round" />
-      <line x1="24" y1="42" x2="24" y2="46" stroke="currentColor" strokeWidth="1.5" strokeOpacity="0.4" strokeLinecap="round" />
-      <line x1="2" y1="24" x2="6" y2="24" stroke="currentColor" strokeWidth="1.5" strokeOpacity="0.4" strokeLinecap="round" />
-      <line x1="42" y1="24" x2="46" y2="24" stroke="currentColor" strokeWidth="1.5" strokeOpacity="0.4" strokeLinecap="round" />
-
-      {/* Radar Sweep Arc */}
-      <g className={animated ? 'origin-center animate-[spin_10s_linear_infinite]' : ''}>
-        <path
-          d="M24 8 A 16 16 0 0 1 40 24"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeOpacity="0.6"
-        />
-      </g>
-
-      {/* Central Isometric Prism */}
-      <polygon points="24,13 33,18 24,23 15,18" fill="currentColor" opacity="0.85" />
-      <polygon points="24,23 33,18 33,29 24,34" fill="currentColor" opacity="0.5" />
-      <polygon points="24,23 15,18 15,29 24,34" fill="currentColor" opacity="0.65" />
-
-      {/* Prism Edges */}
-      <polygon points="24,13 33,18 24,23 15,18" stroke="currentColor" strokeWidth="0.5" strokeOpacity="0.3" fill="none" />
-      <polygon points="24,23 33,18 33,29 24,34" stroke="currentColor" strokeWidth="0.5" strokeOpacity="0.2" fill="none" />
-
-      {/* Center Dot */}
-      <circle cx="24" cy="23" r="1.5" fill="currentColor" opacity="0.9" />
+      <circle cx="24" cy="24" r="21.25" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M24 7.5 27.2 19l11.3 5-11.3 4L24 40.5 20.8 28 9.5 24l11.3-5L24 7.5Z" fill="currentColor" fillOpacity=".12" stroke="currentColor" strokeWidth="1.25" />
+      <path d="M15.5 20.7c3.1-1.1 5.9-.7 8.5 1.1 2.6-1.8 5.4-2.2 8.5-1.1v11c-3.2-1.1-6-.7-8.5 1.2-2.5-1.9-5.3-2.3-8.5-1.2v-11Z" fill="var(--background)" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
+      <path d="M24 22v10.8M18.5 24.2c1.6-.3 3.1 0 4.5.8m2.5 0c1.4-.8 2.9-1.1 4.5-.8" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" />
+      <circle cx="24" cy="9.2" r="1.25" fill="currentColor" />
     </svg>
   );
 }
 
-export default function DevAtlasLogo({
-  size = 32,
-  className = '',
-  showText = true,
-  textClassName = '',
-  animated = false,
-}: DevAtlasLogoProps) {
+export default function DevAtlasLogo({ size = 40, className = '', showText = true, textClassName = '' }: DevAtlasLogoProps) {
   return (
-    <div className={`inline-flex items-center gap-3 group ${className}`}>
-      <div className="relative flex items-center justify-center">
-        <DevAtlasMark size={size} animated={animated} />
-      </div>
-
-      {showText && (
-        <div className="flex flex-col leading-none justify-center">
-          <span className="font-mono text-[7px] tracking-[0.3em] uppercase text-dateline">THE</span>
-          <span
-            className={`font-serif text-lg font-black tracking-tight text-foreground leading-none transition-colors group-hover:text-accent ${textClassName}`}
-          >
-            DEVATLAS
-          </span>
-        </div>
-      )}
-    </div>
+    <span className={`inline-flex items-center gap-2.5 ${className}`}>
+      <DevAtlasMark size={size} />
+      {showText && <span className={`font-serif font-semibold tracking-tight ${textClassName}`}>DevAtlas</span>}
+    </span>
   );
 }

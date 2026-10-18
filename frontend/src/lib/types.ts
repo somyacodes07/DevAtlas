@@ -1,5 +1,6 @@
 export interface ContentItem {
   _id?: string;
+  status?: 'PENDING' | 'PROCESSED' | 'REJECTED' | 'ARCHIVED';
   type: 'AI_TOOL' | 'JOB' | 'REPOSITORY' | 'NEWS' | 'SECURITY';
   title: string;
   description: string;
@@ -80,8 +81,8 @@ export interface SystemStats {
   pipeline: {
     status: string;
     lastRunAt: string;
-    durationSeconds: number;
-    dataQualityScore: number;
+    durationSeconds?: number;
+    dataQualityScore?: number;
     lastCommitSha?: string;
     itemsDiscovered?: number;
     itemsNew?: number;
@@ -128,4 +129,5 @@ export interface PipelineRun {
   dataQualityScore: number;
   reportGenerated: boolean;
   gitCommitCreated: boolean;
+  gitCommitSha?: string;
 }

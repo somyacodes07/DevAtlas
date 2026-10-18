@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter, JetBrains_Mono, Playfair_Display, Newsreader } from 'next/font/google';
+import { Inter, JetBrains_Mono, Newsreader } from 'next/font/google';
 import '../styles/globals.css';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -17,22 +17,17 @@ const jetbrainsMono = JetBrains_Mono({
   variable: '--font-mono',
 });
 
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-serif',
-});
-
 const newsreader = Newsreader({
   subsets: ['latin'],
   display: 'swap',
+  weight: ['400', '500', '600', '700'],
   variable: '--font-editorial',
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://devatlas.pages.dev';
 
 export const viewport: Viewport = {
-  themeColor: '#0e0e10',
+  themeColor: '#f4f2e9',
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
@@ -41,11 +36,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'DevAtlas — Autonomous Developer Intelligence & Engineering Radar',
+    default: 'DevAtlas Daily — Developer intelligence, clearly told',
     template: '%s | DevAtlas',
   },
   description:
-    'Real-time developer intelligence platform. Curated software engineering roles, high-stipend internships, frontier AI tools, and fast-growing open source repositories.',
+    'A daily paper for developers: useful technology news, open source projects, tools, reports, and engineering roles.',
   keywords: [
     'developer jobs',
     'software engineering internships 2026',
@@ -74,15 +69,15 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: siteUrl,
     siteName: 'DevAtlas',
-    title: 'DevAtlas — Autonomous Developer Intelligence & Engineering Radar',
+    title: 'DevAtlas Daily — Developer intelligence, clearly told',
     description:
-      'Continuous real-time radar for verified software engineering roles, internships, AI tools, and fast-growing repositories.',
+      'A daily paper for developers: useful technology news, open source projects, tools, reports, and engineering roles.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'DevAtlas — Developer Intelligence & Engineering Radar',
+    title: 'DevAtlas Daily — Developer intelligence, clearly told',
     description:
-      'Continuous real-time radar for verified software engineering roles, internships, AI tools, and open source momentum.',
+      'Read the daily edition of developer news, roles, tools, and open source discoveries.',
   },
   robots: {
     index: true,
@@ -103,7 +98,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} ${playfair.variable} ${newsreader.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} ${newsreader.variable}`} suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -111,7 +106,7 @@ export default function RootLayout({
               (function() {
                 try {
                   var stored = localStorage.getItem('devatlas-theme');
-                  var isDark = stored ? stored === 'dark' : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+                  var isDark = stored === 'dark';
                   if (isDark) {
                     document.documentElement.classList.add('dark');
                   } else {
@@ -124,7 +119,7 @@ export default function RootLayout({
         />
         <JsonLd />
       </head>
-      <body className="min-h-screen bg-background bg-newsprint font-sans text-foreground antialiased selection:bg-accent/20 selection:text-foreground" suppressHydrationWarning>
+      <body className="min-h-screen flex flex-col" suppressHydrationWarning>
         {/* Accessible Skip Link */}
         <a
           href="#main-content"
@@ -133,7 +128,7 @@ export default function RootLayout({
           Skip to main content
         </a>
 
-        <div className="flex min-h-screen flex-col">
+        <div className="flex min-h-screen flex-col w-full">
           <Header />
           <main id="main-content" className="flex-1">
             {children}

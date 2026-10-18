@@ -1,416 +1,121 @@
 import Link from 'next/link';
-import { fetchJobs, fetchRepositories, fetchStats, fetchTools } from '@/lib/api';
+import { DevAtlasMark } from '@/components/DevAtlasLogo';
+import { getEdgeItems } from '@/lib/edge-loader';
 import { getAllReports } from '@/lib/reports';
-import { HeroCommandCenter } from '@/components/HeroCommandCenter';
-import { LiveRadarShowcase } from '@/components/LiveRadarShowcase';
+import { sanitizeText } from '@/lib/formatters';
+import type { ContentItem } from '@/lib/types';
 
-function parseBriefingSections(markdown?: string) {
-  if (!markdown) {
-    return {
-      leadParagraph: 'Autonomous intelligence synthesis recording verified software engineering roles, frontier AI models, and breakout open source velocity.',
-      ecosystem: 'Autonomous research systems and multi-agent coordination frameworks accelerate across developer pipelines.',
-      infrastructure: 'High-performance native utilities in Rust, PyO3 runtimes, and local-first memory systems dominate open source velocity.',
-      talent: 'High-demand hiring patterns prioritize engineers bridging systems architecture, native compilation, and agentic workflows.',
-    };
-  }
+function excerpt(item: ContentItem, limit = 190) {
+  const text = sanitizeText(item.summary || item.description || '');
+  return text.length > limit ? `${text.slice(0, limit).trimEnd()}…` : text;
+}
 
-  // Extract executive briefing
-  let leadParagraph = '';
-  const execMatch = markdown.match(/## Executive Intelligence Briefing\s+([\s\S]*?)(?=\n###|\n##|$)/);
-  if (execMatch && execMatch[1]) {
-    const cleaned = execMatch[1].replace(/[*#`]/g, '').trim().split('\n\n')[0];
-    if (cleaned.length > 20) leadParagraph = cleaned;
-  }
+function formatDate(date: string) {
+  const parsed = new Date(`${date.slice(0, 10)}T12:00:00Z`);
+  return Number.isNaN(parsed.getTime()) ? date : new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(parsed);
+}
 
-  // Fallback for numbered lists in briefing
-  if (!leadParagraph) {
-    const numMatch = markdown.match(/## Executive Intelligence Briefing\s+1\.\s+([\s\S]*?)(?=\n2\.|\n##|$)/);
-    if (numMatch && numMatch[1]) {
-      leadParagraph = numMatch[1].replace(/[*#`]/g, '').trim();
-    }
-  }
-
-  let ecosystem = '';
-  const ecoMatch = markdown.match(/### Ecosystem & AI Velocity\s*([\s\S]*?)(?=\n###|\n##|$)/);
-  if (ecoMatch) ecosystem = ecoMatch[1].replace(/[*#`]/g, '').trim().split('\n')[0];
-
-  let infrastructure = '';
-  const infraMatch = markdown.match(/### Open Source & Infrastructure\s*([\s\S]*?)(?=\n###|\n##|$)/);
-  if (infraMatch) infrastructure = infraMatch[1].replace(/[*#`]/g, '').trim().split('\n')[0];
-
-  let talent = '';
-  const talentMatch = markdown.match(/### Engineering Talent Radar\s*([\s\S]*?)(?=\n###|\n##|$)/);
-  if (talentMatch) talent = talentMatch[1].replace(/[*#`]/g, '').trim().split('\n')[0];
-
-  return {
-    leadParagraph: leadParagraph || 'The convergence of multi-agent collaboration frameworks and autonomous research pipelines dominated software engineering velocity today.',
-    ecosystem: ecosystem || 'Autonomous research systems and agent frameworks expand from prototype ideation to empirical validation.',
-    infrastructure: infrastructure || 'Memory-safe systems programming with PyO3 and bare-metal Rust runtimes show accelerating momentum.',
-    talent: talent || 'Engineering demand favors architects who bridge heterogeneous AI orchestration with low-level systems programming.',
-  };
+function Story({ item, compact = false }: { item: ContentItem; compact?: boolean }) {
+  return (
+    <article className={compact ? 'briefing-story' : 'story'}>
+      <span className="story-source">{item.source?.name || item.category || item.type.replace('_', ' ')}</span>
+      <a href={item.canonicalUrl} target="_blank" rel="noreferrer">
+        <h3>{sanitizeText(item.title)}</h3>
+      </a>
+      {!compact && <p>{excerpt(item, 155)}</p>}
+      {!compact && <div className="story-score">Relevance {item.score?.total ?? '—'} / 100</div>}
+    </article>
+  );
 }
 
 export default async function HomePage() {
-  const [statsData, toolsData, jobsData, reposData, allReports] = await Promise.all([
-    fetchStats(),
-    fetchTools({ limit: '6' }),
-    fetchJobs({ limit: '8' }),
-    fetchRepositories({ limit: '6' }),
-    getAllReports(),
-  ]);
-
-  const stats = [
-    { label: 'Cataloged Signals', count: '469+', meta: 'Daily discovery' },
-    { label: 'Verified Roles', count: '339', meta: 'Remote & Global' },
-    { label: 'Security Wire', count: '20', meta: 'CVE & Supply Chain' },
-    { label: 'Tech News & RSS', count: '76', meta: 'Dev.to & HN' },
-    { label: 'Data Quality', count: `${statsData?.pipeline?.dataQualityScore ?? 98.4}%`, meta: 'Schema validated' },
+  const items = getEdgeItems().filter((item) => item.status !== 'ARCHIVED');
+  const reports = await getAllReports();
+  const latestReport = reports[0];
+  const lead = items.find((item) => item.type === 'NEWS') || items.find((item) => item.type === 'REPOSITORY') || items[0];
+  const wireItems = items.filter((item) => item.type === 'NEWS' || item.type === 'SECURITY').slice(0, 8);
+  const briefing = items.filter((item) => item !== lead && (item.type === 'NEWS' || item.type === 'SECURITY')).slice(0, 4);
+  const sections = [
+    { title: 'Work & opportunity', href: '/jobs', type: 'JOB' as const, items: items.filter((item) => item.type === 'JOB').slice(0, 3) },
+    { title: 'Tools for the work', href: '/tools', type: 'AI_TOOL' as const, items: items.filter((item) => item.type === 'AI_TOOL').slice(0, 3) },
+    { title: 'Open source watch', href: '/repositories', type: 'REPOSITORY' as const, items: items.filter((item) => item.type === 'REPOSITORY').slice(0, 3) },
   ];
-
-  const tools = toolsData.data;
-  const jobs = jobsData.data;
-  const repos = reposData.data;
-
-  const latestReport = allReports[0] || {
-    reportDate: '2026-09-13',
-    title: 'DevAtlas Daily Intelligence Report — 2026-09-13',
-    structuredSummary: { dataQualityScore: 100, itemsDiscovered: 89 },
+  const counts = {
+    jobs: items.filter((item) => item.type === 'JOB').length,
+    tools: items.filter((item) => item.type === 'AI_TOOL').length,
+    repositories: items.filter((item) => item.type === 'REPOSITORY').length,
+    reports: reports.length,
   };
-
-  const briefing = parseBriefingSections(latestReport.markdownContent);
+  const editionDate = latestReport?.reportDate || lead?.publishedAt || new Date().toISOString();
 
   return (
-    <div className="w-full px-4 md:px-8 xl:px-12 py-6 sm:py-10 space-y-12">
-      {/* 1. Hero — Front Page Lead */}
-      <section>
-        <HeroCommandCenter />
-      </section>
+    <div className="paper-page">
+      <div className="front-dateline">
+        <span className="paper-kicker">The developer’s daily paper</span>
+        <time dateTime={editionDate}>{latestReport ? `Latest edition · ${formatDate(latestReport.reportDate)}` : `Archive updated · ${formatDate(editionDate)}`}</time>
+      </div>
 
-      {/* 2. Front Page Lead Story & Intelligence Briefing */}
-      <section className="border-t border-double-rule pt-8 pb-4">
-        <div className="flex items-center justify-between gap-4 mb-6 border-b border-rule pb-3">
-          <div className="flex items-center gap-3">
-            <span className="stamp-badge">
-              <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-              &sect; E. LEAD EDITORIAL DISPATCH
-            </span>
-            <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-dateline font-semibold">
-              DAILY INTELLIGENCE BRIEFING &bull; {latestReport.reportDate}
-            </span>
-          </div>
+      {lead ? (
+        <section className="front-grid" aria-labelledby="lead-heading">
+          <article className="lead-story">
+            <span className="paper-kicker">Today’s lead · {lead.category || lead.type.replace('_', ' ')}</span>
+            <h1 id="lead-heading"><a href={lead.canonicalUrl} target="_blank" rel="noreferrer">{sanitizeText(lead.title)}</a></h1>
+            <p className="lead-deck">{excerpt(lead, 300)}</p>
+            <div className="lead-story-byline">
+              <span className="paper-meta">From {lead.source?.name || 'the DevAtlas index'}</span>
+              <span className="paper-meta">Relevance {lead.score?.total ?? '—'} / 100</span>
+              <a className="text-link" href={lead.canonicalUrl} target="_blank" rel="noreferrer">Read the original</a>
+            </div>
+            <div className="lead-art" role="img" aria-label="A compass over an open paper, DevAtlas’s mark for the daily edition">
+              <div className="lead-art-grid" />
+              <DevAtlasMark size={136} className="lead-art-mark" />
+              <span className="lead-art-caption">A wider view of the developer landscape</span>
+            </div>
+          </article>
 
-          <div className="flex items-center gap-2">
-            <span className="font-mono text-[9px] font-bold text-accent border border-accent/30 bg-accent-subtle px-2.5 py-0.5 tracking-wider uppercase">
-              QUALITY {latestReport.structuredSummary?.dataQualityScore ?? 100}%
-            </span>
-            <span className="font-mono text-[9px] font-bold text-foreground border border-border px-2.5 py-0.5 tracking-wider uppercase hidden sm:inline-block">
-              {latestReport.structuredSummary?.itemsDiscovered ?? 89} ITEMS
-            </span>
-          </div>
+          <aside className="front-aside" aria-labelledby="briefing-heading">
+            <h2 id="briefing-heading">In this edition</h2>
+            {briefing.length ? briefing.map((item) => <Story compact key={item.canonicalUrl} item={item} />) : <p className="empty-note">The wire is quiet for now. Browse the full index for more.</p>}
+            {latestReport && <Link href={`/reports/${latestReport.reportDate}`} className="text-link">Read the full daily report</Link>}
+          </aside>
+        </section>
+      ) : (
+        <section className="front-grid"><div><span className="paper-kicker">DevAtlas Daily</span><h1 className="paper-title">A quieter way to keep up.</h1><p className="paper-deck">The archive is waiting for its first edition.</p></div></section>
+      )}
+
+      {wireItems.length > 0 && (
+        <div className="wire-strip" aria-label="Recent headlines">
+          {[0, 1].map((copy) => <div className="wire-strip-track" key={copy} aria-hidden={copy === 1}>
+            {wireItems.map((item) => <a className="wire-item" key={`${copy}-${item.canonicalUrl}`} href={item.canonicalUrl} target="_blank" rel="noreferrer">{sanitizeText(item.title)}</a>)}
+          </div>)}
         </div>
+      )}
 
-        {/* Two-Column Broadsheet Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
-          {/* Main Column (8 cols): The Lead Story */}
-          <div className="lg:col-span-8 flex flex-col justify-between">
-            <div>
-              <span className="font-mono text-[9px] tracking-[0.25em] uppercase text-dateline font-bold block mb-2">
-                EXECUTIVE SYNTHESIS &bull; AUTONOMOUS REPORT
-              </span>
-
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-black text-foreground tracking-tight leading-[1.02] mb-6">
-                <Link
-                  href={`/reports/${latestReport.reportDate}`}
-                  className="hover:text-accent transition-colors"
-                >
-                  {latestReport.title}
-                </Link>
-              </h2>
-
-              <p className="font-editorial text-base sm:text-lg text-foreground/90 leading-relaxed drop-cap mb-8">
-                {briefing.leadParagraph}
-              </p>
-
-              {/* Three Editorial Columnettes */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 border-t border-rule">
-                <div>
-                  <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-accent font-bold block mb-1.5">
-                    I. AI &amp; ECOSYSTEM
-                  </span>
-                  <p className="font-editorial text-xs text-muted leading-relaxed">
-                    {briefing.ecosystem}
-                  </p>
-                </div>
-                <div>
-                  <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-accent font-bold block mb-1.5">
-                    II. INFRASTRUCTURE
-                  </span>
-                  <p className="font-editorial text-xs text-muted leading-relaxed">
-                    {briefing.infrastructure}
-                  </p>
-                </div>
-                <div>
-                  <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-accent font-bold block mb-1.5">
-                    III. TALENT RADAR
-                  </span>
-                  <p className="font-editorial text-xs text-muted leading-relaxed">
-                    {briefing.talent}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Read Action Bar */}
-            <div className="mt-8 pt-6 border-t border-rule flex flex-wrap items-center justify-between gap-4">
-              <div className="flex items-center gap-3">
-                <Link
-                  href={`/reports/${latestReport.reportDate}`}
-                  className="btn-tactile-solid py-2.5 px-5 font-mono text-[10px] tracking-[0.14em]"
-                >
-                  READ FULL {latestReport.reportDate} BRIEFING &rarr;
-                </Link>
-                <Link
-                  href="/reports"
-                  className="btn-tactile-outline py-2.5 px-4 font-mono text-[10px] tracking-[0.14em]"
-                >
-                  BROWSE ALL DISPATCHES ({allReports.length}) &rarr;
-                </Link>
-              </div>
-
-              <span className="font-mono text-[9px] text-dateline tracking-wider uppercase">
-                COMPILED VIA ZERO-DB EDGE ARCHITECTURE
-              </span>
-            </div>
-          </div>
-
-          {/* Right Column (4 cols): The Morning Wire & Top Discoveries */}
-          <div className="lg:col-span-4 lg:border-l border-rule lg:pl-8 flex flex-col justify-between">
-            <div>
-              <div className="flex items-center justify-between pb-3 mb-4 border-b border-rule">
-                <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-foreground font-bold">
-                  ❖ THE DISCOVERY WIRE
-                </span>
-                <span className="font-mono text-[8.5px] uppercase tracking-wider text-dateline">
-                  TODAY&apos;S HIGHLIGHTS
-                </span>
-              </div>
-
-              {/* Repositories Highlight */}
-              <div className="space-y-4">
-                <span className="font-mono text-[8.5px] uppercase tracking-[0.18em] text-accent font-bold block">
-                  ACCELERATING REPOSITORIES
-                </span>
-                {repos.slice(0, 3).map((r) => (
-                  <div key={r.canonicalUrl || r.title} className="group border-b border-rule pb-3 last:border-b-0">
-                    <a
-                      href={r.canonicalUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="font-serif text-sm font-bold text-foreground group-hover:text-accent transition-colors block leading-snug"
-                    >
-                      {r.title}
-                    </a>
-                    <p className="font-editorial text-xs text-muted mt-1 line-clamp-1">
-                      {r.description}
-                    </p>
-                    <div className="flex items-center gap-3 mt-1.5 font-mono text-[9px] text-dateline">
-                      <span>★ {r.repository?.stars?.toLocaleString() || '1,000+'}</span>
-                      <span>&bull;</span>
-                      <span className="uppercase">{r.repository?.language || 'Software'}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Verified Career Wire Highlight */}
-              <div className="mt-6 pt-4 border-t border-rule">
-                <span className="font-mono text-[8.5px] uppercase tracking-[0.18em] text-accent font-bold block mb-3">
-                  FEATURED CLASSIFIED
-                </span>
-                {jobs[0] && (
-                  <div className="p-3.5 bg-card border border-border">
-                    <div className="flex items-center justify-between gap-2 mb-1.5">
-                      <span className="font-mono text-[9px] font-bold text-foreground uppercase">
-                        {jobs[0].job?.company || 'Verified Team'}
-                      </span>
-                      <span className="stamp-badge text-[7.5px] py-0 px-1">
-                        VERIFIED
-                      </span>
-                    </div>
-                    <a
-                      href={jobs[0].canonicalUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="font-serif text-xs font-bold text-foreground hover:text-accent transition-colors block leading-tight"
-                    >
-                      {jobs[0].title}
-                    </a>
-                    <div className="mt-2 flex items-center justify-between font-mono text-[9px] text-dateline">
-                      <span>{jobs[0].job?.location || 'Remote'}</span>
-                      <span className="text-accent font-bold">{jobs[0].job?.salary || 'Competitive'}</span>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-
-            <div className="pt-4 border-t border-rule mt-6">
-              <Link
-                href="/explore"
-                className="font-mono text-[9.5px] tracking-widest uppercase text-muted hover:text-foreground flex items-center justify-between transition-colors"
-              >
-                <span>OPEN DISCOVERY INDEX</span>
-                <span>&rarr;</span>
-              </Link>
-            </div>
-          </div>
+      <section className="paper-section" aria-labelledby="index-heading">
+        <div className="section-heading"><h2 id="index-heading">From the index</h2><Link href="/explore">Browse all {items.length} records</Link></div>
+        <div className="ops-grid">
+          <div className="ops-cell"><span className="paper-label">Job listings</span><strong className="ops-value">{counts.jobs.toLocaleString()}</strong></div>
+          <div className="ops-cell"><span className="paper-label">Developer tools</span><strong className="ops-value">{counts.tools.toLocaleString()}</strong></div>
+          <div className="ops-cell"><span className="paper-label">Repositories</span><strong className="ops-value">{counts.repositories.toLocaleString()}</strong></div>
+          <div className="ops-cell"><span className="paper-label">Daily reports</span><strong className="ops-value">{counts.reports.toLocaleString()}</strong></div>
         </div>
       </section>
 
-      {/* 3. The Market Ledger — 5-Column Financial Broadsheet Grid */}
-      <section className="border-t border-double-rule pt-8 pb-4">
-        <div className="flex items-center gap-3 mb-6">
-          <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-dateline font-bold">
-            ❖ THE INDEX &mdash; ECOSYSTEM &amp; TELEMETRY LEDGER
-          </span>
-        </div>
-        <div className="grid grid-cols-2 gap-0 sm:grid-cols-3 lg:grid-cols-5 border border-border bg-card">
-          {stats.map((s, i) => (
-            <div
-              key={s.label}
-              className={`p-5 flex flex-col border-r border-b border-border last:border-r-0 hover:bg-card-hover transition-colors ${
-                i >= 3 ? 'hidden sm:flex' : ''
-              } ${i >= 4 ? 'hidden lg:flex' : ''}`}
-            >
-              <span className="font-mono text-[8.5px] tracking-[0.2em] uppercase text-dateline font-bold mb-2">
-                #{String(i + 1).padStart(2, '0')} {s.label}
-              </span>
-              <span className="font-serif text-3xl sm:text-4xl font-black text-foreground tracking-tight leading-none">
-                {s.count}
-              </span>
-              <span className="mt-2 font-mono text-[8.5px] tracking-wider uppercase text-accent font-bold">
-                {s.meta}
-              </span>
-            </div>
-          ))}
-        </div>
-      </section>
+      {sections.map((section) => (
+        <section className="paper-section" key={section.type}>
+          <div className="section-heading"><h2>{section.title}</h2><Link href={section.href}>See the full section</Link></div>
+          {section.items.length ? <div className="story-list">{section.items.map((item) => <Story key={item.canonicalUrl} item={item} />)}</div> : <p className="empty-note">No entries have been added to this section yet.</p>}
+        </section>
+      ))}
 
-      {/* 4. Live Radar Showcase — Classifieds, AI Apparatus, Code Registry */}
-      <section>
-        <LiveRadarShowcase jobs={jobs} tools={tools} repos={repos} />
-      </section>
-
-      {/* 5. Section E: Intelligence Archive Ledger */}
-      <section className="border-t border-double-rule pt-8 pb-4">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
-          <div>
-            <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-dateline font-bold block mb-1">
-              &sect; E. THE ARCHIVE LEDGER
-            </span>
-            <h2 className="font-serif text-2xl sm:text-3xl font-black text-foreground tracking-tight">
-              Recent Intelligence Dispatches
-            </h2>
+      {reports.length > 0 && (
+        <section className="paper-section">
+          <div className="section-heading"><h2>Recent editions</h2><Link href="/reports">Open the archive</Link></div>
+          <div className="latest-editions">
+            {reports.slice(0, 3).map((report) => <Link className="edition-item" key={report.reportDate} href={`/reports/${report.reportDate}`}><span className="paper-label">{formatDate(report.reportDate)}</span><br />{sanitizeText(report.title || 'Daily intelligence report')}</Link>)}
           </div>
-          <Link
-            href="/reports"
-            className="font-mono text-[10px] tracking-wider uppercase text-muted hover:text-foreground transition-colors"
-          >
-            View all {allReports.length} reports in archive &rarr;
-          </Link>
-        </div>
-
-        <div className="border border-border divide-y divide-border bg-card">
-          {allReports.slice(0, 5).map((r) => (
-            <Link
-              key={r.reportDate}
-              href={`/reports/${r.reportDate}`}
-              className="group flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 sm:p-5 hover:bg-card-hover transition-colors"
-            >
-              <div className="flex items-start sm:items-center gap-4">
-                <span className="font-mono text-xs font-bold text-foreground tracking-wider group-hover:text-accent transition-colors shrink-0">
-                  {r.reportDate}
-                </span>
-                <div>
-                  <h3 className="font-serif text-sm sm:text-base font-bold text-foreground group-hover:text-accent transition-colors leading-snug">
-                    {r.title}
-                  </h3>
-                  <div className="flex items-center gap-2 mt-1">
-                    <span className="font-mono text-[8.5px] text-dateline uppercase">
-                      Score {r.structuredSummary?.dataQualityScore ?? 100}%
-                    </span>
-                    <span className="text-rule">&bull;</span>
-                    <span className="font-mono text-[8.5px] text-muted uppercase">
-                      {r.structuredSummary?.itemsDiscovered ?? 85} signals cataloged
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="font-mono text-[9.5px] tracking-wider uppercase text-muted group-hover:text-foreground transition-colors shrink-0 flex items-center gap-1">
-                <span>READ REPORT</span>
-                <span className="text-accent">&rarr;</span>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* 6. Engine Architecture — 3-Stage Broadsheet Flow */}
-      <section className="border-t border-double-rule pt-8">
-        <div className="flex items-center justify-between mb-8">
-          <div>
-            <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-dateline font-bold block mb-2">
-              ❖ HOW THE ENGINE WORKS
-            </span>
-            <h2 className="font-serif text-2xl sm:text-3xl font-black text-foreground tracking-tight">
-              Platform Architecture
-            </h2>
-          </div>
-          <Link href="/ops" className="font-mono text-[10px] tracking-wider uppercase text-muted hover:text-foreground transition-colors">
-            System Ops &rarr;
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-border bg-card">
-          {[
-            {
-              num: '01',
-              title: 'MULTI-SOURCE\nINGESTION',
-              desc: 'Automated connectors for GitHub trending, Hacker News, Remotive, Jobicy, Dev.to, and GitHub Security Advisories.',
-            },
-            {
-              num: '02',
-              title: 'SHA-256\nDEDUPLICATION',
-              desc: 'Dual-hash cryptographic gating and 5-factor scoring engine filtering genuine signal from web noise.',
-            },
-            {
-              num: '03',
-              title: 'CLOUDFLARE\nEDGE DELIVERY',
-              desc: 'Cloudflare Workers V8 isolates and global KV cache serving queries with sub-millisecond edge latency.',
-            },
-          ].map((stage, i) => (
-            <div
-              key={stage.num}
-              className={`p-6 sm:p-8 flex flex-col justify-between hover:bg-card-hover transition-colors ${
-                i < 2 ? 'border-r border-border' : ''
-              }`}
-            >
-              <div>
-                <span className="font-mono text-[9px] tracking-[0.18em] uppercase text-accent font-bold">
-                  STAGE {stage.num}
-                </span>
-                <h3 className="font-serif text-lg sm:text-xl font-black text-foreground mt-2 leading-tight whitespace-pre-line tracking-tight">
-                  {stage.title}
-                </h3>
-              </div>
-              <p className="font-editorial text-xs sm:text-sm text-muted leading-relaxed mt-4">
-                {stage.desc}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
+        </section>
+      )}
     </div>
   );
 }

@@ -34,6 +34,8 @@ export function sanitizeText(text: string = ''): string {
 
   // Strip all HTML tags
   cleaned = cleaned.replace(/<[^>]*>/g, ' ');
+  // Descriptions are sometimes truncated mid-tag by source APIs; hide that fragment too.
+  cleaned = cleaned.replace(/<[^>]*$/g, ' ');
 
   // Clean remaining stray entity fragments or escape sequences
   cleaned = cleaned.replace(/&[a-z0-9#]+;/gi, ' ');
