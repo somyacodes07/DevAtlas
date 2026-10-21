@@ -1,9 +1,9 @@
 {
   "date": "2026-10-21",
-  "generatedAt": "2026-10-21T04:12:17.954Z",
-  "runId": "RUN-2026-10-21-0841",
+  "generatedAt": "2026-10-21T16:59:42.188Z",
+  "runId": "RUN-2026-10-21-7244",
   "summary": {
-    "itemsDiscovered": 112,
+    "itemsDiscovered": 111,
     "dataQualityScore": 100
   },
   "topItems": [
@@ -44,9 +44,16 @@
     },
     {
       "type": "REPOSITORY",
-      "title": "storytold/pdfcraft",
+      "title": "Gathin23/cleanyourtv",
       "category": "Open Source Software",
-      "canonicalUrl": "https://github.com/storytold/pdfcraft",
+      "canonicalUrl": "https://github.com/Gathin23/cleanyourtv",
+      "score": 92
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "deepseek-ai/DeepInfer",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/deepseek-ai/DeepInfer",
       "score": 92
     },
     {
@@ -58,23 +65,16 @@
     },
     {
       "type": "REPOSITORY",
-      "title": "storytold/filmcraft",
+      "title": "storytold/pdfcraft",
       "category": "Open Source Software",
-      "canonicalUrl": "https://github.com/storytold/filmcraft",
+      "canonicalUrl": "https://github.com/storytold/pdfcraft",
       "score": 92
     },
     {
       "type": "REPOSITORY",
-      "title": "openai/math",
-      "category": "AI & Machine Learning",
-      "canonicalUrl": "https://github.com/openai/math",
-      "score": 88
-    },
-    {
-      "type": "REPOSITORY",
-      "title": "storytold/wordcraft",
+      "title": "storytold/filmcraft",
       "category": "Open Source Software",
-      "canonicalUrl": "https://github.com/storytold/wordcraft",
+      "canonicalUrl": "https://github.com/storytold/filmcraft",
       "score": 92
     }
   ]
