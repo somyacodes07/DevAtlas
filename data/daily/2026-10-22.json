@@ -1,7 +1,7 @@
 {
   "date": "2026-10-22",
-  "generatedAt": "2026-10-22T04:11:59.469Z",
-  "runId": "RUN-2026-10-22-5618",
+  "generatedAt": "2026-10-22T17:00:23.749Z",
+  "runId": "RUN-2026-10-22-8440",
   "summary": {
     "itemsDiscovered": 111,
     "dataQualityScore": 100
@@ -37,6 +37,13 @@
     },
     {
       "type": "REPOSITORY",
+      "title": "deepseek-ai/DeepInfer",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/deepseek-ai/DeepInfer",
+      "score": 92
+    },
+    {
+      "type": "REPOSITORY",
       "title": "yetone/magpie",
       "category": "AI & Machine Learning",
       "canonicalUrl": "https://github.com/yetone/magpie",
@@ -47,13 +54,6 @@
       "title": "wheresryan22/anatomy",
       "category": "AI & Machine Learning",
       "canonicalUrl": "https://github.com/wheresryan22/anatomy",
-      "score": 92
-    },
-    {
-      "type": "REPOSITORY",
-      "title": "deepseek-ai/DeepInfer",
-      "category": "AI & Machine Learning",
-      "canonicalUrl": "https://github.com/deepseek-ai/DeepInfer",
       "score": 92
     },
     {
