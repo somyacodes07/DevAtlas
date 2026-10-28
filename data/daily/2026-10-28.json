@@ -1,9 +1,9 @@
 {
   "date": "2026-10-28",
-  "generatedAt": "2026-10-28T05:04:28.691Z",
-  "runId": "RUN-2026-10-28-9858",
+  "generatedAt": "2026-10-28T18:15:08.966Z",
+  "runId": "RUN-2026-10-28-4722",
   "summary": {
-    "itemsDiscovered": 109,
+    "itemsDiscovered": 111,
     "dataQualityScore": 100
   },
   "topItems": [
@@ -58,17 +58,17 @@
     },
     {
       "type": "REPOSITORY",
-      "title": "storytold/wordcraft",
-      "category": "Open Source Software",
-      "canonicalUrl": "https://github.com/storytold/wordcraft",
-      "score": 92
-    },
-    {
-      "type": "REPOSITORY",
       "title": "openai/math",
       "category": "AI & Machine Learning",
       "canonicalUrl": "https://github.com/openai/math",
       "score": 88
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "storytold/wordcraft",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/storytold/wordcraft",
+      "score": 92
     },
     {
       "type": "REPOSITORY",
