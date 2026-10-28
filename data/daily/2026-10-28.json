@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-28",
+  "generatedAt": "2026-10-28T05:04:28.691Z",
+  "runId": "RUN-2026-10-28-9858",
+  "summary": {
+    "itemsDiscovered": 109,
+    "dataQualityScore": 100
+  },
+  "topItems": [
+    {
+      "type": "REPOSITORY",
+      "title": "storytold/photocraft",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/storytold/photocraft",
+      "score": 92
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "Gathin23/cleanyourtv",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/Gathin23/cleanyourtv",
+      "score": 92
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "deepseek-ai/DeepInfer",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/deepseek-ai/DeepInfer",
+      "score": 92
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "wheresryan22/anatomy",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/wheresryan22/anatomy",
+      "score": 92
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "google-research/harness2",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/google-research/harness2",
+      "score": 92
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "storytold/pdfcraft",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/storytold/pdfcraft",
+      "score": 92
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "storytold/filmcraft",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/storytold/filmcraft",
+      "score": 92
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "storytold/wordcraft",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/storytold/wordcraft",
+      "score": 92
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "openai/math",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/openai/math",
+      "score": 88
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "KnifeLemon/Filee",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/KnifeLemon/Filee",
+      "score": 88
+    }
+  ]
+}
