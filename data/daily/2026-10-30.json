@@ -1,7 +1,7 @@
 {
   "date": "2026-10-30",
-  "generatedAt": "2026-10-30T05:16:46.083Z",
-  "runId": "RUN-2026-10-30-1831",
+  "generatedAt": "2026-10-30T17:55:12.237Z",
+  "runId": "RUN-2026-10-30-7982",
   "summary": {
     "itemsDiscovered": 111,
     "dataQualityScore": 100
@@ -68,7 +68,7 @@
       "title": "seedds/nxnative",
       "category": "Open Source Software",
       "canonicalUrl": "https://github.com/seedds/nxnative",
-      "score": 85
+      "score": 88
     },
     {
       "type": "REPOSITORY",
