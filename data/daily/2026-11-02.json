@@ -1,7 +1,7 @@
 {
   "date": "2026-11-02",
-  "generatedAt": "2026-11-02T05:29:05.297Z",
-  "runId": "RUN-2026-11-02-7432",
+  "generatedAt": "2026-11-02T21:37:55.998Z",
+  "runId": "RUN-2026-11-02-4665",
   "summary": {
     "itemsDiscovered": 110,
     "dataQualityScore": 100
@@ -65,17 +65,17 @@
     },
     {
       "type": "REPOSITORY",
+      "title": "deepseek-ai/dsh-superagent-prototype",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/deepseek-ai/dsh-superagent-prototype",
+      "score": 92
+    },
+    {
+      "type": "REPOSITORY",
       "title": "seedds/nxnative",
       "category": "Open Source Software",
       "canonicalUrl": "https://github.com/seedds/nxnative",
       "score": 88
-    },
-    {
-      "type": "REPOSITORY",
-      "title": "deepseek-ai/dsh-superagent-prototype",
-      "category": "AI & Machine Learning",
-      "canonicalUrl": "https://github.com/deepseek-ai/dsh-superagent-prototype",
-      "score": 89
     }
   ]
 }
