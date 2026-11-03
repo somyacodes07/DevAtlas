@@ -1,9 +1,9 @@
 {
   "date": "2026-11-03",
-  "generatedAt": "2026-11-03T06:07:30.690Z",
-  "runId": "RUN-2026-11-03-5600",
+  "generatedAt": "2026-11-03T19:21:30.472Z",
+  "runId": "RUN-2026-11-03-5267",
   "summary": {
-    "itemsDiscovered": 111,
+    "itemsDiscovered": 110,
     "dataQualityScore": 100
   },
   "topItems": [
@@ -51,17 +51,17 @@
     },
     {
       "type": "REPOSITORY",
-      "title": "Zagitta/gpu-unlock",
-      "category": "AI & Machine Learning",
-      "canonicalUrl": "https://github.com/Zagitta/gpu-unlock",
-      "score": 88
-    },
-    {
-      "type": "REPOSITORY",
       "title": "deepseek-ai/dsh-superagent-prototype",
       "category": "AI & Machine Learning",
       "canonicalUrl": "https://github.com/deepseek-ai/dsh-superagent-prototype",
       "score": 92
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "Zagitta/gpu-unlock",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/Zagitta/gpu-unlock",
+      "score": 88
     },
     {
       "type": "REPOSITORY",
