@@ -19,6 +19,17 @@ if (fs.existsSync(sourceDataDir)) {
   for (const file of files) {
     const src = path.join(sourceDataDir, file);
     const dest = path.join(targetDataDir, file);
+    // The full item catalog is consumed at build time and by the Worker. It is
+    // not needed in the browser bundle and exceeds Cloudflare Pages' 25 MiB
+    // per-file upload limit.
+    if (file === 'edge_items.json') {
+      try {
+        if (fs.existsSync(dest)) fs.unlinkSync(dest);
+      } catch (err) {
+        console.warn(`[Sync Data Warning] Failed to remove ${dest}:`, err);
+      }
+      continue;
+    }
     try {
       fs.copyFileSync(src, dest);
       console.log(`[Sync Data] Copied ${file} -> frontend/public/data/${file}`);
