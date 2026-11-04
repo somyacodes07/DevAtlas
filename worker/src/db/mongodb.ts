@@ -33,13 +33,12 @@ async function refreshCacheIfNeeded() {
   }
 }
 
-// Mock Database object so we don't break routes
+// Snapshot-backed collection adapter for the Worker runtime.
 export async function getWorkerDb(uri?: string, databaseName?: string): Promise<any> {
   await refreshCacheIfNeeded();
   return { connected: true };
 }
 
-// Mock Collection implementation
 class MockCollection {
   constructor(private data: any[]) {}
 
@@ -52,10 +51,10 @@ class MockCollection {
     if (options.sort) {
       this.sortResults(results, options.sort);
     }
-    return results.length > 0 ? results[0] : null;
+    return results.length > 0 ? this.project(results[0], options.projection) : null;
   }
 
-  find(filter: any = {}) {
+  find(filter: any = {}, options: any = {}) {
     let results = this.applyFilter(filter);
     
     const cursor = {
@@ -72,7 +71,7 @@ class MockCollection {
         return cursor;
       },
       toArray: async () => {
-        return results;
+        return results.map((item) => this.project(item, options.projection));
       }
     };
     return cursor;
@@ -80,28 +79,63 @@ class MockCollection {
 
   private applyFilter(filter: any): any[] {
     if (!filter || Object.keys(filter).length === 0) return [...this.data];
-    return this.data.filter(item => {
-      for (const key of Object.keys(filter)) {
-        if (item[key] !== filter[key]) return false;
+    return this.data.filter((item) => Object.entries(filter).every(([key, expected]) => {
+      if (key === '$text') {
+        const query = String((expected as any)?.$search || '').toLowerCase();
+        const haystack = [item.title, item.description, item.summary, item.content]
+          .filter((value) => typeof value === 'string').join(' ').toLowerCase();
+        return query.split(/\s+/).filter(Boolean).every((term) => haystack.includes(term));
       }
-      return true;
-    });
+
+      const actual = key.split('.').reduce((value, segment) => value == null ? undefined : value[segment], item);
+      if (expected instanceof RegExp) {
+        expected.lastIndex = 0;
+        return (Array.isArray(actual) ? actual : [actual]).some((value) => typeof value === 'string' && expected.test(value));
+      }
+      if (expected && typeof expected === 'object' && !Array.isArray(expected)) {
+        if ('$gte' in expected) return typeof actual === 'number' && actual >= (expected as any).$gte;
+      }
+      if (Array.isArray(actual)) return actual.includes(expected);
+      return actual === expected;
+    }));
   }
 
   private sortResults(results: any[], sortObj: any) {
-    const key = Object.keys(sortObj)[0];
-    if (!key) return;
-    const direction = sortObj[key];
-    
+    const keys = Object.keys(sortObj);
+    if (!keys.length) return;
     results.sort((a, b) => {
-      // Support nested keys like 'score.total'
-      const valA = key.split('.').reduce((o, i) => o ? o[i] : undefined, a);
-      const valB = key.split('.').reduce((o, i) => o ? o[i] : undefined, b);
-      
-      if (valA < valB) return direction === 1 ? -1 : 1;
-      if (valA > valB) return direction === 1 ? 1 : -1;
+      for (const key of keys) {
+        const valA = key.split('.').reduce((value, segment) => value == null ? undefined : value[segment], a);
+        const valB = key.split('.').reduce((value, segment) => value == null ? undefined : value[segment], b);
+        if (valA < valB) return sortObj[key] === 1 ? -1 : 1;
+        if (valA > valB) return sortObj[key] === 1 ? 1 : -1;
+      }
       return 0;
     });
+  }
+
+  private project(item: any, projection?: Record<string, 0 | 1>) {
+    if (!projection) return item;
+    const fields = Object.entries(projection);
+    if (fields.some(([, include]) => include === 1)) {
+      const result: Record<string, any> = {};
+      for (const [key, include] of fields) {
+        if (include !== 1) continue;
+        const value = key.split('.').reduce((current, segment) => current == null ? undefined : current[segment], item);
+        if (value !== undefined) result[key] = value;
+      }
+      if (projection._id !== 0 && item._id !== undefined) result._id = item._id;
+      return result;
+    }
+    const result = { ...item };
+    for (const [key, include] of fields) {
+      if (include !== 0) continue;
+      const segments = key.split('.');
+      let parent = result;
+      for (const segment of segments.slice(0, -1)) parent = parent?.[segment];
+      if (parent) delete parent[segments[segments.length - 1]];
+    }
+    return result;
   }
 }
 

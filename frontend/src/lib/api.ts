@@ -70,7 +70,7 @@ export async function fetchItems(params: Record<string, string> = {}): Promise<A
     const res = await fetchWithTimeout(`${API_BASE}/items?${query}`, { next: { revalidate: 30 } });
     if (res && res.ok) {
       const json = await res.json();
-      if (json?.data && json.data.length > 0) return json;
+      if (Array.isArray(json?.data)) return json;
     }
   } catch {
     // Fallback to real edge dataset
@@ -91,6 +91,20 @@ export async function fetchItems(params: Record<string, string> = {}): Promise<A
       const inTags = (i.tags || []).some((t) => t.toLowerCase().includes(q));
       return inTitle || inDesc || inCat || inTags;
     });
+  }
+
+  if (params.category) {
+    items = items.filter((item) => item.category?.toLowerCase() === params.category!.toLowerCase());
+  }
+  if (params.tag) {
+    items = items.filter((item) => item.tags?.some((tag) => tag.toLowerCase() === params.tag!.toLowerCase()));
+  }
+  if (params.minScore) {
+    const minScore = Number(params.minScore);
+    if (Number.isFinite(minScore)) items = items.filter((item) => (item.score?.total ?? 0) >= minScore);
+  }
+  if (params.sort === 'date') {
+    items = [...items].sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt));
   }
 
   const total = items.length;
@@ -117,7 +131,7 @@ export async function fetchJobs(params: Record<string, string> = {}): Promise<Ap
     const res = await fetchWithTimeout(`${API_BASE}/jobs?${query}`, { next: { revalidate: 30 } });
     if (res && res.ok) {
       const json = await res.json();
-      if (json?.data && json.data.length > 0) return json;
+      if (Array.isArray(json?.data)) return json;
     }
   } catch {
     // Fallback to real edge dataset
@@ -130,7 +144,18 @@ export async function fetchJobs(params: Record<string, string> = {}): Promise<Ap
   }
 
   if (params.region && params.region !== 'ALL') {
-    items = items.filter((i) => i.job?.region === params.region);
+    items = items.filter((i) => i.job?.region?.toLowerCase() === params.region!.toLowerCase());
+  }
+  if (params.location) {
+    const location = params.location.toLowerCase();
+    items = items.filter((i) => i.job?.location?.toLowerCase().includes(location));
+  }
+  if (params.skill) {
+    const skill = params.skill.toLowerCase();
+    items = items.filter((i) => i.job?.skills?.some((value) => value.toLowerCase().includes(skill)));
+  }
+  if (params.experienceLevel) {
+    items = items.filter((i) => i.job?.experienceLevel === params.experienceLevel!.toUpperCase());
   }
 
   const total = items.length;
@@ -157,13 +182,16 @@ export async function fetchTools(params: Record<string, string> = {}): Promise<A
     const res = await fetchWithTimeout(`${API_BASE}/tools?${query}`, { next: { revalidate: 30 } });
     if (res && res.ok) {
       const json = await res.json();
-      if (json?.data && json.data.length > 0) return json;
+      if (Array.isArray(json?.data)) return json;
     }
   } catch {
     // Fallback to real edge dataset
   }
 
   let items = getEdgeItems().filter((i) => i.type === 'AI_TOOL');
+  if (params.pricing) items = items.filter((item) => item.tool?.pricingModel === params.pricing!.toUpperCase());
+  if (params.openSource === 'true') items = items.filter((item) => item.tool?.isOpenSource === true);
+  if (params.hasApi === 'true') items = items.filter((item) => item.tool?.hasApi === true);
   const total = items.length;
 
   if (params.limit) {
@@ -189,13 +217,15 @@ export async function fetchRepositories(params: Record<string, string> = {}): Pr
     const res = await fetchWithTimeout(`${API_BASE}/repositories?${query}`, { next: { revalidate: 30 } });
     if (res && res.ok) {
       const json = await res.json();
-      if (json?.data && json.data.length > 0) return json;
+      if (Array.isArray(json?.data)) return json;
     }
   } catch {
     // Fallback to real edge dataset
   }
 
   let items = getEdgeItems().filter((i) => i.type === 'REPOSITORY');
+  if (params.language) items = items.filter((item) => item.repository?.language?.toLowerCase() === params.language!.toLowerCase());
+  if (params.trendStatus) items = items.filter((item) => item.repository?.trendStatus === params.trendStatus!.toUpperCase());
   const total = items.length;
 
   if (params.limit) {
@@ -220,7 +250,7 @@ export async function fetchReports(): Promise<ApiResponse<any[]>> {
     const res = await fetchWithTimeout(`${API_BASE}/reports`, { next: { revalidate: 60 } });
     if (res && res.ok) {
       const json = await res.json();
-      if (json?.data && json.data.length > 0) return json;
+      if (Array.isArray(json?.data)) return json;
     }
   } catch {
     // Fallback to real edge reports

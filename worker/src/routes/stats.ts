@@ -67,7 +67,7 @@ statsRouter.get('/', async (c) => {
       meta: {
         requestId,
         cached: false,
-        source: 'MONGODB',
+        source: 'EDGE_SNAPSHOT',
       },
     });
   } catch (err: unknown) {

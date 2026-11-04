@@ -118,15 +118,6 @@ export async function getAllReportDates(): Promise<string[]> {
     datesSet.add(r.date);
   }
 
-  // 3. Generate rolling recent dates (past 90 days + next 3 days)
-  const now = new Date();
-  for (let i = -90; i <= 3; i++) {
-    const d = new Date(now);
-    d.setUTCDate(d.getUTCDate() + i);
-    const dateStr = d.toISOString().split('T')[0];
-    datesSet.add(dateStr);
-  }
-
   return Array.from(datesSet).sort().reverse();
 }
 
@@ -156,10 +147,6 @@ export async function getReportByDate(date: string): Promise<ReportItem | null> 
           reportDate: date,
           title: `DevAtlas Daily Intelligence Report — ${date}`,
           markdownContent,
-          structuredSummary: {
-            dataQualityScore: 100,
-            itemsDiscovered: 80,
-          },
         };
       }
     }
@@ -196,10 +183,6 @@ export async function getAllReports(): Promise<ReportItem[]> {
     return fsReports.map((f) => ({
       reportDate: f.date,
       title: `DevAtlas Daily Intelligence Report — ${f.date}`,
-      structuredSummary: {
-        dataQualityScore: 100,
-        itemsDiscovered: 85,
-      },
     }));
   }
 
