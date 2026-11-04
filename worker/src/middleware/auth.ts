@@ -3,7 +3,20 @@ import { Env, Variables } from '../types';
 
 export const adminAuthMiddleware: MiddlewareHandler<{ Bindings: Env; Variables: Variables }> = async (c, next) => {
   const authHeader = c.req.header('Authorization');
-  const expectedKey = c.env?.ADMIN_API_KEY || 'devatlas-local-admin-key-change-in-production';
+  const expectedKey = c.env?.ADMIN_API_KEY;
+
+  if (!expectedKey) {
+    return c.json(
+      {
+        error: {
+          code: 'SERVICE_UNAVAILABLE',
+          message: 'Administrative API is not configured.',
+          requestId: c.get('requestId'),
+        },
+      },
+      503
+    );
+  }
 
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
     const requestId = c.get('requestId');

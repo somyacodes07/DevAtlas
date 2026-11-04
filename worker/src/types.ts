@@ -3,6 +3,8 @@ export interface Env {
   MONGODB_URI?: string;
   MONGODB_DATABASE?: string;
   ADMIN_API_KEY?: string;
+  GITHUB_TOKEN?: string;
+  GITHUB_REPOSITORY?: string;
   DEVATLAS_KV?: KVNamespace;
 }
 

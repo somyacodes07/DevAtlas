@@ -72,6 +72,8 @@ In your GitHub repository under **Settings > Secrets and variables > Actions**, 
 | `CLOUDFLARE_API_TOKEN` | Token for Wrangler deployments |
 | `CLOUDFLARE_ACCOUNT_ID` | Cloudflare account identifier |
 | `API_BASE_URL` | Public Worker URL for smoke tests (e.g. `https://devatlas-api.workers.dev`) |
+| `ADMIN_API_KEY` | Secret bearer token for the Worker admin endpoint |
+| `PIPELINE_DISPATCH_TOKEN` | GitHub token with Actions read/write access on this repository, used to dispatch `daily-discovery.yml` from the Worker |
 | `AI_PROVIDER` | Optional: `deterministic` (default, free) or `openai` |
 | `AI_API_KEY` | Optional: OpenAI/Anthropic API key for AI enrichment |
 

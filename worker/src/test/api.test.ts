@@ -1,5 +1,7 @@
-import { describe, it, expect } from 'vitest';
+import { afterEach, describe, it, expect, vi } from 'vitest';
 import app from '../index';
+
+afterEach(() => vi.unstubAllGlobals());
 
 describe('Worker Full REST API Suite', () => {
   it('GET / lists all available endpoints', async () => {
@@ -47,16 +49,16 @@ describe('Worker Full REST API Suite', () => {
     expect(Array.isArray(json.data)).toBe(true);
   });
 
-  it('POST /api/v1/admin/pipeline/trigger rejects unauthenticated requests (401)', async () => {
+  it('POST /api/v1/admin/pipeline/trigger rejects requests when admin auth is unconfigured (503)', async () => {
     const res = await app.request('/api/v1/admin/pipeline/trigger', {
       method: 'POST',
       body: JSON.stringify({ reason: 'test' }),
       headers: { 'Content-Type': 'application/json' },
     });
 
-    expect(res.status).toBe(401);
+    expect(res.status).toBe(503);
     const json = (await res.json()) as any;
-    expect(json.error.code).toBe('UNAUTHORIZED');
+    expect(json.error.code).toBe('SERVICE_UNAVAILABLE');
   });
 
   it('POST /api/v1/admin/pipeline/trigger rejects invalid bearer tokens (403)', async () => {
@@ -67,7 +69,7 @@ describe('Worker Full REST API Suite', () => {
         Authorization: 'Bearer wrong-secret-token',
       },
       body: JSON.stringify({ reason: 'test' }),
-    });
+    }, { ADMIN_API_KEY: 'configured-admin-key' });
 
     expect(res.status).toBe(403);
     const json = (await res.json()) as any;
@@ -75,18 +77,27 @@ describe('Worker Full REST API Suite', () => {
   });
 
   it('POST /api/v1/admin/pipeline/trigger accepts valid bearer tokens (202)', async () => {
+    const fetchMock = vi.fn().mockResolvedValue(new Response(null, { status: 204 }));
+    vi.stubGlobal('fetch', fetchMock);
     const res = await app.request('/api/v1/admin/pipeline/trigger', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: 'Bearer devatlas-local-admin-key-change-in-production',
+        Authorization: 'Bearer configured-admin-key',
       },
       body: JSON.stringify({ reason: 'ci-manual' }),
+    }, {
+      ADMIN_API_KEY: 'configured-admin-key',
+      GITHUB_TOKEN: 'github-test-token',
+      GITHUB_REPOSITORY: 'example/devatlas',
     });
 
     expect(res.status).toBe(202);
     const json = (await res.json()) as any;
     expect(json.status).toBe('ACCEPTED');
-    expect(json.runId).toContain('MANUAL-');
+    expect(fetchMock).toHaveBeenCalledWith(
+      'https://api.github.com/repos/example/devatlas/actions/workflows/daily-discovery.yml/dispatches',
+      expect.objectContaining({ method: 'POST' })
+    );
   });
 });
