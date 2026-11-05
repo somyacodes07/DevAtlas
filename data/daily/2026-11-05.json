@@ -1,7 +1,7 @@
 {
   "date": "2026-11-05",
-  "generatedAt": "2026-11-05T06:03:53.004Z",
-  "runId": "RUN-2026-11-05-5107",
+  "generatedAt": "2026-11-05T19:47:05.582Z",
+  "runId": "RUN-2026-11-05-9536",
   "summary": {
     "itemsDiscovered": 111,
     "dataQualityScore": 100
@@ -51,17 +51,17 @@
     },
     {
       "type": "REPOSITORY",
-      "title": "tangency-labs/solidcraft",
-      "category": "Open Source Software",
-      "canonicalUrl": "https://github.com/tangency-labs/solidcraft",
-      "score": 92
-    },
-    {
-      "type": "REPOSITORY",
       "title": "storytold/craft-anything",
       "category": "Open Source Software",
       "canonicalUrl": "https://github.com/storytold/craft-anything",
       "score": 88
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "tangency-labs/solidcraft",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/tangency-labs/solidcraft",
+      "score": 92
     },
     {
       "type": "REPOSITORY",
