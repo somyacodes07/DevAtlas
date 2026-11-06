@@ -1,9 +1,9 @@
 {
   "date": "2026-11-06",
-  "generatedAt": "2026-11-06T05:59:46.357Z",
-  "runId": "RUN-2026-11-06-7635",
+  "generatedAt": "2026-11-06T19:10:46.966Z",
+  "runId": "RUN-2026-11-06-9625",
   "summary": {
-    "itemsDiscovered": 111,
+    "itemsDiscovered": 112,
     "dataQualityScore": 100
   },
   "topItems": [
@@ -37,16 +37,16 @@
     },
     {
       "type": "REPOSITORY",
-      "title": "Zagitta/gpu-unlock",
-      "category": "AI & Machine Learning",
-      "canonicalUrl": "https://github.com/Zagitta/gpu-unlock",
+      "title": "storytold/craft-anything",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/storytold/craft-anything",
       "score": 88
     },
     {
       "type": "REPOSITORY",
-      "title": "storytold/craft-anything",
-      "category": "Open Source Software",
-      "canonicalUrl": "https://github.com/storytold/craft-anything",
+      "title": "Zagitta/gpu-unlock",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/Zagitta/gpu-unlock",
       "score": 88
     },
     {
@@ -65,16 +65,16 @@
     },
     {
       "type": "REPOSITORY",
-      "title": "pengchujin/aerial-tv",
-      "category": "Open Source Software",
-      "canonicalUrl": "https://github.com/pengchujin/aerial-tv",
+      "title": "heydamir/unslop",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/heydamir/unslop",
       "score": 88
     },
     {
       "type": "REPOSITORY",
-      "title": "heydamir/unslop",
-      "category": "AI & Machine Learning",
-      "canonicalUrl": "https://github.com/heydamir/unslop",
+      "title": "pengchujin/aerial-tv",
+      "category": "Open Source Software",
+      "canonicalUrl": "https://github.com/pengchujin/aerial-tv",
       "score": 88
     }
   ]
