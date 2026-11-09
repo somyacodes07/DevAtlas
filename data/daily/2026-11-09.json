@@ -1,9 +1,9 @@
 {
   "date": "2026-11-09",
-  "generatedAt": "2026-11-09T05:42:44.022Z",
-  "runId": "RUN-2026-11-09-5630",
+  "generatedAt": "2026-11-09T22:11:36.129Z",
+  "runId": "RUN-2026-11-09-9100",
   "summary": {
-    "itemsDiscovered": 113,
+    "itemsDiscovered": 111,
     "dataQualityScore": 100
   },
   "topItems": [
