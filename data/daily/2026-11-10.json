@@ -1,9 +1,9 @@
 {
   "date": "2026-11-10",
-  "generatedAt": "2026-11-10T06:51:41.411Z",
-  "runId": "RUN-2026-11-10-5412",
+  "generatedAt": "2026-11-10T19:32:42.149Z",
+  "runId": "RUN-2026-11-10-5764",
   "summary": {
-    "itemsDiscovered": 101,
+    "itemsDiscovered": 114,
     "dataQualityScore": 100
   },
   "topItems": [
@@ -16,17 +16,17 @@
     },
     {
       "type": "REPOSITORY",
-      "title": "deepseek-ai/DeepInfer",
-      "category": "AI & Machine Learning",
-      "canonicalUrl": "https://github.com/deepseek-ai/DeepInfer",
-      "score": 92
-    },
-    {
-      "type": "REPOSITORY",
       "title": "storytold/craft-anything",
       "category": "Open Source Software",
       "canonicalUrl": "https://github.com/storytold/craft-anything",
       "score": 88
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "deepseek-ai/DeepInfer",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/deepseek-ai/DeepInfer",
+      "score": 92
     },
     {
       "type": "REPOSITORY",
@@ -37,17 +37,17 @@
     },
     {
       "type": "REPOSITORY",
-      "title": "Zagitta/gpu-unlock",
-      "category": "AI & Machine Learning",
-      "canonicalUrl": "https://github.com/Zagitta/gpu-unlock",
-      "score": 88
-    },
-    {
-      "type": "REPOSITORY",
       "title": "ccch1mneyyy/dsh-Go",
       "category": "Open Source Software",
       "canonicalUrl": "https://github.com/ccch1mneyyy/dsh-Go",
       "score": 92
+    },
+    {
+      "type": "REPOSITORY",
+      "title": "Zagitta/gpu-unlock",
+      "category": "AI & Machine Learning",
+      "canonicalUrl": "https://github.com/Zagitta/gpu-unlock",
+      "score": 88
     },
     {
       "type": "REPOSITORY",
