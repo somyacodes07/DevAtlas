@@ -21,5 +21,5 @@ KEEP_DAYS = "30"
 [[d1_databases]]
 binding = "DB"
 database_name = "devatlas"
-database_id = "REPLACE_WITH_D1_DATABASE_ID"
+database_id = "6f555c5d-fb3f-4c4b-87a0-e36ed8cf5691"
 migrations_dir = "migrations"
