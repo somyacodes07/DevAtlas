@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 import '../styles/globals.css';
 import { SITE_URL } from '@/lib/format';
 
-export const viewport: Viewport = { width: 'device-width', initialScale: 1 };
+export const viewport: Viewport = { width: 'device-width', initialScale: 1, colorScheme: 'light' };
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -14,8 +14,8 @@ export const metadata: Metadata = {
   alternates: { canonical: '/' },
 };
 
-// Runs before paint so a saved light or dark choice never flashes the other paper.
-const INK = `try{var t=localStorage.getItem('devatlas-ink');if(t)document.documentElement.dataset.theme=t}catch(e){}`;
+// Light paper is the default. Runs before paint so a reader who chose dark never sees a light flash.
+const INK = `try{var t=localStorage.getItem('devatlas-ink');if(t==='dark')document.documentElement.dataset.theme='dark'}catch(e){}`;
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (

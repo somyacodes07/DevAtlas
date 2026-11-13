@@ -40,6 +40,7 @@ body:has([data-stock='evening']) {
   --desk: #16211a;
 }
 
+/* Light paper is the default for everyone. Dark is opt-in from the footer switch. */
 :root[data-theme='dark'] body {
   --paper: var(--stock-dark);
   --desk: #070807;
@@ -48,18 +49,6 @@ body:has([data-stock='evening']) {
   --hair: rgb(231 228 218 / 0.3);
   --wash: rgb(231 228 218 / 0.07);
   --spot: #f0705f;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) body {
-    --paper: var(--stock-dark);
-    --desk: #070807;
-    --ink: #e7e4da;
-    --ink-soft: #a9a69b;
-    --hair: rgb(231 228 218 / 0.3);
-    --wash: rgb(231 228 218 / 0.07);
-    --spot: #f0705f;
-  }
 }
 
 a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.16em; }

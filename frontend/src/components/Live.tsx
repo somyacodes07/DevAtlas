@@ -34,8 +34,7 @@ export function NextEdition() {
 export function ThemeSwitch() {
   const [dark, setDark] = useState<boolean | null>(null);
   useEffect(() => {
-    const set = document.documentElement.dataset.theme;
-    setDark(set ? set === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches);
+    setDark(document.documentElement.dataset.theme === 'dark');
   }, []);
   const flip = () => {
     const next = !dark;
