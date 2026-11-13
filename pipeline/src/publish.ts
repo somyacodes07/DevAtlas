@@ -19,9 +19,10 @@ async function publish(): Promise<void> {
   if (!edition) throw new Error('No edition on file. Run `npm run print` first.');
   const body: IngestRequest = { edition, jobs: readJobs() };
 
-  // The API may still be starting (local compose) or briefly unavailable, so try a few times.
+  // The API may still be starting (local compose), or it was deployed seconds ago and
+  // Cloudflare has not finished routing it yet, so keep trying for about a minute and a half.
   let lastError = '';
-  for (let attempt = 1; attempt <= 5; attempt++) {
+  for (let attempt = 1; attempt <= 8; attempt++) {
     try {
       const res = await fetch(`${base}/admin/ingest`, {
         method: 'POST',
@@ -35,12 +36,17 @@ async function publish(): Promise<void> {
         console.log(`Published ${done.edition}: ${done.stories} stories, ${done.jobs} jobs, ${done.pruned} old edition(s) pruned.`);
         return;
       }
-      lastError = `HTTP ${res.status}: ${text.slice(0, 600)}`;
-      if (res.status >= 400 && res.status < 500 && res.status !== 429) break;
+      // Only an error in the API's own JSON shape is a real refusal (bad token, bad body).
+      // Anything else, such as Cloudflare's "page not found" for a Worker that is still
+      // being rolled out, is worth another try.
+      const refusal = text.trimStart().startsWith('{"error"');
+      lastError = `HTTP ${res.status}: ${refusal ? text.slice(0, 600) : 'the address did not answer as the DevAtlas API'}`;
+      if (refusal && res.status !== 429 && res.status < 500) break;
     } catch (err) {
       lastError = err instanceof Error ? err.message : String(err);
     }
-    await new Promise((r) => setTimeout(r, attempt * 2000));
+    console.log(`  attempt ${attempt} failed (${lastError.slice(0, 80)}), retrying`);
+    await new Promise((r) => setTimeout(r, Math.min(attempt * 3000, 15_000)));
   }
   throw new Error(`The API did not accept the edition. ${lastError}`);
 }
