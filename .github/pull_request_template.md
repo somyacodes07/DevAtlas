@@ -2,6 +2,7 @@
 <!-- Concise overview of the proposed change and motivation -->
 
 ## Architecture & Impact
+- [ ] API or database migration change
 - [ ] Pipeline / edition data change
 - [ ] Next.js Frontend change
 - [ ] GitHub Actions / CI/CD change

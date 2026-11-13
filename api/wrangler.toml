@@ -1,0 +1,25 @@
+name = "devatlas-api"
+main = "src/index.ts"
+compatibility_date = "2026-10-01"
+workers_dev = true
+
+[observability]
+enabled = true
+
+[vars]
+# Comma-separated origins allowed to call the API from a browser. "*" allows any.
+ALLOWED_ORIGINS = "*"
+# Requests allowed per client per minute before the API answers 429.
+RATE_LIMIT_PER_MINUTE = "120"
+# Editions older than this many days are deleted on every ingest.
+KEEP_DAYS = "30"
+
+# ADMIN_TOKEN is a secret, set with `wrangler secret put ADMIN_TOKEN`
+# (CI sets it from the GitHub secret of the same name). For local dev it
+# comes from api/.dev.vars, see .dev.vars.example.
+
+[[d1_databases]]
+binding = "DB"
+database_name = "devatlas"
+database_id = "6f555c5d-fb3f-4c4b-87a0-e36ed8cf5691"
+migrations_dir = "migrations"

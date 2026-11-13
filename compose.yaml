@@ -1,0 +1,55 @@
+# Local development: the API with its own D1 database, the site, and a
+# one-shot job that loads the committed edition into the API.
+#
+#   docker compose up --build            API on :8787, site on :3000
+#   docker compose --profile prod up     also the production build on :8080
+name: devatlas
+
+services:
+  api:
+    build: { context: ., target: api }
+    environment:
+      ADMIN_TOKEN: dev-token
+    ports: ['8787:8787']
+    volumes:
+      - d1:/app/api/.wrangler
+    healthcheck:
+      test: ['CMD', 'node', '-e', "fetch('http://127.0.0.1:8787/').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+      start_period: 20s
+
+  seed:
+    build: { context: ., target: seed }
+    environment:
+      API_URL: http://api:8787/api/v1
+      ADMIN_TOKEN: dev-token
+    depends_on:
+      api: { condition: service_healthy }
+    restart: 'no'
+
+  web:
+    build: { context: ., target: web }
+    environment:
+      # The browser calls the API, so this is the address as seen from your machine.
+      NEXT_PUBLIC_API_URL: http://localhost:8787/api/v1
+      WATCHPACK_POLLING: 'true'
+    ports: ['3000:3000']
+    volumes:
+      - ./frontend/src:/app/frontend/src
+      - ./data:/app/data:ro
+    depends_on:
+      seed: { condition: service_completed_successfully }
+
+  site:
+    profiles: [prod]
+    build: { context: ., target: site }
+    ports: ['8080:8080']
+    read_only: true
+    tmpfs: [/tmp]
+    depends_on:
+      api: { condition: service_healthy }
+
+volumes:
+  d1:

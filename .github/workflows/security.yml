@@ -45,7 +45,8 @@ jobs:
         run: npm ci
 
       - name: Run npm audit
-        run: npm audit --audit-level=critical || true
+        # Fails the workflow when any dependency has a critical advisory.
+        run: npm audit --audit-level=critical
 
   sbom-generation:
     name: Software Bill of Materials (SBOM)

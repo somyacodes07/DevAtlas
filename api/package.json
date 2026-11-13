@@ -1,0 +1,26 @@
+{
+  "name": "@devatlas/api",
+  "version": "2.1.0",
+  "private": true,
+  "type": "module",
+  "description": "DevAtlas REST API: a Cloudflare Worker (Hono) backed by D1",
+  "scripts": {
+    "dev": "wrangler dev --local --ip 0.0.0.0 --port 8787",
+    "db:migrate:local": "wrangler d1 migrations apply devatlas --local",
+    "db:migrate": "wrangler d1 migrations apply devatlas --remote",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test test/*.test.ts"
+  },
+  "dependencies": {
+    "hono": "^4.13.18",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261113.1",
+    "@types/node": "^22.13.9",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "wrangler": "^4.161.0"
+  }
+}

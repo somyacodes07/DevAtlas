@@ -1,0 +1,13 @@
+.git
+.github
+**/node_modules
+**/.next
+**/out
+**/.wrangler
+**/.dev.vars
+.env
+.env.*
+!.env.example
+docs
+*.md
+frontend/public/globe-wireframe.jpg

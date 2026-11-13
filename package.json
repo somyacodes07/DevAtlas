@@ -1,10 +1,11 @@
 {
   "name": "devatlas",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "private": true,
   "description": "DevAtlas: a developer newspaper printed twice a day by GitHub Actions",
   "workspaces": [
     "pipeline",
+    "api",
     "frontend"
   ],
   "scripts": {
@@ -12,7 +13,10 @@
     "dev": "npm run dev --workspace=@devatlas/frontend",
     "build": "npm run build --workspace=@devatlas/frontend",
     "test": "npm run test --workspaces --if-present",
-    "typecheck": "npm run typecheck --workspaces --if-present"
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "dev:api": "npm run dev --workspace=@devatlas/api",
+    "publish:edition": "npm run publish --workspace=@devatlas/pipeline",
+    "smoke": "node scripts/smoke.mjs"
   },
   "license": "MIT"
 }

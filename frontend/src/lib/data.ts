@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import type { JobsResponse } from '../../../api/src/contract';
 import type { Edition, IndexEntry, Job } from '../../../pipeline/src/types';
 
 export type { Advisory, Edition, IndexEntry, Job, Repo, SourceReport, Story } from '../../../pipeline/src/types';
@@ -25,3 +26,18 @@ export const getLatest = (): Edition | null => {
   const first = getIndex()[0];
   return first ? getEdition(first.id) : null;
 };
+
+/** The first page of the jobs board in the API's own shape, baked in so the page paints before the API answers. */
+export function getJobsFirstPage(limit = 30): JobsResponse {
+  const jobs = getJobs();
+  const tally = (key: 'region' | 'level') =>
+    jobs.reduce<Record<string, number>>((acc, j) => ({ ...acc, [j[key]]: (acc[j[key]] ?? 0) + 1 }), {});
+  return {
+    items: jobs.slice(0, limit),
+    total: jobs.length,
+    page: 1,
+    limit,
+    pages: Math.max(1, Math.ceil(jobs.length / limit)),
+    facets: { region: tally('region'), level: tally('level'), direct: jobs.filter((j) => j.direct).length },
+  };
+}

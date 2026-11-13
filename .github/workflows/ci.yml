@@ -9,6 +9,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   check:
     name: Typecheck, test and build
@@ -22,5 +26,27 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run typecheck
-      - run: npm test
+      - name: Run pipeline and API tests
+        run: npm test
       - run: npm run build
+      - name: Dry-run the Worker bundle
+        run: npx wrangler deploy --dry-run --outdir /tmp/worker
+        working-directory: api
+
+  docker:
+    name: Build container images
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: docker/setup-buildx-action@v4
+      - name: Validate the compose file
+        run: docker compose --profile prod config --quiet
+      - name: Build the API and production site images
+        uses: docker/bake-action@v7
+        with:
+          files: compose.yaml
+          targets: api,site
+          set: |
+            *.cache-from=type=gha
+            *.cache-to=type=gha,mode=max
