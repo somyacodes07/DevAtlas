@@ -43,8 +43,9 @@ jobs:
       - name: Commit the edition
         id: commit
         run: |
-          git config user.name "devatlas-press[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Commits are authored as the repository owner, the same as the old pipeline did.
+          git config user.name "somyacodes07"
+          git config user.email "ffsomyajeet@gmail.com"
           git add data
           if git diff --staged --quiet; then
             echo "Nothing new to print."
