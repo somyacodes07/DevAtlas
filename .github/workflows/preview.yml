@@ -1,0 +1,70 @@
+name: Preview
+
+# Every pull request from this repository gets its own copy of the site at a
+# stable URL, posted as a comment. Previews read the production API, which is
+# public and read-only, so a preview can never change real data.
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: preview-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    name: Deploy preview
+    # Fork and Dependabot runs have no access to secrets, so they are skipped.
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      API_URL: ${{ vars.API_URL || 'https://devatlas-api.somyacodes.workers.dev/api/v1' }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Build the static site
+        run: npm run build
+        env:
+          NEXT_PUBLIC_API_URL: ${{ env.API_URL }}
+      - name: Publish the preview
+        id: deploy
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy frontend/out --project-name=${{ secrets.CLOUDFLARE_PAGES_PROJECT || 'devatlas-web' }} --branch=pr-${{ github.event.pull_request.number }}
+      - name: Check the preview renders
+        run: |
+          for path in / /jobs/ /search/ /archive/; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' --retry 5 --retry-delay 5 --retry-all-errors "$PREVIEW$path")
+            echo "$code $PREVIEW$path"
+            test "$code" = 200
+          done
+        env:
+          PREVIEW: ${{ steps.deploy.outputs.deployment-url }}
+      - name: Post the preview link
+        run: |
+          body="<!-- devatlas-preview -->
+          **Preview is ready:** $PREVIEW
+
+          Built from \`${HEAD_SHA::7}\`. It reads the production API."
+          id=$(gh api "repos/$GITHUB_REPOSITORY/issues/$PR/comments" --jq '[.[] | select(.body | contains("<!-- devatlas-preview -->"))][0].id // empty')
+          if [ -n "$id" ]; then
+            gh api -X PATCH "repos/$GITHUB_REPOSITORY/issues/comments/$id" -f body="$body" > /dev/null
+          else
+            gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" --body "$body"
+          fi
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.number }}
+          PREVIEW: ${{ steps.deploy.outputs.deployment-url }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}

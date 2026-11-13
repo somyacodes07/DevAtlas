@@ -1,11 +1,11 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
-import type { Job } from '@/lib/data';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { ApiFailure, api, type JobsQuery, type JobsResponse } from '@/lib/api';
+import { num } from '@/lib/format';
 import { Classified } from './Parts';
 
 const REGIONS = [
-  ['all', 'Everywhere'],
   ['india', 'India'],
   ['remote', 'Remote'],
   ['europe', 'Europe'],
@@ -14,7 +14,6 @@ const REGIONS = [
 ] as const;
 
 const LEVELS = [
-  ['all', 'Any level'],
   ['internship', 'Internship'],
   ['entry', 'Entry'],
   ['mid', 'Mid'],
@@ -22,103 +21,167 @@ const LEVELS = [
   ['staff', 'Staff and above'],
 ] as const;
 
-const PAGE = 90;
+interface Filters {
+  q: string;
+  region: string;
+  level: string;
+  direct: boolean;
+}
+const EMPTY: Filters = { q: '', region: '', level: '', direct: false };
+const isEmpty = (f: Filters) => !f.q && !f.region && !f.level && !f.direct;
 
-function Choice<T extends string>({ label, options, value, onChange }: {
-  label: string; options: readonly (readonly [T, string])[]; value: T; onChange: (v: T) => void;
+function readUrl(): Filters {
+  const p = new URLSearchParams(window.location.search);
+  return { q: p.get('q') ?? '', region: p.get('region') ?? '', level: p.get('level') ?? '', direct: p.get('direct') === 'true' };
+}
+
+function writeUrl(f: Filters) {
+  const p = new URLSearchParams();
+  if (f.q) p.set('q', f.q);
+  if (f.region) p.set('region', f.region);
+  if (f.level) p.set('level', f.level);
+  if (f.direct) p.set('direct', 'true');
+  const qs = p.toString();
+  window.history.replaceState(null, '', qs ? `?${qs}` : window.location.pathname);
+}
+
+function Choice({ label, all, options, value, counts, onChange }: {
+  label: string; all: string; options: readonly (readonly [string, string])[]; value: string;
+  counts: Record<string, number>; onChange: (v: string) => void;
 }) {
   return (
     <fieldset className="choice">
       <legend>{label}</legend>
+      <button type="button" aria-pressed={value === ''} onClick={() => onChange('')}>
+        {all}
+      </button>
       {options.map(([key, text]) => (
         <button key={key} type="button" aria-pressed={value === key} onClick={() => onChange(key)}>
-          {text}
+          {text} <span className="tally">{num(counts[key] ?? 0)}</span>
         </button>
       ))}
     </fieldset>
   );
 }
 
-export function JobsBoard({ jobs }: { jobs: Job[] }) {
-  const [region, setRegion] = useState<(typeof REGIONS)[number][0]>('all');
-  const [level, setLevel] = useState<(typeof LEVELS)[number][0]>('all');
-  const [query, setQuery] = useState('');
-  const [directOnly, setDirectOnly] = useState(false);
-  const [limit, setLimit] = useState(PAGE);
+/**
+ * The jobs board. Search, filters, counts and paging are all answered by the
+ * API (GET /jobs). The first page is baked in at build time, so the default
+ * view is on screen before the first request returns.
+ */
+export function JobsBoard({ initial }: { initial: JobsResponse }) {
+  const [filters, setFilters] = useState<Filters>(EMPTY);
+  const [data, setData] = useState<JobsResponse>(initial);
+  const [state, setState] = useState<'ready' | 'loading' | 'more'>('ready');
+  const [error, setError] = useState<string | null>(null);
+  const request = useRef<AbortController | null>(null);
+  const started = useRef(false);
 
-  // Display ads on the front page link here with ?q=Company
-  useEffect(() => {
-    const q = new URLSearchParams(window.location.search).get('q');
-    if (q) setQuery(q);
+  const load = useCallback(async (f: Filters, page: number) => {
+    request.current?.abort();
+    const controller = new AbortController();
+    request.current = controller;
+    setState(page === 1 ? 'loading' : 'more');
+    setError(null);
+    const query: JobsQuery = {
+      q: f.q.trim() || undefined,
+      region: (f.region || undefined) as JobsQuery['region'],
+      level: (f.level || undefined) as JobsQuery['level'],
+      direct: f.direct ? true : undefined,
+      page,
+      limit: 30,
+    };
+    try {
+      const res = await api.jobs(query, controller.signal);
+      setData((old) => (page === 1 ? res : { ...res, items: [...old.items, ...res.items] }));
+      setState('ready');
+    } catch (err) {
+      if (controller.signal.aborted) return;
+      setError(err instanceof ApiFailure ? err.message : 'The jobs could not be loaded.');
+      setState('ready');
+    }
   }, []);
-  useEffect(() => setLimit(PAGE), [region, level, query, directOnly]);
 
-  const shown = useMemo(() => {
-    const words = query.toLowerCase().split(/\s+/).filter(Boolean);
-    return jobs.filter((j) => {
-      if (region !== 'all' && j.region !== region) return false;
-      if (level !== 'all' && j.level !== level) return false;
-      if (directOnly && !j.direct) return false;
-      if (!words.length) return true;
-      const text = `${j.title} ${j.company} ${j.location} ${j.tags.join(' ')}`.toLowerCase();
-      return words.every((w) => text.includes(w));
-    });
-  }, [jobs, region, level, query, directOnly]);
+  // Pick up filters from the address (display ads link here with ?q=Company).
+  useEffect(() => {
+    const fromUrl = readUrl();
+    started.current = true;
+    if (!isEmpty(fromUrl)) setFilters(fromUrl);
+    load(fromUrl, 1);
+    return () => request.current?.abort();
+  }, [load]);
 
-  const filtered = region !== 'all' || level !== 'all' || query !== '' || directOnly;
-  const clear = () => {
-    setRegion('all');
-    setLevel('all');
-    setQuery('');
-    setDirectOnly(false);
+  const change = (patch: Partial<Filters>, wait = 0) => {
+    const next = { ...filters, ...patch };
+    setFilters(next);
+    writeUrl(next);
+    window.clearTimeout((change as { timer?: number }).timer);
+    (change as { timer?: number }).timer = window.setTimeout(() => load(next, 1), wait);
   };
+
+  const more = data.page < data.pages;
 
   return (
     <>
-      <div className="filters">
+      <form className="filters" role="search" onSubmit={(e) => e.preventDefault()}>
         <label className="search">
           <span>Search jobs</span>
-          <input type="search" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Role, company, city or skill" />
+          <input
+            type="search"
+            value={filters.q}
+            maxLength={80}
+            onChange={(e) => change({ q: e.target.value }, 250)}
+            placeholder="Role, company, city or skill"
+          />
         </label>
-        <Choice label="Where" options={REGIONS} value={region} onChange={setRegion} />
-        <Choice label="Level" options={LEVELS} value={level} onChange={setLevel} />
+        <Choice label="Where" all="Everywhere" options={REGIONS} value={filters.region} counts={data.facets.region} onChange={(region) => change({ region })} />
+        <Choice label="Level" all="Any level" options={LEVELS} value={filters.level} counts={data.facets.level} onChange={(level) => change({ level })} />
         <label className="check">
-          <input type="checkbox" checked={directOnly} onChange={(e) => setDirectOnly(e.target.checked)} />
-          Employer postings only
+          <input type="checkbox" checked={filters.direct} onChange={(e) => change({ direct: e.target.checked })} />
+          Employer postings only <span className="tally">{num(data.facets.direct)}</span>
         </label>
-      </div>
+      </form>
 
       <p className="count" aria-live="polite">
-        {shown.length === jobs.length ? `${jobs.length} jobs on the board` : `${shown.length} of ${jobs.length} jobs`}
-        {filtered ? (
-          <button type="button" className="link" onClick={clear}>
+        {state === 'loading' ? 'Searching the board' : `${num(data.total)} ${data.total === 1 ? 'job' : 'jobs'}${isEmpty(filters) ? ' on the board' : ' match'}`}
+        {!isEmpty(filters) ? (
+          <button type="button" className="link" onClick={() => change(EMPTY)}>
             Clear filters
           </button>
         ) : null}
       </p>
 
-      {shown.length ? (
+      {error ? (
+        <p className="notice-box" role="alert">
+          {error}{' '}
+          <button type="button" className="link" onClick={() => load(filters, 1)}>
+            Try again
+          </button>
+        </p>
+      ) : null}
+
+      {data.items.length ? (
         <>
-          <ul className="classifieds classifieds-full">
-            {shown.slice(0, limit).map((j) => (
+          <ul className={`classifieds classifieds-full ${state === 'loading' ? 'is-stale' : ''}`}>
+            {data.items.map((j) => (
               <Classified key={j.id} job={j} full />
             ))}
           </ul>
-          {shown.length > limit ? (
-            <button type="button" className="more" onClick={() => setLimit(limit + PAGE)}>
-              Show {Math.min(PAGE, shown.length - limit)} more jobs
+          {more ? (
+            <button type="button" className="more" disabled={state !== 'ready'} onClick={() => load(filters, data.page + 1)}>
+              {state === 'more' ? 'Loading more jobs' : `Show more jobs (${num(data.total - data.items.length)} left)`}
             </button>
           ) : null}
         </>
-      ) : (
+      ) : state === 'ready' && !error ? (
         <p className="quiet">
           No jobs match these filters. Try fewer words, or{' '}
-          <button type="button" className="link" onClick={clear}>
+          <button type="button" className="link" onClick={() => change(EMPTY)}>
             clear the filters
           </button>
           .
         </p>
-      )}
+      ) : null}
     </>
   );
 }

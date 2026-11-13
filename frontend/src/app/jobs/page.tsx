@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { SectionHead, Sheet } from '@/components/Chrome';
 import { JobsBoard } from '@/components/JobsBoard';
-import { getJobs, getLatest } from '@/lib/data';
+import { getJobs, getJobsFirstPage, getLatest } from '@/lib/data';
 import { num } from '@/lib/format';
 
 export const metadata: Metadata = {
@@ -26,7 +26,7 @@ export default function JobsPage() {
         </p>
       ) : null}
       {jobs.length ? (
-        <JobsBoard jobs={jobs} />
+        <JobsBoard initial={getJobsFirstPage()} />
       ) : (
         <p className="quiet">No jobs on the board yet. They arrive with the next edition.</p>
       )}

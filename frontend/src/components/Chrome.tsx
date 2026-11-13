@@ -2,7 +2,7 @@ import Link from 'next/link';
 import type { ReactNode } from 'react';
 import type { Edition } from '@/lib/data';
 import { REPO_URL, longDate, num, pressTime, slotName } from '@/lib/format';
-import { NextEdition, ThemeSwitch } from './Live';
+import { ApiStatus, NextEdition, ThemeSwitch } from './Live';
 
 const SECTIONS = [
   { href: '/', label: 'Front page' },
@@ -121,6 +121,10 @@ export function Sheet({ paper, section, children }: { paper: Edition | null; sec
               {s.label}
             </Link>
           ))}
+          <form className="nav-search" action="/search/" role="search">
+            <label htmlFor="nav-q">Search</label>
+            <input id="nav-q" name="q" type="search" placeholder="Search stories and jobs" maxLength={80} />
+          </form>
         </nav>
         {paper ? <Ticker paper={paper} /> : null}
       </header>
@@ -138,6 +142,7 @@ export function Sheet({ paper, section, children }: { paper: Edition | null; sec
             <Link href="/about/">How the paper is made</Link>
             <a href={REPO_URL}>Source on GitHub</a>
           </p>
+          <ApiStatus />
           <ThemeSwitch />
         </div>
       </footer>

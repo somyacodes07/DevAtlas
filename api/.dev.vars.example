@@ -1,0 +1,2 @@
+# Copy to api/.dev.vars for `wrangler dev`. Local only, never deployed.
+ADMIN_TOKEN=dev-token

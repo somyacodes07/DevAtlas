@@ -1,15 +1,18 @@
-name: Deploy site
+name: Deploy
 
 on:
   push:
     branches: [main]
     paths:
+      - 'api/**'
       - 'frontend/**'
       - 'data/**'
-      # Build inputs that live outside frontend/: dependency versions and the shared edition types.
+      # Build inputs that live outside the app folders.
       - 'package.json'
       - 'package-lock.json'
       - 'pipeline/src/types.ts'
+      - 'pipeline/src/publish.ts'
+      - 'scripts/smoke.mjs'
       - '.github/workflows/deploy.yml'
   workflow_dispatch:
   workflow_call:
@@ -19,42 +22,87 @@ permissions:
 
 concurrency:
   group: deploy
-  cancel-in-progress: true
+  cancel-in-progress: false
+
+env:
+  API_URL: ${{ vars.API_URL || 'https://devatlas-api.somyacodes.workers.dev/api/v1' }}
+  SITE_URL: ${{ vars.SITE_URL || 'https://devatlas.somyacodes.in' }}
 
 jobs:
-  pages:
-    name: Build and publish to Cloudflare Pages
+  api:
+    name: Deploy API (Worker and D1)
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      ADMIN_TOKEN: ${{ secrets.ADMIN_TOKEN }}
     steps:
       # Check out the branch tip, not the triggering commit, so a deploy that
       # follows "Print edition" includes the edition that was just committed.
       - uses: actions/checkout@v7
         with:
           ref: ${{ github.ref_name }}
-
       - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: npm
-
       - run: npm ci
+      - name: Test the API before it ships
+        run: npm run typecheck -w @devatlas/api && npm test -w @devatlas/api
+      - name: Check the deploy is configured
+        run: |
+          test -n "$CLOUDFLARE_API_TOKEN" || { echo "::error::CLOUDFLARE_API_TOKEN secret is missing."; exit 1; }
+          test -n "$ADMIN_TOKEN" || { echo "::error::ADMIN_TOKEN secret is missing."; exit 1; }
+          ! grep -q REPLACE_WITH_D1_DATABASE_ID api/wrangler.toml || { echo "::error::Set the D1 database_id in api/wrangler.toml."; exit 1; }
+      - name: Apply database migrations
+        run: npx wrangler d1 migrations apply devatlas --remote
+        working-directory: api
+      - name: Deploy the Worker
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: api
+          secrets: ADMIN_TOKEN
+      - name: Publish the newest edition to the API
+        run: npm run publish:edition
 
+  site:
+    name: Deploy site (Cloudflare Pages)
+    needs: api
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
       - name: Build the static site
         run: npm run build
         env:
-          NEXT_PUBLIC_SITE_URL: ${{ vars.SITE_URL || 'https://devatlas.pages.dev' }}
-
+          NEXT_PUBLIC_API_URL: ${{ env.API_URL }}
+          NEXT_PUBLIC_SITE_URL: ${{ env.SITE_URL }}
       - name: Publish to Cloudflare Pages
-        if: env.CLOUDFLARE_API_TOKEN != ''
         uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy frontend/out --project-name=${{ secrets.CLOUDFLARE_PAGES_PROJECT || 'devatlas-web' }} --branch=main
 
-      - name: Explain the skipped publish
-        if: env.CLOUDFLARE_API_TOKEN == ''
-        run: echo "::warning::CLOUDFLARE_API_TOKEN is not set, so the site was built but not published."
+  smoke:
+    name: Smoke test production
+    needs: site
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: Check the live API and site
+        run: node scripts/smoke.mjs

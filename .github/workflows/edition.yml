@@ -10,6 +10,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: edition
@@ -58,10 +59,41 @@ jobs:
           echo "published=true" >> "$GITHUB_OUTPUT"
 
   # A push made with GITHUB_TOKEN does not start other workflows, so the
-  # deploy is called directly instead of waiting for a push event.
+  # deploy is called directly. It ships the API, sends the new edition to it,
+  # rebuilds the site and smoke-tests the result.
   deploy:
-    name: Publish the site
+    name: Publish
     needs: print
     if: needs.print.outputs.published == 'true'
     uses: ./.github/workflows/deploy.yml
     secrets: inherit
+
+  # If the paper fails to print or publish, open one issue (GitHub emails the
+  # owner) and keep adding to it. The next good run closes it.
+  alert:
+    name: Report the result
+    needs: [print, deploy]
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+      FAILED: ${{ contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled') }}
+      PRINT_RESULT: ${{ needs.print.result }}
+      DEPLOY_RESULT: ${{ needs.deploy.result }}
+    steps:
+      - name: Open, update or close the alert issue
+        run: |
+          gh label create edition-failure --color B4271F --description "The scheduled edition did not publish" --repo "$GITHUB_REPOSITORY" 2>/dev/null || true
+          issue=$(gh issue list --repo "$GITHUB_REPOSITORY" --label edition-failure --state open --json number --jq '.[0].number // empty')
+          if [ "$FAILED" = "true" ]; then
+            note="The edition run on $(date -u '+%Y-%m-%d %H:%M UTC') failed (print: $PRINT_RESULT, publish: $DEPLOY_RESULT). The last good edition is still online. Logs: $RUN_URL"
+            if [ -n "$issue" ]; then
+              gh issue comment "$issue" --repo "$GITHUB_REPOSITORY" --body "$note"
+            else
+              gh issue create --repo "$GITHUB_REPOSITORY" --title "Edition job is failing" --label edition-failure --assignee "$GITHUB_REPOSITORY_OWNER" --body "$note"
+            fi
+          elif [ -n "$issue" ]; then
+            gh issue close "$issue" --repo "$GITHUB_REPOSITORY" --comment "Fixed: the edition printed and published again. $RUN_URL"
+          fi

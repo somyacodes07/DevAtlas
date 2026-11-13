@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { API_URL, api, type HealthResponse } from '@/lib/api';
 
 // Press times in UTC, matching the cron in .github/workflows/edition.yml
 const PRESS_UTC = [
@@ -70,5 +71,25 @@ export function Photo({ src, credit, href }: { src: string; credit: string; href
       </a>
       <figcaption>Picture: {credit}</figcaption>
     </figure>
+  );
+}
+
+/** A live reading from the API's health endpoint, so the footer shows whether the back end is up. */
+export function ApiStatus() {
+  const [health, setHealth] = useState<HealthResponse | 'down' | null>(null);
+  useEffect(() => {
+    const controller = new AbortController();
+    api.health(controller.signal).then(setHealth).catch(() => !controller.signal.aborted && setHealth('down'));
+    return () => controller.abort();
+  }, []);
+  if (health === null) return <p className="api-status">Checking the API</p>;
+  if (health === 'down') {
+    return <p className="api-status api-down">API not reachable. Pages still show the last printed edition.</p>;
+  }
+  return (
+    <p className="api-status api-up">
+      API online: edition {health.latestEdition}, {health.jobs.toLocaleString('en-US')} jobs.{' '}
+      <a href={`${API_URL}/health`}>Health check</a>
+    </p>
   );
 }
