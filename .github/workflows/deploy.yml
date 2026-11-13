@@ -6,6 +6,10 @@ on:
     paths:
       - 'frontend/**'
       - 'data/**'
+      # Build inputs that live outside frontend/: dependency versions and the shared edition types.
+      - 'package.json'
+      - 'package-lock.json'
+      - 'pipeline/src/types.ts'
       - '.github/workflows/deploy.yml'
   workflow_dispatch:
   workflow_call:
