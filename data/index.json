@@ -1,5 +1,14 @@
 [
  {
+  "id": "2026-11-14-am",
+  "date": "2026-11-14",
+  "slot": "morning",
+  "number": 2,
+  "headline": "LibreOffice actually works 365 days a year",
+  "stories": 29,
+  "generatedAt": "2026-11-13T20:31:05.952Z"
+ },
+ {
   "id": "2026-11-10-pm",
   "date": "2026-11-10",
   "slot": "evening",
