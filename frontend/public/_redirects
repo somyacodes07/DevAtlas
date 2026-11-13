@@ -1,3 +1,7 @@
-# DevAtlas Cloudflare Pages Routing Rules
-# SPA fallback for dynamic report date routes
-/reports/:date  /reports/:date/index.html  200
+# Old addresses from the first version of the site
+/repositories/*  /open-source/  301
+/tools/*         /              301
+/explore/*       /              301
+/reports/*       /archive/      301
+/ops/*           /about/        301
+/docs/*          /about/        301

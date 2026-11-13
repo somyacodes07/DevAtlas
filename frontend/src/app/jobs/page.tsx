@@ -1,19 +1,35 @@
-import { Metadata } from 'next';
-import { fetchJobs } from '@/lib/api';
-import { JobsClient } from '@/components/JobsClient';
+import type { Metadata } from 'next';
+import { SectionHead, Sheet } from '@/components/Chrome';
+import { JobsBoard } from '@/components/JobsBoard';
+import { getJobs, getLatest } from '@/lib/data';
+import { num } from '@/lib/format';
 
 export const metadata: Metadata = {
-  title: 'Engineering jobs and internships',
-  description: 'Browse developer roles from the job sources indexed by DevAtlas.',
-  alternates: { canonical: '/jobs' },
+  title: 'Developer jobs',
+  description: 'Software engineering jobs and internships in India, Europe and remote, refreshed twice a day.',
+  alternates: { canonical: '/jobs/' },
 };
 
-export default async function JobsPage() {
-  const { data } = await fetchJobs({ limit: '100' });
-  return <div className="paper-page">
-    <div className="front-dateline"><span className="paper-kicker">The classifieds</span><span className="paper-meta">Roles and internships from indexed sources</span></div>
-    <h1 className="paper-title">Work worth finding.</h1>
-    <p className="paper-deck">Browse engineering opportunities by location, work arrangement, experience, and the skills employers list.</p>
-    <div className="paper-section"><JobsClient initialJobs={data} /></div>
-  </div>;
+export default function JobsPage() {
+  const jobs = getJobs();
+  const direct = jobs.filter((j) => j.direct).length;
+  const employers = new Set(jobs.filter((j) => j.direct).map((j) => j.company)).size;
+  return (
+    <Sheet paper={getLatest()} section="/jobs/">
+      <SectionHead title="Situations vacant" note="Newest first, refreshed with every edition" />
+      {jobs.length ? (
+        <p className="standfirst wide">
+          {num(direct)} of these {num(jobs.length)} jobs are read straight from the careers pages of {employers}{' '}
+          employers, through the public Greenhouse, Lever and Ashby job board APIs and the SimplifyJobs lists. Each
+          one links to the employer’s own posting and leaves this board when the employer closes it. The rest come
+          from remote job boards and are marked as such.
+        </p>
+      ) : null}
+      {jobs.length ? (
+        <JobsBoard jobs={jobs} />
+      ) : (
+        <p className="quiet">No jobs on the board yet. They arrive with the next edition.</p>
+      )}
+    </Sheet>
+  );
 }

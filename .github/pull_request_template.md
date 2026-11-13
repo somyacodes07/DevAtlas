@@ -2,11 +2,10 @@
 <!-- Concise overview of the proposed change and motivation -->
 
 ## Architecture & Impact
-- [ ] Worker REST API change
-- [ ] Ingestion Pipeline / Data Model change
+- [ ] Pipeline / edition data change
 - [ ] Next.js Frontend change
 - [ ] GitHub Actions / CI/CD change
-- [ ] Documentation / Report change
+- [ ] Documentation change
 
 ## Quality & Verification Checklist
 - [ ] `npm run typecheck` passes without errors
