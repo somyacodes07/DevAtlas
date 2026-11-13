@@ -12,7 +12,7 @@
     "publish": "node --env-file-if-exists=../.env --import tsx src/publish.ts"
   },
   "devDependencies": {
-    "@types/node": "^22.13.9",
+    "@types/node": "^26.6.6",
     "tsx": "^4.19.3",
     "typescript": "^5.8.2"
   }
