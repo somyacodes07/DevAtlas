@@ -1,28 +1,18 @@
 {
   "name": "@devatlas/pipeline",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "type": "module",
-  "description": "DevAtlas Autonomous Ingestion & AI Intelligence Pipeline",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "description": "Scrapes the open web and writes each edition of the paper to data/",
   "scripts": {
-    "build": "tsc --noEmit && esbuild src/index.ts --bundle --platform=node --format=esm --outfile=dist/index.js",
-    "dev": "tsx src/index.ts",
-    "start": "node dist/index.js",
+    "print": "node --env-file-if-exists=../.env --import tsx src/index.ts",
+    "print:dry": "node --env-file-if-exists=../.env --import tsx src/index.ts --dry",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run",
-    "lint": "eslint src --ext .ts"
-  },
-  "dependencies": {
-    "mongodb": "^6.14.2",
-    "zod": "^3.24.2"
+    "test": "tsx --test test/*.test.ts"
   },
   "devDependencies": {
     "@types/node": "^22.13.9",
-    "esbuild": "^0.25.0",
     "tsx": "^4.19.3",
-    "typescript": "^5.8.2",
-    "vitest": "^3.0.7"
+    "typescript": "^5.8.2"
   }
 }

@@ -1,141 +1,35 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter, JetBrains_Mono, Newsreader } from 'next/font/google';
+import type { ReactNode } from 'react';
 import '../styles/globals.css';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { JsonLd } from '@/components/JsonLd';
+import { SITE_URL } from '@/lib/format';
 
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-sans',
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-mono',
-});
-
-const newsreader = Newsreader({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-editorial',
-});
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://devatlas.pages.dev';
-
-export const viewport: Viewport = {
-  themeColor: '#f4f2e9',
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 5,
-};
+export const viewport: Viewport = { width: 'device-width', initialScale: 1 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title: {
-    default: 'DevAtlas Daily — Developer intelligence, clearly told',
-    template: '%s | DevAtlas',
-  },
+  metadataBase: new URL(SITE_URL),
+  title: { default: 'The DevAtlas: developer news, printed twice a day', template: '%s | The DevAtlas' },
   description:
-    'A daily paper for developers: useful technology news, open source projects, tools, reports, and engineering roles.',
-  keywords: [
-    'developer jobs',
-    'software engineering internships 2026',
-    'bengaluru tech jobs',
-    'remote developer jobs',
-    'ai tools',
-    'frontier ai models',
-    'open source repositories',
-    'developer intelligence',
-    'tech news',
-    'cve advisories',
-  ],
-  authors: [{ name: 'DevAtlas Team', url: siteUrl }],
-  creator: 'DevAtlas Engineering',
-  publisher: 'DevAtlas',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  alternates: {
-    canonical: '/',
-  },
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: siteUrl,
-    siteName: 'DevAtlas',
-    title: 'DevAtlas Daily — Developer intelligence, clearly told',
-    description:
-      'A daily paper for developers: useful technology news, open source projects, tools, reports, and engineering roles.',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'DevAtlas Daily — Developer intelligence, clearly told',
-    description:
-      'Read the daily edition of developer news, roles, tools, and open source discoveries.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
+    'A free developer newspaper. Top stories from Hacker News, Lobsters and engineering blogs, rising GitHub repositories, security advisories and developer jobs, in a morning and an evening edition.',
+  openGraph: { type: 'website', siteName: 'The DevAtlas', url: SITE_URL },
+  alternates: { canonical: '/' },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} ${newsreader.variable}`} suppressHydrationWarning>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  var stored = localStorage.getItem('devatlas-theme');
-                  var isDark = stored === 'dark';
-                  if (isDark) {
-                    document.documentElement.classList.add('dark');
-                  } else {
-                    document.documentElement.classList.remove('dark');
-                  }
-                } catch (e) {}
-              })();
-            `,
-          }}
-        />
-        <JsonLd />
-      </head>
-      <body className="min-h-screen flex flex-col" suppressHydrationWarning>
-        {/* Accessible Skip Link */}
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-accent focus:px-4 focus:py-2 focus:font-mono focus:text-xs focus:font-bold focus:text-white focus:shadow-lg focus:shadow-accent/50 transition-all"
-        >
-          Skip to main content
-        </a>
+// Runs before paint so a saved light or dark choice never flashes the other paper.
+const INK = `try{var t=localStorage.getItem('devatlas-ink');if(t)document.documentElement.dataset.theme=t}catch(e){}`;
 
-        <div className="flex min-h-screen flex-col w-full">
-          <Header />
-          <main id="main-content" className="flex-1">
-            {children}
-          </main>
-          <Footer />
-        </div>
-      </body>
+export default function RootLayout({ children }: { children: ReactNode }) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: INK }} />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Manufacturing+Consent&family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..600&display=swap"
+        />
+      </head>
+      <body>{children}</body>
     </html>
   );
 }

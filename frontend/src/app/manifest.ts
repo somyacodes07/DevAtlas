@@ -1,22 +1,16 @@
-import { MetadataRoute } from 'next';
+import type { MetadataRoute } from 'next';
 
 export const dynamic = 'force-static';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'DevAtlas — Autonomous Developer Intelligence',
+    name: 'The DevAtlas',
     short_name: 'DevAtlas',
-    description: 'Real-time radar for verified developer jobs, internships, frontier AI tools, and fast-growing repositories.',
+    description: 'Developer news, open source and jobs, printed twice a day.',
     start_url: '/',
     display: 'standalone',
-    background_color: '#09090b',
-    theme_color: '#09090b',
-    icons: [
-      {
-        src: '/icon.svg',
-        sizes: 'any',
-        type: 'image/svg+xml',
-      },
-    ],
+    background_color: '#E9E7E0',
+    theme_color: '#E9E7E0',
+    icons: [{ src: '/icon.svg', sizes: 'any', type: 'image/svg+xml' }],
   };
 }

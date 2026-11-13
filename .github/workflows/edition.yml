@@ -1,0 +1,66 @@
+name: Print edition
+
+# Two papers a day. 01:17 UTC is 6:47 am in India (morning edition) and
+# 13:17 UTC is 6:47 pm (evening edition). Off-the-hour minutes are used on
+# purpose: GitHub delays or drops scheduled runs at :00 when it is busy.
+on:
+  schedule:
+    - cron: '17 1,13 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: edition
+  cancel-in-progress: false
+
+jobs:
+  print:
+    name: Scrape sources and write the edition
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      published: ${{ steps.commit.outputs.published }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Print the edition
+        run: npm run print
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Optional. With neither key the briefing is written by rule and the paper still prints.
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+      - name: Commit the edition
+        id: commit
+        run: |
+          git config user.name "devatlas-press[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --staged --quiet; then
+            echo "Nothing new to print."
+            echo "published=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git commit -m "edition: $(date -u +%Y-%m-%d) $(date -u +%H:%M) UTC"
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"
+          echo "published=true" >> "$GITHUB_OUTPUT"
+
+  # A push made with GITHUB_TOKEN does not start other workflows, so the
+  # deploy is called directly instead of waiting for a push event.
+  deploy:
+    name: Publish the site
+    needs: print
+    if: needs.print.outputs.published == 'true'
+    uses: ./.github/workflows/deploy.yml
+    secrets: inherit

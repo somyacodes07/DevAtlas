@@ -1,40 +1,14 @@
-import { MetadataRoute } from 'next';
-import { getAllReportDates } from '@/lib/reports';
+import type { MetadataRoute } from 'next';
+import { getIndex } from '@/lib/data';
+import { SITE_URL } from '@/lib/format';
 
 export const dynamic = 'force-static';
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://devatlas.pages.dev';
-  const lastModified = new Date();
-
-  const staticRoutes = [
-    { path: '', priority: 1.0, changeFrequency: 'hourly' as const },
-    { path: '/explore', priority: 0.9, changeFrequency: 'daily' as const },
-    { path: '/jobs', priority: 0.95, changeFrequency: 'hourly' as const },
-    { path: '/tools', priority: 0.85, changeFrequency: 'daily' as const },
-    { path: '/repositories', priority: 0.85, changeFrequency: 'daily' as const },
-    { path: '/reports', priority: 0.9, changeFrequency: 'daily' as const },
-    { path: '/docs', priority: 0.95, changeFrequency: 'weekly' as const },
-    { path: '/ops', priority: 0.8, changeFrequency: 'hourly' as const },
+export default function sitemap(): MetadataRoute.Sitemap {
+  const index = getIndex();
+  const lastModified = index[0]?.generatedAt;
+  return [
+    ...['/', '/open-source/', '/jobs/', '/archive/', '/about/'].map((path) => ({ url: `${SITE_URL}${path}`, lastModified })),
+    ...index.map((e) => ({ url: `${SITE_URL}/edition/${e.id}/`, lastModified: e.generatedAt })),
   ];
-
-  const reportDates = await getAllReportDates();
-
-  const routes: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
-    url: `${baseUrl}${route.path}`,
-    lastModified,
-    changeFrequency: route.changeFrequency,
-    priority: route.priority,
-  }));
-
-  reportDates.forEach((date) => {
-    routes.push({
-      url: `${baseUrl}/reports/${date}`,
-      lastModified: new Date(date),
-      changeFrequency: 'never',
-      priority: 0.7,
-    });
-  });
-
-  return routes;
 }

@@ -1,22 +1,8 @@
-import { MetadataRoute } from 'next';
+import type { MetadataRoute } from 'next';
+import { SITE_URL } from '@/lib/format';
 
 export const dynamic = 'force-static';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://devatlas.pages.dev';
-
-  return {
-    rules: [
-      {
-        userAgent: '*',
-        allow: '/',
-        disallow: ['/api/'],
-      },
-      {
-        userAgent: 'Googlebot',
-        allow: '/',
-      },
-    ],
-    sitemap: `${baseUrl}/sitemap.xml`,
-  };
+  return { rules: { userAgent: '*', allow: '/' }, sitemap: `${SITE_URL}/sitemap.xml` };
 }
