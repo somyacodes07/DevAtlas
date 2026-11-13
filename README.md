@@ -74,7 +74,11 @@ links back to the original.
    `CLOUDFLARE_PAGES_PROJECT` if the project is not called `devatlas-web`).
 3. Create the database with `npx wrangler d1 create devatlas` and put its id in `api/wrangler.toml`.
 4. Add an `ADMIN_TOKEN` repository secret (any long random string).
-5. Run the **Print edition** workflow once by hand. After that it runs itself.
+5. Add two repository variables (Settings, Secrets and variables, Actions, Variables) so
+   your site talks to your own API and not this project's:
+   `API_URL`, for example `https://devatlas-api.<your-subdomain>.workers.dev/api/v1`, and
+   `SITE_URL`, the address of your Pages site.
+6. Run the **Print edition** workflow once by hand. After that it runs itself.
 
 ## License
 

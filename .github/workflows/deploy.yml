@@ -24,6 +24,8 @@ concurrency:
   group: deploy
   cancel-in-progress: false
 
+# Forks must set the API_URL and SITE_URL repository variables, or the site
+# is built against this project's API. See "Deploy your own" in the README.
 env:
   API_URL: ${{ vars.API_URL || 'https://devatlas-api.somyacodes.workers.dev/api/v1' }}
   SITE_URL: ${{ vars.SITE_URL || 'https://devatlas.somyacodes.in' }}
