@@ -3,54 +3,39 @@
  "date": "2026-11-14",
  "slot": "morning",
  "number": 2,
- "generatedAt": "2026-11-13T20:31:05.952Z",
+ "generatedAt": "2026-11-14T07:39:26.608Z",
  "lead": {
-  "id": "d6b5bcff4d0c",
-  "title": "LibreOffice actually works 365 days a year",
-  "url": "https://twitter.com/LibreOffice/status/2121205272479998268",
-  "domain": "twitter.com",
-  "blurb": "LibreOffice actually works 365 days a year. Just saying.",
+  "id": "e8c38895520b",
+  "title": "FAA issues national ground stop – lifted 4.5 hours later",
+  "url": "https://nbcnews.com/news/us-news/faa-orders-nationwide-ground-stop-departing-flights-reasons-safety-rcna609247",
+  "domain": "nbcnews.com",
+  "blurb": "https://www.fly.faa.gov/adv/adv_otherdis?adv_date=11132026&a... https://www.fly.faa.gov/adv/adv_otherdis?adv_date=11142026&a... https://www.nytimes.com/live/2026/11/13/us/ground-stop-natio...",
   "source": "Hacker News",
-  "discussionUrl": "https://news.ycombinator.com/item?id=50486482",
-  "points": 651,
-  "comments": 214,
-  "author": "mksaunders2",
-  "publishedAt": "2026-11-13T17:09:58.000Z",
+  "discussionUrl": "https://news.ycombinator.com/item?id=50489641",
+  "points": 1496,
+  "comments": 1144,
+  "author": "zulln",
+  "publishedAt": "2026-11-13T21:05:53.000Z",
   "desk": "general",
-  "score": 93,
-  "image": "https://pbs.twimg.com/profile_images/1643630535338598402/3ya2QWR3_400x400.jpg"
+  "score": 80,
+  "image": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2026-11/261113-Nationwide-Ground-Stop-vsb-1730-0993ea.jpg"
  },
  "stories": [
   {
-   "id": "44da454e7900",
-   "title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
-   "url": "https://status.claude.com/incidents/nn11wk485zfn",
-   "domain": "status.claude.com",
-   "blurb": "Claude's Status Page - Elevated errors on claude.ai, Claude Code, and platform.claude.com.",
+   "id": "b26717d449a4",
+   "title": "Nvidia Allegedly Engineered Scarcity by Funding AI Startups to Buy Its GPUs",
+   "url": "https://techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus",
+   "domain": "techpowerup.com",
+   "blurb": "Following the departure of now-former NVIDIA CEO, Jensen Huang, a new report by The Wall Street Journal (via Wccftech) has emerged alleging that NVIDIA artificially inflated the ongoing GPU and memory shortage by investing in AI startups that would go on to buy NVIDIA GPUs and build data centers....",
    "source": "Hacker News",
-   "discussionUrl": "https://news.ycombinator.com/item?id=50481187",
-   "points": 466,
-   "comments": 373,
-   "author": "__vivek",
-   "publishedAt": "2026-11-13T10:18:13.000Z",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50493251",
+   "points": 406,
+   "comments": 211,
+   "author": "speckx",
+   "publishedAt": "2026-11-14T02:52:59.000Z",
    "desk": "ai",
-   "score": 77,
-   "image": "https://dka575ofm4ao0.cloudfront.net/assets/logos/favicon-2b86ed00cfa6258307d4a3d0c482fd733c7973f82de213143b24fc062c540367.png"
-  },
-  {
-   "id": "0c5a5bee5abd",
-   "title": "Doomsday: Friday, 13 November, A.D. 2026 (1960)",
-   "url": "https://science.org/doi/10.1126/science.132.3436.1291",
-   "domain": "science.org",
-   "blurb": "",
-   "source": "Hacker News",
-   "discussionUrl": "https://news.ycombinator.com/item?id=50482379",
-   "points": 389,
-   "comments": 274,
-   "author": "voxleone",
-   "publishedAt": "2026-11-13T12:10:24.000Z",
-   "desk": "general",
-   "score": 68
+   "score": 72,
+   "image": "https://www.techpowerup.com/img/ooCln2q3jkKNGHen.jpg"
   },
   {
    "id": "7b5cb229ebdd",
@@ -60,12 +45,12 @@
    "blurb": "",
    "source": "Lobsters",
    "discussionUrl": "https://lobste.rs/s/lh9pwf/how_not_build_music_player",
-   "points": 71,
-   "comments": 20,
+   "points": 88,
+   "comments": 23,
    "author": "alichraghi",
    "publishedAt": "2026-11-13T09:16:28.886Z",
    "desk": "systems",
-   "score": 63
+   "score": 58
   },
   {
    "id": "14a056be9cf5",
@@ -75,44 +60,87 @@
    "blurb": "The year is 2017. A string of annual wildfires rocks the West Coast. The sky looks like this in the daytime: My home, like many in the Bay Area, has no insulation and isn’t really air sealed. To avoid choking on soot, a lot of people started buying air purifiers like this one: The venerable Coway…",
    "source": "Hacker News",
    "discussionUrl": "https://news.ycombinator.com/item?id=50474959",
-   "points": 587,
-   "comments": 163,
+   "points": 735,
+   "comments": 211,
    "author": "scottjg",
    "publishedAt": "2026-11-12T22:03:09.000Z",
    "desk": "general",
-   "score": 61,
+   "score": 50,
    "image": "https://scottjg.com/posts/2026-11-11-reverse-engineering-my-coway-air-purifier-to-ditch-the-cloud/coway-airmega-icons-cover.jpg"
   },
   {
+   "id": "0b67abad1121",
+   "title": "Jonathan Blow – If AI solved coding, why is my software still the same? [video]",
+   "url": "https://youtube.com/watch?v=IRK8h67ol7Q",
+   "domain": "youtube.com",
+   "blurb": "",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50484658",
+   "points": 250,
+   "comments": 258,
+   "author": "helloplanets",
+   "publishedAt": "2026-11-13T15:08:44.000Z",
+   "desk": "ai",
+   "score": 47
+  },
+  {
+   "id": "0be79c41bea7",
+   "title": "The need for at least a third option",
+   "url": "https://blog.ovalerio.net/archives/3359",
+   "domain": "blog.ovalerio.net",
+   "blurb": "",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/9oq6fr/need_for_at_least_third_option",
+   "points": 59,
+   "comments": 20,
+   "author": "dethos",
+   "publishedAt": "2026-11-13T11:36:44.546Z",
+   "desk": "general",
+   "score": 47
+  },
+  {
+   "id": "e09a9beaaee6",
+   "title": "Open Source DocumentDB 1.0 Reaches General Availability",
+   "url": "https://infoq.com/news/2026/11/mongodb-compatible-documentdb",
+   "domain": "infoq.com",
+   "blurb": "DocumentDB 1.0 is the first generally available release of the open source, MIT-licensed document database built on PostgreSQL, with compatibility for the MongoDB wire protocol. Most MongoDB drivers, tools, and queries work without changes. By Renato Losio",
+   "source": "InfoQ",
+   "author": "Renato Losio",
+   "publishedAt": "2026-11-14T06:37:00.000Z",
+   "desk": "general",
+   "score": 46,
+   "image": "https://res.infoq.com/news/2026/11/mongodb-compatible-documentdb/en/card_header_image/generatedCard-1793220097758.jpg"
+  },
+  {
    "id": "b8c82d5c01fe",
-   "title": "Rust 1.100",
+   "title": "Announcing Rust 1.100.0",
    "url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0",
    "domain": "blog.rust-lang.org",
    "blurb": "Empowering everyone to build reliable and efficient software.",
-   "source": "Hacker News",
-   "discussionUrl": "https://news.ycombinator.com/item?id=50472038",
-   "points": 865,
-   "comments": 311,
-   "author": "mbStavola",
-   "publishedAt": "2026-11-12T18:39:05.000Z",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/81hnjw/announcing_rust_1_100_0",
+   "points": 152,
+   "comments": 13,
+   "author": "theelx",
+   "publishedAt": "2026-11-12T18:43:41.418Z",
    "desk": "systems",
-   "score": 58,
+   "score": 46,
    "image": "https://www.rust-lang.org/static/images/rust-social-wide.jpg"
   },
   {
-   "id": "726f9b131488",
-   "title": "IceWM",
-   "url": "https://ice-wm.org/",
-   "domain": "ice-wm.org",
-   "blurb": "",
+   "id": "117b7aeaaeee",
+   "title": "Live airband on all frequencies from KORS. Victoria, CA also ground stopped",
+   "url": "https://orcasairband.com/",
+   "domain": "orcasairband.com",
+   "blurb": "Every aviation radio transmission heard from Orcas Island, WA: live, transcribed, and archived. Listen to all channels at once, pick your own, or rewind to any moment.",
    "source": "Hacker News",
-   "discussionUrl": "https://news.ycombinator.com/item?id=50478515",
-   "points": 347,
-   "comments": 199,
-   "author": "inatreecrown2",
-   "publishedAt": "2026-11-13T04:54:53.000Z",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50490593",
+   "points": 254,
+   "comments": 59,
+   "author": "mmaunder",
+   "publishedAt": "2026-11-13T22:04:24.000Z",
    "desk": "general",
-   "score": 53
+   "score": 45
   },
   {
    "id": "11a7870633bc",
@@ -122,13 +150,102 @@
    "blurb": "A terminal protocol for thin lines on cell edges: borders, rounded corners and gridlines that don",
    "source": "Lobsters",
    "discussionUrl": "https://lobste.rs/s/akdy9z/terminal_borders_don_t_cost_cell",
-   "points": 34,
-   "comments": 29,
+   "points": 44,
+   "comments": 39,
    "author": "joshka",
    "publishedAt": "2026-11-13T12:03:19.804Z",
    "desk": "general",
-   "score": 49,
+   "score": 45,
    "image": "https://www.joshka.net/cell-borders/og.png"
+  },
+  {
+   "id": "9ce677af6082",
+   "title": "FM-1 Workbench",
+   "url": "https://open.m-vave.com/fm1-workbench",
+   "domain": "open.m-vave.com",
+   "blurb": "",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50488325",
+   "points": 223,
+   "comments": 153,
+   "author": "simonebrunozzi",
+   "publishedAt": "2026-11-13T19:14:02.000Z",
+   "desk": "general",
+   "score": 44
+  },
+  {
+   "id": "7039aca8dbba",
+   "title": "Nvidia director sold nearly $1B in stock weeks before the Jensen Huang scandal",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-director-sold-nearly-1b-160000846.html",
+   "domain": "finance.yahoo.com",
+   "blurb": "",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50492993",
+   "points": 197,
+   "comments": 42,
+   "author": "LopRabbit",
+   "publishedAt": "2026-11-14T02:21:36.000Z",
+   "desk": "general",
+   "score": 43
+  },
+  {
+   "id": "6c41dcbf34a2",
+   "title": "Ggml v1.0.0",
+   "url": "https://github.com/ggml-org/ggml/releases/tag/v1.0.0",
+   "domain": "github.com",
+   "blurb": "Overview ggml 1.0.0 prunes the deprecated public API and the legacy DIAG_MASK ops, adds configurable YaRN truncation and FP8 support, and brings broad performance work across backends: few-row quan...",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50493062",
+   "points": 189,
+   "comments": 31,
+   "author": "cobychapple",
+   "publishedAt": "2026-11-14T02:28:29.000Z",
+   "desk": "general",
+   "score": 42
+  },
+  {
+   "id": "4f7d548b5580",
+   "title": "Congrats to the Hacktoberfest Open-Source AI Challenge Week 4: Ghost in the Machine Winners!",
+   "url": "https://dev.to/devteam/congrats-to-the-hacktoberfest-open-source-ai-challenge-week-4-ghost-in-the-machine-winners-nok",
+   "domain": "dev.to",
+   "blurb": "The results are in for the final week of our Hacktoberfest DEV Challenges! For Ghost in the Machine,...",
+   "source": "DEV Community",
+   "points": 76,
+   "comments": 34,
+   "author": "Jem",
+   "publishedAt": "2026-11-13T15:56:26.000Z",
+   "desk": "ai",
+   "score": 41
+  },
+  {
+   "id": "ea0776201252",
+   "title": "After 600 experiments, here's what I discovered about JEPA world models",
+   "url": "https://haddyalchaer.com/jepa",
+   "domain": "haddyalchaer.com",
+   "blurb": "",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50487185",
+   "points": 247,
+   "comments": 40,
+   "author": "halcdev",
+   "publishedAt": "2026-11-13T17:55:28.000Z",
+   "desk": "general",
+   "score": 40
+  },
+  {
+   "id": "b40b1a619699",
+   "title": "Amtrak booking system experiencing major issues amid nationwide FAA ground stop",
+   "url": "https://fox5dc.com/news/amtrak-outage-ticket-booking-faa-ground-stop-november-13-2026",
+   "domain": "fox5dc.com",
+   "blurb": "",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50492315",
+   "points": 160,
+   "comments": 49,
+   "author": "snow_mac",
+   "publishedAt": "2026-11-14T00:52:29.000Z",
+   "desk": "general",
+   "score": 39
   },
   {
    "id": "09e5e80125ce",
@@ -140,24 +257,37 @@
    "author": "Celso Martinho",
    "publishedAt": "2026-11-13T20:20:21.000Z",
    "desk": "general",
-   "score": 47,
-   "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M7B8M86AWYDHNF9C7R2V0CXH.png"
+   "score": 38
   },
   {
-   "id": "a1e895b935bb",
-   "title": "AI unlocks Gödel's notebooks, said to contain hundreds of proved theorems",
-   "url": "https://theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths",
-   "domain": "theguardian.com",
-   "blurb": "Kurt Gödel left 1,009 pages of densely written text – much of it in an obsolete shorthand – which is now said to contain hundreds of proved theorems",
+   "id": "3d3e0a33fa9e",
+   "title": "Show HN: Isometric SF – A pixel-art map of the SF Bay Area",
+   "url": "https://isometricsf.com/",
+   "domain": "isometricsf.com",
+   "blurb": "Technical Write-up: https://www.justinchavez.com/blog/isometric-sf-how/ Hi HN! Showcasing this fun project. I took 1300 square miles of the SF Bay Area from Google Photorealistic 3D Tiles and transformed them into a cohesive pixel map. It's really fun to explore and stumble upon various famous…",
    "source": "Hacker News",
-   "discussionUrl": "https://news.ycombinator.com/item?id=50486748",
-   "points": 213,
-   "comments": 49,
-   "author": "bookofjoe",
-   "publishedAt": "2026-11-13T17:30:10.000Z",
-   "desk": "ai",
-   "score": 47,
-   "image": "https://i.guim.co.uk/img/media/6eeccf216579fe2181ae737d30f31abd7590125c/210_58_1759_1407/master/1759.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=334efc63d7472a97d72be0ffd23af8bb"
+   "discussionUrl": "https://news.ycombinator.com/item?id=50487228",
+   "points": 200,
+   "comments": 69,
+   "author": "juscha1",
+   "publishedAt": "2026-11-13T17:58:37.000Z",
+   "desk": "general",
+   "score": 38
+  },
+  {
+   "id": "4fee55cd2515",
+   "title": "Probabilistic data structures in Go",
+   "url": "https://antonz.org/probabilistic-data-structures",
+   "domain": "antonz.org",
+   "blurb": "",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/xca2qj/probabilistic_data_structures_go",
+   "points": 35,
+   "comments": 10,
+   "author": "cgrinds",
+   "publishedAt": "2026-11-13T16:03:44.210Z",
+   "desk": "general",
+   "score": 38
   },
   {
    "id": "4766c254790f",
@@ -169,22 +299,50 @@
    "author": "Blake Darché",
    "publishedAt": "2026-11-13T19:26:07.000Z",
    "desk": "security",
-   "score": 46,
-   "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M7B3YCV0VN7GFCA6VK7EE9RR.png"
+   "score": 37
   },
   {
-   "id": "4f7d548b5580",
-   "title": "Congrats to the Hacktoberfest Open-Source AI Challenge Week 4: Ghost in the Machine Winners!",
-   "url": "https://dev.to/devteam/congrats-to-the-hacktoberfest-open-source-ai-challenge-week-4-ghost-in-the-machine-winners-nok",
+   "id": "5a0301f89f46",
+   "title": "🛸 Necoz: The UFO Kingdom Python Loops 🐱",
+   "url": "https://dev.to/necoz/necoz-the-ufo-kingdom-python-loops-hd1",
    "domain": "dev.to",
-   "blurb": "The results are in for the final week of our Hacktoberfest DEV Challenges! For Ghost in the Machine,...",
+   "blurb": "Chapter 1: A Mysterious UFO Appears It was an ordinary evening. I was sitting peacefully,...",
    "source": "DEV Community",
-   "points": 57,
-   "comments": 27,
-   "author": "Jem",
-   "publishedAt": "2026-11-13T15:56:26.000Z",
+   "points": 70,
+   "comments": 34,
+   "author": "Sᴛᴀʀ⭐",
+   "publishedAt": "2026-11-13T12:55:05.000Z",
+   "desk": "general",
+   "score": 37
+  },
+  {
+   "id": "f6fa8b9c36a9",
+   "title": "MCP Is Dead Simple. And That's Exactly the Problem",
+   "url": "https://dev.to/sylwia-lask/mcp-is-dead-simple-and-thats-exactly-the-problem-5811",
+   "domain": "dev.to",
+   "blurb": "What exactly is MCP? Is it some mysterious technology that requires secret knowledge to implement?...",
+   "source": "DEV Community",
+   "points": 146,
+   "comments": 115,
+   "author": "Sylwia Laskowska",
+   "publishedAt": "2026-11-12T08:14:36.000Z",
    "desk": "ai",
-   "score": 45
+   "score": 37
+  },
+  {
+   "id": "86b7f002df78",
+   "title": "A technical vision for the Haskell ecosystem",
+   "url": "https://discourse.haskell.org/t/a-technical-vision-for-the-haskell-ecosystem/15078",
+   "domain": "discourse.haskell.org",
+   "blurb": "",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50484235",
+   "points": 197,
+   "comments": 107,
+   "author": "cosmic_quanta",
+   "publishedAt": "2026-11-13T14:43:12.000Z",
+   "desk": "general",
+   "score": 36
   },
   {
    "id": "bc9e424becdb",
@@ -196,8 +354,36 @@
    "author": "Dan Goodin",
    "publishedAt": "2026-11-13T16:26:32.000Z",
    "desk": "general",
-   "score": 44,
-   "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/GettyImages-1237693734-1152x648-1783631068.jpg"
+   "score": 35
+  },
+  {
+   "id": "fbce85e306a7",
+   "title": "Contra \"Glue work considered harmful\"",
+   "url": "https://sunshowers.io/posts/glue-work",
+   "domain": "sunshowers.io",
+   "blurb": "",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/f6u0cg/contra_glue_work_considered_harmful",
+   "points": 48,
+   "comments": 17,
+   "author": "nrposner",
+   "publishedAt": "2026-11-13T02:36:05.139Z",
+   "desk": "general",
+   "score": 35
+  },
+  {
+   "id": "8e10b5719f57",
+   "title": "Dev Opportunity Radar #25: $120K+ Atlassian Hackathon, MLH Fellowship, and INSEAD AI Founder Sprint",
+   "url": "https://dev.to/devengers/dev-opportunity-radar-25-120k-atlassian-hackathon-mlh-fellowship-and-insead-ai-founder-sprint-m96",
+   "domain": "dev.to",
+   "blurb": "TL;DR Welcome back to Dev Opportunity Radar! 💙 This is a weekly series where I share...",
+   "source": "DEV Community",
+   "points": 66,
+   "comments": 4,
+   "author": "Hemapriya Kanagala",
+   "publishedAt": "2026-11-13T18:28:11.000Z",
+   "desk": "ai",
+   "score": 34
   },
   {
    "id": "08f57b356822",
@@ -209,120 +395,7 @@
    "author": "Sergio De Simone",
    "publishedAt": "2026-11-13T16:00:00.000Z",
    "desk": "ai",
-   "score": 43,
-   "image": "https://res.infoq.com/news/2026/11/apple-siri-ai-integration/en/headerimage/ios-27-virtualization-1794583601204.jpeg"
-  },
-  {
-   "id": "0be79c41bea7",
-   "title": "The need for at least a third option",
-   "url": "https://blog.ovalerio.net/archives/3359",
-   "domain": "blog.ovalerio.net",
-   "blurb": "",
-   "source": "Lobsters",
-   "discussionUrl": "https://lobste.rs/s/9oq6fr/need_for_at_least_third_option",
-   "points": 36,
-   "comments": 8,
-   "author": "dethos",
-   "publishedAt": "2026-11-13T11:36:44.546Z",
-   "desk": "general",
-   "score": 43
-  },
-  {
-   "id": "f6fa8b9c36a9",
-   "title": "MCP Is Dead Simple. And That's Exactly the Problem",
-   "url": "https://dev.to/sylwia-lask/mcp-is-dead-simple-and-thats-exactly-the-problem-5811",
-   "domain": "dev.to",
-   "blurb": "What exactly is MCP? Is it some mysterious technology that requires secret knowledge to implement?...",
-   "source": "DEV Community",
-   "points": 132,
-   "comments": 96,
-   "author": "Sylwia Laskowska",
-   "publishedAt": "2026-11-12T08:14:36.000Z",
-   "desk": "ai",
-   "score": 43
-  },
-  {
-   "id": "5a0301f89f46",
-   "title": "🛸 Necoz: The UFO Kingdom Python Loops 🐱",
-   "url": "https://dev.to/necoz/necoz-the-ufo-kingdom-python-loops-hd1",
-   "domain": "dev.to",
-   "blurb": "Chapter 1: A Mysterious UFO Appears It was an ordinary evening. I was sitting peacefully,...",
-   "source": "DEV Community",
-   "points": 61,
-   "comments": 22,
-   "author": "Sᴛᴀʀ⭐",
-   "publishedAt": "2026-11-13T12:55:05.000Z",
-   "desk": "general",
-   "score": 42
-  },
-  {
-   "id": "b3c84623c44d",
-   "title": "Brave Search API now accepts agentic payments via the x402 protocol",
-   "url": "https://brave.com/blog/search-api-agentic-payments",
-   "domain": "brave.com",
-   "blurb": "",
-   "source": "Hacker News",
-   "discussionUrl": "https://news.ycombinator.com/item?id=50477649",
-   "points": 254,
-   "comments": 141,
-   "author": "sjdh76",
-   "publishedAt": "2026-11-13T03:08:08.000Z",
-   "desk": "ai",
-   "score": 42
-  },
-  {
-   "id": "5f1afeeb96c0",
-   "title": "Why is Google cutting off Search from AI-free schools? Here are some theories",
-   "url": "https://text.npr.org/nx-s1-6029408",
-   "domain": "text.npr.org",
-   "blurb": "",
-   "source": "Hacker News",
-   "discussionUrl": "https://news.ycombinator.com/item?id=50484960",
-   "points": 126,
-   "comments": 126,
-   "author": "kamaraju",
-   "publishedAt": "2026-11-13T15:29:10.000Z",
-   "desk": "ai",
-   "score": 41
-  },
-  {
-   "id": "813e40fce5f8",
-   "title": "Introducing Spend Management: Spending limits and alerts for Cloudflare",
-   "url": "https://blog.cloudflare.com/spend-management",
-   "domain": "blog.cloudflare.com",
-   "blurb": "Spend Management adds opt-in spending caps for Cloudflare Workers and Durable Objects, and more products soon. Here is how we built the metering pipeline that turns usage into runtime decisions.",
-   "source": "Cloudflare Blog",
-   "author": "Celso Martinho",
-   "publishedAt": "2026-11-13T14:00:00.000Z",
-   "desk": "general",
-   "score": 41
-  },
-  {
-   "id": "7ab05cd8f2e7",
-   "title": "Google Open Sources Ambient Quality Agent (AQuA) to Diagnose Production AI Agent Failures",
-   "url": "https://infoq.com/news/2026/11/google-ambient-agent-prod",
-   "domain": "infoq.com",
-   "blurb": "Google has open-sourced AQuA, a reference implementation that analyzes production AI agent sessions, verifies recurring failure patterns, and investigates root causes against deployed source snapshots. In a 32-session replay, developers reduced seat selection bypasses from 15 sessions to two and…",
-   "source": "InfoQ",
-   "author": "Leela Kumili",
-   "publishedAt": "2026-11-13T13:53:00.000Z",
-   "desk": "ai",
-   "score": 41
-  },
-  {
-   "id": "fbce85e306a7",
-   "title": "Contra \"Glue work considered harmful\"",
-   "url": "https://sunshowers.io/posts/glue-work",
-   "domain": "sunshowers.io",
-   "blurb": "",
-   "source": "Lobsters",
-   "discussionUrl": "https://lobste.rs/s/f6u0cg/contra_glue_work_considered_harmful",
-   "points": 44,
-   "comments": 13,
-   "author": "nrposner",
-   "publishedAt": "2026-11-13T02:36:05.139Z",
-   "desk": "general",
-   "score": 41
+   "score": 34
   },
   {
    "id": "252a67cf93cb",
@@ -332,96 +405,27 @@
    "blurb": "",
    "source": "Lobsters",
    "discussionUrl": "https://lobste.rs/s/ooshl8/entirety_let_over_lambda_is_now_freely",
-   "points": 68,
+   "points": 74,
    "comments": 23,
    "author": "nemin",
    "publishedAt": "2026-11-12T12:44:34.403Z",
    "desk": "general",
-   "score": 41
+   "score": 34
   },
   {
-   "id": "0b39e3815f5a",
-   "title": "It Takes 16 Clicks for a Student to Open a PowerPoint on an iPad",
-   "url": "https://reddit.com/r/Teachers/comments/1xuup7a/technology_sucks_it_literally_takes_16_clicks_for",
-   "domain": "reddit.com",
-   "blurb": "",
-   "source": "Hacker News",
-   "discussionUrl": "https://news.ycombinator.com/item?id=50487522",
-   "points": 125,
-   "comments": 59,
-   "author": "BobaFloutist",
-   "publishedAt": "2026-11-13T18:18:37.000Z",
-   "desk": "general",
-   "score": 40
-  },
-  {
-   "id": "66162cadea69",
-   "title": "Brazil's Caixa insurer breach exposes names and tax IDs of all 7.6M customers",
-   "url": "https://filemanager-cdn.mziq.com/published/3972906b-e50b-4f74-ab74-4d0d32125d11/9567a559-d20a-486e-a7ae-5c6bbc030c5e",
-   "domain": "filemanager-cdn.mziq.com",
-   "blurb": "",
-   "source": "Hacker News",
-   "discussionUrl": "https://news.ycombinator.com/item?id=50485295",
-   "points": 150,
-   "comments": 60,
-   "author": "dvaplima",
-   "publishedAt": "2026-11-13T15:52:04.000Z",
-   "desk": "security",
-   "score": 40
-  },
-  {
-   "id": "5b498fce51fa",
-   "title": "Netflix Turns Operational Data Into a Knowledge Graph for AI-Driven Observability",
-   "url": "https://infoq.com/news/2026/11/netflix-ai-driven-observability",
-   "domain": "infoq.com",
-   "blurb": "Netflix is developing an ontology-driven knowledge graph to accelerate production investigations and provide AI agents with a shared understanding of its operational environment. By Craig Risi",
-   "source": "InfoQ",
-   "author": "Craig Risi",
-   "publishedAt": "2026-11-13T12:00:00.000Z",
-   "desk": "ai",
-   "score": 40
-  },
-  {
-   "id": "ea0776201252",
-   "title": "After 600 experiments, here's what I discovered about JEPA world models",
-   "url": "https://haddyalchaer.com/jepa",
-   "domain": "haddyalchaer.com",
-   "blurb": "",
-   "source": "Hacker News",
-   "discussionUrl": "https://news.ycombinator.com/item?id=50487185",
-   "points": 137,
-   "comments": 27,
-   "author": "halcdev",
-   "publishedAt": "2026-11-13T17:55:28.000Z",
-   "desk": "general",
-   "score": 39
-  },
-  {
-   "id": "db329f0ae0f0",
-   "title": "Presentation: The Influence Toolkit",
-   "url": "https://infoq.com/presentations/bbc-software-architecture-influence",
-   "domain": "infoq.com",
-   "blurb": "Henry Wilson shares actionable tools from the BBC Sounds re-architecture to help senior engineering leaders drive technical strategy. He discusses building buy-in, navigating active resistors, using RFCs and ADRs, and balancing tradeoffs - showing that effective software architecture is…",
-   "source": "InfoQ",
-   "author": "Henry Wilson",
-   "publishedAt": "2026-11-13T11:00:00.000Z",
-   "desk": "general",
-   "score": 39
-  },
-  {
-   "id": "843cb0f18134",
-   "title": "The anti-marketing aspect of the Gemini network",
-   "url": "https://ploum.net/2026-11-12-anti-marketing-gemini.html",
-   "domain": "ploum.net",
+   "id": "a2e9d6979e3b",
+   "title": "Beating the frontier on NetHack",
+   "url": "https://antithesis.com/blog/2026/nethack",
+   "domain": "antithesis.com",
    "blurb": "",
    "source": "Lobsters",
-   "discussionUrl": "https://lobste.rs/s/pty8pn/anti_marketing_aspect_gemini_network",
-   "points": 49,
-   "comments": 29,
-   "author": "cgrinds",
-   "publishedAt": "2026-11-12T16:17:25.103Z",
-   "desk": "ai",
-   "score": 38
+   "discussionUrl": "https://lobste.rs/s/kb3fs1/beating_frontier_on_nethack",
+   "points": 31,
+   "comments": 2,
+   "author": "hwayne",
+   "publishedAt": "2026-11-13T14:34:57.818Z",
+   "desk": "general",
+   "score": 33
   }
  ],
  "repos": [
@@ -430,264 +434,308 @@
    "url": "https://github.com/Gathin23/cleanyourtv",
    "description": "Debloat any Android or Google TV over Wi-Fi and get an Apple TV-style home.",
    "language": "Python",
-   "stars": 57379,
-   "forks": 7420,
+   "stars": 57534,
+   "forks": 7444,
    "createdAt": "2026-10-17T08:12:35.000Z",
-   "gain": 1631
+   "gain": 1786
   },
   {
    "name": "storytold/craft-anything",
    "url": "https://github.com/storytold/craft-anything",
    "description": "Craft Anything: understand how any software works, and craft your own.",
    "language": "Rust",
-   "stars": 31331,
-   "forks": 6406,
+   "stars": 31727,
+   "forks": 6502,
    "createdAt": "2026-10-31T14:50:00.000Z",
-   "gain": 5818
+   "gain": 6214
   },
   {
    "name": "deepseek-ai/DeepInfer",
    "url": "https://github.com/deepseek-ai/DeepInfer",
    "description": "DeepInfer: High-performance, large-scale inference framework for DeepSeek models",
    "language": "Python",
-   "stars": 25963,
-   "forks": 3188,
+   "stars": 25987,
+   "forks": 3187,
    "createdAt": "2026-10-16T07:47:23.000Z",
-   "gain": 179
+   "gain": 203
   },
   {
    "name": "deepseek-ai/dsh-superagent-prototype",
    "url": "https://github.com/deepseek-ai/dsh-superagent-prototype",
    "description": "Towards a More Autonomous Agent System",
    "language": "TypeScript",
-   "stars": 23015,
-   "forks": 2801,
+   "stars": 23062,
+   "forks": 2812,
    "createdAt": "2026-10-31T09:32:46.000Z",
-   "gain": 962
+   "gain": 1009
   },
   {
    "name": "ccch1mneyyy/dsh-Go",
    "url": "https://github.com/ccch1mneyyy/dsh-Go",
    "description": "dsh-go — DeepSeek Harness 装进口袋：手机本机运行，也能遥控你的电脑。",
    "language": "Dart",
-   "stars": 21759,
-   "forks": 1006,
+   "stars": 22096,
+   "forks": 1024,
    "createdAt": "2026-10-25T08:09:52.000Z",
-   "gain": 3446
+   "gain": 3783
   },
   {
    "name": "Zagitta/gpu-unlock",
    "url": "https://github.com/Zagitta/gpu-unlock",
    "description": "Your GeForce runs AI at half speed. This fixes it for 20/30/40 series cards. Up to 2× FP16 / BF16 / TF32 tensor throughput",
    "language": "C",
-   "stars": 19203,
-   "forks": 1974,
+   "stars": 19288,
+   "forks": 1988,
    "createdAt": "2026-10-18T01:28:31.000Z",
-   "gain": 719
+   "gain": 804
   },
   {
    "name": "heydamir/unslop",
    "url": "https://github.com/heydamir/unslop",
    "description": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface",
    "language": "JavaScript",
-   "stars": 15611,
-   "forks": 895,
+   "stars": 15775,
+   "forks": 914,
    "createdAt": "2026-10-29T15:41:21.000Z",
-   "gain": 2375
+   "gain": 2539
   },
   {
    "name": "pengchujin/aerial-tv",
    "url": "https://github.com/pengchujin/aerial-tv",
    "description": "给国产电视的一块干净桌面：参照 tvOS 设计的开源 Android TV 桌面，没有广告，开机自动接管。A tvOS-style launcher for Xiaomi, TCL and other China-market TVs.",
    "language": "Kotlin",
-   "stars": 11661,
-   "forks": 1006,
+   "stars": 11718,
+   "forks": 1014,
    "createdAt": "2026-10-20T09:13:06.000Z",
-   "gain": 623
+   "gain": 680
   },
   {
    "name": "amosblomqvist/learnharness",
    "url": "https://github.com/amosblomqvist/learnharness",
    "description": "Agent harness for learning difficult things.",
    "language": "TypeScript",
-   "stars": 9243,
-   "forks": 1227,
+   "stars": 9300,
+   "forks": 1235,
    "createdAt": "2026-10-16T19:35:33.000Z",
-   "gain": 1205
-  },
-  {
-   "name": "zortos293/Lichii",
-   "url": "https://github.com/zortos293/Lichii",
-   "description": "VERY experimental Nintendo Switch 2 emulator",
-   "language": "C++",
-   "stars": 8960,
-   "forks": 1444,
-   "createdAt": "2026-10-31T14:17:26.000Z",
-   "gain": 1050
-  },
-  {
-   "name": "l0ng-ai/openidea",
-   "url": "https://github.com/l0ng-ai/openidea",
-   "description": "The IDE you know, rebuilt in Rust. IntelliJ IDEA–style keymap, tool windows and search-everywhere in a fast native app: editor, code insight, debugger, Git…",
-   "language": "TypeScript",
-   "stars": 8907,
-   "forks": 804,
-   "createdAt": "2026-10-21T12:23:14.000Z",
-   "gain": 560
-  },
-  {
-   "name": "Minireel/HGhub",
-   "url": "https://github.com/Minireel/HGhub",
-   "description": "YellowFruit third-party client",
-   "language": "—",
-   "stars": 8815,
-   "forks": 6433,
-   "createdAt": "2026-11-03T14:04:27.000Z",
-   "gain": 1099
+   "gain": 1262
   },
   {
    "name": "anefzaoui/misterdownloadmanager",
    "url": "https://github.com/anefzaoui/misterdownloadmanager",
    "description": "misterdownloadmanager: The ultimate open-source, clean-room download manager written from scratch in pure Rust for Windows, Mac, and Linux",
    "language": "Rust",
-   "stars": 8779,
-   "forks": 726,
+   "stars": 9154,
+   "forks": 758,
    "createdAt": "2026-10-29T01:25:19.000Z",
    "gain": null
+  },
+  {
+   "name": "zortos293/Lichii",
+   "url": "https://github.com/zortos293/Lichii",
+   "description": "VERY experimental Nintendo Switch 2 emulator",
+   "language": "C++",
+   "stars": 9035,
+   "forks": 1467,
+   "createdAt": "2026-10-31T14:17:26.000Z",
+   "gain": 1125
+  },
+  {
+   "name": "l0ng-ai/openidea",
+   "url": "https://github.com/l0ng-ai/openidea",
+   "description": "The IDE you know, rebuilt in Rust. IntelliJ IDEA–style keymap, tool windows and search-everywhere in a fast native app: editor, code insight, debugger, Git…",
+   "language": "TypeScript",
+   "stars": 8941,
+   "forks": 813,
+   "createdAt": "2026-10-21T12:23:14.000Z",
+   "gain": 594
+  },
+  {
+   "name": "Minireel/HGhub",
+   "url": "https://github.com/Minireel/HGhub",
+   "description": "YellowFruit third-party client",
+   "language": "—",
+   "stars": 8832,
+   "forks": 6552,
+   "createdAt": "2026-11-03T14:04:27.000Z",
+   "gain": 1116
   },
   {
    "name": "wangzan101/Mika",
    "url": "https://github.com/wangzan101/Mika",
    "description": "An on-device AI agent for Android that operates apps and the web to get things done for you.",
    "language": "Kotlin",
-   "stars": 8513,
-   "forks": 1942,
+   "stars": 8551,
+   "forks": 1955,
    "createdAt": "2026-10-29T14:34:07.000Z",
-   "gain": 515
+   "gain": 553
   },
   {
    "name": "janestreet/agent_skills",
    "url": "https://github.com/janestreet/agent_skills",
    "description": "Agent skills",
    "language": "—",
-   "stars": 8216,
-   "forks": 534,
+   "stars": 8366,
+   "forks": 546,
    "createdAt": "2026-11-03T16:50:21.000Z",
    "gain": null
-  },
-  {
-   "name": "xiaoyang111222/cn-math-taxonomy",
-   "url": "https://github.com/xiaoyang111222/cn-math-taxonomy",
-   "description": "数学（小学到高中）、英语（三年级到高中）、初中物理的知识图谱：1644 个知识点、2403 条先修边、6723 道题，对齐课标，附自适应前置诊断。",
-   "language": "Python",
-   "stars": 7951,
-   "forks": 2127,
-   "createdAt": "2026-10-18T09:04:43.000Z",
-   "gain": 571
   },
   {
    "name": "JuneYaooo/rea-video",
    "url": "https://github.com/JuneYaooo/rea-video",
    "description": "Reverse-engineer any video, shot by shot: filmed, AI-generated or coded, and how to remake it. Breakdowns in the open VIDEO.md format. 逆向一切视频，逐个镜头看是拍的、AI…",
    "language": "Python",
-   "stars": 7924,
-   "forks": 1175,
+   "stars": 8133,
+   "forks": 1208,
    "createdAt": "2026-10-29T16:15:01.000Z",
    "gain": null
-  },
-  {
-   "name": "unclebob/ub-mode",
-   "url": "https://github.com/unclebob/ub-mode",
-   "description": "",
-   "language": "—",
-   "stars": 7908,
-   "forks": 452,
-   "createdAt": "2026-10-25T16:04:09.000Z",
-   "gain": 391
   },
   {
    "name": "kingcharleslzy-ai/dsh-purge",
    "url": "https://github.com/kingcharleslzy-ai/dsh-purge",
    "description": "dsh-purge Community · DeepSeek Harness 社区维护版：宿主兼容、状态诊断、提示词管理、更新与本机备份回滚。基于小杨 / YuJunZhiXue 的 dsh-purge。",
    "language": "JavaScript",
-   "stars": 7899,
-   "forks": 3504,
+   "stars": 8048,
+   "forks": 3542,
    "createdAt": "2026-10-16T07:44:27.000Z",
-   "gain": 1493
+   "gain": 1642
+  },
+  {
+   "name": "xiaoyang111222/cn-math-taxonomy",
+   "url": "https://github.com/xiaoyang111222/cn-math-taxonomy",
+   "description": "数学（小学到高中）、英语（三年级到高中）、初中物理的知识图谱：1644 个知识点、2403 条先修边、6723 道题，对齐课标，附自适应前置诊断。",
+   "language": "Python",
+   "stars": 7985,
+   "forks": 2138,
+   "createdAt": "2026-10-18T09:04:43.000Z",
+   "gain": 605
+  },
+  {
+   "name": "unclebob/ub-mode",
+   "url": "https://github.com/unclebob/ub-mode",
+   "description": "",
+   "language": "—",
+   "stars": 7927,
+   "forks": 451,
+   "createdAt": "2026-10-25T16:04:09.000Z",
+   "gain": 410
   },
   {
    "name": "rddmwmddr/android-ad-cleaner",
    "url": "https://github.com/rddmwmddr/android-ad-cleaner",
    "description": "关掉国产安卓手机系统里的广告、热搜、资讯推荐和营销推送。不 root，可还原，支持 AI 智能体一键执行。",
    "language": "Python",
-   "stars": 7817,
-   "forks": 690,
+   "stars": 7913,
+   "forks": 695,
    "createdAt": "2026-10-24T05:35:47.000Z",
-   "gain": 470
+   "gain": 566
   },
   {
    "name": "ly05010419/MacNativeGames",
    "url": "https://github.com/ly05010419/MacNativeGames",
    "description": "Play your own Tears of the Kingdom and Breath of the Wild natively on Apple silicon Mac, iPhone and iPad. Not an emulator: the game's ARM64 code runs…",
    "language": "C",
-   "stars": 7741,
-   "forks": 1154,
+   "stars": 7763,
+   "forks": 1158,
    "createdAt": "2026-10-17T19:52:00.000Z",
-   "gain": 289
+   "gain": 311
   },
   {
    "name": "Jakeschincariol/day-trader-skill",
    "url": "https://github.com/Jakeschincariol/day-trader-skill",
    "description": "11 Claude skills for day trading: scan thousands of charts, track breaking news, time every entry and exit, and replay every outcome before you risk a dollar.",
    "language": "Python",
-   "stars": 7595,
-   "forks": 1831,
+   "stars": 7660,
+   "forks": 1845,
    "createdAt": "2026-10-20T14:17:54.000Z",
-   "gain": 1074
-  },
-  {
-   "name": "patch-gg/pixelfx",
-   "url": "https://github.com/patch-gg/pixelfx",
-   "description": "244 pixel art effects, every one a small piece of code. Plus a Claude Code skill to make your own.",
-   "language": "JavaScript",
-   "stars": 7318,
-   "forks": 949,
-   "createdAt": "2026-10-30T06:43:25.000Z",
-   "gain": 757
+   "gain": 1139
   },
   {
    "name": "huamidev/GestaltX",
    "url": "https://github.com/huamidev/GestaltX",
    "description": "An MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device presets, backups.",
    "language": "Swift",
-   "stars": 7267,
-   "forks": 2594,
+   "stars": 7422,
+   "forks": 2610,
    "createdAt": "2026-11-09T05:15:48.000Z",
    "gain": null
+  },
+  {
+   "name": "patch-gg/pixelfx",
+   "url": "https://github.com/patch-gg/pixelfx",
+   "description": "244 pixel art effects, every one a small piece of code. Plus a Claude Code skill to make your own.",
+   "language": "JavaScript",
+   "stars": 7375,
+   "forks": 955,
+   "createdAt": "2026-10-30T06:43:25.000Z",
+   "gain": 814
   }
  ],
  "advisories": [
   {
-   "id": "GHSA-x585-4vv8-2mh2",
-   "cve": "CVE-2026-100397",
-   "summary": "Rucio: Unauthenticated administrator impersonation through SSH challenge tokens",
-   "severity": "critical",
+   "id": "GHSA-89p3-fcch-88ph",
+   "cve": "CVE-2026-126299",
+   "summary": "NLTK: Quadratic-time CPU denial of service in CCG lexicon parser (fromstring) on wide bracket bodies and operator chains",
+   "severity": "high",
    "packages": [
-    "rucio (pip)"
+    "nltk (pip)"
    ],
-   "url": "https://github.com/advisories/GHSA-x585-4vv8-2mh2",
-   "publishedAt": "2026-11-13T01:09:54.000Z"
+   "url": "https://github.com/advisories/GHSA-89p3-fcch-88ph",
+   "publishedAt": "2026-11-14T00:08:50.000Z"
   },
   {
-   "id": "GHSA-f3w6-w445-fwh9",
-   "cve": "CVE-2026-122006",
-   "summary": "Active Storage: Possible arbitrary file write and read in image analysis",
-   "severity": "critical",
+   "id": "GHSA-r53h-rw34-8h97",
+   "cve": "CVE-2026-126298",
+   "summary": "NLTK: Quadratic-time CPU denial of service in Tree.chomsky_normal_form right-factor binarization via list.pop(0)",
+   "severity": "high",
    "packages": [
-    "activestorage (rubygems)"
+    "nltk (pip)"
    ],
-   "url": "https://github.com/advisories/GHSA-f3w6-w445-fwh9",
-   "publishedAt": "2026-11-12T23:46:51.000Z"
+   "url": "https://github.com/advisories/GHSA-r53h-rw34-8h97",
+   "publishedAt": "2026-11-14T00:07:59.000Z"
+  },
+  {
+   "id": "GHSA-v8f3-6phw-6mh9",
+   "cve": "CVE-2026-126297",
+   "summary": "NLTK: Quadratic-time CPU denial of service in ConllCorpusReader SRL instance builder via nested span rescan",
+   "severity": "high",
+   "packages": [
+    "nltk (pip)"
+   ],
+   "url": "https://github.com/advisories/GHSA-v8f3-6phw-6mh9",
+   "publishedAt": "2026-11-14T00:05:57.000Z"
+  },
+  {
+   "id": "GHSA-qfx6-q44v-9qqw",
+   "cve": "CVE-2026-62297",
+   "summary": "ag-psd can exhaust memory when parsing crafted PSD dimensions",
+   "severity": "high",
+   "packages": [
+    "ag-psd (npm)"
+   ],
+   "url": "https://github.com/advisories/GHSA-qfx6-q44v-9qqw",
+   "publishedAt": "2026-11-13T23:19:38.000Z"
+  },
+  {
+   "id": "GHSA-8fx7-8jr8-84rv",
+   "cve": "CVE-2026-126303",
+   "summary": "NLTK: Unbounded CPU consumption in SteppingRecursiveDescentParser.parse() with ambiguous or self-embedding grammars",
+   "severity": "high",
+   "packages": [
+    "nltk (pip)"
+   ],
+   "url": "https://github.com/advisories/GHSA-8fx7-8jr8-84rv",
+   "publishedAt": "2026-11-13T21:02:19.000Z"
+  },
+  {
+   "id": "GHSA-qg35-44qx-7vrr",
+   "cve": "CVE-2026-126304",
+   "summary": "NLTK: Symlink escape in YCOECorpusReader lets a psd/pos directory symlink read files outside the corpus root within the data sandbox",
+   "severity": "high",
+   "packages": [
+    "nltk (pip)"
+   ],
+   "url": "https://github.com/advisories/GHSA-qg35-44qx-7vrr",
+   "publishedAt": "2026-11-13T20:55:16.000Z"
   },
   {
    "id": "GHSA-vvf4-9x63-8xvv",
@@ -710,50 +758,6 @@
    ],
    "url": "https://github.com/advisories/GHSA-6vhm-j9h7-f9gh",
    "publishedAt": "2026-11-13T19:21:02.000Z"
-  },
-  {
-   "id": "GHSA-gpwp-5797-mjff",
-   "cve": "CVE-2026-128081",
-   "summary": "AutoMapper: Denial of Service via uncontrolled recursion that bypasses MaxDepth",
-   "severity": "high",
-   "packages": [
-    "AutoMapper (nuget)"
-   ],
-   "url": "https://github.com/advisories/GHSA-gpwp-5797-mjff",
-   "publishedAt": "2026-11-13T18:47:17.000Z"
-  },
-  {
-   "id": "GHSA-6655-6qjp-jx7x",
-   "cve": "CVE-2026-126191",
-   "summary": "Soup Sieve: Exponential ReDoS in selector compilation via \\9-run in CSS_ESCAPES/IDENTIFIER",
-   "severity": "high",
-   "packages": [
-    "soupsieve (pip)"
-   ],
-   "url": "https://github.com/advisories/GHSA-6655-6qjp-jx7x",
-   "publishedAt": "2026-11-13T16:39:43.000Z"
-  },
-  {
-   "id": "GHSA-mmhr-3c5m-f64f",
-   "cve": "CVE-2026-126190",
-   "summary": "Soup Sieve: Polynomial-time denial of service in the descendant combinator",
-   "severity": "high",
-   "packages": [
-    "soupsieve (pip)"
-   ],
-   "url": "https://github.com/advisories/GHSA-mmhr-3c5m-f64f",
-   "publishedAt": "2026-11-13T00:49:46.000Z"
-  },
-  {
-   "id": "GHSA-r99w-jh2x-3mg9",
-   "cve": "CVE-2026-128077",
-   "summary": "Nuxt: Incomplete fix for GHSA-9v7c-q64q-vv33: a leading `//` in the request path bypasses `server/middleware` path checks and server route rules on…",
-   "severity": "medium",
-   "packages": [
-    "@nuxt/nitro-server (npm)"
-   ],
-   "url": "https://github.com/advisories/GHSA-r99w-jh2x-3mg9",
-   "publishedAt": "2026-11-13T19:32:21.000Z"
   }
  ],
  "classifieds": [
@@ -1040,6 +1044,16 @@
  ],
  "employers": [
   {
+   "company": "Pure Storage",
+   "roles": 26,
+   "india": 20,
+   "titles": [
+    "Member of Technical Staff 3 - Backend (EXA)",
+    "Member of Technical Staff, Platform Architect",
+    "ServiceNow Platform Support"
+   ]
+  },
+  {
    "company": "Okta",
    "roles": 26,
    "india": 20,
@@ -1067,16 +1081,6 @@
     "Technical Services Engineer",
     "Lead, Technical Services Engineer - Partners",
     "Senior Data Analyst"
-   ]
-  },
-  {
-   "company": "Pure Storage",
-   "roles": 26,
-   "india": 20,
-   "titles": [
-    "Member of Technical Staff 3 - Backend (EXA)",
-    "Member of Technical Staff, Platform Architect",
-    "ServiceNow Platform Support"
    ]
   },
   {
@@ -1122,109 +1126,109 @@
  ],
  "jobsDirect": 883,
  "jobsTotal": 900,
- "jobsNew": 372,
+ "jobsNew": 83,
  "sources": [
   {
    "name": "Ars Technica",
    "ok": true,
    "count": 8,
-   "ms": 421
+   "ms": 268
   },
   {
    "name": "Ashby employer boards (25 of 25)",
    "ok": true,
    "count": 190,
-   "ms": 1607
+   "ms": 1723
   },
   {
    "name": "Cloudflare Blog",
    "ok": true,
    "count": 8,
-   "ms": 250
+   "ms": 201
   },
   {
    "name": "DEV Community",
    "ok": true,
    "count": 20,
-   "ms": 219
+   "ms": 195
   },
   {
    "name": "GitHub advisories",
    "ok": true,
    "count": 8,
-   "ms": 993
+   "ms": 811
   },
   {
    "name": "GitHub repositories",
    "ok": true,
    "count": 24,
-   "ms": 1426
+   "ms": 1470
   },
   {
    "name": "Greenhouse employer boards (55 of 55)",
    "ok": true,
    "count": 634,
-   "ms": 1058
+   "ms": 955
   },
   {
    "name": "Hacker News",
    "ok": true,
    "count": 30,
-   "ms": 1150
+   "ms": 313
   },
   {
    "name": "InfoQ",
    "ok": true,
    "count": 8,
-   "ms": 539
+   "ms": 571
   },
   {
    "name": "Lever employer boards (12 of 12)",
    "ok": true,
    "count": 91,
-   "ms": 14582
+   "ms": 14125
   },
   {
    "name": "Lobsters",
    "ok": true,
    "count": 25,
-   "ms": 369
+   "ms": 193
   },
   {
    "name": "Remote OK",
    "ok": true,
-   "count": 26,
-   "ms": 1083
+   "count": 25,
+   "ms": 949
   },
   {
    "name": "Remotive",
    "ok": true,
    "count": 16,
-   "ms": 770
+   "ms": 635
   },
   {
    "name": "SimplifyJobs New-Grad-Positions",
    "ok": true,
    "count": 70,
-   "ms": 1204
+   "ms": 1183
   },
   {
    "name": "SimplifyJobs Summer2027-Internships",
    "ok": true,
    "count": 70,
-   "ms": 1152
+   "ms": 1135
   },
   {
    "name": "The GitHub Blog",
    "ok": true,
    "count": 8,
-   "ms": 203
+   "ms": 326
   }
  ],
  "briefing": [
-  "Leading this morning’s paper is “LibreOffice actually works 365 days a year”, reported by Hacker News, where it drew 651 points and 214 comments. Close behind: “Elevated errors on claude.ai, Claude Code, and platform.claude.com” from Hacker News.",
-  "On the open source exchange, Gathin23/cleanyourtv sits at the top of the table with 57,379 stars. The biggest mover is storytold/craft-anything, up 5,818 since the last edition.",
-  "8 security advisories made the notices column, 2 of them critical. The situations vacant pages list 900 open roles, 372 new since the last edition."
+  "Leading this morning’s paper is “FAA issues national ground stop – lifted 4.5 hours later”, reported by Hacker News, where it drew 1,496 points and 1,144 comments. Close behind: “Nvidia Allegedly Engineered Scarcity by Funding AI Startups to Buy Its GPUs” from Hacker News.",
+  "On the open source exchange, Gathin23/cleanyourtv sits at the top of the table with 57,534 stars. The biggest mover is storytold/craft-anything, up 6,214 since the last edition.",
+  "8 security advisories made the notices column. The situations vacant pages list 900 open roles, 83 new since the last edition."
  ],
  "briefingBy": "desk"
 }
