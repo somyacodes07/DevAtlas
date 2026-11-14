@@ -1,5 +1,14 @@
 [
  {
+  "id": "2026-11-15-am",
+  "date": "2026-11-15",
+  "slot": "morning",
+  "number": 3,
+  "headline": "Monkey Island: all 13 versions side by side",
+  "stories": 29,
+  "generatedAt": "2026-11-14T18:46:28.445Z"
+ },
+ {
   "id": "2026-11-14-am",
   "date": "2026-11-14",
   "slot": "morning",

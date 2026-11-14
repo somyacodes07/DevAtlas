@@ -1,5 +1,73 @@
 [
  {
+  "title": "Sr Software Engineer I/II, Operational AI",
+  "company": "Samsara",
+  "location": "Remote - US",
+  "mode": "remote",
+  "level": "senior",
+  "region": "remote",
+  "tags": [],
+  "blurb": "",
+  "url": "https://www.samsara.com/company/careers/roles/8223641?gh_jid=8223641",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:samsara",
+  "postedAt": "2026-11-14T17:32:27.000Z",
+  "id": "1bdecbf0ae3f",
+  "firstSeen": "2026-11-14T18:46:28.445Z"
+ },
+ {
+  "title": "Sr Software Engineer I/II, Operational AI",
+  "company": "Samsara",
+  "location": "Remote - Canada",
+  "mode": "remote",
+  "level": "senior",
+  "region": "remote",
+  "tags": [],
+  "blurb": "",
+  "url": "https://www.samsara.com/company/careers/roles/8387609?gh_jid=8387609",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:samsara",
+  "postedAt": "2026-11-14T17:32:25.000Z",
+  "id": "9346bca501b2",
+  "firstSeen": "2026-11-14T18:46:28.445Z"
+ },
+ {
+  "title": "Senior Manager, Software Engineering - AI Developer Productivity (Dev Agents and SRE AI)",
+  "company": "Samsara",
+  "location": "Remote - Canada",
+  "mode": "remote",
+  "level": "senior",
+  "region": "remote",
+  "tags": [],
+  "blurb": "",
+  "url": "https://www.samsara.com/company/careers/roles/8387002?gh_jid=8387002",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:samsara",
+  "postedAt": "2026-11-14T17:29:17.000Z",
+  "id": "c0177c6b77aa",
+  "firstSeen": "2026-11-14T18:46:28.445Z"
+ },
+ {
+  "title": "Senior Manager, Software Engineering - AI Developer Productivity (Dev Agents and SRE AI)",
+  "company": "Samsara",
+  "location": "Remote - US",
+  "mode": "remote",
+  "level": "senior",
+  "region": "remote",
+  "tags": [],
+  "blurb": "",
+  "url": "https://www.samsara.com/company/careers/roles/8374911?gh_jid=8374911",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:samsara",
+  "postedAt": "2026-11-14T17:29:14.000Z",
+  "id": "e5c4a132986a",
+  "firstSeen": "2026-11-14T18:46:28.445Z"
+ },
+ {
   "title": "Staff Machine Learning Engineer - Vision AI",
   "company": "Toast",
   "location": "Remote, US",
@@ -183,6 +251,25 @@
   "firstSeen": "2026-11-14T07:39:26.608Z"
  },
  {
+  "title": "Software Developer Intern - Go/Golang Experience",
+  "company": "SAS",
+  "location": "Cary, NC",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://careers-sas.icims.com/jobs/42797/job?mobile=true&needsRedirect=false",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-14T00:00:00.000Z",
+  "id": "5cfd61750fc6",
+  "firstSeen": "2026-11-14T18:46:28.445Z"
+ },
+ {
   "title": "Analytic Developer",
   "company": "Cone Health",
   "location": "Greensboro, NC",
@@ -295,6 +382,82 @@
   "postedAt": "2026-11-13T23:47:37.000Z",
   "id": "ccd7ee831371",
   "firstSeen": "2026-11-14T07:39:26.608Z"
+ },
+ {
+  "title": "Software Engineering Intern - Technical",
+  "company": "NextEra Energy",
+  "location": "St Paul, MN",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://jobs.nexteraenergy.com/job/Juno-Beach-Summer-Intern-Technical-FL-33408/1450749000/?ats=successfactors",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-13T23:46:04.000Z",
+  "id": "db403adf620c",
+  "firstSeen": "2026-11-14T18:46:28.445Z"
+ },
+ {
+  "title": "GCAN Field Operations Analyst Intern",
+  "company": "W.W. Grainger",
+  "location": "Thornhill, Vaughan, ON, Canada",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "AI/ML/Data"
+  ],
+  "blurb": "",
+  "url": "https://jobs.grainger.com/Canada/job/THORNHILL-GCAN-Field-Operations-Analyst-Intern-ON-L3T-7W8/1450732300/?ats=successfactors",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-13T23:44:18.000Z",
+  "id": "93c49108b73c",
+  "firstSeen": "2026-11-14T18:46:28.445Z"
+ },
+ {
+  "title": "Field Operations Analyst Intern",
+  "company": "W.W. Grainger",
+  "location": "Thornhill, Vaughan, ON, Canada",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "AI/ML/Data"
+  ],
+  "blurb": "",
+  "url": "https://jobs.grainger.com/Canada/job/THORNHILL-Analyste-des-op%C3%A9rations-de-terrain-1-1-ON-L3T-7W8/1450732400/?ats=successfactors",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-13T23:44:17.000Z",
+  "id": "adfcaa32f4eb",
+  "firstSeen": "2026-11-14T18:46:28.445Z"
+ },
+ {
+  "title": "Customer Experience Intern",
+  "company": "W.W. Grainger",
+  "location": "Thornhill, Vaughan, ON, Canada",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "AI/ML/Data"
+  ],
+  "blurb": "",
+  "url": "https://jobs.grainger.com/Canada/job/THORNHILL-GCAN-Customer-Experience-Intern-ON-L3T-7W8/1450621700/?ats=successfactors",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-13T23:44:17.000Z",
+  "id": "ee1aa6d62723",
+  "firstSeen": "2026-11-14T18:46:28.445Z"
  },
  {
   "title": "Software Engineer",
@@ -582,6 +745,25 @@
   "postedAt": "2026-11-13T23:13:43.000Z",
   "id": "1ca75e94e5f5",
   "firstSeen": "2026-11-14T07:39:26.608Z"
+ },
+ {
+  "title": "Software Development Engineer 1",
+  "company": "Huntington Ingalls Industries",
+  "location": "Newport News, VA",
+  "mode": "unspecified",
+  "level": "entry",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://careers.huntingtoningalls.com/job/Newport-News-SOFTWARE-DEVELOPMENT-ENGINEER-1-Virg/1450616800/?ats=successfactors",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:New-Grad-Positions",
+  "postedAt": "2026-11-13T23:09:35.000Z",
+  "id": "ff61066f46ee",
+  "firstSeen": "2026-11-14T18:46:28.445Z"
  },
  {
   "title": "Software Engineer - Applied AI",
@@ -1544,25 +1726,6 @@
   "postedAt": "2026-11-13T15:37:25.000Z",
   "id": "f7836d06284c",
   "firstSeen": "2026-11-14T07:39:26.608Z"
- },
- {
-  "title": "GIS Analyst Intern",
-  "company": "Merrick",
-  "location": "Greenwood Village, CO",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "americas",
-  "tags": [
-   "AI/ML/Data"
-  ],
-  "blurb": "",
-  "url": "https://careers.merrick.com/jobs/8476?icims=1&lang=en-us",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-13T15:35:00.000Z",
-  "id": "79d118bab268",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
  },
  {
   "title": "Data Analyst Intern",
@@ -2722,11 +2885,30 @@
   "firstSeen": "2026-11-14T07:39:26.608Z"
  },
  {
-  "title": "Software Engineer 1 New Grad",
-  "company": "Shield AI",
-  "location": "Washington, DC",
+  "title": "Cyber AI Engineer Intern",
+  "company": "Carnegie Mellon University",
+  "location": "Pittsburgh, PA",
   "mode": "unspecified",
-  "level": "entry",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "AI/ML/Data"
+  ],
+  "blurb": "",
+  "url": "https://cmu.wd115.myworkdayjobs.com/SEI/job/Pittsburgh-PA/Cyber-AI-Engineering-Intern--Spring-2027-_2025346-2",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-13T00:00:00.000Z",
+  "id": "5646ae75de44",
+  "firstSeen": "2026-11-14T18:46:28.445Z"
+ },
+ {
+  "title": "Engineer 1 New Grad - Software",
+  "company": "Shield AI",
+  "location": "Arlington County, Arlington, VA",
+  "mode": "unspecified",
+  "level": "internship",
   "region": "americas",
   "tags": [
    "Software"
@@ -2735,17 +2917,36 @@
   "url": "https://jobs.ashbyhq.com/f7d8749a-72d6-407c-bf98-292ea630c73a/7e0ae8a3-4872-431c-a04a-2f2b8988b527/application?embed=true",
   "via": "SimplifyJobs",
   "direct": true,
-  "board": "simplify:New-Grad-Positions",
+  "board": "simplify:Summer2027-Internships",
   "postedAt": "2026-11-13T00:00:00.000Z",
   "id": "3ae903a69a30",
   "firstSeen": "2026-11-13T20:31:05.952Z"
  },
  {
-  "title": "Software Engineer 1 New Grad",
-  "company": "Shield AI",
-  "location": "Washington, DC",
+  "title": "AI Engineer Intern",
+  "company": "Postman",
+  "location": "SF",
   "mode": "unspecified",
-  "level": "entry",
+  "level": "internship",
+  "region": "other",
+  "tags": [
+   "AI/ML/Data"
+  ],
+  "blurb": "",
+  "url": "https://postman.wd108.myworkdayjobs.com/careers/job/San-Francisco-CA-US/AI-Engineer--Intern_JR1000055",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-13T00:00:00.000Z",
+  "id": "5aaa6af69d6c",
+  "firstSeen": "2026-11-14T18:46:28.445Z"
+ },
+ {
+  "title": "Engineer 1 New Grad - Software",
+  "company": "Shield AI",
+  "location": "Arlington County, Arlington, VA",
+  "mode": "unspecified",
+  "level": "internship",
   "region": "americas",
   "tags": [
    "Software"
@@ -2754,10 +2955,143 @@
   "url": "https://jobs.ashbyhq.com/shield/7e0ae8a3-4872-431c-a04a-2f2b8988b527/application?embed=true",
   "via": "SimplifyJobs",
   "direct": true,
-  "board": "simplify:New-Grad-Positions",
+  "board": "simplify:Summer2027-Internships",
   "postedAt": "2026-11-13T00:00:00.000Z",
   "id": "31a6a36e270d",
   "firstSeen": "2026-11-13T20:31:05.952Z"
+ },
+ {
+  "title": "Technical Solution Engineer Intern - SE&I",
+  "company": "Ciena",
+  "location": "Montreal, QC, Canada; Ottawa, ON, Canada",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://ciena.wd5.myworkdayjobs.com/Careers/job/Ottawa/Technical-Solution-Engineer--Intern---SE-I_R032114",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-13T00:00:00.000Z",
+  "id": "a3ed044765cb",
+  "firstSeen": "2026-11-14T18:46:28.445Z"
+ },
+ {
+  "title": "Software Engineer Intern",
+  "company": "Camping World",
+  "location": "Chicago, IL",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://campingworld.wd5.myworkdayjobs.com/en-US/Jobs/job/Lincolnshire-IL/Software-Engineering-Intern_26_09080",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-13T00:00:00.000Z",
+  "id": "d344ffd38a63",
+  "firstSeen": "2026-11-14T18:46:28.445Z"
+ },
+ {
+  "title": "Data Engineering Intern",
+  "company": "Camping World",
+  "location": "Chicago, IL; Lincolnshire, IL",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "AI/ML/Data"
+  ],
+  "blurb": "",
+  "url": "https://campingworld.wd5.myworkdayjobs.com/en-US/Jobs/job/Chicago-IL/Data-Engineering-Intern_26_09297",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-13T00:00:00.000Z",
+  "id": "05a7863de200",
+  "firstSeen": "2026-11-14T18:46:28.445Z"
+ },
+ {
+  "title": "Data Analyst Intern - AI & Machine Learning Focus",
+  "company": "Camping World",
+  "location": "Chicago, IL; Lincolnshire, IL",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "AI/ML/Data"
+  ],
+  "blurb": "",
+  "url": "https://campingworld.wd5.myworkdayjobs.com/en-US/Jobs/job/Chicago-IL/Data-Analyst-Intern_26_09300",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-13T00:00:00.000Z",
+  "id": "2d0b61cbe4b8",
+  "firstSeen": "2026-11-14T18:46:28.445Z"
+ },
+ {
+  "title": "Software Data Integration Engineer Intern",
+  "company": "Martin Marietta",
+  "location": "Raleigh, NC",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://martinmarietta.wd5.myworkdayjobs.com/Martin_Marietta_Careers/job/Raleigh-NC/Intern--Software-Data-Integration-Engineer_JR024146",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-13T00:00:00.000Z",
+  "id": "dad36b2f1c01",
+  "firstSeen": "2026-11-14T18:46:28.445Z"
+ },
+ {
+  "title": "Data Scientist Intern",
+  "company": "Martin Marietta",
+  "location": "Raleigh, NC",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "AI/ML/Data"
+  ],
+  "blurb": "",
+  "url": "https://martinmarietta.wd5.myworkdayjobs.com/Martin_Marietta_Careers/job/Raleigh-NC/Intern--Data-Scientist_JR024144-1",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-13T00:00:00.000Z",
+  "id": "dbe19b292f54",
+  "firstSeen": "2026-11-14T18:46:28.445Z"
+ },
+ {
+  "title": "IT Developer Analyst Intern",
+  "company": "Daimler Truck",
+  "location": "Mt Holly, NC",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://dtna.wd5.myworkdayjobs.com/dtna_affiliate/job/Mount-Holly-NC-US/IT-Developer-Analyst-Intern_DT-20681-1",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-13T00:00:00.000Z",
+  "id": "7ff1468ea959",
+  "firstSeen": "2026-11-14T18:46:28.445Z"
  },
  {
   "title": "Software Engineer - Block Storage",
@@ -3102,6 +3436,63 @@
   "firstSeen": "2026-11-14T07:39:26.608Z"
  },
  {
+  "title": "Web Developer - Web Development - Information Technology",
+  "company": "Fort Bend County",
+  "location": "Richmond, TX",
+  "mode": "unspecified",
+  "level": "entry",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://fortbendcountytx.wd5.myworkdayjobs.com/externalcareers/job/Richmond-TX/Temporary-Position---Web-Development---Information-Technology_JR1694-11-26",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:New-Grad-Positions",
+  "postedAt": "2026-11-13T00:00:00.000Z",
+  "id": "0e056124eaea",
+  "firstSeen": "2026-11-14T18:46:28.445Z"
+ },
+ {
+  "title": "Application Programmer/Analyst",
+  "company": "Memorial Hermann",
+  "location": "United States",
+  "mode": "unspecified",
+  "level": "entry",
+  "region": "other",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://memorialhermann.wd5.myworkdayjobs.com/external/job/Medical-Plaza-North/Application-Programmer-Analyst_100189268",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:New-Grad-Positions",
+  "postedAt": "2026-11-13T00:00:00.000Z",
+  "id": "bbaa15cf70f4",
+  "firstSeen": "2026-11-14T18:46:28.445Z"
+ },
+ {
+  "title": "Information Technology Rotational Development Program",
+  "company": "Everest",
+  "location": "Warren, NJ",
+  "mode": "unspecified",
+  "level": "entry",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://everestre.wd5.myworkdayjobs.com/careers/job/Warren-NJ/XMLNAME-2026-Underwriting-Rotational-Development-Program_R6900",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:New-Grad-Positions",
+  "postedAt": "2026-11-13T00:00:00.000Z",
+  "id": "85e3f5cd33c3",
+  "firstSeen": "2026-11-14T18:46:28.445Z"
+ },
+ {
   "title": "Associate – Application Development",
   "company": "L3Harris Technologies",
   "location": "Melbourne, FL",
@@ -3119,6 +3510,25 @@
   "postedAt": "2026-11-12T23:52:00.000Z",
   "id": "e1e182b0b270",
   "firstSeen": "2026-11-13T20:31:05.952Z"
+ },
+ {
+  "title": "IT OT Software Engineer Intern",
+  "company": "Cintas",
+  "location": "Mason, OH",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://careers.cintas.com/job/Mason-IT-Intern-OT-Software-Engineer-OH-45040/1450367200/?ats=successfactors",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-12T23:42:44.000Z",
+  "id": "84aa62ed67f5",
+  "firstSeen": "2026-11-14T18:46:28.445Z"
  },
  {
   "title": "Machine Learning Engineer Intern",
@@ -3453,25 +3863,6 @@
   "board": "greenhouse:databricks",
   "postedAt": "2026-11-12T22:21:58.000Z",
   "id": "b6f8e19015fe",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "AI Rapid Prototype Developer Level 1",
-  "company": "ARCXIS",
-  "location": "Houston, TX",
-  "mode": "unspecified",
-  "level": "entry",
-  "region": "americas",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4661286",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:New-Grad-Positions",
-  "postedAt": "2026-11-12T22:19:26.000Z",
-  "id": "30efb379181d",
   "firstSeen": "2026-11-13T20:31:05.952Z"
  },
  {
@@ -4790,101 +5181,6 @@
   "firstSeen": "2026-11-13T20:31:05.952Z"
  },
  {
-  "title": "Software Engineer Intern - TikTok Search",
-  "company": "TikTok",
-  "location": "San Jose, CA",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "americas",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://lifeattiktok.com/search/7704696088079010053",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-12T07:57:11.000Z",
-  "id": "c390103306de",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Framebuffer Driver Engineer Intern",
-  "company": "Apple",
-  "location": "London, UK",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "europe",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://jobs.apple.com/en-us/details/200694489",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-12T07:28:25.000Z",
-  "id": "90bad7310608",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Camera Software Intern",
-  "company": "Apple",
-  "location": "Cambridge, UK",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "europe",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://jobs.apple.com/en-us/details/200694477",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-12T07:28:24.000Z",
-  "id": "c9b2db40c3b4",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Creative Engineering Intern",
-  "company": "Bask Health",
-  "location": "Remote in USA",
-  "mode": "remote",
-  "level": "internship",
-  "region": "remote",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://apply.workable.com/bask-health-1/j/24DD93E3BA/apply",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-12T07:12:04.000Z",
-  "id": "1c61494330c5",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Frontend Engineer Intern - Frontend Engineering",
-  "company": "Bask Health",
-  "location": "Remote in USA",
-  "mode": "remote",
-  "level": "internship",
-  "region": "remote",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://apply.workable.com/bask-health-1/j/9C2964C7CD/apply",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-12T07:12:04.000Z",
-  "id": "c86556237fc9",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
   "title": "Frontend Engineer New Grad",
   "company": "Bask Health",
   "location": "Remote in USA",
@@ -5118,25 +5414,6 @@
   "firstSeen": "2026-11-13T20:31:05.952Z"
  },
  {
-  "title": "Research Scientist Intern",
-  "company": "Meta",
-  "location": "Menlo Park, CA",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "americas",
-  "tags": [
-   "AI/ML/Data"
-  ],
-  "blurb": "",
-  "url": "https://www.metacareers.com/jobs/2690374264750493",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-12T02:18:59.000Z",
-  "id": "bbd33cd46039",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
   "title": "Engineering Manager, Quality & Developer Experience - LUS",
   "company": "Lyft",
   "location": "Montreal, Canada",
@@ -5210,196 +5487,6 @@
   "firstSeen": "2026-11-13T20:31:05.952Z"
  },
  {
-  "title": "Research Intern",
-  "company": "Rhoda AI",
-  "location": "Mountain View, CA",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "americas",
-  "tags": [
-   "AI/ML/Data"
-  ],
-  "blurb": "",
-  "url": "https://jobs.ashbyhq.com/rhoda-ai/20056166-79de-420b-8569-d0b15ee83599/application?embed=true",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-12T00:00:00.000Z",
-  "id": "1b489b0fa6d1",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "AI & Digitalisation Intern",
-  "company": "Roche",
-  "location": "Welwyn, UK",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "europe",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://roche.wd3.myworkdayjobs.com/roche-ext/job/Welwyn/AI---Digitalisation-Intern-Graduate-PSD_202610-127162",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-12T00:00:00.000Z",
-  "id": "c8edf45068e9",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Contract Operations Intern - Analytics",
-  "company": "Vizient",
-  "location": "Irving, TX",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "americas",
-  "tags": [
-   "AI/ML/Data"
-  ],
-  "blurb": "",
-  "url": "https://vizient.wd1.myworkdayjobs.com/Vizient_Careers/job/Chicago-IL-60607/XMLNAME-2027-Summer-Internship---Contract-Operations---Analytics_36238R-1",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-12T00:00:00.000Z",
-  "id": "8e5ade3d7d7d",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Software Engineer Intern",
-  "company": "Visa",
-  "location": "London, UK",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "europe",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://visa.wd5.myworkdayjobs.com/Visa_Early_Careers/job/GB---London-United-Kingdom/Software-Engineer-Intern_REF090469W",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-12T00:00:00.000Z",
-  "id": "ed87c474e8f9",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Software Engineer Intern",
-  "company": "Visa",
-  "location": "Reading, UK",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "europe",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://visa.wd5.myworkdayjobs.com/Visa/job/GB---Reading-United-Kingdom/Software-Engineer-Intern_REF090466W",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-12T00:00:00.000Z",
-  "id": "bc373fc95c8e",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Software Engineer Intern",
-  "company": "Visa",
-  "location": "Cambridge, UK",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "europe",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://visa.wd5.myworkdayjobs.com/Visa_Early_Careers/job/GB---Cambridge-United-Kingdom/Software-Engineer-Intern_REF090467W",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-12T00:00:00.000Z",
-  "id": "6bf166b50d72",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Software Engineer Intern",
-  "company": "Visa",
-  "location": "Reading, UK",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "europe",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://visa.wd5.myworkdayjobs.com/Visa_Early_Careers/job/GB---Reading-United-Kingdom/Software-Engineer-Intern_REF090466W-2",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-12T00:00:00.000Z",
-  "id": "3632e1c38c1b",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Software Engineer Intern",
-  "company": "Visa",
-  "location": "Cambridge, UK",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "europe",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://visa.wd5.myworkdayjobs.com/Visa/job/GB---Cambridge-United-Kingdom/Software-Engineer-Intern_REF090467W-1",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-12T00:00:00.000Z",
-  "id": "00c1cea27a72",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Software Engineer Intern",
-  "company": "Visa",
-  "location": "London, UK",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "europe",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://visa.wd5.myworkdayjobs.com/Visa/job/GB---London-United-Kingdom/Software-Engineer-Intern_REF090469W-1",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-12T00:00:00.000Z",
-  "id": "d8306512b1e8",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Student Intern - Data Science",
-  "company": "Capital Power",
-  "location": "Edmonton, AB, Canada",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "americas",
-  "tags": [
-   "AI/ML/Data"
-  ],
-  "blurb": "",
-  "url": "https://capitalpower.wd10.myworkdayjobs.com/External/job/Edmonton-AB/Summer-Student---Data-Science_JR807223-1",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-12T00:00:00.000Z",
-  "id": "b20ebe65583f",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
   "title": "Software Engineer 1",
   "company": "Sierra Nevada Corporation",
   "location": "Lone Tree, CO",
@@ -5454,25 +5541,6 @@
   "board": "simplify:New-Grad-Positions",
   "postedAt": "2026-11-12T00:00:00.000Z",
   "id": "9bcdcb07c6f3",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Data Scientist 1",
-  "company": "Truist Bank",
-  "location": "Atlanta, GA",
-  "mode": "unspecified",
-  "level": "entry",
-  "region": "americas",
-  "tags": [
-   "AI/ML/Data"
-  ],
-  "blurb": "",
-  "url": "https://truist.wd1.myworkdayjobs.com/en-US/Careers/job/Atlanta-GA/Data-Scientist-I_R0119840",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:New-Grad-Positions",
-  "postedAt": "2026-11-12T00:00:00.000Z",
-  "id": "27c17b25e8c8",
   "firstSeen": "2026-11-13T20:31:05.952Z"
  },
  {
@@ -6399,23 +6467,6 @@
   "firstSeen": "2026-11-13T20:31:05.952Z"
  },
  {
-  "title": "Manager II, Software Engineering",
-  "company": "Samsara",
-  "location": "San Francisco - SF9",
-  "mode": "unspecified",
-  "level": "senior",
-  "region": "other",
-  "tags": [],
-  "blurb": "",
-  "url": "https://www.samsara.com/company/careers/roles/8180693?gh_jid=8180693",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:samsara",
-  "postedAt": "2026-11-10T20:17:34.000Z",
-  "id": "3754c16aeea5",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
   "title": "Sr. Security Analyst, Third Party Risk Management",
   "company": "xAI",
   "location": "Austin, TX; New York, NY; Palo Alto, CA; Washington, DC",
@@ -6430,23 +6481,6 @@
   "board": "greenhouse:xai",
   "postedAt": "2026-11-10T20:15:42.000Z",
   "id": "2f4ea1a36e9e",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Electrical Engineering Co-Op",
-  "company": "Samsara",
-  "location": "San Francisco - SF9",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "other",
-  "tags": [],
-  "blurb": "",
-  "url": "https://www.samsara.com/company/careers/roles/8226608?gh_jid=8226608",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:samsara",
-  "postedAt": "2026-11-10T20:15:35.000Z",
-  "id": "80b4652d1085",
   "firstSeen": "2026-11-13T20:31:05.952Z"
  },
  {
@@ -7873,23 +7907,6 @@
   "firstSeen": "2026-11-10T09:59:31.843Z"
  },
  {
-  "title": "Sr. Firmware Engineer II",
-  "company": "Samsara",
-  "location": "Remote - US",
-  "mode": "remote",
-  "level": "senior",
-  "region": "remote",
-  "tags": [],
-  "blurb": "",
-  "url": "https://www.samsara.com/company/careers/roles/8289005?gh_jid=8289005",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:samsara",
-  "postedAt": "2026-11-06T21:58:47.000Z",
-  "id": "6098551b50bb",
-  "firstSeen": "2026-11-10T09:59:31.843Z"
- },
- {
   "title": "FinOps Engineer III",
   "company": "ZoomInfo",
   "location": "Remote - Canada; Remote-Ireland",
@@ -7957,23 +7974,6 @@
   "board": "greenhouse:coinbase",
   "postedAt": "2026-11-06T21:01:16.000Z",
   "id": "c9b7041c4b46",
-  "firstSeen": "2026-11-10T09:59:31.843Z"
- },
- {
-  "title": "Lead Design Engineer",
-  "company": "Samsara",
-  "location": "Remote - Canada",
-  "mode": "remote",
-  "level": "senior",
-  "region": "remote",
-  "tags": [],
-  "blurb": "",
-  "url": "https://www.samsara.com/company/careers/roles/8359997?gh_jid=8359997",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:samsara",
-  "postedAt": "2026-11-06T19:16:52.000Z",
-  "id": "b909e5cb072f",
   "firstSeen": "2026-11-10T09:59:31.843Z"
  },
  {
