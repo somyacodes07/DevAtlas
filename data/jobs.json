@@ -1,5 +1,59 @@
 [
  {
+  "title": "Staff Software Engineer (App-Framework)",
+  "company": "Databricks",
+  "location": "Bengaluru, India",
+  "mode": "unspecified",
+  "level": "staff",
+  "region": "india",
+  "tags": [],
+  "blurb": "",
+  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8944097002",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:databricks",
+  "postedAt": "2026-11-15T04:36:01.000Z",
+  "id": "bd731ae20a1a",
+  "firstSeen": "2026-11-15T07:55:52.970Z"
+ },
+ {
+  "title": "Member of Technical Staff (AI Software Engineer, Agent Engine)",
+  "company": "Perplexity",
+  "location": "San Francisco, United States",
+  "mode": "unspecified",
+  "level": "staff",
+  "region": "other",
+  "salary": "$250K – $405K • Offers Equity",
+  "tags": [
+   "AI Research & Systems"
+  ],
+  "blurb": "Perplexity is seeking energetic engineers to join our highly driven Agent Engine team. The Agent Engine team designs and builds powerful agentic…",
+  "url": "https://jobs.ashbyhq.com/Perplexity/10a51134-6741-40ec-8cca-a8ac1534673b",
+  "via": "Ashby",
+  "direct": true,
+  "board": "ashby:perplexity",
+  "postedAt": "2026-11-15T01:03:15.716Z",
+  "id": "3c43f29af35b",
+  "firstSeen": "2026-11-15T07:55:52.970Z"
+ },
+ {
+  "title": "Engineering Manager, Billing Platform",
+  "company": "Anthropic",
+  "location": "San Francisco, CA | New York City, NY | Seattle, WA",
+  "mode": "unspecified",
+  "level": "senior",
+  "region": "americas",
+  "tags": [],
+  "blurb": "",
+  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5469291008",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:anthropic",
+  "postedAt": "2026-11-14T20:19:44.000Z",
+  "id": "c594ed78b9a9",
+  "firstSeen": "2026-11-15T07:55:52.970Z"
+ },
+ {
   "title": "Sr Software Engineer I/II, Operational AI",
   "company": "Samsara",
   "location": "Remote - US",
@@ -268,6 +322,44 @@
   "postedAt": "2026-11-14T00:00:00.000Z",
   "id": "5cfd61750fc6",
   "firstSeen": "2026-11-14T18:46:28.445Z"
+ },
+ {
+  "title": "Road Count Taker",
+  "company": "Uhaul",
+  "location": "Louisville, KY",
+  "mode": "unspecified",
+  "level": "entry",
+  "region": "americas",
+  "tags": [
+   "AI/ML/Data"
+  ],
+  "blurb": "",
+  "url": "https://uhaul.wd1.myworkdayjobs.com/UhaulJobs/job/Louisville-Kentucky/Road-Count-Taker_R259638",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:New-Grad-Positions",
+  "postedAt": "2026-11-14T00:00:00.000Z",
+  "id": "6282bb6890e0",
+  "firstSeen": "2026-11-15T07:55:52.970Z"
+ },
+ {
+  "title": "Deep Learning Framework Communications Engineer New Grad",
+  "company": "NVIDIA",
+  "location": "United States",
+  "mode": "unspecified",
+  "level": "entry",
+  "region": "other",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Deep-Learning-Framework-Communications-Engineer---New-College-Grad-2026_JR2026129-1",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:New-Grad-Positions",
+  "postedAt": "2026-11-14T00:00:00.000Z",
+  "id": "6b0d9a463af8",
+  "firstSeen": "2026-11-15T07:55:52.970Z"
  },
  {
   "title": "Analytic Developer",
@@ -3094,6 +3186,44 @@
   "firstSeen": "2026-11-14T18:46:28.445Z"
  },
  {
+  "title": "Healthcare Analytics Intern",
+  "company": "Cigna Group",
+  "location": "Morris Plains, NJ",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "AI/ML/Data"
+  ],
+  "blurb": "",
+  "url": "https://cigna.wd5.myworkdayjobs.com/cignacareers/job/Morris-Plains-NJ/Healthcare-Analytics-Summer-Intern---Start-Date--May-24--2027_26009857",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-13T00:00:00.000Z",
+  "id": "212953d8ccf2",
+  "firstSeen": "2026-11-15T07:55:52.970Z"
+ },
+ {
+  "title": "Software Engineering Co-op",
+  "company": "RTX",
+  "location": "Richardson, TX",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-TX-RICHARDSON-C17--1717-Cityline-Dr--CITYLINE-C17/Software-Engineering-Co-op--Summer-Fall-_01884404",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-13T00:00:00.000Z",
+  "id": "cb6d397963b5",
+  "firstSeen": "2026-11-15T07:55:52.970Z"
+ },
+ {
   "title": "Software Engineer - Block Storage",
   "company": "Hewlett Packard Enterprise",
   "location": "Bristol, UK",
@@ -3493,6 +3623,25 @@
   "firstSeen": "2026-11-14T18:46:28.445Z"
  },
  {
+  "title": "Nextgen Software Engineer New Grad",
+  "company": "Johnson Controls",
+  "location": "Milwaukee, WI; Westford, MA",
+  "mode": "unspecified",
+  "level": "entry",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://jci.wd5.myworkdayjobs.com/JCI_Confidential/job/Glendale-Wisconsin-United-States-of-America/NextGen-Software-Engineer_WD30279373-2",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:New-Grad-Positions",
+  "postedAt": "2026-11-13T00:00:00.000Z",
+  "id": "d49d64425d76",
+  "firstSeen": "2026-11-15T07:55:52.970Z"
+ },
+ {
   "title": "Associate – Application Development",
   "company": "L3Harris Technologies",
   "location": "Melbourne, FL",
@@ -3586,26 +3735,6 @@
   "board": "ashby:openai",
   "postedAt": "2026-11-12T23:34:19.208Z",
   "id": "b8586c45e3ec",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Lead Product Designer, Growth (Mobile)",
-  "company": "Perplexity",
-  "location": "San Francisco, United States",
-  "mode": "remote",
-  "level": "senior",
-  "region": "remote",
-  "salary": "$200K – $260K",
-  "tags": [
-   "Design"
-  ],
-  "blurb": "In 2026, we launched Computer, the defining product for the new era of agentic AI. We’ve scaled beyond the millions of people using Perplexity every…",
-  "url": "https://jobs.ashbyhq.com/Perplexity/14a45e74-9cde-4622-8172-1b6968810802",
-  "via": "Ashby",
-  "direct": true,
-  "board": "ashby:perplexity",
-  "postedAt": "2026-11-12T23:29:47.575Z",
-  "id": "e0461ee52eb8",
   "firstSeen": "2026-11-13T20:31:05.952Z"
  },
  {
@@ -5020,44 +5149,6 @@
   "firstSeen": "2026-11-13T20:31:05.952Z"
  },
  {
-  "title": "Research Scientist Intern - Audio",
-  "company": "Meta",
-  "location": "Cambridge, UK",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "europe",
-  "tags": [
-   "AI/ML/Data"
-  ],
-  "blurb": "",
-  "url": "https://www.metacareers.com/jobs/1382697917119311",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-12T10:31:02.000Z",
-  "id": "7634dfc4825b",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Data Scientist Intern - CoreAI",
-  "company": "Microsoft",
-  "location": "Redmond, WA",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "americas",
-  "tags": [
-   "AI/ML/Data"
-  ],
-  "blurb": "",
-  "url": "https://apply.careers.microsoft.com/careers/job/1970393557027390",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-12T10:20:46.000Z",
-  "id": "7128d322dbdd",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
   "title": "Member of Technical Staff, Platform Architect",
   "company": "Pure Storage",
   "location": "Bangalore, India",
@@ -5484,63 +5575,6 @@
   "board": "ashby:harvey",
   "postedAt": "2026-11-12T00:40:04.017Z",
   "id": "7aaa07a4da01",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Software Engineer 1",
-  "company": "Sierra Nevada Corporation",
-  "location": "Lone Tree, CO",
-  "mode": "unspecified",
-  "level": "entry",
-  "region": "americas",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://snc.wd1.myworkdayjobs.com/snc_external_career_site/job/Lone-Tree-CO/Software-Engineer-I--For-2026-Interns-Only-_R0031346",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:New-Grad-Positions",
-  "postedAt": "2026-11-12T00:00:00.000Z",
-  "id": "17cacdfb9837",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Data Analyst - Transplant Nephrology",
-  "company": "Wash U",
-  "location": "Remote in USA",
-  "mode": "remote",
-  "level": "entry",
-  "region": "remote",
-  "tags": [
-   "AI/ML/Data"
-  ],
-  "blurb": "",
-  "url": "https://wustl.wd1.myworkdayjobs.com/external/job/Remote/Data-Analyst--PRN-Remote----Transplant-Nephrology_JR98521",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:New-Grad-Positions",
-  "postedAt": "2026-11-12T00:00:00.000Z",
-  "id": "43e6e1031610",
-  "firstSeen": "2026-11-14T07:39:26.608Z"
- },
- {
-  "title": "Associate Database Engineer",
-  "company": "CDK Global",
-  "location": "Austin, TX",
-  "mode": "unspecified",
-  "level": "entry",
-  "region": "americas",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://cdk.wd1.myworkdayjobs.com/en-US/CDK/job/Austin-TX-USA/Associate-Database-Engineer_JR9386",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:New-Grad-Positions",
-  "postedAt": "2026-11-12T00:00:00.000Z",
-  "id": "9bcdcb07c6f3",
   "firstSeen": "2026-11-13T20:31:05.952Z"
  },
  {
@@ -6521,23 +6555,6 @@
   "board": "ashby:vanta",
   "postedAt": "2026-11-10T20:07:58.310Z",
   "id": "b96e2553bf9b",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Security Engineer, RF and Technical Surveillance Countermeasures",
-  "company": "Anthropic",
-  "location": "San Francisco, CA | New York City, NY",
-  "mode": "unspecified",
-  "level": "mid",
-  "region": "americas",
-  "tags": [],
-  "blurb": "",
-  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5476579008",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:anthropic",
-  "postedAt": "2026-11-10T19:30:58.000Z",
-  "id": "0022fb2e1672",
   "firstSeen": "2026-11-13T20:31:05.952Z"
  },
  {
@@ -14289,23 +14306,6 @@
   "board": "greenhouse:twilio",
   "postedAt": "2026-06-16T07:38:10.000Z",
   "id": "a0b44d85f8c6",
-  "firstSeen": "2026-11-10T09:59:31.843Z"
- },
- {
-  "title": "Specialist Solutions Architect - AI/ML",
-  "company": "Databricks",
-  "location": "Mumbai, India",
-  "mode": "unspecified",
-  "level": "staff",
-  "region": "india",
-  "tags": [],
-  "blurb": "",
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8593505002",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:databricks",
-  "postedAt": "2026-06-16T05:58:24.000Z",
-  "id": "1430ced18682",
   "firstSeen": "2026-11-10T09:59:31.843Z"
  },
  {

@@ -3,54 +3,38 @@
  "date": "2026-11-15",
  "slot": "morning",
  "number": 3,
- "generatedAt": "2026-11-14T18:46:28.445Z",
+ "generatedAt": "2026-11-15T07:55:52.970Z",
  "lead": {
-  "id": "a33801e4ff46",
-  "title": "Monkey Island: all 13 versions side by side",
-  "url": "https://monkeyisland.pages.dev/",
-  "domain": "monkeyisland.pages.dev",
-  "blurb": "Every version of The Secret of Monkey Island (1990) side by side: Hercules, CGA, EGA, VGA, Amiga, Atari ST, Macintosh, FM Towns and Sega CD. 8 editions, 13 display modes, the same 12 scenes.",
+  "id": "8605b79324d8",
+  "title": "SpaceX catches the Starship to end Flight 15",
+  "url": "https://spacex.com/launches/starship-flight-15",
+  "domain": "spacex.com",
+  "blurb": "https://x.com/SpaceX/status/2121316300702056595 https://youtu.be/jHlpfNSpBmw?t=3233",
   "source": "Hacker News",
-  "discussionUrl": "https://news.ycombinator.com/item?id=50493904",
-  "points": 378,
-  "comments": 131,
-  "author": "maximilianburke",
-  "publishedAt": "2026-11-14T04:23:30.000Z",
+  "discussionUrl": "https://news.ycombinator.com/item?id=50500963",
+  "points": 1101,
+  "comments": 725,
+  "author": "ls612",
+  "publishedAt": "2026-11-14T21:22:24.000Z",
   "desk": "general",
-  "score": 54,
-  "image": "https://monkeyisland.pages.dev/og-image.jpg"
+  "score": 80,
+  "image": "https://www.spacex.com/assets/images/share.jpg"
  },
  "stories": [
   {
-   "id": "07afec2ab7fa",
-   "title": "Tech Companies Are Trying to Shift the Concept of Privacy (Again)",
-   "url": "https://eff.org/deeplinks/2026/11/tech-companies-are-trying-shift-entire-concept-privacy-again",
-   "domain": "eff.org",
-   "blurb": "Privacy, which companies were once happy to claim was all about personal choice, is now primed to affect everyone around you even more than it already did.Meta and Google’s smart glasses can record anything the owner is looking at or use artificial intelligence to describe it. Apple’s* Audio...",
-   "source": "Hacker News",
-   "discussionUrl": "https://news.ycombinator.com/item?id=50496602",
-   "points": 274,
-   "comments": 107,
-   "author": "gslin",
-   "publishedAt": "2026-11-14T12:45:45.000Z",
-   "desk": "general",
-   "score": 53,
-   "image": "https://www.eff.org/files/banner_library/mobile-privacy.png"
-  },
-  {
-   "id": "b7d03a16b424",
-   "title": "Italy fines Meta $887M over Android users' data access",
-   "url": "https://reuters.com/world/italy-fines-meta-887-million-over-android-users-data-access-2026-11-14",
-   "domain": "reuters.com",
+   "id": "0364257ac690",
+   "title": "Lovable apps expose passport details and more than 200K private messages",
+   "url": "https://crissyfield.de/research/lovable-en",
+   "domain": "crissyfield.de",
    "blurb": "",
    "source": "Hacker News",
-   "discussionUrl": "https://news.ycombinator.com/item?id=50497009",
-   "points": 176,
-   "comments": 98,
-   "author": "giuliomagnifico",
-   "publishedAt": "2026-11-14T13:48:06.000Z",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50499017",
+   "points": 770,
+   "comments": 305,
+   "author": "armcat",
+   "publishedAt": "2026-11-14T17:43:10.000Z",
    "desk": "general",
-   "score": 44
+   "score": 74
   },
   {
    "id": "fbb4c2fd353e",
@@ -60,30 +44,100 @@
    "blurb": "KDE: The Documentary tells the story of the pioneering open source community that gave computer users a free and open alternative to proprietary desktops like Windows. The story starts in 1996, whe...",
    "source": "Hacker News",
    "discussionUrl": "https://news.ycombinator.com/item?id=50496976",
-   "points": 202,
-   "comments": 35,
+   "points": 445,
+   "comments": 97,
    "author": "mrkn1",
    "publishedAt": "2026-11-14T13:43:28.000Z",
    "desk": "general",
-   "score": 44,
+   "score": 53,
    "image": "https://tube.kockatoo.org/lazy-static/thumbnails/02935b80-28d9-4fd7-bc33-9d0cb76f2e80.webp"
   },
   {
-   "id": "b26717d449a4",
-   "title": "Nvidia allegedly engineered scarcity by funding AI startups to buy its GPUs",
-   "url": "https://techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus",
-   "domain": "techpowerup.com",
-   "blurb": "Following the departure of now-former NVIDIA CEO, Jensen Huang, a new report by The Wall Street Journal (via Wccftech) has emerged alleging that NVIDIA artificially inflated the ongoing GPU and memory shortage by investing in AI startups that would go on to buy NVIDIA GPUs and build data centers....",
+   "id": "0981be9212e1",
+   "title": "A family tree of software job titles",
+   "url": "https://zwischenzugs.com/2026/11/03/a-family-tree-of-software-job-titles",
+   "domain": "zwischenzugs.com",
+   "blurb": "",
    "source": "Hacker News",
-   "discussionUrl": "https://news.ycombinator.com/item?id=50493251",
-   "points": 967,
-   "comments": 583,
-   "author": "speckx",
-   "publishedAt": "2026-11-14T02:52:59.000Z",
-   "desk": "ai",
-   "score": 40,
-   "carried": true,
-   "image": "https://www.techpowerup.com/img/ooCln2q3jkKNGHen.jpg"
+   "discussionUrl": "https://news.ycombinator.com/item?id=50499038",
+   "points": 281,
+   "comments": 139,
+   "author": "umerf",
+   "publishedAt": "2026-11-14T17:45:19.000Z",
+   "desk": "general",
+   "score": 47
+  },
+  {
+   "id": "aa6457d959ee",
+   "title": "Cloudflare Introduces Private Origins for Application Services",
+   "url": "https://infoq.com/news/2026/11/cloudflare-private-origins",
+   "domain": "infoq.com",
+   "blurb": "Cloudflare recently made Application Services for Private Origins generally available, allowing public traffic to reach applications hosted on private networks without exposing their IP addresses or opening inbound firewall ports. Private-to-private connectivity is not yet supported. By Renato Losio",
+   "source": "InfoQ",
+   "author": "Renato Losio",
+   "publishedAt": "2026-11-15T06:18:00.000Z",
+   "desk": "general",
+   "score": 46,
+   "image": "https://res.infoq.com/news/2026/11/cloudflare-private-origins/en/headerimage/generatedHeaderImage-1793395278236.jpg"
+  },
+  {
+   "id": "095d34482a5f",
+   "title": "We're Asking an Appeals Court to Require a Warrant for ALPR Searches",
+   "url": "https://eff.org/deeplinks/2026/11/were-asking-appeals-court-require-warrant-alpr-searches",
+   "domain": "eff.org",
+   "blurb": "Automated license plate readers are simply not comparable to observing an individual license plate on a passing car. As we’ve explained in many amicus briefs and in our lawsuits directly challenging their use, ALPRs give law enforcement “a virtual time machine to view suspects’, or anyone else’s…",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50503255",
+   "points": 200,
+   "comments": 54,
+   "author": "nobody9999",
+   "publishedAt": "2026-11-15T02:00:54.000Z",
+   "desk": "general",
+   "score": 44,
+   "image": "https://www.eff.org/files/banner_library/siren_v._san_jose.png"
+  },
+  {
+   "id": "1750531ffda9",
+   "title": "Cohere Finding Shows Self-Hosted Open-Weight Models Still Need Egress Controls",
+   "url": "https://infoq.com/news/2026/11/cohere-open-weight-egress-risk",
+   "domain": "infoq.com",
+   "blurb": "Cohere recently reported that one of Alibaba’s newest Qwen3.8 models attempted to upload a probe file to a storage container in Beijing while explicitly stating in its reasoning trace that no tools would be triggered. While there is no evidence of intentional backdooring, the report is a reminder…",
+   "source": "InfoQ",
+   "author": "Bruno Couriol",
+   "publishedAt": "2026-11-15T02:42:00.000Z",
+   "desk": "general",
+   "score": 43,
+   "image": "https://res.infoq.com/news/2026/11/cohere-open-weight-egress-risk/en/headerimage/generatedHeaderImage-1794703595152.jpg"
+  },
+  {
+   "id": "cce942626afe",
+   "title": "How did Woz write the Apple 1 BASIC before building the computer?",
+   "url": "https://retrocomputing.stackexchange.com/questions/17957",
+   "domain": "retrocomputing.stackexchange.com",
+   "blurb": "",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50501594",
+   "points": 192,
+   "comments": 87,
+   "author": "Skyfall106",
+   "publishedAt": "2026-11-14T22:22:49.000Z",
+   "desk": "general",
+   "score": 41
+  },
+  {
+   "id": "80e2cc5ab343",
+   "title": "Let Me Let You Own Your Data",
+   "url": "https://willett.io/posts/data",
+   "domain": "willett.io",
+   "blurb": "",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/fllb0m/let_me_let_you_own_your_data",
+   "points": 33,
+   "comments": 22,
+   "author": "thomas0",
+   "publishedAt": "2026-11-14T16:08:27.850Z",
+   "desk": "systems",
+   "score": 40
   },
   {
    "id": "9b08084c1635",
@@ -93,13 +147,118 @@
    "blurb": "PyPI now makes it simple to check where release files come from, with a dedicated security tab, a rebuilt release files tab, and refreshed documentation.",
    "source": "Hacker News",
    "discussionUrl": "https://news.ycombinator.com/item?id=50497892",
-   "points": 119,
-   "comments": 45,
+   "points": 232,
+   "comments": 99,
    "author": "rbanffy",
    "publishedAt": "2026-11-14T15:40:52.000Z",
    "desk": "security",
-   "score": 38,
+   "score": 39,
    "image": "https://blog.pypi.org/assets/images/social/posts/2026-11-06-ui-updates-complete.png"
+  },
+  {
+   "id": "1838248a60d9",
+   "title": "Project Zero will disclose vulnerabilities 90 days after reporting",
+   "url": "https://projectzero.google/2026/11/disclosure-policy.html",
+   "domain": "projectzero.google",
+   "blurb": "Since 2021, Project Zero has followed a “90 + 30” vulnerability disclosure policy, allowing vendo...",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50496051",
+   "points": 230,
+   "comments": 97,
+   "author": "hacb",
+   "publishedAt": "2026-11-14T11:13:17.000Z",
+   "desk": "security",
+   "score": 36,
+   "image": "https://projectzero.google/images/preview_image.png"
+  },
+  {
+   "id": "ad8b3d5bdfd0",
+   "title": "Show HN: DeepSeek V3 in ~200 lines of pure Jax",
+   "url": "https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax",
+   "domain": "github.com",
+   "blurb": "DeepSeek V3 (MLA, DeepSeekMoE, aux-loss-free balancing, MTP) in 190 lines of pure JAX, trained on a MacBook Air. Write-up: vaibhaav.in/writing/deepseek-v3-jax - Vaibhaav-Tiwari/deepseek-v3-jax",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50497589",
+   "points": 224,
+   "comments": 21,
+   "author": "VaibhaavTiwari",
+   "publishedAt": "2026-11-14T15:04:15.000Z",
+   "desk": "ai",
+   "score": 35
+  },
+  {
+   "id": "be81354d8a30",
+   "title": "Advancing science and engineering with Antigravity's /teamwork",
+   "url": "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature",
+   "domain": "research.google",
+   "blurb": "",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50496811",
+   "points": 192,
+   "comments": 40,
+   "author": "acossta",
+   "publishedAt": "2026-11-14T13:20:43.000Z",
+   "desk": "general",
+   "score": 32,
+   "image": "https://storage.googleapis.com/gweb-research2023-media/images/HO_previewImage1.width-800.format-jpeg.jpg"
+  },
+  {
+   "id": "b6e781b12f3f",
+   "title": "Jira said Done. It wasn't, and the bug showed up later. So I made Jira check first.",
+   "url": "https://dev.to/wst2002rk/jira-said-done-it-wasnt-and-the-bug-showed-up-later-so-i-made-jira-check-first-9ed",
+   "domain": "dev.to",
+   "blurb": "Picture this. The ticket moved to Done on Friday. The pull request was merged, CI was green, everyone...",
+   "source": "DEV Community",
+   "points": 27,
+   "comments": 1,
+   "author": "Wageesha Tripathi",
+   "publishedAt": "2026-11-15T05:05:40.000Z",
+   "desk": "ai",
+   "score": 31
+  },
+  {
+   "id": "ee705bff49c2",
+   "title": "25 of my favourite modern NES games",
+   "url": "https://jordi.inversethought.com/blog/25-of-my-favourite-modern-nes-games",
+   "domain": "jordi.inversethought.com",
+   "blurb": "",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/w9j7xs/25_my_favourite_modern_nes_games",
+   "points": 12,
+   "comments": 0,
+   "author": "JordiGH",
+   "publishedAt": "2026-11-15T02:40:40.008Z",
+   "desk": "general",
+   "score": 30
+  },
+  {
+   "id": "14ba8d169059",
+   "title": "Court denies motion to dismiss DRAM price fixing case",
+   "url": "https://litnews.ai/articles/garciaguirre-samsung-sk-hynix-micron-dram-conspiracy-suit-survives-dismissal",
+   "domain": "litnews.ai",
+   "blurb": "",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50502988",
+   "points": 77,
+   "comments": 16,
+   "author": "ybathaee",
+   "publishedAt": "2026-11-15T01:18:36.000Z",
+   "desk": "general",
+   "score": 30
+  },
+  {
+   "id": "51bfdf2bed40",
+   "title": "remove.bg Is Shutting Down — Here's a Free, No-Upload Alternative",
+   "url": "https://dev.to/akhourianmolkumar/removebg-is-shutting-down-heres-a-free-no-upload-alternative-4ebo",
+   "domain": "dev.to",
+   "blurb": "On December 1, 2026 at 9:00 AM CET, remove.bg — the site that turned \"one-click background removal\"...",
+   "source": "DEV Community",
+   "points": 56,
+   "comments": 123,
+   "author": "Akhouri Anmol Kumar",
+   "publishedAt": "2026-11-13T11:05:50.000Z",
+   "desk": "ai",
+   "score": 30
   },
   {
    "id": "affb4b97e289",
@@ -111,8 +270,7 @@
    "author": "Daniel Curtis",
    "publishedAt": "2026-11-14T08:03:00.000Z",
    "desk": "web",
-   "score": 38,
-   "image": "https://res.infoq.com/news/2026/11/nodejs-debounce-throttle/en/headerimage/generatedHeaderImage-1794593143949.jpg"
+   "score": 29
   },
   {
    "id": "e39e802bc6fc",
@@ -124,159 +282,6 @@
    "author": "Steef-Jan Wiggers",
    "publishedAt": "2026-11-14T07:27:00.000Z",
    "desk": "web",
-   "score": 38,
-   "image": "https://res.infoq.com/news/2026/11/compute-engine-api-versioning/en/headerimage/generatedHeaderImage-1794296072866.jpg"
-  },
-  {
-   "id": "51bfdf2bed40",
-   "title": "remove.bg Is Shutting Down — Here's a Free, No-Upload Alternative",
-   "url": "https://dev.to/akhourianmolkumar/removebg-is-shutting-down-heres-a-free-no-upload-alternative-4ebo",
-   "domain": "dev.to",
-   "blurb": "On December 1, 2026 at 9:00 AM CET, remove.bg — the site that turned \"one-click background removal\"...",
-   "source": "DEV Community",
-   "points": 51,
-   "comments": 101,
-   "author": "Akhouri Anmol Kumar",
-   "publishedAt": "2026-11-13T11:05:50.000Z",
-   "desk": "ai",
-   "score": 36
-  },
-  {
-   "id": "0364257ac690",
-   "title": "Lovable apps expose passport details and more than 200K private messages",
-   "url": "https://crissyfield.de/research/lovable-en",
-   "domain": "crissyfield.de",
-   "blurb": "",
-   "source": "Hacker News",
-   "discussionUrl": "https://news.ycombinator.com/item?id=50499017",
-   "points": 94,
-   "comments": 22,
-   "author": "armcat",
-   "publishedAt": "2026-11-14T17:43:10.000Z",
-   "desk": "general",
-   "score": 35
-  },
-  {
-   "id": "4fc67bea017c",
-   "title": "Someone's impersonating this blog",
-   "url": "https://mattbee.mataroa.blog/p/someones-impersonating-this-blog",
-   "domain": "mattbee.mataroa.blog",
-   "blurb": "",
-   "source": "Lobsters",
-   "discussionUrl": "https://lobste.rs/s/wqml56/someone_s_impersonating_this_blog",
-   "points": 41,
-   "comments": 2,
-   "author": "classichasclass",
-   "publishedAt": "2026-11-13T20:39:53.682Z",
-   "desk": "security",
-   "score": 34
-  },
-  {
-   "id": "14e0892d6f4a",
-   "title": "Formalizing US Tax Code (Using Lean)",
-   "url": "https://lexifina.com/blog/formalizing-the-us-tax-code",
-   "domain": "lexifina.com",
-   "blurb": "Identifying novel loopholes in the tax code via formal search.",
-   "source": "Hacker News",
-   "discussionUrl": "https://news.ycombinator.com/item?id=50497900",
-   "points": 75,
-   "comments": 41,
-   "author": "dnw",
-   "publishedAt": "2026-11-14T15:41:20.000Z",
-   "desk": "general",
-   "score": 33,
-   "image": "https://lexifina.com/social-preview-v3.png?v=20261018"
-  },
-  {
-   "id": "8f2daa11c505",
-   "title": "Serving GLM-5.3 at 607.8 tok/s across two Nvidia DGX stations with vLLM",
-   "url": "https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm",
-   "domain": "developer.nvidia.com",
-   "blurb": "Running a frontier-scale model locally means keeping all its weights in GPU memory; the largest models no longer fit on one machine. Two NVIDIA DGX Stations connected over ConnectX-8 RDMA serve one…",
-   "source": "Hacker News",
-   "discussionUrl": "https://news.ycombinator.com/item?id=50497155",
-   "points": 86,
-   "comments": 46,
-   "author": "wondersky",
-   "publishedAt": "2026-11-14T14:09:25.000Z",
-   "desk": "general",
-   "score": 33,
-   "image": "https://developer-blogs.nvidia.com/wp-content/uploads/2026/11/image3-3.webp"
-  },
-  {
-   "id": "5bfa2e37b7da",
-   "title": "Show HN: A terminal-native idle factory game, written in Rust with ratatui",
-   "url": "https://gitlab.com/snipedbywifi/terminactory",
-   "domain": "gitlab.com",
-   "blurb": "Hey HN readers! I'm snipedbywifi ( https://gitlab.com/snipedbywifi ), and i've been working on terminactory. Please try it out if you'd like to play a cozy factory game while waiting for long agent tasks to finish! The game is a factory game (overused niche, i know xD), but runs in your terminal…",
-   "source": "Hacker News",
-   "discussionUrl": "https://news.ycombinator.com/item?id=50497132",
-   "points": 95,
-   "comments": 14,
-   "author": "snipedbywifi",
-   "publishedAt": "2026-11-14T14:05:54.000Z",
-   "desk": "systems",
-   "score": 33,
-   "image": "https://gitlab.com/assets/twitter_card-570ddb06edf56a2312253c5872489847a0f385112ddbcd71ccfa1570febab5d2.jpg"
-  },
-  {
-   "id": "be81354d8a30",
-   "title": "Advancing science and engineering with Antigravity's /teamwork",
-   "url": "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature",
-   "domain": "research.google",
-   "blurb": "",
-   "source": "Hacker News",
-   "discussionUrl": "https://news.ycombinator.com/item?id=50496811",
-   "points": 88,
-   "comments": 25,
-   "author": "acossta",
-   "publishedAt": "2026-11-14T13:20:43.000Z",
-   "desk": "general",
-   "score": 32
-  },
-  {
-   "id": "80e2cc5ab343",
-   "title": "Let Me Let You Own Your Data",
-   "url": "https://willett.io/posts/data",
-   "domain": "willett.io",
-   "blurb": "",
-   "source": "Lobsters",
-   "discussionUrl": "https://lobste.rs/s/fllb0m/let_me_let_you_own_your_data",
-   "points": 7,
-   "comments": 6,
-   "author": "thomas0",
-   "publishedAt": "2026-11-14T16:08:27.850Z",
-   "desk": "systems",
-   "score": 30
-  },
-  {
-   "id": "81e98a9f5568",
-   "title": "Running a law firm on Free software (2026 edition)",
-   "url": "https://decoded.legal/blog/2026/11/running-a-law-firm-on-free-software-2026-edition",
-   "domain": "decoded.legal",
-   "blurb": "",
-   "source": "Lobsters",
-   "discussionUrl": "https://lobste.rs/s/ezl1sa/running_law_firm_on_free_software_2026",
-   "points": 46,
-   "comments": 3,
-   "author": "FedericoSchonborn",
-   "publishedAt": "2026-11-13T11:20:32.309Z",
-   "desk": "general",
-   "score": 30
-  },
-  {
-   "id": "3f060b226b66",
-   "title": "Show HN: Agweb – a browser for agents that stays out of your way",
-   "url": "https://github.com/paul-nameless/agweb",
-   "domain": "github.com",
-   "blurb": "",
-   "source": "Hacker News",
-   "discussionUrl": "https://news.ycombinator.com/item?id=50497147",
-   "points": 55,
-   "comments": 17,
-   "author": "paul_nameless",
-   "publishedAt": "2026-11-14T14:08:12.000Z",
-   "desk": "ai",
    "score": 29
   },
   {
@@ -287,12 +292,86 @@
    "blurb": "",
    "source": "Lobsters",
    "discussionUrl": "https://lobste.rs/s/pgmw6b/what_happened_3com",
-   "points": 17,
-   "comments": 6,
+   "points": 33,
+   "comments": 7,
    "author": "kaycebasques",
    "publishedAt": "2026-11-14T05:46:40.915Z",
    "desk": "general",
    "score": 29
+  },
+  {
+   "id": "5ec3910099d5",
+   "title": "Show HN: Gawain – Require type hints on all Python variables",
+   "url": "https://github.com/matheuzgomes/gawain",
+   "domain": "github.com",
+   "blurb": "Yes, i really hate \"dict[str, ANY]\"",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50504072",
+   "points": 36,
+   "comments": 14,
+   "author": "MarinhoD",
+   "publishedAt": "2026-11-15T04:39:25.000Z",
+   "desk": "general",
+   "score": 28
+  },
+  {
+   "id": "8ecfe2793560",
+   "title": "Ghost Rovers: I Called 12 Machines NASA Left Behind. One Picked Up.",
+   "url": "https://dev.to/earlgreyhot1701d/ghost-rovers-i-called-12-machines-nasa-left-behind-one-picked-up-2575",
+   "domain": "dev.to",
+   "blurb": "A 1969 Mission Control console for kids. Built in one day for NASA Space Apps 2026. TL;DR: For NASA...",
+   "source": "DEV Community",
+   "points": 15,
+   "comments": 1,
+   "author": "Earl Grey",
+   "publishedAt": "2026-11-15T04:00:28.000Z",
+   "desk": "ai",
+   "score": 27
+  },
+  {
+   "id": "4fc67bea017c",
+   "title": "Someone's impersonating this blog",
+   "url": "https://mattbee.mataroa.blog/p/someones-impersonating-this-blog",
+   "domain": "mattbee.mataroa.blog",
+   "blurb": "",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/wqml56/someone_s_impersonating_this_blog",
+   "points": 46,
+   "comments": 2,
+   "author": "classichasclass",
+   "publishedAt": "2026-11-13T20:39:53.682Z",
+   "desk": "security",
+   "score": 27
+  },
+  {
+   "id": "63a2b0ed3dd8",
+   "title": "Periodic-Oriented Programming for FIRST Robotics",
+   "url": "https://bvisness.me/periodic-oriented-programming",
+   "domain": "bvisness.me",
+   "blurb": "",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/bwjt1b/periodic_oriented_programming_for_first",
+   "points": 6,
+   "comments": 0,
+   "author": "robalex",
+   "publishedAt": "2026-11-15T03:16:42.257Z",
+   "desk": "general",
+   "score": 26
+  },
+  {
+   "id": "79f6c3dc3910",
+   "title": "Parsing nested lists in BQN",
+   "url": "https://saltysylvi.github.io/blog/parsing-nested-lists-in-bqn.html",
+   "domain": "saltysylvi.github.io",
+   "blurb": "",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/nbjckz/parsing_nested_lists_bqn",
+   "points": 6,
+   "comments": 0,
+   "author": "veqq",
+   "publishedAt": "2026-11-15T01:59:26.268Z",
+   "desk": "general",
+   "score": 26
   },
   {
    "id": "2ea963063fdf",
@@ -302,12 +381,42 @@
    "blurb": "",
    "source": "Lobsters",
    "discussionUrl": "https://lobste.rs/s/q81fi4/solving_fox_game",
-   "points": 11,
-   "comments": 1,
+   "points": 20,
+   "comments": 4,
    "author": "dracarys_18",
    "publishedAt": "2026-11-14T10:32:33.001Z",
    "desk": "general",
-   "score": 28
+   "score": 26
+  },
+  {
+   "id": "aedbce8daeec",
+   "title": "FreeBSD bhyve Live Migration: Moving VMs Between Hosts",
+   "url": "https://gyptazy.com/blog/freebsd-bhyve-live-migration-support-rfc",
+   "domain": "gyptazy.com",
+   "blurb": "",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/hiayul/freebsd_bhyve_live_migration_moving_vms",
+   "points": 1,
+   "comments": 0,
+   "author": "fuzzy",
+   "publishedAt": "2026-11-15T06:44:44.316Z",
+   "desk": "general",
+   "score": 25
+  },
+  {
+   "id": "84f65ba19421",
+   "title": "Reintroducing Spaces",
+   "url": "https://dholms.leaflet.pub/3mu3p3ldwrc26",
+   "domain": "dholms.leaflet.pub",
+   "blurb": "",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/dwd6xu/reintroducing_spaces",
+   "points": 3,
+   "comments": 1,
+   "author": "carlana",
+   "publishedAt": "2026-11-15T02:34:44.343Z",
+   "desk": "general",
+   "score": 24
   },
   {
    "id": "796d67786032",
@@ -317,121 +426,12 @@
    "blurb": "",
    "source": "Lobsters",
    "discussionUrl": "https://lobste.rs/s/ebahfz/creating_self_booting_zip_archive",
-   "points": 12,
+   "points": 18,
    "comments": 0,
    "author": "rw-rw-rw-",
    "publishedAt": "2026-11-14T10:01:58.119Z",
    "desk": "general",
-   "score": 28
-  },
-  {
-   "id": "7b5cb229ebdd",
-   "title": "How Not to Build a Music Player",
-   "url": "https://alichraghi.github.io/blog/how-not-to-build-a-music-player",
-   "domain": "alichraghi.github.io",
-   "blurb": "",
-   "source": "Lobsters",
-   "discussionUrl": "https://lobste.rs/s/lh9pwf/how_not_build_music_player",
-   "points": 105,
-   "comments": 25,
-   "author": "alichraghi",
-   "publishedAt": "2026-11-13T09:16:28.886Z",
-   "desk": "systems",
-   "score": 28,
-   "carried": true
-  },
-  {
-   "id": "3cf7fb34b2de",
-   "title": "Avengers: Doomsday is 5 weeks away, so I built hexagon README badges. What are you building?",
-   "url": "https://dev.to/amananandrai/avengers-doomsday-is-5-weeks-away-so-i-built-hexagon-readme-badges-what-are-you-building-32d6",
-   "domain": "dev.to",
-   "blurb": "Marvel fans of DEV, show me your Doomsday-hype side projects. Mine is a tiny Vercel service that makes glowing, Avengers-themed hexagon badges.",
-   "source": "DEV Community",
-   "points": 5,
-   "comments": 0,
-   "author": "amananandrai",
-   "publishedAt": "2026-11-14T17:14:52.000Z",
-   "desk": "web",
-   "score": 26
-  },
-  {
-   "id": "813e40fce5f8",
-   "title": "Introducing Spend Management: Spending limits and alerts for Cloudflare",
-   "url": "https://blog.cloudflare.com/spend-management",
-   "domain": "blog.cloudflare.com",
-   "blurb": "Spend Management adds opt-in spending caps for Cloudflare Workers and Durable Objects, and more products soon. Here is how we built the metering pipeline that turns usage into runtime decisions.",
-   "source": "Cloudflare Blog",
-   "author": "Celso Martinho",
-   "publishedAt": "2026-11-13T14:00:00.000Z",
-   "desk": "general",
-   "score": 26
-  },
-  {
-   "id": "7ab05cd8f2e7",
-   "title": "Google Open Sources Ambient Quality Agent (AQuA) to Diagnose Production AI Agent Failures",
-   "url": "https://infoq.com/news/2026/11/google-ambient-agent-prod",
-   "domain": "infoq.com",
-   "blurb": "Google has open-sourced AQuA, a reference implementation that analyzes production AI agent sessions, verifies recurring failure patterns, and investigates root causes against deployed source snapshots. In a 32-session replay, developers reduced seat selection bypasses from 15 sessions to two and…",
-   "source": "InfoQ",
-   "author": "Leela Kumili",
-   "publishedAt": "2026-11-13T13:53:00.000Z",
-   "desk": "ai",
-   "score": 26
-  },
-  {
-   "id": "0be79c41bea7",
-   "title": "The need for at least a third option",
-   "url": "https://blog.ovalerio.net/archives/3359",
-   "domain": "blog.ovalerio.net",
-   "blurb": "",
-   "source": "Lobsters",
-   "discussionUrl": "https://lobste.rs/s/9oq6fr/need_for_at_least_third_option",
-   "points": 76,
-   "comments": 36,
-   "author": "dethos",
-   "publishedAt": "2026-11-13T11:36:44.546Z",
-   "desk": "general",
-   "score": 26,
-   "carried": true
-  },
-  {
-   "id": "2bbcc5b58a87",
-   "title": "ML Modules for Mere Mortals",
-   "url": "https://thunderseethe.dev/posts/ml-modules-for-mere-mortals/intro",
-   "domain": "thunderseethe.dev",
-   "blurb": "",
-   "source": "Lobsters",
-   "discussionUrl": "https://lobste.rs/s/mgiv0i/ml_modules_for_mere_mortals",
-   "points": 31,
-   "comments": 12,
-   "author": "abhin4v",
-   "publishedAt": "2026-11-13T11:33:56.470Z",
-   "desk": "general",
-   "score": 26
-  },
-  {
-   "id": "5b498fce51fa",
-   "title": "Netflix Turns Operational Data Into a Knowledge Graph for AI-Driven Observability",
-   "url": "https://infoq.com/news/2026/11/netflix-ai-driven-observability",
-   "domain": "infoq.com",
-   "blurb": "Netflix is developing an ontology-driven knowledge graph to accelerate production investigations and provide AI agents with a shared understanding of its operational environment. By Craig Risi",
-   "source": "InfoQ",
-   "author": "Craig Risi",
-   "publishedAt": "2026-11-13T12:00:00.000Z",
-   "desk": "ai",
-   "score": 25
-  },
-  {
-   "id": "db329f0ae0f0",
-   "title": "Presentation: The Influence Toolkit",
-   "url": "https://infoq.com/presentations/bbc-software-architecture-influence",
-   "domain": "infoq.com",
-   "blurb": "Henry Wilson shares actionable tools from the BBC Sounds re-architecture to help senior engineering leaders drive technical strategy. He discusses building buy-in, navigating active resistors, using RFCs and ADRs, and balancing tradeoffs - showing that effective software architecture is…",
-   "source": "InfoQ",
-   "author": "Henry Wilson",
-   "publishedAt": "2026-11-13T11:00:00.000Z",
-   "desk": "general",
-   "score": 25
+   "score": 24
   }
  ],
  "repos": [
@@ -440,240 +440,240 @@
    "url": "https://github.com/Gathin23/cleanyourtv",
    "description": "Debloat any Android or Google TV over Wi-Fi and get an Apple TV-style home.",
    "language": "Python",
-   "stars": 57798,
-   "forks": 7490,
+   "stars": 57985,
+   "forks": 7537,
    "createdAt": "2026-10-17T08:12:35.000Z",
-   "gain": 264
+   "gain": 451
   },
   {
    "name": "storytold/craft-anything",
    "url": "https://github.com/storytold/craft-anything",
    "description": "Craft Anything: understand how any software works, and craft your own.",
    "language": "Rust",
-   "stars": 32612,
-   "forks": 6628,
+   "stars": 33095,
+   "forks": 6704,
    "createdAt": "2026-10-31T14:50:00.000Z",
-   "gain": 885
-  },
-  {
-   "name": "deepseek-ai/DeepInfer",
-   "url": "https://github.com/deepseek-ai/DeepInfer",
-   "description": "DeepInfer: High-performance, large-scale inference framework for DeepSeek models",
-   "language": "Python",
-   "stars": 26019,
-   "forks": 3194,
-   "createdAt": "2026-10-16T07:47:23.000Z",
-   "gain": 32
+   "gain": 1368
   },
   {
    "name": "deepseek-ai/dsh-superagent-prototype",
    "url": "https://github.com/deepseek-ai/dsh-superagent-prototype",
    "description": "Towards a More Autonomous Agent System",
    "language": "TypeScript",
-   "stars": 23128,
-   "forks": 2824,
+   "stars": 23181,
+   "forks": 2832,
    "createdAt": "2026-10-31T09:32:46.000Z",
-   "gain": 66
+   "gain": 119
   },
   {
    "name": "ccch1mneyyy/dsh-Go",
    "url": "https://github.com/ccch1mneyyy/dsh-Go",
    "description": "dsh-go — DeepSeek Harness 装进口袋：手机本机运行，也能遥控你的电脑。",
    "language": "Dart",
-   "stars": 22657,
-   "forks": 1056,
+   "stars": 23117,
+   "forks": 1073,
    "createdAt": "2026-10-25T08:09:52.000Z",
-   "gain": 561
+   "gain": 1021
   },
   {
    "name": "Zagitta/gpu-unlock",
    "url": "https://github.com/Zagitta/gpu-unlock",
    "description": "Your GeForce runs AI at half speed. This fixes it for 20/30/40 series cards. Up to 2× FP16 / BF16 / TF32 tensor throughput",
    "language": "C",
-   "stars": 19450,
-   "forks": 2009,
+   "stars": 19604,
+   "forks": 2032,
    "createdAt": "2026-10-18T01:28:31.000Z",
-   "gain": 162
+   "gain": 316
   },
   {
    "name": "heydamir/unslop",
    "url": "https://github.com/heydamir/unslop",
    "description": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface",
    "language": "JavaScript",
-   "stars": 15935,
-   "forks": 927,
+   "stars": 16181,
+   "forks": 947,
    "createdAt": "2026-10-29T15:41:21.000Z",
-   "gain": 160
+   "gain": 406
   },
   {
    "name": "pengchujin/aerial-tv",
    "url": "https://github.com/pengchujin/aerial-tv",
    "description": "给国产电视的一块干净桌面：参照 tvOS 设计的开源 Android TV 桌面，没有广告，开机自动接管。A tvOS-style launcher for Xiaomi, TCL and other China-market TVs.",
    "language": "Kotlin",
-   "stars": 11844,
-   "forks": 1024,
+   "stars": 11928,
+   "forks": 1030,
    "createdAt": "2026-10-20T09:13:06.000Z",
-   "gain": 126
+   "gain": 210
   },
   {
    "name": "anefzaoui/misterdownloadmanager",
    "url": "https://github.com/anefzaoui/misterdownloadmanager",
    "description": "misterdownloadmanager: The ultimate open-source, clean-room download manager written from scratch in pure Rust for Windows, Mac, and Linux",
    "language": "Rust",
-   "stars": 9476,
-   "forks": 787,
+   "stars": 9761,
+   "forks": 804,
    "createdAt": "2026-10-29T01:25:19.000Z",
-   "gain": 322
-  },
-  {
-   "name": "amosblomqvist/learnharness",
-   "url": "https://github.com/amosblomqvist/learnharness",
-   "description": "Agent harness for learning difficult things.",
-   "language": "TypeScript",
-   "stars": 9394,
-   "forks": 1247,
-   "createdAt": "2026-10-16T19:35:33.000Z",
-   "gain": 94
+   "gain": 607
   },
   {
    "name": "zortos293/Lichii",
    "url": "https://github.com/zortos293/Lichii",
    "description": "VERY experimental Nintendo Switch 2 emulator",
    "language": "C++",
-   "stars": 9145,
-   "forks": 1477,
+   "stars": 9241,
+   "forks": 1496,
    "createdAt": "2026-10-31T14:17:26.000Z",
-   "gain": 110
+   "gain": 206
   },
   {
    "name": "l0ng-ai/openidea",
    "url": "https://github.com/l0ng-ai/openidea",
    "description": "The IDE you know, rebuilt in Rust. IntelliJ IDEA–style keymap, tool windows and search-everywhere in a fast native app: editor, code insight, debugger, Git…",
    "language": "TypeScript",
-   "stars": 8990,
-   "forks": 820,
+   "stars": 9018,
+   "forks": 826,
    "createdAt": "2026-10-21T12:23:14.000Z",
-   "gain": 49
+   "gain": 77
   },
   {
    "name": "Minireel/HGhub",
    "url": "https://github.com/Minireel/HGhub",
    "description": "YellowFruit third-party client",
    "language": "—",
-   "stars": 8850,
-   "forks": 6662,
+   "stars": 8866,
+   "forks": 6791,
    "createdAt": "2026-11-03T14:04:27.000Z",
-   "gain": 18
-  },
-  {
-   "name": "wangzan101/Mika",
-   "url": "https://github.com/wangzan101/Mika",
-   "description": "An on-device AI agent for Android that operates apps and the web to get things done for you.",
-   "language": "Kotlin",
-   "stars": 8603,
-   "forks": 1966,
-   "createdAt": "2026-10-29T14:34:07.000Z",
-   "gain": 52
-  },
-  {
-   "name": "janestreet/agent_skills",
-   "url": "https://github.com/janestreet/agent_skills",
-   "description": "Agent skills",
-   "language": "—",
-   "stars": 8550,
-   "forks": 557,
-   "createdAt": "2026-11-03T16:50:21.000Z",
-   "gain": 184
+   "gain": 34
   },
   {
    "name": "JuneYaooo/rea-video",
    "url": "https://github.com/JuneYaooo/rea-video",
    "description": "Reverse-engineer any video, shot by shot: filmed, AI-generated or coded, and how to remake it. Breakdowns in the open VIDEO.md format. 逆向一切视频，逐个镜头看是拍的、AI…",
    "language": "Python",
-   "stars": 8467,
-   "forks": 1251,
+   "stars": 8758,
+   "forks": 1289,
    "createdAt": "2026-10-29T16:15:01.000Z",
-   "gain": 334
+   "gain": 625
   },
   {
-   "name": "kingcharleslzy-ai/dsh-purge",
-   "url": "https://github.com/kingcharleslzy-ai/dsh-purge",
-   "description": "dsh-purge Community · DeepSeek Harness 社区维护版：宿主兼容、状态诊断、提示词管理、更新与本机备份回滚。基于小杨 / YuJunZhiXue 的 dsh-purge。",
-   "language": "JavaScript",
-   "stars": 8265,
-   "forks": 3628,
-   "createdAt": "2026-10-16T07:44:27.000Z",
-   "gain": 217
+   "name": "janestreet/agent_skills",
+   "url": "https://github.com/janestreet/agent_skills",
+   "description": "Agent skills",
+   "language": "—",
+   "stars": 8708,
+   "forks": 579,
+   "createdAt": "2026-11-03T16:50:21.000Z",
+   "gain": 342
+  },
+  {
+   "name": "wangzan101/Mika",
+   "url": "https://github.com/wangzan101/Mika",
+   "description": "An on-device AI agent for Android that operates apps and the web to get things done for you.",
+   "language": "Kotlin",
+   "stars": 8650,
+   "forks": 1972,
+   "createdAt": "2026-10-29T14:34:07.000Z",
+   "gain": 99
   },
   {
    "name": "xiaoyang111222/cn-math-taxonomy",
    "url": "https://github.com/xiaoyang111222/cn-math-taxonomy",
    "description": "数学（小学到高中）、英语（三年级到高中）、初中物理的知识图谱：1644 个知识点、2403 条先修边、6723 道题，对齐课标，附自适应前置诊断。",
    "language": "Python",
-   "stars": 8035,
-   "forks": 2151,
+   "stars": 8086,
+   "forks": 2165,
    "createdAt": "2026-10-18T09:04:43.000Z",
-   "gain": 50
+   "gain": 101
   },
   {
    "name": "rddmwmddr/android-ad-cleaner",
    "url": "https://github.com/rddmwmddr/android-ad-cleaner",
    "description": "关掉国产安卓手机系统里的广告、热搜、资讯推荐和营销推送。不 root，可还原，支持 AI 智能体一键执行。",
    "language": "Python",
-   "stars": 8022,
-   "forks": 700,
+   "stars": 8074,
+   "forks": 702,
    "createdAt": "2026-10-24T05:35:47.000Z",
-   "gain": 109
+   "gain": 161
   },
   {
    "name": "unclebob/ub-mode",
    "url": "https://github.com/unclebob/ub-mode",
    "description": "",
    "language": "—",
-   "stars": 7956,
-   "forks": 452,
+   "stars": 7979,
+   "forks": 455,
    "createdAt": "2026-10-25T16:04:09.000Z",
-   "gain": 29
-  },
-  {
-   "name": "ly05010419/MacNativeGames",
-   "url": "https://github.com/ly05010419/MacNativeGames",
-   "description": "Play your own Tears of the Kingdom and Breath of the Wild natively on Apple silicon Mac, iPhone and iPad. Not an emulator: the game's ARM64 code runs…",
-   "language": "C",
-   "stars": 7804,
-   "forks": 1161,
-   "createdAt": "2026-10-17T19:52:00.000Z",
-   "gain": 41
+   "gain": 52
   },
   {
    "name": "Jakeschincariol/day-trader-skill",
    "url": "https://github.com/Jakeschincariol/day-trader-skill",
    "description": "11 Claude skills for day trading: scan thousands of charts, track breaking news, time every entry and exit, and replay every outcome before you risk a dollar.",
    "language": "Python",
-   "stars": 7767,
-   "forks": 1869,
+   "stars": 7867,
+   "forks": 1886,
    "createdAt": "2026-10-20T14:17:54.000Z",
-   "gain": 107
+   "gain": 207
+  },
+  {
+   "name": "ly05010419/MacNativeGames",
+   "url": "https://github.com/ly05010419/MacNativeGames",
+   "description": "Play your own Tears of the Kingdom and Breath of the Wild natively on Apple silicon Mac, iPhone and iPad. Not an emulator: the game's ARM64 code runs…",
+   "language": "C",
+   "stars": 7830,
+   "forks": 1164,
+   "createdAt": "2026-10-17T19:52:00.000Z",
+   "gain": 67
   },
   {
    "name": "huamidev/GestaltX",
    "url": "https://github.com/huamidev/GestaltX",
    "description": "An MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device presets, backups.",
    "language": "Swift",
-   "stars": 7538,
-   "forks": 2635,
+   "stars": 7640,
+   "forks": 2648,
    "createdAt": "2026-11-09T05:15:48.000Z",
-   "gain": 116
+   "gain": 218
   },
   {
    "name": "patch-gg/pixelfx",
    "url": "https://github.com/patch-gg/pixelfx",
    "description": "244 pixel art effects, every one a small piece of code. Plus a Claude Code skill to make your own.",
    "language": "JavaScript",
-   "stars": 7442,
-   "forks": 961,
+   "stars": 7507,
+   "forks": 974,
    "createdAt": "2026-10-30T06:43:25.000Z",
-   "gain": 67
+   "gain": 132
+  },
+  {
+   "name": "valentderah/totk-pc-recomp",
+   "url": "https://github.com/valentderah/totk-pc-recomp",
+   "description": "Static recompilation of The Legend of Zelda: Tears of the Kingdom to native Windows and Linux x86-64, with a Vulkan renderer. Game files not included.",
+   "language": "C",
+   "stars": 7277,
+   "forks": 589,
+   "createdAt": "2026-10-29T12:32:46.000Z",
+   "gain": null
+  },
+  {
+   "name": "anomalyco/rune",
+   "url": "https://github.com/anomalyco/rune",
+   "description": "Rune: Native UI framework",
+   "language": "Rust",
+   "stars": 7184,
+   "forks": 278,
+   "createdAt": "2026-10-22T05:51:40.000Z",
+   "gain": null
+  },
+  {
+   "name": "LNPANDY/NX2Apple",
+   "url": "https://github.com/LNPANDY/NX2Apple",
+   "description": "Play your own Switch games on iPhone/iPad — one-click macOS app, no terminal. | 把 Switch 游戏装进 iPhone：图形界面一键构建，不用命令行。Bring your own game.",
+   "language": "Swift",
+   "stars": 7089,
+   "forks": 881,
+   "createdAt": "2026-10-20T18:16:07.000Z",
+   "gain": null
   }
  ],
  "advisories": [
@@ -767,6 +767,23 @@
   }
  ],
  "classifieds": [
+  {
+   "title": "Staff Software Engineer (App-Framework)",
+   "company": "Databricks",
+   "location": "Bengaluru, India",
+   "mode": "unspecified",
+   "level": "staff",
+   "region": "india",
+   "tags": [],
+   "blurb": "",
+   "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8944097002",
+   "via": "Greenhouse",
+   "direct": true,
+   "board": "greenhouse:databricks",
+   "postedAt": "2026-11-15T04:36:01.000Z",
+   "id": "bd731ae20a1a",
+   "firstSeen": "2026-11-15T07:55:52.970Z"
+  },
   {
    "title": "Cluster Head - Security & Investigation",
    "company": "Meesho",
@@ -1029,26 +1046,19 @@
    "postedAt": "2026-11-10T12:17:49.565Z",
    "id": "1d4d09a2c455",
    "firstSeen": "2026-11-10T12:48:46.240Z"
-  },
-  {
-   "title": "Staff Database Engineer, ClickHouse",
-   "company": "Enterpret",
-   "location": "Bengaluru, Onsite",
-   "mode": "on-site",
-   "level": "staff",
-   "region": "india",
-   "tags": [],
-   "blurb": "",
-   "url": "https://job-boards.greenhouse.io/enterpret/jobs/8200143003",
-   "via": "Greenhouse",
-   "direct": true,
-   "board": "greenhouse:enterpret",
-   "postedAt": "2026-11-10T06:20:40.000Z",
-   "id": "49a86d5a56e5",
-   "firstSeen": "2026-11-10T09:59:31.843Z"
   }
  ],
  "employers": [
+  {
+   "company": "Databricks",
+   "roles": 26,
+   "india": 20,
+   "titles": [
+    "Staff Software Engineer (App-Framework)",
+    "Senior Software Engineer - Backend Infrastructure",
+    "Staff Software Engineer- Databricks AI"
+   ]
+  },
   {
    "company": "Pure Storage",
    "roles": 26,
@@ -1100,16 +1110,6 @@
    ]
   },
   {
-   "company": "Databricks",
-   "roles": 26,
-   "india": 20,
-   "titles": [
-    "Senior Software Engineer - Backend Infrastructure",
-    "Staff Software Engineer- Databricks AI",
-    "Sr. Software Engineer- Databricks AI"
-   ]
-  },
-  {
    "company": "Celonis",
    "roles": 26,
    "india": 20,
@@ -1132,109 +1132,109 @@
  ],
  "jobsDirect": 883,
  "jobsTotal": 900,
- "jobsNew": 23,
+ "jobsNew": 8,
  "sources": [
   {
    "name": "Ars Technica",
    "ok": true,
    "count": 8,
-   "ms": 268
+   "ms": 83
   },
   {
    "name": "Ashby employer boards (25 of 25)",
    "ok": true,
    "count": 190,
-   "ms": 1725
+   "ms": 933
   },
   {
    "name": "Cloudflare Blog",
    "ok": true,
    "count": 8,
-   "ms": 163
+   "ms": 268
   },
   {
    "name": "DEV Community",
    "ok": true,
    "count": 20,
-   "ms": 178
+   "ms": 169
   },
   {
    "name": "GitHub advisories",
    "ok": true,
    "count": 8,
-   "ms": 1008
+   "ms": 441
   },
   {
    "name": "GitHub repositories",
    "ok": true,
    "count": 24,
-   "ms": 1452
+   "ms": 951
   },
   {
    "name": "Greenhouse employer boards (55 of 55)",
    "ok": true,
    "count": 634,
-   "ms": 1233
+   "ms": 528
   },
   {
    "name": "Hacker News",
    "ok": true,
    "count": 30,
-   "ms": 273
+   "ms": 312
   },
   {
    "name": "InfoQ",
    "ok": true,
    "count": 8,
-   "ms": 440
+   "ms": 347
   },
   {
    "name": "Lever employer boards (12 of 12)",
    "ok": true,
    "count": 91,
-   "ms": 3209
+   "ms": 17893
   },
   {
    "name": "Lobsters",
    "ok": true,
    "count": 25,
-   "ms": 352
+   "ms": 172
   },
   {
    "name": "Remote OK",
    "ok": true,
-   "count": 24,
-   "ms": 1103
+   "count": 23,
+   "ms": 459
   },
   {
    "name": "Remotive",
    "ok": true,
    "count": 16,
-   "ms": 590
+   "ms": 196
   },
   {
    "name": "SimplifyJobs New-Grad-Positions",
    "ok": true,
    "count": 70,
-   "ms": 1683
+   "ms": 621
   },
   {
    "name": "SimplifyJobs Summer2027-Internships",
    "ok": true,
    "count": 70,
-   "ms": 1187
+   "ms": 574
   },
   {
    "name": "The GitHub Blog",
    "ok": true,
    "count": 8,
-   "ms": 122
+   "ms": 237
   }
  ],
  "briefing": [
-  "Leading this morning’s paper is “Monkey Island: all 13 versions side by side”, reported by Hacker News, where it drew 378 points and 131 comments. Close behind: “Tech Companies Are Trying to Shift the Concept of Privacy (Again)” from Hacker News.",
-  "On the open source exchange, Gathin23/cleanyourtv sits at the top of the table with 57,798 stars. The biggest mover is storytold/craft-anything, up 885 since the last edition.",
-  "8 security advisories made the notices column. The situations vacant pages list 900 open roles, 23 new since the last edition."
+  "Leading this morning’s paper is “SpaceX catches the Starship to end Flight 15”, reported by Hacker News, where it drew 1,101 points and 725 comments. Close behind: “Lovable apps expose passport details and more than 200K private messages” from Hacker News.",
+  "On the open source exchange, Gathin23/cleanyourtv sits at the top of the table with 57,985 stars. The biggest mover is storytold/craft-anything, up 1,368 since the last edition.",
+  "8 security advisories made the notices column. The situations vacant pages list 900 open roles, 8 new since the last edition."
  ],
  "briefingBy": "desk"
 }
