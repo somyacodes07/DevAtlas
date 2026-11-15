@@ -1,5 +1,58 @@
 [
  {
+  "title": "Product Design (Mechanical Engineering) Co-Op",
+  "company": "Samsara",
+  "location": "San Francisco - SF9",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "other",
+  "tags": [],
+  "blurb": "",
+  "url": "https://www.samsara.com/company/careers/roles/8214590?gh_jid=8214590",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:samsara",
+  "postedAt": "2026-11-15T18:48:56.000Z",
+  "id": "60c45949e045",
+  "firstSeen": "2026-11-15T19:25:18.398Z"
+ },
+ {
+  "title": "Senior Manager, Engineering Program Management",
+  "company": "Samsara",
+  "location": "San Francisco - SF9",
+  "mode": "unspecified",
+  "level": "senior",
+  "region": "other",
+  "tags": [],
+  "blurb": "",
+  "url": "https://www.samsara.com/company/careers/roles/8375354?gh_jid=8375354",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:samsara",
+  "postedAt": "2026-11-15T18:16:11.000Z",
+  "id": "15d220277868",
+  "firstSeen": "2026-11-15T19:25:18.398Z"
+ },
+ {
+  "title": "People Intelligence Intern",
+  "company": "Fanatics",
+  "location": "NYC",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "other",
+  "tags": [
+   "AI/ML/Data"
+  ],
+  "blurb": "",
+  "url": "https://job-boards.greenhouse.io/fanaticscollectibles/jobs/4505998009",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-15T13:04:43.000Z",
+  "id": "dec4e2b1d4be",
+  "firstSeen": "2026-11-15T19:25:18.398Z"
+ },
+ {
   "title": "Staff Software Engineer (App-Framework)",
   "company": "Databricks",
   "location": "Bengaluru, India",
@@ -1287,23 +1340,6 @@
   "firstSeen": "2026-11-14T07:39:26.608Z"
  },
  {
-  "title": "Sr. Hardware Reliability Engineer",
-  "company": "Samsara",
-  "location": "San Francisco - SF9",
-  "mode": "unspecified",
-  "level": "senior",
-  "region": "other",
-  "tags": [],
-  "blurb": "",
-  "url": "https://www.samsara.com/company/careers/roles/8374813?gh_jid=8374813",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:samsara",
-  "postedAt": "2026-11-13T18:54:36.000Z",
-  "id": "697965ee4766",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
   "title": "Staff+ Software Engineer, Consumer",
   "company": "Anthropic",
   "location": "San Francisco, CA",
@@ -1474,6 +1510,29 @@
   "postedAt": "2026-11-13T17:39:47.000Z",
   "id": "6bd6ee5e65b5",
   "firstSeen": "2026-11-13T20:31:05.952Z"
+ },
+ {
+  "title": "Content Creator - YouTube",
+  "company": "Metics Media",
+  "location": "USA, Canada",
+  "mode": "remote",
+  "level": "mid",
+  "region": "remote",
+  "salary": "$85k - $155k",
+  "tags": [
+   "ecommerce",
+   "shopify",
+   "video",
+   "AI/ML"
+  ],
+  "blurb": "Important: Applications without an intro video will not be considered. Job Overview Create engaging YouTube tutorials about software, digital…",
+  "url": "https://remotive.com/remote-jobs/marketing/content-creator-youtube-2091173",
+  "via": "Remotive",
+  "direct": false,
+  "board": "remotive",
+  "postedAt": "2026-11-13T17:29:57.000Z",
+  "id": "906ae24e6843",
+  "firstSeen": "2026-11-15T19:25:18.398Z"
  },
  {
   "title": "Government Relations Manager, AI",
@@ -3224,6 +3283,44 @@
   "firstSeen": "2026-11-15T07:55:52.970Z"
  },
  {
+  "title": "Animation & Cinematic Tools Engineering Intern - Animation & Cinematic Tools Engineering",
+  "company": "Blizzard Entertainment",
+  "location": "Irvine, CA",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://xboxgaming.wd1.myworkdayjobs.com/Blizzard_External_Careers/job/Irvine---Blizzard---Blizzard-Way/Blizzard-2027-Summer-Internships---Animation---Cinematic-Tools-Engineering_R028350",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-13T00:00:00.000Z",
+  "id": "1031226d3061",
+  "firstSeen": "2026-11-15T19:25:18.398Z"
+ },
+ {
+  "title": "Cyber AI Engineering Intern",
+  "company": "Carnegie Mellon University",
+  "location": "Pittsburgh, PA",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "AI/ML/Data"
+  ],
+  "blurb": "",
+  "url": "https://cmu.wd115.myworkdayjobs.com/cmu/job/Pittsburgh-PA/Cyber-AI-Engineering-Intern--Spring-2027-_2025346-1",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-13T00:00:00.000Z",
+  "id": "bfd156ae3181",
+  "firstSeen": "2026-11-15T19:25:18.398Z"
+ },
+ {
   "title": "Software Engineer - Block Storage",
   "company": "Hewlett Packard Enterprise",
   "location": "Bristol, UK",
@@ -3278,25 +3375,6 @@
   "board": "simplify:New-Grad-Positions",
   "postedAt": "2026-11-13T00:00:00.000Z",
   "id": "1dc4ecdb265d",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Associate Software Engineer",
-  "company": "Northrop Grumman",
-  "location": "McClellan Park, CA",
-  "mode": "unspecified",
-  "level": "entry",
-  "region": "americas",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-California-McClellan/XMLNAME-2027---Associate-Software-Engineer---McClellan-CA_R10260423",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:New-Grad-Positions",
-  "postedAt": "2026-11-13T00:00:00.000Z",
-  "id": "6f770bff2ab5",
   "firstSeen": "2026-11-13T20:31:05.952Z"
  },
  {
@@ -3640,6 +3718,25 @@
   "postedAt": "2026-11-13T00:00:00.000Z",
   "id": "d49d64425d76",
   "firstSeen": "2026-11-15T07:55:52.970Z"
+ },
+ {
+  "title": "Collections Business Analyst",
+  "company": "RBFCU",
+  "location": "San Antonio, TX",
+  "mode": "unspecified",
+  "level": "entry",
+  "region": "americas",
+  "tags": [
+   "AI/ML/Data"
+  ],
+  "blurb": "",
+  "url": "https://rbfcu.wd503.myworkdayjobs.com/RegionalJobsSanAntonio/job/ASC---San-Antonio/Collections-Business-Analyst_015548-5",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:New-Grad-Positions",
+  "postedAt": "2026-11-13T00:00:00.000Z",
+  "id": "e119e0985a80",
+  "firstSeen": "2026-11-15T19:25:18.398Z"
  },
  {
   "title": "Associate – Application Development",
@@ -4614,25 +4711,6 @@
   "firstSeen": "2026-11-13T20:31:05.952Z"
  },
  {
-  "title": "AI Research Intern - Time Series Foundation Models",
-  "company": "Robert Bosch Venture Capital",
-  "location": "Sunnyvale, CA",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "americas",
-  "tags": [
-   "AI/ML/Data"
-  ],
-  "blurb": "",
-  "url": "https://jobs.smartrecruiters.com/BoschGroup/744000161339309",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-12T16:12:36.000Z",
-  "id": "6a5f372c8ed7",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
   "title": "Senior Engineer, Backend, Vendor Management",
   "company": "Ramp",
   "location": "New York, NY (HQ), USA",
@@ -4865,25 +4943,6 @@
   "firstSeen": "2026-11-13T20:31:05.952Z"
  },
  {
-  "title": "Property and Casualty Underwriting Intern - Knowledge Management",
-  "company": "State Farm",
-  "location": "Richardson, TX; Bloomington, IL",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "americas",
-  "tags": [
-   "AI/ML/Data"
-  ],
-  "blurb": "",
-  "url": "https://jobs.statefarm.com/jobs/46442?icims=1&lang=en-us",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-12T14:18:00.000Z",
-  "id": "ba861d5e496d",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
   "title": "Staff Backend Engineer, Performance Enablement",
   "company": "GitLab",
   "location": "Remote, Poland",
@@ -4898,25 +4957,6 @@
   "board": "greenhouse:gitlab",
   "postedAt": "2026-11-12T14:14:54.000Z",
   "id": "3c3fb4b4c381",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Data Science Intern",
-  "company": "SharkNinja",
-  "location": "Needham, MA",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "americas",
-  "tags": [
-   "AI/ML/Data"
-  ],
-  "blurb": "",
-  "url": "https://job-boards.greenhouse.io/sharkninjaoperatingllc/jobs/4727539006",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-12T14:12:52.000Z",
-  "id": "3f38c0d9f2d7",
   "firstSeen": "2026-11-13T20:31:05.952Z"
  },
  {
@@ -5129,23 +5169,6 @@
   "board": "simplify:New-Grad-Positions",
   "postedAt": "2026-11-12T10:55:18.000Z",
   "id": "6e5ef700c3dd",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Member of Technical Staff 3 - Backend (EXA)",
-  "company": "Pure Storage",
-  "location": "Bangalore, India",
-  "mode": "unspecified",
-  "level": "staff",
-  "region": "india",
-  "tags": [],
-  "blurb": "",
-  "url": "https://job-boards.greenhouse.io/purestorage/jobs/8355355",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:purestorage",
-  "postedAt": "2026-11-12T10:40:20.000Z",
-  "id": "423005053854",
   "firstSeen": "2026-11-13T20:31:05.952Z"
  },
  {
@@ -6323,23 +6346,6 @@
   "board": "greenhouse:gitlab",
   "postedAt": "2026-11-11T03:03:12.000Z",
   "id": "4beedf1dfff4",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Manager II, Software Engineering",
-  "company": "Samsara",
-  "location": "Remote - Canada",
-  "mode": "remote",
-  "level": "senior",
-  "region": "remote",
-  "tags": [],
-  "blurb": "",
-  "url": "https://www.samsara.com/company/careers/roles/8376044?gh_jid=8376044",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:samsara",
-  "postedAt": "2026-11-11T01:58:59.000Z",
-  "id": "04cd0f2959de",
   "firstSeen": "2026-11-13T20:31:05.952Z"
  },
  {
@@ -9451,23 +9457,6 @@
   "firstSeen": "2026-11-10T09:59:31.843Z"
  },
  {
-  "title": "Staff Software Engineer, Government Products",
-  "company": "Robinhood",
-  "location": "New York, NY",
-  "mode": "unspecified",
-  "level": "staff",
-  "region": "americas",
-  "tags": [],
-  "blurb": "",
-  "url": "https://boards.greenhouse.io/robinhood/jobs/8333757?t=gh_src=&gh_jid=8333757",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:robinhood",
-  "postedAt": "2026-11-04T01:21:44.000Z",
-  "id": "933d210c17b9",
-  "firstSeen": "2026-11-10T09:59:31.843Z"
- },
- {
   "title": "Applied AI Architect ( Global Customers)",
   "company": "Anthropic",
   "location": "Bangalore, India",
@@ -12362,6 +12351,23 @@
   "postedAt": "2026-09-17T05:48:01.000Z",
   "id": "280ace370ed4",
   "firstSeen": "2026-11-10T09:59:31.843Z"
+ },
+ {
+  "title": "Senior Security Operations Engineer",
+  "company": "Pure Storage",
+  "location": "Bangalore, India",
+  "mode": "unspecified",
+  "level": "senior",
+  "region": "india",
+  "tags": [],
+  "blurb": "",
+  "url": "https://job-boards.greenhouse.io/purestorage/jobs/8179433",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:purestorage",
+  "postedAt": "2026-09-16T15:57:24.000Z",
+  "id": "ac209d1a1a5e",
+  "firstSeen": "2026-11-15T19:25:18.398Z"
  },
  {
   "title": "Forward Deployed Engineer",

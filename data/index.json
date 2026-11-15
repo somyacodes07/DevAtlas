@@ -1,5 +1,14 @@
 [
  {
+  "id": "2026-11-16-am",
+  "date": "2026-11-16",
+  "slot": "morning",
+  "number": 4,
+  "headline": "All AI-generated code should be Open Source",
+  "stories": 29,
+  "generatedAt": "2026-11-15T19:25:18.398Z"
+ },
+ {
   "id": "2026-11-15-am",
   "date": "2026-11-15",
   "slot": "morning",
