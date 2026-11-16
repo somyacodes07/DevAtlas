@@ -1,5 +1,14 @@
 [
  {
+  "id": "2026-11-16-pm",
+  "date": "2026-11-16",
+  "slot": "evening",
+  "number": 5,
+  "headline": "Article: Governed Autonomous Intelligence for Mission-Critical Utility",
+  "stories": 29,
+  "generatedAt": "2026-11-16T11:44:52.884Z"
+ },
+ {
   "id": "2026-11-16-am",
   "date": "2026-11-16",
   "slot": "morning",
