@@ -1,6 +1,10 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Sheet } from '@/components/Chrome';
 import { getLatest } from '@/lib/data';
+
+// Next marks the 404 page noindex by itself.
+export const metadata: Metadata = { title: 'Page not found' };
 
 export default function NotFound() {
   return (

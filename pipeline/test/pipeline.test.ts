@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
-import { deskBriefing, editionClock, rankStories, scoreStory, withGains } from '../src/editor';
+import { deskBriefing, editionClock, rankStories, scoreStory, usableBlurb, withGains } from '../src/editor';
 import { levelFor, mergeJobs, regionFor, selectForBoard, topEmployers, type RawJob } from '../src/sources/jobs';
 import { parseFeed, type RawStory } from '../src/sources/news';
 import { readIndex, saveEdition } from '../src/store';
@@ -147,4 +147,10 @@ test('withGains and deskBriefing use only the edition numbers', () => {
   assert.match(text, /“Lead”/);
   assert.match(text, /a\/b, up 100/);
   assert.match(text, /12 open roles, 3 new/);
+});
+
+test('usableBlurb drops link-only standfirsts', () => {
+  assert.equal(usableBlurb('https://www.fly.faa.gov/adv/adv_otherdis?adv_date=1113'), '');
+  assert.equal(usableBlurb('token'), '');
+  assert.equal(usableBlurb('A real sentence about it.'), 'A real sentence about it.');
 });

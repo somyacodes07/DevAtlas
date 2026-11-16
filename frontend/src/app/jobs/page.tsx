@@ -1,14 +1,16 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
 import { SectionHead, Sheet } from '@/components/Chrome';
 import { JobsBoard } from '@/components/JobsBoard';
 import { getJobs, getJobsFirstPage, getLatest } from '@/lib/data';
 import { num } from '@/lib/format';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: 'Developer jobs',
-  description: 'Software engineering jobs and internships in India, Europe and remote, refreshed twice a day.',
-  alternates: { canonical: '/jobs/' },
-};
+  description:
+    'Software engineering jobs and internships in India, Europe, the Americas and remote, read from employers’ own careers pages on Greenhouse, Lever and Ashby.',
+  path: '/jobs/',
+});
 
 export default function JobsPage() {
   const jobs = getJobs();

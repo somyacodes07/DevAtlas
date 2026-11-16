@@ -54,7 +54,7 @@ export function ThemeSwitch() {
 }
 
 /** A story's own picture, printed like a newspaper halftone. Hover or focus shows it in colour. */
-export function Photo({ src, credit, href }: { src: string; credit: string; href: string }) {
+export function Photo({ src, credit, href, priority = false }: { src: string; credit: string; href: string; priority?: boolean }) {
   const [dead, setDead] = useState(false);
   const img = useRef<HTMLImageElement>(null);
   useEffect(() => {
@@ -66,7 +66,7 @@ export function Photo({ src, credit, href }: { src: string; credit: string; href
     <figure className="photo">
       <a href={href} className="halftone" tabIndex={-1} aria-hidden="true">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img ref={img} src={src} alt="" loading="lazy" referrerPolicy="no-referrer" onError={() => setDead(true)} />
+        <img ref={img} src={src} alt="" loading={priority ? 'eager' : 'lazy'} fetchPriority={priority ? 'high' : 'auto'} decoding="async" referrerPolicy="no-referrer" onError={() => setDead(true)} />
       </a>
       <figcaption>Picture: {credit}</figcaption>
     </figure>

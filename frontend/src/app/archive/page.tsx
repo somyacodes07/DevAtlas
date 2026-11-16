@@ -1,14 +1,16 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
 import Link from 'next/link';
 import { SectionHead, Sheet, Unprinted } from '@/components/Chrome';
 import { getIndex, getLatest } from '@/lib/data';
 import { longDate, plural, pressTime, slotName } from '@/lib/format';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: 'Back issues',
-  description: 'Every edition of The DevAtlas from the last 30 days.',
-  alternates: { canonical: '/archive/' },
-};
+  description:
+    'Every edition of The DevAtlas from the last 30 days: morning and evening papers of developer news, open source and jobs.',
+  path: '/archive/',
+});
 
 export default function ArchivePage() {
   const index = getIndex();

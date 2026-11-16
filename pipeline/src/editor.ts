@@ -23,6 +23,9 @@ export function scoreStory(heat: number, publishedAt: string, now: Date): number
   return Math.round(100 * (0.25 + 0.75 * Math.min(1, Math.max(0, heat))) * freshness);
 }
 
+/** A standfirst that is only a link or a single token reads as noise; drop it. */
+export const usableBlurb = (text: string) => (/^https?:\/\//i.test(text.trim()) || !/\s/.test(text.trim()) ? '' : text);
+
 const titleKey = (title: string) => title.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 
 /** Dedupe across sources, score, mark what already ran, and pick the running order. */
@@ -38,7 +41,7 @@ export function rankStories(raw: RawStory[], previous: Edition | null, pastLeadI
     const carried = seenBefore.has(id);
     const score = Math.round(scoreStory(r.heat, r.publishedAt, now) * (carried ? 0.55 : 1));
     const story: Story = {
-      id, title: r.title.trim(), url, domain: domainOf(url), blurb: r.blurb, source: r.source,
+      id, title: r.title.trim(), url, domain: domainOf(url), blurb: usableBlurb(r.blurb), source: r.source,
       discussionUrl: r.discussionUrl, points: r.points, comments: r.comments, author: r.author,
       publishedAt: r.publishedAt, desk: deskFor(`${r.title} ${(r.tags ?? []).join(' ')}`), score,
       ...(carried ? { carried } : {}),

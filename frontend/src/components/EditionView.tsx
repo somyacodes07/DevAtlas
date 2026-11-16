@@ -36,7 +36,7 @@ export function EditionView({ edition: e, latest = true }: { edition: Edition; l
         </h1>
         <div className="lead-grid">
           <div className="lead-main">
-            {e.lead.image ? <Photo src={e.lead.image} credit={e.lead.domain} href={e.lead.url} /> : null}
+            {e.lead.image ? <Photo src={e.lead.image} credit={e.lead.domain} href={e.lead.url} priority /> : null}
             {e.lead.blurb ? <p className="deck">{e.lead.blurb}</p> : null}
             <p className="byline">
               {e.lead.author ? `Posted by ${e.lead.author} on ` : 'From '}
