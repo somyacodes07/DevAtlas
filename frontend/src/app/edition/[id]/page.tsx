@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { Sheet } from '@/components/Chrome';
 import { EditionView } from '@/components/EditionView';
 import { getEdition, getIndex } from '@/lib/data';
-import { longDate, slotName } from '@/lib/format';
+import { JsonLd, editionDescription, editionLd, editionTitle, pageMeta } from '@/lib/seo';
 
 export const dynamicParams = false;
 
@@ -16,11 +16,13 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const edition = getEdition((await params).id);
   if (!edition) return { title: 'Edition not found' };
-  return {
-    title: `${slotName(edition.slot)}, ${longDate(edition.date)}`,
-    description: edition.lead.title,
-    alternates: { canonical: `/edition/${edition.id}/` },
-  };
+  return pageMeta({
+    title: editionTitle(edition),
+    description: editionDescription(edition),
+    path: `/edition/${edition.id}/`,
+    type: 'article',
+    publishedAt: edition.generatedAt,
+  });
 }
 
 export default async function EditionPage({ params }: { params: Promise<{ id: string }> }) {
@@ -29,6 +31,7 @@ export default async function EditionPage({ params }: { params: Promise<{ id: st
   const latest = getIndex()[0]?.id === edition.id;
   return (
     <Sheet paper={edition} section="/archive/">
+      <JsonLd data={editionLd(edition, `/edition/${edition.id}/`)} />
       <EditionView edition={edition} latest={latest} />
     </Sheet>
   );

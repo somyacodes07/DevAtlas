@@ -140,6 +140,7 @@ export function Sheet({ paper, section, children }: { paper: Edition | null; sec
         <div>
           <p>
             <Link href="/about/">How the paper is made</Link>
+            <a href="/feed.xml">RSS feed</a>
             <a href={REPO_URL}>Source on GitHub</a>
           </p>
           <ApiStatus />

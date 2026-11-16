@@ -16,9 +16,9 @@ body {
   --hair: rgb(27 26 24 / 0.3);
   --wash: rgb(27 26 24 / 0.06);
   --spot: #b4271f;
-  --serif: 'Newsreader', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
-  --cond: 'Barlow Condensed', 'Arial Narrow', 'Helvetica Neue', sans-serif;
-  --plate: 'Manufacturing Consent', 'UnifrakturCook', 'Old English Text MT', 'Newsreader', serif;
+  --serif: var(--font-serif), 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  --cond: var(--font-cond), 'Arial Narrow', 'Helvetica Neue', sans-serif;
+  --plate: var(--font-plate), 'UnifrakturCook', 'Old English Text MT', 'Newsreader', serif;
   --gutter: clamp(1rem, 2.2vw, 1.75rem);
 
   margin: 0;

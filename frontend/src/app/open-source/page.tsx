@@ -1,14 +1,16 @@
 import type { Metadata } from 'next';
+import { JsonLd, pageMeta, reposLd } from '@/lib/seo';
 import { SectionHead, Sheet, Unprinted } from '@/components/Chrome';
 import { Exchange } from '@/components/Parts';
 import { getLatest } from '@/lib/data';
 import { num } from '@/lib/format';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: 'Open source exchange',
-  description: 'GitHub repositories under a month old with the most stars, and how many they gained since the last edition.',
-  alternates: { canonical: '/open-source/' },
-};
+  description:
+    'GitHub repositories under a month old with the most stars, and how many they gained since the last edition, updated twice a day.',
+  path: '/open-source/',
+});
 
 export default function OpenSourcePage() {
   const edition = getLatest();
@@ -17,6 +19,7 @@ export default function OpenSourcePage() {
   const debuts = edition.repos.filter((r) => r.gain === null).length;
   return (
     <Sheet paper={edition} section="/open-source/">
+      <JsonLd data={reposLd(edition.repos)} />
       <SectionHead title="Open source exchange" note={`${edition.repos.length} repositories listed`} />
       <p className="standfirst wide">
         Every repository here was created in the last 30 days and already has more than 200 stars. The change column

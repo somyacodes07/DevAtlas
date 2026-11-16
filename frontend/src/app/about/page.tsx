@@ -1,13 +1,15 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/seo';
 import { SectionHead, Sheet } from '@/components/Chrome';
 import { getLatest } from '@/lib/data';
 import { REPO_URL, pressTime } from '@/lib/format';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: 'How the paper is made',
-  description: 'Where The DevAtlas gets its stories, when it prints, and what it keeps.',
-  alternates: { canonical: '/about/' },
-};
+  description:
+    'Where The DevAtlas gets its stories and jobs, how it ranks them, when it prints, and the API and pipeline behind it.',
+  path: '/about/',
+});
 
 export default function AboutPage() {
   const edition = getLatest();

@@ -1,4 +1,4 @@
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://devatlas.pages.dev';
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://devatlas.somyacodes.in';
 export const REPO_URL = 'https://github.com/somyacodes07/DevAtlas';
 export const PRESS_TZ = 'Asia/Kolkata';
 

@@ -80,6 +80,25 @@ Next.js App Router with `output: 'export'`, hosted on Cloudflare Pages.
 
 If the API is unreachable the site still shows the last printed edition.
 
+### Search engines and link previews
+
+- **Preview cards:** every page has a 1200×630 card drawn at build time with
+  `next/og` (`src/lib/og.tsx`): the front page of the latest edition, one per
+  back issue, a display-ad page for jobs and a stock table for open source.
+  Fonts are fetched subset to the exact text on each card, so a card is about
+  75 KB and the build stays fast. The card URL carries a content hash, so
+  social sites refetch it when a new edition prints.
+- **Metadata:** `src/lib/seo.tsx` gives each page its title, description,
+  canonical URL, Open Graph and Twitter tags.
+- **Structured data:** `NewsMediaOrganization` and `WebSite` with a search
+  action on every page, `CollectionPage` with an `ItemList` of stories for
+  each edition, and `SoftwareSourceCode` entries for the repository table.
+- **Feeds and maps:** `/feed.xml` (RSS, one item per edition) and
+  `/sitemap.xml` with change frequency and priority.
+- **Speed:** fonts are self-hosted by `next/font` with size-matched fallbacks,
+  so no third-party stylesheet blocks rendering. `public/_headers` gives
+  fingerprinted assets a one-year immutable cache and sets security headers.
+
 ## Data
 
 | Where | Contents | Kept |
