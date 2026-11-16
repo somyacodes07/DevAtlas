@@ -272,8 +272,13 @@ main > .section-head:first-child { margin-top: 0; }
 /* ---------- Classifieds ---------- */
 
 .classifieds { columns: 4 15rem; column-gap: var(--gutter); column-rule: 1px solid var(--hair); font-size: 0.92rem; line-height: 1.34; padding-top: 0.3rem; }
-.ad { break-inside: avoid; padding: 0.5rem 0; border-bottom: 1px solid var(--hair); hyphens: auto; }
-.ad-title { font-family: var(--cond); font-weight: 600; font-size: 1.06rem; letter-spacing: 0.01em; }
+.ad { position: relative; break-inside: avoid; padding: 0.55rem 0.45rem; margin: 0 -0.45rem; border-bottom: 1px solid var(--hair); hyphens: auto; }
+.ad:hover, .ad:focus-within { background: var(--wash); }
+.ad:hover .ad-title, .ad:focus-within .ad-title { text-decoration-thickness: 2px; }
+.ad-title::after { content: ''; position: absolute; inset: 0; }
+.ad-title:focus-visible { outline: none; }
+.ad:has(.ad-title:focus-visible) { outline: 2px solid var(--ink); outline-offset: -2px; }
+.ad-title { font-family: var(--cond); font-weight: 600; font-size: 1.06rem; letter-spacing: 0.01em; text-decoration: underline; text-underline-offset: 0.16em; }
 .ad-company { font-weight: 600; }
 .ad-blurb { color: var(--ink-soft); }
 .ad-via { font-style: italic; color: var(--ink-soft); }
@@ -333,7 +338,9 @@ main > .section-head:first-child { margin-top: 0; }
 .display-ad li { padding: 0.1rem 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .display-ad-cta { font-family: var(--cond); font-weight: 600; text-decoration: underline; text-underline-offset: 0.18em; }
 
-.ad-proof { display: block; font-family: var(--cond); font-weight: 500; font-size: 0.86rem; color: var(--ink-soft); margin-top: 0.15rem; }
+.ad-foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.2rem 0.8rem; margin-top: 0.25rem; }
+.ad-proof { font-family: var(--cond); font-weight: 500; font-size: 0.86rem; color: var(--ink-soft); }
+.ad-apply { font-family: var(--cond); font-weight: 600; font-size: 0.92rem; white-space: nowrap; border-bottom: 1.5px solid currentColor; }
 .ad-direct::before { content: '✓ '; font-weight: 600; color: var(--ink); }
 
 .check { display: flex; align-items: center; gap: 0.5rem; font-family: var(--cond); font-weight: 600; min-height: 2.4rem; cursor: pointer; }
@@ -349,6 +356,11 @@ main > .section-head:first-child { margin-top: 0; }
 .severity { border: 1.5px solid currentColor; text-align: center; padding: 0.05rem 0.2rem; transform: rotate(-3deg); margin-top: 0.15rem; }
 
 /* ---------- Narrower sheets ---------- */
+
+/* Below this width the stamp would sit on the nameplate's last letter. */
+@media (max-width: 84rem) {
+  .seal { display: none; }
+}
 
 @media (max-width: 72rem) {
   .plate-row { grid-template-columns: 1fr; }

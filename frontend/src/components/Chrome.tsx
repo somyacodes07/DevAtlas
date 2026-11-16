@@ -123,7 +123,7 @@ export function Sheet({ paper, section, children }: { paper: Edition | null; sec
           ))}
           <form className="nav-search" action="/search/" role="search">
             <label htmlFor="nav-q">Search</label>
-            <input id="nav-q" name="q" type="search" placeholder="Search stories and jobs" maxLength={80} />
+            <input id="nav-q" name="q" type="search" placeholder="Search" maxLength={80} />
           </form>
         </nav>
         {paper ? <Ticker paper={paper} /> : null}

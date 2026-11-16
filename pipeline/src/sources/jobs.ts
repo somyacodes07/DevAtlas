@@ -231,7 +231,7 @@ async function simplify(repo: string, level: Job['level'], now: Date): Promise<R
   const cutoff = now.getTime() / 1000 - 14 * 86_400;
   return keep(
     (data ?? [])
-      .filter((p) => p.active && p.is_visible && p.date_posted > cutoff && /^(Software|AI\/ML\/Data)$/.test(p.category ?? ''))
+      .filter((p) => p.active && p.is_visible && p.date_posted > cutoff && /^(Software|AI\/ML\/Data)$/.test(p.category ?? '') && isEngineering(p.title ?? ''))
       .sort((a, b) => b.date_posted - a.date_posted)
       .slice(0, 70)
       .map((p) =>

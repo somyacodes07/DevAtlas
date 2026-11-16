@@ -115,19 +115,34 @@ export function EmployerAd({ employer }: { employer: Edition['employers'][number
 
 const MODE: Record<Job['mode'], string> = { remote: 'remote', hybrid: 'hybrid', 'on-site': 'on site', unspecified: '' };
 
-/** One job set like a classified ad: bold run-in title, then the facts and where the listing was verified. */
+const POSTED = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', timeZone: 'UTC' });
+
+/**
+ * One job set like a classified ad. The whole ad is the link: the title carries
+ * the href and a stretched ::after covers the card, so a tap anywhere on it opens
+ * the employer's posting in a new tab. The apply line says plainly where it goes.
+ */
 export function Classified({ job, full = false }: { job: Job; full?: boolean }) {
   const place = [job.location, MODE[job.mode] && !job.location.toLowerCase().includes(MODE[job.mode]) ? MODE[job.mode] : '']
     .filter(Boolean)
     .join(', ');
+  const posted = Number.isNaN(Date.parse(job.postedAt)) ? '' : POSTED.format(new Date(job.postedAt));
   return (
     <li className="ad">
-      <a href={job.url} className="ad-title">{job.title}.</a>{' '}
+      <a href={job.url} className="ad-title" target="_blank" rel="noopener noreferrer">
+        {job.title}
+      </a>{' '}
       <span className="ad-company">{job.company}</span>, {place}.
       {job.salary ? ` ${job.salary}.` : ''}
       {full && job.blurb ? <span className="ad-blurb"> {job.blurb}</span> : null}
-      <span className={`ad-proof ${job.direct ? 'ad-direct' : ''}`}>
-        {job.direct ? `Employer posting, ${job.via}` : `Listed on ${job.via}`}
+      <span className="ad-foot">
+        <span className={`ad-proof ${job.direct ? 'ad-direct' : ''}`}>
+          {job.direct ? `Employer posting, ${job.via}` : `Listed on ${job.via}`}
+          {posted ? `, posted ${posted}` : ''}
+        </span>
+        <span className="ad-apply" aria-hidden="true">
+          {job.direct ? `Apply at ${job.company}` : `View on ${job.via}`}
+        </span>
       </span>
     </li>
   );

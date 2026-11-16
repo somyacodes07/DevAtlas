@@ -65,7 +65,7 @@ test('rankStories merges duplicates and will not repeat a lead', () => {
   const stories = rankStories(
     [
       raw({ title: 'Big news', url: 'https://example.com/big?utm_source=hn', heat: 1 }),
-      raw({ title: 'Big news', url: 'https://example.com/big', source: 'Lobsters', heat: 0.4, blurb: 'Details here.' }),
+      raw({ title: 'Big news', url: 'https://example.com/big', source: 'Lobsters', heat: 0.4, blurb: 'Details about the big news here.' }),
       raw({ title: 'Second story', url: 'https://example.com/second', heat: 0.6 }),
     ],
     null,
@@ -74,7 +74,7 @@ test('rankStories merges duplicates and will not repeat a lead', () => {
   );
   assert.equal(stories.length, 2);
   assert.equal(stories[0].title, 'Big news');
-  assert.equal(stories[0].blurb, 'Details here.');
+  assert.equal(stories[0].blurb, 'Details about the big news here.');
 
   const again = rankStories(
     [raw({ title: 'Big news', url: 'https://example.com/big', heat: 1 }), raw({ title: 'Second story', url: 'https://example.com/second', heat: 0.6 })],
@@ -169,4 +169,27 @@ test('usableBlurb drops link-only standfirsts', () => {
   assert.equal(usableBlurb('https://www.fly.faa.gov/adv/adv_otherdis?adv_date=1113'), '');
   assert.equal(usableBlurb('token'), '');
   assert.equal(usableBlurb('A real sentence about it.'), 'A real sentence about it.');
+});
+
+test('usableBlurb drops placeholder standfirsts', () => {
+  assert.equal(usableBlurb('TO DO By Purnang Borah'), '');
+  assert.equal(usableBlurb('Too short.'), '');
+});
+
+test('publisher feeds get at most three stories, community sources more', () => {
+  const feedItems = Array.from({ length: 8 }, (_, i) =>
+    raw({ title: `Feed story ${i}`, url: `https://feed.dev/${i}`, source: 'InfoQ', heat: 0.15, publishedAt: '2026-11-10T07:50:00Z' }),
+  );
+  const hn = Array.from({ length: 8 }, (_, i) =>
+    raw({ title: `HN story ${i}`, url: `https://hn.dev/${i}`, points: 300, comments: 80, heat: 0.5 }),
+  );
+  const ranked = rankStories([...feedItems, ...hn], null, new Set(), now);
+  assert.equal(ranked.filter((s) => s.source === 'InfoQ').length, 3);
+  assert.equal(ranked.filter((s) => s.source === 'Hacker News').length, 8);
+  assert.equal(ranked[0].source, 'Hacker News');
+});
+
+test('feed titles lose their content-type prefix', () => {
+  const xml = '<rss><channel><item><title>Article: Governed Autonomy</title><link>https://infoq.com/a</link></item></channel></rss>';
+  assert.equal(parseFeed(xml, 'InfoQ')[0].title, 'Governed Autonomy');
 });
