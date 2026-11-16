@@ -14,7 +14,10 @@
 /opengraph-image
   Content-Type: image/png
   Cache-Control: public, max-age=3600
-/*/opengraph-image
+/jobs/opengraph-image
+  Content-Type: image/png
+  Cache-Control: public, max-age=3600
+/open-source/opengraph-image
   Content-Type: image/png
   Cache-Control: public, max-age=3600
 /edition/*/opengraph-image

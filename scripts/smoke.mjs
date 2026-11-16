@@ -44,12 +44,23 @@ const checks = [
   ['Ingest is locked without a token', `${api}/admin/ingest`, (r) => r.status === 401 || r.status === 503, { method: 'POST', body: '{}' }],
   ['Responses carry a request id', `${api}/editions`, (r) => Boolean(r.headers.get('x-request-id'))],
 ];
+// The newest edition id, so the site check can open that edition's page.
+let latestId = '';
+try {
+  latestId = (await (await fetch(`${api}/health`, { signal: AbortSignal.timeout(15_000) })).json()).latestEdition ?? '';
+} catch { /* the health check below reports it */ }
+
 if (site) {
   checks.push(
     ['Front page renders', `${site}/`, (r) => r.status === 200 && r.text.includes('DevAtlas') && r.text.includes('The briefing')],
     ['Jobs page renders', `${site}/jobs/`, (r) => r.status === 200 && r.text.includes('Situations vacant')],
     ['Search page renders', `${site}/search/`, (r) => r.status === 200],
     ['Back issues render', `${site}/archive/`, (r) => r.status === 200],
+    // These caught a broken deploy that served the pages above but not editions or icons.
+    ['Latest edition has its own page', `${site}/edition/${latestId}/`, (r) => r.status === 200 && r.text.includes('The briefing')],
+    ['Preview card is a PNG', `${site}/opengraph-image`, (r) => r.status === 200 && (r.headers.get('content-type') ?? '').startsWith('image/png')],
+    ['App icon is served', `${site}/icons/512.png`, (r) => r.status === 200],
+    ['RSS feed is served', `${site}/feed.xml`, (r) => r.status === 200 && r.text.includes('<rss')],
   );
 }
 

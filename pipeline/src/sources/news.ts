@@ -110,7 +110,8 @@ export function parseFeed(xml: string, source: string, limit = 8): RawStory[] {
   const blocks = xml.match(/<(item|entry)[\s>][\s\S]*?<\/\1>/gi) ?? [];
   const stories: RawStory[] = [];
   for (const block of blocks.slice(0, limit)) {
-    const title = stripHtml(tag(block, 'title'));
+    // InfoQ and others prefix the content type ("Article: …"); the paper's layout already says what it is.
+    const title = stripHtml(tag(block, 'title')).replace(/^(article|news|presentation|interview|minibook|emag):\s+/i, '');
     const href =
       block.match(/<link[^>]*rel=["']alternate["'][^>]*href=["']([^"']+)["']/i)?.[1] ??
       block.match(/<link[^>]*href=["']([^"']+)["']/i)?.[1] ??
@@ -125,7 +126,8 @@ export function parseFeed(xml: string, source: string, limit = 8): RawStory[] {
       source,
       author: stripHtml(tag(block, 'dc:creator')) || stripHtml(tag(tag(block, 'author'), 'name')) || undefined,
       publishedAt: toIso(tag(block, 'pubDate') || tag(block, 'published') || tag(block, 'updated')),
-      heat: 0.3,
+      // No votes to go on, so feeds rank like a quiet day on Hacker News, never above a busy one.
+      heat: 0.15,
     });
   }
   return stories;

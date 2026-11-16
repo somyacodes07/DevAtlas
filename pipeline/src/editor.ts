@@ -4,6 +4,8 @@ import { canonicalUrl, deskFor, domainOf, hashId } from './util';
 
 export const STORY_COUNT = 28;
 const PER_SOURCE_CAP = 12;
+/** Publisher feeds post many articles at once with no reader votes; keep them to a few slots each. */
+const FEED_CAP = 3;
 
 /** Which paper is this? Morning before 3pm local time, evening after. */
 /** Press times in UTC. They must match the two cron lines in .github/workflows/edition.yml. */
@@ -52,7 +54,13 @@ export function scoreStory(heat: number, publishedAt: string, now: Date): number
 }
 
 /** A standfirst that is only a link or a single token reads as noise; drop it. */
-export const usableBlurb = (text: string) => (/^https?:\/\//i.test(text.trim()) || !/\s/.test(text.trim()) ? '' : text);
+export const usableBlurb = (text: string) => {
+  const t = text.trim();
+  if (/^https?:\/\//i.test(t) || !/\s/.test(t)) return '';
+  // Placeholders some feeds publish before an editor fills them in, e.g. "TO DO By Jane Doe".
+  if (/^(to ?do|tbd|tba|n\/a|lorem ipsum|coming soon)\b/i.test(t) || t.length < 20) return '';
+  return text;
+};
 
 const titleKey = (title: string) => title.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 
@@ -91,7 +99,7 @@ export function rankStories(raw: RawStory[], previous: Edition | null, pastLeadI
     .filter((s) => {
       const used = perSource.get(s.source) ?? 0;
       perSource.set(s.source, used + 1);
-      return used < PER_SOURCE_CAP;
+      return used < (s.points === undefined ? FEED_CAP : PER_SOURCE_CAP);
     });
 
   // The front page should not lead with the same story twice in a row.
