@@ -4,9 +4,17 @@ name: Print edition
 # 13:17 UTC is 6:47 pm (evening edition). Off-the-hour minutes are used on
 # purpose: GitHub delays or drops scheduled runs at :00 when it is busy.
 on:
+  # Two lines rather than one, so each run knows which paper it is printing.
   schedule:
-    - cron: '17 1,13 * * *'
+    - cron: '17 1 * * *'
+    - cron: '17 13 * * *'
   workflow_dispatch:
+    inputs:
+      slot:
+        description: Which edition to print. "auto" goes by the clock in India.
+        type: choice
+        options: [auto, morning, evening]
+        default: auto
 
 permissions:
   contents: write
@@ -33,9 +41,25 @@ jobs:
 
       - run: npm ci
 
+      - name: Work out which edition this is
+        id: slot
+        env:
+          SCHEDULE: ${{ github.event.schedule }}
+          CHOSEN: ${{ inputs.slot }}
+        run: |
+          # A late scheduled run still prints the edition it was scheduled for.
+          case "$SCHEDULE" in
+            '17 1 * * *')  slot=morning ;;
+            '17 13 * * *') slot=evening ;;
+            *)             slot="${CHOSEN:-auto}" ;;
+          esac
+          echo "Printing the $slot edition (scheduled: ${SCHEDULE:-none}, started $(date -u '+%H:%M UTC'))."
+          echo "slot=$slot" >> "$GITHUB_OUTPUT"
+
       - name: Print the edition
         run: npm run print
         env:
+          EDITION_SLOT: ${{ steps.slot.outputs.slot }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Optional. With neither key the briefing is written by rule and the paper still prints.
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}

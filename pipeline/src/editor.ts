@@ -6,15 +6,43 @@ export const STORY_COUNT = 28;
 const PER_SOURCE_CAP = 12;
 
 /** Which paper is this? Morning before 3pm local time, evening after. */
-export function editionClock(now: Date, timeZone = process.env.EDITION_TZ || 'Asia/Kolkata'): { date: string; slot: Slot } {
+/** Press times in UTC. They must match the two cron lines in .github/workflows/edition.yml. */
+export const PRESS_UTC: Record<Slot, { hour: number; minute: number }> = {
+  morning: { hour: 1, minute: 17 },
+  evening: { hour: 13, minute: 17 },
+};
+
+function localParts(at: Date, timeZone: string) {
   const parts = new Intl.DateTimeFormat('en-CA', {
     timeZone, year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', hourCycle: 'h23',
-  }).formatToParts(now);
+  }).formatToParts(at);
   const get = (type: string) => parts.find((p) => p.type === type)?.value ?? '';
-  return {
-    date: `${get('year')}-${get('month')}-${get('day')}`,
-    slot: Number(get('hour')) < 15 ? 'morning' : 'evening',
-  };
+  return { date: `${get('year')}-${get('month')}-${get('day')}`, hour: Number(get('hour')) };
+}
+
+/**
+ * Which paper is this?
+ *
+ * GitHub often starts scheduled runs hours late, so the clock at run time is
+ * not a safe guide: a 6:47 pm run that starts after midnight would print as the
+ * next morning's paper and overwrite it. When the workflow says which press run
+ * fired (EDITION_SLOT), the edition is dated by that run's scheduled time
+ * instead: the most recent press time for the slot at or before now.
+ * Without it (local runs, manual runs), morning is before 3 pm local time.
+ */
+export function editionClock(
+  now: Date,
+  timeZone = process.env.EDITION_TZ || 'Asia/Kolkata',
+  slotHint: string | undefined = process.env.EDITION_SLOT,
+): { date: string; slot: Slot } {
+  if (slotHint === 'morning' || slotHint === 'evening') {
+    const { hour, minute } = PRESS_UTC[slotHint];
+    const scheduled = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), hour, minute));
+    if (scheduled > now) scheduled.setUTCDate(scheduled.getUTCDate() - 1);
+    return { date: localParts(scheduled, timeZone).date, slot: slotHint };
+  }
+  const local = localParts(now, timeZone);
+  return { date: local.date, slot: local.hour < 15 ? 'morning' : 'evening' };
 }
 
 export function scoreStory(heat: number, publishedAt: string, now: Date): number {
