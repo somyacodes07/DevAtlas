@@ -34,10 +34,26 @@ test('deskFor sorts stories to a desk', () => {
   assert.equal(deskFor('A walk in the park'), 'general');
 });
 
-test('editionClock uses India time: morning before 3pm, evening after', () => {
-  assert.deepEqual(editionClock(new Date('2026-11-10T01:17:00Z'), 'Asia/Kolkata'), { date: '2026-11-10', slot: 'morning' });
-  assert.deepEqual(editionClock(new Date('2026-11-10T13:17:00Z'), 'Asia/Kolkata'), { date: '2026-11-10', slot: 'evening' });
-  assert.deepEqual(editionClock(new Date('2026-11-10T20:00:00Z'), 'Asia/Kolkata'), { date: '2026-11-11', slot: 'morning' });
+test('editionClock without a hint uses India time: morning before 3pm, evening after', () => {
+  const clock = (iso: string) => editionClock(new Date(iso), 'Asia/Kolkata', '');
+  assert.deepEqual(clock('2026-11-10T01:17:00Z'), { date: '2026-11-10', slot: 'morning' });
+  assert.deepEqual(clock('2026-11-10T13:17:00Z'), { date: '2026-11-10', slot: 'evening' });
+  assert.deepEqual(clock('2026-11-10T20:00:00Z'), { date: '2026-11-11', slot: 'morning' });
+});
+
+test('editionClock with a hint dates a late run by its scheduled time', () => {
+  const clock = (iso: string, slot: string) => editionClock(new Date(iso), 'Asia/Kolkata', slot);
+  // The real runs that went wrong: the evening run started at 19:25 UTC (00:55 next day in India)
+  // and the next morning run at 08:03 UTC (1:33 pm). Both printed as the same morning paper.
+  assert.deepEqual(clock('2026-11-15T19:25:00Z', 'evening'), { date: '2026-11-15', slot: 'evening' });
+  assert.deepEqual(clock('2026-11-16T08:03:00Z', 'morning'), { date: '2026-11-16', slot: 'morning' });
+  // On time.
+  assert.deepEqual(clock('2026-11-16T01:17:30Z', 'morning'), { date: '2026-11-16', slot: 'morning' });
+  assert.deepEqual(clock('2026-11-16T13:20:00Z', 'evening'), { date: '2026-11-16', slot: 'evening' });
+  // An evening run so late it starts after midnight UTC still belongs to the day before.
+  assert.deepEqual(clock('2026-11-17T00:30:00Z', 'evening'), { date: '2026-11-16', slot: 'evening' });
+  // "auto" from a manual run falls back to the clock.
+  assert.deepEqual(clock('2026-11-16T13:20:00Z', 'auto'), { date: '2026-11-16', slot: 'evening' });
 });
 
 test('scoreStory rewards heat and freshness', () => {
