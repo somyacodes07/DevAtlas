@@ -1,5 +1,14 @@
 [
  {
+  "id": "2026-11-17-am",
+  "date": "2026-11-17",
+  "slot": "morning",
+  "number": 6,
+  "headline": "Windows 11 is collecting data on which coding agents and developer tools you use",
+  "stories": 29,
+  "generatedAt": "2026-11-17T09:12:19.568Z"
+ },
+ {
   "id": "2026-11-16-pm",
   "date": "2026-11-16",
   "slot": "evening",
