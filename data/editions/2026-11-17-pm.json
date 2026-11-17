@@ -1,0 +1,1235 @@
+{
+ "id": "2026-11-17-pm",
+ "date": "2026-11-17",
+ "slot": "evening",
+ "number": 7,
+ "generatedAt": "2026-11-17T21:45:21.931Z",
+ "lead": {
+  "id": "549a77347d5e",
+  "title": "GPT‑6.2 Astra and Sol",
+  "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+  "domain": "openai.com",
+  "blurb": "",
+  "source": "Hacker News",
+  "discussionUrl": "https://news.ycombinator.com/item?id=50535230",
+  "points": 869,
+  "comments": 528,
+  "author": "jasondavies",
+  "publishedAt": "2026-11-17T17:46:43.000Z",
+  "desk": "ai",
+  "score": 92
+ },
+ "stories": [
+  {
+   "id": "2722a52f92b9",
+   "title": "Apple Services Down",
+   "url": "https://developer.apple.com/system-status",
+   "domain": "developer.apple.com",
+   "blurb": "",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50535238",
+   "points": 522,
+   "comments": 283,
+   "author": "willy_k",
+   "publishedAt": "2026-11-17T17:47:14.000Z",
+   "desk": "general",
+   "score": 88
+  },
+  {
+   "id": "a589afa528f0",
+   "title": "New Evidence Shows School Phone Bans Are Gradually Improving Test Scores",
+   "url": "https://nytimes.com/2026/11/17/upshot/school-phone-bans-study-scores.html",
+   "domain": "nytimes.com",
+   "blurb": "",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50530163",
+   "points": 1071,
+   "comments": 532,
+   "author": "donohoe",
+   "publishedAt": "2026-11-17T11:45:51.000Z",
+   "desk": "general",
+   "score": 81
+  },
+  {
+   "id": "654cd43c8408",
+   "title": "Highly classified US national security communications network goes down",
+   "url": "https://cnn.com/2026/11/17/politics/highly-classified-national-security-communications-network-goes-down",
+   "domain": "cnn.com",
+   "blurb": "",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50532849",
+   "points": 336,
+   "comments": 470,
+   "author": "monkeydust",
+   "publishedAt": "2026-11-17T15:38:28.000Z",
+   "desk": "security",
+   "score": 76
+  },
+  {
+   "id": "b60814c79d7c",
+   "title": "Actual curl rewrites in rust",
+   "url": "https://daniel.haxx.se/blog/2026/11/17/actual-curl-rewrites-in-rust",
+   "domain": "daniel.haxx.se",
+   "blurb": "For a long time we have received repeated requests for, or questions about, a curl rewrite in rust. Often as a joke, but also seriously. A joke from years ago In this modern world of AIs, we have only been waiting for someone to prove it possible and now it seems we don't have to … Continue…",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/1dj9w1/actual_curl_rewrites_rust",
+   "points": 67,
+   "comments": 38,
+   "author": "dasm",
+   "publishedAt": "2026-11-17T13:37:05.550Z",
+   "desk": "systems",
+   "score": 71,
+   "image": "https://daniel.haxx.se/blog/wp-content/uploads/2023/09/old-machine.jpg"
+  },
+  {
+   "id": "715137d93524",
+   "title": "What is the best harness for each model?",
+   "url": "https://runta.com/blog/introducing-frontierharness-eval-v1-1",
+   "domain": "runta.com",
+   "blurb": "FrontierHarness Eval v1.1 ran 22 coding-agent harnesses with 5 models on the same 62 tasks, 4 times each: 27,280 runs. The best-value harness was different with each model, and cost ranks moved far between models. With the model fixed, the most expensive harness cost 1.8 to 5.0 times as much per…",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50532191",
+   "points": 293,
+   "comments": 103,
+   "author": "Edward40",
+   "publishedAt": "2026-11-17T14:53:43.000Z",
+   "desk": "general",
+   "score": 54,
+   "image": "https://runta.com/social/blog-introducing-frontierharness-eval-v1-1.png"
+  },
+  {
+   "id": "3da82e8464b9",
+   "title": "Nvidia stopped disclosing Singapore sales as revenues hit $104B",
+   "url": "https://ft.com/content/dbde7a30-548c-4f9d-a4be-7898a0c24dcf",
+   "domain": "ft.com",
+   "blurb": "",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50534631",
+   "points": 214,
+   "comments": 112,
+   "author": "louiereederson",
+   "publishedAt": "2026-11-17T17:12:06.000Z",
+   "desk": "general",
+   "score": 49
+  },
+  {
+   "id": "23791fed6fa0",
+   "title": "MAI Code 2 and Code 2 Flash",
+   "url": "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash",
+   "domain": "microsoft.ai",
+   "blurb": "",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50535885",
+   "points": 199,
+   "comments": 97,
+   "author": "lemonish97",
+   "publishedAt": "2026-11-17T18:25:13.000Z",
+   "desk": "general",
+   "score": 48,
+   "image": "https://microsoft.ai/wp-content/uploads/2026/11/MAI-Code-2-WithHeader-16x9-1.jpg"
+  },
+  {
+   "id": "069078b2b4e3",
+   "title": "How the Claude Code team thinks about verification",
+   "url": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification",
+   "domain": "claude.dev",
+   "blurb": "How end-to-end, property and differential tests let coding agents verify their work with evidence, and what the Claude Code team does to keep its verifiers honest.",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50529612",
+   "points": 228,
+   "comments": 178,
+   "author": "craigmart",
+   "publishedAt": "2026-11-17T10:20:40.000Z",
+   "desk": "ai",
+   "score": 46,
+   "image": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/og.png"
+  },
+  {
+   "id": "337421ce3ecc",
+   "title": "Top 7 Featured DEV Posts of the Week",
+   "url": "https://dev.to/devteam/top-7-featured-dev-posts-of-the-week-5hda",
+   "domain": "dev.to",
+   "blurb": "Welcome to this week's Top 7, where the DEV editorial team handpicks their favorite posts from the...",
+   "source": "DEV Community",
+   "points": 71,
+   "comments": 22,
+   "author": "Jem",
+   "publishedAt": "2026-11-17T14:00:00.000Z",
+   "desk": "general",
+   "score": 44
+  },
+  {
+   "id": "6f099656459b",
+   "title": "jQuery 4.1.0",
+   "url": "https://github.com/jquery/jquery/releases/tag/4.1.0",
+   "domain": "github.com",
+   "blurb": "https://blog.jquery.com/2026/11/17/jquery-4-1-0-and-3-8-0-released-passing-the-torch/ Ajax Add the responseURL field to jqXHR (#4339, 5691e03a) Support an alternative completeCallback API for tran...",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50537156",
+   "points": 149,
+   "comments": 65,
+   "author": "petecooper",
+   "publishedAt": "2026-11-17T19:50:40.000Z",
+   "desk": "general",
+   "score": 43
+  },
+  {
+   "id": "aa7b1d783c6b",
+   "title": "350 years ago, Ole Rømer discovered that light has a finite speed",
+   "url": "https://sciencenorway.no/culture-history-history-of-science/350-years-ago-this-man-discovered-that-light-has-a-finite-speed/2737969",
+   "domain": "sciencenorway.no",
+   "blurb": "Ole Rømer was the first to demonstrate that light takes time to travel.",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50536813",
+   "points": 136,
+   "comments": 38,
+   "author": "dxs",
+   "publishedAt": "2026-11-17T19:25:27.000Z",
+   "desk": "general",
+   "score": 40,
+   "image": "https://image.sciencenorway.no/2734539.jpg?imageId=2734539&x=0&y=12.76&cropw=100&croph=38.28&panox=0&panoy=12.76&panow=100&panoh=38.28&width=1200&height=683"
+  },
+  {
+   "id": "0818b59eab9a",
+   "title": "Phrack 73 Released",
+   "url": "https://phrack.org/issues/73/introduction_md",
+   "domain": "phrack.org",
+   "blurb": "Last year marked the 40th anniversary of Phrack so we went big. We published our anniversary launch release in print at Defcon 33, HOPE, WHY25 and some additional variations at several conferences around the world including AlligatorCon, B-Sides Canberra, Out of the Box, Datenspuren, DistrictCon…",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50535992",
+   "points": 159,
+   "comments": 7,
+   "author": "notmine1337",
+   "publishedAt": "2026-11-17T18:31:25.000Z",
+   "desk": "general",
+   "score": 40,
+   "image": "https://phrack.org/images/phrack-new.webp"
+  },
+  {
+   "id": "7265b41f1a45",
+   "title": "Solid 2.0",
+   "url": "https://solidjs.com/blog/solid-2-0-the-long-hold",
+   "domain": "solidjs.com",
+   "blurb": "",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50536387",
+   "points": 134,
+   "comments": 33,
+   "author": "pier25",
+   "publishedAt": "2026-11-17T18:56:17.000Z",
+   "desk": "general",
+   "score": 39
+  },
+  {
+   "id": "97ccc75ebb8e",
+   "title": "DEVengers Weekly #1: The MCP Reality Check, Career Moats, and 25 Weeks on the Radar 🚀",
+   "url": "https://dev.to/devengers/devengers-weekly-1-the-mcp-reality-check-career-moats-and-25-weeks-on-the-radar-23ec",
+   "domain": "dev.to",
+   "blurb": "Welcome to Issue #1 of DEVengers Weekly — our community-run digest spotlighting the developers,...",
+   "source": "DEV Community",
+   "points": 51,
+   "comments": 19,
+   "author": "Dhruv Jani",
+   "publishedAt": "2026-11-17T14:18:20.000Z",
+   "desk": "ai",
+   "score": 39
+  },
+  {
+   "id": "d97800a73912",
+   "title": "Github Redesign (2019)",
+   "url": "https://tonsky.me/blog/github-redesign",
+   "domain": "tonsky.me",
+   "blurb": "I suggest the conversation steer away from the controversial last point where he flattens the UI quite a bit to make it less \"dated\", as the rest was quite good up until that point, and that deserves being discussed.",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/kseyz1/github_redesign_2019",
+   "points": 34,
+   "comments": 8,
+   "author": "decentstates",
+   "publishedAt": "2026-11-17T09:28:18.950Z",
+   "desk": "general",
+   "score": 39
+  },
+  {
+   "id": "29f3572aa99b",
+   "title": "What is w2rt6byl5nf1opmc-a[.]com?",
+   "url": "https://jack.cab/blog/siterate.html",
+   "domain": "jack.cab",
+   "blurb": "",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/dgvb5g/what_is_w2rt6byl5nf1opmc_com",
+   "points": 71,
+   "comments": 13,
+   "author": "robalex",
+   "publishedAt": "2026-11-16T13:02:11.963Z",
+   "desk": "general",
+   "score": 39
+  },
+  {
+   "id": "36cf899b1962",
+   "title": "A datetime library for Rust",
+   "url": "https://burntsushi.net/jiff",
+   "domain": "burntsushi.net",
+   "blurb": "",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/dxxvek/datetime_library_for_rust",
+   "points": 150,
+   "comments": 45,
+   "author": "refi64",
+   "publishedAt": "2026-11-15T22:39:34.065Z",
+   "desk": "systems",
+   "score": 37
+  },
+  {
+   "id": "fafbabaecc68",
+   "title": "How Shopify Orchestrates AI-Powered Mobile App Development Without Overloading Developers' Machines",
+   "url": "https://infoq.com/news/2026/11/shopify-remote-ai-dev",
+   "domain": "infoq.com",
+   "blurb": "To prevent AI development workflows from exhausting developer machines' resources, Shopify built Remote Dev, a remote mobile development environment that enables AI agents to independently build, test and maintain iOS and Android applications and in parallel. By Sergio De Simone",
+   "source": "InfoQ",
+   "author": "Sergio De Simone",
+   "publishedAt": "2026-11-17T21:00:00.000Z",
+   "desk": "ai",
+   "score": 36
+  },
+  {
+   "id": "36b1c4b2b1aa",
+   "title": "Phrack 73",
+   "url": "https://phrack.org/issues/73/introduction_md.html",
+   "domain": "phrack.org",
+   "blurb": "",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/xu4ajj/phrack_73",
+   "points": 21,
+   "comments": 1,
+   "author": "lattera",
+   "publishedAt": "2026-11-17T17:40:32.622Z",
+   "desk": "security",
+   "score": 36
+  },
+  {
+   "id": "340c2ff0827f",
+   "title": "Quad9’s withdrawal from France: A canary in the coal mine",
+   "url": "https://blog.cloudflare.com/quad9-withdrawal-from-france",
+   "domain": "blog.cloudflare.com",
+   "blurb": "Quad9's forced withdrawal from France highlights the dangers of mandating DNS-level blocking. We explore why forcing public resolvers to act as content filters is technically flawed and threatens the open Internet.",
+   "source": "Cloudflare Blog",
+   "author": "Patrick Nemeroff",
+   "publishedAt": "2026-11-17T20:24:27.000Z",
+   "desk": "general",
+   "score": 35
+  },
+  {
+   "id": "dfa52e89374f",
+   "title": "Maintainers don’t need more AI bug reports. They need fixes.",
+   "url": "https://github.blog/open-source/maintainers/maintainers-dont-need-more-ai-bug-reports-they-need-fixes",
+   "domain": "github.blog",
+   "blurb": "In the Codename MDASH pilot, GitHub and Microsoft turned thousands of raw AI findings into 99 checked, private reports with suggested fixes for six widely used open source projects. Maintainers have already fixed more than half. The post Maintainers don’t need more AI bug reports. They need fixes…",
+   "source": "The GitHub Blog",
+   "author": "Ashley Wolf",
+   "publishedAt": "2026-11-17T18:29:29.000Z",
+   "desk": "ai",
+   "score": 34
+  },
+  {
+   "id": "964aca3f2d3b",
+   "title": "Building the Agent Host Protocol for sessions that continue across devices",
+   "url": "https://github.blog/engineering/engineering-principles/building-the-agent-host-protocol-for-sessions-that-continue-across-devices",
+   "domain": "github.blog",
+   "blurb": "Discover how we built the open Agent Host Protocol to keep your agent sessions accessible across editors, apps, phones, and the cloud. The post Building the Agent Host Protocol for sessions that continue across devices appeared first on The GitHub Blog .",
+   "source": "The GitHub Blog",
+   "author": "Connor Peet",
+   "publishedAt": "2026-11-17T18:20:40.000Z",
+   "desk": "ai",
+   "score": 34
+  },
+  {
+   "id": "d7980d5e9977",
+   "title": "How to Bypass Rust's Orphan Rule",
+   "url": "https://edvong.com/bypass-orphan-rule",
+   "domain": "edvong.com",
+   "blurb": "",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/oj87qu/how_bypass_rust_s_orphan_rule",
+   "points": 15,
+   "comments": 6,
+   "author": "lyxia",
+   "publishedAt": "2026-11-17T15:35:36.402Z",
+   "desk": "systems",
+   "score": 33
+  },
+  {
+   "id": "ba0181e5d490",
+   "title": "Steve Jobs Core Animation demo from WWDC 2007",
+   "url": "https://lucas.love/100/058",
+   "domain": "lucas.love",
+   "blurb": "",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/yqmfzq/steve_jobs_core_animation_demo_from_wwdc",
+   "points": 14,
+   "comments": 9,
+   "author": "jeanthomas",
+   "publishedAt": "2026-11-17T15:23:20.434Z",
+   "desk": "general",
+   "score": 33
+  },
+  {
+   "id": "08b6934a6d54",
+   "title": "Software is breaking down at a systemic level",
+   "url": "https://breck-mckye.com/blog/2026/11/software-is-breaking-down-at-a-systemic-level",
+   "domain": "breck-mckye.com",
+   "blurb": "",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/wifhdc/software_is_breaking_down_at_systemic",
+   "points": 36,
+   "comments": 10,
+   "author": "whymarrh",
+   "publishedAt": "2026-11-16T23:37:19.764Z",
+   "desk": "general",
+   "score": 33
+  },
+  {
+   "id": "f5637e2b08eb",
+   "title": "How Rust Changed Me As A Developer",
+   "url": "https://blog.startifact.com/posts/how-rust-changed-me",
+   "domain": "blog.startifact.com",
+   "blurb": "",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/s7mejx/how_rust_changed_me_as_developer",
+   "points": 39,
+   "comments": 18,
+   "author": "faassen",
+   "publishedAt": "2026-11-16T18:17:29.216Z",
+   "desk": "systems",
+   "score": 33
+  },
+  {
+   "id": "741185985e22",
+   "title": "Janet Reno was talking about my friend Coolio (computer criminal)",
+   "url": "https://michael.bacarella.com/2026/11/16/janet-reno-vs-my-friend-coolio",
+   "domain": "michael.bacarella.com",
+   "blurb": "",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/urcrqe/janet_reno_was_talking_about_my_friend",
+   "points": 44,
+   "comments": 18,
+   "author": "scanner_brightly",
+   "publishedAt": "2026-11-16T16:43:58.790Z",
+   "desk": "security",
+   "score": 33
+  },
+  {
+   "id": "8148552b8a3c",
+   "title": "Squircles",
+   "url": "https://linebender.org/wiki/curves/squircle",
+   "domain": "linebender.org",
+   "blurb": "",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/iihw5u/squircles",
+   "points": 51,
+   "comments": 7,
+   "author": "pushcx",
+   "publishedAt": "2026-11-16T13:56:54.181Z",
+   "desk": "general",
+   "score": 32
+  }
+ ],
+ "repos": [
+  {
+   "name": "storytold/craft-anything",
+   "url": "https://github.com/storytold/craft-anything",
+   "description": "Craft Anything: understand how any software works, and craft your own.",
+   "language": "Rust",
+   "stars": 35652,
+   "forks": 7182,
+   "createdAt": "2026-10-31T14:50:00.000Z",
+   "gain": 474
+  },
+  {
+   "name": "ccch1mneyyy/dsh-Go",
+   "url": "https://github.com/ccch1mneyyy/dsh-Go",
+   "description": "dsh-go — DeepSeek Harness 装进口袋：手机本机运行，也能遥控你的电脑。",
+   "language": "Dart",
+   "stars": 25958,
+   "forks": 1244,
+   "createdAt": "2026-10-25T08:09:52.000Z",
+   "gain": 604
+  },
+  {
+   "name": "deepseek-ai/dsh-superagent-prototype",
+   "url": "https://github.com/deepseek-ai/dsh-superagent-prototype",
+   "description": "Towards a More Autonomous Agent System",
+   "language": "TypeScript",
+   "stars": 23666,
+   "forks": 2914,
+   "createdAt": "2026-10-31T09:32:46.000Z",
+   "gain": 87
+  },
+  {
+   "name": "heydamir/unslop",
+   "url": "https://github.com/heydamir/unslop",
+   "description": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface",
+   "language": "JavaScript",
+   "stars": 17716,
+   "forks": 1039,
+   "createdAt": "2026-10-29T15:41:21.000Z",
+   "gain": 288
+  },
+  {
+   "name": "pengchujin/aerial-tv",
+   "url": "https://github.com/pengchujin/aerial-tv",
+   "description": "给国产电视的一块干净桌面：参照 tvOS 设计的开源 Android TV 桌面，没有广告，开机自动接管。A tvOS-style launcher for Xiaomi, TCL and other China-market TVs.",
+   "language": "Kotlin",
+   "stars": 12312,
+   "forks": 1070,
+   "createdAt": "2026-10-20T09:13:06.000Z",
+   "gain": 51
+  },
+  {
+   "name": "anefzaoui/misterdownloadmanager",
+   "url": "https://github.com/anefzaoui/misterdownloadmanager",
+   "description": "misterdownloadmanager: The ultimate open-source, clean-room download manager written from scratch in pure Rust for Windows, Mac, and Linux",
+   "language": "Rust",
+   "stars": 11986,
+   "forks": 1011,
+   "createdAt": "2026-10-29T01:25:19.000Z",
+   "gain": 604
+  },
+  {
+   "name": "JuneYaooo/rea-video",
+   "url": "https://github.com/JuneYaooo/rea-video",
+   "description": "Reverse-engineer any video, shot by shot: filmed, AI-generated or coded, and how to remake it. Breakdowns in the open VIDEO.md format. 逆向一切视频，逐个镜头看是拍的、AI…",
+   "language": "Python",
+   "stars": 10231,
+   "forks": 1507,
+   "createdAt": "2026-10-29T16:15:01.000Z",
+   "gain": 290
+  },
+  {
+   "name": "libracoder/kiri",
+   "url": "https://github.com/libracoder/kiri",
+   "description": "A small, fast container runtime for macOS, Windows and Linux with free Ngrok alternative",
+   "language": "Rust",
+   "stars": 10035,
+   "forks": 449,
+   "createdAt": "2026-11-02T16:11:30.000Z",
+   "gain": 583
+  },
+  {
+   "name": "janestreet/agent_skills",
+   "url": "https://github.com/janestreet/agent_skills",
+   "description": "Agent skills",
+   "language": "—",
+   "stars": 9858,
+   "forks": 667,
+   "createdAt": "2026-11-03T16:50:21.000Z",
+   "gain": 139
+  },
+  {
+   "name": "Minireel/HGhub",
+   "url": "https://github.com/Minireel/HGhub",
+   "description": "Plug-in media player",
+   "language": "Rust",
+   "stars": 9823,
+   "forks": 8299,
+   "createdAt": "2026-11-03T14:04:27.000Z",
+   "gain": 139
+  },
+  {
+   "name": "zortos293/Lichii",
+   "url": "https://github.com/zortos293/Lichii",
+   "description": "VERY experimental Nintendo Switch 2 emulator",
+   "language": "C++",
+   "stars": 9623,
+   "forks": 1549,
+   "createdAt": "2026-10-31T14:17:26.000Z",
+   "gain": 78
+  },
+  {
+   "name": "l0ng-ai/openidea",
+   "url": "https://github.com/l0ng-ai/openidea",
+   "description": "The IDE you know, rebuilt in Rust. IntelliJ IDEA–style keymap, tool windows and search-everywhere in a fast native app: editor, code insight, debugger, Git…",
+   "language": "TypeScript",
+   "stars": 9289,
+   "forks": 854,
+   "createdAt": "2026-10-21T12:23:14.000Z",
+   "gain": 54
+  },
+  {
+   "name": "wangzan101/Mika",
+   "url": "https://github.com/wangzan101/Mika",
+   "description": "An on-device AI agent for Android that operates apps and the web to get things done for you.",
+   "language": "Kotlin",
+   "stars": 8963,
+   "forks": 2030,
+   "createdAt": "2026-10-29T14:34:07.000Z",
+   "gain": 52
+  },
+  {
+   "name": "Jakeschincariol/day-trader-skill",
+   "url": "https://github.com/Jakeschincariol/day-trader-skill",
+   "description": "11 Claude skills for day trading: scan thousands of charts, track breaking news, time every entry and exit, and replay every outcome before you risk a dollar.",
+   "language": "Python",
+   "stars": 8392,
+   "forks": 2005,
+   "createdAt": "2026-10-20T14:17:54.000Z",
+   "gain": 132
+  },
+  {
+   "name": "rddmwmddr/android-ad-cleaner",
+   "url": "https://github.com/rddmwmddr/android-ad-cleaner",
+   "description": "关掉国产安卓手机系统里的广告、热搜、资讯推荐和营销推送。不 root，可还原，支持 AI 智能体一键执行。",
+   "language": "Python",
+   "stars": 8283,
+   "forks": 715,
+   "createdAt": "2026-10-24T05:35:47.000Z",
+   "gain": 43
+  },
+  {
+   "name": "unclebob/ub-mode",
+   "url": "https://github.com/unclebob/ub-mode",
+   "description": "",
+   "language": "—",
+   "stars": 8108,
+   "forks": 462,
+   "createdAt": "2026-10-25T16:04:09.000Z",
+   "gain": 28
+  },
+  {
+   "name": "huamidev/GestaltX",
+   "url": "https://github.com/huamidev/GestaltX",
+   "description": "An MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device presets, backups.",
+   "language": "Swift",
+   "stars": 8101,
+   "forks": 2693,
+   "createdAt": "2026-11-09T05:15:48.000Z",
+   "gain": 136
+  },
+  {
+   "name": "patch-gg/pixelfx",
+   "url": "https://github.com/patch-gg/pixelfx",
+   "description": "244 pixel art effects, every one a small piece of code. Plus a Claude Code skill to make your own.",
+   "language": "JavaScript",
+   "stars": 7969,
+   "forks": 1040,
+   "createdAt": "2026-10-30T06:43:25.000Z",
+   "gain": 92
+  },
+  {
+   "name": "valentderah/totk-pc-recomp",
+   "url": "https://github.com/valentderah/totk-pc-recomp",
+   "description": "Static recompilation of The Legend of Zelda: Tears of the Kingdom to native Windows and Linux x86-64, with a Vulkan renderer. Game files not included.",
+   "language": "C",
+   "stars": 7616,
+   "forks": 610,
+   "createdAt": "2026-10-29T12:32:46.000Z",
+   "gain": 65
+  },
+  {
+   "name": "LNPANDY/NX2Apple",
+   "url": "https://github.com/LNPANDY/NX2Apple",
+   "description": "Play your own Switch games on iPhone/iPad — one-click macOS app, no terminal. | 把 Switch 游戏装进 iPhone：图形界面一键构建，不用命令行。Bring your own game.",
+   "language": "Swift",
+   "stars": 7583,
+   "forks": 939,
+   "createdAt": "2026-10-20T18:16:07.000Z",
+   "gain": 70
+  },
+  {
+   "name": "anomalyco/rune",
+   "url": "https://github.com/anomalyco/rune",
+   "description": "Rune: Native UI framework",
+   "language": "Rust",
+   "stars": 7420,
+   "forks": 302,
+   "createdAt": "2026-10-22T05:51:40.000Z",
+   "gain": 46
+  },
+  {
+   "name": "RoutineMiku/apkstart",
+   "url": "https://github.com/RoutineMiku/apkstart",
+   "description": "Windows 上的安卓应用运行器：双击 APK 即装，应用以独立窗口与桌面图标运行，自持 QEMU 运行时",
+   "language": "JavaScript",
+   "stars": 7384,
+   "forks": 706,
+   "createdAt": "2026-10-29T13:44:03.000Z",
+   "gain": 424
+  },
+  {
+   "name": "anhao/ai-pose-gallery-zh",
+   "url": "https://github.com/anhao/ai-pose-gallery-zh",
+   "description": "中文版 AI 姿势参考图库 · 1439 组 / 2878 张图片 / 完整汉化 · 零依赖静态画廊",
+   "language": "TypeScript",
+   "stars": 7184,
+   "forks": 1825,
+   "createdAt": "2026-10-27T12:24:37.000Z",
+   "gain": 53
+  },
+  {
+   "name": "simbasjungles/free-my-tv",
+   "url": "https://github.com/simbasjungles/free-my-tv",
+   "description": "A fast, ad-free home screen for Google TV, LG webOS and Samsung Tizen. One button to undo.",
+   "language": "Java",
+   "stars": 6492,
+   "forks": 1155,
+   "createdAt": "2026-10-19T19:29:01.000Z",
+   "gain": 26
+  }
+ ],
+ "advisories": [
+  {
+   "id": "GHSA-gfv3-m769-5xm3",
+   "cve": "CVE-2026-53998",
+   "summary": "Phoenix: Format String Injection in applyChatTemplate",
+   "severity": "critical",
+   "packages": [
+    "arize-phoenix (pip)"
+   ],
+   "url": "https://github.com/advisories/GHSA-gfv3-m769-5xm3",
+   "publishedAt": "2026-11-17T20:02:29.000Z"
+  },
+  {
+   "id": "GHSA-x2vm-cf3p-m2w8",
+   "cve": "CVE-2026-119793",
+   "summary": "libp2p: gossipsub creates a permanent topics-map entry per distinct subscription with no cap in the default config",
+   "severity": "high",
+   "packages": [
+    "@libp2p/gossipsub (npm)"
+   ],
+   "url": "https://github.com/advisories/GHSA-x2vm-cf3p-m2w8",
+   "publishedAt": "2026-11-17T21:06:20.000Z"
+  },
+  {
+   "id": "GHSA-rvfr-cqwq-rc4j",
+   "cve": "CVE-2026-110789",
+   "summary": "libp2p: ASN.1 DER decoder drives an unbounded synchronous loop on attacker-controlled length fields, stalling the Node event loop pre-auth",
+   "severity": "high",
+   "packages": [
+    "@libp2p/crypto (npm)"
+   ],
+   "url": "https://github.com/advisories/GHSA-rvfr-cqwq-rc4j",
+   "publishedAt": "2026-11-17T21:05:08.000Z"
+  },
+  {
+   "id": "GHSA-r7hw-jx6r-756g",
+   "cve": "CVE-2026-110782",
+   "summary": "SAML2: Incomplete fix of CVE-2026-49283: unsigned embedded Response bypasses HTTP-Artifact signature verification (no embedded-Issuer binding)",
+   "severity": "high",
+   "packages": [
+    "simplesamlphp/saml2 (composer)"
+   ],
+   "url": "https://github.com/advisories/GHSA-r7hw-jx6r-756g",
+   "publishedAt": "2026-11-17T21:00:58.000Z"
+  },
+  {
+   "id": "GHSA-xhv5-8fpq-g7hf",
+   "cve": "CVE-2026-62336",
+   "summary": "qbee-agent: Local Privilege Escalation and Arbitrary File Tampering via Symlink Following in createFile helper",
+   "severity": "high",
+   "packages": [
+    "go.qbee.io/agent (go)"
+   ],
+   "url": "https://github.com/advisories/GHSA-xhv5-8fpq-g7hf",
+   "publishedAt": "2026-11-17T20:48:02.000Z"
+  },
+  {
+   "id": "GHSA-c5q4-97jw-jggh",
+   "cve": "CVE-2026-14265",
+   "summary": "AWS-advanced-jdbc-wrapper: Java Deserialization RCE via Cache Poisoning",
+   "severity": "high",
+   "packages": [
+    "software.amazon.jdbc:aws-advanced-jdbc-wrapper (maven)"
+   ],
+   "url": "https://github.com/advisories/GHSA-c5q4-97jw-jggh",
+   "publishedAt": "2026-11-17T20:39:21.000Z"
+  },
+  {
+   "id": "GHSA-c94f-87xg-65wf",
+   "cve": "CVE-2026-91115",
+   "summary": "Silverstripe Framework: RCE via i18nTextCollectorTask writer parameter",
+   "severity": "high",
+   "packages": [
+    "silverstripe/framework (composer)"
+   ],
+   "url": "https://github.com/advisories/GHSA-c94f-87xg-65wf",
+   "publishedAt": "2026-11-16T22:35:12.000Z"
+  },
+  {
+   "id": "GHSA-8vf2-hxg5-crqh",
+   "cve": "CVE-2026-129236",
+   "summary": "Kubeshark: MCP `start_kubeshark` argument injection via `pod_regex` → image redirect → cluster takeover",
+   "severity": "high",
+   "packages": [
+    "github.com/kubeshark/kubeshark (go)"
+   ],
+   "url": "https://github.com/advisories/GHSA-8vf2-hxg5-crqh",
+   "publishedAt": "2026-11-16T22:17:32.000Z"
+  }
+ ],
+ "classifieds": [
+  {
+   "title": "Senior Security Auditor",
+   "company": "Roblox",
+   "location": "Gurugram, Haryana, India",
+   "mode": "unspecified",
+   "level": "senior",
+   "region": "india",
+   "tags": [],
+   "blurb": "",
+   "url": "https://careers.roblox.com/jobs/8354724?gh_jid=8354724",
+   "via": "Greenhouse",
+   "direct": true,
+   "board": "greenhouse:roblox",
+   "postedAt": "2026-11-17T14:59:02.000Z",
+   "id": "8faa9295ba89",
+   "firstSeen": "2026-11-17T21:45:21.931Z"
+  },
+  {
+   "title": "Senior Software Engineer - Java Backend",
+   "company": "Toast",
+   "location": "Chennai",
+   "mode": "unspecified",
+   "level": "senior",
+   "region": "india",
+   "tags": [],
+   "blurb": "",
+   "url": "https://careers.toasttab.com/jobs?gh_jid=8392339",
+   "via": "Greenhouse",
+   "direct": true,
+   "board": "greenhouse:toast",
+   "postedAt": "2026-11-17T13:37:33.000Z",
+   "id": "483db4b00d77",
+   "firstSeen": "2026-11-17T21:45:21.931Z"
+  },
+  {
+   "title": "Engineering Manager",
+   "company": "Okta",
+   "location": "Bengaluru",
+   "mode": "unspecified",
+   "level": "senior",
+   "region": "india",
+   "tags": [],
+   "blurb": "",
+   "url": "https://www.okta.com/company/careers/opportunity/8395428?gh_jid=8395428",
+   "via": "Greenhouse",
+   "direct": true,
+   "board": "greenhouse:okta",
+   "postedAt": "2026-11-17T13:26:36.000Z",
+   "id": "97cd6859ed33",
+   "firstSeen": "2026-11-17T21:45:21.931Z"
+  },
+  {
+   "title": "Senior Software Engineer (Enterprise Advanced)",
+   "company": "MongoDB",
+   "location": "Gurugram",
+   "mode": "unspecified",
+   "level": "senior",
+   "region": "india",
+   "tags": [],
+   "blurb": "",
+   "url": "https://www.mongodb.com/careers/job/?gh_jid=8358101",
+   "via": "Greenhouse",
+   "direct": true,
+   "board": "greenhouse:mongodb",
+   "postedAt": "2026-11-17T11:23:14.000Z",
+   "id": "1bdc4cdfde95",
+   "firstSeen": "2026-11-17T21:45:21.931Z"
+  },
+  {
+   "title": "Sr. Staff Software Development Engineer (Backend Dev - C/DLP/Linux)",
+   "company": "Zscaler",
+   "location": "Bangalore, IND",
+   "mode": "unspecified",
+   "level": "staff",
+   "region": "india",
+   "tags": [],
+   "blurb": "",
+   "url": "https://job-boards.greenhouse.io/zscaler/jobs/5287177007",
+   "via": "Greenhouse",
+   "direct": true,
+   "board": "greenhouse:zscaler",
+   "postedAt": "2026-11-17T09:31:05.000Z",
+   "id": "a98d5672b621",
+   "firstSeen": "2026-11-17T21:45:21.931Z"
+  },
+  {
+   "title": "Collection Manager - Team Lead - Lending Collections ( Frontend)",
+   "company": "Paytm",
+   "location": "Delhi-NCR",
+   "mode": "on-site",
+   "level": "senior",
+   "region": "india",
+   "tags": [
+    "Lending Collections"
+   ],
+   "blurb": "About Us: Paytm is India's leading mobile payments and financial services distribution company. Pioneer of the mobile QR payments revolution in…",
+   "url": "https://jobs.lever.co/paytm/8c290eb7-2f7a-40e3-9fae-f4e9b752dd85",
+   "via": "Lever",
+   "direct": true,
+   "board": "lever:paytm",
+   "postedAt": "2026-11-17T07:33:46.277Z",
+   "id": "e6e1548d4ed5",
+   "firstSeen": "2026-11-17T09:12:19.568Z"
+  },
+  {
+   "title": "Staff Engineer",
+   "company": "Yugabyte",
+   "location": "India",
+   "mode": "unspecified",
+   "level": "staff",
+   "region": "india",
+   "tags": [],
+   "blurb": "",
+   "url": "https://job-boards.greenhouse.io/yugabyte/jobs/4727518006",
+   "via": "Greenhouse",
+   "direct": true,
+   "board": "greenhouse:yugabyte",
+   "postedAt": "2026-11-17T03:26:42.000Z",
+   "id": "12559ec35941",
+   "firstSeen": "2026-11-17T09:12:19.568Z"
+  },
+  {
+   "title": "Senior Software Engineer - CPD",
+   "company": "Rubrik",
+   "location": "Bengaluru",
+   "mode": "unspecified",
+   "level": "senior",
+   "region": "india",
+   "tags": [],
+   "blurb": "",
+   "url": "https://www.rubrik.com/company/careers/departments/job.8349850?gh_jid=8349850",
+   "via": "Greenhouse",
+   "direct": true,
+   "board": "greenhouse:rubrik",
+   "postedAt": "2026-11-17T00:01:38.000Z",
+   "id": "60501d9fbccb",
+   "firstSeen": "2026-11-17T09:12:19.568Z"
+  },
+  {
+   "title": "Engineering Manager, Core Infrastructure",
+   "company": "Stripe",
+   "location": "Bengaluru",
+   "mode": "unspecified",
+   "level": "senior",
+   "region": "india",
+   "tags": [],
+   "blurb": "",
+   "url": "https://stripe.com/jobs/search?gh_jid=8386610",
+   "via": "Greenhouse",
+   "direct": true,
+   "board": "greenhouse:stripe",
+   "postedAt": "2026-11-16T17:48:06.000Z",
+   "id": "2cc75c26e764",
+   "firstSeen": "2026-11-16T22:52:55.176Z"
+  },
+  {
+   "title": "Senior Staff Software Engineer",
+   "company": "Druva",
+   "location": "Pune, Maharashtra, India",
+   "mode": "unspecified",
+   "level": "staff",
+   "region": "india",
+   "tags": [],
+   "blurb": "",
+   "url": "https://www.druva.com/why-druva/explore/careers/jobs/8814695002/?gh_jid=8814695002",
+   "via": "Greenhouse",
+   "direct": true,
+   "board": "greenhouse:druva",
+   "postedAt": "2026-11-16T06:05:12.000Z",
+   "id": "65f060b390fd",
+   "firstSeen": "2026-11-16T08:03:42.726Z"
+  },
+  {
+   "title": "Senior Solutions Engineer - South India",
+   "company": "Wiz",
+   "location": "Bengaluru, India",
+   "mode": "unspecified",
+   "level": "senior",
+   "region": "india",
+   "tags": [],
+   "blurb": "",
+   "url": "https://www.wiz.io/careers/job/4728256006/:title?gh_jid=4728256006",
+   "via": "Greenhouse",
+   "direct": true,
+   "board": "greenhouse:wizinc",
+   "postedAt": "2026-11-16T02:13:00.000Z",
+   "id": "d2c13413122b",
+   "firstSeen": "2026-11-16T08:03:42.726Z"
+  },
+  {
+   "title": "Staff Software Engineer (App-Framework)",
+   "company": "Databricks",
+   "location": "Bengaluru, India",
+   "mode": "unspecified",
+   "level": "staff",
+   "region": "india",
+   "tags": [],
+   "blurb": "",
+   "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8944097002",
+   "via": "Greenhouse",
+   "direct": true,
+   "board": "greenhouse:databricks",
+   "postedAt": "2026-11-15T04:36:01.000Z",
+   "id": "bd731ae20a1a",
+   "firstSeen": "2026-11-15T07:55:52.970Z"
+  },
+  {
+   "title": "Cluster Head - Security & Investigation",
+   "company": "Meesho",
+   "location": "Hyderabad, Telangana",
+   "mode": "on-site",
+   "level": "mid",
+   "region": "india",
+   "tags": [
+    "Fulfilment"
+   ],
+   "blurb": "About the Team Being part of Meesho's Fulfillment and Experience (F&E) team, will zip you to the cockpit of our ever-burgeoning rocketship. And…",
+   "url": "https://jobs.lever.co/meesho/ccbd7b1c-35e5-4eee-a7cb-5704eed09897",
+   "via": "Lever",
+   "direct": true,
+   "board": "lever:meesho",
+   "postedAt": "2026-11-13T08:57:13.837Z",
+   "id": "4c33749c7e61",
+   "firstSeen": "2026-11-13T20:31:05.952Z"
+  },
+  {
+   "title": "Director, Engineering",
+   "company": "ZoomInfo",
+   "location": "Bengaluru, Karnataka, India",
+   "mode": "unspecified",
+   "level": "staff",
+   "region": "india",
+   "tags": [],
+   "blurb": "",
+   "url": "https://www.zoominfo.com/careers?gh_jid=8935562002",
+   "via": "Greenhouse",
+   "direct": true,
+   "board": "greenhouse:zoominfo",
+   "postedAt": "2026-11-13T07:45:06.000Z",
+   "id": "5d22ad67f547",
+   "firstSeen": "2026-11-13T20:31:05.952Z"
+  },
+  {
+   "title": "Solutions Architect",
+   "company": "Celonis",
+   "location": "Bangalore, India",
+   "mode": "unspecified",
+   "level": "staff",
+   "region": "india",
+   "tags": [],
+   "blurb": "",
+   "url": "https://job-boards.greenhouse.io/celonis/jobs/7991058003?gh_jid=7991058003",
+   "via": "Greenhouse",
+   "direct": true,
+   "board": "greenhouse:celonis",
+   "postedAt": "2026-11-13T06:00:35.000Z",
+   "id": "d2f2f12643f7",
+   "firstSeen": "2026-11-13T20:31:05.952Z"
+  },
+  {
+   "title": "Member of Technical Staff, Platform Architect",
+   "company": "Pure Storage",
+   "location": "Bangalore, India",
+   "mode": "unspecified",
+   "level": "staff",
+   "region": "india",
+   "tags": [],
+   "blurb": "",
+   "url": "https://job-boards.greenhouse.io/purestorage/jobs/8280658",
+   "via": "Greenhouse",
+   "direct": true,
+   "board": "greenhouse:purestorage",
+   "postedAt": "2026-11-12T10:13:23.000Z",
+   "id": "bcc6f5f1610f",
+   "firstSeen": "2026-11-13T20:31:05.952Z"
+  }
+ ],
+ "employers": [
+  {
+   "company": "GitLab",
+   "roles": 26,
+   "india": 20,
+   "titles": [
+    "Staff Software Engineer, Security Platform: Authentication",
+    "Engineering Manager, Security Platform: Authentication",
+    "Senior Solutions Architect"
+   ]
+  },
+  {
+   "company": "Zscaler",
+   "roles": 26,
+   "india": 20,
+   "titles": [
+    "Sr. Staff Software Development Engineer (Backend Dev - C/DLP/Linux)",
+    "Architect, Software Development",
+    "Staff Security Researcher, Exposure Management"
+   ]
+  },
+  {
+   "company": "MongoDB",
+   "roles": 26,
+   "india": 20,
+   "titles": [
+    "Senior Software Engineer (Enterprise Advanced)",
+    "Technical Services Engineer",
+    "Lead, Technical Services Engineer - Partners"
+   ]
+  },
+  {
+   "company": "Databricks",
+   "roles": 26,
+   "india": 20,
+   "titles": [
+    "Staff Software Engineer (App-Framework)",
+    "Senior Software Engineer - Backend Infrastructure",
+    "Staff Software Engineer- Databricks AI"
+   ]
+  },
+  {
+   "company": "Okta",
+   "roles": 26,
+   "india": 20,
+   "titles": [
+    "Engineering Manager",
+    "Demo Engineering Developer",
+    "Staff Software Engineer - Backend, Identity Threat Protection"
+   ]
+  },
+  {
+   "company": "Pure Storage",
+   "roles": 26,
+   "india": 20,
+   "titles": [
+    "Member of Technical Staff, Platform Architect",
+    "ServiceNow Platform Support",
+    "Member Of Technical Staff, Datapath Engineering (C,C++)"
+   ]
+  },
+  {
+   "company": "Sarvam AI",
+   "roles": 20,
+   "india": 20,
+   "titles": [
+    "Senior Software Engineer - Data Infrastructure",
+    "Software Development Engineer 3, Samvaad",
+    "SDE2 - API Platform"
+   ]
+  },
+  {
+   "company": "Celonis",
+   "roles": 24,
+   "india": 18,
+   "titles": [
+    "Solutions Architect",
+    "Lead Solutions Architect",
+    "Lead Deployment Engineer"
+   ]
+  }
+ ],
+ "jobsDirect": 885,
+ "jobsTotal": 900,
+ "jobsNew": 83,
+ "sources": [
+  {
+   "name": "Ars Technica",
+   "ok": true,
+   "count": 8,
+   "ms": 144
+  },
+  {
+   "name": "Ashby employer boards (25 of 25)",
+   "ok": true,
+   "count": 189,
+   "ms": 1057
+  },
+  {
+   "name": "Cloudflare Blog",
+   "ok": true,
+   "count": 8,
+   "ms": 317
+  },
+  {
+   "name": "DEV Community",
+   "ok": true,
+   "count": 20,
+   "ms": 260
+  },
+  {
+   "name": "GitHub advisories",
+   "ok": true,
+   "count": 8,
+   "ms": 638
+  },
+  {
+   "name": "GitHub repositories",
+   "ok": true,
+   "count": 24,
+   "ms": 1166
+  },
+  {
+   "name": "Greenhouse employer boards (55 of 55)",
+   "ok": true,
+   "count": 627,
+   "ms": 650
+  },
+  {
+   "name": "Hacker News",
+   "ok": true,
+   "count": 30,
+   "ms": 950
+  },
+  {
+   "name": "InfoQ",
+   "ok": true,
+   "count": 8,
+   "ms": 139
+  },
+  {
+   "name": "Lever employer boards (12 of 12)",
+   "ok": true,
+   "count": 93,
+   "ms": 10260
+  },
+  {
+   "name": "Lobsters",
+   "ok": true,
+   "count": 25,
+   "ms": 322
+  },
+  {
+   "name": "Remote OK",
+   "ok": true,
+   "count": 24,
+   "ms": 678
+  },
+  {
+   "name": "Remotive",
+   "ok": true,
+   "count": 16,
+   "ms": 321
+  },
+  {
+   "name": "SimplifyJobs New-Grad-Positions",
+   "ok": true,
+   "count": 70,
+   "ms": 669
+  },
+  {
+   "name": "SimplifyJobs Summer2027-Internships",
+   "ok": true,
+   "count": 70,
+   "ms": 613
+  },
+  {
+   "name": "The GitHub Blog",
+   "ok": true,
+   "count": 8,
+   "ms": 278
+  }
+ ],
+ "briefing": [
+  "Leading this evening’s paper is “GPT‑6.2 Astra and Sol”, reported by Hacker News, where it drew 869 points and 528 comments. Close behind: “Apple Services Down” from Hacker News.",
+  "On the open source exchange, storytold/craft-anything sits at the top of the table with 35,652 stars. The biggest mover is ccch1mneyyy/dsh-Go, up 604 since the last edition.",
+  "8 security advisories made the notices column, 1 of them critical. The situations vacant pages list 900 open roles, 83 new since the last edition."
+ ],
+ "briefingBy": "desk"
+}

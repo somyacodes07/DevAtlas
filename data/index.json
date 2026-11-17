@@ -1,5 +1,14 @@
 [
  {
+  "id": "2026-11-17-pm",
+  "date": "2026-11-17",
+  "slot": "evening",
+  "number": 7,
+  "headline": "GPT‑6.2 Astra and Sol",
+  "stories": 29,
+  "generatedAt": "2026-11-17T21:45:21.931Z"
+ },
+ {
   "id": "2026-11-17-am",
   "date": "2026-11-17",
   "slot": "morning",
