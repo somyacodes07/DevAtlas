@@ -1,5 +1,14 @@
 [
  {
+  "id": "2026-11-18-am",
+  "date": "2026-11-18",
+  "slot": "morning",
+  "number": 8,
+  "headline": "Java4Shell: RCE in OpenJDK when processing Base64",
+  "stories": 29,
+  "generatedAt": "2026-11-18T08:31:55.012Z"
+ },
+ {
   "id": "2026-11-17-pm",
   "date": "2026-11-17",
   "slot": "evening",
