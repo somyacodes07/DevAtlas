@@ -1,5 +1,14 @@
 [
  {
+  "id": "2026-11-18-pm",
+  "date": "2026-11-18",
+  "slot": "evening",
+  "number": 9,
+  "headline": "Unauthenticated remote code execution in Nginx",
+  "stories": 29,
+  "generatedAt": "2026-11-18T21:25:45.137Z"
+ },
+ {
   "id": "2026-11-18-am",
   "date": "2026-11-18",
   "slot": "morning",
