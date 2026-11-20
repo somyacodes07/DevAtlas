@@ -1,5 +1,14 @@
 [
  {
+  "id": "2026-11-20-pm",
+  "date": "2026-11-20",
+  "slot": "evening",
+  "number": 13,
+  "headline": "Hurried Announcement: Alessandro Masullo GRH",
+  "stories": 29,
+  "generatedAt": "2026-11-20T21:03:51.958Z"
+ },
+ {
   "id": "2026-11-20-am",
   "date": "2026-11-20",
   "slot": "morning",
