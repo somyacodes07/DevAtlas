@@ -1,5 +1,14 @@
 [
  {
+  "id": "2026-11-20-am",
+  "date": "2026-11-20",
+  "slot": "morning",
+  "number": 12,
+  "headline": "OpenSSL: Buffer overflow in EVP_EncodeBlock() (CVE-2026-121481, CVSS 9.8)",
+  "stories": 29,
+  "generatedAt": "2026-11-20T08:30:16.723Z"
+ },
+ {
   "id": "2026-11-19-pm",
   "date": "2026-11-19",
   "slot": "evening",
