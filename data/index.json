@@ -1,5 +1,14 @@
 [
  {
+  "id": "2026-11-21-am",
+  "date": "2026-11-21",
+  "slot": "morning",
+  "number": 14,
+  "headline": "Nasdaq erases all 2026 gains as AI sell-off dampens Anthropic’s second day",
+  "stories": 29,
+  "generatedAt": "2026-11-21T08:16:29.868Z"
+ },
+ {
   "id": "2026-11-20-pm",
   "date": "2026-11-20",
   "slot": "evening",
