@@ -1,5 +1,164 @@
 [
  {
+  "title": "Senior Platform Engineer, Replicate",
+  "company": "Cloudflare",
+  "location": "In-Office",
+  "mode": "on-site",
+  "level": "senior",
+  "region": "other",
+  "tags": [],
+  "blurb": "",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/8406944?gh_jid=8406944",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:cloudflare",
+  "postedAt": "2026-11-21T17:47:15.000Z",
+  "id": "6988834f59d2",
+  "firstSeen": "2026-11-21T20:05:06.749Z"
+ },
+ {
+  "title": "Creative AI Engineer",
+  "company": "Harvey",
+  "location": "San Francisco, USA",
+  "mode": "remote",
+  "level": "mid",
+  "region": "remote",
+  "salary": "$168.4K – $252.6K • Offers Equity • Offers Bonus",
+  "tags": [
+   "Marketing"
+  ],
+  "blurb": "WHY HARVEY At Harvey, we’re transforming how legal and professional services operate. By combining frontier agentic AI, an enterprise-grade…",
+  "url": "https://jobs.ashbyhq.com/harvey/e46d48b8-57c7-401c-be33-f56774dc072d",
+  "via": "Ashby",
+  "direct": true,
+  "board": "ashby:harvey",
+  "postedAt": "2026-11-21T17:44:35.163Z",
+  "id": "6f8da4c7ec2e",
+  "firstSeen": "2026-11-21T20:05:06.749Z"
+ },
+ {
+  "title": "Creative AI Engineer",
+  "company": "Harvey",
+  "location": "New York, USA",
+  "mode": "remote",
+  "level": "mid",
+  "region": "remote",
+  "salary": "$168.4K – $252.6K • Offers Equity • Offers Bonus",
+  "tags": [
+   "Marketing"
+  ],
+  "blurb": "WHY HARVEY At Harvey, we’re transforming how legal and professional services operate. By combining frontier agentic AI, an enterprise-grade…",
+  "url": "https://jobs.ashbyhq.com/harvey/a42047fc-fbd1-4e14-bf10-15207ae2d060",
+  "via": "Ashby",
+  "direct": true,
+  "board": "ashby:harvey",
+  "postedAt": "2026-11-21T17:44:26.219Z",
+  "id": "7e48fd8d4b9e",
+  "firstSeen": "2026-11-21T20:05:06.749Z"
+ },
+ {
+  "title": "Manager, Solutions Architect",
+  "company": "Together AI",
+  "location": "San Francisco",
+  "mode": "unspecified",
+  "level": "staff",
+  "region": "other",
+  "tags": [],
+  "blurb": "",
+  "url": "https://job-boards.greenhouse.io/togetherai/jobs/5300653007",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:togetherai",
+  "postedAt": "2026-11-21T17:18:06.000Z",
+  "id": "6b05001e6dcd",
+  "firstSeen": "2026-11-21T20:05:06.749Z"
+ },
+ {
+  "title": "Solutions Architect",
+  "company": "Together AI",
+  "location": "New York, NY",
+  "mode": "unspecified",
+  "level": "staff",
+  "region": "americas",
+  "tags": [],
+  "blurb": "",
+  "url": "https://job-boards.greenhouse.io/togetherai/jobs/5300712007",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:togetherai",
+  "postedAt": "2026-11-21T17:17:18.000Z",
+  "id": "b8816b3460ea",
+  "firstSeen": "2026-11-21T20:05:06.749Z"
+ },
+ {
+  "title": "Technical Support Engineer (Inference)",
+  "company": "Together AI",
+  "location": "Pune or Bangalore, India",
+  "mode": "unspecified",
+  "level": "mid",
+  "region": "india",
+  "tags": [],
+  "blurb": "",
+  "url": "https://job-boards.greenhouse.io/togetherai/jobs/5302660007",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:togetherai",
+  "postedAt": "2026-11-21T17:16:44.000Z",
+  "id": "cb2e526ff3da",
+  "firstSeen": "2026-11-21T20:05:06.749Z"
+ },
+ {
+  "title": "Research Engineer, Finetuning",
+  "company": "Anthropic",
+  "location": "San Francisco, CA | New York City, NY | Seattle, WA",
+  "mode": "unspecified",
+  "level": "mid",
+  "region": "americas",
+  "tags": [],
+  "blurb": "",
+  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5489567008",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:anthropic",
+  "postedAt": "2026-11-21T12:52:27.000Z",
+  "id": "355cc696bdba",
+  "firstSeen": "2026-11-21T20:05:06.749Z"
+ },
+ {
+  "title": "Manager, Applied AI Architect",
+  "company": "Anthropic",
+  "location": "Seoul, South Korea",
+  "mode": "unspecified",
+  "level": "staff",
+  "region": "asia-pacific",
+  "tags": [],
+  "blurb": "",
+  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5480986008",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:anthropic",
+  "postedAt": "2026-11-21T12:24:21.000Z",
+  "id": "41af56999857",
+  "firstSeen": "2026-11-21T20:05:06.749Z"
+ },
+ {
+  "title": "Senior AI Engineer - Enterprise Agentic Systems",
+  "company": "Rubrik",
+  "location": "Bangalore, India",
+  "mode": "unspecified",
+  "level": "senior",
+  "region": "india",
+  "tags": [],
+  "blurb": "",
+  "url": "https://www.rubrik.com/company/careers/departments/job.8358790?gh_jid=8358790",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:rubrik",
+  "postedAt": "2026-11-21T08:44:36.000Z",
+  "id": "4265e7ddf694",
+  "firstSeen": "2026-11-21T20:05:06.749Z"
+ },
+ {
   "title": "Junior Developer Co-op",
   "company": "Convverge",
   "location": "Calgary, AB, Canada",
@@ -265,23 +424,6 @@
   "firstSeen": "2026-11-21T08:16:29.868Z"
  },
  {
-  "title": "Head of Majors, Developer GTM",
-  "company": "Cloudflare",
-  "location": "Hybrid",
-  "mode": "hybrid",
-  "level": "staff",
-  "region": "other",
-  "tags": [],
-  "blurb": "",
-  "url": "https://boards.greenhouse.io/cloudflare/jobs/8400689?gh_jid=8400689",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:cloudflare",
-  "postedAt": "2026-11-21T00:44:54.000Z",
-  "id": "d44e95b50e32",
-  "firstSeen": "2026-11-21T08:16:29.868Z"
- },
- {
   "title": "Software Engineer",
   "company": "Waymo",
   "location": "PERM - N/A",
@@ -352,6 +494,25 @@
   "postedAt": "2026-11-21T00:00:14.000Z",
   "id": "83076adb7fb2",
   "firstSeen": "2026-11-21T08:16:29.868Z"
+ },
+ {
+  "title": "Software Engineer New Grad",
+  "company": "Secureframe",
+  "location": "NYC",
+  "mode": "unspecified",
+  "level": "entry",
+  "region": "other",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://jobs.ashbyhq.com/secureframe/ab69f040-9b87-4420-9150-edc6e4f54cfb/application?embed=true",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:New-Grad-Positions",
+  "postedAt": "2026-11-21T00:00:00.000Z",
+  "id": "ff733b261dbd",
+  "firstSeen": "2026-11-21T20:05:06.749Z"
  },
  {
   "title": "Junior Software Developer",
@@ -2651,23 +2812,6 @@
   "firstSeen": "2026-11-20T21:03:51.958Z"
  },
  {
-  "title": "Research Engineer, Beneficial Deployments",
-  "company": "Anthropic",
-  "location": "San Francisco, CA",
-  "mode": "unspecified",
-  "level": "mid",
-  "region": "americas",
-  "tags": [],
-  "blurb": "",
-  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5485188008",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:anthropic",
-  "postedAt": "2026-11-20T16:38:57.000Z",
-  "id": "4b0281e5cb76",
-  "firstSeen": "2026-11-20T21:03:51.958Z"
- },
- {
   "title": "Security Governance, Risk and Compliance (GRC) Manager",
   "company": "Canonical",
   "location": "Home based - EMEA; Office Based - London, UK",
@@ -2770,6 +2914,28 @@
   "postedAt": "2026-11-20T16:02:37.000Z",
   "id": "b18c51f2308b",
   "firstSeen": "2026-11-20T21:03:51.958Z"
+ },
+ {
+  "title": "Quality Engineer",
+  "company": "Quartermaster",
+  "location": "Arlington",
+  "mode": "remote",
+  "level": "mid",
+  "region": "remote",
+  "tags": [
+   "design",
+   "sys admin",
+   "customer support",
+   "testing"
+  ],
+  "blurb": "",
+  "url": "https://remoteOK.com/remote-jobs/remote-quality-engineer-quartermaster-1137914",
+  "via": "Remote OK",
+  "direct": false,
+  "board": "remoteok",
+  "postedAt": "2026-11-20T16:00:18.000Z",
+  "id": "4ef16cbaab71",
+  "firstSeen": "2026-11-21T20:05:06.749Z"
  },
  {
   "title": "AI Engineer/Consultant Intern",
@@ -3170,6 +3336,25 @@
   "firstSeen": "2026-11-20T21:03:51.958Z"
  },
  {
+  "title": "Technical Architect",
+  "company": "Dropbox",
+  "location": "Europe",
+  "mode": "remote",
+  "level": "staff",
+  "region": "remote",
+  "tags": [
+   "customer support"
+  ],
+  "blurb": "",
+  "url": "https://remoteOK.com/remote-jobs/remote-technical-architect-dropbox-1137908",
+  "via": "Remote OK",
+  "direct": false,
+  "board": "remoteok",
+  "postedAt": "2026-11-20T10:00:04.000Z",
+  "id": "d08ae88f9962",
+  "firstSeen": "2026-11-21T20:05:06.749Z"
+ },
+ {
   "title": "Principal Enterprise Architect - AI & Cloud Integrations",
   "company": "Celonis",
   "location": "Madrid, Spain",
@@ -3185,6 +3370,25 @@
   "postedAt": "2026-11-20T08:47:18.000Z",
   "id": "facce6bcf214",
   "firstSeen": "2026-11-20T21:03:51.958Z"
+ },
+ {
+  "title": "Art Director",
+  "company": "Abnormal",
+  "location": "US Only",
+  "mode": "remote",
+  "level": "staff",
+  "region": "remote",
+  "tags": [
+   "devops"
+  ],
+  "blurb": "",
+  "url": "https://remoteOK.com/remote-jobs/remote-art-director-abnormal-1137901",
+  "via": "Remote OK",
+  "direct": false,
+  "board": "remoteok",
+  "postedAt": "2026-11-20T08:20:14.000Z",
+  "id": "7891572c1024",
+  "firstSeen": "2026-11-21T20:05:06.749Z"
  },
  {
   "title": "Senior Product Architect",
@@ -3968,23 +4172,6 @@
   "board": "greenhouse:databricks",
   "postedAt": "2026-11-20T03:28:24.000Z",
   "id": "e861dced3a66",
-  "firstSeen": "2026-11-20T08:30:16.723Z"
- },
- {
-  "title": "Engineering Manager, Privacy Infrastructure",
-  "company": "Anthropic",
-  "location": "San Francisco, CA | New York City, NY",
-  "mode": "unspecified",
-  "level": "senior",
-  "region": "americas",
-  "tags": [],
-  "blurb": "",
-  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5490122008",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:anthropic",
-  "postedAt": "2026-11-20T03:04:34.000Z",
-  "id": "107a6bd29d53",
   "firstSeen": "2026-11-20T08:30:16.723Z"
  },
  {
@@ -6087,9 +6274,9 @@
   "firstSeen": "2026-11-21T08:16:29.868Z"
  },
  {
-  "title": "Software Engineer 0 – Full Stack Development",
-  "company": "Wyetech",
-  "location": "Annapolis Junction, MD",
+  "title": "Software Engineer Recent Grad - Verification IP Team",
+  "company": "Cadence Design Systems",
+  "location": "San Jose, CA",
   "mode": "unspecified",
   "level": "entry",
   "region": "americas",
@@ -6097,32 +6284,13 @@
    "Software"
   ],
   "blurb": "",
-  "url": "https://wyetech.applytojob.com/apply/orUQyoZnAb/SWE0Software-Engineer",
+  "url": "https://cadence.wd1.myworkdayjobs.com/University_Talent_NCG/job/SAN-JOSE/Software-Engineering--Verification-IP-Team--Recent-Grad-2026-_R55884",
   "via": "SimplifyJobs",
   "direct": true,
   "board": "simplify:New-Grad-Positions",
-  "postedAt": "2026-11-18T23:51:03.000Z",
-  "id": "bf70acd9060a",
-  "firstSeen": "2026-11-19T08:46:55.987Z"
- },
- {
-  "title": "Contract Student Worker - Software Engineer - 40hrs/wk",
-  "company": "Zoox",
-  "location": "Foster City, CA",
-  "mode": "unspecified",
-  "level": "entry",
-  "region": "americas",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://jobs.lever.co/zoox/839d987e-2236-4efe-8753-ee208b8d4e29/apply",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:New-Grad-Positions",
-  "postedAt": "2026-11-18T23:49:51.000Z",
-  "id": "26c3dfdf689a",
-  "firstSeen": "2026-11-19T08:46:55.987Z"
+  "postedAt": "2026-11-19T00:00:00.000Z",
+  "id": "29f2c68c6885",
+  "firstSeen": "2026-11-21T20:05:06.749Z"
  },
  {
   "title": "Enterprise Solutions Engineer, West",
@@ -8357,46 +8525,6 @@
   "firstSeen": "2026-11-14T07:39:26.608Z"
  },
  {
-  "title": "Compliance Engineer",
-  "company": "Harvey",
-  "location": "San Francisco, USA",
-  "mode": "remote",
-  "level": "mid",
-  "region": "remote",
-  "salary": "$218.4K – $327.6K • Offers Equity • OTE (75/25 split)",
-  "tags": [
-   "Business Operations"
-  ],
-  "blurb": "WHY HARVEY At Harvey, we’re transforming how legal and professional services operate. By combining frontier agentic AI, an enterprise-grade…",
-  "url": "https://jobs.ashbyhq.com/harvey/5c10c348-0ad1-4dbe-a58a-dc32ba882d97",
-  "via": "Ashby",
-  "direct": true,
-  "board": "ashby:harvey",
-  "postedAt": "2026-11-13T23:22:36.749Z",
-  "id": "66ca570c6484",
-  "firstSeen": "2026-11-14T07:39:26.608Z"
- },
- {
-  "title": "Compliance Engineer",
-  "company": "Harvey",
-  "location": "New York, USA",
-  "mode": "remote",
-  "level": "mid",
-  "region": "remote",
-  "salary": "$218.4K – $327.6K • Offers Equity • OTE (75/25 split)",
-  "tags": [
-   "Business Operations"
-  ],
-  "blurb": "WHY HARVEY At Harvey, we’re transforming how legal and professional services operate. By combining frontier agentic AI, an enterprise-grade…",
-  "url": "https://jobs.ashbyhq.com/harvey/09fe3d93-8c13-49a2-b8f8-d53f0edb91f2",
-  "via": "Ashby",
-  "direct": true,
-  "board": "ashby:harvey",
-  "postedAt": "2026-11-13T23:22:33.521Z",
-  "id": "0b69b60dffb3",
-  "firstSeen": "2026-11-21T08:16:29.868Z"
- },
- {
   "title": "Senior Data Scientist, Experimentation",
   "company": "Robinhood",
   "location": "Menlo Park, CA",
@@ -9273,143 +9401,6 @@
   "board": "ashby:supabase",
   "postedAt": "2026-11-12T02:49:10.278Z",
   "id": "0252d33abcca",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Engineering Manager - Pipelines",
-  "company": "Supabase",
-  "location": "Remote, Global",
-  "mode": "remote",
-  "level": "senior",
-  "region": "remote",
-  "tags": [
-   "Pipelines"
-  ],
-  "blurb": "ABOUT SUPABASE Supabase is the Postgres development platform, built by developers for developers. We provide a complete backend solution including…",
-  "url": "https://jobs.ashbyhq.com/supabase/51da9786-43c9-446e-bb84-653b17b5d6ac",
-  "via": "Ashby",
-  "direct": true,
-  "board": "ashby:supabase",
-  "postedAt": "2026-11-12T02:33:40.725Z",
-  "id": "2c7a65233f0f",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Software Engineer - Virtual Platform",
-  "company": "Rubrik",
-  "location": "Palo Alto, CA",
-  "mode": "unspecified",
-  "level": "mid",
-  "region": "americas",
-  "tags": [],
-  "blurb": "",
-  "url": "https://www.rubrik.com/company/careers/departments/job.8351288?gh_jid=8351288",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:rubrik",
-  "postedAt": "2026-11-11T22:54:29.000Z",
-  "id": "d4a5855507b1",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Hardware Development Engineer",
-  "company": "Rubrik",
-  "location": "Palo Alto, CA",
-  "mode": "unspecified",
-  "level": "mid",
-  "region": "americas",
-  "tags": [],
-  "blurb": "",
-  "url": "https://www.rubrik.com/company/careers/departments/job.8351041?gh_jid=8351041",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:rubrik",
-  "postedAt": "2026-11-11T22:47:23.000Z",
-  "id": "83d6d4ec3580",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Developer Relations Engineer",
-  "company": "Supabase",
-  "location": "Remote, Global",
-  "mode": "remote",
-  "level": "mid",
-  "region": "remote",
-  "tags": [
-   "Marketing"
-  ],
-  "blurb": "ABOUT SUPABASE Supabase is the Postgres development platform, built by developers for developers. We provide a complete backend solution including…",
-  "url": "https://jobs.ashbyhq.com/supabase/26f7817d-ca92-4094-a2b5-f22e07a218c4",
-  "via": "Ashby",
-  "direct": true,
-  "board": "ashby:supabase",
-  "postedAt": "2026-11-11T22:44:19.400Z",
-  "id": "5c60f8740530",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Remote Office Assistant",
-  "company": "Coalition Technologies",
-  "location": "Worldwide",
-  "mode": "remote",
-  "level": "mid",
-  "region": "remote",
-  "salary": "$35,3k- $52k",
-  "tags": [
-   "CSS",
-   "excel",
-   "frontend",
-   "git"
-  ],
-  "blurb": "Coalition Technologies is seeking a reliable, detail-oriented, and highly organized Remote Office Assistant to support administrative, bookkeeping…",
-  "url": "https://remotive.com/remote-jobs/marketing/remote-office-assistant-1680495",
-  "via": "Remotive",
-  "direct": false,
-  "board": "remotive",
-  "postedAt": "2026-11-11T20:17:48.000Z",
-  "id": "4d8f49855b16",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Support Engineer",
-  "company": "Sardine",
-  "location": "Mexico, Mexico",
-  "mode": "remote",
-  "level": "mid",
-  "region": "remote",
-  "salary": "MX$826K – MX$1M • Offers Equity",
-  "tags": [
-   "Support Engineering"
-  ],
-  "blurb": "Who we are: Sardine is the leading agentic risk platform for fighting financial crime. Our integrated solution unifies data across risk teams to…",
-  "url": "https://jobs.ashbyhq.com/sardine/6f2e7d74-5e18-4c5d-acac-0735ccb8e0be",
-  "via": "Ashby",
-  "direct": true,
-  "board": "ashby:sardine",
-  "postedAt": "2026-11-11T19:18:32.194Z",
-  "id": "ba6b82b74f72",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Senior Data Engineer",
-  "company": "Lemon.io",
-  "location": "LATAM, Europe, USA, Canada, APAC",
-  "mode": "remote",
-  "level": "senior",
-  "region": "remote",
-  "tags": [
-   ".Net",
-   "android",
-   "apache",
-   "AWS"
-  ],
-  "blurb": "Lemon.io helps companies in the US and Europe hire experienced engineers, from funded startups to teams like Klarna, Retool, and Pinterest. We’ve…",
-  "url": "https://remotive.com/remote-jobs/data/senior-data-engineer-2091137",
-  "via": "Remotive",
-  "direct": false,
-  "board": "remotive",
-  "postedAt": "2026-11-11T18:39:59.000Z",
-  "id": "17cb282ed4ef",
   "firstSeen": "2026-11-13T20:31:05.952Z"
  },
  {
@@ -10451,7 +10442,7 @@
   "firstSeen": "2026-11-10T09:59:31.843Z"
  },
  {
-  "title": "Sr AI Engineer, Agentic Systems",
+  "title": "Senior AI Engineer - Enterprise Agentic Systems",
   "company": "Rubrik",
   "location": "Bengaluru, India",
   "mode": "unspecified",
@@ -10893,7 +10884,7 @@
   "firstSeen": "2026-11-10T09:59:31.843Z"
  },
  {
-  "title": "Senior Applied AI Engineer",
+  "title": "Senior AI Engineer - Enterprise Agentic Systems",
   "company": "Rubrik",
   "location": "Bangalore",
   "mode": "unspecified",
@@ -10910,7 +10901,7 @@
   "firstSeen": "2026-11-10T09:59:31.843Z"
  },
  {
-  "title": "Senior AI API Platform Engineer",
+  "title": "Senior AI Engineer - Enterprise Agentic Systems",
   "company": "Rubrik",
   "location": "Bangalore, India",
   "mode": "unspecified",
@@ -11137,7 +11128,7 @@
   "firstSeen": "2026-11-10T09:59:31.843Z"
  },
  {
-  "title": "Senior AI Evals Engineer",
+  "title": "Senior AI Engineer - Enterprise Agentic Systems",
   "company": "Rubrik",
   "location": "Bangalore",
   "mode": "unspecified",
