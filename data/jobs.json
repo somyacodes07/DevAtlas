@@ -197,6 +197,63 @@
   "firstSeen": "2026-11-21T08:16:29.868Z"
  },
  {
+  "title": "VP, Customer Experience Operations",
+  "company": "Ping Identity",
+  "location": "US Only",
+  "mode": "remote",
+  "level": "staff",
+  "region": "remote",
+  "tags": [
+   "devops"
+  ],
+  "blurb": "",
+  "url": "https://remoteOK.com/remote-jobs/remote-vp-customer-experience-operations-ping-identity-1137949",
+  "via": "Remote OK",
+  "direct": false,
+  "board": "remoteok",
+  "postedAt": "2026-11-21T05:20:06.000Z",
+  "id": "a2ddcb5fc623",
+  "firstSeen": "2026-11-22T07:58:56.123Z"
+ },
+ {
+  "title": "Senior Software Engineer - Behavioral Security Products",
+  "company": "Abnormal",
+  "location": "UK Only",
+  "mode": "remote",
+  "level": "senior",
+  "region": "remote",
+  "tags": [
+   "devops"
+  ],
+  "blurb": "",
+  "url": "https://remoteOK.com/remote-jobs/remote-senior-software-engineer-behavioral-security-products-abnormal-1137948",
+  "via": "Remote OK",
+  "direct": false,
+  "board": "remoteok",
+  "postedAt": "2026-11-21T05:20:05.000Z",
+  "id": "f34de9165be0",
+  "firstSeen": "2026-11-22T07:58:56.123Z"
+ },
+ {
+  "title": "Engineering Manager, Ranking Platform",
+  "company": "Reddit",
+  "location": "US Only",
+  "mode": "remote",
+  "level": "senior",
+  "region": "remote",
+  "tags": [
+   "devops"
+  ],
+  "blurb": "",
+  "url": "https://remoteOK.com/remote-jobs/remote-engineering-manager-ranking-platform-reddit-1137946",
+  "via": "Remote OK",
+  "direct": false,
+  "board": "remoteok",
+  "postedAt": "2026-11-21T05:00:05.000Z",
+  "id": "16611c5f23d6",
+  "firstSeen": "2026-11-22T07:58:56.123Z"
+ },
+ {
   "title": "Senior Software Engineer (Frontend) - MFA, Assurance, Policies and Hybrid Access",
   "company": "Okta",
   "location": "Toronto, ON, Canada",
@@ -212,6 +269,101 @@
   "postedAt": "2026-11-21T04:57:00.000Z",
   "id": "5844ce3b9a1d",
   "firstSeen": "2026-11-21T08:16:29.868Z"
+ },
+ {
+  "title": "Principal Software Engineer, Infrastructure",
+  "company": "Reddit",
+  "location": "US Only",
+  "mode": "remote",
+  "level": "staff",
+  "region": "remote",
+  "tags": [
+   "devops"
+  ],
+  "blurb": "",
+  "url": "https://remoteOK.com/remote-jobs/remote-principal-software-engineer-infrastructure-reddit-1137945",
+  "via": "Remote OK",
+  "direct": false,
+  "board": "remoteok",
+  "postedAt": "2026-11-21T04:40:06.000Z",
+  "id": "d74f412372b2",
+  "firstSeen": "2026-11-22T07:58:56.123Z"
+ },
+ {
+  "title": "Lead, Office of Software Assurance",
+  "company": "Natera",
+  "location": "US Only",
+  "mode": "remote",
+  "level": "senior",
+  "region": "remote",
+  "tags": [
+   "devops"
+  ],
+  "blurb": "",
+  "url": "https://remoteOK.com/remote-jobs/remote-lead-office-of-software-assurance-natera-1137940",
+  "via": "Remote OK",
+  "direct": false,
+  "board": "remoteok",
+  "postedAt": "2026-11-21T04:00:04.000Z",
+  "id": "a6bc501188f9",
+  "firstSeen": "2026-11-22T07:58:56.123Z"
+ },
+ {
+  "title": "Business Services Assistant",
+  "company": "Ping Identity",
+  "location": "UK Only",
+  "mode": "remote",
+  "level": "mid",
+  "region": "remote",
+  "tags": [
+   "devops"
+  ],
+  "blurb": "",
+  "url": "https://remoteOK.com/remote-jobs/remote-business-services-assistant-ping-identity-1137936",
+  "via": "Remote OK",
+  "direct": false,
+  "board": "remoteok",
+  "postedAt": "2026-11-21T03:20:04.000Z",
+  "id": "6563d9b8897d",
+  "firstSeen": "2026-11-22T07:58:56.123Z"
+ },
+ {
+  "title": "Senior Staff Machine Learning Engineer, Ads Ranking",
+  "company": "Reddit",
+  "location": "US Only",
+  "mode": "remote",
+  "level": "staff",
+  "region": "remote",
+  "tags": [
+   "product"
+  ],
+  "blurb": "",
+  "url": "https://remoteOK.com/remote-jobs/remote-senior-staff-machine-learning-engineer-ads-ranking-reddit-1137932",
+  "via": "Remote OK",
+  "direct": false,
+  "board": "remoteok",
+  "postedAt": "2026-11-21T02:40:04.000Z",
+  "id": "3f6be278d090",
+  "firstSeen": "2026-11-22T07:58:56.123Z"
+ },
+ {
+  "title": "Sr. Security Operations Manager",
+  "company": "Carrot",
+  "location": "Worldwide",
+  "mode": "remote",
+  "level": "senior",
+  "region": "remote",
+  "tags": [
+   "exec"
+  ],
+  "blurb": "",
+  "url": "https://remoteOK.com/remote-jobs/remote-sr-security-operations-manager-carrot-1137930",
+  "via": "Remote OK",
+  "direct": false,
+  "board": "remoteok",
+  "postedAt": "2026-11-21T02:20:05.000Z",
+  "id": "b354ece46580",
+  "firstSeen": "2026-11-22T07:58:56.123Z"
  },
  {
   "title": "Systems Engineer - Network Software Performance",
@@ -316,6 +468,44 @@
   "firstSeen": "2026-11-21T08:16:29.868Z"
  },
  {
+  "title": "Staff Scientist, Machine Learning (Genomics)",
+  "company": "Natera",
+  "location": "US Only",
+  "mode": "remote",
+  "level": "staff",
+  "region": "remote",
+  "tags": [
+   "programming"
+  ],
+  "blurb": "",
+  "url": "https://remoteOK.com/remote-jobs/remote-staff-scientist-machine-learning-genomics-natera-1137926",
+  "via": "Remote OK",
+  "direct": false,
+  "board": "remoteok",
+  "postedAt": "2026-11-21T01:40:04.000Z",
+  "id": "7a5bea03a644",
+  "firstSeen": "2026-11-22T07:58:56.123Z"
+ },
+ {
+  "title": "Senior Software Engineer II - Agentic Intelligence",
+  "company": "Honeycomb.io",
+  "location": "Canada Only",
+  "mode": "remote",
+  "level": "senior",
+  "region": "remote",
+  "tags": [
+   "programming"
+  ],
+  "blurb": "",
+  "url": "https://remoteOK.com/remote-jobs/remote-senior-software-engineer-ii-agentic-intelligence-honeycomb-io-1137924",
+  "via": "Remote OK",
+  "direct": false,
+  "board": "remoteok",
+  "postedAt": "2026-11-21T01:20:20.000Z",
+  "id": "b94be670e672",
+  "firstSeen": "2026-11-22T07:58:56.123Z"
+ },
+ {
   "title": "ADAS Platform Tools Intern",
   "company": "Lucid Motors",
   "location": "Newark, CA",
@@ -371,6 +561,44 @@
   "postedAt": "2026-11-21T01:09:09.000Z",
   "id": "b5f3bed1f821",
   "firstSeen": "2026-11-21T08:16:29.868Z"
+ },
+ {
+  "title": "Sr Mgr, Software Engineering (Cribl Detect)",
+  "company": "Cribl",
+  "location": "US Only",
+  "mode": "remote",
+  "level": "senior",
+  "region": "remote",
+  "tags": [
+   "programming"
+  ],
+  "blurb": "",
+  "url": "https://remoteOK.com/remote-jobs/remote-sr-mgr-software-engineering-cribl-detect-cribl-1137923",
+  "via": "Remote OK",
+  "direct": false,
+  "board": "remoteok",
+  "postedAt": "2026-11-21T01:00:06.000Z",
+  "id": "4b51465c02d8",
+  "firstSeen": "2026-11-22T07:58:56.123Z"
+ },
+ {
+  "title": "Technical Solutions Engineer",
+  "company": "Stripe",
+  "location": "US Only",
+  "mode": "remote",
+  "level": "mid",
+  "region": "remote",
+  "tags": [
+   "programming"
+  ],
+  "blurb": "",
+  "url": "https://remoteOK.com/remote-jobs/remote-technical-solutions-engineer-stripe-1137922",
+  "via": "Remote OK",
+  "direct": false,
+  "board": "remoteok",
+  "postedAt": "2026-11-21T01:00:04.000Z",
+  "id": "1b938a2358bd",
+  "firstSeen": "2026-11-22T07:58:56.123Z"
  },
  {
   "title": "Head of Startups, Developer GTM",
@@ -6979,7 +7207,7 @@
   "firstSeen": "2026-11-18T08:31:55.012Z"
  },
  {
-  "title": "Senior Staff Software Development Engineer",
+  "title": "Senior Staff Software Development Engineer- (Rust/C++/Go) + Networking",
   "company": "Zscaler",
   "location": "Bangalore, IND",
   "mode": "unspecified",
@@ -6996,7 +7224,7 @@
   "firstSeen": "2026-11-18T08:31:55.012Z"
  },
  {
-  "title": "Senior Software Development Engineer",
+  "title": "Senior Software Development Engineer- (Rust/C++/Go) + Networking",
   "company": "Zscaler",
   "location": "Bangalore, IND",
   "mode": "unspecified",
@@ -9019,23 +9247,6 @@
   "firstSeen": "2026-11-13T20:31:05.952Z"
  },
  {
-  "title": "Senior Engineering Manager, Kuwait",
-  "company": "Scale AI",
-  "location": "Kuwait City, Kuwait",
-  "mode": "unspecified",
-  "level": "senior",
-  "region": "other",
-  "tags": [],
-  "blurb": "",
-  "url": "https://job-boards.greenhouse.io/scaleai/jobs/4753437005",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:scaleai",
-  "postedAt": "2026-11-12T18:07:34.000Z",
-  "id": "9945f32a41cd",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
   "title": "Software Engineer - UI Test",
   "company": "Rubrik",
   "location": "Bangalore, India",
@@ -9053,111 +9264,6 @@
   "firstSeen": "2026-11-13T20:31:05.952Z"
  },
  {
-  "title": "Sr Software Engineer II - Ads Manager (Front End)",
-  "company": "Instacart",
-  "location": "United States - Remote",
-  "mode": "remote",
-  "level": "senior",
-  "region": "remote",
-  "tags": [],
-  "blurb": "",
-  "url": "https://instacart.careers/job/?gh_jid=8383513",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:instacart",
-  "postedAt": "2026-11-12T17:29:43.000Z",
-  "id": "7c784eb17015",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Senior Solution Architect, MSP",
-  "company": "Druva",
-  "location": "Remote, UK",
-  "mode": "remote",
-  "level": "staff",
-  "region": "remote",
-  "tags": [],
-  "blurb": "",
-  "url": "https://www.druva.com/why-druva/explore/careers/jobs/8923932002/?gh_jid=8923932002",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:druva",
-  "postedAt": "2026-11-12T17:21:33.000Z",
-  "id": "9017b0cea08f",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Senior Software Engineer, Consumer Revenue",
-  "company": "Discord",
-  "location": "San Francisco Bay Area",
-  "mode": "unspecified",
-  "level": "senior",
-  "region": "other",
-  "tags": [],
-  "blurb": "",
-  "url": "https://job-boards.greenhouse.io/discord/jobs/8731320002",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:discord",
-  "postedAt": "2026-11-12T17:05:32.000Z",
-  "id": "f722688af901",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Security Incident Manager",
-  "company": "Instacart",
-  "location": "Canada - Remote (ON, AB, BC, or NS Only)",
-  "mode": "remote",
-  "level": "senior",
-  "region": "remote",
-  "tags": [],
-  "blurb": "",
-  "url": "https://instacart.careers/job/?gh_jid=8383333",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:instacart",
-  "postedAt": "2026-11-12T17:03:36.000Z",
-  "id": "348c54c4469b",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Security Incident Manager",
-  "company": "Instacart",
-  "location": "United States - Remote",
-  "mode": "remote",
-  "level": "senior",
-  "region": "remote",
-  "tags": [],
-  "blurb": "",
-  "url": "https://instacart.careers/job/?gh_jid=8383331",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:instacart",
-  "postedAt": "2026-11-12T17:03:29.000Z",
-  "id": "31b5b9923aba",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Application Security Engineer",
-  "company": "LangChain",
-  "location": "San Francisco, CA, United States",
-  "mode": "on-site",
-  "level": "mid",
-  "region": "americas",
-  "salary": "$220K – $350K • Offers Equity",
-  "tags": [
-   "Engineering"
-  ],
-  "blurb": "ABOUT US At LangChain, our mission is to enable every company to own its intelligence. We believe agents will transform how companies operate, and…",
-  "url": "https://jobs.ashbyhq.com/langchain/5095871a-9af2-4521-8c63-ff0d852f7354",
-  "via": "Ashby",
-  "direct": true,
-  "board": "ashby:langchain",
-  "postedAt": "2026-11-12T16:39:22.498Z",
-  "id": "4ed027b2f741",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
   "title": "Technical Services Engineer",
   "company": "MongoDB",
   "location": "Bengaluru; Gurugram",
@@ -9172,78 +9278,6 @@
   "board": "greenhouse:mongodb",
   "postedAt": "2026-11-12T15:18:56.000Z",
   "id": "baec15e56bef",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Full Stack Engineer",
-  "company": "Sonar",
-  "location": "Geneva",
-  "mode": "on-site",
-  "level": "mid",
-  "region": "europe",
-  "tags": [
-   "Business Technology"
-  ],
-  "blurb": "Who is Sonar? Sonar enables organizations to ship agentic code with confidence. Code creation is abundant, but confidence is scarce. Our core…",
-  "url": "https://jobs.lever.co/sonarsource/abcfa050-35f9-4545-87d2-cece138c588d",
-  "via": "Lever",
-  "direct": true,
-  "board": "lever:sonarsource",
-  "postedAt": "2026-11-12T14:48:36.878Z",
-  "id": "c76270edb7a7",
-  "firstSeen": "2026-11-16T22:52:55.176Z"
- },
- {
-  "title": "Staff Machine Learning Engineer, Ads Foundational Representations",
-  "company": "Reddit",
-  "location": "New York City, NY",
-  "mode": "unspecified",
-  "level": "staff",
-  "region": "americas",
-  "tags": [],
-  "blurb": "",
-  "url": "https://job-boards.greenhouse.io/reddit/jobs/8382925",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:reddit",
-  "postedAt": "2026-11-12T14:11:21.000Z",
-  "id": "d05ff0ccfa05",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Advisory Solutions Architect, MSP (New Product Intro)",
-  "company": "Rubrik",
-  "location": "Remote - United States",
-  "mode": "remote",
-  "level": "staff",
-  "region": "remote",
-  "tags": [],
-  "blurb": "",
-  "url": "https://www.rubrik.com/company/careers/departments/job.8352451?gh_jid=8352451",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:rubrik",
-  "postedAt": "2026-11-12T14:10:55.000Z",
-  "id": "7461dbac5e41",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Forward Deployed Architect",
-  "company": "Notion",
-  "location": "Dublin, Ireland, Ireland",
-  "mode": "unspecified",
-  "level": "staff",
-  "region": "europe",
-  "tags": [
-   "Sales"
-  ],
-  "blurb": "WHO WE ARE Notion is the collaborative AI workspace where teams and agents think together https://www.youtube.com/watch?v=vkpYpWfEK5s. We're…",
-  "url": "https://jobs.ashbyhq.com/notion/31c2d810-ddb3-40f6-b883-c1c7f999ac69",
-  "via": "Ashby",
-  "direct": true,
-  "board": "ashby:notion",
-  "postedAt": "2026-11-12T12:59:46.804Z",
-  "id": "2543aede1ec3",
   "firstSeen": "2026-11-13T20:31:05.952Z"
  },
  {
@@ -9382,25 +9416,6 @@
   "board": "greenhouse:zscaler",
   "postedAt": "2026-11-12T04:21:02.000Z",
   "id": "3bed407c80f0",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Engineering Manager - Realtime",
-  "company": "Supabase",
-  "location": "Remote, Global",
-  "mode": "remote",
-  "level": "senior",
-  "region": "remote",
-  "tags": [
-   "Realtime"
-  ],
-  "blurb": "ABOUT SUPABASE Supabase is the Postgres development platform, built by developers for developers. We provide a complete backend solution including…",
-  "url": "https://jobs.ashbyhq.com/supabase/33caf92a-986f-4695-a84c-792720ff832d",
-  "via": "Ashby",
-  "direct": true,
-  "board": "ashby:supabase",
-  "postedAt": "2026-11-12T02:49:10.278Z",
-  "id": "0252d33abcca",
   "firstSeen": "2026-11-13T20:31:05.952Z"
  },
  {

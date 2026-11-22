@@ -1,5 +1,14 @@
 [
  {
+  "id": "2026-11-22-am",
+  "date": "2026-11-22",
+  "slot": "morning",
+  "number": 16,
+  "headline": "Toyota, Nissan, and Honda to standardize parts to lower costs",
+  "stories": 29,
+  "generatedAt": "2026-11-22T07:58:56.123Z"
+ },
+ {
   "id": "2026-11-21-pm",
   "date": "2026-11-21",
   "slot": "evening",
