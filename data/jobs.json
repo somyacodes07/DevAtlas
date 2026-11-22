@@ -1,5 +1,176 @@
 [
  {
+  "title": "Senior Staff Data Scientist - Reputation (Inference)",
+  "company": "Airbnb",
+  "location": "Remote - USA",
+  "mode": "remote",
+  "level": "staff",
+  "region": "remote",
+  "tags": [],
+  "blurb": "",
+  "url": "https://careers.airbnb.com/positions/8407159?gh_jid=8407159",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:airbnb",
+  "postedAt": "2026-11-22T20:17:01.000Z",
+  "id": "acdda04c71cc",
+  "firstSeen": "2026-11-22T20:19:41.027Z"
+ },
+ {
+  "title": "Program Manager, Cloud Partners",
+  "company": "Anthropic",
+  "location": "San Francisco, CA | New York City, NY",
+  "mode": "unspecified",
+  "level": "senior",
+  "region": "americas",
+  "tags": [],
+  "blurb": "",
+  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5491573008",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:anthropic",
+  "postedAt": "2026-11-22T19:46:05.000Z",
+  "id": "235e86051e0b",
+  "firstSeen": "2026-11-22T20:19:41.027Z"
+ },
+ {
+  "title": "Research Engineer / Research Scientist, Health",
+  "company": "OpenAI",
+  "location": "San Francisco, United States",
+  "mode": "unspecified",
+  "level": "mid",
+  "region": "other",
+  "salary": "$380K – $500K",
+  "tags": [
+   "Post-training"
+  ],
+  "blurb": "About the Team The Health team, within OpenAI’s broader Post Training organization, has a mission to ensure AGI improves health for all humanity…",
+  "url": "https://jobs.ashbyhq.com/openai/6785d983-8831-46d0-9c81-443f83664948",
+  "via": "Ashby",
+  "direct": true,
+  "board": "ashby:openai",
+  "postedAt": "2026-11-22T17:20:10.700Z",
+  "id": "6c36ee47541d",
+  "firstSeen": "2026-11-22T20:19:41.027Z"
+ },
+ {
+  "title": "Research Engineer / Research Scientist, Human Flourishing",
+  "company": "OpenAI",
+  "location": "San Francisco, United States",
+  "mode": "unspecified",
+  "level": "mid",
+  "region": "other",
+  "salary": "$380K – $500K",
+  "tags": [
+   "Post-training"
+  ],
+  "blurb": "About the Team The Human Flourishing team’s mission is to ensure AI systems understand and advance human flourishing. As AI becomes more capable and…",
+  "url": "https://jobs.ashbyhq.com/openai/740b5d1b-f63d-49bb-962d-8e2778e925ef",
+  "via": "Ashby",
+  "direct": true,
+  "board": "ashby:openai",
+  "postedAt": "2026-11-22T17:19:07.642Z",
+  "id": "8d7a397b8dfd",
+  "firstSeen": "2026-11-22T20:19:41.027Z"
+ },
+ {
+  "title": "Research Engineer / Research Scientist - Post Training, Memory",
+  "company": "OpenAI",
+  "location": "San Francisco, United States",
+  "mode": "unspecified",
+  "level": "mid",
+  "region": "other",
+  "salary": "$380K – $500K",
+  "tags": [
+   "Post-training"
+  ],
+  "blurb": "About the Team The Personalization-Memory team, within OpenAI's broader Post Training organization, is focused on developing agents that can learn…",
+  "url": "https://jobs.ashbyhq.com/openai/ecfe655c-1369-4bcd-aae0-4a3b75fdf61b",
+  "via": "Ashby",
+  "direct": true,
+  "board": "ashby:openai",
+  "postedAt": "2026-11-22T17:17:35.967Z",
+  "id": "d226e0611a93",
+  "firstSeen": "2026-11-22T20:19:41.027Z"
+ },
+ {
+  "title": "Research Engineer/Research Scientist- Post Training, Model Experience",
+  "company": "OpenAI",
+  "location": "San Francisco, United States",
+  "mode": "unspecified",
+  "level": "mid",
+  "region": "other",
+  "salary": "$380K – $500K",
+  "tags": [
+   "Post-training"
+  ],
+  "blurb": "About the Team The Post Training team is responsible for training and improving pre-trained models to be deployed into ChatGPT, the API, and…",
+  "url": "https://jobs.ashbyhq.com/openai/bc85c1a9-0f75-4c3a-807b-6d2bb26c8445",
+  "via": "Ashby",
+  "direct": true,
+  "board": "ashby:openai",
+  "postedAt": "2026-11-22T17:14:45.574Z",
+  "id": "4ab61be2f9d7",
+  "firstSeen": "2026-11-22T20:19:41.027Z"
+ },
+ {
+  "title": "Research Engineer/Research Scientist-Post Training, Proactivity",
+  "company": "OpenAI",
+  "location": "San Francisco, United States",
+  "mode": "unspecified",
+  "level": "mid",
+  "region": "other",
+  "salary": "$380K – $500K",
+  "tags": [
+   "Post-training"
+  ],
+  "blurb": "About the Team The Proactivity Research team, within OpenAI’s broader Post Training team, is focused on making our models in ChatGPT, Dots, and…",
+  "url": "https://jobs.ashbyhq.com/openai/d1906ab2-b829-4a13-b1f2-f4af97d699fa",
+  "via": "Ashby",
+  "direct": true,
+  "board": "ashby:openai",
+  "postedAt": "2026-11-22T17:12:41.400Z",
+  "id": "6d961b4d5c56",
+  "firstSeen": "2026-11-22T20:19:41.027Z"
+ },
+ {
+  "title": "Research Engineer / Research Scientist, Post-Training — Collective Alignment (User Signals)",
+  "company": "OpenAI",
+  "location": "San Francisco, United States",
+  "mode": "unspecified",
+  "level": "mid",
+  "region": "other",
+  "salary": "$380K – $500K",
+  "tags": [
+   "Post-training"
+  ],
+  "blurb": "About the Team The Collective Alignment (User Signals) team is a post-training research team working at the intersection of data science, human…",
+  "url": "https://jobs.ashbyhq.com/openai/ce15d226-65db-43f1-98ec-078e96a3a281",
+  "via": "Ashby",
+  "direct": true,
+  "board": "ashby:openai",
+  "postedAt": "2026-11-22T17:08:09.743Z",
+  "id": "583188ee73c4",
+  "firstSeen": "2026-11-22T20:19:41.027Z"
+ },
+ {
+  "title": "Senior Engineer, Core Service Interfaces (Auth0)",
+  "company": "Okta",
+  "location": "Dublin",
+  "mode": "unspecified",
+  "level": "senior",
+  "region": "europe",
+  "tags": [],
+  "blurb": "",
+  "url": "https://www.okta.com/company/careers/opportunity/8360107?gh_jid=8360107",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:okta",
+  "postedAt": "2026-11-22T08:57:24.000Z",
+  "id": "ce50350bbcb5",
+  "firstSeen": "2026-11-22T20:19:41.027Z"
+ },
+ {
   "title": "Senior Platform Engineer, Replicate",
   "company": "Cloudflare",
   "location": "In-Office",
@@ -140,6 +311,101 @@
   "postedAt": "2026-11-21T12:24:21.000Z",
   "id": "41af56999857",
   "firstSeen": "2026-11-21T20:05:06.749Z"
+ },
+ {
+  "title": "Sr Analyst, Analytics & Insights",
+  "company": "BeyondTrust",
+  "location": "North America",
+  "mode": "remote",
+  "level": "senior",
+  "region": "remote",
+  "tags": [
+   "devops"
+  ],
+  "blurb": "",
+  "url": "https://remoteOK.com/remote-jobs/remote-sr-analyst-analytics-insights-beyondtrust-1137962",
+  "via": "Remote OK",
+  "direct": false,
+  "board": "remoteok",
+  "postedAt": "2026-11-21T11:00:05.000Z",
+  "id": "5f47416a5a23",
+  "firstSeen": "2026-11-22T20:19:41.027Z"
+ },
+ {
+  "title": "Senior Database Engineer",
+  "company": "Bitwarden",
+  "location": "US Only",
+  "mode": "remote",
+  "level": "senior",
+  "region": "remote",
+  "tags": [
+   "programming"
+  ],
+  "blurb": "",
+  "url": "https://remoteOK.com/remote-jobs/remote-senior-database-engineer-bitwarden-1137957",
+  "via": "Remote OK",
+  "direct": false,
+  "board": "remoteok",
+  "postedAt": "2026-11-21T10:00:07.000Z",
+  "id": "db0081dfa3a1",
+  "firstSeen": "2026-11-22T20:19:41.027Z"
+ },
+ {
+  "title": "Staff Data Scientist - Martech Platform (ML/Algos)",
+  "company": "Airbnb",
+  "location": "US Only",
+  "mode": "remote",
+  "level": "staff",
+  "region": "remote",
+  "tags": [
+   "programming"
+  ],
+  "blurb": "",
+  "url": "https://remoteOK.com/remote-jobs/remote-staff-data-scientist-martech-platform-ml-algos-airbnb-1137956",
+  "via": "Remote OK",
+  "direct": false,
+  "board": "remoteok",
+  "postedAt": "2026-11-21T10:00:05.000Z",
+  "id": "67935d388d05",
+  "firstSeen": "2026-11-22T20:19:41.027Z"
+ },
+ {
+  "title": "Staff Software Engineer, Agentic Tools",
+  "company": "Cribl",
+  "location": "US Only",
+  "mode": "remote",
+  "level": "staff",
+  "region": "remote",
+  "tags": [
+   "programming"
+  ],
+  "blurb": "",
+  "url": "https://remoteOK.com/remote-jobs/remote-staff-software-engineer-agentic-tools-cribl-1137955",
+  "via": "Remote OK",
+  "direct": false,
+  "board": "remoteok",
+  "postedAt": "2026-11-21T09:40:06.000Z",
+  "id": "e76cd2344139",
+  "firstSeen": "2026-11-22T20:19:41.027Z"
+ },
+ {
+  "title": "Senior Software Engineer, Partner Integrations",
+  "company": "Airbnb",
+  "location": "US Only",
+  "mode": "remote",
+  "level": "senior",
+  "region": "remote",
+  "tags": [
+   "programming"
+  ],
+  "blurb": "",
+  "url": "https://remoteOK.com/remote-jobs/remote-senior-software-engineer-partner-integrations-airbnb-1137954",
+  "via": "Remote OK",
+  "direct": false,
+  "board": "remoteok",
+  "postedAt": "2026-11-21T09:40:04.000Z",
+  "id": "4ee4fe4eba1e",
+  "firstSeen": "2026-11-22T20:19:41.027Z"
  },
  {
   "title": "Senior AI Engineer - Enterprise Agentic Systems",
@@ -2154,26 +2420,6 @@
   "firstSeen": "2026-11-21T08:16:29.868Z"
  },
  {
-  "title": "Mechanical Design Engineer, Battery Pack",
-  "company": "OpenAI",
-  "location": "San Francisco, United States",
-  "mode": "on-site",
-  "level": "mid",
-  "region": "other",
-  "salary": "$287K – $423K • Offers Equity",
-  "tags": [
-   "Robotics"
-  ],
-  "blurb": "About the Team Our Robotics team is focused on unlocking general-purpose robotics and advancing toward AGI-level intelligence in dynamic, real-world…",
-  "url": "https://jobs.ashbyhq.com/openai/ebe31cd6-0b6a-4214-b3c1-7dd7074753d6",
-  "via": "Ashby",
-  "direct": true,
-  "board": "ashby:openai",
-  "postedAt": "2026-11-20T20:59:42.769Z",
-  "id": "bac653eb7603",
-  "firstSeen": "2026-11-20T21:03:51.958Z"
- },
- {
   "title": "Strategic Solutions Engineer, West",
   "company": "Glean",
   "location": "Mountain View, CA; San Francisco Bay Area",
@@ -2188,26 +2434,6 @@
   "board": "greenhouse:gleanwork",
   "postedAt": "2026-11-20T20:54:37.000Z",
   "id": "e9317f3cf058",
-  "firstSeen": "2026-11-20T21:03:51.958Z"
- },
- {
-  "title": "Model Policy Manager, Emerging AI Misuse",
-  "company": "OpenAI",
-  "location": "San Francisco, United States",
-  "mode": "remote",
-  "level": "senior",
-  "region": "remote",
-  "salary": "$207K – $335K • Offers Equity",
-  "tags": [
-   "Model Policy"
-  ],
-  "blurb": "About the Team The Model Policy team within OpenAI’s Safety Systems organization defines how increasingly capable AI models should behave in…",
-  "url": "https://jobs.ashbyhq.com/openai/38b069ad-857c-485e-b201-3bd7c0b91da4",
-  "via": "Ashby",
-  "direct": true,
-  "board": "ashby:openai",
-  "postedAt": "2026-11-20T20:54:16.592Z",
-  "id": "4275b45d99fc",
   "firstSeen": "2026-11-20T21:03:51.958Z"
  },
  {
@@ -2416,26 +2642,6 @@
   "board": "greenhouse:twilio",
   "postedAt": "2026-11-20T20:01:40.000Z",
   "id": "f3953d5f75bd",
-  "firstSeen": "2026-11-20T21:03:51.958Z"
- },
- {
-  "title": "Manager, Data Engineering, Trust & Safety",
-  "company": "OpenAI",
-  "location": "San Francisco, United States",
-  "mode": "unspecified",
-  "level": "senior",
-  "region": "other",
-  "salary": "$459K – $536K",
-  "tags": [
-   "XYZ - Exec"
-  ],
-  "blurb": "ABOUT THE TEAM The Applied organization brings OpenAI’s most advanced technology to people and organizations around the world through products such…",
-  "url": "https://jobs.ashbyhq.com/openai/019170f9-ae56-49fc-8450-f505d39180bb",
-  "via": "Ashby",
-  "direct": true,
-  "board": "ashby:openai",
-  "postedAt": "2026-11-20T19:47:11.226Z",
-  "id": "2e837b49a979",
   "firstSeen": "2026-11-20T21:03:51.958Z"
  },
  {
@@ -2787,23 +2993,6 @@
   "firstSeen": "2026-11-20T21:03:51.958Z"
  },
  {
-  "title": "Principal Engineer Capacity/Compute",
-  "company": "Anthropic",
-  "location": "San Francisco, CA",
-  "mode": "unspecified",
-  "level": "staff",
-  "region": "americas",
-  "tags": [],
-  "blurb": "",
-  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5490974008",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:anthropic",
-  "postedAt": "2026-11-20T18:04:58.000Z",
-  "id": "2ead5285d33b",
-  "firstSeen": "2026-11-20T21:03:51.958Z"
- },
- {
   "title": "Software Engineer",
   "company": "STR",
   "location": "Arlington County, Arlington, VA",
@@ -2907,26 +3096,6 @@
   "board": "greenhouse:airbnb",
   "postedAt": "2026-11-20T17:32:18.000Z",
   "id": "376bafbd5558",
-  "firstSeen": "2026-11-20T21:03:51.958Z"
- },
- {
-  "title": "Engineering Manager, Robotics Embedded Systems",
-  "company": "OpenAI",
-  "location": "San Francisco, United States",
-  "mode": "remote",
-  "level": "senior",
-  "region": "remote",
-  "salary": "$385K – $445K • Offers Equity",
-  "tags": [
-   "Robotics"
-  ],
-  "blurb": "About the Team OpenAI’s Robotics team builds hardware and software for general-purpose robots. We work closely with AI researchers and use what we…",
-  "url": "https://jobs.ashbyhq.com/openai/70cfa7de-bf97-41e3-9784-8e123439a1d8",
-  "via": "Ashby",
-  "direct": true,
-  "board": "ashby:openai",
-  "postedAt": "2026-11-20T17:28:23.866Z",
-  "id": "59b1d7abc032",
   "firstSeen": "2026-11-20T21:03:51.958Z"
  },
  {
@@ -3223,23 +3392,6 @@
   "firstSeen": "2026-11-20T21:03:51.958Z"
  },
  {
-  "title": "Staff Fullstack Engineer, Okta Secures AI",
-  "company": "Okta",
-  "location": "Toronto, ON, Canada",
-  "mode": "unspecified",
-  "level": "staff",
-  "region": "americas",
-  "tags": [],
-  "blurb": "",
-  "url": "https://www.okta.com/company/careers/opportunity/8398497?gh_jid=8398497",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:okta",
-  "postedAt": "2026-11-20T15:15:48.000Z",
-  "id": "3194af9da2f4",
-  "firstSeen": "2026-11-20T21:03:51.958Z"
- },
- {
   "title": "Staff Field Engineer | Canada | Remote",
   "company": "Grafana Labs",
   "location": "Canada (Remote)",
@@ -3307,46 +3459,6 @@
   "board": "greenhouse:mongodb",
   "postedAt": "2026-11-20T14:31:11.000Z",
   "id": "2835233b8a86",
-  "firstSeen": "2026-11-20T21:03:51.958Z"
- },
- {
-  "title": "Data Scientist, Integrity",
-  "company": "OpenAI",
-  "location": "San Francisco, United States",
-  "mode": "remote",
-  "level": "mid",
-  "region": "remote",
-  "salary": "$265K – $380K • Offers Equity",
-  "tags": [
-   "Data Science"
-  ],
-  "blurb": "ABOUT THE TEAM OpenAI’s Integrity team protects people and businesses using ChatGPT, Codex, and the API from fraud, abuse, and harmful misuse. Our…",
-  "url": "https://jobs.ashbyhq.com/openai/f6cada21-0f54-4d8a-884e-e3c64edd4789",
-  "via": "Ashby",
-  "direct": true,
-  "board": "ashby:openai",
-  "postedAt": "2026-11-20T14:14:02.177Z",
-  "id": "2adf89b5e871",
-  "firstSeen": "2026-11-20T21:03:51.958Z"
- },
- {
-  "title": "Protection Scientist Engineer, Integrity",
-  "company": "OpenAI",
-  "location": "San Francisco, United States",
-  "mode": "remote",
-  "level": "mid",
-  "region": "remote",
-  "salary": "$220K – $425K • Offers Equity",
-  "tags": [
-   "Applied AI Engineering"
-  ],
-  "blurb": "About the Team The Integrity team is responsible for the scaled systems that help identify and respond to bad actors and harm on OpenAI’s platforms…",
-  "url": "https://jobs.ashbyhq.com/openai/13ade8a3-701f-4449-85f7-62319ce0f3ec",
-  "via": "Ashby",
-  "direct": true,
-  "board": "ashby:openai",
-  "postedAt": "2026-11-20T14:11:21.123Z",
-  "id": "29bfa5ce58aa",
   "firstSeen": "2026-11-20T21:03:51.958Z"
  },
  {
@@ -5920,7 +6032,7 @@
   "tags": [
    "Disk"
   ],
-  "blurb": "ABOUT THE ROLE Supabase runs millions of Postgres databases, and storage performance is now one of the biggest levers on how fast, reliable, and…",
+  "blurb": "ABOUT SUPABASE Supabase is the Postgres development platform, built by developers for developers. We provide a complete backend solution including…",
   "url": "https://jobs.ashbyhq.com/supabase/463d8cd7-3092-44eb-b80e-8d21008e569e",
   "via": "Ashby",
   "direct": true,
@@ -7256,23 +7368,6 @@
   "postedAt": "2026-11-18T05:45:25.000Z",
   "id": "24fab94e1a22",
   "firstSeen": "2026-11-18T08:31:55.012Z"
- },
- {
-  "title": "Software Engineering Intern (BS/MS)",
-  "company": "Airbnb",
-  "location": "San Francisco, California",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "other",
-  "tags": [],
-  "blurb": "",
-  "url": "https://careers.airbnb.com/positions/8360478?gh_jid=8360478",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:airbnb",
-  "postedAt": "2026-11-18T05:00:14.000Z",
-  "id": "4f88d5cba74c",
-  "firstSeen": "2026-11-21T08:16:29.868Z"
  },
  {
   "title": "Staff Product Manager, AI",
@@ -9152,98 +9247,6 @@
   "board": "greenhouse:robinhood",
   "postedAt": "2026-11-13T00:34:27.000Z",
   "id": "4a88ac18f3e3",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Product Manager, AI Foundations",
-  "company": "Reddit",
-  "location": "Remote - United States",
-  "mode": "remote",
-  "level": "senior",
-  "region": "remote",
-  "tags": [],
-  "blurb": "",
-  "url": "https://job-boards.greenhouse.io/reddit/jobs/8367400",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:reddit",
-  "postedAt": "2026-11-12T22:06:51.000Z",
-  "id": "238bcb831c33",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Staff Product Designer, AI",
-  "company": "Asana",
-  "location": "San Francisco",
-  "mode": "unspecified",
-  "level": "staff",
-  "region": "other",
-  "tags": [],
-  "blurb": "",
-  "url": "https://www.asana.com/jobs/apply/8369132?gh_jid=8369132",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:asana",
-  "postedAt": "2026-11-12T21:26:16.000Z",
-  "id": "8dbf4dcd4d51",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Forward Deployed Engineer, Onboarding Services (Professional Services Consultant)",
-  "company": "Outreach",
-  "location": "United States",
-  "mode": "remote",
-  "level": "mid",
-  "region": "remote",
-  "tags": [
-   "Professional Services"
-  ],
-  "blurb": "About Outreach Outreach is a leading agentic AI platform built for revenue teams. Outreach lets revenue leaders hireAI agents that act rather than…",
-  "url": "https://jobs.lever.co/outreach/752b3b1a-dcee-4c74-844d-c17705f46f37",
-  "via": "Lever",
-  "direct": true,
-  "board": "lever:outreach",
-  "postedAt": "2026-11-12T21:23:36.462Z",
-  "id": "dc43a652162d",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Information Security Engineer - Infrastructure Security",
-  "company": "Palantir",
-  "location": "London, United Kingdom",
-  "mode": "hybrid",
-  "level": "mid",
-  "region": "europe",
-  "tags": [
-   "Information Security"
-  ],
-  "blurb": "A World-Changing Company Palantir builds the world’s leading software for data-driven decisions and operations. By bringing the right data to the…",
-  "url": "https://jobs.lever.co/palantir/36b26f06-1e25-4c33-8548-c9e70add0784",
-  "via": "Lever",
-  "direct": true,
-  "board": "lever:palantir",
-  "postedAt": "2026-11-12T21:20:57.434Z",
-  "id": "4a69c4561e4e",
-  "firstSeen": "2026-11-13T20:31:05.952Z"
- },
- {
-  "title": "Senior Design Systems Engineer",
-  "company": "Ramp",
-  "location": "Remote (US), United States",
-  "mode": "remote",
-  "level": "senior",
-  "region": "remote",
-  "salary": "$188,000 – $259,250 • Offers Equity",
-  "tags": [
-   "Engineering"
-  ],
-  "blurb": "ABOUT RAMP Ramp is building the smart infrastructure for finance teams, embedded in the transaction flow of every dollar a business spends. We…",
-  "url": "https://jobs.ashbyhq.com/ramp/b7fd55f4-6c5a-42f5-be04-aa09a4d5b7a9",
-  "via": "Ashby",
-  "direct": true,
-  "board": "ashby:ramp",
-  "postedAt": "2026-11-12T20:01:54.072Z",
-  "id": "3e2da9933689",
   "firstSeen": "2026-11-13T20:31:05.952Z"
  },
  {

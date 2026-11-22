@@ -1,5 +1,14 @@
 [
  {
+  "id": "2026-11-22-pm",
+  "date": "2026-11-22",
+  "slot": "evening",
+  "number": 17,
+  "headline": "87% of the Anthropic power will come from gas and 11% from coal in 2028",
+  "stories": 29,
+  "generatedAt": "2026-11-22T20:19:41.027Z"
+ },
+ {
   "id": "2026-11-22-am",
   "date": "2026-11-22",
   "slot": "morning",
