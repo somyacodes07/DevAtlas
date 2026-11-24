@@ -1,5 +1,14 @@
 [
  {
+  "id": "2026-11-23-pm",
+  "date": "2026-11-23",
+  "slot": "evening",
+  "number": 19,
+  "headline": "Per Arm's request, this site will be discontinued on 4 December 2026 :(",
+  "stories": 29,
+  "generatedAt": "2026-11-24T00:49:08.158Z"
+ },
+ {
   "id": "2026-11-23-am",
   "date": "2026-11-23",
   "slot": "morning",
