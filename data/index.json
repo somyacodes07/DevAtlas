@@ -1,5 +1,14 @@
 [
  {
+  "id": "2026-11-24-pm",
+  "date": "2026-11-24",
+  "slot": "evening",
+  "number": 21,
+  "headline": "LLM agents work for their parent companies, not for you",
+  "stories": 29,
+  "generatedAt": "2026-11-24T23:00:05.136Z"
+ },
+ {
   "id": "2026-11-24-am",
   "date": "2026-11-24",
   "slot": "morning",
