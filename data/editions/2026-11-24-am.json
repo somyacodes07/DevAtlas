@@ -1,0 +1,1250 @@
+{
+ "id": "2026-11-24-am",
+ "date": "2026-11-24",
+ "slot": "morning",
+ "number": 20,
+ "generatedAt": "2026-11-24T10:54:45.739Z",
+ "lead": {
+  "id": "d0f92b38f63c",
+  "title": "New York Bans Subscription and Post-Purchase Fees on Cars",
+  "url": "https://governor.ny.gov/news/money-your-pockets-governor-hochul-signs-bill-restricting-exploitative-vehicle-subscription",
+  "domain": "governor.ny.gov",
+  "blurb": "Governor Hochul signed a bill restricting motor vehicle manufacturers and dealers from charging consumers subscription fees after they purchase a vehicle.",
+  "source": "Hacker News",
+  "discussionUrl": "https://news.ycombinator.com/item?id=50622774",
+  "points": 377,
+  "comments": 119,
+  "author": "DeepLogin",
+  "publishedAt": "2026-11-24T02:27:02.000Z",
+  "desk": "general",
+  "score": 60,
+  "image": "https://www.governor.ny.gov/sites/default/files/styles/cover_image_660x400_/public/thumbnails/image/cars.cr_.jpg?h=b5f6a62e&itok=FV7N-hBe"
+ },
+ "stories": [
+  {
+   "id": "70e8b292ce38",
+   "title": "2035 Came Early",
+   "url": "https://fzakaria.com/2026/11/23/2035-came-early",
+   "domain": "fzakaria.com",
+   "blurb": "tl;dr trynix.dev boots GUI programs now. Try solitaire, GL gears, xeyes, a voice, the weather over curl, or Firefox. I remember watching the talk The Birth & Death of JavaScript by Gary Bernhardt and falling in love with the whimsical yet dreadfully serious unfolding of the story of how JavaScript…",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50624497",
+   "points": 257,
+   "comments": 68,
+   "author": "setheron",
+   "publishedAt": "2026-11-24T06:30:33.000Z",
+   "desk": "general",
+   "score": 51
+  },
+  {
+   "id": "76c713ea51cf",
+   "title": "Free alternative TV network built from the Internet Archive's forgotten videos",
+   "url": "https://spelunkr.tv/",
+   "domain": "spelunkr.tv",
+   "blurb": "24/7 synchronized channels of forgotten Internet Archive video. Like cable TV, but weirder.",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50606192",
+   "points": 1004,
+   "comments": 173,
+   "author": "SockThief",
+   "publishedAt": "2026-11-23T01:13:51.000Z",
+   "desk": "general",
+   "score": 50,
+   "image": "https://spelunkr.tv/og-image.png"
+  },
+  {
+   "id": "496766f19548",
+   "title": "The Third Cup: After Everything Has a Name",
+   "url": "https://dev.to/thethirdcup/the-third-cup-after-everything-has-a-name-2b14",
+   "domain": "dev.to",
+   "blurb": "Names didn't create the world. They connected us to it. It was three in the afternoon. The café...",
+   "source": "DEV Community",
+   "points": 52,
+   "comments": 25,
+   "author": "xulingfeng",
+   "publishedAt": "2026-11-24T07:31:20.000Z",
+   "desk": "web",
+   "score": 44
+  },
+  {
+   "id": "5a38c81d0fbc",
+   "title": "GPUI is getting its own repository",
+   "url": "https://github.com/zed-industries/gpui",
+   "domain": "github.com",
+   "blurb": "A GPU-accelerated, open-source UI framework for Rust that combines immediate and retained modes. - zed-industries/gpui",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50619103",
+   "points": 265,
+   "comments": 102,
+   "author": "EvilGoose",
+   "publishedAt": "2026-11-23T20:52:54.000Z",
+   "desk": "general",
+   "score": 44
+  },
+  {
+   "id": "8fd43c005d1a",
+   "title": "GitHub Actions accepts invalid YAML",
+   "url": "https://yossarian.net/til/post/github-actions-accepts-invalid-yaml",
+   "domain": "yossarian.net",
+   "blurb": "",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/leqwqu/github_actions_accepts_invalid_yaml",
+   "points": 82,
+   "comments": 31,
+   "author": "yossarian",
+   "publishedAt": "2026-11-22T21:49:18.929Z",
+   "desk": "general",
+   "score": 42
+  },
+  {
+   "id": "931eac391a2f",
+   "title": "Bored.com: Fun, interesting and cool websites to explore when bored",
+   "url": "https://bored.com/",
+   "domain": "bored.com",
+   "blurb": "Discover the most fun, interesting and cool websites on the internet. Hundreds of hand-picked sites, free games and things to do when you're bored.",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50619207",
+   "points": 248,
+   "comments": 53,
+   "author": "susam",
+   "publishedAt": "2026-11-23T21:01:16.000Z",
+   "desk": "general",
+   "score": 41,
+   "image": "https://www.bored.com/og-image.png"
+  },
+  {
+   "id": "e6efe33a083e",
+   "title": "Per Arm's request, this site will be discontinued on 4 December 2026 :(",
+   "url": "https://arm.jonpalmisc.com/",
+   "domain": "arm.jonpalmisc.com",
+   "blurb": "This site offers reference documentation for the AArch64 instruction set and system registers defined by the Armv8-A and Armv9-A architectures.",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50617499",
+   "points": 1051,
+   "comments": 243,
+   "author": "tech234a",
+   "publishedAt": "2026-11-23T19:17:55.000Z",
+   "desk": "general",
+   "score": 40,
+   "carried": true
+  },
+  {
+   "id": "fd77f33bf073",
+   "title": "Stalwart is now a drop-in replacement for Microsoft Exchange",
+   "url": "https://stalw.art/blog/microsoft-exchange-replacement",
+   "domain": "stalw.art",
+   "blurb": "Stalwart 1.2.0 speaks MAPI over HTTP, Exchange Web Services, ActiveSync and Autodiscover, so Outlook, Apple Mail and mobile devices connect to it as they would to an Exchange server. Also in this release: mail rules, read receipts, working hours, room and equipment booking, and the new Stalwart…",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50620349",
+   "points": 484,
+   "comments": 259,
+   "author": "shaunpud",
+   "publishedAt": "2026-11-23T22:32:29.000Z",
+   "desk": "general",
+   "score": 39,
+   "carried": true,
+   "image": "https://stalw.art/og/blog/microsoft-exchange-replacement.png"
+  },
+  {
+   "id": "3c69fd56490c",
+   "title": "\"Dario is hyping the dangers so OSS models are illegal and he stays in control\"",
+   "url": "https://twitter.com/ylecun/status/2124550037912920090",
+   "domain": "twitter.com",
+   "blurb": "Dario's spiel since GPT-2 has always been about hyping the dangers so that open models would be made illegal and *he* would stay in control. He left OpenAI because he wasn't going to have control. It's like the Ottoman Empire banning the printing press for Arabic so they would keep in control of th…",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50615308",
+   "points": 1701,
+   "comments": 950,
+   "author": "MrBuddyCasino",
+   "publishedAt": "2026-11-23T17:07:26.000Z",
+   "desk": "general",
+   "score": 38,
+   "carried": true,
+   "image": "https://pbs.twimg.com/profile_images/1483577865056702469/rWA-3_T7_400x400.jpg"
+  },
+  {
+   "id": "2dc23831423a",
+   "title": "What VP != VNP Means (In 3 Minutes)",
+   "url": "https://friedgil.com/vpvnp",
+   "domain": "friedgil.com",
+   "blurb": "I assume you know about the P vs. NP problem. But what is this wacky thing Anthropic just posted? You learned how to take a determinant in your linear algebra class: det(123456789)=1⋅(5⋅9-6⋅8)-2⋅(4⋅9-6⋅7)+3⋅(4⋅8-5⋅7)=0 The naive way is fine for 3×3 matrices, but notice that you need to perform…",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/2k95fs/what_vp_vnp_means_3_minutes",
+   "points": 27,
+   "comments": 2,
+   "author": "nicosalm",
+   "publishedAt": "2026-11-24T02:10:30.101Z",
+   "desk": "general",
+   "score": 37
+  },
+  {
+   "id": "e82796adc98a",
+   "title": "Ladybird is now in alpha",
+   "url": "https://ladybird.org/posts/alpha",
+   "domain": "ladybird.org",
+   "blurb": "Alpha builds of Ladybird are available today for macOS and Linux. They",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50614249",
+   "points": 1995,
+   "comments": 464,
+   "author": "janvdberg",
+   "publishedAt": "2026-11-23T16:13:12.000Z",
+   "desk": "general",
+   "score": 37,
+   "carried": true,
+   "image": "https://ladybird.org/assets/img/logo-new.webp"
+  },
+  {
+   "id": "8776d749c446",
+   "title": "Nespresso's project to reduce grams of coffee per capsule",
+   "url": "https://alvinbunk.wordpress.com/2026/11/01/nespresso-project-olympus",
+   "domain": "alvinbunk.wordpress.com",
+   "blurb": "Information on Nespresso’s Project Olympus.",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50605479",
+   "points": 315,
+   "comments": 334,
+   "author": "bobbiechen",
+   "publishedAt": "2026-11-22T23:57:45.000Z",
+   "desk": "general",
+   "score": 37,
+   "image": "https://alvinbunk.wordpress.com/wp-content/uploads/2026/11/ol_gram_changes-2.png"
+  },
+  {
+   "id": "354bf133bd07",
+   "title": "Nvidia Reinstates Jensen Huang as CEO",
+   "url": "https://cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html",
+   "domain": "cnbc.com",
+   "blurb": "The Nvidia board said it had input from senior levels of the U.S. government.",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50611576",
+   "points": 2584,
+   "comments": 3493,
+   "author": "jaz",
+   "publishedAt": "2026-11-23T14:00:18.000Z",
+   "desk": "general",
+   "score": 36,
+   "carried": true,
+   "image": "https://image.cnbcfm.com/api/v1/image/108353993-1787677585886-108353993-1787675816989-gettyimages-2266718431-NVIDIA_GTC.jpg?v=1795450778&w=1920&h=1080"
+  },
+  {
+   "id": "26fd7085fe43",
+   "title": "Engineering Around Non-Determinism: Evals, Grounding, and Release Gates for AI-Drafted Suspicious Reports",
+   "url": "https://infoq.com/articles/llm-agent-architecture-evals-grounding",
+   "domain": "infoq.com",
+   "blurb": "Moving GenAI into high-stakes production requires treating non-determinism as an engineering problem. This architectural blueprint shows engineering leaders and architects how to build trustworthy agentic workflows using knowledge graphs, dual-layer eval judges, CI/CD release gates, and regression…",
+   "source": "InfoQ",
+   "author": "Ritesh Modi, Sasidhar Gudala",
+   "publishedAt": "2026-11-24T09:30:00.000Z",
+   "desk": "ai",
+   "score": 35
+  },
+  {
+   "id": "e660b1194ede",
+   "title": "QCon San Francisco 2026: Lessons from Building a $100M Product in Six Weeks at OpenAI",
+   "url": "https://infoq.com/news/2026/11/qcon-sf-openai-lessons",
+   "domain": "infoq.com",
+   "blurb": "At QCon San Francisco 2026, OpenAI's Brian Yang described building the ChatGPT ads product with Codex agents and no human-written code. He outlined layered testing, sandboxes, and batched pull request reviews, and noted failure modes such as code \"slop\" and unsafe agent actions. He advised gradual…",
+   "source": "InfoQ",
+   "author": "Daniel Curtis",
+   "publishedAt": "2026-11-24T06:32:00.000Z",
+   "desk": "ai",
+   "score": 33
+  },
+  {
+   "id": "ce679889ed61",
+   "title": "AMD EPYC Zen 6 vs. Zen 1 Performance: 12.1x Geo Mean in Less Than 10 Years",
+   "url": "https://phoronix.com/review/amd-epyc-9006-7601",
+   "domain": "phoronix.com",
+   "blurb": "",
+   "source": "Hacker News",
+   "discussionUrl": "https://news.ycombinator.com/item?id=50624061",
+   "points": 97,
+   "comments": 39,
+   "author": "zdw",
+   "publishedAt": "2026-11-24T05:15:22.000Z",
+   "desk": "general",
+   "score": 33
+  },
+  {
+   "id": "e983e39dea6a",
+   "title": "Lua for data representation",
+   "url": "https://citrons.xyz/journal/2025-07-23",
+   "domain": "citrons.xyz",
+   "blurb": "",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/ezml41/lua_for_data_representation",
+   "points": 20,
+   "comments": 4,
+   "author": "gavinmorrow",
+   "publishedAt": "2026-11-24T00:22:05.087Z",
+   "desk": "general",
+   "score": 32
+  },
+  {
+   "id": "c4ca83ba5741",
+   "title": "Signal is Serious About Protecting Your Privacy",
+   "url": "https://signal.org/blog/protecting-your-privacy",
+   "domain": "signal.org",
+   "blurb": "",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/vldbcn/signal_is_serious_about_protecting_your",
+   "points": 110,
+   "comments": 52,
+   "author": "sjamaan",
+   "publishedAt": "2026-11-23T07:44:09.290Z",
+   "desk": "general",
+   "score": 31,
+   "carried": true
+  },
+  {
+   "id": "c7e0ccfeeadb",
+   "title": "the algebra of dependent types (2025)",
+   "url": "https://dotat.at/@/2025-05-28-types.html",
+   "domain": "dotat.at",
+   "blurb": "",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/n2krd2/algebra_dependent_types_2025",
+   "points": 12,
+   "comments": 0,
+   "author": "AviKav",
+   "publishedAt": "2026-11-24T00:51:41.672Z",
+   "desk": "general",
+   "score": 27
+  },
+  {
+   "id": "d2420b96d80f",
+   "title": "Necoz Is Building a New House!! 🛸 All Cats, Follow Me!! 🐈🚀",
+   "url": "https://dev.to/necoz/necoz-is-building-a-new-house-all-cats-follow-me-530n",
+   "domain": "dev.to",
+   "blurb": "Hoi hoi! 😸 Last week, we successfully abducted 28 cats! 🛸🐈 But there was one tiny problem WHERE...",
+   "source": "DEV Community",
+   "points": 106,
+   "comments": 51,
+   "author": "nyaomaru",
+   "publishedAt": "2026-11-22T13:27:10.000Z",
+   "desk": "general",
+   "score": 27
+  },
+  {
+   "id": "5c003d30472b",
+   "title": "Worshipping at the altar of Brendan Gregg",
+   "url": "https://fzakaria.com/2026/11/12/worshipping-at-the-altar-of-brendan-gregg",
+   "domain": "fzakaria.com",
+   "blurb": "",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/voxuev/worshipping_at_altar_brendan_gregg",
+   "points": 1,
+   "comments": 0,
+   "author": "kqr",
+   "publishedAt": "2026-11-24T10:50:52.927Z",
+   "desk": "general",
+   "score": 26
+  },
+  {
+   "id": "777816c50f03",
+   "title": "Bypassing iOS Safari 60 FPS Limit",
+   "url": "https://rida.dev/blog/bypassing-ios-safari-60-fps-limit",
+   "domain": "rida.dev",
+   "blurb": "",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/pxvmxo/bypassing_ios_safari_60_fps_limit",
+   "points": 1,
+   "comments": 0,
+   "author": "HugoDaniel",
+   "publishedAt": "2026-11-24T10:35:19.962Z",
+   "desk": "web",
+   "score": 26
+  },
+  {
+   "id": "f5f5b2286749",
+   "title": "cgo's pointer check is all over the place",
+   "url": "https://theconsensus.dev/p/2026/11/15/cgos-pointer-check.html",
+   "domain": "theconsensus.dev",
+   "blurb": "",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/fgbvtt/cgo_s_pointer_check_is_all_over_place",
+   "points": 10,
+   "comments": 3,
+   "author": "eatonphil",
+   "publishedAt": "2026-11-23T23:36:14.289Z",
+   "desk": "general",
+   "score": 26
+  },
+  {
+   "id": "011d127cec85",
+   "title": "Proofreader vs. Rewriter vs. Prompt API: Test the Task, Not the Demo",
+   "url": "https://dev.to/gde/proofreader-vs-rewriter-vs-prompt-api-test-the-task-not-the-demo-pi9",
+   "domain": "dev.to",
+   "blurb": "“Make this message better” is not one task. It can mean correcting a spelling mistake, changing the...",
+   "source": "DEV Community",
+   "points": 32,
+   "comments": 18,
+   "author": "Raju Dandigam",
+   "publishedAt": "2026-11-23T15:10:00.000Z",
+   "desk": "ai",
+   "score": 26
+  },
+  {
+   "id": "21b8cc261cb8",
+   "title": "What are you Grateful for this Thanksgiving?",
+   "url": "https://dev.to/francistrdev/what-are-you-grateful-for-this-thanksgiving-4570",
+   "domain": "dev.to",
+   "blurb": "Thanksgiving is almost here (Just days away)..and I have no plans yet. Don't worry, I will think...",
+   "source": "DEV Community",
+   "points": 120,
+   "comments": 47,
+   "author": "FrancisTRᴅᴇᴠ",
+   "publishedAt": "2026-11-23T14:42:00.000Z",
+   "desk": "general",
+   "score": 26,
+   "carried": true
+  },
+  {
+   "id": "e9f1e85c6c1f",
+   "title": "What are you doing this week?",
+   "url": "https://lobste.rs/s/t8c4vj/what_are_you_doing_this_week",
+   "domain": "lobste.rs",
+   "blurb": "What are you doing this week? Feel free to share! Keep in mind it’s OK to do nothing at all, too.",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/t8c4vj/what_are_you_doing_this_week",
+   "points": 13,
+   "comments": 26,
+   "author": "caius",
+   "publishedAt": "2026-11-23T10:37:34.794Z",
+   "desk": "general",
+   "score": 26
+  },
+  {
+   "id": "acc64be55746",
+   "title": "There's no reason for software to be slow anymore",
+   "url": "https://danluu.com/no-slow",
+   "domain": "danluu.com",
+   "blurb": "",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/uf8vxo/there_s_no_reason_for_software_be_slow",
+   "points": 1,
+   "comments": 0,
+   "author": "lr0",
+   "publishedAt": "2026-11-24T08:39:33.963Z",
+   "desk": "ai",
+   "score": 25
+  },
+  {
+   "id": "ef9c9e698d0d",
+   "title": "Release: Roto v0.14.0",
+   "url": "https://community.nlnetlabs.nl/t/release-roto-v0-14-0/3511",
+   "domain": "community.nlnetlabs.nl",
+   "blurb": "",
+   "source": "Lobsters",
+   "discussionUrl": "https://lobste.rs/s/fygpme/release_roto_v0_14_0",
+   "points": 12,
+   "comments": 1,
+   "author": "fanf",
+   "publishedAt": "2026-11-23T21:32:07.283Z",
+   "desk": "systems",
+   "score": 25
+  }
+ ],
+ "repos": [
+  {
+   "name": "storytold/craft-anything",
+   "url": "https://github.com/storytold/craft-anything",
+   "description": "Craft Anything: understand how any software works, and craft your own.",
+   "language": "Rust",
+   "stars": 42489,
+   "forks": 8396,
+   "createdAt": "2026-10-31T14:50:00.000Z",
+   "gain": 371
+  },
+  {
+   "name": "deepseek-ai/dsh-superagent-prototype",
+   "url": "https://github.com/deepseek-ai/dsh-superagent-prototype",
+   "description": "Towards a More Autonomous Agent System",
+   "language": "TypeScript",
+   "stars": 24433,
+   "forks": 3056,
+   "createdAt": "2026-10-31T09:32:46.000Z",
+   "gain": 74
+  },
+  {
+   "name": "heydamir/unslop",
+   "url": "https://github.com/heydamir/unslop",
+   "description": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface",
+   "language": "JavaScript",
+   "stars": 21045,
+   "forks": 1291,
+   "createdAt": "2026-10-29T15:41:21.000Z",
+   "gain": 203
+  },
+  {
+   "name": "anefzaoui/misterdownloadmanager",
+   "url": "https://github.com/anefzaoui/misterdownloadmanager",
+   "description": "misterdownloadmanager: The ultimate open-source, clean-room download manager written from scratch in pure Rust for Windows, Mac, and Linux",
+   "language": "Rust",
+   "stars": 17569,
+   "forks": 1494,
+   "createdAt": "2026-10-29T01:25:19.000Z",
+   "gain": 296
+  },
+  {
+   "name": "JuneYaooo/rea-video",
+   "url": "https://github.com/JuneYaooo/rea-video",
+   "description": "Reverse-engineer any video, shot by shot: filmed, AI-generated or coded, and how to remake it. Breakdowns in the open VIDEO.md format. 逆向一切视频，逐个镜头看是拍的、AI…",
+   "language": "Python",
+   "stars": 12862,
+   "forks": 1888,
+   "createdAt": "2026-10-29T16:15:01.000Z",
+   "gain": 193
+  },
+  {
+   "name": "libracoder/kiri",
+   "url": "https://github.com/libracoder/kiri",
+   "description": "A small, fast container runtime for macOS, Windows and Linux with free Ngrok alternative",
+   "language": "Rust",
+   "stars": 12789,
+   "forks": 622,
+   "createdAt": "2026-11-02T16:11:30.000Z",
+   "gain": 125
+  },
+  {
+   "name": "Minireel/HGhub",
+   "url": "https://github.com/Minireel/HGhub",
+   "description": "Plug-in media player",
+   "language": "Rust",
+   "stars": 11714,
+   "forks": 9127,
+   "createdAt": "2026-11-03T14:04:27.000Z",
+   "gain": 75
+  },
+  {
+   "name": "janestreet/agent_skills",
+   "url": "https://github.com/janestreet/agent_skills",
+   "description": "Agent skills",
+   "language": "—",
+   "stars": 11491,
+   "forks": 786,
+   "createdAt": "2026-11-03T16:50:21.000Z",
+   "gain": 128
+  },
+  {
+   "name": "zortos293/Lichii",
+   "url": "https://github.com/zortos293/Lichii",
+   "description": "VERY experimental Nintendo Switch 2 emulator",
+   "language": "C++",
+   "stars": 10182,
+   "forks": 1620,
+   "createdAt": "2026-10-31T14:17:26.000Z",
+   "gain": 29
+  },
+  {
+   "name": "wangzan101/Mika",
+   "url": "https://github.com/wangzan101/Mika",
+   "description": "An on-device AI agent for Android that operates apps and the web to get things done for you.",
+   "language": "Kotlin",
+   "stars": 9831,
+   "forks": 2198,
+   "createdAt": "2026-10-29T14:34:07.000Z",
+   "gain": 65
+  },
+  {
+   "name": "RoutineMiku/apkstart",
+   "url": "https://github.com/RoutineMiku/apkstart",
+   "description": "Windows 上的安卓应用运行器：双击 APK 即装，应用以独立窗口与桌面图标运行，自持 QEMU 运行时",
+   "language": "JavaScript",
+   "stars": 9598,
+   "forks": 917,
+   "createdAt": "2026-10-29T13:44:03.000Z",
+   "gain": 116
+  },
+  {
+   "name": "erkamyaman/rust-anything",
+   "url": "https://github.com/erkamyaman/rust-anything",
+   "description": "Rewrite your whole app in Rust, one piece at a time, checked against the original's recorded behavior at every step. CLIs, HTTP servers and libraries in…",
+   "language": "Rust",
+   "stars": 8989,
+   "forks": 730,
+   "createdAt": "2026-11-16T12:10:36.000Z",
+   "gain": 271
+  },
+  {
+   "name": "patch-gg/pixelfx",
+   "url": "https://github.com/patch-gg/pixelfx",
+   "description": "244 pixel art effects, every one a small piece of code. Plus a Claude Code skill to make your own.",
+   "language": "JavaScript",
+   "stars": 8967,
+   "forks": 1179,
+   "createdAt": "2026-10-30T06:43:25.000Z",
+   "gain": 78
+  },
+  {
+   "name": "huami1314/GestaltX",
+   "url": "https://github.com/huami1314/GestaltX",
+   "description": "An MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device presets, backups.",
+   "language": "Swift",
+   "stars": 8885,
+   "forks": 2768,
+   "createdAt": "2026-11-09T05:15:48.000Z",
+   "gain": 21
+  },
+  {
+   "name": "Lee-xeo/Claude-Cage",
+   "url": "https://github.com/Lee-xeo/Claude-Cage",
+   "description": "Cage：为 Claude 特化的轻量化虚拟机，彻底杜绝网络泄露。多平台适配，支持多账号管理、远程部署、移动端操控。",
+   "language": "Go",
+   "stars": 8215,
+   "forks": 953,
+   "createdAt": "2026-10-31T15:07:08.000Z",
+   "gain": 180
+  },
+  {
+   "name": "valentderah/totk-pc-recomp",
+   "url": "https://github.com/valentderah/totk-pc-recomp",
+   "description": "Static recompilation of The Legend of Zelda: Tears of the Kingdom to native Windows and Linux x86-64, with a Vulkan renderer. Game files not included.",
+   "language": "C",
+   "stars": 8173,
+   "forks": 652,
+   "createdAt": "2026-10-29T12:32:46.000Z",
+   "gain": 36
+  },
+  {
+   "name": "anhao/ai-pose-gallery-zh",
+   "url": "https://github.com/anhao/ai-pose-gallery-zh",
+   "description": "中文版 AI 姿势参考图库 · 1439 组 / 2878 张图片 / 完整汉化 · 零依赖静态画廊",
+   "language": "TypeScript",
+   "stars": 8092,
+   "forks": 2112,
+   "createdAt": "2026-10-27T12:24:37.000Z",
+   "gain": 148
+  },
+  {
+   "name": "Marvisak/VIctory",
+   "url": "https://github.com/Marvisak/VIctory",
+   "description": "An attempt at running GTA VI on PC",
+   "language": "Rust",
+   "stars": 7631,
+   "forks": 998,
+   "createdAt": "2026-11-23T21:47:25.000Z",
+   "gain": null
+  },
+  {
+   "name": "mdiri-ai/SoduWork",
+   "url": "https://github.com/mdiri-ai/SoduWork",
+   "description": "The AI-native engine for teams and their agents. Multi-harness, multi-agent, self-hosted.",
+   "language": "JavaScript",
+   "stars": 7496,
+   "forks": 647,
+   "createdAt": "2026-10-29T02:43:14.000Z",
+   "gain": 445
+  },
+  {
+   "name": "vercel-labs/ui",
+   "url": "https://github.com/vercel-labs/ui",
+   "description": "A library of behaviors for agents to build the next generation of user interfaces.",
+   "language": "TypeScript",
+   "stars": 7009,
+   "forks": 246,
+   "createdAt": "2026-10-26T17:39:27.000Z",
+   "gain": 196
+  },
+  {
+   "name": "haydenschmitty/floorplan",
+   "url": "https://github.com/haydenschmitty/floorplan",
+   "description": "See how your app actually fits together. An interactive, plain-English map of your codebase, drawn by Claude or Codex.",
+   "language": "JavaScript",
+   "stars": 6536,
+   "forks": 592,
+   "createdAt": "2026-10-27T12:03:01.000Z",
+   "gain": 80
+  },
+  {
+   "name": "KKKKhazix/agent-autoloop",
+   "url": "https://github.com/KKKKhazix/agent-autoloop",
+   "description": "让你的命令行 Agent 在后台自己接活、自己跟进到底；平时不烦你，遇到拿不准的事才发卡片找你拍板。",
+   "language": "TypeScript",
+   "stars": 6452,
+   "forks": 1205,
+   "createdAt": "2026-11-03T08:02:11.000Z",
+   "gain": 58
+  },
+  {
+   "name": "Eglantine-Community/Eglantine",
+   "url": "https://github.com/Eglantine-Community/Eglantine",
+   "description": "An experimental Switch 2 Emulator built for Windows, Linux and MacOS.",
+   "language": "C++",
+   "stars": 6221,
+   "forks": 668,
+   "createdAt": "2026-10-29T00:25:18.000Z",
+   "gain": 5
+  },
+  {
+   "name": "ivall/xcl",
+   "url": "https://github.com/ivall/xcl",
+   "description": "Xbox Series compatibility layer for Windows - runs console game code natively, reimplements the console system libraries and recompiles RDNA2 shaders to DXIL",
+   "language": "Rust",
+   "stars": 6065,
+   "forks": 743,
+   "createdAt": "2026-11-20T20:03:21.000Z",
+   "gain": null
+  }
+ ],
+ "advisories": [
+  {
+   "id": "GHSA-2r3w-c2vx-fv5g",
+   "cve": "CVE-2026-133469",
+   "summary": "Xen Orchestra: Empty-object login token",
+   "severity": "critical",
+   "packages": [
+    "xo-server (npm)"
+   ],
+   "url": "https://github.com/advisories/GHSA-2r3w-c2vx-fv5g",
+   "publishedAt": "2026-11-23T17:29:29.000Z"
+  },
+  {
+   "id": "GHSA-j44m-77cc-p3cc",
+   "cve": "CVE-2026-63492",
+   "summary": "AVideo API vulnerable to OS command injection through an unescaped FFmpeg process keyword",
+   "severity": "high",
+   "packages": [
+    "wwbn/avideo (composer)"
+   ],
+   "url": "https://github.com/advisories/GHSA-j44m-77cc-p3cc",
+   "publishedAt": "2026-11-23T22:06:28.000Z"
+  },
+  {
+   "id": "GHSA-2v9w-34q6-wpqx",
+   "cve": "CVE-2026-77423",
+   "summary": "jline3 leads to ReDoS in Built-in Less Viewer Search",
+   "severity": "high",
+   "packages": [
+    "org.jline:jline-builtins (maven)"
+   ],
+   "url": "https://github.com/advisories/GHSA-2v9w-34q6-wpqx",
+   "publishedAt": "2026-11-23T21:02:03.000Z"
+  },
+  {
+   "id": "GHSA-f9h7-4mmq-vgcq",
+   "cve": "CVE-2026-58262",
+   "summary": "Klever Go counts bitmap padding bits toward BLS quorum, allowing blocks with insufficient signatures",
+   "severity": "high",
+   "packages": [
+    "github.com/klever-io/klever-go (go)"
+   ],
+   "url": "https://github.com/advisories/GHSA-f9h7-4mmq-vgcq",
+   "publishedAt": "2026-11-23T20:55:35.000Z"
+  },
+  {
+   "id": "GHSA-mqwm-5m85-gmcv",
+   "cve": "CVE-2026-22865",
+   "summary": "Gradle causes failure to disable repositories exposing builds to malicious artifacts",
+   "severity": "high",
+   "packages": [
+    "org.gradle:gradle-core (maven)"
+   ],
+   "url": "https://github.com/advisories/GHSA-mqwm-5m85-gmcv",
+   "publishedAt": "2026-11-23T15:41:57.000Z"
+  },
+  {
+   "id": "GHSA-w78c-w6vf-rw82",
+   "cve": "CVE-2026-22816",
+   "summary": "Gradle causes Failure to disable repositories can expose builds to malicious artifacts",
+   "severity": "high",
+   "packages": [
+    "org.gradle:gradle-core (maven)"
+   ],
+   "url": "https://github.com/advisories/GHSA-w78c-w6vf-rw82",
+   "publishedAt": "2026-11-23T15:33:34.000Z"
+  },
+  {
+   "id": "GHSA-25qc-m4pw-2w8r",
+   "cve": "CVE-2026-122247",
+   "summary": "Budibase: Unauthenticated global-admin & database creation via tenant-confusion bypass of the one-time init guard (`POST /api/global/users/init`)",
+   "severity": "high",
+   "packages": [
+    "@budibase/server (npm)"
+   ],
+   "url": "https://github.com/advisories/GHSA-25qc-m4pw-2w8r",
+   "publishedAt": "2026-11-20T23:50:01.000Z"
+  },
+  {
+   "id": "GHSA-r2q3-7m4h-63qg",
+   "cve": "CVE-2026-122244",
+   "summary": "Budibase: Cross-privilege Stored XSS in the Budibase Builder via broken HTML-escaping in `jsonFormatter.format()` rendered through `{@html}` in the…",
+   "severity": "high",
+   "packages": [
+    "@budibase/server (npm)"
+   ],
+   "url": "https://github.com/advisories/GHSA-r2q3-7m4h-63qg",
+   "publishedAt": "2026-11-20T23:49:47.000Z"
+  }
+ ],
+ "classifieds": [
+  {
+   "title": "Agent Engineer",
+   "company": "Sarvam AI",
+   "location": "Bengaluru, India",
+   "mode": "on-site",
+   "level": "mid",
+   "region": "india",
+   "tags": [
+    "Deployment Engineering"
+   ],
+   "blurb": "The distance between an AI system that works and one that millions of people rely on every day is where the real engineering lives. Crossing it is…",
+   "url": "https://jobs.ashbyhq.com/sarvam/36f89b00-2010-4d23-aae3-17a2f53d9eaa",
+   "via": "Ashby",
+   "direct": true,
+   "board": "ashby:sarvam",
+   "postedAt": "2026-11-24T10:41:16.643Z",
+   "id": "ebf7dd093517",
+   "firstSeen": "2026-11-24T10:54:45.739Z"
+  },
+  {
+   "title": "Senior Manager, Software Development Engineering - Networking",
+   "company": "Zscaler",
+   "location": "Bangalore, IND",
+   "mode": "unspecified",
+   "level": "senior",
+   "region": "india",
+   "tags": [],
+   "blurb": "",
+   "url": "https://job-boards.greenhouse.io/zscaler/jobs/5306440007",
+   "via": "Greenhouse",
+   "direct": true,
+   "board": "greenhouse:zscaler",
+   "postedAt": "2026-11-24T07:32:25.000Z",
+   "id": "a675e8fb7f88",
+   "firstSeen": "2026-11-24T10:54:45.739Z"
+  },
+  {
+   "title": "Senior Site Reliability Engineer - Kubernetes & AWS",
+   "company": "Okta",
+   "location": "Bengaluru",
+   "mode": "unspecified",
+   "level": "senior",
+   "region": "india",
+   "tags": [],
+   "blurb": "",
+   "url": "https://www.okta.com/company/careers/opportunity/8255907?gh_jid=8255907",
+   "via": "Greenhouse",
+   "direct": true,
+   "board": "greenhouse:okta",
+   "postedAt": "2026-11-24T05:58:17.000Z",
+   "id": "551bb5c494f3",
+   "firstSeen": "2026-11-24T10:54:45.739Z"
+  },
+  {
+   "title": "SDE-III",
+   "company": "Mindtickle",
+   "location": "Pune, Maharashtra",
+   "mode": "hybrid",
+   "level": "senior",
+   "region": "india",
+   "tags": [
+    "Engineering"
+   ],
+   "blurb": "",
+   "url": "https://jobs.lever.co/mindtickle/2f32712f-bc84-4485-b2fb-99e167f54e21",
+   "via": "Lever",
+   "direct": true,
+   "board": "lever:mindtickle",
+   "postedAt": "2026-11-24T04:58:29.151Z",
+   "id": "50304a19ed30",
+   "firstSeen": "2026-11-24T10:54:45.739Z"
+  },
+  {
+   "title": "Applied AI Engineer, Enterprise AI",
+   "company": "GitLab",
+   "location": "Bangalore, India",
+   "mode": "unspecified",
+   "level": "mid",
+   "region": "india",
+   "tags": [],
+   "blurb": "",
+   "url": "https://job-boards.greenhouse.io/gitlab/jobs/8940982002",
+   "via": "Greenhouse",
+   "direct": true,
+   "board": "greenhouse:gitlab",
+   "postedAt": "2026-11-23T22:02:31.000Z",
+   "id": "f464cd02e1bc",
+   "firstSeen": "2026-11-24T00:49:08.158Z"
+  },
+  {
+   "title": "Senior Software Development Engineer",
+   "company": "Razorpay",
+   "location": "Bengaluru",
+   "mode": "unspecified",
+   "level": "senior",
+   "region": "india",
+   "tags": [],
+   "blurb": "",
+   "url": "https://job-boards.greenhouse.io/razorpaysoftwareprivatelimited/jobs/4747004005",
+   "via": "Greenhouse",
+   "direct": true,
+   "board": "greenhouse:razorpaysoftwareprivatelimited",
+   "postedAt": "2026-11-23T10:46:52.000Z",
+   "id": "296b500771ad",
+   "firstSeen": "2026-11-24T00:49:08.158Z"
+  },
+  {
+   "title": "Software Engineer-I",
+   "company": "Toast",
+   "location": "Bengaluru,Karnataka,India",
+   "mode": "unspecified",
+   "level": "mid",
+   "region": "india",
+   "tags": [],
+   "blurb": "",
+   "url": "https://careers.toasttab.com/jobs?gh_jid=8370624",
+   "via": "Greenhouse",
+   "direct": true,
+   "board": "greenhouse:toast",
+   "postedAt": "2026-11-23T10:11:25.000Z",
+   "id": "86b05c2e2060",
+   "firstSeen": "2026-11-24T10:54:45.739Z"
+  },
+  {
+   "title": "Senior Web Developer",
+   "company": "HighRadius",
+   "location": "Hyderabad, Telangana, India",
+   "mode": "unspecified",
+   "level": "senior",
+   "region": "india",
+   "tags": [],
+   "blurb": "",
+   "url": "https://www.highradius.com/about/careers-list/?gh_jid=8200225003",
+   "via": "Greenhouse",
+   "direct": true,
+   "board": "greenhouse:highradius",
+   "postedAt": "2026-11-23T07:46:26.000Z",
+   "id": "4742e58a38b8",
+   "firstSeen": "2026-11-23T08:59:15.087Z"
+  },
+  {
+   "title": "Staff Software Engineer",
+   "company": "Celonis",
+   "location": "Bangalore, India",
+   "mode": "unspecified",
+   "level": "staff",
+   "region": "india",
+   "tags": [],
+   "blurb": "",
+   "url": "https://job-boards.greenhouse.io/celonis/jobs/7791343003?gh_jid=7791343003",
+   "via": "Greenhouse",
+   "direct": true,
+   "board": "greenhouse:celonis",
+   "postedAt": "2026-11-23T04:21:03.000Z",
+   "id": "0e72908601f1",
+   "firstSeen": "2026-11-23T08:59:15.087Z"
+  },
+  {
+   "title": "Technical Support Engineer (Inference)",
+   "company": "Together AI",
+   "location": "Pune or Bangalore, India",
+   "mode": "unspecified",
+   "level": "mid",
+   "region": "india",
+   "tags": [],
+   "blurb": "",
+   "url": "https://job-boards.greenhouse.io/togetherai/jobs/5302660007",
+   "via": "Greenhouse",
+   "direct": true,
+   "board": "greenhouse:togetherai",
+   "postedAt": "2026-11-21T17:16:44.000Z",
+   "id": "cb2e526ff3da",
+   "firstSeen": "2026-11-21T20:05:06.749Z"
+  },
+  {
+   "title": "Senior AI Engineer - Enterprise Agentic Systems",
+   "company": "Rubrik",
+   "location": "Bangalore, India",
+   "mode": "unspecified",
+   "level": "senior",
+   "region": "india",
+   "tags": [],
+   "blurb": "",
+   "url": "https://www.rubrik.com/company/careers/departments/job.8358790?gh_jid=8358790",
+   "via": "Greenhouse",
+   "direct": true,
+   "board": "greenhouse:rubrik",
+   "postedAt": "2026-11-21T08:44:36.000Z",
+   "id": "4265e7ddf694",
+   "firstSeen": "2026-11-21T20:05:06.749Z"
+  },
+  {
+   "title": "Member of Technical staff, Backend (Product Security)",
+   "company": "Pure Storage",
+   "location": "Bangalore, India",
+   "mode": "unspecified",
+   "level": "staff",
+   "region": "india",
+   "tags": [],
+   "blurb": "",
+   "url": "https://job-boards.greenhouse.io/purestorage/jobs/8382538",
+   "via": "Greenhouse",
+   "direct": true,
+   "board": "greenhouse:purestorage",
+   "postedAt": "2026-11-20T07:08:59.000Z",
+   "id": "c77a6bea3f9d",
+   "firstSeen": "2026-11-20T08:30:16.723Z"
+  },
+  {
+   "title": "Engineering Manager",
+   "company": "Fivetran",
+   "location": "Bengaluru, Karnataka, India, APAC",
+   "mode": "unspecified",
+   "level": "senior",
+   "region": "india",
+   "tags": [],
+   "blurb": "",
+   "url": "https://www.fivetran.com/careers/job?gh_jid=8203072003",
+   "via": "Greenhouse",
+   "direct": true,
+   "board": "greenhouse:fivetran",
+   "postedAt": "2026-11-19T16:01:19.000Z",
+   "id": "c2731e06b881",
+   "firstSeen": "2026-11-19T21:29:57.495Z"
+  },
+  {
+   "title": "Technical Project Manager (AI Enabled Initiaives)",
+   "company": "Zenoti",
+   "location": "Hyderabad, Telangana, India",
+   "mode": "unspecified",
+   "level": "senior",
+   "region": "india",
+   "tags": [],
+   "blurb": "",
+   "url": "https://job-boards.greenhouse.io/zenoti/jobs/8197408003",
+   "via": "Greenhouse",
+   "direct": true,
+   "board": "greenhouse:zenoti",
+   "postedAt": "2026-11-19T13:23:58.000Z",
+   "id": "54e0ead7a404",
+   "firstSeen": "2026-11-19T21:29:57.495Z"
+  },
+  {
+   "title": "Technical Support Engineer I",
+   "company": "Zeta",
+   "location": "Hyderabad",
+   "mode": "on-site",
+   "level": "mid",
+   "region": "india",
+   "tags": [
+    "WIN Optum"
+   ],
+   "blurb": "About us: Build the future of banking. Zeta is a next-generation banking technology company providing cloud-native, fully stackable processing and…",
+   "url": "https://jobs.lever.co/zeta/d7608271-a46f-4783-b5a9-05737398d320",
+   "via": "Lever",
+   "direct": true,
+   "board": "lever:zeta",
+   "postedAt": "2026-11-19T10:40:38.923Z",
+   "id": "e1ef17282e00",
+   "firstSeen": "2026-11-19T21:29:57.495Z"
+  },
+  {
+   "title": "Business Technology Engineer II",
+   "company": "Samsara",
+   "location": "Bengaluru - BLR2",
+   "mode": "unspecified",
+   "level": "mid",
+   "region": "india",
+   "tags": [],
+   "blurb": "",
+   "url": "https://www.samsara.com/company/careers/roles/8393354?gh_jid=8393354",
+   "via": "Greenhouse",
+   "direct": true,
+   "board": "greenhouse:samsara",
+   "postedAt": "2026-11-19T06:04:42.000Z",
+   "id": "cb896c1f1066",
+   "firstSeen": "2026-11-19T08:46:55.987Z"
+  }
+ ],
+ "employers": [
+  {
+   "company": "Zscaler",
+   "roles": 26,
+   "india": 20,
+   "titles": [
+    "Senior Manager, Software Development Engineering - Networking",
+    "Staff Web Application Security Specialist",
+    "Principal Adversary Emulation Specialist (Offensive Security)"
+   ]
+  },
+  {
+   "company": "Okta",
+   "roles": 26,
+   "india": 20,
+   "titles": [
+    "Senior Site Reliability Engineer - Kubernetes & AWS",
+    "Senior Software Engineer (Java & System design)",
+    "Manager, Engineering"
+   ]
+  },
+  {
+   "company": "Databricks",
+   "roles": 26,
+   "india": 20,
+   "titles": [
+    "Staff Software Engineer (App-Framework)",
+    "Senior Software Engineer - Backend Infrastructure",
+    "Staff Software Engineer- Databricks AI"
+   ]
+  },
+  {
+   "company": "GitLab",
+   "roles": 26,
+   "india": 20,
+   "titles": [
+    "Applied AI Engineer, Enterprise AI",
+    "Staff Software Engineer, Security Platform: Authentication",
+    "Engineering Manager, Security Platform: Authentication"
+   ]
+  },
+  {
+   "company": "MongoDB",
+   "roles": 26,
+   "india": 20,
+   "titles": [
+    "Senior Software Engineer (Enterprise Advanced)",
+    "Technical Services Engineer",
+    "Lead, Technical Services Engineer - Partners"
+   ]
+  },
+  {
+   "company": "Pure Storage",
+   "roles": 26,
+   "india": 20,
+   "titles": [
+    "Member of Technical staff, Backend (Product Security)",
+    "Member of Technical Staff, Backend (Product Security)",
+    "Member of Technical Staff - Senior DevOps Engineer"
+   ]
+  },
+  {
+   "company": "Celonis",
+   "roles": 25,
+   "india": 20,
+   "titles": [
+    "Staff Software Engineer",
+    "Senior Software Engineer",
+    "Engineering Leader"
+   ]
+  },
+  {
+   "company": "Sarvam AI",
+   "roles": 20,
+   "india": 20,
+   "titles": [
+    "Agent Engineer",
+    "Senior Software Engineer - Data Infrastructure",
+    "Software Development Engineer 3, Samvaad"
+   ]
+  }
+ ],
+ "jobsDirect": 837,
+ "jobsTotal": 900,
+ "jobsNew": 25,
+ "sources": [
+  {
+   "name": "Ars Technica",
+   "ok": true,
+   "count": 8,
+   "ms": 268
+  },
+  {
+   "name": "Ashby employer boards (25 of 25)",
+   "ok": true,
+   "count": 187,
+   "ms": 2103
+  },
+  {
+   "name": "Cloudflare Blog",
+   "ok": true,
+   "count": 8,
+   "ms": 173
+  },
+  {
+   "name": "DEV Community",
+   "ok": true,
+   "count": 20,
+   "ms": 168
+  },
+  {
+   "name": "GitHub advisories",
+   "ok": true,
+   "count": 8,
+   "ms": 802
+  },
+  {
+   "name": "GitHub repositories",
+   "ok": true,
+   "count": 24,
+   "ms": 1525
+  },
+  {
+   "name": "Greenhouse employer boards (55 of 55)",
+   "ok": true,
+   "count": 630,
+   "ms": 1112
+  },
+  {
+   "name": "Hacker News",
+   "ok": true,
+   "count": 30,
+   "ms": 315
+  },
+  {
+   "name": "InfoQ",
+   "ok": true,
+   "count": 8,
+   "ms": 495
+  },
+  {
+   "name": "Lever employer boards (12 of 12)",
+   "ok": true,
+   "count": 89,
+   "ms": 5547
+  },
+  {
+   "name": "Lobsters",
+   "ok": true,
+   "count": 25,
+   "ms": 222
+  },
+  {
+   "name": "Remote OK",
+   "ok": true,
+   "count": 37,
+   "ms": 1508
+  },
+  {
+   "name": "Remotive",
+   "ok": true,
+   "count": 15,
+   "ms": 979
+  },
+  {
+   "name": "SimplifyJobs New-Grad-Positions",
+   "ok": true,
+   "count": 70,
+   "ms": 1455
+  },
+  {
+   "name": "SimplifyJobs Summer2027-Internships",
+   "ok": true,
+   "count": 70,
+   "ms": 1393
+  },
+  {
+   "name": "The GitHub Blog",
+   "ok": true,
+   "count": 8,
+   "ms": 159
+  }
+ ],
+ "briefing": [
+  "Leading this morning’s paper is “New York Bans Subscription and Post-Purchase Fees on Cars”, reported by Hacker News, where it drew 377 points and 119 comments. Close behind: “2035 Came Early” from Hacker News.",
+  "On the open source exchange, storytold/craft-anything sits at the top of the table with 42,489 stars. The biggest mover is mdiri-ai/SoduWork, up 445 since the last edition.",
+  "8 security advisories made the notices column, 1 of them critical. The situations vacant pages list 900 open roles, 25 new since the last edition."
+ ],
+ "briefingBy": "desk"
+}

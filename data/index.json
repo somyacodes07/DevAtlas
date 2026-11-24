@@ -1,5 +1,14 @@
 [
  {
+  "id": "2026-11-24-am",
+  "date": "2026-11-24",
+  "slot": "morning",
+  "number": 20,
+  "headline": "New York Bans Subscription and Post-Purchase Fees on Cars",
+  "stories": 29,
+  "generatedAt": "2026-11-24T10:54:45.739Z"
+ },
+ {
   "id": "2026-11-23-pm",
   "date": "2026-11-23",
   "slot": "evening",
