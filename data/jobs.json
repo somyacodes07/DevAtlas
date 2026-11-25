@@ -1,5 +1,678 @@
 [
  {
+  "title": "Senior Software Engineer - Toast Connect",
+  "company": "Toast",
+  "location": "Dublin, Ireland",
+  "mode": "unspecified",
+  "level": "senior",
+  "region": "europe",
+  "tags": [],
+  "blurb": "",
+  "url": "https://careers.toasttab.com/jobs?gh_jid=8413505",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:toast",
+  "postedAt": "2026-11-25T09:23:44.000Z",
+  "id": "ae5bf6b6868f",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "AI Data Contributor",
+  "company": "Weekday AI",
+  "location": "Remote in USA; Remote in Canada",
+  "mode": "remote",
+  "level": "entry",
+  "region": "remote",
+  "tags": [
+   "AI/ML/Data"
+  ],
+  "blurb": "",
+  "url": "https://apply.workable.com/weekday-1/j/FE232C4F67/apply",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:New-Grad-Positions",
+  "postedAt": "2026-11-25T07:42:07.000Z",
+  "id": "0d7fbb294708",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Data Analyst Intern",
+  "company": "ConnectPrep",
+  "location": "Washington",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "other",
+  "tags": [
+   "AI/ML/Data"
+  ],
+  "blurb": "",
+  "url": "https://apply.workable.com/connectprep/j/9F465A2E1A/apply",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-25T07:33:35.000Z",
+  "id": "6bff1a0a0d7d",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Backend Software Engineer - Data Lifecycle Management",
+  "company": "TikTok",
+  "location": "San Jose, CA",
+  "mode": "unspecified",
+  "level": "entry",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://lifeattiktok.com/search/7710030288165996805",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:New-Grad-Positions",
+  "postedAt": "2026-11-25T07:14:47.000Z",
+  "id": "2de6e683b3bb",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Sr Product Manager - Payments Platform",
+  "company": "Nium",
+  "location": "Bangalore",
+  "mode": "on-site",
+  "level": "senior",
+  "region": "india",
+  "tags": [
+   "Product Management"
+  ],
+  "blurb": "Nium provides global infrastructure for real-time cross-border payments. We were founded on the mission to deliver the global payments…",
+  "url": "https://jobs.lever.co/nium/1b8a2c56-d819-4fd9-8058-d0ecdce4fa12",
+  "via": "Lever",
+  "direct": true,
+  "board": "lever:nium",
+  "postedAt": "2026-11-25T07:08:29.409Z",
+  "id": "b76fc4675484",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Technical Program Manager, LLM Infrastructure",
+  "company": "Glean",
+  "location": "Mountain View, CA",
+  "mode": "unspecified",
+  "level": "senior",
+  "region": "americas",
+  "tags": [],
+  "blurb": "",
+  "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4757997005",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:gleanwork",
+  "postedAt": "2026-11-25T06:50:19.000Z",
+  "id": "1c96ca64cbba",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Senior AI Engineer - Enterprise Agentic Systems",
+  "company": "Rubrik",
+  "location": "Bengaluru, India",
+  "mode": "unspecified",
+  "level": "senior",
+  "region": "india",
+  "tags": [],
+  "blurb": "",
+  "url": "https://www.rubrik.com/company/careers/departments/job.8318071?gh_jid=8318071",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:rubrik",
+  "postedAt": "2026-11-25T06:37:05.000Z",
+  "id": "fa8ec47cf066",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Senior Engineering Manager",
+  "company": "Pure Storage",
+  "location": "Bangalore, India",
+  "mode": "unspecified",
+  "level": "senior",
+  "region": "india",
+  "tags": [],
+  "blurb": "",
+  "url": "https://job-boards.greenhouse.io/purestorage/jobs/8392873",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:purestorage",
+  "postedAt": "2026-11-25T05:50:22.000Z",
+  "id": "b909703237be",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Outcomes Architect",
+  "company": "Notion",
+  "location": "Singapore, Singapore",
+  "mode": "remote",
+  "level": "staff",
+  "region": "remote",
+  "tags": [
+   "Outcomes Architect"
+  ],
+  "blurb": "WHO WE ARE Notion is the collaborative AI workspace where teams and agents think together https://www.youtube.com/watch?v=vkpYpWfEK5s. We're…",
+  "url": "https://jobs.ashbyhq.com/notion/63f3e6dc-d03b-4c7d-a016-e7909e3466a0",
+  "via": "Ashby",
+  "direct": true,
+  "board": "ashby:notion",
+  "postedAt": "2026-11-25T05:44:54.294Z",
+  "id": "97f7a4e64a7a",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Solutions Engineer, Ads Solutions - NYC",
+  "company": "OpenAI",
+  "location": "San Francisco, United States",
+  "mode": "unspecified",
+  "level": "mid",
+  "region": "other",
+  "salary": "$234K – $260K • Offers Equity",
+  "tags": [
+   "Ads Solutions"
+  ],
+  "blurb": "About the Team OpenAI’s mission is to ensure the responsible and widespread adoption of artificial intelligence. In support of that mission, the Ads…",
+  "url": "https://jobs.ashbyhq.com/openai/eb3b695e-6c60-4875-b8bc-8f4d5d8a9bbb",
+  "via": "Ashby",
+  "direct": true,
+  "board": "ashby:openai",
+  "postedAt": "2026-11-25T02:03:01.866Z",
+  "id": "42ae9b615367",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Software Engineer Intern",
+  "company": "Bandwidth",
+  "location": "Raleigh, NC",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://job-boards.greenhouse.io/bandwidth/jobs/8414430",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-25T01:41:42.000Z",
+  "id": "272f751e4087",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Software Engineer Intern",
+  "company": "Bandwidth",
+  "location": "Raleigh, NC",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://job-boards.greenhouse.io/bandwidth/jobs/8414440",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-25T01:41:14.000Z",
+  "id": "a050ff4252d9",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Software Engineer Intern",
+  "company": "Bandwidth",
+  "location": "Raleigh, NC",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://job-boards.greenhouse.io/bandwidth/jobs/8414426",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-25T01:40:40.000Z",
+  "id": "30296c817503",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Software Engineer Intern",
+  "company": "Bandwidth",
+  "location": "Raleigh, NC",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://job-boards.greenhouse.io/bandwidth/jobs/8414436",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-25T01:40:12.000Z",
+  "id": "e992cb199395",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Software Engineer Intern",
+  "company": "Bandwidth",
+  "location": "Raleigh, NC",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://job-boards.greenhouse.io/bandwidth/jobs/8414444",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-25T01:39:20.000Z",
+  "id": "9276c71b67cb",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Software Engineer Intern",
+  "company": "Bandwidth",
+  "location": "Raleigh, NC",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://job-boards.greenhouse.io/bandwidth/jobs/8414452",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-25T01:38:41.000Z",
+  "id": "3595c0835693",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Software Engineer Intern",
+  "company": "Bandwidth",
+  "location": "Raleigh, NC",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://job-boards.greenhouse.io/bandwidth/jobs/8414448",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-25T01:38:00.000Z",
+  "id": "31c6611b9825",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Director, Engineering-Agentic Ads Business Platform",
+  "company": "Pinterest",
+  "location": "San Francisco, CA, US; Palo Alto, CA, US",
+  "mode": "unspecified",
+  "level": "staff",
+  "region": "americas",
+  "tags": [],
+  "blurb": "",
+  "url": "https://www.pinterestcareers.com/jobs/?gh_jid=8376163",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:pinterest",
+  "postedAt": "2026-11-25T01:34:05.000Z",
+  "id": "87cc6e237d6c",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Application Developer Analyst Levels 1–2",
+  "company": "Metropolitan Transportation Authority",
+  "location": "Jamaica, Queens, NY",
+  "mode": "unspecified",
+  "level": "entry",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://jobs.jobvite.com/metropolitantransportationauthority/job/oHP8AfwY?nl=1&nl=1&fr=false",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:New-Grad-Positions",
+  "postedAt": "2026-11-25T01:33:15.000Z",
+  "id": "94136bf475a3",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Research Intern - AI Systems Architecture - Efficient LLM Inference",
+  "company": "Microsoft",
+  "location": "Redmond, WA",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "AI/ML/Data"
+  ],
+  "blurb": "",
+  "url": "https://apply.careers.microsoft.com/careers/job/1970393557079428",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-25T01:21:22.000Z",
+  "id": "884bffd4ebad",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Systems Engineer 1",
+  "company": "Oracle",
+  "location": "Kansas City, MO",
+  "mode": "unspecified",
+  "level": "entry",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_45001/job/350415",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:New-Grad-Positions",
+  "postedAt": "2026-11-25T01:21:05.000Z",
+  "id": "4348d31e3cad",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Associate Software Engineer New Grad",
+  "company": "Veeva Systems",
+  "location": "Raleigh, NC",
+  "mode": "unspecified",
+  "level": "entry",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://jobs.lever.co/veeva/7272b636-1a5e-4e4b-a0af-763d2951429f/apply",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:New-Grad-Positions",
+  "postedAt": "2026-11-25T01:20:36.000Z",
+  "id": "d317b2e29dd8",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Software Engineer",
+  "company": "Deloitte",
+  "location": "Hermitage, Nashville, TN",
+  "mode": "unspecified",
+  "level": "entry",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://apply.deloitte.com/en_US/careers/JobDetail/Internal-Services-Associate-Software-Engineering-Summer-Fall-2027/376512",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:New-Grad-Positions",
+  "postedAt": "2026-11-25T01:14:25.000Z",
+  "id": "add42355c5e5",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Forward Deployed AI Engineer - Technical Program Management - AI Delivery and Enablement",
+  "company": "Dell Technologies",
+  "location": "Hopkinton, MA",
+  "mode": "unspecified",
+  "level": "entry",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://iawmqy.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/careers/job/299999",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:New-Grad-Positions",
+  "postedAt": "2026-11-25T00:48:51.000Z",
+  "id": "bc074d26a66d",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Senior Staff Software Engineer, AI Productivity",
+  "company": "Instacart",
+  "location": "United States - Remote",
+  "mode": "remote",
+  "level": "staff",
+  "region": "remote",
+  "tags": [],
+  "blurb": "",
+  "url": "https://instacart.careers/job/?gh_jid=8415777",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:instacart",
+  "postedAt": "2026-11-25T00:32:00.000Z",
+  "id": "639319518856",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Life Science Data Analyst",
+  "company": "DeciBio Consulting",
+  "location": "London, UK; LA",
+  "mode": "unspecified",
+  "level": "entry",
+  "region": "europe",
+  "tags": [
+   "AI/ML/Data"
+  ],
+  "blurb": "",
+  "url": "https://www.decibio.com/careers/open-positions?gh_jid=8961111002",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:New-Grad-Positions",
+  "postedAt": "2026-11-25T00:09:57.000Z",
+  "id": "0539debf2690",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Senior Software Engineer, Actions (Auth0)",
+  "company": "Okta",
+  "location": "Bellevue, WA, United States; Chicago, Illinois, United States; New…",
+  "mode": "unspecified",
+  "level": "senior",
+  "region": "americas",
+  "tags": [],
+  "blurb": "",
+  "url": "https://www.okta.com/company/careers/opportunity/8415766?gh_jid=8415766",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:okta",
+  "postedAt": "2026-11-25T00:09:56.000Z",
+  "id": "50a18b54b6fe",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Software Engineer, Space Foundations — Real-Time Systems",
+  "company": "OpenAI",
+  "location": "Seattle, United States",
+  "mode": "remote",
+  "level": "mid",
+  "region": "remote",
+  "salary": "$347K – $445K • Offers Equity",
+  "tags": [
+   "Applied AI Engineering"
+  ],
+  "blurb": "About the role Space helps people and AI agents work with files and collaborate. The Space Foundations team builds the shared systems that make…",
+  "url": "https://jobs.ashbyhq.com/openai/e1823ba3-a94c-410f-b064-217a1d71c866",
+  "via": "Ashby",
+  "direct": true,
+  "board": "ashby:openai",
+  "postedAt": "2026-11-24T23:41:30.450Z",
+  "id": "4ab9d515d339",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Software Engineer, Space Foundations — Search & Databases",
+  "company": "OpenAI",
+  "location": "Seattle, United States",
+  "mode": "remote",
+  "level": "mid",
+  "region": "remote",
+  "salary": "$347K – $445K • Offers Equity",
+  "tags": [
+   "Applied AI Engineering"
+  ],
+  "blurb": "About the role Search helps people and AI agents find the files and information they need to work in Space. We’re looking for a product engineer…",
+  "url": "https://jobs.ashbyhq.com/openai/f3f3ba4c-cc37-44fe-a8b1-5aa4553c3092",
+  "via": "Ashby",
+  "direct": true,
+  "board": "ashby:openai",
+  "postedAt": "2026-11-24T23:39:23.082Z",
+  "id": "a5d06f6b6afd",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Research Scientist Intern - Machine Learning for Robust 3D Perception",
+  "company": "Meta",
+  "location": "Redmond, WA",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "AI/ML/Data"
+  ],
+  "blurb": "",
+  "url": "https://www.metacareers.com/jobs/1482835147112669",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-24T23:36:21.000Z",
+  "id": "ff1b39c61da1",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Runtime Engineer Intern",
+  "company": "SambaNova Systems",
+  "location": "Austin, TX; San Jose, CA",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://sambanova.ai/sambanova-available-positions/?gh_jid=6270727004",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-24T23:22:48.000Z",
+  "id": "c3782f7720a5",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Senior Salesforce Developer",
+  "company": "Instacart",
+  "location": "Canada - Remote (ON, AB, BC, or NS Only)",
+  "mode": "remote",
+  "level": "senior",
+  "region": "remote",
+  "tags": [],
+  "blurb": "",
+  "url": "https://instacart.careers/job/?gh_jid=8415370",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:instacart",
+  "postedAt": "2026-11-24T23:12:39.000Z",
+  "id": "d5de1eb16d86",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Site Reliability / Cloud Platform Engineer (Agent Infra)",
+  "company": "Baseten",
+  "location": "San Francisco, United States",
+  "mode": "remote",
+  "level": "mid",
+  "region": "remote",
+  "salary": "$200K – $400K • Offers Equity",
+  "tags": [
+   "Agent Infra"
+  ],
+  "blurb": "ABOUT BASETEN Baseten powers mission-critical inference for the world's most dynamic AI companies, like Cursor, Notion, OpenEvidence, Abridge, Clay…",
+  "url": "https://jobs.ashbyhq.com/baseten/cfc186d9-261a-46c6-87a9-fb001edf57e1",
+  "via": "Ashby",
+  "direct": true,
+  "board": "ashby:baseten",
+  "postedAt": "2026-11-24T23:07:43.080Z",
+  "id": "f9b736b90b6d",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Front-End Engineer",
+  "company": "Amazon",
+  "location": "Seattle, WA",
+  "mode": "unspecified",
+  "level": "entry",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://amazon.jobs/en/jobs/10610793/front-end-engineer-2027-us",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:New-Grad-Positions",
+  "postedAt": "2026-11-24T23:05:36.000Z",
+  "id": "15246608a21c",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Front-End Engineer Intern",
+  "company": "Amazon",
+  "location": "Seattle, WA; Chicago, IL",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://amazon.jobs/en/jobs/10609992/front-end-engineer-internship-2027-us",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-24T23:05:35.000Z",
+  "id": "88192fd99ba9",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "Software Engineer, Core Platform (Agent Infra)",
+  "company": "Baseten",
+  "location": "San Francisco, United States",
+  "mode": "remote",
+  "level": "mid",
+  "region": "remote",
+  "salary": "$200K – $400K • Offers Equity",
+  "tags": [
+   "Agent Infra"
+  ],
+  "blurb": "ABOUT BASETEN Baseten powers mission-critical inference for the world's most dynamic AI companies, like Cursor, Notion, OpenEvidence, Abridge, Clay…",
+  "url": "https://jobs.ashbyhq.com/baseten/a3f47901-a5e9-40f8-ae6b-8695f3e3528c",
+  "via": "Ashby",
+  "direct": true,
+  "board": "ashby:baseten",
+  "postedAt": "2026-11-24T23:03:58.344Z",
+  "id": "129c18dcd640",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
   "title": "Staff Software Engineer, Developer Experience",
   "company": "Instacart",
   "location": "Canada - Remote (ON, AB, BC, or NS Only)",
@@ -385,6 +1058,44 @@
   "firstSeen": "2026-11-24T23:00:05.136Z"
  },
  {
+  "title": "AI Engineer",
+  "company": "Eide Bailly",
+  "location": "Remote in USA",
+  "mode": "remote",
+  "level": "entry",
+  "region": "remote",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://eidebailly.jibeapply.com/jobs/10092?icims=1&lang=en-us",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:New-Grad-Positions",
+  "postedAt": "2026-11-24T20:55:00.000Z",
+  "id": "b8fa1aff8dfc",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
+  "title": "AI Engineer",
+  "company": "Eide Bailly",
+  "location": "Remote in USA",
+  "mode": "remote",
+  "level": "entry",
+  "region": "remote",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://careers.eidebailly.com/jobs/10092?icims=1&lang=en-us",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:New-Grad-Positions",
+  "postedAt": "2026-11-24T20:55:00.000Z",
+  "id": "cd6a3b9af0fa",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
   "title": "Staff Software Engineer, Enterprise",
   "company": "Replit",
   "location": "Foster City, CA, USA",
@@ -407,7 +1118,7 @@
  {
   "title": "Sr. Engineering Manager - Notebook Foundations",
   "company": "Databricks",
-  "location": "San Francisco, California",
+  "location": "Mountain View, California",
   "mode": "unspecified",
   "level": "senior",
   "region": "other",
@@ -420,6 +1131,25 @@
   "postedAt": "2026-11-24T20:32:09.000Z",
   "id": "501343b1e187",
   "firstSeen": "2026-11-24T23:00:05.136Z"
+ },
+ {
+  "title": "Data Engineer Intern",
+  "company": "PatientPoint",
+  "location": "Cincinnati, OH",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "AI/ML/Data"
+  ],
+  "blurb": "",
+  "url": "https://job-boards.greenhouse.io/patientpointinviteonly/jobs/4755910005",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-24T19:58:01.000Z",
+  "id": "d4ded79ef76e",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
  },
  {
   "title": "Developer Experiences Manager",
@@ -454,6 +1184,25 @@
   "postedAt": "2026-11-24T19:37:58.000Z",
   "id": "7a950b96b5c0",
   "firstSeen": "2026-11-24T23:00:05.136Z"
+ },
+ {
+  "title": "Business / Data Analyst Intern",
+  "company": "Sparksoft",
+  "location": "Maryland",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "other",
+  "tags": [
+   "AI/ML/Data"
+  ],
+  "blurb": "",
+  "url": "https://job-boards.greenhouse.io/sparksoftcorporation/jobs/5308152007",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-24T19:34:21.000Z",
+  "id": "4acd50e8af1b",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
  },
  {
   "title": "Senior Data Scientist, Forecasting",
@@ -677,26 +1426,6 @@
   "firstSeen": "2026-11-24T23:00:05.136Z"
  },
  {
-  "title": "Cloud GTM Program Lead",
-  "company": "OpenAI",
-  "location": "San Francisco, United States",
-  "mode": "remote",
-  "level": "senior",
-  "region": "remote",
-  "salary": "$239K – $279K • Offers Equity",
-  "tags": [
-   "Revenue Operations"
-  ],
-  "blurb": "ABOUT THE ROLE OpenAI is looking for a Cloud GTM Program Lead to own end-to-end delivery of cross-functional launches for our cloud offerings…",
-  "url": "https://jobs.ashbyhq.com/openai/76709e27-2fe8-4930-ac87-76a8ef484a67",
-  "via": "Ashby",
-  "direct": true,
-  "board": "ashby:openai",
-  "postedAt": "2026-11-24T16:50:02.018Z",
-  "id": "fdc5a2891c87",
-  "firstSeen": "2026-11-24T23:00:05.136Z"
- },
- {
   "title": "Senior Professional Services Engineer - PubSec - Chantilly, VA",
   "company": "GitLab",
   "location": "Remote, United States",
@@ -762,25 +1491,6 @@
   "board": "greenhouse:stripe",
   "postedAt": "2026-11-24T16:32:21.000Z",
   "id": "d718cf6328bb",
-  "firstSeen": "2026-11-24T23:00:05.136Z"
- },
- {
-  "title": "Software Developer Intern",
-  "company": "RF-SMART",
-  "location": "Highlands Ranch, CO; Jacksonville, FL",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "americas",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://job-boards.greenhouse.io/rfsmart/jobs/5446867008",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-24T16:02:01.000Z",
-  "id": "04c10b2964ab",
   "firstSeen": "2026-11-24T23:00:05.136Z"
  },
  {
@@ -893,46 +1603,6 @@
   "board": "simplify:Summer2027-Internships",
   "postedAt": "2026-11-24T15:16:24.000Z",
   "id": "f147e3808fb5",
-  "firstSeen": "2026-11-24T23:00:05.136Z"
- },
- {
-  "title": "Integrations Architect - Enterprise Systems",
-  "company": "OpenAI",
-  "location": "San Francisco, United States",
-  "mode": "remote",
-  "level": "staff",
-  "region": "remote",
-  "salary": "$272K – $302K • Offers Equity",
-  "tags": [
-   "Finance"
-  ],
-  "blurb": "About the Team The Supply Chain Technology team within OpenAI's Enterprise Platform & Technology organization builds the systems and data…",
-  "url": "https://jobs.ashbyhq.com/openai/f772d873-6bfb-4ed1-bfae-af9fafc3e561",
-  "via": "Ashby",
-  "direct": true,
-  "board": "ashby:openai",
-  "postedAt": "2026-11-24T15:15:44.520Z",
-  "id": "80cd62012326",
-  "firstSeen": "2026-11-24T23:00:05.136Z"
- },
- {
-  "title": "Global Head of Applied AI Engineering, SMB / Mid-Market",
-  "company": "OpenAI",
-  "location": "San Francisco, United States",
-  "mode": "remote",
-  "level": "staff",
-  "region": "remote",
-  "salary": "$374K – $415K • Offers Equity",
-  "tags": [
-   "Technical Success"
-  ],
-  "blurb": "ABOUT THE TEAM Applied AI Engineering helps customers build, deploy, and run useful AI systems with OpenAI products. We work alongside customer…",
-  "url": "https://jobs.ashbyhq.com/openai/07fddd60-30a7-45fb-8564-f0ad1cd75716",
-  "via": "Ashby",
-  "direct": true,
-  "board": "ashby:openai",
-  "postedAt": "2026-11-24T14:55:21.181Z",
-  "id": "5336fd3e4db9",
   "firstSeen": "2026-11-24T23:00:05.136Z"
  },
  {
@@ -1350,25 +2020,6 @@
   "firstSeen": "2026-11-24T10:54:45.739Z"
  },
  {
-  "title": "Software Engineer-Securing AI",
-  "company": "Microsoft",
-  "location": "Redmond, WA",
-  "mode": "unspecified",
-  "level": "entry",
-  "region": "americas",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://apply.careers.microsoft.com/careers/job/1970393557073425",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:New-Grad-Positions",
-  "postedAt": "2026-11-24T02:51:24.000Z",
-  "id": "a4f36135ad7c",
-  "firstSeen": "2026-11-24T10:54:45.739Z"
- },
- {
   "title": "AI/ML Engineer & Applied Researcher - Early Stage Projects",
   "company": "X Development",
   "location": "Mountain View, CA",
@@ -1456,6 +2107,25 @@
   "firstSeen": "2026-11-24T00:49:08.158Z"
  },
  {
+  "title": "Senior Manager, Enterprise Application Development Engineering",
+  "company": "GitLab",
+  "location": "US Only",
+  "mode": "remote",
+  "level": "senior",
+  "region": "remote",
+  "tags": [
+   "devops"
+  ],
+  "blurb": "",
+  "url": "https://remoteOK.com/remote-jobs/remote-senior-manager-enterprise-application-development-engineering-gitlab-1138079",
+  "via": "Remote OK",
+  "direct": false,
+  "board": "remoteok",
+  "postedAt": "2026-11-24T00:20:07.000Z",
+  "id": "af745a2bef93",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
   "title": "Sr. Staff Software Engineer - Delivery Retrieval Infrastructure",
   "company": "Pinterest",
   "location": "San Francisco, CA, US; Palo Alto, CA, US",
@@ -1490,6 +2160,25 @@
   "firstSeen": "2026-11-24T00:49:08.158Z"
  },
  {
+  "title": "Senior CX Platform Engineer",
+  "company": "GitLab",
+  "location": "Canada Only",
+  "mode": "remote",
+  "level": "senior",
+  "region": "remote",
+  "tags": [
+   "devops"
+  ],
+  "blurb": "",
+  "url": "https://remoteOK.com/remote-jobs/remote-senior-cx-platform-engineer-gitlab-1138075",
+  "via": "Remote OK",
+  "direct": false,
+  "board": "remoteok",
+  "postedAt": "2026-11-24T00:00:07.000Z",
+  "id": "ae09cafab5c3",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
   "title": "Software Engineering - Ignite Innovator Pgm",
   "company": "Peraton",
   "location": "Blacksburg, VA",
@@ -1509,6 +2198,25 @@
   "firstSeen": "2026-11-24T23:00:05.136Z"
  },
  {
+  "title": "ID&C Software Engineer",
+  "company": "Beyond New Horizons",
+  "location": "Tullahoma, TN",
+  "mode": "unspecified",
+  "level": "entry",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://careers-bnh.icims.com/jobs/26055/job?mobile=true&needsRedirect=false",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:New-Grad-Positions",
+  "postedAt": "2026-11-24T00:00:00.000Z",
+  "id": "22299dd6c315",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
   "title": "Engineering Intern - Architecture Platform",
   "company": "Illumio",
   "location": "Sunnyvale, CA",
@@ -1526,6 +2234,25 @@
   "postedAt": "2026-11-24T00:00:00.000Z",
   "id": "5eb4a3ffd23b",
   "firstSeen": "2026-11-24T10:54:45.739Z"
+ },
+ {
+  "title": "Software Engineer Intern",
+  "company": "QinetiQ",
+  "location": "Fort Belvoir, VA",
+  "mode": "unspecified",
+  "level": "internship",
+  "region": "americas",
+  "tags": [
+   "Software"
+  ],
+  "blurb": "",
+  "url": "https://careers-qinetiqus.icims.com/jobs/12880/job?mobile=true&needsRedirect=false",
+  "via": "SimplifyJobs",
+  "direct": true,
+  "board": "simplify:Summer2027-Internships",
+  "postedAt": "2026-11-24T00:00:00.000Z",
+  "id": "aeb4845a9fa6",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
  },
  {
   "title": "Software & AI Intern",
@@ -2866,23 +3593,6 @@
   "firstSeen": "2026-11-24T00:49:08.158Z"
  },
  {
-  "title": "Software Engineer-I",
-  "company": "Toast",
-  "location": "Bengaluru,Karnataka,India",
-  "mode": "unspecified",
-  "level": "mid",
-  "region": "india",
-  "tags": [],
-  "blurb": "",
-  "url": "https://careers.toasttab.com/jobs?gh_jid=8370624",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:toast",
-  "postedAt": "2026-11-23T10:11:25.000Z",
-  "id": "86b05c2e2060",
-  "firstSeen": "2026-11-24T10:54:45.739Z"
- },
- {
   "title": "Senior Software Engineer, Agentic AI",
   "company": "Clover Health",
   "location": "US Only",
@@ -3401,23 +4111,6 @@
   "postedAt": "2026-11-22T10:20:27.000Z",
   "id": "966d0449e9dc",
   "firstSeen": "2026-11-23T08:59:15.087Z"
- },
- {
-  "title": "Senior Engineer, Core Service Interfaces (Auth0)",
-  "company": "Okta",
-  "location": "Dublin",
-  "mode": "unspecified",
-  "level": "senior",
-  "region": "europe",
-  "tags": [],
-  "blurb": "",
-  "url": "https://www.okta.com/company/careers/opportunity/8360107?gh_jid=8360107",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:okta",
-  "postedAt": "2026-11-22T08:57:24.000Z",
-  "id": "ce50350bbcb5",
-  "firstSeen": "2026-11-22T20:19:41.027Z"
  },
  {
   "title": "Product Manager, Developer Ecosystem",
@@ -4788,25 +5481,6 @@
   "firstSeen": "2026-11-21T08:16:29.868Z"
  },
  {
-  "title": "Data Engineer Intern",
-  "company": "Southern Farm Bureau Life Insurance",
-  "location": "Jackson, MS",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "americas",
-  "tags": [
-   "AI/ML/Data"
-  ],
-  "blurb": "",
-  "url": "https://recruiting2.ultipro.com/sou1016sfbli/JobBoard/adba73e4-f371-45d0-a5d2-32260abcd2f8/OpportunityDetail?opportunityId=87bde30a-d527-4d94-880d-db1a93afa941",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-20T23:31:51.000Z",
-  "id": "0d0e9a69ee36",
-  "firstSeen": "2026-11-21T08:16:29.868Z"
- },
- {
   "title": "Web Developer 1 or 2",
   "company": "USAble Life",
   "location": "Remote in USA",
@@ -4826,139 +5500,6 @@
   "firstSeen": "2026-11-21T08:16:29.868Z"
  },
  {
-  "title": "Data Engineer Intern",
-  "company": "Calamos Investments",
-  "location": "Naperville, IL",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "americas",
-  "tags": [
-   "AI/ML/Data"
-  ],
-  "blurb": "",
-  "url": "https://recruiting2.ultipro.com/cal1001cala/JobBoard/46b96419-fba6-4dd0-a5fa-715bdfcf845b/OpportunityDetail?opportunityId=fcc43164-f08a-4252-aa1b-4707337a92d4",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-20T23:28:10.000Z",
-  "id": "347170e8836e",
-  "firstSeen": "2026-11-21T08:16:29.868Z"
- },
- {
-  "title": "Engineering Student Co-op - AI/ML Specialist",
-  "company": "MDA Space",
-  "location": "Richmond, BC, Canada",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "americas",
-  "tags": [
-   "AI/ML/Data"
-  ],
-  "blurb": "",
-  "url": "https://recruiting.ultipro.ca/MAC5000MCDW/JobBoard/664818ff-3594-4bec-9f30-3394e59e19f3/OpportunityDetail?opportunityId=b5aef546-676b-4f7a-8c20-acfa8f25069f",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-20T23:22:23.000Z",
-  "id": "3dcfc49a087f",
-  "firstSeen": "2026-11-21T08:16:29.868Z"
- },
- {
-  "title": "Engineering Student Intern - Python Test Data Processing",
-  "company": "MDA Space",
-  "location": "Sainte-Anne-de-Bellevue, QC, Canada",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "americas",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://recruiting.ultipro.ca/MAC5000MCDW/JobBoard/664818ff-3594-4bec-9f30-3394e59e19f3/OpportunityDetail?opportunityId=67af442f-ca28-47b2-b86b-eaa3d5192fe0",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-20T23:22:23.000Z",
-  "id": "43f31b94af93",
-  "firstSeen": "2026-11-21T08:16:29.868Z"
- },
- {
-  "title": "Operations Developer Intern",
-  "company": "Southwest Power Pool",
-  "location": "Little Rock, AR",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "americas",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://recruiting2.ultipro.com/SOU1052SPPI/JobBoard/bc99b5f0-ed6b-436e-b545-2196af0704de/OpportunityDetail?opportunityId=51168e8a-cd42-4169-9c50-0019367a9d83",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-20T23:22:10.000Z",
-  "id": "e64174f17d52",
-  "firstSeen": "2026-11-21T08:16:29.868Z"
- },
- {
-  "title": "Research Intern - AI /Machine Learning Numerics & Efficiency",
-  "company": "Microsoft",
-  "location": "Redmond, WA; Mountain View, CA",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "americas",
-  "tags": [
-   "AI/ML/Data"
-  ],
-  "blurb": "",
-  "url": "https://apply.careers.microsoft.com/careers/job/1970393557076215",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-20T23:20:09.000Z",
-  "id": "4194aa5a23c2",
-  "firstSeen": "2026-11-21T08:16:29.868Z"
- },
- {
-  "title": "HVAC Applications Engineer Intern",
-  "company": "Baltimore Aircoil Company",
-  "location": "Jessup, MD",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "americas",
-  "tags": [
-   "AI/ML/Data"
-  ],
-  "blurb": "",
-  "url": "https://recruiting2.ultipro.com/AMS1003AMSII/JobBoard/15976ef7-7f1f-4b2f-8a0c-0e0ac1193dd8/OpportunityDetail?opportunityId=e416d019-d6a5-41ea-bd1c-eb8bf31e4cf8",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-20T23:18:59.000Z",
-  "id": "44f42fc66e90",
-  "firstSeen": "2026-11-21T08:16:29.868Z"
- },
- {
-  "title": "Software Engineering Intern - AI Building",
-  "company": "Ralliant",
-  "location": "Beaverton, OR",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "americas",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://ibwujb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/11324",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-20T23:17:56.000Z",
-  "id": "430495866bf0",
-  "firstSeen": "2026-11-21T08:16:29.868Z"
- },
- {
   "title": "AI Data Analyst",
   "company": "Aquestive Therapeutics",
   "location": "Warren, NJ",
@@ -4975,25 +5516,6 @@
   "board": "simplify:New-Grad-Positions",
   "postedAt": "2026-11-20T23:16:57.000Z",
   "id": "fc95f703da15",
-  "firstSeen": "2026-11-21T08:16:29.868Z"
- },
- {
-  "title": "Research Scientist Intern - Photorealistic Telepresence",
-  "company": "Meta",
-  "location": "London, UK",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "europe",
-  "tags": [
-   "AI/ML/Data"
-  ],
-  "blurb": "",
-  "url": "https://www.metacareers.com/jobs/1122232790428355",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-20T23:15:03.000Z",
-  "id": "42c05e9fa320",
   "firstSeen": "2026-11-21T08:16:29.868Z"
  },
  {
@@ -5036,44 +5558,6 @@
   "firstSeen": "2026-11-21T08:16:29.868Z"
  },
  {
-  "title": "Software Engineering Intern",
-  "company": "Watchfire Signs",
-  "location": "Danville, IL",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "americas",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://watchfiresigns.rec.pro.ukg.net/WAT1501WFSI/JobBoard/d3278620-b590-426f-899b-eb88c1096ad9/OpportunityDetail?opportunityId=b1838552-e606-4247-a3ce-2ce25d11e732",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-20T23:13:13.000Z",
-  "id": "fbfea6b28d1c",
-  "firstSeen": "2026-11-21T08:16:29.868Z"
- },
- {
-  "title": "Software Engineer Intern - App Intelligence Experience",
-  "company": "Apple",
-  "location": "Cambridge, UK",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "europe",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://jobs.apple.com/en-us/details/200696199",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-20T23:11:48.000Z",
-  "id": "a96bc81d19ad",
-  "firstSeen": "2026-11-21T08:16:29.868Z"
- },
- {
   "title": "Engineer New Grad - Evolve - An Apple Services Rotation Program",
   "company": "Apple",
   "location": "Seattle, WA; NYC",
@@ -5109,44 +5593,6 @@
   "board": "simplify:New-Grad-Positions",
   "postedAt": "2026-11-20T23:11:38.000Z",
   "id": "23e8c71648de",
-  "firstSeen": "2026-11-21T08:16:29.868Z"
- },
- {
-  "title": "Forward Deployed Engineer Intern",
-  "company": "NOV",
-  "location": "Houston, TX",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "americas",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://egay.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_4001/job/45321",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-20T23:11:34.000Z",
-  "id": "b7fe6b45be29",
-  "firstSeen": "2026-11-21T08:16:29.868Z"
- },
- {
-  "title": "IT Data Analyst Intern",
-  "company": "Encore",
-  "location": "Schiller Park, IL",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "americas",
-  "tags": [
-   "AI/ML/Data"
-  ],
-  "blurb": "",
-  "url": "https://recruiting2.ultipro.com/AUD1001AUDV/JobBoard/b1e2129f-5d09-48e8-b7ff-4e900458d8a9/OpportunityDetail?opportunityId=00243c22-9228-4aab-8146-9699c52b1fa0",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-20T23:11:19.000Z",
-  "id": "608b2b5dde5f",
   "firstSeen": "2026-11-21T08:16:29.868Z"
  },
  {
@@ -5204,25 +5650,6 @@
   "board": "simplify:New-Grad-Positions",
   "postedAt": "2026-11-20T23:09:50.000Z",
   "id": "f51044d6ee47",
-  "firstSeen": "2026-11-21T08:16:29.868Z"
- },
- {
-  "title": "Data Analyst Intern",
-  "company": "Daikin Comfort",
-  "location": "Waller, TX",
-  "mode": "unspecified",
-  "level": "internship",
-  "region": "americas",
-  "tags": [
-   "AI/ML/Data"
-  ],
-  "blurb": "",
-  "url": "https://recruiting2.ultipro.com/goo1038gomn/JobBoard/75022464-9dbd-43d2-af44-2840603d5823/OpportunityDetail?opportunityId=016d2b83-b435-4bb0-bb74-cb0555970a87",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:Summer2027-Internships",
-  "postedAt": "2026-11-20T23:09:50.000Z",
-  "id": "7cfdc6694a13",
   "firstSeen": "2026-11-21T08:16:29.868Z"
  },
  {
@@ -5719,63 +6146,6 @@
   "firstSeen": "2026-11-20T21:03:51.958Z"
  },
  {
-  "title": "Analytics Developer New Grad",
-  "company": "Further",
-  "location": "Cleveland, OH",
-  "mode": "unspecified",
-  "level": "entry",
-  "region": "americas",
-  "tags": [
-   "AI/ML/Data"
-  ],
-  "blurb": "",
-  "url": "https://job-boards.greenhouse.io/furtherearlycareer/jobs/8932692002",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:New-Grad-Positions",
-  "postedAt": "2026-11-20T17:07:57.000Z",
-  "id": "200a2f72afc2",
-  "firstSeen": "2026-11-21T08:16:29.868Z"
- },
- {
-  "title": "Entry-Level AI/Data Engineer",
-  "company": "Further",
-  "location": "Cleveland, OH",
-  "mode": "unspecified",
-  "level": "entry",
-  "region": "americas",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://job-boards.greenhouse.io/furtherearlycareer/jobs/8932674002",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:New-Grad-Positions",
-  "postedAt": "2026-11-20T17:03:43.000Z",
-  "id": "4bf4b0c29525",
-  "firstSeen": "2026-11-21T08:16:29.868Z"
- },
- {
-  "title": "Entry Level Developer New Grad",
-  "company": "Further",
-  "location": "Dallas, TX",
-  "mode": "unspecified",
-  "level": "entry",
-  "region": "americas",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://job-boards.greenhouse.io/furtherearlycareer/jobs/8906198002",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:New-Grad-Positions",
-  "postedAt": "2026-11-20T17:02:49.000Z",
-  "id": "adea3084a916",
-  "firstSeen": "2026-11-21T08:16:29.868Z"
- },
- {
   "title": "Security Governance, Risk and Compliance (GRC) Manager",
   "company": "Canonical",
   "location": "Home based - EMEA; Office Based - London, UK",
@@ -5868,25 +6238,6 @@
   "firstSeen": "2026-11-24T00:49:08.158Z"
  },
  {
-  "title": "Application Developer New Grad",
-  "company": "USAN",
-  "location": "Norcross, GA",
-  "mode": "unspecified",
-  "level": "entry",
-  "region": "americas",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://usan.bamboohr.com/careers/204/",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:New-Grad-Positions",
-  "postedAt": "2026-11-20T15:17:56.000Z",
-  "id": "f256c33e7c03",
-  "firstSeen": "2026-11-20T21:03:51.958Z"
- },
- {
   "title": "Staff Field Engineer | Canada | Remote",
   "company": "Grafana Labs",
   "location": "Canada (Remote)",
@@ -5901,25 +6252,6 @@
   "board": "greenhouse:grafanalabs",
   "postedAt": "2026-11-20T14:50:49.000Z",
   "id": "47f5a75a41c6",
-  "firstSeen": "2026-11-20T21:03:51.958Z"
- },
- {
-  "title": "Junior Modeling and Simulation Engineer",
-  "company": "Systems Planning and Analysis",
-  "location": "Alexandria, VA",
-  "mode": "unspecified",
-  "level": "entry",
-  "region": "americas",
-  "tags": [
-   "AI/ML/Data"
-  ],
-  "blurb": "",
-  "url": "https://spa.jibeapply.com/jobs/23894?icims=1&lang=en-us",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:New-Grad-Positions",
-  "postedAt": "2026-11-20T14:46:00.000Z",
-  "id": "291a613d9be9",
   "firstSeen": "2026-11-20T21:03:51.958Z"
  },
  {
@@ -5974,7 +6306,7 @@
   "firstSeen": "2026-11-20T21:03:51.958Z"
  },
  {
-  "title": "Engineering Manager - Grafana Infrastructure (Remote, UK)",
+  "title": "Engineering Manager - Grafana Infrastructure | UK | Remote",
   "company": "Grafana Labs",
   "location": "United Kingdom (Remote)",
   "mode": "remote",
@@ -5991,7 +6323,7 @@
   "firstSeen": "2026-11-20T21:03:51.958Z"
  },
  {
-  "title": "Engineering Manager - Grafana Infrastructure (Remote, Spain)",
+  "title": "Engineering Manager - Grafana Infrastructure | Spain | Remote",
   "company": "Grafana Labs",
   "location": "Spain (Remote)",
   "mode": "remote",
@@ -6008,7 +6340,7 @@
   "firstSeen": "2026-11-20T21:03:51.958Z"
  },
  {
-  "title": "Engineering Manager - Grafana Infrastructure (Remote, Ireland)",
+  "title": "Engineering Manager - Grafana Infrastructure | Ireland | Remote",
   "company": "Grafana Labs",
   "location": "Republic of Ireland (Remote)",
   "mode": "remote",
@@ -6022,42 +6354,6 @@
   "board": "greenhouse:grafanalabs",
   "postedAt": "2026-11-20T13:53:14.000Z",
   "id": "408d327c2c33",
-  "firstSeen": "2026-11-20T21:03:51.958Z"
- },
- {
-  "title": "QA Engineer II",
-  "company": "Toast",
-  "location": "Bangalore, India",
-  "mode": "unspecified",
-  "level": "mid",
-  "region": "india",
-  "tags": [],
-  "blurb": "",
-  "url": "https://careers.toasttab.com/jobs?gh_jid=8392140",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:toast",
-  "postedAt": "2026-11-20T12:21:01.000Z",
-  "id": "e6f1ca0a8825",
-  "firstSeen": "2026-11-20T21:03:51.958Z"
- },
- {
-  "title": "Applied Scientist - Machine Learning",
-  "company": "OctaiPipe",
-  "location": "London, UK",
-  "mode": "unspecified",
-  "level": "entry",
-  "region": "europe",
-  "tags": [
-   "AI/ML/Data"
-  ],
-  "blurb": "",
-  "url": "https://octaipipe.bamboohr.com/careers/49/",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:New-Grad-Positions",
-  "postedAt": "2026-11-20T11:10:47.000Z",
-  "id": "0718470d857e",
   "firstSeen": "2026-11-20T21:03:51.958Z"
  },
  {
@@ -6135,44 +6431,6 @@
   "firstSeen": "2026-11-21T08:16:29.868Z"
  },
  {
-  "title": "AI Engineer",
-  "company": "Sante",
-  "location": "Austin, TX",
-  "mode": "unspecified",
-  "level": "entry",
-  "region": "americas",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://workforcenow.adp.com/job?cid=6045a3c5-9cfb-4d71-9c06-80a911514305&jobId=274361596777_1",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:New-Grad-Positions",
-  "postedAt": "2026-11-20T07:54:39.000Z",
-  "id": "ff96e524e02a",
-  "firstSeen": "2026-11-20T08:30:16.723Z"
- },
- {
-  "title": "Energy Engineer",
-  "company": "Veregy",
-  "location": "Hoffman Estates, IL",
-  "mode": "unspecified",
-  "level": "entry",
-  "region": "americas",
-  "tags": [
-   "AI/ML/Data"
-  ],
-  "blurb": "",
-  "url": "https://workforcenow.adp.com/job?cid=c5bf927d-75b0-4e6e-8d59-de5517866227&jobId=9201302533317_48",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:New-Grad-Positions",
-  "postedAt": "2026-11-20T07:47:23.000Z",
-  "id": "6390e8c4f448",
-  "firstSeen": "2026-11-20T08:30:16.723Z"
- },
- {
   "title": "Security Analyst - Governance, Risk, and Compliance",
   "company": "LaunchDarkly",
   "location": "US Only",
@@ -6209,101 +6467,6 @@
   "postedAt": "2026-11-20T07:40:14.000Z",
   "id": "b32ea88c8902",
   "firstSeen": "2026-11-21T08:16:29.868Z"
- },
- {
-  "title": "Software Engineering New Grad",
-  "company": "Honeywell Aerospace",
-  "location": "United States",
-  "mode": "unspecified",
-  "level": "entry",
-  "region": "other",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://icfcjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Aerospace/job/120524",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:New-Grad-Positions",
-  "postedAt": "2026-11-20T07:28:19.000Z",
-  "id": "8dcc4738464a",
-  "firstSeen": "2026-11-20T08:30:16.723Z"
- },
- {
-  "title": "Software Engineer Recent Grad",
-  "company": "Honeywell Aerospace",
-  "location": "United States",
-  "mode": "unspecified",
-  "level": "entry",
-  "region": "other",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://icfcjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Aerospace/job/120265",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:New-Grad-Positions",
-  "postedAt": "2026-11-20T07:28:19.000Z",
-  "id": "bd6465f5be31",
-  "firstSeen": "2026-11-20T08:30:16.723Z"
- },
- {
-  "title": "Software Engineer 1",
-  "company": "Honeywell Aerospace",
-  "location": "Clearwater, FL",
-  "mode": "unspecified",
-  "level": "entry",
-  "region": "americas",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://icfcjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Aerospace/job/99125642",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:New-Grad-Positions",
-  "postedAt": "2026-11-20T07:28:08.000Z",
-  "id": "8c57dee58888",
-  "firstSeen": "2026-11-20T08:30:16.723Z"
- },
- {
-  "title": "Software Engineer 1",
-  "company": "Honeywell Aerospace",
-  "location": "Clearwater, FL",
-  "mode": "unspecified",
-  "level": "entry",
-  "region": "americas",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://icfcjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Aerospace/job/127431",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:New-Grad-Positions",
-  "postedAt": "2026-11-20T07:27:56.000Z",
-  "id": "c61508d3a4f0",
-  "firstSeen": "2026-11-20T08:30:16.723Z"
- },
- {
-  "title": "AR/VR Software Engineer - Spatial System UI - Vision Products Software",
-  "company": "Apple",
-  "location": "Sunnyvale, CA; Boulder, CO",
-  "mode": "unspecified",
-  "level": "entry",
-  "region": "americas",
-  "tags": [
-   "Software"
-  ],
-  "blurb": "",
-  "url": "https://jobs.apple.com/en-us/details/200696147",
-  "via": "SimplifyJobs",
-  "direct": true,
-  "board": "simplify:New-Grad-Positions",
-  "postedAt": "2026-11-20T07:24:20.000Z",
-  "id": "4924c471e52a",
-  "firstSeen": "2026-11-20T08:30:16.723Z"
  },
  {
   "title": "Advisory Solutions Architect, MSP (New Product Intro)",
@@ -6683,23 +6846,6 @@
   "firstSeen": "2026-11-20T08:30:16.723Z"
  },
  {
-  "title": "Staff Machine Learning Engineer, Ads Lightweight Ranking",
-  "company": "Pinterest",
-  "location": "San Francisco, CA, US; Remote, US",
-  "mode": "remote",
-  "level": "staff",
-  "region": "remote",
-  "tags": [],
-  "blurb": "",
-  "url": "https://www.pinterestcareers.com/jobs/?gh_jid=8354411",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:pinterest",
-  "postedAt": "2026-11-19T22:30:13.000Z",
-  "id": "25b62844cb77",
-  "firstSeen": "2026-11-20T08:30:16.723Z"
- },
- {
   "title": "Engineering Manager, Business Travel",
   "company": "Lyft",
   "location": "Mexico City, Mexico",
@@ -6863,23 +7009,6 @@
   "postedAt": "2026-11-19T20:00:13.000Z",
   "id": "1226ff851d80",
   "firstSeen": "2026-11-20T21:03:51.958Z"
- },
- {
-  "title": "Senior Principal Product Manager - Vision AI Experiences",
-  "company": "Toast",
-  "location": "Remote, US",
-  "mode": "remote",
-  "level": "staff",
-  "region": "remote",
-  "tags": [],
-  "blurb": "",
-  "url": "https://careers.toasttab.com/jobs?gh_jid=8402925",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:toast",
-  "postedAt": "2026-11-19T19:59:25.000Z",
-  "id": "663eaeaa4e20",
-  "firstSeen": "2026-11-19T21:29:57.495Z"
  },
  {
   "title": "Senior Backend Engineer - Subscriptions",
@@ -7330,26 +7459,6 @@
   "board": "greenhouse:purestorage",
   "postedAt": "2026-11-19T15:56:13.000Z",
   "id": "317222487eec",
-  "firstSeen": "2026-11-19T21:29:57.495Z"
- },
- {
-  "title": "Software Engineer - Inference Product",
-  "company": "Baseten",
-  "location": "San Francisco, United States",
-  "mode": "remote",
-  "level": "mid",
-  "region": "remote",
-  "salary": "$200K – $400K • Offers Equity",
-  "tags": [
-   "Inference"
-  ],
-  "blurb": "ABOUT BASETEN Baseten powers mission-critical inference for the world's most dynamic AI companies, like Cursor, Notion, OpenEvidence, Abridge, Clay…",
-  "url": "https://jobs.ashbyhq.com/baseten/fddec35f-9dbc-4344-b1df-b8ff6e05472a",
-  "via": "Ashby",
-  "direct": true,
-  "board": "ashby:baseten",
-  "postedAt": "2026-11-19T15:54:23.481Z",
-  "id": "9c8ee1c30f35",
   "firstSeen": "2026-11-19T21:29:57.495Z"
  },
  {
@@ -8995,26 +9104,6 @@
   "firstSeen": "2026-11-17T21:45:21.931Z"
  },
  {
-  "title": "Technical Program Manager, AI Delivery",
-  "company": "Cohere",
-  "location": "Canada, Canada",
-  "mode": "remote",
-  "level": "senior",
-  "region": "remote",
-  "salary": "CA$220K – CA$270K • Offers Equity",
-  "tags": [
-   "Engineering Program Management"
-  ],
-  "blurb": "WHO ARE WE? Cohere is the leading security-first enterprise AI company. We build cutting-edge foundation AI models and end-to-end products that are…",
-  "url": "https://jobs.ashbyhq.com/cohere/41cb2a12-e33a-4368-a9f8-0ae0d19c023e",
-  "via": "Ashby",
-  "direct": true,
-  "board": "ashby:cohere",
-  "postedAt": "2026-11-17T13:48:48.156Z",
-  "id": "1ba90cd95c8a",
-  "firstSeen": "2026-11-17T21:45:21.931Z"
- },
- {
   "title": "Senior Software Engineer - Java Backend",
   "company": "Toast",
   "location": "Chennai",
@@ -9136,40 +9225,6 @@
   "firstSeen": "2026-11-17T09:12:19.568Z"
  },
  {
-  "title": "Engineering Manager, Machine Learning - Safety",
-  "company": "Discord",
-  "location": "San Francisco Bay Area or Remote (U.S.)",
-  "mode": "remote",
-  "level": "senior",
-  "region": "remote",
-  "tags": [],
-  "blurb": "",
-  "url": "https://job-boards.greenhouse.io/discord/jobs/8761356002",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:discord",
-  "postedAt": "2026-11-17T01:44:31.000Z",
-  "id": "0a097eb7c6ac",
-  "firstSeen": "2026-11-17T09:12:19.568Z"
- },
- {
-  "title": "Product Security Engineer, Offensive Security",
-  "company": "Coinbase",
-  "location": "Dallas, TX",
-  "mode": "unspecified",
-  "level": "mid",
-  "region": "americas",
-  "tags": [],
-  "blurb": "",
-  "url": "https://www.coinbase.com/careers/positions/8394654?gh_jid=8394654",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:coinbase",
-  "postedAt": "2026-11-17T01:13:58.000Z",
-  "id": "43a25dcad616",
-  "firstSeen": "2026-11-17T09:12:19.568Z"
- },
- {
   "title": "Senior Software Engineer - CPD",
   "company": "Rubrik",
   "location": "Bengaluru",
@@ -9202,84 +9257,6 @@
   "postedAt": "2026-11-17T00:01:13.000Z",
   "id": "a29178fa1496",
   "firstSeen": "2026-11-17T09:12:19.568Z"
- },
- {
-  "title": "Expert Talent Pool Physical AI",
-  "company": "Clera",
-  "location": "Worldwide",
-  "mode": "remote",
-  "level": "mid",
-  "region": "remote",
-  "tags": [
-   "design",
-   "education",
-   "testing",
-   "travel"
-  ],
-  "blurb": "",
-  "url": "https://remoteOK.com/remote-jobs/remote-expert-talent-pool-physical-ai-clera-1137799",
-  "via": "Remote OK",
-  "direct": false,
-  "board": "remoteok",
-  "postedAt": "2026-11-17T00:00:29.000Z",
-  "id": "2d336f69590f",
-  "firstSeen": "2026-11-18T08:31:55.012Z"
- },
- {
-  "title": "Engineering Manager Network Engineering",
-  "company": "PatientPoint",
-  "location": "Remote",
-  "mode": "remote",
-  "level": "senior",
-  "region": "remote",
-  "tags": [
-   "exec",
-   "design",
-   "infosec",
-   "technical"
-  ],
-  "blurb": "",
-  "url": "https://remoteOK.com/remote-jobs/remote-engineering-manager-network-engineering-patientpoint-1137797",
-  "via": "Remote OK",
-  "direct": false,
-  "board": "remoteok",
-  "postedAt": "2026-11-17T00:00:17.000Z",
-  "id": "23851f3886b1",
-  "firstSeen": "2026-11-18T08:31:55.012Z"
- },
- {
-  "title": "Staff Software Engineer, Infrastructure (Datastores)",
-  "company": "Coinbase",
-  "location": "Remote - USA",
-  "mode": "remote",
-  "level": "staff",
-  "region": "remote",
-  "tags": [],
-  "blurb": "",
-  "url": "https://www.coinbase.com/careers/positions/8286487?gh_jid=8286487",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:coinbase",
-  "postedAt": "2026-11-16T20:59:45.000Z",
-  "id": "2d6c68c1b60b",
-  "firstSeen": "2026-11-16T22:52:55.176Z"
- },
- {
-  "title": "Senior Product Designer II - Commerce & Retailer Platform",
-  "company": "Instacart",
-  "location": "Canada - Remote (ON, AB, BC, or NS Only)",
-  "mode": "remote",
-  "level": "senior",
-  "region": "remote",
-  "tags": [],
-  "blurb": "",
-  "url": "https://instacart.careers/job/?gh_jid=8394157",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:instacart",
-  "postedAt": "2026-11-16T20:56:36.000Z",
-  "id": "f954daf13e9a",
-  "firstSeen": "2026-11-16T22:52:55.176Z"
  },
  {
   "title": "Engineering Manager, Core Infrastructure",
@@ -10717,6 +10694,23 @@
   "firstSeen": "2026-11-10T09:59:31.843Z"
  },
  {
+  "title": "Member Of Technical Staff, Portworx - Backend Engineering Lead (Go, Kubernetes)",
+  "company": "Pure Storage",
+  "location": "Bangalore, India",
+  "mode": "unspecified",
+  "level": "staff",
+  "region": "india",
+  "tags": [],
+  "blurb": "",
+  "url": "https://job-boards.greenhouse.io/purestorage/jobs/8143681",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:purestorage",
+  "postedAt": "2026-10-28T06:07:14.000Z",
+  "id": "30aac14206b8",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
   "title": "Software Engineer, Delivery : Release",
   "company": "GitLab",
   "location": "Bangalore, India",
@@ -11106,6 +11100,23 @@
   "postedAt": "2026-10-22T15:01:04.000Z",
   "id": "22581eb8855e",
   "firstSeen": "2026-11-10T09:59:31.843Z"
+ },
+ {
+  "title": "Senior AI Engineer - Enterprise Agentic Systems",
+  "company": "Rubrik",
+  "location": "Bangalore",
+  "mode": "unspecified",
+  "level": "senior",
+  "region": "india",
+  "tags": [],
+  "blurb": "",
+  "url": "https://www.rubrik.com/company/careers/departments/job.8273724?gh_jid=8273724",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:rubrik",
+  "postedAt": "2026-10-21T12:35:37.000Z",
+  "id": "953ba630d007",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
  },
  {
   "title": "Senior AI Engineer - Enterprise Agentic Systems",
@@ -11975,6 +11986,23 @@
   "firstSeen": "2026-11-10T09:59:31.843Z"
  },
  {
+  "title": "Senior Software Development Engineer in Test",
+  "company": "Fivetran",
+  "location": "Bengaluru, Karnataka, India, APAC",
+  "mode": "unspecified",
+  "level": "senior",
+  "region": "india",
+  "tags": [],
+  "blurb": "",
+  "url": "https://www.fivetran.com/careers/job?gh_jid=7999076003",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:fivetran",
+  "postedAt": "2026-09-29T08:22:33.000Z",
+  "id": "0fc4e6444322",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
   "title": "Senior Software Engineer - Python, Data Engineering, AI",
   "company": "Zenoti",
   "location": "Hyderabad, Telangana, India",
@@ -12319,6 +12347,23 @@
   "firstSeen": "2026-11-10T09:59:31.843Z"
  },
  {
+  "title": "Software Development Engineer in Test II",
+  "company": "Fivetran",
+  "location": "Bengaluru, Karnataka, India, APAC",
+  "mode": "unspecified",
+  "level": "mid",
+  "region": "india",
+  "tags": [],
+  "blurb": "",
+  "url": "https://www.fivetran.com/careers/job?gh_jid=7798462003",
+  "via": "Greenhouse",
+  "direct": true,
+  "board": "greenhouse:fivetran",
+  "postedAt": "2026-09-21T12:07:28.000Z",
+  "id": "f628c06746a5",
+  "firstSeen": "2026-11-25T09:51:06.786Z"
+ },
+ {
   "title": "Software Engineer, Stripe Data Pipeline",
   "company": "Stripe",
   "location": "Bangalore",
@@ -12406,23 +12451,6 @@
   "firstSeen": "2026-11-10T09:59:31.843Z"
  },
  {
-  "title": "Salesforce Developer",
-  "company": "Pure Storage",
-  "location": "Bangalore, India",
-  "mode": "unspecified",
-  "level": "mid",
-  "region": "india",
-  "tags": [],
-  "blurb": "",
-  "url": "https://job-boards.greenhouse.io/purestorage/jobs/8210473",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:purestorage",
-  "postedAt": "2026-09-17T22:34:34.000Z",
-  "id": "a654ba714599",
-  "firstSeen": "2026-11-23T08:59:15.087Z"
- },
- {
   "title": "AI Platform Engineer",
   "company": "Starburst",
   "location": "India",
@@ -12455,23 +12483,6 @@
   "postedAt": "2026-09-17T08:05:32.000Z",
   "id": "b171da24390f",
   "firstSeen": "2026-11-10T09:59:31.843Z"
- },
- {
-  "title": "Engineering Manager - Flash Array",
-  "company": "Pure Storage",
-  "location": "Bangalore, India",
-  "mode": "unspecified",
-  "level": "senior",
-  "region": "india",
-  "tags": [],
-  "blurb": "",
-  "url": "https://job-boards.greenhouse.io/purestorage/jobs/8174566",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:purestorage",
-  "postedAt": "2026-09-17T06:03:18.000Z",
-  "id": "cbbe377aee62",
-  "firstSeen": "2026-11-24T23:00:05.136Z"
  },
  {
   "title": "Forward Deployed Engineer",
@@ -13819,23 +13830,6 @@
   "postedAt": "2026-07-17T06:04:47.137Z",
   "id": "95ad71d54ef8",
   "firstSeen": "2026-11-10T09:59:31.843Z"
- },
- {
-  "title": "Software Engineer (L3)",
-  "company": "Twilio",
-  "location": "Remote - India",
-  "mode": "remote",
-  "level": "mid",
-  "region": "india",
-  "tags": [],
-  "blurb": "",
-  "url": "https://job-boards.greenhouse.io/twilio/jobs/8065032",
-  "via": "Greenhouse",
-  "direct": true,
-  "board": "greenhouse:twilio",
-  "postedAt": "2026-07-16T11:41:18.000Z",
-  "id": "c34d78f9e2f5",
-  "firstSeen": "2026-11-23T08:59:15.087Z"
  },
  {
   "title": "Senior Software Engineer, Quality Engineering",

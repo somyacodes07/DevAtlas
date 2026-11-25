@@ -1,5 +1,14 @@
 [
  {
+  "id": "2026-11-25-am",
+  "date": "2026-11-25",
+  "slot": "morning",
+  "number": 22,
+  "headline": "Matrix Multiplication is Θ(n^2.25) [pdf]",
+  "stories": 29,
+  "generatedAt": "2026-11-25T09:51:06.786Z"
+ },
+ {
   "id": "2026-11-24-pm",
   "date": "2026-11-24",
   "slot": "evening",
