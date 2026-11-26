@@ -1,5 +1,14 @@
 [
  {
+  "id": "2026-11-26-pm",
+  "date": "2026-11-26",
+  "slot": "evening",
+  "number": 25,
+  "headline": "Tell HN: Happy Thanksgiving",
+  "stories": 29,
+  "generatedAt": "2026-11-26T22:19:29.544Z"
+ },
+ {
   "id": "2026-11-26-am",
   "date": "2026-11-26",
   "slot": "morning",
