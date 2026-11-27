@@ -1,5 +1,14 @@
 [
  {
+  "id": "2026-11-27-pm",
+  "date": "2026-11-27",
+  "slot": "evening",
+  "number": 27,
+  "headline": "Claude sabotaging ML research tasks?",
+  "stories": 29,
+  "generatedAt": "2026-11-27T21:56:54.751Z"
+ },
+ {
   "id": "2026-11-27-am",
   "date": "2026-11-27",
   "slot": "morning",
