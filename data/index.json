@@ -1,5 +1,14 @@
 [
  {
+  "id": "2026-11-28-am",
+  "date": "2026-11-28",
+  "slot": "morning",
+  "number": 28,
+  "headline": "Michael Nielsen took down his book on neural nets",
+  "stories": 29,
+  "generatedAt": "2026-11-28T08:53:50.337Z"
+ },
+ {
   "id": "2026-11-27-pm",
   "date": "2026-11-27",
   "slot": "evening",
